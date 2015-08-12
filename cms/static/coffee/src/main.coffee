@@ -14,12 +14,8 @@ define ["domReady", "jquery", "underscore.string", "backbone", "gettext",
     _.extend CMS, Backbone.Events
     Backbone.emulateHTTP = true
 
-    ###
-    mme upload csrftoken error comment by seongho 2015.8.12
     $.ajaxSetup
-      headers : { 'X-CSRFToken': $.cookie 'csrftoken' }
       dataType: 'json'
-    ###
 
     $(document).ajaxError (event, jqXHR, ajaxSettings, thrownError) ->
       if ajaxSettings.notifyOnError is false

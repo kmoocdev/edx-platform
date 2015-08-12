@@ -255,52 +255,34 @@
 </div>
 
 <div class="upload-modal modal">
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Customize Example (with MME)</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="업로드파일" disabled="disabled"
-                       id="zfp-thumbnail-selected" value="">
-							<span class="input-group-btn">
-								<a class="btn btn-primary" id="zfp-thumbnail-selector">파일선택</a>
-							</span>
-            </div>
-            <div id="zfp-thumbnail-progress" class="progress" style="margin-top:10px;display:none;">
-                <div class="progress-bar progress-bar-success" role="progressbar" data-transitiongoal="100"></div>
-            </div>
-            <div id="zfp-mov-progress" class="progress" style="margin-top:10px;display:none;">
-                <div class="progress-bar progress-bar-success" role="progressbar" data-transitiongoal="100"></div>
-            </div>
-        </div>
-        <div class="col-smk-12" style="display:none;" id="movie-info">
-            <p>동영상 URL: <span id="mov_url"></span></p>
-        </div>
-    </div>
-</div>
-
     <a href="#" class="close-button"><i class="icon fa fa-times-circle"></i> <span class="sr">${_('close')}</span></a>
     <div class="modal-body">
         <h1 class="title">${_("Upload New File")}</h1>
         <h2>${_("Max per-file size: {max_filesize}MB").format(max_filesize=max_file_size_in_mbs)}</h2>
-        <p class="file-name">
-        <div class="progress-bar">
-            <div class="progress-fill"></div>
+
+        <div class="container">
+            <div class="input-group">
+                <input type="hidden" class="form-control" disabled="disabled" id="zfp-thumbnail-selected" value="" />
+
+                    <a href="#" id="zfp-thumbnail-selector" >파일선택</a>
+            </div>
+            <div id="zfp-thumbnail-progress" class="progress" style="margin-top:10px;">
+                <div class="progress-bar progress-bar-success" role="progressbar" data-transitiongoal="100"></div>
+            </div>
+            <div id="zfp-mov-progress" class="progress" style="margin-top:10px;">
+                <div class="progress-bar progress-bar-success" role="progressbar" data-transitiongoal="100"></div>
+            </div>
+
+            <div id="uploadProgress"></div>
+            <img id="imgThumb" src="" />
+
+            <div class="embeddable" id="movie-info">
+                <label>URL:</label>
+                <input type="text" class="embeddable-xml-input" value=''>
+            </div>
+
         </div>
-        <div class="embeddable">
-            <label>URL:</label>
-            <input type="text" class="embeddable-xml-input" value='' readonly>
-        </div>
-        <form class="file-chooser" action="${asset_callback_url}"
-              method="post" enctype="multipart/form-data">
-            <a href="#" class="choose-file-button">${_("Choose File")}</a>
-            <input type="file" class="file-input" name="file" multiple>
-        </form>
+
     </div>
 </div>
 
@@ -347,6 +329,7 @@
 
                 UploadProgress: function (up, file) {
                     $("#zfp-thumbnail-progress .progress-bar").attr('data-transitiongoal', file.percent).progressbar();
+                    $("#uploadProgress").text("uploading:"+file.percent+"%");
                 },
 
                 Error: function (up, err) {
@@ -387,10 +370,11 @@
                                     console.log(movie_status, thumb_div_status, thumb_status);
 
 
-                                    $("#mov_url").text('http://mme2.npcomms.kr/vod/' + res.data.mov_url);
+                                    //$("#mov_url").text('http://mme2.npcomms.kr' + res.data.mov_url);
+                                    $(".embeddable-xml-input").val('http://mme2.npcomms.kr' + res.data.mov_url);
 
                                     mov_st(movie_status);
-                                    getThumb('구간썸네일', thumb_div_status);
+                                    //getThumb('구간썸네일', thumb_div_status);
                                     getThumb('대표섬네일', thumb_status);
                                 } else if (res.status == 700) {
                                     console.log('중복엔코딩 요청입니다.');
@@ -441,12 +425,13 @@
                     sleep(300);
 
                     mov_st(url);
-
+                    $("#uploadProgress").text("encoding:"+res.data.data.percent+"%");
                     console.log(res.data.data.percent);
 
                 }
                 else {
                     console.warn('Encoding Finish');
+                    $("#uploadProgress").text("encoding:100%");
                     $("#zfp-mov-progress .progress-bar").attr('data-transitiongoal', 100).progressbar();
                     $("#movie-info").show(); //영상정보 호출 -> 플레이어 연동
                 }
@@ -466,12 +451,15 @@
                 if (res.message !== 'SUCCESS') {
                     sleep(300);
                     getThumb(text, url);
+
                 } else {
-                    console.log(res);
+                    console.log("res:", res);
+
                     $.each(res.data.thumb, function (index, value) {
                         path = value.path.replace('/data/convert/mme', 'http://mme2.npcomms.kr/doc')
-                        console.log(path);
-                        $('.container').append('<div class="row"><div class="col-md-12"><label>' + text + ': ' + index + '<br><img src="' + path + '"></label></div></div>');
+                        console.log("path:",path);
+                        $("#imgThumb").attr('src', path);
+                        //$('.container').append('<div class="row"><div class="col-md-12"><label>' + text + ': ' + index + '<br><img src="' + path + '"></label></div></div>');
                     });
                 }
 
