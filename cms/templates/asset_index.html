@@ -272,10 +272,7 @@
             <div id="zfp-mov-progress" class="progress" style="margin-top:10px;">
                 <div class="progress-bar progress-bar-success" role="progressbar" data-transitiongoal="100"></div>
             </div>
-
             <div id="uploadProgress"></div>
-            <img id="imgThumb" src="" />
-
             <div class="embeddable" id="movie-info">
                 <label>URL:</label>
                 <input type="text" class="embeddable-xml-input" value=''>
@@ -458,7 +455,6 @@
                     $.each(res.data.thumb, function (index, value) {
                         path = value.path.replace('/data/convert/mme', 'http://mme2.npcomms.kr/doc')
                         console.log("path:",path);
-                        $("#imgThumb").attr('src', path);
                         //$('.container').append('<div class="row"><div class="col-md-12"><label>' + text + ': ' + index + '<br><img src="' + path + '"></label></div></div>');
                     });
                 }
