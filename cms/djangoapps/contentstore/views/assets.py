@@ -280,10 +280,12 @@ def _upload_asset(request, course_key):
 
     # then commit the content
     contentstore().save(content)
+    #contentstore().save_cdn(content)
     del_cached_content(content.location)
 
     # readback the saved content - we need the database timestamp
     readback = contentstore().find(content.location)
+
     locked = getattr(content, 'locked', False)
     response_payload = {
         'asset': _get_asset_json(
