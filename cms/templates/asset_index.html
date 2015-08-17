@@ -337,10 +337,8 @@
                 },
 
                 FileUploaded: function (up, file, info) {
-
                     if (info.status === 200) {
                         var result = $.parseJSON(info.response);
-
 
                         //영상 엔코딩 요청 상태 체크
                         $.ajax({
@@ -356,18 +354,13 @@
                                     use_percentage: true,
                                 });
 
-
                                 if (res.status == 200) {
                                     var movie_status = 'http://mme2.npcomms.kr' + res.data.movie_status;
                                     var thumb_div_status = 'http://mme2.npcomms.kr' + res.data.thumb_div_status;
                                     var thumb_status = 'http://mme2.npcomms.kr' + res.data.thumb_status;
-
                                     console.log(movie_status, thumb_div_status, thumb_status);
-
-
                                     //$("#mov_url").text('http://mme2.npcomms.kr' + res.data.mov_url);
                                     $(".embeddable-xml-input").val('http://mme2.npcomms.kr' + res.data.mov_url);
-
                                     mov_st(movie_status);
                                     //getThumb('구간썸네일', thumb_div_status);
                                     getThumb('대표섬네일', thumb_status);
@@ -376,7 +369,6 @@
                                 } else {
                                     alert('엔코딩 요청이 완료되지 않았습니다.');
                                 }
-
                                 //var extract_result = $.parseJSON(res);
                             },
                             error: function (e) {
@@ -384,20 +376,14 @@
                             },
                             complete: function () {
                                 //영상 상태체크
-
                                 //썸네일 체크
-
                                 //구간썸네일 체크
-
                             }
                         });
-
                     } else {
                         up.refresh();
                     }
-
                     console.log('FileUploaded:', file, info);
-
                     $("#zfp-thumbnail-progress").hide();
                 }
             }
@@ -418,11 +404,9 @@
                 if (res.message !== 'SUCCESS') {
                     $("#zfp-mov-progress .progress-bar").attr('data-transitiongoal', parseInt(res.data.data.percent)).progressbar();
                     sleep(300);
-
                     mov_st(url);
                     $("#uploadProgress").text("encoding:"+res.data.data.percent+"%");
                     console.log(res.data.data.percent);
-
                 }
                 else {
                     console.warn('Encoding Finish');
@@ -449,14 +433,12 @@
 
                 } else {
                     console.log("res:", res);
-
                     $.each(res.data.thumb, function (index, value) {
                         path = value.path.replace('/data/convert/mme', 'http://mme2.npcomms.kr/doc')
                         console.log("path:",path);
                         //$('.container').append('<div class="row"><div class="col-md-12"><label>' + text + ': ' + index + '<br><img src="' + path + '"></label></div></div>');
                     });
                 }
-
             },
             error: function () {
             }

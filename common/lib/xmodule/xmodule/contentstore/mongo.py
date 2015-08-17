@@ -84,6 +84,32 @@ class MongoContentStore(ContentStore):
 
         return content
 
+    def save_cdn(self, content):
+        content_id, content_son = self.asset_db_key(content.location)
+
+        # The way to version files in gridFS is to not use the file id as the _id but just as the filename.
+        # Then you can upload as many versions as you like and access by date or version. Because we use
+        # the location as the _id, we must delete before adding (there's no replace method in gridFS)
+        self.delete(content_id)  # delete is a noop if the entry doesn't exist; so, don't waste time checking
+
+        thumbnail_location = content.thumbnail_location.to_deprecated_list_repr() if content.thumbnail_location else None
+        with self.fs.new_file(_id=content_id, filename=unicode(content.location), content_type=content.content_type,
+                              displayname=content.name, content_son=content_son,
+                              thumbnail_location=thumbnail_location,
+                              import_path=content.import_path,
+                              # getattr b/c caching may mean some pickled instances don't have attr
+                              locked=getattr(content, 'locked', False)) as fp:
+            if hasattr(content.data, '__iter__'):
+                for chunk in content.data:
+                    # fp.write(chunk)
+                    print("save_cdn fp write chunk")
+            else:
+                # fp.write(content.data)
+                print("save_cdn fp write content.data")
+
+
+        return content
+
     def delete(self, location_or_id):
         if isinstance(location_or_id, AssetKey):
             location_or_id, _ = self.asset_db_key(location_or_id)

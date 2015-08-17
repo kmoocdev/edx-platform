@@ -280,7 +280,8 @@ def _upload_asset(request, course_key):
         content.thumbnail_location = thumbnail_location
 
     # then commit the content
-    contentstore().save(content)
+    # contentstore().save(content)
+    contentstore().save_cdn(content)
     del_cached_content(content.location)
 
     # readback the saved content - we need the database timestamp
