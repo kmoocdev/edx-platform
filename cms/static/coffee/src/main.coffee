@@ -15,7 +15,7 @@ define ["domReady", "jquery", "underscore.string", "backbone", "gettext",
     Backbone.emulateHTTP = true
 
     $.ajaxSetup
-      headers : { 'X-CSRFToken': $.cookie 'csrftoken' }
+      # headers : { 'X-CSRFToken': $.cookie 'csrftoken' }
       dataType: 'json'
 
     $(document).ajaxError (event, jqXHR, ajaxSettings, thrownError) ->

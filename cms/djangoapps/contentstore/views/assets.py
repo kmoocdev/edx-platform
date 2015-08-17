@@ -29,13 +29,15 @@ from pymongo import ASCENDING, DESCENDING
 from student.auth import has_course_author_access
 from xmodule.modulestore.exceptions import ItemNotFoundError
 
+from django.views.decorators.csrf import csrf_exempt
+
 __all__ = ['assets_handler']
 
 # pylint: disable=unused-argument
 
 
 @login_required
-@ensure_csrf_cookie
+@csrf_exempt
 def assets_handler(request, course_key_string=None, asset_key_string=None):
     """
     The restful handler for assets.
