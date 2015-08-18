@@ -93,19 +93,16 @@ class MongoContentStore(ContentStore):
         self.delete(content_id)  # delete is a noop if the entry doesn't exist; so, don't waste time checking
 
         thumbnail_location = content.thumbnail_location.to_deprecated_list_repr() if content.thumbnail_location else None
-        with self.fs.new_file(_id=content_id, filename=unicode(content.location), content_type=content.content_type,
-                              displayname=content.name, content_son=content_son,
+        with self.fs.new_file(_id=content_id,
+                              filename=unicode(content.location),
+                              content_type=content.content_type,
+                              displayname=content.name,
+                              content_son=content_son,
                               thumbnail_location=thumbnail_location,
                               import_path=content.import_path,
                               # getattr b/c caching may mean some pickled instances don't have attr
                               locked=getattr(content, 'locked', False)) as fp:
-            if hasattr(content.data, '__iter__'):
-                for chunk in content.data:
-                    # fp.write(chunk)
-                    print("save_cdn fp write chunk")
-            else:
-                # fp.write(content.data)
-                print("save_cdn fp write content.data")
+            print("mongodb  ok")
 
 
         return content
