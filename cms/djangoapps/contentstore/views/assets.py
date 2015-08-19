@@ -83,7 +83,6 @@ def _asset_index(request, course_key):
     Supports start (0-based index into the list of assets) and max query parameters.
     """
     course_module = modulestore().get_course(course_key)
-
     return render_to_response('asset_index.html', {
         'context_course': course_module,
         'max_file_size_in_mbs': settings.MAX_ASSET_UPLOAD_FILE_SIZE_IN_MB,
@@ -210,7 +209,7 @@ def get_file_size(upload_file):
 
 
 @require_POST
-@ensure_csrf_cookie
+@csrf_exempt
 @login_required
 def _upload_asset(request, course_key):
     '''
@@ -280,13 +279,38 @@ def _upload_asset(request, course_key):
         content.thumbnail_location = thumbnail_location
 
     # then commit the content
-    # contentstore().save(content)
-    contentstore().save_cdn(content)
+    contentstore().save(content)
     del_cached_content(content.location)
 
     # readback the saved content - we need the database timestamp
     readback = contentstore().find(content.location)
+    # readback = contentstore().find_cdn(content.location)
     locked = getattr(content, 'locked', False)
+    response_payload = {
+        'asset': _get_asset_json(
+            content.name,
+            content.content_type,
+            readback.last_modified_at,
+            content.location,
+            content.thumbnail_location,
+            locked
+        ),
+        'msg': _('Upload completed')
+    }
+    return JsonResponse(response_payload)
+
+
+def save_cdn(request, course_key):
+    content = request.REQUEST
+    content.name=request.REQUEST['file_name']
+    content.cdn_url=request.REQUEST['cdn_url']
+    content.content_type=request.REQUEST['file_type']
+    content.thumbnail_location=request.REQUEST['thumbnail_url']
+    content.location = StaticContent.compute_location(course_key, request.REQUEST['file_name'])
+    contentstore().save_cdn(content)
+
+    readback = contentstore().find_cdn(content.location)
+    locked = False;
     response_payload = {
         'asset': _get_asset_json(
             content.name,
@@ -304,7 +328,7 @@ def _upload_asset(request, course_key):
 
 @require_http_methods(("DELETE", "POST", "PUT"))
 @login_required
-@ensure_csrf_cookie
+@csrf_exempt
 def _update_asset(request, course_key, asset_key):
     """
     restful CRUD operations for a course asset.
@@ -318,10 +342,11 @@ def _update_asset(request, course_key, asset_key):
             return JsonResponse()
         except AssetNotFoundException:
             return JsonResponse(status=404)
-
     elif request.method in ('PUT', 'POST'):
         if 'file' in request.FILES:
             return _upload_asset(request, course_key)
+        elif 'cdn_url' in request.REQUEST:
+            return save_cdn(request, course_key)
         else:
             # Update existing asset
             try:

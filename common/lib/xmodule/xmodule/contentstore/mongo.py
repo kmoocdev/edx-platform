@@ -85,10 +85,18 @@ class MongoContentStore(ContentStore):
         return content
 
     def save_cdn(self, content):
-        with self.fs.new_file(displayname=content.name,
+        content_id, content_son = self.asset_db_key(content.location)
+
+        self.delete(content_id)
+        with self.fs.new_file(_id=content_id,
+                              filename=unicode(content.location),
+                              displayname=content.name,
+                              content_son=content_son,
                               cdn_url=content.cdn_url,
                               content_type=content.content_type,
-                              thumbnail_location=content.thumbnail_location) as fp:
+                              thumbnail_location=None,
+                              locked=getattr(content, 'locked', False)
+                              ) as fp:
             print("mongodb insert ok")
 
         return content
@@ -136,6 +144,21 @@ class MongoContentStore(ContentStore):
                 raise NotFoundError(content_id)
             else:
                 return None
+
+    def find_cdn(self, location, throw_on_not_found=True, as_stream=False):
+        content_id, __ = self.asset_db_key(location)
+
+        try:
+            with self.fs.get(content_id) as fp:
+                return StaticContent(
+                        content_id, fp.displayname, fp.content_type, fp.read(), last_modified_at=fp.uploadDate,
+                )
+        except NoFile:
+            if throw_on_not_found:
+                raise NotFoundError(content_id)
+            else:
+                return None
+
 
     def export(self, location, output_directory):
         content = self.find(location)

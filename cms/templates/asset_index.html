@@ -474,25 +474,35 @@ var thumnail_url = "";
         $.ajax({
             method: 'PUT',
             url: '${asset_callback_url}?file_name='+file_name+'&cdn_url='+cdn_url+'&file_type='+file_type+'&thumbnail_url='+thumbnail_url,
-            /*
-            data: {
-                file_name: file_name,
-                cdn_url: cdn_url,
-                file_type: file_type
-            },
-            */
             success: function (res) {
                 if (res.message !== 'SUCCESS') {
                     console.log('ajaxPutEdX SUCCESS');
+                    // GET /assets/course-v1:Oraganization+CourseNumber+CourseRun/?page=-1&page_size=50&sort=date_added&direction=desc&asset_type=&format=json
+                    ajaxGetEdX();
                 }
             },
             error: function () {
                 console.log('ajaxPutEdX error');
             }
         });
-
-
     }
+
+    function ajaxGetEdX() {
+
+        $.ajax({
+            method: 'GET',
+            url: '${asset_callback_url}',
+            success: function (res) {
+                if (res.message !== 'SUCCESS') {
+                    console.log('ajaxGetEdX SUCCESS');
+                }
+            },
+            error: function () {
+                console.log('ajaxPutEdX error');
+            }
+        });
+    }
+
 </script>
 
 </%block>
