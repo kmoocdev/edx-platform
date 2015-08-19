@@ -283,6 +283,11 @@
 </div>
 
 <script type="text/javascript">
+var file_name = "";
+var cdn_url = "";
+var content_type = "";
+var thumnail_url = "";
+
     if ($("#zfp-thumbnail-selector").length > 0) {
         var thumbnail = new plupload.Uploader({
             browse_button: 'zfp-thumbnail-selector',
@@ -361,6 +366,8 @@
                                     console.log(movie_status, thumb_div_status, thumb_status);
                                     //$("#mov_url").text('http://mme2.npcomms.kr' + res.data.mov_url);
                                     $(".embeddable-xml-input").val('http://mme2.npcomms.kr' + res.data.mov_url);
+                                    cdn_url = 'http://mme2.npcomms.kr' + res.data.mov_url;
+                                    console.log('cdn_url:', 'http://mme2.npcomms.kr' + res.data.mov_url);
                                     mov_st(movie_status);
                                     //getThumb('구간썸네일', thumb_div_status);
                                     getThumb('대표섬네일', thumb_status);
@@ -384,6 +391,10 @@
                         up.refresh();
                     }
                     console.log('FileUploaded:', file, info);
+                    file_name = file.name;
+                    file_type = file.type;
+                    console.log('filname', file.name);
+                    console.log('filetype', file.type);
                     $("#zfp-thumbnail-progress").hide();
                 }
             }
@@ -410,6 +421,7 @@
                 }
                 else {
                     console.warn('Encoding Finish');
+                    ajaxPutEdX();
                     $("#uploadProgress").text("encoding:100%");
                     $("#zfp-mov-progress .progress-bar").attr('data-transitiongoal', 100).progressbar();
                     $("#movie-info").show(); //영상정보 호출 -> 플레이어 연동
@@ -435,6 +447,7 @@
                     console.log("res:", res);
                     $.each(res.data.thumb, function (index, value) {
                         path = value.path.replace('/data/convert/mme', 'http://mme2.npcomms.kr/doc')
+                        thumbnail_url = path;
                         console.log("path:",path);
                         //$('.container').append('<div class="row"><div class="col-md-12"><label>' + text + ': ' + index + '<br><img src="' + path + '"></label></div></div>');
                     });
@@ -449,6 +462,37 @@
         var start = new Date().getTime();
         while (new Date().getTime() < start + delay);
     };
+
+
+    function ajaxPutEdX() {
+        console.log("ajaxPutEdX");
+        console.log("file_name:"+file_name);
+        console.log("cdn_url:"+cdn_url);
+        console.log("file_type:"+file_type);
+        console.log("thumbnail_url:"+thumbnail_url);
+
+        $.ajax({
+            method: 'PUT',
+            url: '${asset_callback_url}?file_name='+file_name+'&cdn_url='+cdn_url+'&file_type='+file_type+'&thumbnail_url='+thumbnail_url,
+            /*
+            data: {
+                file_name: file_name,
+                cdn_url: cdn_url,
+                file_type: file_type
+            },
+            */
+            success: function (res) {
+                if (res.message !== 'SUCCESS') {
+                    console.log('ajaxPutEdX SUCCESS');
+                }
+            },
+            error: function () {
+                console.log('ajaxPutEdX error');
+            }
+        });
+
+
+    }
 </script>
 
 </%block>
