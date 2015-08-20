@@ -82,7 +82,12 @@ define([
                         return this.facetsTypes[name].terms.hasOwnProperty(term) ? this.facetsTypes[name].terms[term] : term;
                     }
                     else {
-                        return term;
+                        var arrWords = [ ['Organization','edX'],['오거니제이숀','에덱스'] ];
+                        for (var i in arrWords) {
+                            if (term == arrWords[0][i]) {
+                                return arrWords[1][i];
+                            }
+                        }
                     }
                 }
                 else if(this.facetsTypes[name].hasOwnProperty('name')) {
@@ -109,16 +114,18 @@ define([
                 var facetsView = new FacetsView();
                 self.facetViews.push(facetsView);
                 self.$facetViewsEl.append(facetsView.render(name, self.displayName(name), stats).el);
+
                 $.each(stats.terms, function(term, count) {
                     var facetView = new FacetView();
                     facetsView.$views.append(facetView.render(name, self.displayName(name, term), term, count).el);
                     facetsView.list.push(facetView);
                 });
+
                 if(_.size(stats.terms) > 9) {
                     facetsView.$el.append(self.moreLessTpl());
                 }
             });
-        }
+        },
 
     });
 
