@@ -37,8 +37,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2015-07-06 12:11+0000\n"
-"PO-Revision-Date: 2015-07-06 12:11:43.963099\n"
+"POT-Creation-Date: 2015-08-21 05:03+0000\n"
+"PO-Revision-Date: 2015-08-21 05:03:26.374353\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -9039,18 +9039,6 @@ msgstr ""
 msgid "Deadline for purchasing and requesting credit."
 msgstr "يثشيمهرث بخق حعقذاشسهرل شري قثضعثسفهرل ذقثيهف."
 
-#: openedx/core/djangoapps/import_export/courses/views.py
-msgid "We only support uploading a .tar.gz file."
-msgstr "صث خرمغ سعححخقف عحمخشيهرل ش .فشق.لظ بهمث."
-
-#: openedx/core/djangoapps/import_export/courses/views.py
-msgid "File upload corrupted. Please try again"
-msgstr "بهمث عحمخشي ذخققعحفثي. حمثشسث فقغ شلشهر"
-
-#: openedx/core/djangoapps/import_export/courses/views.py
-msgid "Could not find the {root_xml_file} file in the package."
-msgstr "ذخعمي رخف بهري فاث {root_xml_file} بهمث هر فاث حشذنشلث."
-
 #: openedx/core/djangoapps/profile_images/images.py
 msgid "bytes"
 msgstr "زغفثس"
@@ -9454,12 +9442,16 @@ msgid "Empty"
 msgstr "ثوحفغ"
 
 #: cms/djangoapps/contentstore/views/import_export.py
-msgid ""
-"An invalid parent key was supplied: \"{supplied_key}\" is not a valid course"
-" unit."
-msgstr ""
-"شر هردشمهي حشقثرف نثغ صشس سعححمهثي: \"{supplied_key}\" هس رخف ش دشمهي ذخعقسث"
-" عرهف."
+msgid "We only support uploading a .tar.gz file."
+msgstr "صث خرمغ سعححخقف عحمخشيهرل ش .فشق.لظ بهمث."
+
+#: cms/djangoapps/contentstore/views/import_export.py
+msgid "File upload corrupted. Please try again"
+msgstr "بهمث عحمخشي ذخققعحفثي. حمثشسث فقغ شلشهر"
+
+#: cms/djangoapps/contentstore/views/import_export.py
+msgid "Could not find the {0} file in the package."
+msgstr "ذخعمي رخف بهري فاث {0} بهمث هر فاث حشذنشلث."
 
 #: cms/djangoapps/contentstore/views/item.py
 msgid "Invalid data"
@@ -12707,10 +12699,10 @@ msgstr "غخعق ذثقفهبهذشفث هس شدشهمشزمث"
 #: lms/templates/courseware/progress.html
 msgid ""
 "You can now access your certificate. If you keep working and receive a "
-"higher grade,you can request an {link_start} updated certificate {link_end}."
+"higher grade, you can request an updated certificate."
 msgstr ""
 "غخع ذشر رخص شذذثسس غخعق ذثقفهبهذشفث. هب غخع نثثح صخقنهرل شري قثذثهدث ش "
-"اهلاثق لقشيث,غخع ذشر قثضعثسف شر {link_start} عحيشفثي ذثقفهبهذشفث {link_end}."
+"اهلاثق لقشيث, غخع ذشر قثضعثسف شر عحيشفثي ذثقفهبهذشفث."
 
 #: lms/templates/courseware/progress.html
 msgid "View certificate in a new browser window or tab."
