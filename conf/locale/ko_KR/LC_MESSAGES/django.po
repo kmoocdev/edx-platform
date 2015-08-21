@@ -19829,3 +19829,7 @@ msgstr "새로운 수정본 생성: 수정본 #%(r1)d 과 수정본 #%(r2)d 의 
 #: lms/templates/navigation.html
 msgid "Register Now"
 msgstr "지금 등록하세요"
+
+#: lms/templates/navigation-edx.html lms/templates/navigation.html
+msgid "My Profile"
+msgstr "내 정보"
