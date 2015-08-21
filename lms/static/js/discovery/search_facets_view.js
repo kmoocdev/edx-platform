@@ -111,18 +111,18 @@ define([
             self.facetViews = [];
             // Render new facets
             $.each(facets, function(name, stats) {
-                var facetsView = new FacetsView();
-                self.facetViews.push(facetsView);
-                self.$facetViewsEl.append(facetsView.render(name, self.displayName(name), stats).el);
-
-                $.each(stats.terms, function(term, count) {
-                    var facetView = new FacetView();
-                    facetsView.$views.append(facetView.render(name, self.displayName(name, term), term, count).el);
-                    facetsView.list.push(facetView);
-                });
-
-                if(_.size(stats.terms) > 9) {
-                    facetsView.$el.append(self.moreLessTpl());
+                if (name=="org") {
+                    var facetsView = new FacetsView();
+                    self.facetViews.push(facetsView);
+                    self.$facetViewsEl.append(facetsView.render(name, self.displayName(name), stats).el);
+                    $.each(stats.terms, function(term, count) {
+                        var facetView = new FacetView();
+                        facetsView.$views.append(facetView.render(name, self.displayName(name, term), term, count).el);
+                        facetsView.list.push(facetView);
+                    });
+                    if(_.size(stats.terms) > 9) {
+                        facetsView.$el.append(self.moreLessTpl());
+                    }
                 }
             });
         },
