@@ -2134,7 +2134,7 @@ msgstr "이 강좌가 종료되는 날짜"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Cosmetic Course Display Price"
-msgstr "Cosmetic Course Display Price"
+msgstr "강좌 가격"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -2142,8 +2142,7 @@ msgid ""
 " registration price is set by an administrator in the database, that price "
 "will be displayed instead of this one."
 msgstr ""
-"학습자가 강좌를 수강 신청할 때 표시되는 가격입니다. 데이터베이스에서 관리자가 유료 강좌 신청 가격을 설정했다면, 이것 대신 그 가격이 "
-"표시됩니다."
+"학습자가 수강 신청할 때 표시될 가격입니다. 데이터베이스에서 관리자가 유료 강좌 가격을 설정했다면, 이것 대신 그 가격이 표시됩니다."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Advertised Start Date"
@@ -2369,7 +2368,7 @@ msgid ""
 " name of the tab (usually the name of the book) as well as the URLs and "
 "titles of all the chapters in the book."
 msgstr ""
-"HTML 교재가 학습실에서 별도의 탭으로 표시될 수 있도록, 교재의 모든 주제의 URL과 제목과 함께 탭의 이름(보통 교재명 사용)을 "
+"HTML 교재가 별도의 탭으로 표시될 수 있도록, 교재 내 모든 챕터의 URL과 챕터 이름, 그리고 탭의 이름(보통 교재명 사용)을 "
 "입력하세요."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -2660,7 +2659,7 @@ msgid ""
 "Enter the heading that you want students to see above your course handouts "
 "on the Course Info page. Your course handouts appear in the right panel of "
 "the page."
-msgstr "학습자가 강좌 정보에서 볼 강의 자료의 제목을 입력해주세요. 학습 자료는 화면의 오른쪽에 있게 됩니다."
+msgstr "학습 자료는 화면의 오른쪽에 있게 됩니다."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -2876,7 +2875,7 @@ msgstr "모두에게 위키 접근 허용하기"
 msgid ""
 "Enter true or false. If true, edX users can view the course wiki even if "
 "they're not enrolled in the course."
-msgstr "True 또는 False를 입력하세요. True의 경우, 강좌를 등록하지 않은 사람이라도 위키를 볼 수  있습니다."
+msgstr "True 또는 False를 입력하세요. True의 경우, 수강하지 않는 사람도 위키를 볼 수 있습니다."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Invitation Only"
@@ -3923,7 +3922,7 @@ msgstr "학습자들이 어떻게 집단으로 구성될 지를 정하는 설정
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid "Enable video caching system"
-msgstr "Video caching 사용하기"
+msgstr "비디오 캐싱 사용하기"
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid ""
@@ -6510,7 +6509,7 @@ msgstr "기본 탭"
 msgid ""
 "Enter the tab that is selected in the XBlock. If not set, the Courseware tab"
 " is selected."
-msgstr "XBlock안에 선택된 탭을 입력합니다. 만약 설정하지 않으면 Courseware 탭이 선택됩니다."
+msgstr "XBlock에서 선택된 탭을 입력합니다. 만약 설정하지 않으면 강좌내용 탭이 선택됩니다."
 
 #: lms/djangoapps/lms_xblock/mixin.py
 msgid "LaTeX Source File Name"
@@ -18705,7 +18704,7 @@ msgstr "직접 설정하기"
 msgid ""
 "<strong>Warning</strong>: Do not modify these policies unless you are "
 "familiar with their purpose."
-msgstr "<strong>주의</strong>: 아래의 설정에 대해 정확히 모르시면 수정하지마시길 권해드립니다."
+msgstr "<strong>주의</strong>: 꼭 필요한 경우가 아니라면, 수정하지 않으시는 것이 좋습니다."
 
 #: cms/templates/settings_advanced.html
 msgid "Show Deprecated Settings"
