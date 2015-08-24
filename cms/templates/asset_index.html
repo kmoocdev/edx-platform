@@ -464,20 +464,59 @@ var thumnail_url = "";
     };
 
 
-    function ajaxPutEdX() {
-        console.log("ajaxPutEdX");
-        console.log("file_name:"+file_name);
-        console.log("cdn_url:"+cdn_url);
-        console.log("file_type:"+file_type);
-        console.log("thumbnail_url:"+thumbnail_url);
+var trCdnFile = ""
++ "<tr>"
++ "    <td class=\"thumb-col\">"
++ "    <div class=\"thumb\">"
++ "    </div>"
++ "</td>"
++ "<td class=\"name-col\">"
++ "    <span class=\"title\"><a data-tooltip=\"Open/download this file\" href=\"{{url}}\" class=\"filename\">{{display_name}}</a></span>"
++ "    <div class=\"embeddable-xml\"></div>"
++ "</td>"
++ "<td class=\"type-col\">"
++ "    {{content_type}}"
++ "</td>"
++ "<td class=\"date-col\">"
++ "    {{date_added}}"
++ "</td>"
++ "<td class=\"embed-col\">"
++ "    <ul>"
++ "        <li class=\"embed-url\">"
++ "            <label>"
++ "                <span class=\"label\">Studio:</span>"
++ "                <input type=\"text\" class=\"embeddable-xml-input\" value=\"{{portable_url}}\" readonly=\"\">"
++ "            </label>"
++ "        </li>"
++ "        <li class=\"external-url\">"
++ "            <label>"
++ "                <span class=\"label\">Web:</span>"
++ "                <input type=\"text\" class=\"embeddable-xml-input\" value=\"localhost:8000/{{url}}\" readonly=\"\">"
++ "            </label>"
++ "        </li>"
++ "    </ul>"
++ "</td>"
++ "<td class=\"actions-col\">"
++ "    <ul class=\"actions-list\">"
++ "        <li class=\"action-item action-delete\">"
++ "            <a href=\"#\" data-tooltip=\"Delete this asset\" class=\"remove-asset-button action-button\"><i class=\"icon fa fa-times-circle\" aria-hidden=\"true\"></i> <span class=\"sr\">Delete this asset</span></a>"
++ "        </li>"
++ "        <li class=\"action-item action-lock\">"
++ "            <label for=\"lock_asset_12\"><span class=\"sr\">Lock this asset</span></label>"
++ "            <input type=\"checkbox\" id=\"lock_asset_12\" class=\"lock-checkbox\" data-tooltip=\"Lock/unlock file\">"
++ "            <div class=\"action-button\"><i class=\"icon fa fa-lock\"></i><i class=\"icon fa fa-unlock-alt\" aria-hidden=\"true\"></i></div>"
++ "        </li>"
++ "    </ul>"
++ "</td>"
++ "</tr>";
 
+    function ajaxPutEdX() {
         $.ajax({
             method: 'PUT',
             url: '${asset_callback_url}?file_name='+file_name+'&cdn_url='+cdn_url+'&file_type='+file_type+'&thumbnail_url='+thumbnail_url,
             success: function (res) {
                 if (res.message !== 'SUCCESS') {
                     console.log('ajaxPutEdX SUCCESS');
-                    // GET /assets/course-v1:Oraganization+CourseNumber+CourseRun/?page=-1&page_size=50&sort=date_added&direction=desc&asset_type=&format=json
                     ajaxGetEdX();
                 }
             },
@@ -488,13 +527,25 @@ var thumnail_url = "";
     }
 
     function ajaxGetEdX() {
-
         $.ajax({
             method: 'GET',
             url: '${asset_callback_url}',
             success: function (res) {
                 if (res.message !== 'SUCCESS') {
                     console.log('ajaxGetEdX SUCCESS');
+                    var arrAssets = res.assets;
+                    $('#asset-table-body').html('');
+                    var asset = null;
+                    $.each(arrAssets, function( key, value ) {
+                        asset = value;
+                        $('#asset-table-body').append(trCdnFile
+                                .replace('{{display_name}}', asset.display_name)
+                                .replace('{{url}}', asset.url)
+                                .replace('{{content_type}}', asset.content_type)
+                                .replace('{{date_added}}', asset.date_added)
+                                .replace('{{portable_url}}', asset.portable_url)
+                        );
+                    });
                 }
             },
             error: function () {
@@ -504,7 +555,6 @@ var thumnail_url = "";
     }
 
 </script>
-
 </%block>
 
 <%block name="view_alerts">
