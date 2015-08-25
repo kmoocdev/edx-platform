@@ -491,7 +491,7 @@ var trCdnFile = ""
 + "        <li class=\"external-url\">"
 + "            <label>"
 + "                <span class=\"label\">Web:</span>"
-+ "                <input type=\"text\" class=\"embeddable-xml-input\" value=\"localhost:8000/{{url}}\" readonly=\"\">"
++ "                <input type=\"text\" class=\"embeddable-xml-input\" value=\"{{url}}\" readonly=\"\">"
 + "            </label>"
 + "        </li>"
 + "    </ul>"
@@ -499,12 +499,7 @@ var trCdnFile = ""
 + "<td class=\"actions-col\">"
 + "    <ul class=\"actions-list\">"
 + "        <li class=\"action-item action-delete\">"
-+ "            <a href=\"#\" data-tooltip=\"Delete this asset\" class=\"remove-asset-button action-button\"><i class=\"icon fa fa-times-circle\" aria-hidden=\"true\"></i> <span class=\"sr\">Delete this asset</span></a>"
-+ "        </li>"
-+ "        <li class=\"action-item action-lock\">"
-+ "            <label for=\"lock_asset_12\"><span class=\"sr\">Lock this asset</span></label>"
-+ "            <input type=\"checkbox\" id=\"lock_asset_12\" class=\"lock-checkbox\" data-tooltip=\"Lock/unlock file\">"
-+ "            <div class=\"action-button\"><i class=\"icon fa fa-lock\"></i><i class=\"icon fa fa-unlock-alt\" aria-hidden=\"true\"></i></div>"
++ "            <a href=\"javascript:ajaxDeleteEdX('{{id}}');\" data-tooltip=\"Delete this asset\" class=\"remove-asset-button action-button\"><i class=\"icon fa fa-times-circle\" aria-hidden=\"true\"></i> <span class=\"sr\">Delete this asset</span></a>"
 + "        </li>"
 + "    </ul>"
 + "</td>"
@@ -526,33 +521,59 @@ var trCdnFile = ""
         });
     }
 
+    function ajaxDeleteEdX(id) {
+        $.ajax({
+            method: 'DELETE',
+            url: '${asset_callback_url}'+id,
+            error: function () {
+                console.log('ajaxDeleteEdX error');
+            }
+        }).done(function(data){
+            console.log("ajaxDeleteEdX done");
+            ajaxGetEdX();
+        });
+    }
+
     function ajaxGetEdX() {
         $.ajax({
             method: 'GET',
             url: '${asset_callback_url}',
             success: function (res) {
+                console.log(res);
                 if (res.message !== 'SUCCESS') {
                     console.log('ajaxGetEdX SUCCESS');
-                    var arrAssets = res.assets;
-                    $('#asset-table-body').html('');
-                    var asset = null;
-                    $.each(arrAssets, function( key, value ) {
-                        asset = value;
-                        $('#asset-table-body').append(trCdnFile
-                                .replace('{{display_name}}', asset.display_name)
-                                .replace('{{url}}', asset.url)
-                                .replace('{{content_type}}', asset.content_type)
-                                .replace('{{date_added}}', asset.date_added)
-                                .replace('{{portable_url}}', asset.portable_url)
-                        );
-                    });
+                    if (res.totalCount > 0) {
+                        $('#asset-table-body').html('');
+                        $(".assets-library").css("display", "block");
+                        $(".no-asset-content").css("display", "none");
+                        var arrAssets = res.assets;
+                        var asset = null;
+                        $.each(arrAssets, function( key, value ) {
+                            asset = value;
+                            $('#asset-table-body').append(trCdnFile
+                                    .replace('{{display_name}}', asset.display_name)
+                                    .replace(/{{url}}/g, asset.external_url)
+                                    .replace('{{content_type}}', asset.content_type)
+                                    .replace('{{date_added}}', asset.date_added)
+                                    .replace('{{portable_url}}', asset.portable_url)
+                                    .replace('{{id}}', encodeURIComponent(asset.id))
+                            );
+                        });
+                    } else if (res.totalCount == 0) {
+                        $(".assets-library").css("display", "none");
+                        $(".no-asset-content").css("display", "block");
+                    }
                 }
             },
             error: function () {
-                console.log('ajaxPutEdX error');
+                console.log('ajaxGetEdX error');
             }
         });
     }
+
+    $(".close-button").click(function(){
+        $('#uploadProgress').text('');
+    });
 
 </script>
 </%block>

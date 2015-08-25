@@ -86,7 +86,6 @@ class MongoContentStore(ContentStore):
 
     def save_cdn(self, content):
         content_id, content_son = self.asset_db_key(content.location)
-
         self.delete(content_id)
         with self.fs.new_file(_id=content_id,
                               filename=unicode(content.location),
