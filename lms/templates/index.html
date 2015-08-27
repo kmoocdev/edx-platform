@@ -19,35 +19,59 @@ from microsite_configuration import microsite
 
 <section class="home">
   <header>
-    <div class="outer-wrapper">
-      <div class="title">
-        <hgroup>
-          % if homepage_overlay_html:
-            ${homepage_overlay_html}
-          % else:
-            % if self.stanford_theme_enabled():
-              <h1>${_("Free courses from <strong>{university_name}</strong>").format(university_name="Stanford")}</h1>
-              <h2>${_("For anyone, anywhere, anytime")}</h2>
-            % else:
-              ## Translators: 'Open edX' is a brand, please keep this untranslated. See http://openedx.org for more information.
-              <h1>${_("Welcome to Open edX!")}</h1>
-              ## Translators: 'Open edX' is a brand, please keep this untranslated. See http://openedx.org for more information.
-              <h2>${_("It works! This is the default homepage for this Open edX instance.")}</h2>
-            % endif
-          % endif
-        </hgroup>
-        % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-          <div class="course-search">
-            <form method="get" action="/courses">
-              <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
-              <button class="search-button" type="submit">
-                <i class="icon fa fa-search" aria-hidden="true"></i>
-              </button>
-            </form>
-          </div>
-        % endif
+    <div style="border: 1px solid #ffffff; height: 150px; left: 330px; position: absolute; top: 130px; width: 350px;">main logo</div>
+    <div style="border: 1px solid #ffffff; height: 35px; left: 330px; position: absolute; top: 300px; width: 350px;">
+        <input type="text" name="searchtext"/>
+        <input type="button" value="검색"/>
+    </div>
+    <div style="border: 1px solid #ffffff; height: 175px; left: 1173px; position: absolute; top: 140px; width: 350px;">
+        <video id="video1" width="100%" height="100%" poster="" controls="controls" style="z-index:9;">
+##             <source src="http://210.102.100.235/cuinfo/cuinfo2013.mp4" type="video/mp4" />
+##         <div id="mediaplayer1">JW Player goes here</div>
+##         <script>
+##             jwplayer("mediaplayer1").setup({
+##                 flashplayer: "/home/mediaplayer/player.swf",
+##                 file: "http://210.102.100.235/cuinfo/cuinfo2013.mp4",
+##                 image : "http://www.cuinfo.net/images/cuinfo2013.jpg",
+##                 width  : "100%" ,
+##                 height : "180",
+##                 autostart : false,
+##                 repeat : "always"
+##             });
+##         </script>
+        </video>
+    </div>
 
-      </div>
+    <div class="outer-wrapper">
+
+##       <div class="title">
+##         <hgroup>
+##           % if homepage_overlay_html:
+##             ${homepage_overlay_html}
+##           % else:
+##             % if self.stanford_theme_enabled():
+##               <h1>${_("Free courses from <strong>{university_name}</strong>").format(university_name="Stanford")}</h1>
+##               <h2>${_("For anyone, anywhere, anytime")}</h2>
+##             % else:
+##               ## Translators: 'Open edX' is a brand, please keep this untranslated. See http://openedx.org for more information.
+##               <h1>${_("Welcome to Open edX!")}</h1>
+##               ## Translators: 'Open edX' is a brand, please keep this untranslated. See http://openedx.org for more information.
+##               <h2>${_("It works! This is the default homepage for this Open edX instance.")}</h2>
+##             % endif
+##           % endif
+##         </hgroup>
+##         % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+##           <div class="course-search">
+##             <form method="get" action="/courses">
+##               <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}" />
+##               <button class="search-button" type="submit">
+##                 <i class="icon fa fa-search" aria-hidden="true"></i>
+##               </button>
+##             </form>
+##           </div>
+##         % endif
+##
+##       </div>
 
       % if show_homepage_promo_video:
         <a href="#video-modal" class="media" rel="leanModal">
@@ -59,7 +83,28 @@ from microsite_configuration import microsite
     </div>
 
   </header>
-  <section class="courses-container">
+<style>
+    .univDiv{border:1px solid gray;width:108px;height:100px;float:left;margin:5px}
+</style>
+
+    <header id="univ_header" style="border: 1px solid #002b36; background: #fff0f0; height: 195px;">
+      <section class="courses-container" id="univ_section">
+        <div style="border:1px solid #555555; width:100%; height:113px; margin-top:20px; ">
+            <div class="univDiv">1</div>
+            <div class="univDiv">2</div>
+            <div class="univDiv">3</div>
+            <div class="univDiv">4</div>
+            <div class="univDiv">5</div>
+            <div class="univDiv">6</div>
+            <div class="univDiv">7</div>
+            <div class="univDiv">8</div>
+            <div class="univDiv">9</div>
+            <div class="univDiv">10</div>
+        </div>
+      </section>
+    </header>
+
+  <section class="courses-container" id="course_section">
     <section class="highlighted-courses">
 
       % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
