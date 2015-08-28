@@ -212,6 +212,11 @@ class MongoContentStore(ContentStore):
             course_key, start=start, maxresults=maxresults, get_thumbnails=False, sort=sort, filter_params=filter_params
         )
 
+    def get_all_cdn_content_for_course(self, course_key, start=0, maxresults=-1, sort=None, filter_params=None):
+        return self._get_all_cdn_content_for_course(
+            course_key, start=start, maxresults=maxresults, get_thumbnails=False, sort=sort, filter_params=filter_params
+        )
+
     def remove_redundant_content_for_courses(self):
         """
         Finds and removes all redundant files (Mac OS metadata files with filename ".DS_Store"
@@ -250,6 +255,44 @@ class MongoContentStore(ContentStore):
             md5: An md5 hash of the asset content
         '''
         query = query_for_course(course_key, "asset" if not get_thumbnails else "thumbnail")
+        find_args = {"sort": sort}
+        if maxresults > 0:
+            find_args.update({
+                "skip": start,
+                "limit": maxresults,
+            })
+        if filter_params:
+            query.update(filter_params)
+
+        items = self.fs_files.find(query, **find_args)
+        count = items.count()
+        assets = list(items)
+
+        # We're constructing the asset key immediately after retrieval from the database so that
+        # callers are insulated from knowing how our identifiers are stored.
+        for asset in assets:
+            asset_id = asset.get('content_son', asset['_id'])
+            asset['asset_key'] = course_key.make_asset_key(asset_id['category'], asset_id['name'])
+        return assets, count
+
+    def _get_all_cdn_content_for_course(self,
+                                        course_key,
+                                        get_thumbnails=False,
+                                        start=0,
+                                        maxresults=-1,
+                                        sort=None,
+                                        filter_params=None):
+        '''
+        Returns a list of all static assets for a course. The return format is a list of asset data dictionary elements.
+
+        The asset data dictionaries have the following keys:
+            asset_key (:class:`opaque_keys.edx.AssetKey`): The key of the asset
+            displayname: The human-readable name of the asset
+            uploadDate (datetime.datetime): The date and time that the file was uploadDate
+            contentType: The mimetype string of the asset
+            md5: An md5 hash of the asset content
+        '''
+        query = query_for_course(course_key, "cdn" if not get_thumbnails else "thumbnail")
         find_args = {"sort": sort}
         if maxresults > 0:
             find_args.update({
