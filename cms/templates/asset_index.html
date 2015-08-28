@@ -505,7 +505,7 @@ var trCdnFile = ""
 + "</td>"
 + "</tr>";
 
-    function ajaxPutEdX() {
+    var ajaxPutEdX = function() {
         $.ajax({
             method: 'PUT',
             url: '${asset_callback_url}?file_name='+file_name+'&cdn_url='+cdn_url+'&file_type='+file_type+'&thumbnail_url='+thumbnail_url,
@@ -521,7 +521,7 @@ var trCdnFile = ""
         });
     }
 
-    function ajaxDeleteEdX(id) {
+    var ajaxDeleteEdX = function(id) {
         $.ajax({
             method: 'DELETE',
             url: '${asset_callback_url}'+id,
@@ -534,7 +534,7 @@ var trCdnFile = ""
         });
     }
 
-    function ajaxGetEdX() {
+    var ajaxGetEdX = function() {
         $.ajax({
             method: 'GET',
             url: '${asset_callback_url}',
