@@ -17,6 +17,47 @@ from microsite_configuration import microsite
 
 %>
 
+<script>
+    $(document).ready(function(){
+    	$("body").prepend("<div id='mask' style='position: absolute; left: 0; top: 0; z-index: 10000; display: none; opacity: 0.4; background:#363636;'></div>");
+
+        var videoHtml = "";
+        videoHtml += "  <video id='indexVideo' width='400' height='300' poster='' controls='controls' style='position: absolute; z-index:10001;top: 90px; display:none; left: calc(50% - 200px);' preload >";
+        videoHtml += "      <source src='http://210.102.100.235/cuinfo/cuinfo2013.mp4' type='video/mp4' />";
+        videoHtml += "  </video>";
+        videoHtml += "";
+
+        $("body").prepend(videoHtml);
+
+        $("#mask").click(function(){
+            $("#indexVideo").hide();
+            $("#indexVideo").currentTime = 0;
+            $("#mask").fadeOut(200);
+        });
+
+        //position control
+        $(window).resize(function(){
+            var maskHeight = $(document).height();
+            var maskWidth = $(window).width();
+            $("#mask").css({"width":maskWidth,"height":maskHeight});
+        });
+    });
+
+    function playVideo(){
+        var video = document.getElementById("indexVideo");
+        var maskHeight = $(document).height();
+        var maskWidth = $(window).width();
+
+        video.currentTime = 0;
+        $("#mask").css({"width":maskWidth+"px","height":maskHeight+"px", "text-align":"center", "vertical-align":"middle"});
+        $("#innerMask").css({"width":(maskWidth/2)+"px","height":(maskHeight/2)+"px", "margin":(maskHeight/3)+"px", "display":"inline-block"});
+        $("#mask").fadeIn(200);
+        $("#indexVideo").fadeIn(300, function(){
+            video.play();
+        });
+    }
+</script>
+
 <section class="home">
   <header>
     <div style="border: 1px solid #ffffff; height: 150px; left: 330px; position: absolute; top: 130px; width: 350px;">main logo</div>
@@ -25,7 +66,11 @@ from microsite_configuration import microsite
         <input type="button" value="검색"/>
     </div>
     <div style="border: 1px solid #ffffff; height: 175px; left: 1173px; position: absolute; top: 140px; width: 350px;">
-        <video id="video1" width="100%" height="100%" poster="" controls="controls" style="z-index:9;">
+        <a href="javascript:playVideo();" style="text-decoration: none;">
+            <div style="width:100%;height:100%;">
+                video here
+            </div>
+##         <video id="video1" width="100%" height="100%" poster="" controls="controls" style="z-index:9;">
 ##             <source src="http://210.102.100.235/cuinfo/cuinfo2013.mp4" type="video/mp4" />
 ##         <div id="mediaplayer1">JW Player goes here</div>
 ##         <script>
@@ -39,7 +84,8 @@ from microsite_configuration import microsite
 ##                 repeat : "always"
 ##             });
 ##         </script>
-        </video>
+##         </video>
+        </a>
     </div>
 
     <div class="outer-wrapper">
@@ -77,7 +123,7 @@ from microsite_configuration import microsite
         <a href="#video-modal" class="media" rel="leanModal">
           <div class="hero">
             <div class="play-intro"></div>
-          </div>
+          </div>`
         </a>
       % endif
     </div>
