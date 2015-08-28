@@ -28,6 +28,7 @@
     });
 </%block>
 
+
 <%block name="content">
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -254,20 +255,37 @@
     </section>
 </div>
 
+<%
+    path_info = request.path_info
+    path_info_split = path_info.split('/')
+%>
+% if path_info_split[1] == 'assets':
 <div class="upload-modal modal">
     <a href="#" class="close-button"><i class="icon fa fa-times-circle"></i> <span class="sr">${_('close')}</span></a>
     <div class="modal-body">
         <h1 class="title">${_("Upload New File")}</h1>
         <h2>${_("Max per-file size: {max_filesize}MB").format(max_filesize=max_file_size_in_mbs)}</h2>
-
-        <!-- FIXME: 이전 upload -->
+        <p class="file-name">
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="embeddable">
+            <label>URL:</label>
+            <input type="text" class="embeddable-xml-input" value='' readonly>
+        </div>
         <form class="file-chooser" action="${asset_callback_url}"
               method="post" enctype="multipart/form-data">
             <a href="#" class="choose-file-button">${_("Choose File")}</a>
             <input type="file" class="file-input" name="file" multiple>
         </form>
-        <!-- FIXME: 이전 upload -->
-
+    </div>
+</div>
+% else :
+<div class="upload-modal modal">
+    <a href="#" class="close-button"><i class="icon fa fa-times-circle"></i> <span class="sr">${_('close')}</span></a>
+    <div class="modal-body">
+        <h1 class="title">${_("Upload New File")}</h1>
+        <h2>${_("Max per-file size: {max_filesize}MB").format(max_filesize=max_file_size_in_mbs)}</h2>
         <div class="container">
             <div class="input-group">
                 <input type="hidden" class="form-control" disabled="disabled" id="zfp-thumbnail-selected" value="" />
@@ -281,6 +299,8 @@
         </div>
     </div>
 </div>
+% endif
+
 
 <script type="text/javascript">
 var file_name = "";
