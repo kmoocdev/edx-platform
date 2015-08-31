@@ -60,13 +60,31 @@ site_status_msg = get_site_status_msg(course_id)
       ${display_name}</h2>
     % endif
 
+        <script>
+            function test(){
+                alert('click1');
+            }
+
+        </script>
+
     % if user.is_authenticated():
     <ol class="left nav-global authenticated">
       <%block name="navigation_global_links_authenticated">
         % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-          <li class="nav-global-01">
-            <a href="${marketing_link('COURSES')}">${_('Find Courses')}</a>
+##           <li class="nav-global-01">
+##             <a href="${marketing_link('COURSES')}">${_('Find Courses')}</a>
+##           </li>
+
+          <li class="nav-global-04">
+            <a class="cta cta-register" href="javascript:test();">k-mooc란?</a>
           </li>
+          <li class="nav-global-04">
+            <a class="cta cta-register" href="/register${login_query()}">대학목록</a>
+          </li>
+          <li class="nav-global-04">
+            <a class="cta cta-register" href="${marketing_link('COURSES')}">강좌목록</a>
+          </li>
+
         % endif
         %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
           <li>
@@ -129,9 +147,17 @@ site_status_msg = get_site_status_msg(course_id)
             <a class="cta cta-register" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register Now")}</a>
           </li>
           % else:
+
           <li class="nav-global-04">
-            <a class="cta cta-register" href="/register${login_query()}">${_("Register Now")}</a>
+            <a class="cta cta-register" href="javascript:test();">k-mooc란?</a>
           </li>
+          <li class="nav-global-04">
+            <a class="cta cta-register" href="/register${login_query()}">대학목록</a>
+          </li>
+          <li class="nav-global-04">
+            <a class="cta cta-register" href="${marketing_link('COURSES')}">강좌목록</a>
+          </li>
+
           % endif
       % endif
     </ol>
@@ -143,6 +169,7 @@ site_status_msg = get_site_status_msg(course_id)
           <a class="cta cta-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
           % else:
           <a class="cta cta-login" href="/login${login_query()}">${_("Sign in")}</a>
+          <a class="cta cta-login" href="/login${login_query()}">${_("Sign up")}</a>
           % endif
       % endif
     </li>
