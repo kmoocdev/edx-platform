@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2015-07-06 12:10+0000\n"
-"PO-Revision-Date: 2015-07-06 12:11:44.276660\n"
+"POT-Creation-Date: 2015-08-21 08:03+0000\n"
+"PO-Revision-Date: 2015-08-21 08:04:17.892246\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -1140,9 +1140,11 @@ msgstr "Néw döçümént Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
 msgid "New window"
 msgstr "Néw wïndöw Ⱡ'σяєм ιρѕυм ∂σłσ#"
 
+#. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: cms/templates/js/paging-header.underscore
 msgid "Next"
 msgstr "Néxt Ⱡ'σяєм ι#"
 
@@ -1559,7 +1561,6 @@ msgstr "Vértïçäl späçé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт#"
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
-#: lms/djangoapps/teams/static/teams/js/views/topic_card.js
 #: lms/templates/search/course_search_item.underscore
 #: lms/templates/search/dashboard_search_item.underscore
 msgid "View"
@@ -2140,55 +2141,17 @@ msgstr ""
 "Àré ýöü süré ýöü wänt tö délété thïs réspönsé? Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
 "¢σηѕє¢тєтυя α#"
 
-#. Translators: sample result:
-#. "Showing 0-9 out of 25 total, filtered by Images, sorted by Date Added
-#. ascending"
 #: common/static/common/js/components/views/paging_header.js
-msgid ""
-"Showing %(current_item_range)s out of %(total_items_count)s, filtered by "
-"%(asset_type)s, sorted by %(sort_name)s ascending"
+msgid "Showing %(first_index)s out of %(num_items)s total"
 msgstr ""
-"Shöwïng %(current_item_range)s öüt öf %(total_items_count)s, fïltéréd ßý "
-"%(asset_type)s, sörtéd ßý %(sort_name)s äsçéndïng Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
-"αмєт, ¢σηѕє¢тєтυя α#"
+"Shöwïng %(first_index)s öüt öf %(num_items)s tötäl Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
+"αмєт, ¢σηѕє¢#"
 
-#. Translators: sample result:
-#. "Showing 0-9 out of 25 total, filtered by Images, sorted by Date Added
-#. descending"
 #: common/static/common/js/components/views/paging_header.js
-msgid ""
-"Showing %(current_item_range)s out of %(total_items_count)s, filtered by "
-"%(asset_type)s, sorted by %(sort_name)s descending"
+msgid "Showing %(first_index)s-%(last_index)s out of %(num_items)s total"
 msgstr ""
-"Shöwïng %(current_item_range)s öüt öf %(total_items_count)s, fïltéréd ßý "
-"%(asset_type)s, sörtéd ßý %(sort_name)s désçéndïng Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
-"αмєт, ¢σηѕє¢тєтυя α#"
-
-#. Translators: sample result:
-#. "Showing 0-9 out of 25 total, sorted by Date Added ascending"
-#: common/static/common/js/components/views/paging_header.js
-msgid ""
-"Showing %(current_item_range)s out of %(total_items_count)s, sorted by "
-"%(sort_name)s ascending"
-msgstr ""
-"Shöwïng %(current_item_range)s öüt öf %(total_items_count)s, sörtéd ßý "
-"%(sort_name)s äsçéndïng Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
-
-#. Translators: sample result:
-#. "Showing 0-9 out of 25 total, sorted by Date Added descending"
-#: common/static/common/js/components/views/paging_header.js
-msgid ""
-"Showing %(current_item_range)s out of %(total_items_count)s, sorted by "
-"%(sort_name)s descending"
-msgstr ""
-"Shöwïng %(current_item_range)s öüt öf %(total_items_count)s, sörtéd ßý "
-"%(sort_name)s désçéndïng Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
-
-#. Translators: turns into "25 total" to be used in other sentences, e.g.
-#. "Showing 0-9 out of 25 total".
-#: common/static/common/js/components/views/paging_header.js
-msgid "%(total_items)s total"
-msgstr "%(total_items)s tötäl Ⱡ'σяєм ιρѕυм ∂σł#"
+"Shöwïng %(first_index)s-%(last_index)s öüt öf %(num_items)s tötäl Ⱡ'σяєм "
+"ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тє#"
 
 #: common/static/js/capa/drag_and_drop/base_image.js
 msgid "Drop target image"
@@ -2429,6 +2392,15 @@ msgstr "Réplý Ⱡ'σяєм ιρѕ#"
 msgid "Tags:"
 msgstr "Tägs: Ⱡ'σяєм ιρѕ#"
 
+#: lms/djangoapps/teams/static/teams/js/collections/topic.js
+#: lms/templates/edxnotes/tab-item.underscore
+msgid "name"
+msgstr "nämé Ⱡ'σяєм ι#"
+
+#: lms/djangoapps/teams/static/teams/js/collections/topic.js
+msgid "team count"
+msgstr "téäm çöünt Ⱡ'σяєм ιρѕυм ∂σłσ#"
+
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid ""
 "Course teams are organized into topics created by course instructors. Try to"
@@ -2460,6 +2432,11 @@ msgid "%(team_count)s Team"
 msgid_plural "%(team_count)s Teams"
 msgstr[0] "%(team_count)s Téäm Ⱡ'σяєм ιρѕυм ∂#"
 msgstr[1] "%(team_count)s Téäms Ⱡ'σяєм ιρѕυм ∂σł#"
+
+#: lms/djangoapps/teams/static/teams/js/views/topic_card.js
+msgid "View Teams in the %(topic_name)s Topic"
+msgstr ""
+"Vïéw Téäms ïn thé %(topic_name)s Töpïç Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє#"
 
 #: lms/static/coffee/src/calculator.js
 msgid "Open Calculator"
@@ -5200,6 +5177,56 @@ msgstr "Nöt Grädéd Ⱡ'σяєм ιρѕυм ∂σłσ#"
 msgid "Date added"
 msgstr "Däté äddéd Ⱡ'σяєм ιρѕυм ∂σłσ#"
 
+#. Translators: sample result:
+#. "Showing 0-9 out of 25 total, filtered by Images, sorted by Date Added
+#. ascending"
+#: cms/static/js/views/paging_header.js
+msgid ""
+"Showing %(current_item_range)s out of %(total_items_count)s, filtered by "
+"%(asset_type)s, sorted by %(sort_name)s ascending"
+msgstr ""
+"Shöwïng %(current_item_range)s öüt öf %(total_items_count)s, fïltéréd ßý "
+"%(asset_type)s, sörtéd ßý %(sort_name)s äsçéndïng Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
+"αмєт, ¢σηѕє¢тєтυя α#"
+
+#. Translators: sample result:
+#. "Showing 0-9 out of 25 total, filtered by Images, sorted by Date Added
+#. descending"
+#: cms/static/js/views/paging_header.js
+msgid ""
+"Showing %(current_item_range)s out of %(total_items_count)s, filtered by "
+"%(asset_type)s, sorted by %(sort_name)s descending"
+msgstr ""
+"Shöwïng %(current_item_range)s öüt öf %(total_items_count)s, fïltéréd ßý "
+"%(asset_type)s, sörtéd ßý %(sort_name)s désçéndïng Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт "
+"αмєт, ¢σηѕє¢тєтυя α#"
+
+#. Translators: sample result:
+#. "Showing 0-9 out of 25 total, sorted by Date Added ascending"
+#: cms/static/js/views/paging_header.js
+msgid ""
+"Showing %(current_item_range)s out of %(total_items_count)s, sorted by "
+"%(sort_name)s ascending"
+msgstr ""
+"Shöwïng %(current_item_range)s öüt öf %(total_items_count)s, sörtéd ßý "
+"%(sort_name)s äsçéndïng Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#. Translators: sample result:
+#. "Showing 0-9 out of 25 total, sorted by Date Added descending"
+#: cms/static/js/views/paging_header.js
+msgid ""
+"Showing %(current_item_range)s out of %(total_items_count)s, sorted by "
+"%(sort_name)s descending"
+msgstr ""
+"Shöwïng %(current_item_range)s öüt öf %(total_items_count)s, sörtéd ßý "
+"%(sort_name)s désçéndïng Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя α#"
+
+#. Translators: turns into "25 total" to be used in other sentences, e.g.
+#. "Showing 0-9 out of 25 total".
+#: cms/static/js/views/paging_header.js
+msgid "%(total_items)s total"
+msgstr "%(total_items)s tötäl Ⱡ'σяєм ιρѕυм ∂σł#"
+
 #. Translators: This is listed as the duration for a video
 #. that has not yet reached the point in its processing by
 #. the servers where its duration is determined.
@@ -5759,10 +5786,6 @@ msgstr "Nötéd ïn: Ⱡ'σяєм ιρѕυм ∂σł#"
 #: lms/templates/edxnotes/note-item.underscore
 msgid "Last Edited:"
 msgstr "Läst Édïtéd: Ⱡ'σяєм ιρѕυм ∂σłσя ѕ#"
-
-#: lms/templates/edxnotes/tab-item.underscore
-msgid "name"
-msgstr "nämé Ⱡ'σяєм ι#"
 
 #: lms/templates/edxnotes/tab-item.underscore
 msgid "Clear search results"
@@ -7473,6 +7496,10 @@ msgstr ""
 #: cms/templates/js/no-textbooks.underscore
 msgid "Add your first textbook"
 msgstr "Àdd ýöür fïrst téxtßöök Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σ#"
+
+#: cms/templates/js/paging-header.underscore
+msgid "Previous"
+msgstr "Prévïöüs Ⱡ'σяєм ιρѕυм ∂#"
 
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "Previous Uploads"
