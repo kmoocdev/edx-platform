@@ -64,6 +64,23 @@ class StaticContent(object):
             AssetLocator.clean_keeping_underscores(path)
         ).for_branch(None)
 
+    @staticmethod
+    def compute_cdn_location(course_key, path, revision=None, is_thumbnail=False):
+        """
+        Constructs a location object for static content.
+
+        - course_key: the course that this asset belongs to
+        - path: is the name of the static asset
+        - revision: is the object's revision information
+        - is_thumbnail: is whether or not we want the thumbnail version of this
+            asset
+        """
+        path = path.replace('/', '_')
+        return course_key.make_asset_key(
+            'cdn' if not is_thumbnail else 'thumbnail',
+            AssetLocator.clean_keeping_underscores(path)
+        ).for_branch(None)
+
     def get_id(self):
         return self.location
 
@@ -221,6 +238,21 @@ class ContentStore(object):
         raise NotImplementedError
 
     def get_all_content_for_course(self, course_key, start=0, maxresults=-1, sort=None, filter_params=None):
+        '''
+        Returns a list of static assets for a course, followed by the total number of assets.
+        By default all assets are returned, but start and maxresults can be provided to limit the query.
+
+        The return format is a list of asset data dictionaries.
+        The asset data dictionaries have the following keys:
+            asset_key (:class:`opaque_keys.edx.AssetKey`): The key of the asset
+            displayname: The human-readable name of the asset
+            uploadDate (datetime.datetime): The date and time that the file was uploadDate
+            contentType: The mimetype string of the asset
+            md5: An md5 hash of the asset content
+        '''
+        raise NotImplementedError
+
+    def get_all_cdn_content_for_course(self, course_key, start=0, maxresults=-1, sort=None, filter_params=None):
         '''
         Returns a list of static assets for a course, followed by the total number of assets.
         By default all assets are returned, but start and maxresults can be provided to limit the query.
