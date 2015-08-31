@@ -37,7 +37,7 @@ __all__ = ['assets_handler']
 
 
 @login_required
-@csrf_exempt
+@ensure_csrf_cookie
 def assets_handler(request, course_key_string=None, asset_key_string=None):
     """
     The restful handler for assets.
@@ -227,7 +227,7 @@ def get_file_size(upload_file):
 
 
 @require_POST
-@csrf_exempt
+@ensure_csrf_cookie
 @login_required
 def _upload_asset(request, course_key):
     '''
@@ -346,7 +346,7 @@ def save_cdn(request, course_key):
 
 @require_http_methods(("DELETE", "POST", "PUT"))
 @login_required
-@csrf_exempt
+@ensure_csrf_cookie
 def _update_asset(request, course_key, asset_key):
     """
     restful CRUD operations for a course asset.
