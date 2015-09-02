@@ -1802,4 +1802,14 @@
 }
 .fa-medium:before {
   content: "\f23a";
+} 
+
+.fa-naver:before{
+  content:"\f302";
+}
+.fa-kakao:before{
+  content:"\f303";
+}
+.fa-lifelongedu:before{
+  content:"\f304";
 }
