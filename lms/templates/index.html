@@ -78,7 +78,7 @@ from microsite_configuration import microsite
     -->
 
     <div class="outer-wrapper">
-
+        <!--
         <div style="border: 1px solid #ffffff; height: 150px; position: absolute; top: 130px; width: 350px;">main logo</div>
         <div style="border: 1px solid #ffffff; height: 35px; position: absolute; top: 300px; width: 350px;">
             <input type="text" name="searchtext"/>
@@ -90,6 +90,22 @@ from microsite_configuration import microsite
                     video here
                 </div>
             </a>
+        </div>
+        -->
+
+        <div class="title">
+            <hgroup>
+                <h1><img src="/static/images/main_title.png" alt="최고의 대학, 최고의 강의! 한국형 온라인에서 시작하세요."></h1>
+            </hgroup>
+            <div class="course-search">
+                <form method="get" action="http://edx.kotech.biz:8040/courses">
+                    <input class="search-input" name="search_query" type="text" placeholder="원하시는 강의를 검색해 보세요.">
+                    <button class="search-button" type="submit">검색</button>
+                </form>
+            </div>
+        </div>
+        <div class="vod">
+            <a href="javascript:playVideo();"><img src="/static/images/main_more.png" alt="VOD보기"></a>
         </div>
 
 ##       <div class="title">
@@ -131,26 +147,25 @@ from microsite_configuration import microsite
     </div>
 
   </header>
-<style>
-    .univDiv{border:1px solid gray;width:108px;height:100px;float:left;margin:5px}
-</style>
 
-    <header id="univ_header" style="border: 1px solid #002b36; background: #fff0f0; height: 100%; float: left;">
-      <section class="courses-container" id="univ_section">
-        <div style="border:1px solid #555555; width:100%; margin-bottom:20px; float:left; ">
-            <div class="univDiv">1</div>
-            <div class="univDiv">2</div>
-            <div class="univDiv">3</div>
-            <div class="univDiv">4</div>
-            <div class="univDiv">5</div>
-            <div class="univDiv">6</div>
-            <div class="univDiv">7</div>
-            <div class="univDiv">8</div>
-            <div class="univDiv">9</div>
-            <div class="univDiv">10</div>
+    <section class="school_list">	 <!-- school_list S -->
+        <p class="title_type1">
+            <img src="/static/images/title01.png" alt="참여대학">
+            <a href="#"><img src="/static/images/more.png" alt="더보기"></a>
+        </p>
+        <div class="inner">
+            <a href="#"><img src="/static/images/logo02_01.png" alt="경희대학교"><span style="font-family:daumR;">경희대학교</span></a>
+            <a href="#"><img src="/static/images/logo02_02.png" alt="고려대학교"><span style="font-family:daumR;">고려대학교</span></a>
+            <a href="#"><img src="/static/images/logo02_03.png" alt="부산대학교"><span style="font-family:daumR;">부산대학교</span></a>
+            <a href="#"><img src="/static/images/logo02_04.png" alt="서울대학교"><span style="font-family:daumR;">서울대학교</span></a>
+            <a href="#"><img src="/static/images/logo02_05.png" alt="성균관대학교"><span style="font-family:daumR;">성균관대학교</span></a>
+            <a href="#"><img src="/static/images/logo02_06.png" alt="연세대학교"><span style="font-family:daumR;">연세대학교</span></a>
+            <a href="#"><img src="/static/images/logo02_07.png" alt="이화대학교"><span style="font-family:daumR;">이화대학교</span></a>
+            <a href="#"><img src="/static/images/logo02_08.png" alt="포항공과대학교"><span style="font-family:daumR;">포항공과대학교</span></a>
+            <a href="#"><img src="/static/images/logo02_09.png" alt="한국과학기술원"><span style="font-family:daumR;">한국과학기술원</span></a>
+            <a href="#"><img src="/static/images/logo02_10.png" alt="한양대학교"><span style="font-family:daumR;">한양대학교</span></a>
         </div>
-      </section>
-    </header>
+    </section>	 <!-- school_list E -->
 
   <section class="courses-container" id="course_section">
     <section class="highlighted-courses">

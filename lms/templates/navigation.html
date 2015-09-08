@@ -42,7 +42,7 @@ site_status_msg = get_site_status_msg(course_id)
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
-            <img src="${static.url(branding.get_logo_url())}" alt="${platform_name()}"/>
+            <img src="/static/images/logo.png" alt="${platform_name()}" style="width:177px;heigth:44px;"/>
         </%block>
       </a>
     </h1>
@@ -75,15 +75,16 @@ site_status_msg = get_site_status_msg(course_id)
 ##             <a href="${marketing_link('COURSES')}">${_('Find Courses')}</a>
 ##           </li>
 
-          <li class="nav-global-04">
-            <a class="cta cta-register" href="javascript:test();">k-mooc란?</a>
-          </li>
-          <li class="nav-global-04">
-            <a class="cta cta-register" href="/register${login_query()}">대학목록</a>
-          </li>
-          <li class="nav-global-04">
-            <a class="cta cta-register" href="${marketing_link('COURSES')}">강좌목록</a>
-          </li>
+
+        <li><a class="btn type1" href="/register${login_query()}">로그인</a></li>
+        <li><a class="btn type2" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">회원가입</a></li>
+        <!-- 필요에 따라 바꿔 쓰세요
+        <li><a class="btn type1" href="#">개인정보수정</a></li>
+        <li><a class="btn type2" href="#">로그아웃</a></li>
+        -->
+        <li class="gnb1"><a href="#">K-MOOC란?</a></li>
+        <li class="gnb2"><a href="#">대학목록</a></li>
+        <li class="gnb3"><a href="#">강좌목록</a></li>
 
         % endif
         %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
@@ -148,15 +149,15 @@ site_status_msg = get_site_status_msg(course_id)
           </li>
           % else:
 
-          <li class="nav-global-04">
-            <a class="cta cta-register" href="javascript:test();">k-mooc란?</a>
-          </li>
-          <li class="nav-global-04">
-            <a class="cta cta-register" href="/register${login_query()}">대학목록</a>
-          </li>
-          <li class="nav-global-04">
-            <a class="cta cta-register" href="${marketing_link('COURSES')}">강좌목록</a>
-          </li>
+          <li><a class="btn type1" href="#">로그인</a></li>
+          <li><a class="btn type2" href="#">회원가입</a></li>
+          <!-- 필요에 따라 바꿔 쓰세요
+          <li><a class="btn type1" href="#">개인정보수정</a></li>
+          <li><a class="btn type2" href="#">로그아웃</a></li>
+          -->
+          <li class="gnb1"><a href="#">K-MOOC란?</a></li>
+          <li class="gnb2"><a href="#">대학목록</a></li>
+          <li class="gnb3"><a href="#">강좌목록</a></li>
 
           % endif
       % endif
@@ -164,14 +165,16 @@ site_status_msg = get_site_status_msg(course_id)
 
     <ol class="right nav-courseware">
     <li class="nav-courseware-01">
+        <!--
       % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
           % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-          <a class="cta cta-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+          <a class="cta cta-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("")}</a>
           % else:
-          <a class="cta cta-login" href="/login${login_query()}">${_("Sign in")}</a>
+          <a class="cta cta-login" href="/login${login_query()}">${_("")}</a>
           <a class="cta cta-login" href="/login${login_query()}">${_("Sign up")}</a>
           % endif
       % endif
+        -->
     </li>
     </ol>
     % endif
