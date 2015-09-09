@@ -30,7 +30,7 @@
   % endif
 </%block>
 
-<%block name="pagetitle">Schools</%block>
+<%block name="pagetitle">해운대</%block>
 <%
   platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
   course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
@@ -55,6 +55,56 @@
     logo_alt_text = _("{platform_name} Logo").format(platform_name=platform_name)
 %>
 
-<a href="/school/haewoondaex">해운대</a><br/>
-<a href="">태종대</a><br/>
-<a href="">낙성대</a><br/>
+<section class="find-courses">
+
+##   <header class="search">
+##     <div class="inner-wrapper main-search">
+##       <hgroup>
+##         <div class="logo">
+##           <img src="${logo_file}" alt="${logo_alt_text}" />
+##         </div>
+##         <h2>${course_index_overlay_text}</h2>
+##       </hgroup>
+##     </div>
+##   </header>
+
+  <section class="courses-container">
+
+    % if course_discovery_enabled:
+    <div id="discovery-form" role="search" aria-label="course">
+      <form>
+        <input class="discovery-input" placeholder="${_('Search for a course')}" type="text"/><!-- removes spacing
+        --><button type="submit" class="button postfix discovery-submit" aria-label="${_('Search')}">
+          <i class="icon fa fa-search" aria-hidden="true"></i>
+        </button>
+      </form>
+      <div id="discovery-message"></div>
+      <div aria-live="polite" aria-relevant="all">
+        <div id="loading-indicator" class="hidden">
+          <i class="icon fa fa-spinner fa-spin"></i> ${_('Loading')}
+        </div>
+      </div>
+    </div>
+
+    <div id="filter-bar" class="filters hide-phone">
+    </div>
+    % endif
+
+    <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
+      <ul class="courses-listing">
+        %for course in courses:
+        <li class="courses-listing-item">
+          <%include file="../course.html" args="course=course" />
+        </li>
+        %endfor
+      </ul>
+    </section>
+
+
+    % if course_discovery_enabled:
+    <aside aria-label="${_('Refine your search')}" class="search-facets phone-menu">
+    </aside>
+    % endif
+
+  </section>
+</section>
