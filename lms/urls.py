@@ -294,8 +294,9 @@ if settings.COURSEWARE_ENABLED:
         # TODO: We should probably remove the circuit package. I believe it was only used in the old way of saving wiki circuits for the wiki
         # url(r'^edit_circuit/(?P<circuit>[^/]*)$', 'circuit.views.edit_circuit'),
         # url(r'^save_circuit/(?P<circuit>[^/]*)$', 'circuit.views.save_circuit'),
-
         url(r'^courses/?$', 'branding.views.courses', name="courses"),
+        url(r'^schools/?$', 'branding.views.schools', name="schools"),
+
         url(r'^change_enrollment$',
             'student.views.change_enrollment', name="change_enrollment"),
         url(r'^change_email_settings$', 'student.views.change_email_settings', name="change_email_settings"),
