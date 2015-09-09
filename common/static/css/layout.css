@@ -13,6 +13,10 @@
 
 }
 /*********************** Base Reset Style ***********************/
+
+/* redukyo modify test */
+.course-info header.course-profile {padding-top: 20px; margin-top: 0px;height: 245px;}
+
 /* Font */
 
 /**{font-family:daumR ! important;}*/
@@ -35,7 +39,7 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 
 *[data-btn="gnb"]{display:none;position:absolute;left:-10px;top:0px;width:90px;height:85px;text-indent:-9999px;background:url('/static/images/open.png') no-repeat center;}
 
-.content-wrapper{padding:0;background:#fff8eb;}
+.content-wrapper{padding:auto;background:#fff8eb;}
 
 .home>header{margin:0;height:auto;box-shadow:none;border-bottom:none;background:url('/static/images/main_bg01.png') repeat top center;}
 .home>header .outer-wrapper{margin:0 auto;padding:0;max-width:1170px;}
