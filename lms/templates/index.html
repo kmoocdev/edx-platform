@@ -151,19 +151,19 @@ from microsite_configuration import microsite
     <section class="school_list">	 <!-- school_list S -->
         <p class="title_type1">
             <img src="/static/images/title01.png" alt="참여대학">
-            <a href="#"><img src="/static/images/more.png" alt="더보기"></a>
+            <a href="/schools"><img src="/static/images/more.png" alt="더보기"></a>
         </p>
         <div class="inner">
-            <a href="#"><img src="/static/images/logo02_01.png" alt="경희대학교"><span style="font-family:daumR;">경희대학교</span></a>
-            <a href="#"><img src="/static/images/logo02_02.png" alt="고려대학교"><span style="font-family:daumR;">고려대학교</span></a>
-            <a href="#"><img src="/static/images/logo02_03.png" alt="부산대학교"><span style="font-family:daumR;">부산대학교</span></a>
-            <a href="#"><img src="/static/images/logo02_04.png" alt="서울대학교"><span style="font-family:daumR;">서울대학교</span></a>
-            <a href="#"><img src="/static/images/logo02_05.png" alt="성균관대학교"><span style="font-family:daumR;">성균관대학교</span></a>
-            <a href="#"><img src="/static/images/logo02_06.png" alt="연세대학교"><span style="font-family:daumR;">연세대학교</span></a>
-            <a href="#"><img src="/static/images/logo02_07.png" alt="이화대학교"><span style="font-family:daumR;">이화대학교</span></a>
-            <a href="#"><img src="/static/images/logo02_08.png" alt="포항공과대학교"><span style="font-family:daumR;">포항공과대학교</span></a>
-            <a href="#"><img src="/static/images/logo02_09.png" alt="한국과학기술원"><span style="font-family:daumR;">한국과학기술원</span></a>
-            <a href="#"><img src="/static/images/logo02_10.png" alt="한양대학교"><span style="font-family:daumR;">한양대학교</span></a>
+            <a href="/school/haewoondaex"><img src="/static/images/logo02_01.png" alt="경희대학교"><span style="font-family:daumR;">경희대학교</span></a>
+            <a href="/school/haewoondaex"><img src="/static/images/logo02_02.png" alt="고려대학교"><span style="font-family:daumR;">고려대학교</span></a>
+            <a href="/school/haewoondaex"><img src="/static/images/logo02_03.png" alt="부산대학교"><span style="font-family:daumR;">부산대학교</span></a>
+            <a href="/school/haewoondaex"><img src="/static/images/logo02_04.png" alt="서울대학교"><span style="font-family:daumR;">서울대학교</span></a>
+            <a href="/school/haewoondaex"><img src="/static/images/logo02_05.png" alt="성균관대학교"><span style="font-family:daumR;">성균관대학교</span></a>
+            <a href="/school/haewoondaex"><img src="/static/images/logo02_06.png" alt="연세대학교"><span style="font-family:daumR;">연세대학교</span></a>
+            <a href="/school/haewoondaex"><img src="/static/images/logo02_07.png" alt="이화대학교"><span style="font-family:daumR;">이화대학교</span></a>
+            <a href="/school/haewoondaex"><img src="/static/images/logo02_08.png" alt="포항공과대학교"><span style="font-family:daumR;">포항공과대학교</span></a>
+            <a href="/school/haewoondaex"><img src="/static/images/logo02_09.png" alt="한국과학기술원"><span style="font-family:daumR;">한국과학기술원</span></a>
+            <a href="/school/haewoondaex"><img src="/static/images/logo02_10.png" alt="한양대학교"><span style="font-family:daumR;">한양대학교</span></a>
         </div>
     </section>	 <!-- school_list E -->
 
@@ -172,8 +172,13 @@ from microsite_configuration import microsite
 
       % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
         <section class="courses">
+            <p class="title_type1">
+                <img src="/static/images/title02.png" alt="전체강좌">
+                <a href="/courses"><img src="/static/images/more.png" alt="더보기"></a>
+            </p>
             <ul class="courses-listing">
             ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+
             %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
               <li class="courses-listing-item">
                 <%include file="course.html" args="course=course" />
