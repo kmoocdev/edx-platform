@@ -83,9 +83,9 @@ site_status_msg = get_site_status_msg(course_id)
         <li></li> <!-- 없으면 화면 깨짐.. -->
         <li></li>
 
-        <li class="gnb1"><a href="#">K-MOOC란?</a></li>
-        <li class="gnb2"><a href="#">대학목록</a></li>
-        <li class="gnb3"><a href="#">강좌목록</a></li>
+        <li class="gnb1"><a href="/about">K-MOOC란?</a></li>
+        <li class="gnb2"><a href="/schools">대학목록</a></li>
+        <li class="gnb3"><a href="${marketing_link('COURSES')}">강좌목록</a></li>
 
         % endif
         %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
@@ -156,9 +156,9 @@ site_status_msg = get_site_status_msg(course_id)
           <li><a class="btn type1" href="#">개인정보수정</a></li>
           <li><a class="btn type2" href="#">로그아웃</a></li>
           -->
-          <li class="gnb1"><a href="#">K-MOOC란?</a></li>
-          <li class="gnb2"><a href="#">대학목록</a></li>
-          <li class="gnb3"><a href="#">강좌목록</a></li>
+          <li class="gnb1"><a href="/about">K-MOOC란?</a></li>
+          <li class="gnb2"><a href="/schools">대학목록</a></li>
+          <li class="gnb3"><a href="${marketing_link('COURSES')}">강좌목록</a></li>
 
           % endif
       % endif

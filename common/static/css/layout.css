@@ -39,7 +39,7 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 
 *[data-btn="gnb"]{display:none;position:absolute;left:-10px;top:0px;width:90px;height:85px;text-indent:-9999px;background:url('/static/images/open.png') no-repeat center;}
 
-.content-wrapper{padding:auto;background:#fff8eb;}
+.content-wrapper{padding:0px;background:#fff;}
 
 .home>header{margin:0;height:auto;box-shadow:none;border-bottom:none;background:url('/static/images/main_bg01.png') repeat top center;}
 .home>header .outer-wrapper{margin:0 auto;padding:0;max-width:1170px;}
@@ -89,8 +89,8 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 .school_list .inner > a span{display:block;font-weight:bold;font-size:16px;letter-spacing:-1px;white-space:nowrap;}
 
 .school_list2{background:#fff;}
-.school_list2 .inner{margin:auto;padding:0 20px 30px 20px;max-width:1160px;min-height:300px;overflow:hidden;background:#f8f8f8;}
-.school_list2 .title_type1{margin:0 auto;padding:30px 20px 20px 20px;max-width:1160px;background:#f8f8f8;}
+.school_list2 .inner{margin:auto;padding:0 20px 30px 20px;max-width:1160px;min-height:300px;overflow:hidden;background:#fff;}
+.school_list2 .title_type1{margin:0 auto;padding:30px 20px 20px 20px;max-width:1160px;background:#fff;}
 .school_list2 .title_type1 span{display:block;padding:0 0 15px 0;border-bottom:solid 1px #999;}
 .school_list2 .inner > a{float:left;margin:0 0 15px 1%;padding:10px 10px 15px 10px;width:19.2%;border:solid 1px #d1d1d1;text-align:center;background:#fff;box-sizing:border-box;overflow:hidden;}
 .school_list2 .inner > a:nth-child(1),
