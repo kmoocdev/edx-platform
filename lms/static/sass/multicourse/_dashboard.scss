@@ -514,10 +514,16 @@
       .enter-course {
         @extend %btn-pl-primary-base;
         @include float(right);
-	color:#2e2e2e;
+	color:$gray-d4;
 	border:solid 1px $gray-l4;
 	background:$gray-l3;
 
+	&:hover {
+	  color:$gray-d4;
+	  border:solid 1px $gray-l4;
+	  background:$gray-l3;
+	  font-weight:700;
+	}
      //   &.archived {
     //      @extend %btn-pl-default-base;
     //    }
