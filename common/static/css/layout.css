@@ -155,6 +155,7 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 
 			@media only screen and (max-width:640px) {
 				header.global .nav-global{padding:0;display:none;}
+				header.global .user{padding:0;display:none;}
 				header.global .close + .nav-global{display:block;}
 				header.global .nav-global li:nth-child(1){position:relative;right:0px;top:0px;padding:0;width:50%;}
 				header.global .nav-global li:nth-child(2){float:right;position:relative;right:0px;top:0px;padding:0;width:50%;border-left:solid 1px #fff;}
