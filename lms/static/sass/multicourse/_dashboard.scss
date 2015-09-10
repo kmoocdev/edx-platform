@@ -372,12 +372,13 @@
           color: $gray-l1;
           border-radius: 3px;
           padding: 12px;
-          border: 1px solid $white;
+          border: 1px solid $gray-l4;
           text-align: center;
 
           &:hover, &:focus {
             color: $gray-d3;
             border: 1px solid $gray-l4;
+	    background:$gray-l4;
           }
 
           // STATE: is-disabled
@@ -514,8 +515,8 @@
         @extend %btn-pl-primary-base;
         @include float(right);
 	color:#2e2e2e;
-	border:solid 1px #D9D9D9;
-	background:#E9E9E9;
+	border:solid 1px $gray-l4;
+	background:$gray-l3;
 
      //   &.archived {
     //      @extend %btn-pl-default-base;
