@@ -14,8 +14,8 @@
 }
 @font-face {
 	font-family:"Nanum Gothic";
-	src:url('/static/fonts/nanum/NanumGothic.eot');
-	src:url('/static/fonts/nanum/NanumGothic.woff') format('woff');
+	src:url('/static/css/NanumGothic.eot');
+	src:url('/static/css/NanumGothic.woff') format('woff');
 
 }
 /*********************** Base Reset Style ***********************/
