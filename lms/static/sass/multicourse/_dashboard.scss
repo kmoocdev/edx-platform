@@ -515,14 +515,13 @@
         @extend %btn-pl-primary-base;
         @include float(right);
 	color:$gray-d4;
-	border:solid 1px $gray-l4;
-	background:$gray-l3;
+	border:solid 1px $gray-l3;
+	background:$gray-l4;
 
 	&:hover {
 	  color:$gray-d4;
-	  border:solid 1px $gray-l4;
+	  border:solid 1px $gray-l3;
 	  background:$gray-l3;
-	  font-weight:700;
 	}
      //   &.archived {
     //      @extend %btn-pl-default-base;
