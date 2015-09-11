@@ -151,6 +151,7 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 			header.global .nav-global li[class^="gnb"]{width:22%;}
 			header.global .nav-global li:nth-child(1){right:100px;top:103px;}
 			header.global .nav-global li:nth-child(2){right:10px;top:103px;}
+				header.global .user{margin-top:-55px;}
 
 			.home>header .title .course-search{padding:10px 120px 10px 10px;}
 			.home>header .title .course-search .search-button,
