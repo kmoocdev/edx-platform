@@ -366,8 +366,8 @@ $dot-color: $light-gray;
 $dashboard-course-cover-border: $light-gray;
 
 // MISC: course assets
-$content-wrapper-bg: $white;
-$course-bg-color: #f2f2f2;
+$content-wrapper-bg: $body-bg;
+$course-bg-color: $body-bg;
 $course-bg-image: url(../images/bg-texture.png);
 $account-content-wrapper-bg: shade($body-bg, 2%);
 $course-profile-bg: rgb(245,245,245);
