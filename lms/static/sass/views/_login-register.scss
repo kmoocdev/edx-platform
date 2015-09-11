@@ -11,7 +11,7 @@ $sm-btn-linkedin: #0077b5;
     @include box-sizing(border-box);
     @include outer-container;
     $grid-columns: 12;
-    background: $white;
+    background: $body_bg;
     min-height: 100%;
     margin-bottom:30px;
     width: 100%;
@@ -166,6 +166,7 @@ $sm-btn-linkedin: #0077b5;
 
     .login-form {
         margin-bottom: $baseline;
+	background:$white;
 
         &:focus {
             outline: none;
