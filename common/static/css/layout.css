@@ -14,8 +14,16 @@
 }
 @font-face {
 	font-family:"Nanum Gothic";
+	font-weight:400;
 	src:url('/static/css/NanumGothic.eot');
 	src:url('/static/css/NanumGothic.woff') format('woff');
+
+}
+@font-face {
+	font-family:"Nanum Gothic";
+	font-weight:700;
+	src:url('/static/css/NanumGothicBold.eot');
+	src:url('/static/css/NanumGothicBold.woff') format('woff');
 
 }
 /*********************** Base Reset Style ***********************/
@@ -90,10 +98,11 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 
 .school_list{padding:30px 0 0 0;background:url('/static/images/bg01.png') repeat  left top;}
 .school_list .inner{margin:auto;padding:0 0 30px 0;max-width:1200px;overflow:hidden;}
-.school_list .title_type1{margin:0 auto 15px auto;max-width:1200px;}
+.school_list .title_type1{margin:0 auto 10px auto;max-width:1200px;}
 .school_list .inner > a{float:left;padding:10px 0 15px 0;width:10%;border:solid 1px #d1d1d1;border-left:none;text-align:center;background:#fff;box-sizing:border-box;}
 .school_list .inner > a:first-child{border-left:solid 1px #d1d1d1;}
 .school_list .inner > a span{display:block;font-weight:bold;font-size:16px;letter-spacing:-1px;white-space:nowrap;}
+.school_list .title_type1:after {content:"";clear:both;display:block;}
 
 .school_list2{background:#fff;}
 .school_list2 .inner{margin:auto;padding:0 20px 30px 20px;max-width:1160px;min-height:300px;overflow:hidden;background:#fff;}
@@ -102,8 +111,10 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 .school_list2 .inner > a{float:left;margin:0 0 15px 1%;padding:10px 10px 15px 10px;width:19.2%;border:solid 1px #d1d1d1;text-align:center;background:#fff;box-sizing:border-box;overflow:hidden;}
 .school_list2 .inner > a:nth-child(1),
 .school_list2 .inner > a:nth-child(6){margin-left:0;}
+.school_list2 .title_type1:after {content:"";clear:both;display:block;}
 
-.title_type1 a{float:right;}
+.title_type1 a {float:right;}
+.title_type1:after {content:"";display:block;clear:both;}
 
 @media only screen and (max-width:1100px) {
 	.title_type1{padding:0 10px;}
