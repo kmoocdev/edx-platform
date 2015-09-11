@@ -165,10 +165,10 @@ site_status_msg = get_site_status_msg(course_id)
           % endif
       % endif
     </ol>
-
+<!--
     <ol class="right nav-courseware">
     <li class="nav-courseware-01">
-        <!--
+
       % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
           % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
           <a class="cta cta-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("")}</a>
@@ -177,9 +177,10 @@ site_status_msg = get_site_status_msg(course_id)
           <a class="cta cta-login" href="/login${login_query()}">${_("Sign up")}</a>
           % endif
       % endif
-        -->
+
     </li>
     </ol>
+-->
     % endif
   </nav>
 </header>
