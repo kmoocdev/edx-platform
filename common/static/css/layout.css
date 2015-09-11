@@ -104,9 +104,9 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 .school_list .inner > a span{display:block;font-weight:bold;font-size:16px;letter-spacing:-1px;white-space:nowrap;}
 .school_list .title_type1:after {content:"";clear:both;display:block;}
 
-.school_list2{background:#fff;}
-.school_list2 .inner{margin:auto;padding:0 20px 30px 20px;max-width:1160px;min-height:300px;overflow:hidden;background:#fff;}
-.school_list2 .title_type1{margin:0 auto;padding:30px 20px 20px 20px;max-width:1160px;background:#fff;}
+/**.school_list2{background:#fff;}**/
+.school_list2 .inner{margin:auto;padding:0 20px 30px 20px;max-width:1160px;min-height:300px;overflow:hidden;}
+.school_list2 .title_type1{margin:0 auto;padding:30px 20px 20px 20px;max-width:1160px;}
 .school_list2 .title_type1 span{display:block;padding:0 0 15px 0;border-bottom:solid 1px #999;}
 .school_list2 .inner > a{float:left;margin:0 0 15px 1%;padding:10px 10px 15px 10px;width:19.2%;border:solid 1px #d1d1d1;text-align:center;background:#fff;box-sizing:border-box;overflow:hidden;}
 .school_list2 .inner > a:nth-child(1),
