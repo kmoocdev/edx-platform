@@ -116,6 +116,8 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 .title_type1 a {float:right;}
 .title_type1:after {content:"";display:block;clear:both;}
 
+.home {background:#f8f8f8 !important;}
+
 @media only screen and (max-width:1100px) {
 	.title_type1{padding:0 10px;}
 	.school_list .inner{padding:0 10px 30px 10px;}

@@ -46,6 +46,10 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
           height: $course-image-height;
           content: '';
         }
+	
+	&:hover {
+	 border-bottom: 3px solid $action-primary-bg;
+	}
 
         img {
           width: 100%;
