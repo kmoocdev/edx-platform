@@ -240,7 +240,7 @@ $text-color: $dark-gray;
 $dark-trans-bg: rgba(0, 0, 0, .75);
 
 $body-bg: #f8f8f8;
-$container-bg: $white;
+$container-bg: $body-bg;
 $header-image: linear-gradient(-90deg, rgba(255,255,255, 1), rgba(230,230,230, 0.9));
 $header-bg: $white;
 $courseware-header-image: linear-gradient(top, rgb(255,255,255), rgb(238,238,238));
