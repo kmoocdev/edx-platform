@@ -37,6 +37,7 @@ site_status_msg = get_site_status_msg(course_id)
 % endif
 </%block>
 
+
   <header id="global-navigation" class="global ${"slim" if course else ""}" >
     <nav class="nav-wrapper" aria-label="${_('Global')}">
     <h1 class="logo">
@@ -46,19 +47,6 @@ site_status_msg = get_site_status_msg(course_id)
         </%block>
       </a>
     </h1>
-    <a data-btn="gnb" class="open">열기</a>
-## 			<ol class="left nav-global">
-## 				<li><a class="btn type1" href="#">로그인</a></li>
-## 				<li><a class="btn type2" href="#">회원가입</a></li>
-## 				<!-- 필요에 따라 바꿔 쓰세요
-## 				<li><a class="btn type1" href="#">개인정보수정</a></li>
-## 				<li><a class="btn type2" href="#">로그아웃</a></li>
-## 				-->
-## 				<li class="gnb1"><a href="#">K-MOOC란?</a></li>
-## 				<li class="gnb2"><a href="#">대학목록</a></li>
-## 				<li class="gnb3"><a href="#">강좌목록</a></li>
-## 			</ol>
-
 
     % if course:
     <h2 class="course-header"><span class="provider">${course.display_org_with_default | h}:</span>
@@ -81,6 +69,7 @@ site_status_msg = get_site_status_msg(course_id)
         </script>
 
     % if user.is_authenticated():
+    <a data-btn="gnb" class="open">열기</a>
     <ol class="left nav-global authenticated">
       <%block name="navigation_global_links_authenticated">
         % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
@@ -92,7 +81,6 @@ site_status_msg = get_site_status_msg(course_id)
 ##         <li><a class="btn type2" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">회원가입</a></li>
 
 ##         <li><a class="btn type1" href="#">개인정보수정</a></li>
-
         <li></li> <!-- 없으면 화면 깨짐.. -->
         <li></li>
 
@@ -140,6 +128,7 @@ site_status_msg = get_site_status_msg(course_id)
         </ol>
       % endif
     % else:
+    <a data-btn="gnb" class="open">열기</a>
     <ol class="left nav-global">
       <%block name="navigation_global_links">
         % if microsite.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
@@ -201,3 +190,20 @@ site_status_msg = get_site_status_msg(course_id)
 % endif
 
 <%include file="help_modal.html"/>
+
+
+<script>
+    $(document).ready(function(){
+        $('*[data-btn="gnb"]').bind('click', function(){
+            if($(this).attr('class') == 'open'){
+                $(this).attr('class','close');
+                $(this).html('닫기');
+            } else {
+                $(this).attr('class','open');
+                $(this).html('열기');
+            }
+        });
+
+    });
+
+</script>

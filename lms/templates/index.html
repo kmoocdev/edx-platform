@@ -19,6 +19,7 @@ from microsite_configuration import microsite
 
 <script>
     $(document).ready(function(){
+
     	$("body").prepend("<div id='mask' style='position: absolute; left: 0; top: 0; z-index: 10000; display: none; opacity: 0.4; background:#363636;'></div>");
 
         var videoHtml = "";
@@ -43,6 +44,7 @@ from microsite_configuration import microsite
             var maskWidth = $(window).width();
             $("#mask").css({"width":maskWidth,"height":maskHeight});
         });
+
     });
 
     function playVideo(){
