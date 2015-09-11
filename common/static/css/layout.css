@@ -35,7 +35,7 @@
 
 /**{font-family:daumR ! important;}*/
 
-header.global{height:auto;box-shadow:none;border-bottom:solid 2px #666;}
+header.global{height:auto;box-shadow:none;border-bottom:solid 1px #666;box-shadow:2px 2px 2px #666;}
 header.global h1.logo{margin:30px 0;}
 header.global h1.logo img {height:44px !important;}
 header.global nav {margin:0 auto;padding:0;max-width:1170px;height:auto;position:relative;}
