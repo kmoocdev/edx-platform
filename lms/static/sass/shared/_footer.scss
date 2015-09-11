@@ -31,9 +31,10 @@
       color: $link-color;
       text-decoration: none !important;
 
-      &:hover, &:focus, &:active {
-        border-bottom: 1px dotted $link-color;
-      }
+//      &:hover, &:focus, &:active {
+  //      border-bottom: 1px dotted $link-color;
+    //  }
+      
     }
 
     // colophon
@@ -56,13 +57,14 @@
         li {
           @include float(left);
           margin-right: ($baseline*0.75);
+	  margin-bottom:0;
 
           a {
             color: tint($black, 20%);
 
-            &:hover, &:focus, &:active {
-              color: $link-color;
-            }
+            //&:hover, &:focus, &:active {
+            //  color: $link-color;
+           // }
           }
 
           &:last-child {

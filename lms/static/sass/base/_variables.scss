@@ -19,9 +19,9 @@ $fg-min-width: 810px;
 
 // FONTS
 $sans-serif: 'Nanum Gothic', 'Open Sans', $verdana, sans-serif;
-$monospace: Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', monospace;
+$monospace: 'Nanum Gothic';
 $body-font-family: $sans-serif;
-$serif: $georgia;
+$serif: $sans-serif;
 
 // FONT-WEIGHTS
 $font-light: 300;
@@ -440,12 +440,12 @@ $video-thumb-url: '../images/homepage-hero-video-thumb.jpg';
 // SPLINT: new standards
 
 // SPLINT: fonts
-$f-serif: 'Bree Serif', Georgia, Cambria, 'Times New Roman', Times, serif;
-$f-sans-serif: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
-$f-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
+$f-serif: 'Nanum Gothic','Bree Serif', Georgia, Cambria, 'Times New Roman', Times, serif;
+$f-sans-serif: 'Nanum Gothic','Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+$f-monospace: 'Nanum Gothic','Bitstream Vera Sans Mono', Consolas, Courier, monospace;
 
 // Header specific sans-serif
-$header-sans-serif: 'Open Sans', Arial, Helvetica, sans-serif;
+$header-sans-serif: 'Nanum Gothic','Open Sans', Arial, Helvetica, sans-serif;
 
 // SPLINT: colors
 
