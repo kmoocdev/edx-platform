@@ -15,6 +15,7 @@
     <%static:include path="js/${template_name}.underscore" />
 </script>
 % endfor
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 </%block>
 
 <%block name="requirejs">
@@ -31,17 +32,7 @@
 
 <%block name="content">
 
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <!--
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    -->
-    <!-- production -->
-    <!-- <script type="text/javascript" src="js/plupload.full.min.js"></script> -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plupload/2.1.2/plupload.full.min.js"></script>
-    <!--
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/black-tie/jquery-ui.css"/>
-    -->
     <script type="text/javascript">
         /*!
          * bootstrap-progressbar v0.8.2 by @minddust
@@ -526,12 +517,14 @@ var trCdnFile = ""
 + "</tr>";
 
     var ajaxPutEdX = function() {
+        $.ajaxSetup({
+            type: 'PUT'
+        });
         $.ajax({
-            method: 'PUT',
+            //method: 'PUT',
             url: '${asset_callback_url}?file_name='+file_name+'&cdn_url='+cdn_url+'&file_type='+file_type+'&thumbnail_url='+thumbnail_url,
             success: function (res) {
-                if (res.message !== 'SUCCESS') {
-                    console.log('ajaxPutEdX SUCCESS');
+                if (res.msg == 'Upload completed') {
                     ajaxGetEdX();
                 }
             },
@@ -540,10 +533,12 @@ var trCdnFile = ""
             }
         });
     }
-
     var ajaxDeleteEdX = function(id) {
+        $.ajaxSetup({
+            type : 'DELETE'
+        });
         $.ajax({
-            method: 'DELETE',
+            //method: 'DELETE',
             url: '${asset_callback_url}'+id,
             error: function () {
                 console.log('ajaxDeleteEdX error');
@@ -553,44 +548,41 @@ var trCdnFile = ""
             ajaxGetEdX();
         });
     }
-
     var ajaxGetEdX = function() {
+        $.ajaxSetup({
+            type: 'GET'
+        });
         $.ajax({
-            method: 'GET',
+            //method: 'GET',
             url: '${asset_callback_url}',
-            success: function (res) {
-                console.log(res);
-                if (res.message !== 'SUCCESS') {
-                    console.log('ajaxGetEdX SUCCESS');
-                    if (res.totalCount > 0) {
-                        $('#asset-table-body').html('');
-                        $(".assets-library").css("display", "block");
-                        $(".no-asset-content").css("display", "none");
-                        var arrAssets = res.assets;
-                        var asset = null;
-                        $.each(arrAssets, function( key, value ) {
-                            asset = value;
-                            $('#asset-table-body').append(trCdnFile
-                                    .replace('{{display_name}}', asset.display_name)
-                                    .replace(/{{url}}/g, asset.external_url)
-                                    .replace('{{content_type}}', asset.content_type)
-                                    .replace('{{date_added}}', asset.date_added)
-                                    .replace('{{portable_url}}', asset.portable_url)
-                                    .replace('{{id}}', encodeURIComponent(asset.id))
-                            );
-                        });
-                    } else if (res.totalCount == 0) {
-                        $(".assets-library").css("display", "none");
-                        $(".no-asset-content").css("display", "block");
-                    }
-                }
-            },
             error: function () {
                 console.log('ajaxGetEdX error');
             }
+        }).done(function(data){
+            if (data.totalCount > 0) {
+                $('#asset-table-body').html('');
+                $(".assets-library").css("display", "block");
+                $(".no-asset-content").css("display", "none");
+                var arrAssets = data.assets;
+                var asset = null;
+                $.each(arrAssets, function( key, value ) {
+                    asset = value;
+                    $('#asset-table-body').append(trCdnFile
+                            .replace('{{display_name}}', asset.display_name)
+                            .replace(/{{url}}/g, asset.external_url)
+                            .replace('{{content_type}}', asset.content_type)
+                            .replace('{{date_added}}', asset.date_added)
+                            .replace('{{portable_url}}', asset.portable_url)
+                            .replace('{{id}}', encodeURIComponent(asset.id))
+                    );
+                });
+            } else if (data.totalCount == 0) {
+                $(".assets-library").css("display", "none");
+                $(".no-asset-content").css("display", "block");
+            }
+            console.log("ajaxGetEdX done");
         });
     }
-
     $(".close-button").click(function(){
         $('#uploadProgress').text('');
     });
