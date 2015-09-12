@@ -31,7 +31,6 @@
 
 
 <%block name="content">
-
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plupload/2.1.2/plupload.full.min.js"></script>
     <script type="text/javascript">
         /*!
@@ -276,13 +275,14 @@
     <a href="#" class="close-button"><i class="icon fa fa-times-circle"></i> <span class="sr">${_('close')}</span></a>
     <div class="modal-body">
         <h1 class="title">${_("Upload New File")}</h1>
-        <h2>${_("Max per-file size: {max_filesize}MB").format(max_filesize=max_file_size_in_mbs)}</h2>
         <div class="container">
             <div class="input-group">
                 <input type="hidden" class="form-control" disabled="disabled" id="zfp-thumbnail-selected" value="" />
-                    <a href="#" id="zfp-thumbnail-selector" >파일선택</a>
+                    <a href="#" id="zfp-thumbnail-selector" class="choose-file-button">${_("Choose File")}</a>
             </div>
-            <div id="uploadProgress"></div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
             <div class="embeddable" id="movie-info">
                 <label>URL:</label>
                 <input type="text" class="embeddable-xml-input" value=''>
@@ -325,26 +325,35 @@ var thumnail_url = "";
                 },
 
                 FilesAdded: function (up, files) {
-                    $("#zfp-thumbnail-progress").show();
-                    $("#zfp-thumbnail-progress .progress-bar").attr('data-transitiongoal', 0).progressbar({
-                        display_text: 'center',
-                        use_percentage: true,
-                    });
-                    plupload.each(files, function (file) {
-                        $("#zfp-thumbnail-selected").val(file.name);
-                    });
-                    thumbnail.start();
+                    $(".input-group").hide();
+                    $(".progress-bar").show();
 
+                    console.log("embeddable-xml-input:");
+                    console.log($(".embeddable-xml-input").val());
+                    if ($(".embeddable-xml-input").val() != "") {
+                        $(".embeddable-xml-input").val("");
+                    }
+                    $(".progress-fill").width("0%");
+                    $(".progress-fill").text("uploading:0%");
+//                    $("#zfp-thumbnail-progress").show();
+//                    $("#zfp-thumbnail-progress .progress-bar").attr('data-transitiongoal', 0).progressbar({
+//                        display_text: 'center',
+//                        use_percentage: true,
+//                    });
+//                    plupload.each(files, function (file) {
+//                        $("#zfp-thumbnail-selected").val(file.name);
+//                    });
+                    thumbnail.start();
                     console.log('FilesAdded:', files);
                 },
 
                 UploadProgress: function (up, file) {
-                    $("#zfp-thumbnail-progress .progress-bar").attr('data-transitiongoal', file.percent).progressbar();
-                    $("#uploadProgress").text("uploading:"+file.percent+"%");
+                    $(".progress-fill").width(file.percent+"%");
+                    $(".progress-fill").text("uploading:"+file.percent+"%");
                 },
 
                 Error: function (up, err) {
-                    $("#zfp-thumbnail-progress").hide();
+                    $(".progress-bar").hide();
                     console.log('Error:', err);
                 },
 
@@ -363,22 +372,22 @@ var thumnail_url = "";
                             data: 'uuid=' + result.data.up_path + '&is_re=y',
                             type: 'get',
                             success: function (res) {
-                                $("#zfp-thumbnail-progress").hide();
-                                $("#zfp-mov-progress").show();
-                                $("#zfp-mov-progress .progress-bar").attr('data-transitiongoal', 0).progressbar({
-                                    display_text: 'center',
-                                    use_percentage: true,
-                                });
+//                                $("#zfp-thumbnail-progress").hide();
+//                                $("#zfp-mov-progress").show();
+//                                $("#zfp-mov-progress .progress-bar").attr('data-transitiongoal', 0).progressbar({
+//                                    display_text: 'center',
+//                                    use_percentage: true,
+//                                });
 
                                 if (res.status == 200) {
                                     var movie_status = 'http://mme2.npcomms.kr' + res.data.movie_status;
                                     var thumb_div_status = 'http://mme2.npcomms.kr' + res.data.thumb_div_status;
                                     var thumb_status = 'http://mme2.npcomms.kr' + res.data.thumb_status;
-                                    console.log(movie_status, thumb_div_status, thumb_status);
+                                    //console.log(movie_status, thumb_div_status, thumb_status);
                                     //$("#mov_url").text('http://mme2.npcomms.kr' + res.data.mov_url);
-                                    $(".embeddable-xml-input").val('http://mme2.npcomms.kr' + res.data.mov_url);
+                                    $(".progress-fill").width("0%");
+                                    $(".progress-fill").text("encoding:0%");
                                     cdn_url = 'http://mme2.npcomms.kr' + res.data.mov_url;
-                                    console.log('cdn_url:', 'http://mme2.npcomms.kr' + res.data.mov_url);
                                     mov_st(movie_status);
                                     //getThumb('구간썸네일', thumb_div_status);
                                     getThumb('대표섬네일', thumb_status);
@@ -424,18 +433,27 @@ var thumnail_url = "";
             async: false,
             success: function (res) {
                 if (res.message !== 'SUCCESS') {
-                    $("#zfp-mov-progress .progress-bar").attr('data-transitiongoal', parseInt(res.data.data.percent)).progressbar();
+                    $(".progress-fill").width(parseInt(res.data.data.percent)+"%");
                     sleep(300);
                     mov_st(url);
-                    $("#uploadProgress").text("encoding:"+res.data.data.percent+"%");
+                    $(".progress-fill").text("encoding:"+res.data.data.percent+"%");
                     console.log(res.data.data.percent);
                 }
                 else {
                     console.warn('Encoding Finish');
                     ajaxPutEdX();
-                    $("#uploadProgress").text("encoding:100%");
-                    $("#zfp-mov-progress .progress-bar").attr('data-transitiongoal', 100).progressbar();
+                    $(".progress-fill").width("100%");
+                    $(".progress-fill").text("encoding completed");
+                    //$("#zfp-mov-progress .progress-bar").attr('data-transitiongoal', 100).progressbar();
                     $("#movie-info").show(); //영상정보 호출 -> 플레이어 연동
+
+                    //embeddable
+                    console.log($(".embeddable").css("display"));
+                    $(".embeddable").after($(".input-group"));
+                    $(".choose-file-button").text("Load Another File");
+                    $(".input-group").show();
+
+                    $(".embeddable-xml-input").val(cdn_url);
                 }
             },
             error: function () {
@@ -521,7 +539,6 @@ var trCdnFile = ""
             type: 'PUT'
         });
         $.ajax({
-            //method: 'PUT',
             url: '${asset_callback_url}?file_name='+file_name+'&cdn_url='+cdn_url+'&file_type='+file_type+'&thumbnail_url='+thumbnail_url,
             success: function (res) {
                 if (res.msg == 'Upload completed') {
@@ -533,12 +550,12 @@ var trCdnFile = ""
             }
         });
     }
+
     var ajaxDeleteEdX = function(id) {
         $.ajaxSetup({
             type : 'DELETE'
         });
         $.ajax({
-            //method: 'DELETE',
             url: '${asset_callback_url}'+id,
             error: function () {
                 console.log('ajaxDeleteEdX error');
@@ -548,41 +565,42 @@ var trCdnFile = ""
             ajaxGetEdX();
         });
     }
+
     var ajaxGetEdX = function() {
         $.ajaxSetup({
             type: 'GET'
         });
         $.ajax({
-            //method: 'GET',
             url: '${asset_callback_url}',
             error: function () {
                 console.log('ajaxGetEdX error');
             }
         }).done(function(data){
-            if (data.totalCount > 0) {
-                $('#asset-table-body').html('');
-                $(".assets-library").css("display", "block");
-                $(".no-asset-content").css("display", "none");
-                var arrAssets = data.assets;
-                var asset = null;
-                $.each(arrAssets, function( key, value ) {
-                    asset = value;
-                    $('#asset-table-body').append(trCdnFile
-                            .replace('{{display_name}}', asset.display_name)
-                            .replace(/{{url}}/g, asset.external_url)
-                            .replace('{{content_type}}', asset.content_type)
-                            .replace('{{date_added}}', asset.date_added)
-                            .replace('{{portable_url}}', asset.portable_url)
-                            .replace('{{id}}', encodeURIComponent(asset.id))
-                    );
-                });
-            } else if (data.totalCount == 0) {
-                $(".assets-library").css("display", "none");
-                $(".no-asset-content").css("display", "block");
-            }
+                    if (data.totalCount > 0) {
+                        $('#asset-table-body').html('');
+                        $(".assets-library").css("display", "block");
+                        $(".no-asset-content").css("display", "none");
+                        var arrAssets = data.assets;
+                        var asset = null;
+                        $.each(arrAssets, function( key, value ) {
+                            asset = value;
+                            $('#asset-table-body').append(trCdnFile
+                                    .replace('{{display_name}}', asset.display_name)
+                                    .replace(/{{url}}/g, asset.external_url)
+                                    .replace('{{content_type}}', asset.content_type)
+                                    .replace('{{date_added}}', asset.date_added)
+                                    .replace('{{portable_url}}', asset.portable_url)
+                                    .replace('{{id}}', encodeURIComponent(asset.id))
+                            );
+                        });
+                    } else if (data.totalCount == 0) {
+                        $(".assets-library").css("display", "none");
+                        $(".no-asset-content").css("display", "block");
+                    }
             console.log("ajaxGetEdX done");
         });
     }
+
     $(".close-button").click(function(){
         $('#uploadProgress').text('');
     });
