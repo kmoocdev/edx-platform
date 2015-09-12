@@ -142,7 +142,7 @@ def courses(request):
 
 @ensure_csrf_cookie
 @cache_if_anonymous()
-def haewoondaex(request):
+def haewoondaex(request, univ_id):
     courses_list = []
     course_discovery_meanings = getattr(settings, 'COURSE_DISCOVERY_MEANINGS', {})
     if not settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
@@ -154,8 +154,11 @@ def haewoondaex(request):
         else:
             courses_list = sort_by_announcement(courses_list)
 
+
+    print "univ_id = ", univ_id
+
     return render_to_response(
-        "courseware/haewoondaex.html",
+        "courseware/univ_intro_"+univ_id+".html",
         {'courses': courses_list, 'course_discovery_meanings': course_discovery_meanings}
     )
 

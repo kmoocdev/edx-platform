@@ -297,7 +297,8 @@ if settings.COURSEWARE_ENABLED:
         url(r'^courses/?$', 'branding.views.courses', name="courses"),
         url(r'^schools/?$', 'courseware.views.schools', name="schools"),
 
-        url(r'^school/haewoondaex?$', 'courseware.views.haewoondaex', name="school"),
+        # url(r'^school/haewoondaex?$', 'courseware.views.haewoondaex', name="school"),
+        url(r'^school/(?P<univ_id>.*?)$', 'courseware.views.haewoondaex', name="school"),
 
 
         url(r'^change_enrollment$',
