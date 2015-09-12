@@ -20,6 +20,12 @@ from microsite_configuration import microsite
 <script>
     $(document).ready(function(){
 
+        ##검색기능 비활성화..
+        $("#searchInput,#searchBtn").click(function(){
+            alert("준비중입니다.");
+            return false;
+        });
+
     	$("body").prepend("<div id='mask' style='position: absolute; left: 0; top: 0; z-index: 10000; display: none; opacity: 0.4; background:#363636;'></div>");
 
         var videoHtml = "";
@@ -100,9 +106,9 @@ from microsite_configuration import microsite
                 <h1><img src="/static/images/main_title.png" alt="최고의 대학, 최고의 강의! 한국형 온라인에서 시작하세요."></h1>
             </hgroup>
             <div class="course-search">
-                <form method="get" action="http://edx.kotech.biz:8040/courses">
-                    <input class="search-input" name="search_query" type="text" placeholder="원하시는 강의를 검색해 보세요.">
-                    <button class="search-button" type="submit">검색</button>
+                <form method="get" action="#">
+                    <input id="searchInput" class="search-input" name="search_query" type="text" placeholder="원하시는 강의를 검색해 보세요.">
+                    <button id="searchBtn" class="search-button" type="submit">검색</button>
                 </form>
             </div>
         </div>
