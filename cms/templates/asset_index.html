@@ -307,7 +307,7 @@ var thumnail_url = "";
             //chunk_size : '64kb',
             chunk_size: '1mb',
             // MME General settings
-            url: "http://dev.kmoocs.kr/upload",
+            url: "http://mme.kmoocs.kr/upload",
             file_data_name: "uploadFile",
             max_file_count: 1,
             max_retries: 3,
@@ -367,7 +367,7 @@ var thumnail_url = "";
 
                         //영상 엔코딩 요청 상태 체크
                         $.ajax({
-                            url: 'http://dev.kmoocs.kr/mov_extract',
+                            url: 'http://mme.kmoocs.kr/mov_extract',
                             dataType: 'json',
                             data: 'uuid=' + result.data.up_path + '&is_re=y',
                             type: 'get',
@@ -380,14 +380,14 @@ var thumnail_url = "";
 //                                });
 
                                 if (res.status == 200) {
-                                    var movie_status = 'http://dev.kmoocs.kr' + res.data.movie_status;
-                                    var thumb_div_status = 'http://dev.kmoocs.kr' + res.data.thumb_div_status;
-                                    var thumb_status = 'http://dev.kmoocs.kr' + res.data.thumb_status;
+                                    var movie_status = 'http://mme.kmoocs.kr' + res.data.movie_status;
+                                    var thumb_div_status = 'http://mme.kmoocs.kr' + res.data.thumb_div_status;
+                                    var thumb_status = 'http://mme.kmoocs.kr' + res.data.thumb_status;
                                     //console.log(movie_status, thumb_div_status, thumb_status);
-                                    //$("#mov_url").text('http://dev.kmoocs.kr' + res.data.mov_url);
+                                    //$("#mov_url").text('http://mme.kmoocs.kr' + res.data.mov_url);
                                     $(".progress-fill").width("0%");
                                     $(".progress-fill").text("encoding:0%");
-                                    cdn_url = 'http://dev.kmoocs.kr' + res.data.mov_url;
+                                    cdn_url = 'http://mme.kmoocs.kr' + res.data.mov_url;
                                     mov_st(movie_status);
                                     //getThumb('구간썸네일', thumb_div_status);
                                     getThumb('대표섬네일', thumb_status);
@@ -475,7 +475,7 @@ var thumnail_url = "";
                 } else {
                     console.log("res:", res);
                     $.each(res.data.thumb, function (index, value) {
-                        path = value.path.replace('/data/convert/mme', 'http://dev.kmoocs.kr/doc')
+                        path = value.path.replace('/data/convert/mme', 'http://mme.kmoocs.kr/doc')
                         thumbnail_url = path;
                         console.log("path:",path);
                         //$('.container').append('<div class="row"><div class="col-md-12"><label>' + text + ': ' + index + '<br><img src="' + path + '"></label></div></div>');
