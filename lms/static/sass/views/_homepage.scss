@@ -29,6 +29,11 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
       box-shadow: 0 1px 10px 0 $black-t0, inset 0 0 0 1px $white-t3;
       background: $body-bg;
       width: 100%;
+	
+	&:hover {
+	 border-bottom: 3px solid $action-primary-bg;
+	}
+
 
       .course-image .cover-image {
         height: $course-image-height;
