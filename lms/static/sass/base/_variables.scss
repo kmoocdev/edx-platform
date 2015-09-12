@@ -19,9 +19,9 @@ $fg-min-width: 810px;
 
 // FONTS
 $sans-serif: 'Open Sans', $verdana, sans-serif;
-$monospace: Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', monospace;
+$monospace: 'Open Sans';
 $body-font-family: $sans-serif;
-$serif: $georgia;
+$serif: $sans-serif;
 
 // FONT-WEIGHTS
 $font-light: 300;
@@ -239,8 +239,8 @@ $text-color: $dark-gray;
 
 $dark-trans-bg: rgba(0, 0, 0, .75);
 
-$body-bg: rgb(250,250,250);
-$container-bg: $white;
+$body-bg: #f8f8f8;
+$container-bg: $body-bg;
 $header-image: linear-gradient(-90deg, rgba(255,255,255, 1), rgba(230,230,230, 0.9));
 $header-bg: $white;
 $courseware-header-image: linear-gradient(top, rgb(255,255,255), rgb(238,238,238));
@@ -366,8 +366,8 @@ $dot-color: $light-gray;
 $dashboard-course-cover-border: $light-gray;
 
 // MISC: course assets
-$content-wrapper-bg: $white;
-$course-bg-color: #f2f2f2;
+$content-wrapper-bg: $body-bg;
+$course-bg-color: $body-bg;
 $course-bg-image: url(../images/bg-texture.png);
 $account-content-wrapper-bg: shade($body-bg, 2%);
 $course-profile-bg: rgb(245,245,245);
@@ -440,12 +440,12 @@ $video-thumb-url: '../images/homepage-hero-video-thumb.jpg';
 // SPLINT: new standards
 
 // SPLINT: fonts
-$f-serif: 'Bree Serif', Georgia, Cambria, 'Times New Roman', Times, serif;
-$f-sans-serif: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
-$f-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
+$f-serif: 'Nanum Gothic','Bree Serif', Georgia, Cambria, 'Times New Roman', Times, serif;
+$f-sans-serif: 'Nanum Gothic','Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+$f-monospace: 'Nanum Gothic','Bitstream Vera Sans Mono', Consolas, Courier, monospace;
 
 // Header specific sans-serif
-$header-sans-serif: 'Open Sans', Arial, Helvetica, sans-serif;
+$header-sans-serif: 'Nanum Gothic','Open Sans', Arial, Helvetica, sans-serif;
 
 // SPLINT: colors
 

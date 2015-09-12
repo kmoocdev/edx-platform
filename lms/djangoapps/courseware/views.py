@@ -140,6 +140,35 @@ def courses(request):
     )
 
 
+@ensure_csrf_cookie
+@cache_if_anonymous()
+def haewoondaex(request, univ_id):
+    courses_list = []
+    course_discovery_meanings = getattr(settings, 'COURSE_DISCOVERY_MEANINGS', {})
+    if not settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+        courses_list = get_courses(request.user, request.META.get('HTTP_HOST'))
+
+        if microsite.get_value("ENABLE_COURSE_SORTING_BY_START_DATE",
+                               settings.FEATURES["ENABLE_COURSE_SORTING_BY_START_DATE"]):
+            courses_list = sort_by_start_date(courses_list)
+        else:
+            courses_list = sort_by_announcement(courses_list)
+
+
+    print "univ_id = ", univ_id
+
+    return render_to_response(
+        "courseware/univ_intro_"+univ_id+".html",
+        {'courses': courses_list, 'course_discovery_meanings': course_discovery_meanings}
+    )
+
+
+@ensure_csrf_cookie
+@cache_if_anonymous()
+def schools(request):
+    return render_to_response("courseware/schools.html")
+
+
 def render_accordion(request, course, chapter, section, field_data_cache):
     """
     Draws navigation bar. Takes current position in accordion as

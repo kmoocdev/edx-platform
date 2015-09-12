@@ -14,7 +14,7 @@ html, body {
 }
 
 html{
-  background: white;
+  background: $body-bg;
 }
 
 body {
@@ -22,14 +22,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $base-font-color;
-  font: normal 1.2em/1.2em $serif;
+  color: $gray-d4;
+  font: bold 1.2em/1.2em $sans-serif;
   margin: 0;
 }
 
 h1 {
   color: $base-font-color;
-  font: normal 2em/1.4em $sans-serif;
+  font: bold 2em/1.4em $sans-serif;
   letter-spacing: 1px;
   margin-bottom: ($baseline*1.5);
   text-align: center;
@@ -38,7 +38,7 @@ h1 {
 
 h2 {
   color: $lighter-base-font-color;
-  font: normal 1.2em/1.2em $serif;
+  font: bold 1.2em/1.2em $sans-serif;
   letter-spacing: 1px;
   margin-bottom: ($baseline*0.75);
   text-transform: uppercase;
@@ -51,7 +51,7 @@ p + h2, ul + h2, ol + h2 {
 
 p {
   color: $base-font-color;
-  font: normal 1em/1.6em $serif;
+  font: normal 1em/1.6em $sans-serif;
   margin: 0;
 }
 
@@ -81,13 +81,13 @@ p + p, ul + p, ol + p {
 p {
   a:link, a:visited {
     color: $link-color;
-    font: normal 1em/1em $serif;
+    font: normal 1em/1em $sans-serif;
     text-decoration: none;
     @include transition(all 0.1s linear 0s);
 
     &:hover, &:focus {
       color: $link-color;
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 }
@@ -99,7 +99,7 @@ a:link, a:visited {
   @include transition(all 0.1s linear 0s);
 
   &:hover, &:focus {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   &:disabled, &.is-disabled, &.disabled {
@@ -160,7 +160,7 @@ span.edx {
 
     li {
       color: $base-font-color;
-      font: normal 1em/1.4em $serif;
+      font: normal 1em/1.4em $sans-serif;
       margin: 0;
     }
   }

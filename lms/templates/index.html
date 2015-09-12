@@ -19,6 +19,7 @@ from microsite_configuration import microsite
 
 <script>
     $(document).ready(function(){
+
     	$("body").prepend("<div id='mask' style='position: absolute; left: 0; top: 0; z-index: 10000; display: none; opacity: 0.4; background:#363636;'></div>");
 
         var videoHtml = "";
@@ -43,6 +44,7 @@ from microsite_configuration import microsite
             var maskWidth = $(window).width();
             $("#mask").css({"width":maskWidth,"height":maskHeight});
         });
+
     });
 
     function playVideo(){
@@ -60,8 +62,9 @@ from microsite_configuration import microsite
     }
 </script>
 
-<section class="home">
+<section class="home" style="background: #fff8eb !important;">
   <header>
+      <!--
     <div style="border: 1px solid #ffffff; height: 150px; left: 330px; position: absolute; top: 130px; width: 350px;">main logo</div>
     <div style="border: 1px solid #ffffff; height: 35px; left: 330px; position: absolute; top: 300px; width: 350px;">
         <input type="text" name="searchtext"/>
@@ -74,8 +77,38 @@ from microsite_configuration import microsite
             </div>
         </a>
     </div>
+    -->
 
     <div class="outer-wrapper">
+        <!--
+        <div style="border: 1px solid #ffffff; height: 150px; position: absolute; top: 130px; width: 350px;">main logo</div>
+        <div style="border: 1px solid #ffffff; height: 35px; position: absolute; top: 300px; width: 350px;">
+            <input type="text" name="searchtext"/>
+            <input type="button" value="검색"/>
+        </div>
+        <div style="border: 1px solid #ffffff; height: 175px; right: 10px; position: absolute; top: 140px; width: 350px; z-index: 9999;">
+            <a href="javascript:playVideo();" style="text-decoration: none;">
+                <div style="width:100%;height:100%;">
+                    video here
+                </div>
+            </a>
+        </div>
+        -->
+
+        <div class="title">
+            <hgroup>
+                <h1><img src="/static/images/main_title.png" alt="최고의 대학, 최고의 강의! 한국형 온라인에서 시작하세요."></h1>
+            </hgroup>
+            <div class="course-search">
+                <form method="get" action="http://edx.kotech.biz:8040/courses">
+                    <input class="search-input" name="search_query" type="text" placeholder="원하시는 강의를 검색해 보세요.">
+                    <button class="search-button" type="submit">검색</button>
+                </form>
+            </div>
+        </div>
+        <div class="vod">
+            <a href="javascript:playVideo();"><img src="/static/images/main_more.png" alt="VOD보기"></a>
+        </div>
 
 ##       <div class="title">
 ##         <hgroup>
@@ -116,34 +149,38 @@ from microsite_configuration import microsite
     </div>
 
   </header>
-<style>
-    .univDiv{border:1px solid gray;width:108px;height:100px;float:left;margin:5px}
-</style>
 
-    <header id="univ_header" style="border: 1px solid #002b36; background: #fff0f0; height: 195px;">
-      <section class="courses-container" id="univ_section">
-        <div style="border:1px solid #555555; width:100%; height:113px; margin-top:20px; ">
-            <div class="univDiv">1</div>
-            <div class="univDiv">2</div>
-            <div class="univDiv">3</div>
-            <div class="univDiv">4</div>
-            <div class="univDiv">5</div>
-            <div class="univDiv">6</div>
-            <div class="univDiv">7</div>
-            <div class="univDiv">8</div>
-            <div class="univDiv">9</div>
-            <div class="univDiv">10</div>
+    <section class="school_list">	 <!-- school_list S -->
+        <p class="title_type1">
+            <img src="/static/images/title01.png" alt="참여대학">
+            <a href="/schools"><img src="/static/images/more.png" alt="더보기"></a>
+        </p>
+        <div class="inner">
+            <a href="/school/khu"><img src="/static/images/logo02_01.png" alt="경희대학교"><span style="font-family:daumR;">경희대학교</span></a>
+            <a href="/school/korea"><img src="/static/images/logo02_02.png" alt="고려대학교"><span style="font-family:daumR;">고려대학교</span></a>
+            <a href="/school/pusan"><img src="/static/images/logo02_03.png" alt="부산대학교"><span style="font-family:daumR;">부산대학교</span></a>
+            <a href="/school/snu"><img src="/static/images/logo02_04.png" alt="서울대학교"><span style="font-family:daumR;">서울대학교</span></a>
+            <a href="/school/skku"><img src="/static/images/logo02_05.png" alt="성균관대학교"><span style="font-family:daumR;">성균관대학교</span></a>
+            <a href="/school/yonsei"><img src="/static/images/logo02_06.png" alt="연세대학교"><span style="font-family:daumR;">연세대학교</span></a>
+            <a href="/school/ewha"><img src="/static/images/logo02_07.png" alt="이화대학교"><span style="font-family:daumR;">이화대학교</span></a>
+            <a href="/school/postech"><img src="/static/images/logo02_08.png" alt="포항공과대학교"><span style="font-family:daumR;">포항공과대학교</span></a>
+            <a href="/school/kaist"><img src="/static/images/logo02_09.png" alt="한국과학기술원"><span style="font-family:daumR;">한국과학기술원</span></a>
+            <a href="/school/hanyang"><img src="/static/images/logo02_10.png" alt="한양대학교"><span style="font-family:daumR;">한양대학교</span></a>
         </div>
-      </section>
-    </header>
+    </section>	 <!-- school_list E -->
 
   <section class="courses-container" id="course_section">
     <section class="highlighted-courses">
 
       % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
         <section class="courses">
+            <p class="title_type1">
+                <img src="/static/images/title02.png" alt="전체강좌">
+                <a href="/courses"><img src="/static/images/more.png" alt="더보기"></a>
+            </p>
             <ul class="courses-listing">
             ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+
             %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
               <li class="courses-listing-item">
                 <%include file="course.html" args="course=course" />

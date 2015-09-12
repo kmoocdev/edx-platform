@@ -6,14 +6,14 @@ audio:not([controls]) { display: none; }
 [hidden] { display: none; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+html, button, input, select, textarea { font-family: "Nanum Gothic"; color: #222; }
 body { margin: 0; font-size: 1em; line-height: 1.4; }
 
 a { color: #00e; }
 a:visited { color: #551a8b; }
-a:hover, a:focus { color: #06e; }
+a:hover, a:focus { color: #06e;text-decoration:none; }
 a:focus { outline: thin dotted; }
-a:hover, a:active { outline: 0; }
+a:hover, a:active { outline: 0;text-decoration:none; }
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }
 blockquote { margin: 1em 40px; }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <style>
+        body{min-width:110px;}
+        .outerDiv{border:1px solid #003d59; float: left; max-width:521px; width: 100%;}
+
+        @media screen and (max-width: 230px) {
+        /*0px ~ 최고px 까지*/
+            .innerDiv{border:1px solid darkmagenta;width: calc(100% - 4px);height:100px;float:left;margin:1px;}
+        }
+
+        @media screen and (min-width: 230px) {
+        /*최소594px ~ 그 이상일때 까지*/
+            .innerDiv{border:1px solid yellowgreen;min-width:100px;height:100px;float:left;margin:1px;width: calc(100% / 2 - 5px);}
+        }
+
+        @media screen and (min-width: 330px) {
+        /*최소594px ~ 그 이상일때 까지*/
+            .innerDiv{border:1px solid blue;min-width:100px;height:100px;float:left;margin:1px;width:calc(100% / 3 - 4px)}
+        }
+
+        @media screen and (min-width: 430px) {
+        /*최소1008px ~ 그 이상일때 까지*/
+            .innerDiv{border:1px solid red;min-width:100px;height:100px;float:left;margin:1px;width:calc(100% / 4 - 4px)}
+        }
+
+        @media screen and (min-width: 540px) {
+        /*최소1008px ~ 그 이상일때 까지*/
+            .innerDiv{border:1px solid darkgoldenrod;width:100px;height:100px;float:left;margin:1px;}
+        }
+
+
+    </style>
+</head>
+<body>
+    test html.
+    <hr/>
+    <br/>
+
+    <div class="outerDiv">
+
+        <div class="innerDiv">1</div>
+        <div class="innerDiv">2</div>
+        <div class="innerDiv">3</div>
+        <div class="innerDiv">4</div>
+        <div class="innerDiv">5</div>
+
+        <!--
+        <p class="innerp">1</p>
+        <p class="innerp">2</p>
+        <p class="innerp">3</p>
+        <p class="innerp">4</p>
+        <p class="innerp">5</p>
+        -->
+
+    </div>
+
+    <div style="float: none; border:0px solid blue;margin-top: 130px;">
+    font awesome.
+    <hr/>
+    <br/>
+    <i class="fa fa-car"></i>
+    </div>
+
+    <div style="float: none; border:0px solid blue;margin-top: 130px;">
+    font awesome.
+    <hr/>
+    <br/>
+    <i class="fa fa-car"></i>
+    </div>
+
+</body>
+</html>

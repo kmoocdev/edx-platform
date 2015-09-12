@@ -372,12 +372,13 @@
           color: $gray-l1;
           border-radius: 3px;
           padding: 12px;
-          border: 1px solid $white;
+          border: 1px solid $gray-l4;
           text-align: center;
 
           &:hover, &:focus {
             color: $gray-d3;
             border: 1px solid $gray-l4;
+	    background:$gray-l4;
           }
 
           // STATE: is-disabled
@@ -513,10 +514,18 @@
       .enter-course {
         @extend %btn-pl-primary-base;
         @include float(right);
+	color:$gray-d4;
+	border:solid 1px $gray-l3;
+	background:$gray-l4;
 
-        &.archived {
-          @extend %btn-pl-default-base;
-        }
+	&:hover {
+	  color:$gray-d4;
+	  border:solid 1px $gray-l3;
+	  background:$gray-l3;
+	}
+     //   &.archived {
+    //      @extend %btn-pl-default-base;
+    //    }
       }
     }
 

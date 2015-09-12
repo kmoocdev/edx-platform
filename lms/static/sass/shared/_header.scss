@@ -117,7 +117,7 @@ header.global {
   .user {
     @include float(right);
     @extend %ui-print-excluded;
-    margin-top: ($baseline/4);
+    margin-top: -35px;
     padding-left: 0;
 
     > .primary {
@@ -316,6 +316,7 @@ header.global {
     @include float(right);
     margin-top: ($baseline/4);
     list-style: none;
+    display:none;
 
     li, div {
       display: inline-block;

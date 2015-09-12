@@ -116,6 +116,12 @@ def courses(request):
     return courseware.views.courses(request)
 
 
+@ensure_csrf_cookie
+@cache_if_anonymous()
+def schools(request):
+    return courseware.views.schools(request)
+
+
 def _footer_static_url(request, name):
     """Construct an absolute URL to a static asset. """
     return request.build_absolute_uri(staticfiles_storage.url(name))
