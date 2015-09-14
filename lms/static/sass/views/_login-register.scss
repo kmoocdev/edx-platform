@@ -6,6 +6,10 @@
 $sm-btn-google: #dd4b39;
 $sm-btn-facebook: #3b5998;
 $sm-btn-linkedin: #0077b5;
+$sm-btn-google-plus: #dd4b39;
+$sm-btn-naver: #56c82c;
+$sm-btn-kakao: #ffeb01;
+$sm-btn-lifelongedu: #00759e;
 
 .login-register {
     @include box-sizing(border-box);
@@ -435,12 +439,12 @@ $sm-btn-linkedin: #0077b5;
             &:hover,
             &:focus {
                 background-color: $sm-btn-facebook;
-                border: 1px solid #263A62;
+                border: 1px solid #bbbbbb;
                 color: white;
             }
 
             &:hover {
-                box-shadow: 0 2px 1px 0 #30487C;
+                box-shadow: 0 2px 1px 0 #c8c8c8;
             }
         }
 
@@ -454,7 +458,7 @@ $sm-btn-linkedin: #0077b5;
             &:hover,
             &:focus {
                 background-color: $sm-btn-linkedin;
-                border: 1px solid #06527D;
+                border: 1px solid #bbbbbb;
                 color: white;
             }
 
@@ -462,7 +466,81 @@ $sm-btn-linkedin: #0077b5;
                 box-shadow: 0 2px 1px 0 #005D8E;
             }
         }
+        &.button-oa2-google-plus {
+            color: $sm-btn-google-plus;
 
+            .icon {
+                background: $sm-btn-google-plus;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $sm-btn-google-plus;
+                border: 1px solid #bbbbbb;
+                color: white;
+            }
+
+            &:hover {
+                box-shadow: 0 2px 1px 0 #c8c8c8;
+            }
+        }
+
+        &.button-oa2-naver {
+            color: $sm-btn-naver;
+
+            .icon {
+                background: $sm-btn-naver;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $sm-btn-naver;
+                border: 1px solid #bbbbbb;
+                color: white;
+            }
+
+            &:hover {
+                box-shadow: 0 2px 1px 0 #c8c8c8;
+            }
+        }
+
+        &.button-oa2-kakao {
+            color: #3b1e1e;
+
+            .icon {
+                background: #3b1e1e;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $sm-btn-kakao;
+                border: 1px solid #bbbbbb;
+                color: #3b1e1e;
+            }
+
+            &:hover {
+                box-shadow: 0 2px 1px 0 #c8c8c8;
+            }
+        }
+
+        &.button-oa2-lifelongedu {
+            color: $sm-btn-lifelongedu;
+
+            .icon {
+                background: $sm-btn-lifelongedu;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $sm-btn-lifelongedu;
+                border: 1px solid #bbbbbb;
+                color: white;
+            }
+
+            &:hover {
+                box-shadow: 0 2px 1px 0 #c8c8c8;
+            }
+        }
     }
 
     .button-secondary-login {
