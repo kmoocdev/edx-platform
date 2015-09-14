@@ -46,6 +46,12 @@ header.global .nav-global li[class^="gnb"]{width:21%;}
 header.global .nav-global li[class^="gnb"] a{float:right;width:140px;height:26px;font-size:0px;text-transform:none;font-weight:bold;color:#fff;background:url('/static/images/gnb.png') no-repeat top left;}
 header.global .nav-global li.gnb2 a{width:100px;background-position:-254px top;}
 header.global .nav-global li.gnb3 a{width:100px;background-position:-465px top;}
+header.global .nav-global li.gnb1 a:hover,
+header.global .nav-global li.gnb1 a.active {background-position:left bottom;}
+header.global .nav-global li.gnb2 a:hover,
+header.global .nav-global li.gnb2 a.active {background-position:-254px bottom;}
+header.global .nav-global li.gnb3 a:hover, 
+header.global .nav-global li.gnb3 a.active {background-position:-465px bottom;}
 
 header.global .nav-global li:nth-child(1){position:absolute;right:90px;top:40px;padding:0;width:80px;}
 header.global .nav-global li:nth-child(2){position:absolute;right:0px;top:40px;padding:0;width:80px;}
@@ -101,7 +107,8 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 .school_list .title_type1{margin:0 auto 10px auto;max-width:1200px;}
 .school_list .inner > a{float:left;padding:10px 0 15px 0;width:10%;border:solid 1px #d1d1d1;border-left:none;text-align:center;background:#fff;box-sizing:border-box;}
 .school_list .inner > a:first-child{border-left:solid 1px #d1d1d1;}
-.school_list .inner > a span{display:block;font-weight:bold;font-size:16px;letter-spacing:-1px;white-space:nowrap;}
+.school_list .inner > a span{display:block;font-size:16px;letter-spacing:-1px;white-space:nowrap;}
+.school_list .inner > a:hover span {color:#f58026;}
 .school_list .title_type1:after {content:"";clear:both;display:block;}
 
 /**.school_list2{background:#fff;}**/
