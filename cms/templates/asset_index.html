@@ -541,7 +541,7 @@ var trCdnFile = ""
         $.ajax({
             url: '${asset_callback_url}?file_name='+file_name+'&cdn_url='+cdn_url+'&file_type='+file_type+'&thumbnail_url='+thumbnail_url,
             success: function (res) {
-                if (res.msg == 'Upload completed') {
+                if (res.result == 'success') {
                     ajaxGetEdX();
                 }
             },

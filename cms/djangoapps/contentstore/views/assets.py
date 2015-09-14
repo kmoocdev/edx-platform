@@ -338,9 +338,9 @@ def save_cdn(request, course_key):
             content.thumbnail_location,
             locked
         ),
-        'msg': _('Upload completed')
+        'msg': _('Upload completed'),
+        'result': 'success'
     }
-
     return JsonResponse(response_payload)
 
 
