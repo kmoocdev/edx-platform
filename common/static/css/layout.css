@@ -105,11 +105,17 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 .school_list{padding:30px 0 0 0;background:url('/static/images/bg01.png') repeat  left top;}
 .school_list .inner{margin:auto;padding:0 0 30px 0;max-width:1200px;overflow:hidden;}
 .school_list .title_type1{margin:0 auto 10px auto;max-width:1200px;}
-.school_list .inner > a{float:left;padding:10px 0 15px 0;width:10%;border:solid 1px #d1d1d1;border-left:none;text-align:center;background:#fff;box-sizing:border-box;}
+.school_list .inner > a {float:left;padding:10px 0 15px 0;width:10%;border:solid 1px #d1d1d1;border-left:none;text-align:center;background:#fff;box-sizing:border-box;}
 .school_list .inner > a:first-child{border-left:solid 1px #d1d1d1;}
 .school_list .inner > a span{display:block;font-size:16px;letter-spacing:-1px;white-space:nowrap;}
 .school_list .inner > a:hover span {color:#f58026;}
 .school_list .title_type1:after {content:"";clear:both;display:block;}
+.school_list .inner > a img {transform:scale(1);-webkit-transform: scale(1);-moz-transform: scale(1);-o-transform: scale(1);
+			transition:all 0.5s;-webkit-transition:all .5s; -moz-transition:all .5s; -o-transition:all .5s; -ms-transition:all .5s;}
+.school_list .inner > a img {transform:scale(1.1);-webkit-transform: scale(1.1);-moz-transform: scale(1.1);-o-transform: scale(1.1);
+			transition:all 0.5s;-webkit-transition:all .5s; -moz-transition:all .5s; -o-transition:all .5s; -ms-transition:all .5s;}
+
+
 
 /**.school_list2{background:#fff;}**/
 .school_list2 .inner{margin:auto;padding:0 20px 30px 20px;max-width:1160px;min-height:300px;overflow:hidden;}
