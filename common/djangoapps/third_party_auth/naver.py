@@ -27,7 +27,7 @@ class NaverOAuth2(BaseOAuth2):
 #               nickname (naver id is cut as 'user***')
 #               thus let's use email as username
 #                'username': response.get('nickname'),
-                'username': response.get('email'),
+                'username': response.get('email')[0:response.get('email').index('@')],
                 'email': response.get('email') or '',
                 'first_name': response.get('name'),
                 'provider': response.get('provider'),
@@ -59,15 +59,15 @@ class NaverOAuth2(BaseOAuth2):
                 xml_id=child.text
             for child in root.iter('nickname'):
                 xml_nickname=child.text
-           
+
 #            print xml_email, xml_id
-#            print { 
+#            print {
 #                'email': xml_email,
 #                'uid': xml_id,
 #                'first_name': xml_name,
 #                'username': xml_nickname
 #            }
-            json_response={ 
+            json_response={
                 'email': xml_email,
                 'id': xml_id,
                 'name': xml_name,
@@ -82,3 +82,4 @@ class NaverOAuth2(BaseOAuth2):
             #return self.get_json(url)
         except ValueError:
             return None
+
