@@ -155,11 +155,12 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 	.school_list2 .inner > a:nth-child(6){margin-left:1%;}
 
 	@media only screen and (max-width:813px) {
-		.home>header .title{padding:20px 10px 30px 0;}
-		.home>header .vod{padding:20px;text-align:left;}
 
 		.home>header.type1{padding-bottom:0;}
 		.school_info .inner{padding-top:15px;}
+
+		.home>header .vod{text-align:center;padding:20px 0 30px 0;}
+		.home > header .title {float:none !important;margin:0 auto;padding:20px 0 30px 0;}
 
 		@media only screen and (max-width:750px) {
 			header.global h1.logo{float:none;margin:0 auto;padding:20px 0;}
@@ -185,8 +186,6 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 			.school_list2 .inner > a:nth-child(8),
 			.school_list2 .inner > a:nth-child(10){margin-left:1%;}
 
-			.home>header .vod{text-align:center;}
-			.home > header .title {float:none !important;margin:0 auto;padding:20px 0 30px 0;}
 
 			@media only screen and (max-width:640px) {
 				header.global .nav-global{padding:0;display:none;}
