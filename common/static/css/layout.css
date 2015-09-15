@@ -55,8 +55,10 @@ header.global .nav-global li.gnb3 a.active {background-position:-465px -30px;}
 
 header.global .nav-global li:nth-child(1){position:absolute;right:90px;top:40px;padding:0;width:80px;}
 header.global .nav-global li:nth-child(2){position:absolute;right:0px;top:40px;padding:0;width:80px;}
-header.global .nav-global li a.btn{display:inline-block;width:100%;height:30px;line-height:30px;text-align:center;border-radius:3px;color:#fff;font-size:14px;font-weight:bold;border:none;background:#f68f3b;}
-header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:solid 1px #d7d7d7;color:#7a7a7a;background: linear-gradient(to bottom, #fefefe 0%,#f1f1f1 100%);}
+header.global .nav-global li a.btn{display:inline-block;width:100%;height:30px;line-height:30px;text-align:center;border-radius:3px;color:#fff;font-size:14px;font-weight:bold;border:none;background:#f58026;}
+header.global .nav-global li a.btn:hover {background:#DE660A;}
+header.global .nav-global li a.btn.type2 {height:28px;line-height:28px;border:solid 1px #d7d7d7;color:#7a7a7a;background: linear-gradient(to bottom, #fefefe 0%,#f1f1f1 100%);}
+header.global .nav-global li a.btn.type2:hover {background: linear-gradient(to top, #fefefe 0%,#f1f1f1 100%);}
  
 *[data-btn="gnb"]{display:none;position:absolute;left:-10px;top:0px;width:90px;height:85px;text-indent:-9999px;background:url('/static/images/open.png') no-repeat center;}
 
