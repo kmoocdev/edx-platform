@@ -6,6 +6,7 @@
 $sm-btn-google: #dd4b39;
 $sm-btn-facebook: #3b5998;
 $sm-btn-linkedin: #0077b5;
+
 $sm-btn-google-plus: #dd4b39;
 $sm-btn-naver: #56c82c;
 $sm-btn-kakao: #ffeb01;
@@ -15,9 +16,8 @@ $sm-btn-lifelongedu: #00759e;
     @include box-sizing(border-box);
     @include outer-container;
     $grid-columns: 12;
-    background: $body_bg;
+    background: $white;
     min-height: 100%;
-    margin-bottom:30px;
     width: 100%;
     $third-party-button-height: ($baseline*1.75);
 
@@ -108,7 +108,6 @@ $sm-btn-lifelongedu: #00759e;
                 z-index: 6;
                 padding: 0 $baseline;
                 background: $white;
-		font-weight:inherit;
             }
         }
 
@@ -171,7 +170,6 @@ $sm-btn-lifelongedu: #00759e;
 
     .login-form {
         margin-bottom: $baseline;
-	background:$white;
 
         &:focus {
             outline: none;
@@ -322,9 +320,6 @@ $sm-btn-lifelongedu: #00759e;
 
         select {
             width: 100%;
-	    height:32px;
-	    border:solid 1px #c8c8c8;
-	    box-shadow:0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset;
 
             &.error {
                 border-color: tint($red,50%);
@@ -401,7 +396,7 @@ $sm-btn-lifelongedu: #00759e;
 
         &:hover,
         &:focus {
-            background: $m-blue-d3;
+            background-image: none;
 
             .icon {
                 top: 0;
@@ -420,6 +415,25 @@ $sm-btn-lifelongedu: #00759e;
             &:hover,
             &:focus {
                 background-color: $sm-btn-google;
+                border: 1px solid #A5382B;
+                color: white;
+            }
+
+            &:hover {
+                box-shadow: 0 2px 1px 0 #8D3024;
+            }
+        }
+
+        &.button-oa2-google-plus-oauth2 {
+            color: $sm-btn-google-plus;
+
+            .icon {
+                background: $sm-btn-google-plus;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $sm-btn-google-plus;
                 border: 1px solid #A5382B;
                 color: white;
             }
@@ -541,6 +555,7 @@ $sm-btn-lifelongedu: #00759e;
                 box-shadow: 0 2px 1px 0 #c8c8c8;
             }
         }
+
     }
 
     .button-secondary-login {
@@ -654,3 +669,4 @@ $sm-btn-lifelongedu: #00759e;
         font-weight: bold;
     }
 }
+
