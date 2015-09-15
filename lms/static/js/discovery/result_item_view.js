@@ -37,6 +37,14 @@ define([
 
         render: function () {
             var data = _.clone(this.model.attributes);
+            var arrUniv = [['KHUk', 'KoreaUnivK', 'PNUk', 'SNUk', 'SKKUk', 'YSUk', 'EwhaK', 'POSTECHk', 'KAISTk', 'HYUk'],
+            ['경희대학교','고려대학교','부산대학교','서울대학교','성균관대학교','연세대학교','이화여자대학교','포항공과대학교','한국과학기술원','한양대학교']];
+            for (var i=0; i <= arrUniv[0].length; i++) {
+                if (data.org == arrUniv[0][i]) {
+                    data.org = arrUniv[1][i];
+                    break;
+                }
+            }
             data.start = formatDate(new Date(data.start));
             data.enrollment_start = formatDate(new Date(data.enrollment_start));
             this.$el.html(this.tpl(data));
