@@ -90,6 +90,8 @@ header.global.slim {
     margin-right: 0;
   }
 
+  .user {margin-top:-22px;}
+
   .guest .secondary a {
     display: none;
 
@@ -127,7 +129,7 @@ header.global.slim {
   }
 
   h1.logo {
-    margin: 0 ($baseline/2) 0 0;
+    margin: ($baseline/2) ($baseline/2) ($baseline/2) 0;
     @include padding-right(20px);
 
     &:before {
@@ -170,7 +172,7 @@ header.global.slim {
     font-weight: 600;
     color: $lighter-base-font-color;
     letter-spacing: 0;
-    margin-top: 9px;
+    margin-top: 22px;
     margin-bottom: 0;
     text-transform: none;
     text-shadow: 0 1px 0 #fff;
