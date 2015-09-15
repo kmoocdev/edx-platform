@@ -95,10 +95,12 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li:after{display:block;content:'l';position:absolute;right:2px;top:4px;color:#fff;}
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li:last-child:after{display:none;}
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a{color:#fff;font-size:18px;font-weight:bold;}
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:hover {color:#f58026;}
 .wrapper-footer footer#footer-openedx .copyright{margin:0 0 5px 190px;font-size:16px;color:#838282;}
 .wrapper-footer footer#footer-openedx .nav-legal{margin:0 0 20px 190px;}
 .wrapper-footer footer#footer-openedx .nav-legal li{margin:0 0 10px 0;}
 .wrapper-footer footer#footer-openedx .nav-legal a{font-size:14px;font-weight:bold;color:#b7b7b7;}
+.wrapper-footer footer#footer-openedx .nav-legal a:hover {color:#f58026;}
 .wrapper-footer footer#footer-openedx .sns{position:absolute;right:0px;bottom:110px;}
 .wrapper-footer footer#footer-openedx .sns a{margin:0 5px 0 0;}
 
@@ -161,6 +163,8 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 
 		@media only screen and (max-width:750px) {
 			header.global h1.logo{float:none;margin:0 auto;padding:20px 0;}
+			header.global.slim h1.logo{float:none;margin:0 auto;padding:20px 0;}
+			header.global.slim h2.course-header{float:none;width:100%;text-align:center;margin:0 auto;}
 			header.global .nav-global{margin:0;padding:20px;}
 			header.global .nav-global li[class^="gnb"]{width:22%;}
 			header.global .nav-global li:nth-child(1){right:100px;top:103px;}
