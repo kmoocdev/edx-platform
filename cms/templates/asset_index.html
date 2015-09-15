@@ -4,11 +4,31 @@
   from django.core.urlresolvers import reverse
   from django.utils.translation import ugettext as _
 %>
-<%block name="title">${_("Files &amp; Uploads")}</%block>
-<%block name="bodyclass">is-signedin course uploads view-uploads</%block>
-
+<%def name="upload_title()">
+<%
+    path_info = request.path_info
+    path_info_split = path_info.split('/')
+%>
+% if path_info_split[1] == 'assets':
+    ${_("Files &amp; Uploads")}
+% else:
+    CDN 업로드
+% endif
+</%def>
+<%block name="title">${upload_title()}</%block>
+<%def name="upload_body_class()">
+<%
+    path_info = request.path_info
+    path_info_split = path_info.split('/')
+%>
+% if path_info_split[1] == 'assets':
+    is-signedin course uploads view-uploads
+% else:
+    is-signedin course uploads_cdn view-uploads
+% endif
+</%def>
+<%block name="bodyclass">${upload_body_class()}</%block>
 <%namespace name='static' file='static_content.html'/>
-
 <%block name="header_extras">
 % for template_name in ["asset-library", "asset"]:
 <script type="text/template" id="${template_name}-tpl">
