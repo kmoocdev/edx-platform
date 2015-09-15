@@ -207,6 +207,7 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 
 				.school_info  .inner p.title_type2 img{float:none;margin:10px 0 20px 0;}
 				.school_info  .inner p.title_type2 span{float:none;margin:25px 0 0 0;line-height:1em;}
+				.school_info  .inner p.title_type2{text-align:center;}
 
 				@media only screen and (max-width:580px) {
 					.school_list .inner > a{width:50%;}
