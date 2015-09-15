@@ -8,8 +8,8 @@ class LifelongeduOAuth2(BaseOAuth2):
     print "## called LifelongeduOAuth2"
 
     name = 'lifelongedu'
-    AUTHORIZATION_URL = 'http://myserver:8082/o/authorize'
-    ACCESS_TOKEN_URL = 'http://myserver:8082/o/token/'
+    AUTHORIZATION_URL = 'http://kmoocs.kr/o/authorize'
+    ACCESS_TOKEN_URL = 'http://kmoocs.kr/o/token/'
     SCOPE_SEPARATOR = ','
     ACCESS_TOKEN_METHOD = 'POST'
     EXTRA_DATA = [
@@ -39,7 +39,7 @@ class LifelongeduOAuth2(BaseOAuth2):
 
     def user_data(self, access_token, *args, **kwargs):
         """Loads user data from service"""
-        url = 'http://myserver:8082/api/hello?' + urlencode({
+        url = 'http://kmoocs.kr/api/hello?' + urlencode({
             'access_token': access_token
         })
         try:
