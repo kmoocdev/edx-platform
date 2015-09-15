@@ -145,7 +145,7 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 	.school_list .inner > a:nth-child(9),
 	.school_list .inner > a:nth-child(10){border-top:none;}
 
-	.school_info .inner{padding:30px 10px;}
+	.school_info .inner{padding:0 10px;}
 	
 	.school_list2 .inner > a{width:32.5%;}
 	.school_list2 .inner > a:nth-child(4),
@@ -159,7 +159,7 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 		.home>header .vod{padding:20px;text-align:left;}
 
 		.home>header.type1{padding-bottom:0;}
-		.school_info .inner{padding-top:0;}
+		.school_info .inner{padding-top:15px;}
 
 		@media only screen and (max-width:750px) {
 			header.global h1.logo{float:none;margin:0 auto;padding:20px 0;}
@@ -205,7 +205,8 @@ header.global .nav-global li a.btn.type2{height:28px;line-height:28px;border:sol
 				.wrapper-footer footer#footer-openedx .nav-legal{margin:0 10px 10px 10px;}
 				.wrapper-footer footer#footer-openedx .sns{position:relative;right:0px;bottom:0px;margin:0 0 10px 10px;}
 
-				.school_info  .inner p.title_type2 img{float:none;margin:10px 0 0 0;}
+				.school_info  .inner p.title_type2 img{float:none;margin:10px 0 20px 0;}
+				.school_info  .inner p.title_type2 span{float:none;margin:25px 0 0 0;line-height:1em;}
 
 				@media only screen and (max-width:580px) {
 					.school_list .inner > a{width:50%;}
