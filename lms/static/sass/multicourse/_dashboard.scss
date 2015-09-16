@@ -324,7 +324,7 @@
       .course-title {
 
         a, span {
-          @extend %t-title3;
+          @extend %t-title4;
           @extend %t-light;
           display: inline-block;
           margin-bottom: ($baseline/2);
