@@ -193,7 +193,7 @@ header.global .nav-global li a.btn.type2:hover {background: linear-gradient(to t
 			.container {width:auto;padding:15px;}
 
 			.dashboard .my-courses, .course-info .details {float:none;width:100%;}
-			.dashboard .profile-sidebar {float:none;width:auto;margin:20px;}
+			.dashboard .profile-sidebar {float:none;width:auto;margin:20px 0;}
 
 			.course-info .details {float:none;margin-right:0;width:auto;}
 			.course-info .course-sidebar {float:none;width:auto;}
