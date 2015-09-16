@@ -364,7 +364,6 @@ def _update_asset(request, course_key, asset_key):
         if 'file' in request.FILES:
             return _upload_asset(request, course_key)
         elif 'cdn_url' in request.REQUEST:
-            logging.info("____________________ cdn_url")
             return save_cdn(request, course_key)
         else:
             # Update existing asset
