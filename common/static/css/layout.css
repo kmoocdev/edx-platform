@@ -29,7 +29,7 @@
 /*********************** Base Reset Style ***********************/
 
 /* redukyo modify test */
-.course-info header.course-profile {padding-top: 20px; margin-top: 0px;height: 245px;}
+.course-info header.course-profile {padding:20px 0; margin-top: 0px;height: auto;}
 
 /* Font */
 
