@@ -1,6 +1,6 @@
 .course-info {
   .container {
-    padding-bottom: 120px;
+    padding-bottom: 0;
   }
 
   header.course-profile {
@@ -325,7 +325,7 @@
 
     .inner-wrapper {
       > section {
-        margin-bottom: ($baseline*2);
+       // margin-bottom: ($baseline*2);
       }
 
       .course-staff {
