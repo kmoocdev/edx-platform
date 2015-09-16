@@ -470,6 +470,23 @@ var trCdnFile = ""
     });
 
 </script>
+
+
+<script>
+    $(document).ready(function(){
+
+        var str = "<div id='pop1' style='position: absolute; border:1px solid gray; width:600px; height: 140px; left: 10; top: 10; z-index: 10003; display: block; opacity: 1; background:white;text-align: center;'>";
+        str += "<br/>";
+        str += "cdn 설정 작업으로 cdn 업로드 기능 및 동영상 플레이 기능이 일시 중단됩니다.";
+        str += "<br/>내일(9월17일) 아침 9시30분 경 정상화 예정입니다.<br/>";
+        str += "이용에 불편을 드려서 대단히 죄송합니다.";
+        str += "</div>";
+
+        $("body").prepend(str);
+
+    });
+</script>
+
 </%block>
 
 <%block name="view_alerts">
