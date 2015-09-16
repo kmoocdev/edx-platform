@@ -215,6 +215,9 @@ header.global .nav-global li a.btn.type2:hover {background: linear-gradient(to t
 				.school_info  .inner p.title_type2 span{float:none;margin:25px 0 0 0;line-height:1em;}
 				.school_info  .inner p.title_type2{text-align:center;}
 
+				.dashboard .my-courses {float:none;width:100%;}
+				.dashboard .profile-sidebar {float:none;width:100%;margin-top:20px;}
+
 				@media only screen and (max-width:580px) {
 					.school_list .inner > a{width:50%;}
 					.school_list .inner > a:nth-child(6){border-left:none;}					
