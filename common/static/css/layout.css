@@ -190,6 +190,16 @@ header.global .nav-global li a.btn.type2:hover {background: linear-gradient(to t
 			.school_list2 .inner > a:nth-child(8),
 			.school_list2 .inner > a:nth-child(10){margin-left:1%;}
 
+			.container {width:auto;padding:15px;}
+
+			.dashboard .my-courses, .course-info .details {float:none;width:100%;}
+			.dashboard .profile-sidebar {float:none;width:auto;margin:20px;}
+
+			.course-info .details {float:none;margin-right:0;width:auto;}
+			.course-info .course-sidebar {float:none;width:auto;}
+			.course-info header.course-profile .intro-inner-wrapper .media {display:none;}
+			.course-info header.course-profile .intro-inner-wrapper .intro {width:auto;display:block;}
+
 
 			@media only screen and (max-width:640px) {
 				header.global .nav-global{padding:0;display:none;}
@@ -214,14 +224,6 @@ header.global .nav-global li a.btn.type2:hover {background: linear-gradient(to t
 				.school_info  .inner p.title_type2 img{float:none;margin:20px 0 20px 0;}
 				.school_info  .inner p.title_type2 span{float:none;margin:25px 0 0 0;line-height:1em;}
 				.school_info  .inner p.title_type2{text-align:center;}
-
-				.container {width:auto;padding:15px;}
-
-				.dashboard .my-courses, .course-info .details {float:none;width:100%;}
-				.dashboard .profile-sidebar {float:none;width:auto;margin:20px;}
-
-				.course-info .details {float:none;margin-right:0;width:auto;}
-				.course-info .course-sidebar {float:none;width:auto;}
 
 				@media only screen and (max-width:580px) {
 					.school_list .inner > a{width:50%;}
