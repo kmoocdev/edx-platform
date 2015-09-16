@@ -255,3 +255,13 @@ header.global .nav-global li a.btn.type2:hover {background: linear-gradient(to t
 .container.rule dl.license dt , .container.rule dl.license dd {padding-left:100px;}
 
 .rule_scroll_box {border:solid 1px #c8c8c8;overflow-x:hidden;overflow-y:auto;padding:10px;height:200px;}
+
+
+.container.faq h2 {font-weight:700;font-size:26px;margin:0 0 20px 0;color:#000;border-bottom:solid 1px #C8C8C8;padding-bottom:15px;}
+.container.faq dt, .container.faq dd {padding:0;margin:0;line-height:1.7em;position:relative;}
+.container.faq .faq_box {margin-top:20px;}
+.container.faq .faq_box dt > a {display:block;padding:15px 0;}
+.container.faq .faq_box dt > a span {display:inline-block;padding-left:18px;}
+.container.faq .faq_box dt > a:hover span, .container.faq .faq_box dt.active > a span {color:#000;font-weight:bold;}
+.container.faq .faq_box dt > a i {color:#f58026;position:absolute;left:0;top:22px;}
+.container.faq .faq_box dd {font-size:0.875em;padding:15px 18px;background:#f2f2f2;}

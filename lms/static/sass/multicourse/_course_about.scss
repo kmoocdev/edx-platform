@@ -300,6 +300,16 @@
     width: flex-grid(8);
     font: normal 1em/1.6em $serif;
 
+    nav {
+	margin-top:0;
+    }
+
+    h1 {
+	margin-bottom:15px;
+	font-size:1.7em;
+	text-align:left;
+    }
+
     h2 {
       margin-top: ($baseline*1.5);
     }
