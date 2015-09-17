@@ -37,7 +37,7 @@ h1 {
 
 h2 {
   color: $lighter-base-font-color;
-  font: 600 1.2em/1.2em $sans-serif;
+  font: 600 1.250em/1.2em $sans-serif;
   margin-bottom: ($baseline*0.75);
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
@@ -54,7 +54,7 @@ p {
 }
 
 span {
-  font: normal 1em/1.6em $sans-serif;
+  font: inherit 1em/1.6em $sans-serif;
   color: $base-font-color;
 }
 
@@ -92,7 +92,7 @@ p {
 
 a:link, a:visited {
   color: $link-color;
-  font: normal 1em/1em $sans-serif;
+  font: inherit 1em/1em $sans-serif;
   text-decoration: none;
   /**
   @include transition(all 0.1s linear 0s);

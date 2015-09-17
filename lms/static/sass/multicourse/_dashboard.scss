@@ -324,10 +324,11 @@
       .course-title {
 
         a, span {
-          @extend %t-title4;
+         // @extend %t-title4;
           @extend %t-light;
           display: inline-block;
           margin-bottom: ($baseline/2);
+	line-height:1.2em;
 
           &:hover, &:focus {
             text-decoration: none;
@@ -340,7 +341,7 @@
         @include float(left);
         width: flex-grid(4);
         padding: 0;
-        margin-top: ($baseline/2);
+        margin-top: ($baseline/4);
 
         [class*="info-"] {
           color: $gray-d1;
@@ -352,6 +353,7 @@
           @extend %t-title7;
           color: $gray-l1;
           display: block;
+	  line-height:1em;
         }
       }
 
@@ -360,7 +362,7 @@
         @include float(right);
         width: flex-grid(8);
         padding: 0;
-        margin-top: ($baseline/2);
+        margin-top: ($baseline/4);
       }
 
       .course-actions {
