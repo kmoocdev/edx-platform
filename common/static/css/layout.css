@@ -80,7 +80,7 @@ header.global .nav-global li a.btn.type2:hover {background: linear-gradient(to t
 .home>header.type1 img{width:95%;max-width:1171px;}
 
 
-.school_info{padding:0 0 30px 0;background:#fff;}
+.school_info{padding:0 0 30px 0;}
 .school_info .inner {margin:0 auto;width:95%;max-width:1170px;}
 .school_info .inner p {line-height:1.7em;color:#5e5e5e;}
 .school_info  .inner p.title_type2{margin:0 0 30px 0;overflow:hidden;}
