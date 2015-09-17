@@ -23,13 +23,13 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: $gray-d4;
-  font: bold 1.2em/1.2em $sans-serif;
+  font: 600 1.2em/1.2em $sans-serif;
   margin: 0;
 }
 
 h1 {
   color: $base-font-color;
-  font: bold 2em/1.4em $sans-serif;
+  font: 600 2em/1.4em $sans-serif;
   margin-bottom: ($baseline*1.5);
   text-align: center;
   //text-transform: uppercase;
@@ -37,7 +37,7 @@ h1 {
 
 h2 {
   color: $lighter-base-font-color;
-  font: bold 1.2em/1.2em $sans-serif;
+  font: 600 1.2em/1.2em $sans-serif;
   margin-bottom: ($baseline*0.75);
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
@@ -242,7 +242,7 @@ mark {
   text-align: center;
 
   strong {
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 
