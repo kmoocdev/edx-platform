@@ -76,12 +76,12 @@ header.global .nav-global li a.btn.type2:hover {background: linear-gradient(to t
 
 .home>header .vod{padding:80px 0 90px 0;text-align:right;background:url('/static/images/main_bg02.png') no-repeat  right bottom;}
 
-.home>header.type1{padding:30px 0;text-align:center;background:#fff;}
+.home>header.type1{padding:30px 0;text-align:center;background:transparent;}
 .home>header.type1 img{width:95%;max-width:1171px;}
 
 
 .school_info{padding:0 0 30px 0;background:#fff;}
-.school_info .inner {margin:0 auto;width:95%;max-width:1170px;background:#fff;}
+.school_info .inner {margin:0 auto;width:95%;max-width:1170px;}
 .school_info .inner p {line-height:1.7em;color:#5e5e5e;}
 .school_info  .inner p.title_type2{margin:0 0 30px 0;overflow:hidden;}
 .school_info  .inner p.title_type2 span{float:left;margin:0 0 20px 0;font-size:45px;font-weight:bold;color:#2b2a2a;display:block;line-height:101px;}

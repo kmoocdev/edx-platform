@@ -6,7 +6,7 @@ $facet-background-color: #007db8;
 
 .find-courses, .university-profile {
   background: $course-profile-bg;
-  padding-bottom: ($baseline*3);
+  padding-bottom: ($baseline*0);
 
   .discovery-button:not(:disabled) {
     @extend %t-action2;
