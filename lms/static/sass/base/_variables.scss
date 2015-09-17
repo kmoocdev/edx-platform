@@ -18,8 +18,8 @@ $fg-min-width: 810px;
 // ====================
 
 // FONTS
-$sans-serif: 'Open Sans', $verdana, sans-serif;
-$monospace: 'Open Sans';
+$sans-serif: 'Nanum Gothic';
+$monospace: 'Nanum Gothic';
 $body-font-family: $sans-serif;
 $serif: $sans-serif;
 
@@ -383,7 +383,7 @@ $course-header-bg: rgba(255,255,255, 0.93);
 $border-color-1: rgb(190,190,190);
 $border-color-2: rgb(200,200,200);
 $border-color-3: rgb(100,100,100);
-$border-color-4: rgb(252,252,252);
+$border-color-4: rgb(220,220,220);
 $border-color-l1: $m-gray-l1;
 $border-color-l2: $m-gray-l2;
 $border-color-l3: $m-gray-l3;
@@ -425,7 +425,7 @@ $homepage__header--background: lighten($gray, 15%);
 $course-card-height: ($baseline*18);
 $course-image-height: ($baseline*8);
 $course-info-height: ($baseline*10);
-$course-title-height: ($baseline*3.6);
+$course-title-height: ($baseline*4.5);
 
 // ====================
 
@@ -443,12 +443,12 @@ $video-thumb-url: '../images/homepage-hero-video-thumb.jpg';
 // SPLINT: new standards
 
 // SPLINT: fonts
-$f-serif: 'Nanum Gothic','Bree Serif', Georgia, Cambria, 'Times New Roman', Times, serif;
-$f-sans-serif: 'Nanum Gothic','Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
-$f-monospace: 'Nanum Gothic','Bitstream Vera Sans Mono', Consolas, Courier, monospace;
+$f-serif: 'Open Sans', 'Nanum Gothic';
+$f-sans-serif: 'Open Sans', 'Nanum Gothic';
+$f-monospace: 'Open Sans', 'Nanum Gothic';
 
 // Header specific sans-serif
-$header-sans-serif: 'Nanum Gothic','Open Sans', Arial, Helvetica, sans-serif;
+$header-sans-serif: 'Open Sans', 'Nanum Gothic';
 
 // SPLINT: colors
 

@@ -1,6 +1,6 @@
 .course-info {
   .container {
-    padding-bottom: 120px;
+    padding-bottom: 0;
   }
 
   header.course-profile {
@@ -25,7 +25,7 @@
       @include clearfix();
       margin: 0 auto;
       max-width: 1200px;
-      min-width: 760px;
+     // min-width: 760px;
       position: relative;
       z-index: 2;
 
@@ -300,8 +300,20 @@
     width: flex-grid(8);
     font: normal 1em/1.6em $serif;
 
+    nav {
+	margin-top:0;
+    }
+
+    h1 {
+	margin-bottom:15px;
+	font-size:1.750em;
+	text-align:left;
+    }
+
     h2 {
       margin-top: ($baseline*1.5);
+      color:#000;
+      font-size:1.250em;
     }
 
     p {
@@ -310,26 +322,28 @@
 
     dt {
       margin-top: ($baseline/2);
-      font-weight: 700;
+      font-weight: 600;
     }
 
     .inner-wrapper {
       > section {
-        margin-bottom: ($baseline*2);
+       // margin-bottom: ($baseline*2);
       }
 
       .course-staff {
 
         .teacher {
           @include clearfix();
-          margin-bottom: ($baseline*2);
+          margin-bottom: $baseline;
 
           h3 {
-            color: $base-font-color;
+          //  color: $base-font-color;
             font-family: $sans-serif;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: ($baseline*0.75);
             text-transform: none;
+	    font-size:1em;
+	    color:#4e4e4e;
           }
 
           .teacher-image {
@@ -374,8 +388,10 @@
 
           h3 {
             font-family: $sans-serif;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: ($baseline*0.75);
+	    font-size:1.125em;
+	    color:#4e4e4e;
           }
         }
       }
@@ -393,8 +409,9 @@
 
       &.course-summary {
         padding: 16px 20px 30px;
-        margin-bottom: 220px;
-        border-top: none;
+        margin-bottom: 50px;
+     //   border-top: none;
+	border-radius:5px;
       }
 
       &.additional-resources {
@@ -422,7 +439,7 @@
     }
 
     header {
-      margin-bottom: 30px;
+     // margin-bottom: 30px;
       padding-bottom: 16px;
       position: relative;
       text-align: center;
@@ -537,7 +554,7 @@
       li {
         @include clearfix();
         border-bottom: 1px dotted $border-color-2;
-        margin-bottom: $baseline;
+        margin-bottom:  ($baseline/2);
         padding-bottom: ($baseline/2);
 
         &:hover, &:focus {
@@ -545,6 +562,10 @@
             opacity: 1.0;
           }
         }
+
+	&:last-child {
+	  margin-bottom:0;
+	}
 
         .important-dates-item-title {
           color: $lighter-base-font-color;
@@ -561,7 +582,8 @@
 
         .important-dates-item-text {
           float: right;
-          font-weight: 700;
+          font-weight: 600;
+	  line-height:1.6em;
         }
       }
 

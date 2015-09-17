@@ -23,23 +23,21 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: $gray-d4;
-  font: bold 1.2em/1.2em $sans-serif;
+  font: 600 1.2em/1.2em $sans-serif;
   margin: 0;
 }
 
 h1 {
   color: $base-font-color;
-  font: bold 2em/1.4em $sans-serif;
-  letter-spacing: 1px;
+  font: 600 2em/1.4em $sans-serif;
   margin-bottom: ($baseline*1.5);
   text-align: center;
   //text-transform: uppercase;
 }
 
 h2 {
-  color: $lighter-base-font-color;
-  font: bold 1.2em/1.2em $sans-serif;
-  letter-spacing: 1px;
+  color: $base-font-color;
+  font: 600 1.250em/1.2em $sans-serif;
   margin-bottom: ($baseline*0.75);
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
@@ -56,7 +54,7 @@ p {
 }
 
 span {
-  font: normal 1em/1.6em $sans-serif;
+  font: inherit 1em/1.6em $sans-serif;
   color: $base-font-color;
 }
 
@@ -94,7 +92,7 @@ p {
 
 a:link, a:visited {
   color: $link-color;
-  font: normal 1em/1em $sans-serif;
+  font: inherit 1em/1em $sans-serif;
   text-decoration: none;
   /**
   @include transition(all 0.1s linear 0s);
@@ -136,7 +134,7 @@ a:focus {
   margin: 0 auto 0;
   padding: ($baseline*2) 0;
   max-width: grid-width(12);
-  min-width: 760px;
+/**  min-width: 760px;**/
   width: flex-grid(12);
 }
 
@@ -222,7 +220,7 @@ mark {
   .inner-wrapper {
     margin: auto;
     max-width: 1180px;
-    min-width: 760px;
+   /** min-width: 760px;**/
   }
 
   p {
@@ -244,7 +242,7 @@ mark {
   text-align: center;
 
   strong {
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 

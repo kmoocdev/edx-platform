@@ -83,6 +83,12 @@
             @extend %btn-primary-green;
             @extend %sizing;
           }
+
+          // CASE: ORANGE button
+          &.button-org {
+            @extend %btn-primary-orange;
+            @extend %sizing;
+          }
         }
       }
     }

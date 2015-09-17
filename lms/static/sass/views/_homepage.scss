@@ -16,7 +16,7 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
       @extend %ui-no-list;
 
       .courses-listing-item {
-        margin: ($baseline*0.75) 0 ($baseline*1.5) 0;
+        margin: ($baseline*0.5) 0 $baseline 0;
         max-height: $course-card-height;
       }
     }
@@ -60,7 +60,7 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
         .learn-more {
           @include left($learn-more-horizontal-position);
           @include box-sizing(border-box);
-          @include line-height(28);
+          @include line-height(30);
           @extend %ui-depth2;
           position: absolute;
           top: ($baseline*2.75);
@@ -72,11 +72,17 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
           height: ($baseline*2.5);
           text-align: center;
           color: $white;
+	  font-size:1.143em;
+	  font-weight:700;
         }
       }
 
       .course-info {
         height: $course-info-height;
+
+	.course-name {
+	  text-transform:none;
+	}
 
         .course-organization, .course-code, .course-date {
           @extend %t-icon6;
@@ -90,25 +96,35 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
         .course-organization {
           @include line-height(11);
           padding: ($baseline/2) ($baseline*0.75) ($baseline/10) ($baseline*0.75);
+	  color:#888;
+	  overflow:hidden;
+	  text-overflow:ellipsis;
+	  white-space:nowrap;
         }
 
         .course-code {
           @include line-height(16);
           padding: 0 ($baseline*0.75);
+	  color:#888;
         }
 
         .course-title {
-          @include line-height(16);
+          @include line-height(15);
           @extend %t-icon4;
-          margin: ($baseline*0.25) 0 ($baseline*1.75) 0;
+          margin: ($baseline*0.5) 0 0 0;
           padding: 0 ($baseline*0.75);
           height: $course-title-height;
-          color: $link-color;
+          color: $black;
+	  font-weight:600;
+	  font-size:16px;
+	  overflow:hidden;
         }
 
         .course-date {
           @include line-height(14);
           padding: ($baseline/10) ($baseline*0.75);
+	  color:#888;
+	  font-size:13px;
         }
       }
 

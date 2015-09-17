@@ -105,6 +105,29 @@
   }
 }
 
+// orange primary button
+%btn-primary-orange {
+  @extend %ui-btn-primary;
+  background: $orange2;
+  border-color: $orange2;
+  color: $white;
+
+  &:hover, &:active {
+    background: $orange2-s1;
+    border-color: $orange2-s1;
+  }
+
+  &.current, &.active {
+    background: $orange2-d1;
+    color: $white;
+    border-color: $orange2-d2;
+
+    &:hover, &:active {
+      background: $orange2-d1;
+    }
+  }
+}
+
 // +Secondary Button - Extends
 // ==================== 
 // gray secondary button
