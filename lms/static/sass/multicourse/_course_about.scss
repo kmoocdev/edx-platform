@@ -312,6 +312,7 @@
 
     h2 {
       margin-top: ($baseline*1.5);
+      color:#000;
     }
 
     p {
@@ -332,7 +333,7 @@
 
         .teacher {
           @include clearfix();
-          margin-bottom: ($baseline*2);
+          margin-bottom: $baseline;
 
           h3 {
             color: $base-font-color;
@@ -433,7 +434,7 @@
     }
 
     header {
-      margin-bottom: 30px;
+     // margin-bottom: 30px;
       padding-bottom: 16px;
       position: relative;
       text-align: center;
