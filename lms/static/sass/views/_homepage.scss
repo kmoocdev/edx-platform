@@ -95,6 +95,9 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
           @include line-height(11);
           padding: ($baseline/2) ($baseline*0.75) ($baseline/10) ($baseline*0.75);
 	  color:#888;
+	  overflow:hidden;
+	  text-overflow:ellipsis;
+	  white-space:nowrap;
         }
 
         .course-code {
