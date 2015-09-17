@@ -60,7 +60,7 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
         .learn-more {
           @include left($learn-more-horizontal-position);
           @include box-sizing(border-box);
-          @include line-height(28);
+          @include line-height(30);
           @extend %ui-depth2;
           position: absolute;
           top: ($baseline*2.75);
@@ -72,6 +72,8 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
           height: ($baseline*2.5);
           text-align: center;
           color: $white;
+	  font-size:1.143em;
+	  font-weight:700;
         }
       }
 
