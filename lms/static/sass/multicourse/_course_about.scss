@@ -403,8 +403,9 @@
 
       &.course-summary {
         padding: 16px 20px 30px;
-        margin-bottom: 220px;
-        border-top: none;
+        margin-bottom: 50px;
+     //   border-top: none;
+	border-radius:5px;
       }
 
       &.additional-resources {
@@ -547,7 +548,7 @@
       li {
         @include clearfix();
         border-bottom: 1px dotted $border-color-2;
-        margin-bottom: $baseline;
+        margin-bottom:  ($baseline/2);
         padding-bottom: ($baseline/2);
 
         &:hover, &:focus {
@@ -555,6 +556,10 @@
             opacity: 1.0;
           }
         }
+
+	&:last-child {
+	  margin-bottom:0;
+	}
 
         .important-dates-item-title {
           color: $lighter-base-font-color;
