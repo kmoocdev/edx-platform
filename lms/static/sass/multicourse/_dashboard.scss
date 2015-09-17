@@ -257,6 +257,7 @@
     @include clearfix();
     @extend %ui-depth2;
     margin: ($baseline/2);
+    position:relative;
 
     .details {
       @include clearfix();
@@ -340,8 +341,8 @@
       .course-info {
         display: block;
         @include float(left);
-        width: flex-grid(4);
-        padding: 0;
+      //  width: flex-grid(4);
+        padding: 0 170px 0 0;
         margin-top: ($baseline/4);
 
         [class*="info-"] {
@@ -361,9 +362,12 @@
       .wrapper-course-actions {
         display: block;
         @include float(right);
-        width: flex-grid(8);
+       // width: flex-grid(8);
         padding: 0;
-        margin-top: ($baseline/4);
+       // margin-top: ($baseline/4);
+       position:absolute;
+       bottom:0;
+       right:0;
       }
 
       .course-actions {
