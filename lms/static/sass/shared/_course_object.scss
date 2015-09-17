@@ -1,7 +1,7 @@
 .highlighted-courses, .find-courses {
   .courses {
     @include clearfix();
-    padding: ($baseline*2) 0 ($baseline*0.75) ;
+    padding: $baseline 0 ($baseline*0.75) ;
 
     .university-column {
       width: flex-grid(4);

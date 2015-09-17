@@ -137,7 +137,7 @@ header.global .nav-global li a.btn.type2:hover {background: linear-gradient(to t
 .home {background:#f8f8f8 !important;}
 
 @media only screen and (max-width:1100px) {
-	.title_type1{padding:0 10px;}
+	.school_list .title_type1{padding:0 10px;}
 	.school_list .inner{padding:0 10px 30px 10px;}
 	.school_list .inner > a{width:20%;}
 	.school_list .inner > a:nth-child(6){border-left:solid 1px #d1d1d1;}
