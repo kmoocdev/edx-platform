@@ -171,7 +171,7 @@ var thumbnail_url = "";
             //chunk_size : '64kb',
             chunk_size: '512kb',
             // MME General settings
-            url: "http://mme.kmoocs.kr/upload",
+            url: "http://mme.kotech.biz/upload",
             file_data_name: "uploadFile",
             max_file_count: 1,
             max_retries: 3,
@@ -191,7 +191,6 @@ var thumbnail_url = "";
                 FilesAdded: function (up, files) {
                     $(".input-group").hide();
                     $(".progress-bar").show();
-
                     console.log("embeddable-xml-input:");
                     console.log($(".embeddable-xml-input").val());
                     if ($(".embeddable-xml-input").val() != "") {
@@ -199,14 +198,6 @@ var thumbnail_url = "";
                     }
                     $(".progress-fill").width("0%");
                     $(".progress-fill").text("uploading:0%");
-//                    $("#zfp-thumbnail-progress").show();
-//                    $("#zfp-thumbnail-progress .progress-bar").attr('data-transitiongoal', 0).progressbar({
-//                        display_text: 'center',
-//                        use_percentage: true,
-//                    });
-//                    plupload.each(files, function (file) {
-//                        $("#zfp-thumbnail-selected").val(file.name);
-//                    });
                     thumbnail.start();
                     console.log('FilesAdded:', files);
                 },
@@ -227,40 +218,29 @@ var thumbnail_url = "";
 
                 FileUploaded: function (up, file, info) {
                     if (info.status === 200) {
+                        up.refresh();
                         var result = $.parseJSON(info.response);
 
                         //영상 엔코딩 요청 상태 체크
                         $.ajax({
-                            url: 'http://mme.kmoocs.kr/mov_extract',
+                            url: 'http://mme.kotech.biz/mov_extract',
                             dataType: 'json',
                             data: 'uuid=' + result.data.up_path + '&is_re=y',
                             type: 'get',
                             success: function (res) {
-//                                $("#zfp-thumbnail-progress").hide();
-//                                $("#zfp-mov-progress").show();
-//                                $("#zfp-mov-progress .progress-bar").attr('data-transitiongoal', 0).progressbar({
-//                                    display_text: 'center',
-//                                    use_percentage: true,
-//                                });
-
                                 if (res.status == 200) {
-                                    var movie_status = 'http://mme.kmoocs.kr' + res.data.movie_status;
-                                    var thumb_div_status = 'http://mme.kmoocs.kr' + res.data.thumb_div_status;
-                                    var thumb_status = 'http://mme.kmoocs.kr' + res.data.thumb_status;
-                                    //console.log(movie_status, thumb_div_status, thumb_status);
-                                    //$("#mov_url").text('http://mme.kmoocs.kr' + res.data.mov_url);
+                                    var movie_status = 'http://mme.kotech.biz' + res.data.movie_status;
+                                    var thumb_status = 'http://mme.kotech.biz' + res.data.thumb_status;
                                     $(".progress-fill").width("0%");
                                     $(".progress-fill").text("encoding:0%");
                                     cdn_url = 'http://mme.kmoocs.kr' + res.data.mov_url;
                                     mov_st(movie_status);
-                                    //getThumb('구간썸네일', thumb_div_status);
                                     getThumb('대표섬네일', thumb_status);
                                 } else if (res.status == 700) {
                                     console.log('중복엔코딩 요청입니다.');
                                 } else {
                                     alert('엔코딩 요청이 완료되지 않았습니다.');
                                 }
-                                //var extract_result = $.parseJSON(res);
                             },
                             error: function (e) {
                                 console.log(e);
@@ -298,7 +278,6 @@ var thumbnail_url = "";
             success: function (res) {
                 if (res.message !== 'SUCCESS') {
                     $(".progress-fill").width(parseInt(res.data.data.percent)+"%");
-                    //sleep(1000);
                     mov_st(url);
                     $(".progress-fill").text("encoding:"+res.data.data.percent+"%");
                     console.log(res.data.data.percent);
@@ -308,15 +287,12 @@ var thumbnail_url = "";
                     ajaxPutEdX();
                     $(".progress-fill").width("100%");
                     $(".progress-fill").text("encoding completed");
-                    //$("#zfp-mov-progress .progress-bar").attr('data-transitiongoal', 100).progressbar();
                     $("#movie-info").show(); //영상정보 호출 -> 플레이어 연동
-
                     //embeddable
                     console.log($(".embeddable").css("display"));
                     $(".embeddable").after($(".input-group"));
                     $(".choose-file-button").text("Load Another File");
                     $(".input-group").show();
-
                     $(".embeddable-xml-input").val(cdn_url);
                 }
             },
@@ -333,16 +309,18 @@ var thumbnail_url = "";
             dataType: 'jsonp',
             success: function (res) {
                 if (res.message !== 'SUCCESS') {
-                    //sleep(300);
                     getThumb(text, url);
-
                 } else {
                     console.log("res:", res);
                     $.each(res.data.thumb, function (index, value) {
                         path = value.path.replace('/data/convert/mme', 'http://mme.kmoocs.kr/doc')
+
+                        console.log("________________________________ value");
+                        console.log(value);
+                        console.log("________________________________ value");
+
                         thumbnail_url = path;
                         console.log("path:",path);
-                        //$('.container').append('<div class="row"><div class="col-md-12"><label>' + text + ': ' + index + '<br><img src="' + path + '"></label></div></div>');
                     });
                 }
             },
@@ -361,6 +339,7 @@ var trCdnFile = ""
 + "<tr>"
 + "    <td class=\"thumb-col\">"
 + "    <div class=\"thumb\">"
++ "         <img src=\"{{thumbnail}}\" alt=\"No description available\">"
 + "    </div>"
 + "</td>"
 + "<td class=\"name-col\">"
@@ -449,6 +428,7 @@ var trCdnFile = ""
                         $.each(arrAssets, function( key, value ) {
                             asset = value;
                             $('#asset-table-body').append(trCdnFile
+                                    .replace('{{thumbnail}}', asset.thumbnail)
                                     .replace('{{display_name}}', asset.display_name)
                                     .replace(/{{url}}/g, asset.external_url)
                                     .replace('{{content_type}}', asset.content_type)
