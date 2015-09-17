@@ -78,6 +78,10 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
       .course-info {
         height: $course-info-height;
 
+	.course-name {
+	  text-transform:none;
+	}
+
         .course-organization, .course-code, .course-date {
           @extend %t-icon6;
           color: $black;
@@ -90,11 +94,13 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
         .course-organization {
           @include line-height(11);
           padding: ($baseline/2) ($baseline*0.75) ($baseline/10) ($baseline*0.75);
+	  color:#888;
         }
 
         .course-code {
           @include line-height(16);
           padding: 0 ($baseline*0.75);
+	  color:#888;
         }
 
         .course-title {
@@ -103,7 +109,9 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
           margin: ($baseline*0.25) 0 ($baseline*1.75) 0;
           padding: 0 ($baseline*0.75);
           height: $course-title-height;
-          color: $link-color;
+          color: $black;
+	  font-weight:600;
+	  font-size:16px;
         }
 
         .course-date {
