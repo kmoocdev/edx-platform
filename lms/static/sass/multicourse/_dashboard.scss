@@ -233,13 +233,13 @@
 
       .course-item {
         margin-bottom: $baseline;
-        border-top: 1px solid $border-color-2;
-        padding-bottom: $baseline;
+        border-top: 1px solid $border-color-4;
+        padding: ($baseline*0.5) 0;
 
         &:first-child {
           margin-bottom: 0;
           border-top: 0;
-          padding-bottom: 0;
+          padding-top: 0;
         }
       }
     }
