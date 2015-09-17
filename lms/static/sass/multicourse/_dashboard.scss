@@ -181,7 +181,7 @@
 
 
     .wrapper-header-courses {
-      border-bottom: 4px solid $border-color-l4;
+      border-bottom: 2px solid $border-color-2;
       margin-bottom: $baseline;
 
       .header-courses {
@@ -233,12 +233,12 @@
 
       .course-item {
         margin-bottom: $baseline;
-        border-bottom: 4px solid $border-color-l4;
+        border-top: 1px solid $border-color-2;
         padding-bottom: $baseline;
 
-        &:last-child {
+        &:first-child {
           margin-bottom: 0;
-          border-bottom: none;
+          border-top: 0;
           padding-bottom: 0;
         }
       }
