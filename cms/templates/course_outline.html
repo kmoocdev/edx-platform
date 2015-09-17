@@ -111,9 +111,10 @@ from microsite_configuration import microsite
         <nav class="nav-actions" aria-label="${_('Page Actions')}">
             <h3 class="sr">${_("Page Actions")}</h3>
             <ul>
+
                 <!-- add riss button -->
                 <li class="nav-item" style="border: 0px none;">
-                    <a href="www.riss.kr" target="_blank" class="button button-reindex" data-category="reindex" title="${_('RISS')}" style="background: #f1740e; border-color: #f1740e;">
+                    <a href="http://www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&oldQuery=&query=${context_course.display_name_with_default}&x=0&y=0" target="_blank" class="button" title="RISS search" style="background: #f1740e; border-color: #f1740e;">
                         <i class="icon-arrow-right"></i>${_('RISS')}
                     </a>
                 </li>
@@ -140,6 +141,7 @@ from microsite_configuration import microsite
                     <a href="${lms_link}" rel="external" class="button view-button view-live-button"
                        title="${_('Click to open the courseware in the LMS in a new tab')}">${_("View Live")}</a>
                 </li>
+
             </ul>
         </nav>
     </header>
