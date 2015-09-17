@@ -306,13 +306,14 @@
 
     h1 {
 	margin-bottom:15px;
-	font-size:1.7em;
+	font-size:1.750em;
 	text-align:left;
     }
 
     h2 {
       margin-top: ($baseline*1.5);
       color:#000;
+      font-size:1.250em;
     }
 
     p {
@@ -336,11 +337,13 @@
           margin-bottom: $baseline;
 
           h3 {
-            color: $base-font-color;
+          //  color: $base-font-color;
             font-family: $sans-serif;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: ($baseline*0.75);
             text-transform: none;
+	    font-size:1em;
+	    color:#4e4e4e;
           }
 
           .teacher-image {
@@ -385,8 +388,10 @@
 
           h3 {
             font-family: $sans-serif;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: ($baseline*0.75);
+	    font-size:1.125em;
+	    color:#4e4e4e;
           }
         }
       }
