@@ -13,7 +13,7 @@
 // ====================
 .dashboard {
   @include clearfix();
-  padding: ($baseline*2) 0 0 0;
+  padding: ($baseline*2) 0 ($baseline*1.5) 0;
 
   .profile-sidebar {
     background: transparent;
@@ -23,6 +23,8 @@
     box-shadow: 0 0 1px $shadow-l1;
     border: 1px solid $border-color-2;
     border-radius: 3px;
+
+    .profile {display:none;}
 
     .user-info {
       @include clearfix();
@@ -179,11 +181,11 @@
 
 
     .wrapper-header-courses {
-      border-bottom: 4px solid $border-color-l4;
+      border-bottom: 2px solid $border-color-2;
       margin-bottom: $baseline;
 
       .header-courses {
-        @extend %t-title5;
+ //       @extend %t-title5;
         @include padding-right($baseline/2);
       }
     }
@@ -231,13 +233,13 @@
 
       .course-item {
         margin-bottom: $baseline;
-        border-bottom: 4px solid $border-color-l4;
-        padding-bottom: $baseline;
+        border-top: 1px solid $border-color-4;
+        padding: ($baseline*0.5) 0;
 
-        &:last-child {
+        &:first-child {
           margin-bottom: 0;
-          border-bottom: none;
-          padding-bottom: 0;
+          border-top: 0;
+          padding-top: 0;
         }
       }
     }
@@ -255,6 +257,7 @@
     @include clearfix();
     @extend %ui-depth2;
     margin: ($baseline/2);
+    position:relative;
 
     .details {
       @include clearfix();
@@ -322,10 +325,12 @@
       .course-title {
 
         a, span {
-          @extend %t-title3;
+         // @extend %t-title4;
           @extend %t-light;
           display: inline-block;
           margin-bottom: ($baseline/2);
+	  line-height:1.2em;
+	  font-weight:600;
 
           &:hover, &:focus {
             text-decoration: none;
@@ -336,12 +341,12 @@
       .course-info {
         display: block;
         @include float(left);
-        width: flex-grid(4);
-        padding: 0;
-        margin-top: ($baseline/2);
+      //  width: flex-grid(4);
+        padding: 0 170px 0 0;
+        margin-top: ($baseline/4);
 
         [class*="info-"] {
-          color: $gray-d1;
+          color: $gray-d3;
           @extend %t-title6;
           display: inline-block;
         }
@@ -350,15 +355,19 @@
           @extend %t-title7;
           color: $gray-l1;
           display: block;
+	  line-height:1em;
         }
       }
 
       .wrapper-course-actions {
         display: block;
         @include float(right);
-        width: flex-grid(8);
+       // width: flex-grid(8);
         padding: 0;
-        margin-top: ($baseline/2);
+       // margin-top: ($baseline/4);
+       position:absolute;
+       bottom:0;
+       right:0;
       }
 
       .course-actions {
@@ -517,6 +526,7 @@
 	color:$white;
 	border:solid 1px $org-2;
 	background:$org-1;
+	font-weight:700;
 
 	&:hover {
 	  color:$white;

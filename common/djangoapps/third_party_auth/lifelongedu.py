@@ -8,8 +8,8 @@ class LifelongeduOAuth2(BaseOAuth2):
     print "## called LifelongeduOAuth2"
 
     name = 'lifelongedu'
-    AUTHORIZATION_URL = 'http://myserver:8082/o/authorize'
-    ACCESS_TOKEN_URL = 'http://myserver:8082/o/token/'
+    AUTHORIZATION_URL = 'http://lifelongedu.kmoocs.kr/o/authorize'
+    ACCESS_TOKEN_URL = 'http://lifelongedu.kmoocs.kr/o/token/'
     SCOPE_SEPARATOR = ','
     ACCESS_TOKEN_METHOD = 'POST'
     EXTRA_DATA = [
