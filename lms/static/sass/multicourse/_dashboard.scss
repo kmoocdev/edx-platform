@@ -185,7 +185,7 @@
       margin-bottom: $baseline;
 
       .header-courses {
-        @extend %t-title5;
+ //       @extend %t-title5;
         @include padding-right($baseline/2);
       }
     }
@@ -328,7 +328,8 @@
           @extend %t-light;
           display: inline-block;
           margin-bottom: ($baseline/2);
-	line-height:1.2em;
+	  line-height:1.2em;
+	  font-weight:600;
 
           &:hover, &:focus {
             text-decoration: none;
@@ -521,6 +522,7 @@
 	color:$white;
 	border:solid 1px $org-2;
 	background:$org-1;
+	font-weight:700;
 
 	&:hover {
 	  color:$white;
