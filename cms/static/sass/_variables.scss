@@ -167,6 +167,12 @@ $orange-u1: desaturate($orange,15%);
 $orange-u2: desaturate($orange,30%);
 $orange-u3: desaturate($orange,45%);
 
+
+$orange2: rgb(241, 116, 14);
+$orange2-s1: saturate($orange2,15%);
+$orange2-d1: shade($orange2,20%);
+$orange2-d2: shade($orange2,40%);
+
 // +Colors - Shadows
 // ==================== 
 $shadow: rgba($black, 0.2);
