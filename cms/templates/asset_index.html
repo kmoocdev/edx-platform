@@ -314,11 +314,6 @@ var thumbnail_url = "";
                     console.log("res:", res);
                     $.each(res.data.thumb, function (index, value) {
                         path = value.path.replace('/data/convert/mme', 'http://mme.kmoocs.kr/doc')
-
-                        console.log("________________________________ value");
-                        console.log(value);
-                        console.log("________________________________ value");
-
                         thumbnail_url = path;
                         console.log("path:",path);
                     });
