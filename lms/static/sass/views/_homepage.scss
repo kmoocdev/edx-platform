@@ -7,6 +7,10 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
   @include outer-container;
   padding: ($baseline*0.9) ($baseline/2) 0 ($baseline/2);
 
+  .no-course-discovery {
+     padding-bottom:30px;
+  }
+
   .courses {
     @include row();
     @include float(left);
@@ -96,7 +100,7 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
         .course-organization {
           @include line-height(11);
           padding: ($baseline/2) ($baseline*0.75) ($baseline/10) ($baseline*0.75);
-	  color:#888;
+	  color:#504d4e;
 	  overflow:hidden;
 	  text-overflow:ellipsis;
 	  white-space:nowrap;
@@ -105,7 +109,7 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
         .course-code {
           @include line-height(16);
           padding: 0 ($baseline*0.75);
-	  color:#888;
+	  color:#504d4e;
         }
 
         .course-title {

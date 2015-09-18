@@ -1499,3 +1499,33 @@ def render_xblock(request, usage_key_string, check_if_enrolled=True):
             'xqa_server': settings.FEATURES.get('XQA_SERVER', 'http://your_xqa_server.com'),
         }
         return render_to_response('courseware/courseware-chromeless.html', context)
+
+
+
+@ensure_csrf_cookie
+@cache_if_anonymous()
+def faqs(request):
+    return render_to_response(
+        "courseware/faqs.html"
+    )
+
+@ensure_csrf_cookie
+@cache_if_anonymous()
+def agreement(request):
+    return render_to_response(
+        "courseware/agreement.html"
+    )
+
+@ensure_csrf_cookie
+@cache_if_anonymous()
+def privacy(request):
+    return render_to_response(
+        "courseware/privacy.html"
+    )
+
+@ensure_csrf_cookie
+@cache_if_anonymous()
+def copyright(request):
+    return render_to_response(
+        "courseware/copyright.html"
+    )
