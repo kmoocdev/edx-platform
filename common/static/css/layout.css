@@ -218,6 +218,8 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 	header.global .nav-global li:nth-child(1) {right:95px;}
 	header.global .nav-global li:nth-child(2) {right:10px;}
 
+	.container.about header.type1 {padding:0 10px;}
+
 	@media only screen and (max-width:813px) {
 
 		.home>header.type1{padding-bottom:0;}
