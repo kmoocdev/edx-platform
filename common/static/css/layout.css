@@ -170,7 +170,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 	.school_list2 .inner > a:nth-child(5),
 	.school_list2 .inner > a:nth-child(6){margin-left:1%;}
 
-	header.global nav {padding:10px 0;}
+	header.global nav {padding:0 10px;}
 	header.global .nav-global li:nth-child(1) {right:95px;}
 	header.global .nav-global li:nth-child(2) {right:10px;}
 
@@ -183,7 +183,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 		.home > header .title {float:none !important;margin:0 auto;padding:20px 0 30px 0;}
 
 		@media only screen and (max-width:750px) {
-			header.global h1.logo{float:none;margin:0 auto;padding:20px 0;}
+			header.global h1.logo{float:none;margin:0 auto;padding:20px 0 0 0 0;}
 			header.global.slim h1.logo{float:none;margin:0 auto;padding:20px 0 0 0;}
 			header.global.slim h1.logo a {text-align:center;}
 			header.global.slim h2.course-header{float:none;width:100%;text-align:center;margin:0 auto;padding-bottom:10px;}
