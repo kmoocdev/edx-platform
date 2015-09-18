@@ -55,11 +55,25 @@ header.global .nav-global li.gnb3 a.active {background-position:-465px -30px;}
 
 header.global .nav-global li:nth-child(1){position:absolute;right:90px;top:40px;padding:0;width:80px;}
 header.global .nav-global li:nth-child(2){position:absolute;right:0px;top:40px;padding:0;width:80px;}
-header.global .nav-global li a.btn {display:inline-block;width:100%;height:30px;line-height:30px;text-align:center;border-radius:3px;color:#fff;font-size:14px;font-weight:bold;border:none;background:#f58026;box-sizing:border-box;}
-header.global .nav-global li a.btn:hover {background:#9f5010;}
-header.global .nav-global li a.btn.type2 {line-height:28px;border:solid 1px #d7d7d7;color:#7a7a7a;background: linear-gradient(to bottom, #fefefe 0%,#f1f1f1 100%);}
-header.global .nav-global li a.btn.type2:hover {background: linear-gradient(to bottom, #adadad 0%,#a5a5a5 100%);border:solid 1px #939393;color:#fff;}
- 
+header.global .nav-global li a.btn {display:inline-block;width:100%;height:30px;line-height:30px;text-align:center;border-radius:3px;font-size:14px;font-weight:bold;box-sizing:border-box;}
+
+header.global .nav-global li a.btn.type1 {color:#fff;background:#f58026;border:none;}
+header.global .nav-global li a.btn.type1:hover {background:#9f5010;background:#f58026;}
+header.global .nav-global li a.btn.type2 {line-height:28px;border:solid 1px #d7d7d7;color:#7a7a7a;
+	background: -moz-linear-gradient(top,  #fefefe 0%, #f1f1f1 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(top,  #fefefe 0%,#f1f1f1 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fefefe 0%,#f1f1f1 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fefefe 0%,#f1f1f1 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fefefe 0%,#f1f1f1 100%); /* W3C */
+}
+header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#fff;
+	background: -moz-linear-gradient(top,  #adadad 0%, #a5a5a5 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(top,  #adadad 0%,#a5a5a5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #adadad 0%,#a5a5a5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #adadad 0%,#a5a5a5 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #adadad 0%,#a5a5a5 100%); /* W3C */
+}
+
 *[data-btn="gnb"]{display:none;position:absolute;left:-10px;top:0px;width:90px;height:85px;text-indent:-9999px;background:url('/static/images/open.png') no-repeat center;}
 
 .content-wrapper{padding:0px;}
@@ -91,7 +105,7 @@ header.global .nav-global li a.btn.type2:hover {background: linear-gradient(to b
 .wrapper-footer{padding:0;background:#333;}
 .wrapper-footer footer#footer-openedx{margin:0 auto;padding:0;max-width:1170px;position:relative;}
 .wrapper-footer footer#footer-openedx .colophon{float:none;margin:0;width:auto;}
-.wrapper-footer footer#footer-openedx .wrapper-logo{position:absolute;margin:0;top:0;left:0;}
+.wrapper-footer footer#footer-openedx .wrapper-logo{position:absolute;margin:0;top:35px;left:0;}
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon{margin:0 0 0 190px;padding:30px 0 0 0;min-height:30px;}
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li {position:relative;padding:0 20px 0 0;}
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li:after{display:block;content:'|';position:absolute;right:0;top:0;color:#fff;font-size:18px;}
@@ -156,6 +170,10 @@ header.global .nav-global li a.btn.type2:hover {background: linear-gradient(to b
 	.school_list2 .inner > a:nth-child(5),
 	.school_list2 .inner > a:nth-child(6){margin-left:1%;}
 
+	header.global nav {padding:10px 0;}
+	header.global .nav-global li:nth-child(1) {right:95px;}
+	header.global .nav-global li:nth-child(2) {right:10px;}
+
 	@media only screen and (max-width:813px) {
 
 		.home>header.type1{padding-bottom:0;}
@@ -166,13 +184,13 @@ header.global .nav-global li a.btn.type2:hover {background: linear-gradient(to b
 
 		@media only screen and (max-width:750px) {
 			header.global h1.logo{float:none;margin:0 auto;padding:20px 0;}
-			header.global.slim h1.logo{float:none;margin:0 auto;padding:20px 0;}
+			header.global.slim h1.logo{float:none;margin:0 auto;padding:20px 0 0 0;}
 			header.global.slim h1.logo a {text-align:center;}
 			header.global.slim h2.course-header{float:none;width:100%;text-align:center;margin:0 auto;padding-bottom:10px;}
 			header.global .nav-global{margin:0;padding:20px;}
 			header.global .nav-global li[class^="gnb"]{width:22%;}
-			header.global .nav-global li:nth-child(1){right:100px;top:103px;}
-			header.global .nav-global li:nth-child(2){right:10px;top:103px;}
+			header.global .nav-global li:nth-child(1){right:100px;top:85px;}
+			header.global .nav-global li:nth-child(2){right:10px;top:85px;}
 			header.global .user{margin-top:-55px;}
 			header.global.slim .user {margin-top:-35px;}
 
