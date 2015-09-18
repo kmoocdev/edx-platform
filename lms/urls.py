@@ -300,6 +300,20 @@ if settings.COURSEWARE_ENABLED:
         # url(r'^school/haewoondaex?$', 'courseware.views.haewoondaex', name="school"),
         url(r'^school/(?P<univ_id>.*?)$', 'courseware.views.haewoondaex', name="school"),
 
+        # add custom pages
+
+        ## faqs
+        url(r'^faqs/?$', 'courseware.views.faqs', name="faqs"),
+
+        ## agreement
+        url(r'^agreement/?$', 'courseware.views.agreement', name="agreement"),
+
+        ## Privacy Policy
+        url(r'^Privacy-Policy/?$', 'courseware.views.privacy', name="privacy"),
+
+        ## Copyright-Policy
+        url(r'^Copyright-Policy/?$', 'courseware.views.copyright', name="copyright"),
+
 
         url(r'^change_enrollment$',
             'student.views.change_enrollment', name="change_enrollment"),
