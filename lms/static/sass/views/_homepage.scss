@@ -7,6 +7,10 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
   @include outer-container;
   padding: ($baseline*0.9) ($baseline/2) 0 ($baseline/2);
 
+  .no-course-discovery {
+     padding-bottom:30px;
+  }
+
   .courses {
     @include row();
     @include float(left);
