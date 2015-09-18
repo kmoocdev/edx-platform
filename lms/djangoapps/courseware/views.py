@@ -37,6 +37,7 @@ from courseware.courses import (
     get_studio_url, get_course_with_access,
     sort_by_announcement,
     sort_by_start_date,
+    get_courses_by_org,
 )
 from courseware.masquerade import setup_masquerade
 from openedx.core.djangoapps.credit.api import (
@@ -143,19 +144,8 @@ def courses(request):
 @ensure_csrf_cookie
 @cache_if_anonymous()
 def haewoondaex(request, univ_id):
-    courses_list = []
+    courses_list = get_courses_by_org(request.user, univ_id, request.META.get('HTTP_HOST'))
     course_discovery_meanings = getattr(settings, 'COURSE_DISCOVERY_MEANINGS', {})
-    if not settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-        courses_list = get_courses(request.user, request.META.get('HTTP_HOST'))
-
-        if microsite.get_value("ENABLE_COURSE_SORTING_BY_START_DATE",
-                               settings.FEATURES["ENABLE_COURSE_SORTING_BY_START_DATE"]):
-            courses_list = sort_by_start_date(courses_list)
-        else:
-            courses_list = sort_by_announcement(courses_list)
-
-
-    print "univ_id = ", univ_id
 
     return render_to_response(
         "courseware/univ_intro_"+univ_id+".html",
