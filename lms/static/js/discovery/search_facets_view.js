@@ -87,9 +87,7 @@ define([
                         for (var i=0; i < arrWords[0].length; i++) {
                             if (term == arrWords[0][i]) {
                                 return arrWords[1][i];
-                            } else {
-                                return term;
-                            }
+                            } 
                         }
                     }
                 }

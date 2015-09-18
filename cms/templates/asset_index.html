@@ -171,7 +171,7 @@ var thumbnail_url = "";
             //chunk_size : '64kb',
             chunk_size: '512kb',
             // MME General settings
-            url: "http://mme.kotech.biz/upload",
+            url: "http://mme.kmoocs.kr/upload",
             file_data_name: "uploadFile",
             max_file_count: 1,
             max_retries: 3,
@@ -223,17 +223,17 @@ var thumbnail_url = "";
 
                         //영상 엔코딩 요청 상태 체크
                         $.ajax({
-                            url: 'http://mme.kotech.biz/mov_extract',
+                            url: 'http://mme.kmoocs.kr/mov_extract',
                             dataType: 'json',
                             data: 'uuid=' + result.data.up_path + '&is_re=y',
                             type: 'get',
                             success: function (res) {
                                 if (res.status == 200) {
-                                    var movie_status = 'http://mme.kotech.biz' + res.data.movie_status;
-                                    var thumb_status = 'http://mme.kotech.biz' + res.data.thumb_status;
+                                    var movie_status = 'http://vod.kmoocs.kr' + res.data.movie_status;
+                                    var thumb_status = 'http://vod.kmoocs.kr' + res.data.thumb_status;
                                     $(".progress-fill").width("0%");
                                     $(".progress-fill").text("encoding:0%");
-                                    cdn_url = 'http://mme.kmoocs.kr' + res.data.mov_url;
+                                    cdn_url = 'http://vod.kmoocs.kr' + res.data.mov_url;
                                     mov_st(movie_status);
                                     getThumb('대표섬네일', thumb_status);
                                 } else if (res.status == 700) {
@@ -313,7 +313,7 @@ var thumbnail_url = "";
                 } else {
                     console.log("res:", res);
                     $.each(res.data.thumb, function (index, value) {
-                        path = value.path.replace('/data/convert/mme', 'http://mme.kmoocs.kr/doc')
+                        path = value.path.replace('/data/convert/mme', 'http://vod.kmoocs.kr/doc')
                         thumbnail_url = path;
                         console.log("path:",path);
                     });
