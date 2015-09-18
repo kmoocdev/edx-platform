@@ -231,7 +231,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 
 		@media only screen and (max-width:750px) {
 			header.global h1.logo{float:none;margin:0 auto;padding:20px 0 0 0;}
-			header.global.slim h1.logo{float:none;margin:0 auto;padding:20px 0 0 0;}
+			header.global.slim h1.logo{float:none;margin:0 auto;padding:20px 0;}
 			header.global.slim h1.logo a {text-align:center;}
 			header.global.slim h2.course-header{float:none;width:100%;text-align:center;margin:0 auto;padding-bottom:10px;}
 			header.global .nav-global{margin:0;padding:20px;}
