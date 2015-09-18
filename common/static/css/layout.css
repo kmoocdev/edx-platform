@@ -189,7 +189,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .container.about .school_info .inner {width:auto;}
 .container.about .school_info .inner p.title_type2{margin:0;}
 .container.about .school_info .inner p.title_type2 span {padding-top:40px;font-size:26px;line-height:1.3em;margin:0;}
-.container.about .school_info .inner img {width:100%;max-width:100%;margin-top:20px;}
+.container.about .school_info img {width:100%;max-width:100%;margin-top:20px;}
 
 
 @media only screen and (max-width:1100px) {
