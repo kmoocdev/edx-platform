@@ -1,0 +1,142 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from microsite_configuration import microsite
+%>
+<%inherit file="../main.html" />
+
+<%namespace name='static' file='../static_content.html'/>
+
+<%block name="header_extras">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+  % for template_name in ["result_item", "filter_bar", "filter", "search_facets_list", "search_facets_section", "search_facet", "more_less_links"]:
+  <script type="text/template" id="${template_name}-tpl">
+      <%static:include path="discovery/${template_name}.underscore" />
+  </script>
+  % endfor
+  <script type="text/javascript">;(function (define) {{
+      define('course_discovery_meanings', function() {{
+          'use strict';
+          return ${json.dumps(course_discovery_meanings)};
+        }});
+      }})(define || RequireJS.define);
+  </script>
+  % endif
+</%block>
+
+<%block name="js_extra">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+  <%static:js group='discovery'/>
+  % endif
+</%block>
+
+<%block name="pagetitle">개인정보처리방침 | K-MOOC</%block>
+<%
+  platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  if self.stanford_theme_enabled():
+    course_index_overlay_text = _("Explore free courses from {university_name}.").format(university_name="Stanford University")
+    logo_file = static.url('themes/stanford/images/seal.png')
+    logo_alt_text = "Stanford Seal Logo"
+
+  else:
+    course_index_overlay_text = microsite.get_value('course_index_overlay_text', _("Explore courses from {platform_name}.").format(platform_name=platform_name))
+
+    if settings.FEATURES.get('IS_EDX_DOMAIN', False):
+      # For some reason, `static.url('images/edx-theme/edx-logo-bw.png')` breaks template rendering.
+      default_image_url = settings.STATIC_URL + 'images/edx-theme/edx-logo-bw.png'
+    else:
+      default_image_url = settings.STATIC_URL + 'images/default-theme/logo-large.png'
+
+    logo_file = microsite.get_value(
+      'course_index_overlay_logo_file', default_image_url
+    )
+
+    logo_alt_text = _("{platform_name} Logo").format(platform_name=platform_name)
+%>
+
+
+
+
+<script>
+    $(document).ready(function(){
+        $('*[data-btn="gnb"]').bind('click', function(){
+            if($(this).attr('class') == 'open'){
+                $(this).attr('class','close');
+                $(this).html('닫기');
+            } else {
+                $(this).attr('class','open');
+                $(this).html('열기');
+            }
+        });
+
+
+				$(".faq_box dd").hide();
+				$(".faq_box dt").each(function() {
+						$(this).click(function() {
+								if($(this).hasClass("active")) {
+									$(this).removeClass("active");
+									$(this).next().slideUp("fast");
+									$(this).find("i").removeClass("fa-minus-square");
+								} else {			
+									$(".faq_box dt").removeClass("active");
+									$(".faq_box dt i").removeClass("fa-minus-square");
+									$(".faq_box dd").slideUp("fast");
+									$(this).addClass("active");
+									$(this).find("i").addClass("fa-minus-square");
+									$(this).next().slideDown("fast");
+								}
+								return false;
+						});
+				});
+
+    });
+
+</script>
+
+    <div class="content-wrapper" id="content">
+      
+
+  
+  
+
+<section class="container faq">
+	<h2>자주하는 질문</h2>
+	
+	<div class="faq_box">
+		<dl>
+			<dt>
+				<a href=""><i class="fa fa-plus-square"></i> <span>탈퇴한 아이디를 다시 가입할 수 있나요?</span></a>
+			</dt>
+			<dd>탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?</dd>
+			<dt>
+				<a href=""><i class="fa fa-plus-square"></i> <span>탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?</span></a>
+			</dt>
+			<dd>탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?</dd>
+			<dt>
+				<a href=""><i class="fa fa-plus-square"></i> <span>탈퇴한 아이디를 다시 가입할 수 있나요?</span></a>
+			</dt>
+			<dd>탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?<br>
+			탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?탈퇴한 아이디를 다시 가입할 수 있나요?</dd>
+		</dl>
+	</div>
+</section>
+
+
