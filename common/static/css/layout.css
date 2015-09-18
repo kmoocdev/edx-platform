@@ -87,6 +87,9 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .home>header .title .course-search .search-button,
 .home>header .title .course-search .search-button:hover{right:110px;text-indent:-999999px;width:100px;height:41px;border:none;background:url('/static/images/search.png') repeat top left;}
 .home>header .title .course-search .search-input{height:41px;line-height:41px;font-size:12px;border:solid 1px #555151;border-radius:5px;padding:0 10px;}
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	.home>header .title .course-search .search-input {padding:13px 10px;}
+}
 
 .home>header .vod{padding:80px 0 90px 0;text-align:right;background:url('/static/images/main_bg02.png') no-repeat  right top;}
 
