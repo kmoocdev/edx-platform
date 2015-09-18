@@ -190,7 +190,6 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .container.about .school_info .inner p.title_type2{margin:0;}
 .container.about .school_info .inner p.title_type2 span {padding-top:40px;font-size:26px;line-height:1.3em;margin:0;}
 .container.about .school_info img {max-width:100%;margin-top:20px;}
-.container.about header.type1 {text-align:center;}
 
 @media only screen and (max-width:1100px) {
 	.school_list .title_type1{padding:0 10px;}
@@ -218,7 +217,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 	header.global .nav-global li:nth-child(1) {right:95px;}
 	header.global .nav-global li:nth-child(2) {right:10px;}
 
-	.container.about header.type1 {padding:0 10px;}
+	.container.about > nav {padding:0 10px;box-sizing:border-box;height:48px;}
 
 	@media only screen and (max-width:813px) {
 
@@ -228,6 +227,8 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 
 		.home>header .vod{text-align:center;padding:20px 0 30px 0;}
 		.home > header .title {float:none !important;margin:0 auto;padding:20px 0 30px 0;}
+
+		.container.about > nav a {width:33%;}
 
 		@media only screen and (max-width:750px) {
 			header.global h1.logo{float:none;margin:0 auto;padding:20px 0 0 0;}
@@ -264,6 +265,8 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 			.course-info .course-sidebar {float:none;width:auto;}
 			.course-info header.course-profile .intro-inner-wrapper .media {display:none;}
 			.course-info header.course-profile .intro-inner-wrapper .intro {width:auto;display:block;}
+			
+			.container.about > nav a {width:40%;}
 
 
 			@media only screen and (max-width:640px) {
@@ -292,6 +295,8 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 				.school_info  .inner p.title_type2{text-align:center;}
 
 				.container.about .school_info  .inner p.title_type2{text-align:left;}
+				.container.about > nav {padding:0 5px;}
+				.container.about > nav a {width:50%;margin:0;}
 
 				@media only screen and (max-width:580px) {
 					.school_list .inner > a{width:50%;}
