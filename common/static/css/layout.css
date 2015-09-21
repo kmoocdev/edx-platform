@@ -182,7 +182,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .container.faq .faq_box dt > a {display:block;padding:15px 0;}
 .container.faq .faq_box dt > a span {display:inline-block;padding-left:18px;}
 .container.faq .faq_box dt > a:hover span, .container.faq .faq_box dt.active > a span {color:#000;font-weight:bold;}
-.container.faq .faq_box dt > a i {color:#f58026;position:absolute;left:0;top:22px;}
+.container.faq .faq_box dt > a i {color:#f58026;position:absolute;left:0;top:20px;}
 .container.faq .faq_box dd {font-size:0.875em;padding:15px 18px;background:#f2f2f2;}
 
 .container.about .school_info {padding:0;}
