@@ -138,7 +138,7 @@ if (arrPathname[1] == 'cdn') $('#update_type').text('CDN 업로드');
 <div class="upload-modal modal">
     <a href="#" class="close-button"><i class="icon fa fa-times-circle"></i> <span class="sr">${_('close')}</span></a>
     <div class="modal-body">
-        <h1 class="title">${_("Upload New File")}</h1>
+        <h1 class="title">CDN 업로드</h1>
         <div class="container">
             <div class="input-group">
                 <input type="hidden" class="form-control" disabled="disabled" id="zfp-thumbnail-selected" value="" />
@@ -169,7 +169,7 @@ var thumbnail_url = "";
             //runtimes: 'flash,html4,html5,silverlight',
             runtimes: 'html5,browserplus,silverlight,flash,gears,html4',
             //chunk_size : '64kb',
-            chunk_size: '512kb',
+            chunk_size: '2048kb',
             // MME General settings
             url: "http://mme.kmoocs.kr/upload",
             file_data_name: "uploadFile",
@@ -269,20 +269,23 @@ var thumbnail_url = "";
     };
 
     var mov_st = function (url) {
-        sleep(2000);
+        sleep(4000);
         $.ajax({
             method: 'GET',
             url: url,
             dataType: 'jsonp',
             async: false,
             success: function (res) {
-                if (res.message !== 'SUCCESS') {
+                console.log(res);
+                if (res.message == 'PENDING' && res.status == '200') {
+                    console.log("res.data.data.percent:"+res.data.data.percent);
                     $(".progress-fill").width(parseInt(res.data.data.percent)+"%");
                     mov_st(url);
+                    console.log("res.data.data.percent:"+res.data.data.percent);
                     $(".progress-fill").text("encoding:"+res.data.data.percent+"%");
-                    console.log(res.data.data.percent);
                 }
-                else {
+                else if (res.message == 'SUCCESS' && res.status == '200' && 
+                         res.data.msg == 'Transcoding Finish') {
                     console.warn('Encoding Finish');
                     ajaxPutEdX();
                     $(".progress-fill").width("100%");
@@ -294,6 +297,9 @@ var thumbnail_url = "";
                     $(".choose-file-button").text("Load Another File");
                     $(".input-group").show();
                     $(".embeddable-xml-input").val(cdn_url);
+                }
+                else if (res.message == 'PENDING' && res.status == '210') {
+                    mov_st(url);
                 }
             },
             error: function () {

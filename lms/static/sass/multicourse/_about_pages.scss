@@ -1,10 +1,12 @@
 .container.about {
-  padding: 20px 30px 120px;
+  padding: 0 0 60px 0;
 
-  > nav {
-    margin-bottom: ($baseline*4);
-    text-align: center;
+ > nav {
+    margin: ($baseline*2) 0 ($baseline*0.5) 0;
+    //text-align: center;
     width: flex-grid(12);
+    border-bottom:solid 4px #c8c8c8;
+    height:45px;
 
     &::after {
       @extend %faded-hr-divider;
@@ -13,22 +15,31 @@
     }
 
     a {
-      border-bottom: 3px solid transparent;
-      color: $lighter-base-font-color;
-      font-family: $serif;
-      font-style: italic;
       display: inline-block;
+      width:25%;
+      text-align:center;
+      font-size:18px;
+      font-weight:600;
+      float:left;
       letter-spacing: 1px;
-      margin: 0px 15px;
-      padding: 20px 10px;
+      margin-right:3px;
+      padding:15px 10px;
       @include transition(all 0.15s linear 0s);
-      text-transform: lowercase;
+      border-radius:5px 5px 0 0;
+      box-sizing:border-box;
+      background:#e9e9e9;
+      height:45px;
 
       &:hover, &:active, &:focus {
-        border-color: rgb(200,200,200);
-        color: $base-font-color;
+	color:#fff;
+	background:#f58026;
         text-decoration: none;
       }
+    }
+
+    a.active {
+	color:#fff;
+	background:#f58026;
     }
   }
 
