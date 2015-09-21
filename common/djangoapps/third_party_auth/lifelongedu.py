@@ -10,6 +10,8 @@ class LifelongeduOAuth2(BaseOAuth2):
     name = 'lifelongedu'
     AUTHORIZATION_URL = 'http://lifelongedu.kmoocs.kr/o/authorize'
     ACCESS_TOKEN_URL = 'http://lifelongedu.kmoocs.kr/o/token/'
+    # AUTHORIZATION_URL = 'http://myserver:8002/o/authorize'
+    # ACCESS_TOKEN_URL = 'http://myserver:8002/o/token/'
     SCOPE_SEPARATOR = ','
     ACCESS_TOKEN_METHOD = 'POST'
     EXTRA_DATA = [
@@ -34,16 +36,24 @@ class LifelongeduOAuth2(BaseOAuth2):
         jsonString += ',"id":"'+response.get('id')+'"'
         jsonString += '}'
 
+        print '***********************'
+        print jsonString
+        print '***********************'
+
         return json.loads(jsonString)
 
 
     def user_data(self, access_token, *args, **kwargs):
         """Loads user data from service"""
-        url = 'http://myserver:8082/api/hello?' + urlencode({
+        url = 'http://lifelongedu.kmoocs.kr/api/hello?' + urlencode({
+        # url = 'http://myserver:8002/api/hello?' + urlencode({
             'access_token': access_token
         })
+
+        str = self.get_json(url)
+
         try:
-            return self.get_json(url)
+            return str
         except ValueError:
             return None
 
