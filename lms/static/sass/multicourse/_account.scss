@@ -106,6 +106,7 @@
     @include clearfix();
     margin: 0 auto;
     width: 960px;
+    min-width:auto;
     background: $container-bg;
   }
 
