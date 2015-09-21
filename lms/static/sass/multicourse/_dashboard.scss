@@ -258,6 +258,7 @@
     @extend %ui-depth2;
     margin: ($baseline/2);
     position:relative;
+    z-index:auto;
 
     .details {
       @include clearfix();
