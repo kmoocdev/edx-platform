@@ -44,9 +44,13 @@ from microsite_configuration import microsite
         $("body").prepend(videoHtml);
 
         $("#mask").click(function(){
+
+
             $("#indexVideo").hide();
             $("#indexVideo").currentTime = 0;
             $("#mask").fadeOut(200);
+            var video = document.getElementById("indexVideo");
+            video.pause();
         });
 
         //position control
