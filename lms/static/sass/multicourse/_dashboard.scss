@@ -373,7 +373,7 @@
       .course-actions {
 
         // UI: course item actions
-        .action {
+        .action.action-more {
           @include box-sizing(border-box);
           @include margin-right($baseline/2);
           @include float(right);
