@@ -480,9 +480,6 @@
               .action {
                 @include margin-right(0);
 
-                &:hover, &:focus {
-                  border: 1px solid transparent;
-                 }
               }
             }
           }
