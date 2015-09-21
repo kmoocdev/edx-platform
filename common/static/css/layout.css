@@ -165,10 +165,10 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .container.rule dd > ol > li ol {margin:5px 0 7px 17px;}
 .container.rule dd > ul > li {text-indent:-12px;padding-left:12px;}
 .container.rule dd li ul {margin:5px 0 7px 12px;}
-.container.rule dd table {border-top:solid 2px #f58026;margin-top:10px;}
+.container.rule dd table {border-top:solid 2px #f58026;margin-top:10px;width:100%;}
 .container.rule dd caption {display:none;}
 .container.rule dd th {background:#f8f8f8;padding:10px 0;text-align:center;border-left:solid 1px #c8c8c8;}
-.container.rule dd td {padding:5px 10px;border-left:solid 1px #c8c8c8;border-bottom:solid 1px #c8c8c8;}
+.container.rule dd td {padding:5px 10px;border-left:solid 1px #c8c8c8;border-bottom:solid 1px #c8c8c8;text-indent:0;}
 .container.rule dd tr th:first-child,.container.rule dd tr td:first-child {border-left:0;}
 .container.rule dl.license dt > img {position:absolute;left:0;top:7px;}
 .container.rule dl.license dt , .container.rule dl.license dd {padding-left:100px;}
@@ -190,6 +190,11 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .container.about .school_info .inner p.title_type2{margin:0;}
 .container.about .school_info .inner p.title_type2 span {padding-top:40px;font-size:26px;line-height:1.3em;margin:0;}
 .container.about .school_info img {max-width:100%;margin-top:20px;}
+
+.container.about > nav {margin-top:40px;margin-bottom:10px;text-align:left;border-bottom:solid 4px #c8c8c8;height:45px;}
+.container.about > nav:after {content:"";display:block;clear:both;}
+.container.about > nav a {width:25%;text-align:center;font-size:18px;border:0;font-style:normal;font-weight:600;float:left;margin:0;padding:15px 10px;border-radius:5px 5px 0 0;height:45px;box-sizing:border-box;;background:#e9e9e9;margin-right:3px;}
+.container.about > nav a.active {color:#fff;background:#f58026;border-color:#f58026;}
 
 @media only screen and (max-width:1100px) {
 	.school_list .title_type1{padding:0 10px;}
