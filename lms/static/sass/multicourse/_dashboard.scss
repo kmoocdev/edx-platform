@@ -479,7 +479,11 @@
 
               .action {
                 @include margin-right(0);
+		font-size:13px;
 
+		 &:hover {
+		    text-decoration:underline;
+		 }
               }
             }
           }
