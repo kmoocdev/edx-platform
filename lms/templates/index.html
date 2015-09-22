@@ -20,32 +20,16 @@ from microsite_configuration import microsite
 <script>
     $(document).ready(function(){
 
-##         alert("popup test");
-##         $("body").prepend("<div id='pop1' style='position: absolute; width:600px; height: 400px; left: 10; top: 10; z-index: 10003; display: block; opacity: 0.4; background:red;'></div>");
-
-
-        ##검색기능 비활성화..
-        $("#searchInput,#searchBtn").click(function(){
-		return;
-            alert("준비중입니다.");
-            return false;
-        });
-
     	$("body").prepend("<div id='mask' style='position: absolute; left: 0; top: 0; z-index: 10000; display: none; opacity: 0.4; background:#363636;'></div>");
 
         var videoHtml = "";
         videoHtml += "  <video id='indexVideo' width='640' height='360' poster='' controls='controls' style='position: absolute; z-index:10001;top: 200px; display:none; left: calc(50% - 320px);' preload >";
-##         videoHtml += "      <source src='http://210.102.100.235/cuinfo/cuinfo2013.mp4' type='video/mp4' />";
         videoHtml += "      <source src='/static/images/samplevideo5.mp4' type='video/mp4' />";
-
         videoHtml += "  </video>";
-        videoHtml += "";
 
         $("body").prepend(videoHtml);
 
         $("#mask").click(function(){
-
-
             $("#indexVideo").hide();
             $("#indexVideo").currentTime = 0;
             $("#mask").fadeOut(200);
@@ -53,8 +37,13 @@ from microsite_configuration import microsite
             video.pause();
         });
 
+        videoResize();
+
         //position control
         $(window).resize(function(){
+            ##모바일환경에서 동영상 크기 조절
+            videoResize();
+
             var maskHeight = $(document).height();
             var maskWidth = $(window).width();
             $("#mask").css({"width":maskWidth,"height":maskHeight});
@@ -74,6 +63,14 @@ from microsite_configuration import microsite
         $("#indexVideo").fadeIn(300, function(){
             video.play();
         });
+    }
+
+    function videoResize(){
+        if($(window).width() < 640){
+            $("#indexVideo").prop("width", $(window).width() - 6).css("left", "3px");
+        }else{
+            $("#indexVideo").prop("width", "640").css("left", "calc(50% - 320px)");
+        }
     }
 </script>
 
