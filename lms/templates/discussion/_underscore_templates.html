@@ -312,7 +312,7 @@ from django_comment_client.permissions import has_permission
 <script aria-hidden="true" type="text/template" id="discussion-home">
   <div class="discussion-article blank-slate">
     <section class="home-header">
-      <span class="label">${_("DISCUSSION HOME:")}</span>
+      <span class="label">게시판 홈</span>
       % if course and course.display_name_with_default:
         <h1 class="home-title">${course.display_name_with_default}</h1>
       % endif
@@ -320,41 +320,41 @@ from django_comment_client.permissions import has_permission
 
       % if settings.FEATURES.get('ENABLE_DISCUSSION_HOME_PANEL'):
         <span class="label label-settings">
-          ${_("How to use {platform_name} discussions").format(platform_name=settings.PLATFORM_NAME)}
+         게시판 사용 방법 소개 
         </span>
         <table class="home-helpgrid">
           <tr class="helpgrid-row helpgrid-row-navigation">
-            <td class="row-title">${_("Find discussions")}</td>
+            <td class="row-title">게시물 찾기</td>
             <td class="row-item">
               <i class="icon fa fa-reorder"></i>
-              <span class="row-description">${_("Focus in on specific topics")}</span>
+              <span class="row-description">특정 주제 주목</span>
             </td>
             <td class="row-item">
               <i class="icon fa fa-search"></i>
-              <span class="row-description">${_("Search for specific posts ")}</span>
+              <span class="row-description">특정 주제 찾기</span>
             </td>
             <td class="row-item">
               <i class="icon fa fa-sort"></i>
-              <span class="row-description">${_("Sort by date, vote, or comments")}</span>
+              <span class="row-description">날짜, 투표 또는 댓글 기준으로 정렬</span>
             </td>
           </tr>
           <tr class="helpgrid-row helpgrid-row-participation">
-            <td class="row-title">${_("Engage with posts")}</td>
+            <td class="row-title">게시물에 참여</td>
             <td class="row-item">
               <i class="icon fa fa-plus"></i>
-              <span class="row-description">${_("Upvote posts and good responses")}</span>
+              <span class="row-description">추천하기 그리고 답변하기</span>
             </td>
             <td class="row-item">
               <i class="icon fa fa-flag"></i>
-              <span class="row-description">${_("Report Forum Misuse")}</span>
+              <span class="row-description">게시물 신고하기</span>
             </td>
             <td class="row-item">
               <i class="icon fa fa-star"></i>
-              <span class="row-description">${_("Follow posts for updates")}</span>
+              <span class="row-description">관심 게시물로 지정하기</span>
             </td>
           </tr>
           <tr class="helpgrid-row helpgrid-row-notification">
-            <td class="row-title">${_('Receive updates')}</td>
+            <td class="row-title">업데이트 받기</td>
             <td class="row-item-full" colspan="3">
               <label for="email-setting-checkbox">
                 <span class="sr">${_("Toggle Notifications Setting")}</span>
@@ -363,7 +363,7 @@ from django_comment_client.permissions import has_permission
                   <i class="icon fa fa-envelope"></i>
                 </span>
               </label>
-              <span class="row-description">${_("Check this box to receive an email digest once a day notifying you about new, unread activity from posts you are following.")}</span>
+              <span class="row-description">이 체크박스를 체크하시면 관심글에 해당하는 읽지않은 글, 새로운 글에 대해서 이메일로 업데이트 알림을 받으실수 있습니다.</span>
             </td>
           </tr>
         </table>
@@ -409,30 +409,30 @@ from django_comment_client.permissions import has_permission
                 <span class="sr">${_("Title:")}</span>
                 <input aria-describedby="field_help_title" type="text" class="field-input js-post-title" name="title" placeholder="${_('Title')}">
             </label><span class="field-help" id="field_help_title">
-                ${_("Add a clear and descriptive title to encourage participation.")}
+                참여를 장려하기 위해 명확하고 설명 제목을 추가합니다.
             </span>
         </div>
-        <div class="post-field js-post-body editor" name="body" data-placeholder="${_('Enter your question or comment')}"></div>
+        <div class="post-field js-post-body editor" name="body" data-placeholder="질문 또는 댓글을 입력하세요."></div>
         <div class="post-options">
             <label class="post-option is-enabled">
                 <input type="checkbox" name="follow" class="post-option-input js-follow" checked>
-                <i class="icon fa fa-star"></i>${_("follow this post")}
+                <i class="icon fa fa-star"></i>관심글 등록
             </label>
             ${'<% if (allow_anonymous) { %>'}
             <label class="post-option">
                 <input type="checkbox" name="anonymous" class="post-option-input js-anon">
-                ${_("post anonymously")}
+                익명으로 게시
             </label>
             ${'<% } %>'}
             ${'<% if (allow_anonymous_to_peers) { %>'}
             <label class="post-option">
                 <input type="checkbox" name="anonymous_to_peers" class="post-option-input js-anon-peers">
-                ${_("post anonymously to classmates")}
+                수강생들에게 익명으로 게시
             </label>
             ${'<% } %>'}
         </div>
         <div>
-            <input type="submit" class="submit" value="${_('Add Post')}">
+            <input type="submit" class="submit" value="글쓰기">
             <a href="#" class="cancel">${_('Cancel')}</a>
         </div>
     </form>
@@ -444,13 +444,13 @@ from django_comment_client.permissions import has_permission
             <span class="field-label-text">
                 ## Translators: This is the label for a control to
                 ## select a forum post type
-                ${_("Post type:")}
+                작성글 종류 
             </span><fieldset class="field-input"><legend class="sr">${_("Post type:")}</legend>
                 <input aria-describedby="field_help_post_type" type="radio" name="${"<%= form_id %>"}-post-type" class="post-type-input" id="${"<%= form_id %>"}-post-type-question" value="question">
                 <label for="${"<%= form_id %>"}-post-type-question" class="post-type-label">
                     <i class="icon fa fa-question"></i>
                     ## Translators: This is a forum post type
-                    ${_("Question")}
+                    질문하기
                 </label>
                 <input aria-describedby="field_help_post_type" type="radio" name="${"<%= form_id %>"}-post-type" class="post-type-input" id="${"<%= form_id %>"}-post-type-discussion" value="discussion" checked>
                 <label for="${"<%= form_id %>"}-post-type-discussion" class="post-type-label">
@@ -460,7 +460,7 @@ from django_comment_client.permissions import has_permission
                 </label>
             </fieldset>
         </div><span class="field-help" id="field_help_post_type">
-            ${_("Questions raise issues that need answers. Discussions share ideas and start conversations.")}
+            질문하세요. 토론은 아이디어를 공유하고 대화를 시작합니다.
         </span>
     </div>
 </script>
@@ -481,7 +481,7 @@ from django_comment_client.permissions import has_permission
 <script aria-hidden="true" type="text/template" id="topic-template">
     ## Using div here instead of label because we are using a non-native control
     <div class="field-label">
-        <span class="field-label-text">${_("Topic Area:")}</span><div class="field-input post-topic">
+        <span class="field-label-text">주제 종류</span><div class="field-input post-topic">
             <a href="#" class="post-topic-button">
                 <span class="sr">${_("Discussion topics; current selection is: ")}</span>
                 <span class="js-selected-topic"></span>
@@ -496,7 +496,7 @@ from django_comment_client.permissions import has_permission
            </div>
        </div>
     </div><span class="field-help" id="field_help_topic_area">
-        ${_("Add your post to a relevant topic to help others find it.")}
+        다른 사람들이 그것을 찾을수 있도록 관련 주제에 게시물을 추가합니다.
     </span>
 </script>
 
