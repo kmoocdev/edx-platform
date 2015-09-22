@@ -157,10 +157,10 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 
 .container.rule {line-height:1.7em;font-size:14px;}
 .container.rule ol,.container.rule ul,.container.rule li,.container.rule dt, .container.rule dd {padding:0;margin:0;list-style:none;}
-.container.rule h2 {font-weight:700;font-size:26px;margin:0 0 20px 0;color:#000;border-bottom:solid 1px #C8C8C8;padding-bottom:15px;}
-.container.rule h3 {font-weight:700;font-size:24px;margin:30px 0 20px 0;color:#f58026;}
-.container.rule h4 {font-weight:700;font-size:16px;margin:25px 0 10px 0;color:#f58026;}
-.container.rule dt {font-weight:700;margin:15px 0 5px 0;color:#000;position:relative;}
+.container.rule h2 {font-weight:600;font-size:26px;margin:0 0 20px 0;color:#000;border-bottom:solid 1px #C8C8C8;padding-bottom:15px;}
+.container.rule h3 {font-weight:600;font-size:24px;margin:30px 0 20px 0;color:#f58026;}
+.container.rule h4 {font-weight:600;font-size:18px;margin:25px 0 10px 0;color:#f58026;}
+.container.rule dt {font-weight:600;font-size:16px;margin:15px 0 5px 0;color:#000;position:relative;}
 .container.rule dd > ol > li {text-indent:-17px;padding-left:17px;}
 .container.rule dd > ol > li ol {margin:5px 0 7px 17px;}
 .container.rule dd > ul > li {text-indent:-12px;padding-left:12px;}
@@ -195,6 +195,14 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .container.about > nav:after {content:"";display:block;clear:both;}
 .container.about > nav a {width:25%;text-align:center;font-size:18px;border:0;font-style:normal;font-weight:600;float:left;margin:0;padding:15px 10px;border-radius:5px 5px 0 0;height:45px;box-sizing:border-box;;background:#e9e9e9;margin-right:3px;}
 .container.about > nav a.active {color:#fff;background:#f58026;border-color:#f58026;}
+
+.container.contact h2 {font-weight:700;font-size:26px;margin:0 0 20px 0;color:#000;border-bottom:solid 1px #C8C8C8;padding-bottom:15px;}
+.map_box {text-align:center;padding:20px 0 30px 0;}
+.map_box img {border:solid 1px #d9d9d9;max-width:100%;}
+.container.contact dl {max-width:650px;margin:0 auto;line-height:1.5em;}
+.container.contact dt {float:left;font-weight:600;clear:left;font-size:14px;}
+.container.contact dd {padding-left:45px;padding-bottom:15px;font-size:14px;}
+
 
 @media only screen and (max-width:1100px) {
 	.school_list .title_type1{padding:0 10px;}

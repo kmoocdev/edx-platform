@@ -41,7 +41,7 @@
 
       .page-header {
         @include float(left);
-        width: flex-grid(6,12);
+        width: flex-grid(5,12);
         @include margin-right(flex-gutter());
       }
 
@@ -49,7 +49,7 @@
         position: relative;
         bottom: -($baseline*0.75);
         @include float(right);
-        width: flex-grid(6,12);
+        width: flex-grid(7,12);
         @include text-align(right);
 
         .nav-item {
