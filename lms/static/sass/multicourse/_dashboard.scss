@@ -438,7 +438,7 @@
               border-radius: 3px;
               margin: ($baseline/4) 0 0 0;
               border: 1px solid $gray-l3;
-              padding:($baseline/2);
+              padding:($baseline/4) ($baseline/2);
               background: $white;
 
               // ui triangle/nub
@@ -472,14 +472,24 @@
               @extend %t-title7;
               display: block;
               margin: 0;
+	      border-top:dotted 1px #c8c8c8;
+	      line-height:30px;
 
               &.is-hidden {
                 display: none;
               }
 
+	      &:first-child {
+		border-top:0;
+	      }
+
               .action {
                 @include margin-right(0);
+		font-size:13px;
 
+		 &:hover {
+		    color:#212121;
+		 }
               }
             }
           }
