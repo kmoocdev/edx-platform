@@ -200,8 +200,8 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .map_box {text-align:center;padding:20px 0 30px 0;}
 .map_box img {border:solid 1px #d9d9d9;max-width:100%;}
 .container.contact dl {max-width:650px;margin:0 auto;line-height:1.5em;}
-.container.contact dt {float:left;font-weight:600;clear:left;}
-.container.contact dd {padding-left:45px;padding-bottom:15px;}
+.container.contact dt {float:left;font-weight:600;clear:left;font-size:14px;}
+.container.contact dd {padding-left:45px;padding-bottom:15px;font-size:14px;}
 
 
 @media only screen and (max-width:1100px) {
