@@ -38,7 +38,7 @@
 header.global{height:auto;box-shadow:none;border-bottom:solid 1px #666;box-shadow:2px 2px 2px #666;}
 header.global h1.logo{margin:30px 0;}
 header.global h1.logo img {height:44px !important;}
-header.global nav {margin:0 auto;padding:0;max-width:1170px;height:auto;position:relative;}
+header.global nav {margin:0 auto;padding:0 10px;max-width:1170px;height:auto;position:relative;}
 header.global .nav-global{float:none;margin:0 0 0 230px;font-size:0px;padding:40px 0 0 0;width:auto;display:block;}
 header.global .nav-global li{margin:0;padding:0;box-sizing:border-box;}
 header.global .nav-global li a{padding:0;}
@@ -125,7 +125,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 
 .school_list{padding:30px 0 0 0;background:url('/static/images/bg01.png') repeat  left top;}
 .school_list .inner{margin:auto;padding:0 0 30px 0;max-width:1200px;overflow:hidden;}
-.school_list .title_type1{margin:0 auto 10px auto;max-width:1200px;}
+.school_list .title_type1{margin:0 auto 10px auto;max-width:1200px;padding:0 10px;}
 .school_list .inner > a {float:left;padding:10px 0 15px 0;width:10%;border:solid 1px #d1d1d1;border-left:none;text-align:center;background:#fff;box-sizing:border-box;}
 .school_list .inner > a:first-child{border-left:solid 1px #d1d1d1;}
 .school_list .inner > a span{display:block;font-size:16px;letter-spacing:-1px;white-space:nowrap;padding-top:7px;}
@@ -203,10 +203,10 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .container.contact dt {float:left;font-weight:600;clear:left;font-size:14px;}
 .container.contact dd {padding-left:45px;padding-bottom:15px;font-size:14px;}
 
+.school_list .inner{padding:0 10px 30px 10px;}
 
 @media only screen and (max-width:1100px) {
-	.school_list .title_type1{padding:0 10px;}
-	.school_list .inner{padding:0 10px 30px 10px;}
+
 	.school_list .inner > a{width:20%;}
 	.school_list .inner > a:nth-child(6){border-left:solid 1px #d1d1d1;}
 	.school_list .inner > a:nth-child(6),
@@ -226,7 +226,6 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 	.school_list2 .inner > a:nth-child(5),
 	.school_list2 .inner > a:nth-child(6){margin-left:1%;}
 
-	header.global nav {padding:0 10px;}
 	header.global .nav-global li:nth-child(1) {right:95px;}
 	header.global .nav-global li:nth-child(2) {right:10px;}
 
