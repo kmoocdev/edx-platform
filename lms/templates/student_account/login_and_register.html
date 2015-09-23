@@ -36,6 +36,14 @@
     />
 </div>
 
+
+<script type="text/javascript">
+    $(function(){
+        $("#register-country option:eq(1)").attr("selected", "selected");
+    });
+</script>
+
+
 % if settings.FEATURES.get('ENABLE_COMBINED_LOGIN_REGISTRATION'):
     ## This overwrites the "footer" block declared in main.html
     ## with an empty block, effectively hiding the footer
