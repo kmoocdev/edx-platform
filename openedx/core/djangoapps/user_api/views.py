@@ -425,9 +425,12 @@ class RegistrationView(APIView):
         # meant to hold the user's password.
         password_label = _(u"Password")
 
+        username_instructions = _(u"숫자, 특수기호 포함 8자리이상")
+
         form_desc.add_field(
             "password",
             label=password_label,
+            instructions=username_instructions,
             field_type="password",
             restrictions={
                 "min_length": PASSWORD_MIN_LENGTH,
@@ -563,7 +566,8 @@ class RegistrationView(APIView):
         # Translators: This label appears above a field on the registration form
         # which allows the user to input the city in which they live.
         city_label = _(u"City")
-        error_msg = _(u"Please select your City.")
+
+        error_msg = _(u"해당 도시를 선택하세요.")
 
         citys = [(u'서울특별시', u'서울특별시'), (u'부산광역시', u'부산광역시'), (u'대구광역시', u'대구광역시'),
                  (u'울산광역시', u'울산광역시'), (u'광주광역시', u'광주광역시'), (u'대전광역시', u'대전광역시'),
