@@ -1,5 +1,5 @@
 <h2>
-    <%= gettext('Refine your search') %>
+    결과내 검색
 </h2>
 <section class="search-facets-lists">
 </section>
