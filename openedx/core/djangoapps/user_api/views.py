@@ -158,8 +158,8 @@ class RegistrationView(APIView):
     DEFAULT_FIELDS = ["email", "name", "username", "password"]
 
     EXTRA_FIELDS = [
-        "city",
         "country",
+        "city",
         "gender",
         "year_of_birth",
         "level_of_education",
@@ -425,9 +425,12 @@ class RegistrationView(APIView):
         # meant to hold the user's password.
         password_label = _(u"Password")
 
+        username_instructions = _(u"숫자, 특수기호 포함 8자리이상")
+
         form_desc.add_field(
             "password",
             label=password_label,
+            instructions=username_instructions,
             field_type="password",
             restrictions={
                 "min_length": PASSWORD_MIN_LENGTH,
@@ -450,11 +453,15 @@ class RegistrationView(APIView):
         # form used to select the user's highest completed level of education.
         education_level_label = _(u"Highest level of education completed")
 
+        level_of_education_choices = [(u'p', u'박사'), (u'm', u'석사 또는 전문대학원 학위 소지'), (u'b', u'학사'),
+                                     (u'a', u'전문학사'), (u'hs', u'고등학교'), (u'jhs', u'중학교'),
+                                     (u'el', u'초등학교'), (u'none', u'없음'), (u'other', u'기타')]
+
         form_desc.add_field(
             "level_of_education",
             label=education_level_label,
             field_type="select",
-            options=UserProfile.LEVEL_OF_EDUCATION_CHOICES,
+            options=level_of_education_choices,
             include_default_option=True,
             required=required
         )
@@ -563,7 +570,8 @@ class RegistrationView(APIView):
         # Translators: This label appears above a field on the registration form
         # which allows the user to input the city in which they live.
         city_label = _(u"City")
-        error_msg = _(u"Please select your City.")
+
+        error_msg = _(u"해당 도시를 선택하세요.")
 
         citys = [(u'서울특별시', u'서울특별시'), (u'부산광역시', u'부산광역시'), (u'대구광역시', u'대구광역시'),
                  (u'울산광역시', u'울산광역시'), (u'광주광역시', u'광주광역시'), (u'대전광역시', u'대전광역시'),
