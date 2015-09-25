@@ -453,11 +453,15 @@ class RegistrationView(APIView):
         # form used to select the user's highest completed level of education.
         education_level_label = _(u"Highest level of education completed")
 
+        level_of_education_choices = [(u'p', u'박사'), (u'm', u'석사 또는 전문대학원 학위 소지'), (u'b', u'학사'),
+                                     (u'a', u'전문학사'), (u'hs', u'고등학교'), (u'jhs', u'중학교'),
+                                     (u'el', u'초등학교'), (u'none', u'없음'), (u'other', u'기타')]
+
         form_desc.add_field(
             "level_of_education",
             label=education_level_label,
             field_type="select",
-            options=UserProfile.LEVEL_OF_EDUCATION_CHOICES,
+            options=level_of_education_choices,
             include_default_option=True,
             required=required
         )
