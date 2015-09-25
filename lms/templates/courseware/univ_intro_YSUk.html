@@ -1,0 +1,95 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from microsite_configuration import microsite
+%>
+<%inherit file="../main.html" />
+
+<%namespace name='static' file='../static_content.html'/>
+
+<%block name="header_extras">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+  % for template_name in ["result_item", "filter_bar", "filter", "search_facets_list", "search_facets_section", "search_facet", "more_less_links"]:
+  <script type="text/template" id="${template_name}-tpl">
+      <%static:include path="discovery/${template_name}.underscore" />
+  </script>
+  % endfor
+  <script type="text/javascript">;(function (define) {{
+      define('course_discovery_meanings', function() {{
+          'use strict';
+          return ${json.dumps(course_discovery_meanings)};
+        }});
+      }})(define || RequireJS.define);
+  </script>
+  % endif
+</%block>
+
+<%block name="js_extra">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+  <%static:js group='discovery'/>
+  % endif
+</%block>
+
+<%block name="pagetitle">연세대학교</%block>
+<%
+  platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  if self.stanford_theme_enabled():
+    course_index_overlay_text = _("Explore free courses from {university_name}.").format(university_name="Stanford University")
+    logo_file = static.url('themes/stanford/images/seal.png')
+    logo_alt_text = "Stanford Seal Logo"
+
+  else:
+    course_index_overlay_text = microsite.get_value('course_index_overlay_text', _("Explore courses from {platform_name}.").format(platform_name=platform_name))
+
+    if settings.FEATURES.get('IS_EDX_DOMAIN', False):
+      # For some reason, `static.url('images/edx-theme/edx-logo-bw.png')` breaks template rendering.
+      default_image_url = settings.STATIC_URL + 'images/edx-theme/edx-logo-bw.png'
+    else:
+      default_image_url = settings.STATIC_URL + 'images/default-theme/logo-large.png'
+
+    logo_file = microsite.get_value(
+      'course_index_overlay_logo_file', default_image_url
+    )
+
+    logo_alt_text = _("{platform_name} Logo").format(platform_name=platform_name)
+%>
+
+<section class="home">
+
+<!-- home S -->
+			<header class="type1">
+				<img src="/static/images/univ_intro/univ_top_yonsei.png" alt="최고의 대학, 최고의 강의! 한국형 온라인에서 시작하세요.">
+			</header>
+			<section class="school_info">	 <!-- school_info S -->
+				<div class="inner">
+					<p class="title_type2"><span>연세대학교</span><img src="/static/images/univ_intro/univ_logo_yonsei.png" alt="연세대학교"></p>
+					<p>기독교의 가르침을 바탕으로 진리와 자유의 정신에 따라 겨레와 인류 사회에 이바지할 지도자를 길러온 연세대학교는 1885년 설립된 대한민국 최고의 종합사립대학입니다.</p>
+                    <p>한국 최초의 고등교육기관으로서 한국 사회의 발전을 견인해 온 연세대학교는 현재 세계 사립대학 20위, 아시아 1위(2014 THE 대학 평판도 평가)의 최고 명문 사학으로 성장하며 국제적 위상도 높아가고 있습니다. </p>
+                    <p>이제 연세는 ‘제3 창학’의 기치 아래 대학의 새로운 패러다임을 제시하고 글로벌 시대의 변화를 이끌어 세계적 대학으로 도약하고 있습니다. </p>
+                    <p>대학 교육 혁신을 요구하고 있는 고등교육 패러다임의 변화를 선도하기 위해 미래지향적인 연세 교육 비전을 새롭게 수립하여 적극 대응하고 있습니다.</p>
+                    <p>특히 MOOC를 활용하여 최고 수준의 연세대학교 강의를 일반인과 전 세계에 공개하고 고등교육의 참여기회를 확대 제공함으로써 섬김의 리더십을 실천하고 있습니다.</p>
+                    <p>현재 세계 최대 규모의 Global MOOC인 Coursera와 FutureLearn에 국내 대학 최초로 동시 가입하여 전 세계인들에게 연세의 명품 강의를 제공하여 호평을 받고 있으며, 교육부가 주관하는 K-MOOC에도 시범 운영 대학으로 선정되어 우수 강의를 공개하게 되었습니다. </p>
+                    <p>글로벌 명문교육을 확립하여 소통과 창의력, 융복합 능력과 문화적 다양성 및 기독교 리더십을 갖춘 전인적 인재를 양성해 오고 있는 연세대학교는 창립 당시부터 지켜온 수월성과 위엄을 더욱 공고하게 하고 나아가 21세기 세계를 선도하는 교육과 연구의 전당이 되고자 합니다.</p>
+
+				</div>
+			</section>	 <!-- school_info E -->
+
+  <section class="courses-container">
+
+
+    <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
+      <ul class="courses-listing">
+        %for course in courses:
+        <li class="courses-listing-item">
+          <%include file="../course.html" args="course=course" />
+        </li>
+        %endfor
+      </ul>
+    </section>
+
+
+    
+
+  </section>
+</section>
