@@ -167,6 +167,8 @@ def _assets_json(request, course_key):
         asset_locked = asset.get('locked', False)
         url_split = request.META.get('HTTP_REFERER').split("/")
         if ( url_split[3] == 'cdn' ) :
+            thumbnail_location = asset['cdn_url'][:asset['cdn_url'].rfind('.')]+"_0.png"
+            thumbnail_location = thumbnail_location[:thumbnail_location.rfind('/')] +"/thumb" + thumbnail_location[thumbnail_location.rfind('/'):]
             asset_json.append(_get_cdn_json(
                 asset['displayname'],
                 asset['contentType'],
@@ -364,7 +366,6 @@ def _update_asset(request, course_key, asset_key):
         if 'file' in request.FILES:
             return _upload_asset(request, course_key)
         elif 'cdn_url' in request.REQUEST:
-            logging.info("____________________ cdn_url")
             return save_cdn(request, course_key)
         else:
             # Update existing asset
@@ -439,7 +440,7 @@ def _get_cdn_json(display_name, content_type, date, location, thumbnail_location
         'url': cdn_url,
         'external_url': cdn_url,
         'portable_url': StaticContent.get_static_path_from_location(location),
-        'thumbnail': StaticContent.serialize_asset_key_with_slash(thumbnail_location) if thumbnail_location else None,
+        'thumbnail': thumbnail_location,
         # 'locked': locked,
         'id': unicode(location)
     }

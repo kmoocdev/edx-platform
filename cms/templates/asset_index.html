@@ -4,11 +4,31 @@
   from django.core.urlresolvers import reverse
   from django.utils.translation import ugettext as _
 %>
-<%block name="title">${_("Files &amp; Uploads")}</%block>
-<%block name="bodyclass">is-signedin course uploads view-uploads</%block>
-
+<%def name="upload_title()">
+<%
+    path_info = request.path_info
+    path_info_split = path_info.split('/')
+%>
+% if path_info_split[1] == 'assets':
+    ${_("Files &amp; Uploads")}
+% else:
+    CDN 업로드
+% endif
+</%def>
+<%block name="title">${upload_title()}</%block>
+<%def name="upload_body_class()">
+<%
+    path_info = request.path_info
+    path_info_split = path_info.split('/')
+%>
+% if path_info_split[1] == 'assets':
+    is-signedin course uploads view-uploads
+% else:
+    is-signedin course uploads_cdn view-uploads
+% endif
+</%def>
+<%block name="bodyclass">${upload_body_class()}</%block>
 <%namespace name='static' file='static_content.html'/>
-
 <%block name="header_extras">
 % for template_name in ["asset-library", "asset"]:
 <script type="text/template" id="${template_name}-tpl">
@@ -29,173 +49,14 @@
     });
 </%block>
 
-
 <%block name="content">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plupload/2.1.2/plupload.full.min.js"></script>
-    <script type="text/javascript">
-        /*!
-         * bootstrap-progressbar v0.8.2 by @minddust
-         * Copyright (c) 2012-2014 Stephan Gro횩
-         *
-         * http://www.minddust.com/project/bootstrap-progressbar/
-         *
-         * Licensed under the MIT license:
-         * http://www.opensource.org/licenses/MIT
-         */
-        (function (c) {
-            var b = function (e, d) {
-                this.$element = c(e);
-                this.options = c.extend({}, b.defaults, d)
-            };
-            b.defaults = {
-                transition_delay: 300,
-                refresh_speed: 50,
-                display_text: "none",
-                use_percentage: true,
-                percent_format: function (d) {
-                    return d + "%"
-                },
-                amount_format: function (e, d, f) {
-                    return e + " / " + d
-                },
-                update: c.noop,
-                done: c.noop,
-                fail: c.noop
-            };
-            b.prototype.transition = function () {
-                var i = this.$element;
-                var h = i.parent();
-                var p = this.$back_text;
-                var l = this.$front_text;
-                var q = this.options;
-                var j = parseInt(i.attr("data-transitiongoal"));
-                var m = parseInt(i.attr("aria-valuemin")) || 0;
-                var d = parseInt(i.attr("aria-valuemax")) || 100;
-                var o = h.hasClass("vertical");
-                var g = q.update && typeof q.update === "function" ? q.update : b.defaults.update;
-                var f = q.done && typeof q.done === "function" ? q.done : b.defaults.done;
-                var e = q.fail && typeof q.fail === "function" ? q.fail : b.defaults.fail;
-                if (isNaN(j)) {
-                    e("data-transitiongoal not set");
-                    return
-                }
-                var n = Math.round(100 * (j - m) / (d - m));
-                if (q.display_text === "center" && !p && !l) {
-                    this.$back_text = p = c("<span>").addClass("progressbar-back-text").prependTo(h);
-                    this.$front_text = l = c("<span>").addClass("progressbar-front-text").prependTo(i);
-                    var k;
-                    if (o) {
-                        k = h.css("height");
-                        p.css({height: k, "line-height": k});
-                        l.css({height: k, "line-height": k});
-                        c(window).resize(function () {
-                            k = h.css("height");
-                            p.css({height: k, "line-height": k});
-                            l.css({height: k, "line-height": k})
-                        })
-                    } else {
-                        k = h.css("width");
-                        l.css({width: k});
-                        c(window).resize(function () {
-                            k = h.css("width");
-                            l.css({width: k})
-                        })
-                    }
-                }
-                setTimeout(function () {
-                    var v;
-                    var t;
-                    var r;
-                    var u;
-                    var w;
-                    if (o) {
-                        i.css("height", n + "%")
-                    } else {
-                        i.css("width", n + "%")
-                    }
-                    var s = setInterval(function () {
-                        if (o) {
-                            r = i.height();
-                            u = h.height()
-                        } else {
-                            r = i.width();
-                            u = h.width()
-                        }
-                        v = Math.round(100 * r / u);
-                        t = Math.round(m + r / u * (d - m));
-                        if (v >= n) {
-                            v = n;
-                            t = j;
-                            f(i);
-                            clearInterval(s)
-                        }
-                        if (q.display_text !== "none") {
-                            w = q.use_percentage ? q.percent_format(v) : q.amount_format(t, d, m);
-                            if (q.display_text === "fill") {
-                                i.text(w)
-                            } else {
-                                if (q.display_text === "center") {
-                                    p.text(w);
-                                    l.text(w)
-                                }
-                            }
-                        }
-                        i.attr("aria-valuenow", t);
-                        g(v, i)
-                    }, q.refresh_speed)
-                }, q.transition_delay)
-            };
-            var a = c.fn.progressbar;
-            c.fn.progressbar = function (d) {
-                return this.each(function () {
-                    var g = c(this);
-                    var f = g.data("bs.progressbar");
-                    var e = typeof d === "object" && d;
-                    if (!f) {
-                        g.data("bs.progressbar", (f = new b(this, e)))
-                    }
-                    f.transition()
-                })
-            };
-            c.fn.progressbar.Constructor = b;
-            c.fn.progressbar.noConflict = function () {
-                c.fn.progressbar = a;
-                return this
-            }
-        })(window.jQuery);</script>
-
-    <script type="text/javascript">
-        (function ($, window, undefined) {
-            //is onprogress supported by browser?
-            var hasOnProgress = ("onprogress" in $.ajaxSettings.xhr());
-
-            //If not supported, do nothing
-            if (!hasOnProgress) {
-                return;
-            }
-
-            //patch ajax settings to call a progress callback
-            var oldXHR = $.ajaxSettings.xhr;
-            $.ajaxSettings.xhr = function () {
-                var xhr = oldXHR();
-                if (xhr instanceof window.XMLHttpRequest) {
-                    xhr.addEventListener('progress', this.progress, false);
-                }
-
-                if (xhr.upload) {
-                    xhr.upload.addEventListener('progress', this.progress, false);
-                }
-
-                return xhr;
-            };
-        })(jQuery, window);
-    </script>
 
 <div class="wrapper-mast wrapper">
     <header class="mast has-actions has-subtitle">
         <h1 class="page-header">
             <small class="subtitle">${_("Content")}</small>
-            <span class="sr">&gt; </span>${_("Files &amp; Uploads")}
+            <span class="sr">&gt; </span><span id='update_type'>${_("Files &amp; Uploads")}</span>
         </h1>
 
         <nav class="nav-actions" aria-label="${_('Page Actions')}">
@@ -208,7 +69,11 @@
         </nav>
     </header>
 </div>
-
+<script type="text/javascript">
+var pathname = $(location).attr('pathname');
+arrPathname = pathname.split('/');
+if (arrPathname[1] == 'cdn') $('#update_type').text('CDN 업로드');
+</script>
 <div class="wrapper-content wrapper">
     <section class="content">
         <article class="content-primary" role="main">
@@ -244,7 +109,6 @@
         </aside>
     </section>
 </div>
-
 <%
     path_info = request.path_info
     path_info_split = path_info.split('/')
@@ -274,7 +138,7 @@
 <div class="upload-modal modal">
     <a href="#" class="close-button"><i class="icon fa fa-times-circle"></i> <span class="sr">${_('close')}</span></a>
     <div class="modal-body">
-        <h1 class="title">${_("Upload New File")}</h1>
+        <h1 class="title">CDN 업로드</h1>
         <div class="container">
             <div class="input-group">
                 <input type="hidden" class="form-control" disabled="disabled" id="zfp-thumbnail-selected" value="" />
@@ -305,7 +169,7 @@ var thumbnail_url = "";
             //runtimes: 'flash,html4,html5,silverlight',
             runtimes: 'html5,browserplus,silverlight,flash,gears,html4',
             //chunk_size : '64kb',
-            chunk_size: '1mb',
+            chunk_size: '2048kb',
             // MME General settings
             url: "http://mme.kmoocs.kr/upload",
             file_data_name: "uploadFile",
@@ -327,7 +191,6 @@ var thumbnail_url = "";
                 FilesAdded: function (up, files) {
                     $(".input-group").hide();
                     $(".progress-bar").show();
-
                     console.log("embeddable-xml-input:");
                     console.log($(".embeddable-xml-input").val());
                     if ($(".embeddable-xml-input").val() != "") {
@@ -335,14 +198,6 @@ var thumbnail_url = "";
                     }
                     $(".progress-fill").width("0%");
                     $(".progress-fill").text("uploading:0%");
-//                    $("#zfp-thumbnail-progress").show();
-//                    $("#zfp-thumbnail-progress .progress-bar").attr('data-transitiongoal', 0).progressbar({
-//                        display_text: 'center',
-//                        use_percentage: true,
-//                    });
-//                    plupload.each(files, function (file) {
-//                        $("#zfp-thumbnail-selected").val(file.name);
-//                    });
                     thumbnail.start();
                     console.log('FilesAdded:', files);
                 },
@@ -363,6 +218,7 @@ var thumbnail_url = "";
 
                 FileUploaded: function (up, file, info) {
                     if (info.status === 200) {
+                        up.refresh();
                         var result = $.parseJSON(info.response);
 
                         //영상 엔코딩 요청 상태 체크
@@ -372,31 +228,19 @@ var thumbnail_url = "";
                             data: 'uuid=' + result.data.up_path + '&is_re=y',
                             type: 'get',
                             success: function (res) {
-//                                $("#zfp-thumbnail-progress").hide();
-//                                $("#zfp-mov-progress").show();
-//                                $("#zfp-mov-progress .progress-bar").attr('data-transitiongoal', 0).progressbar({
-//                                    display_text: 'center',
-//                                    use_percentage: true,
-//                                });
-
                                 if (res.status == 200) {
-                                    var movie_status = 'http://mme.kmoocs.kr' + res.data.movie_status;
-                                    var thumb_div_status = 'http://mme.kmoocs.kr' + res.data.thumb_div_status;
-                                    var thumb_status = 'http://mme.kmoocs.kr' + res.data.thumb_status;
-                                    //console.log(movie_status, thumb_div_status, thumb_status);
-                                    //$("#mov_url").text('http://mme.kmoocs.kr' + res.data.mov_url);
+                                    var movie_status = 'http://vod.kmoocs.kr' + res.data.movie_status;
+                                    var thumb_status = 'http://vod.kmoocs.kr' + res.data.thumb_status;
                                     $(".progress-fill").width("0%");
                                     $(".progress-fill").text("encoding:0%");
-                                    cdn_url = 'http://mme.kmoocs.kr' + res.data.mov_url;
+                                    cdn_url = 'http://vod.kmoocs.kr' + res.data.mov_url;
                                     mov_st(movie_status);
-                                    //getThumb('구간썸네일', thumb_div_status);
                                     getThumb('대표섬네일', thumb_status);
                                 } else if (res.status == 700) {
                                     console.log('중복엔코딩 요청입니다.');
                                 } else {
                                     alert('엔코딩 요청이 완료되지 않았습니다.');
                                 }
-                                //var extract_result = $.parseJSON(res);
                             },
                             error: function (e) {
                                 console.log(e);
@@ -425,35 +269,37 @@ var thumbnail_url = "";
     };
 
     var mov_st = function (url) {
-        sleep(1000);
+        sleep(4000);
         $.ajax({
             method: 'GET',
             url: url,
             dataType: 'jsonp',
             async: false,
             success: function (res) {
-                if (res.message !== 'SUCCESS') {
+                console.log(res);
+                if (res.message == 'PENDING' && res.status == '200') {
+                    console.log("res.data.data.percent:"+res.data.data.percent);
                     $(".progress-fill").width(parseInt(res.data.data.percent)+"%");
-                    sleep(300);
                     mov_st(url);
+                    console.log("res.data.data.percent:"+res.data.data.percent);
                     $(".progress-fill").text("encoding:"+res.data.data.percent+"%");
-                    console.log(res.data.data.percent);
                 }
-                else {
+                else if (res.message == 'SUCCESS' && res.status == '200' && 
+                         res.data.msg == 'Transcoding Finish') {
                     console.warn('Encoding Finish');
                     ajaxPutEdX();
                     $(".progress-fill").width("100%");
                     $(".progress-fill").text("encoding completed");
-                    //$("#zfp-mov-progress .progress-bar").attr('data-transitiongoal', 100).progressbar();
                     $("#movie-info").show(); //영상정보 호출 -> 플레이어 연동
-
                     //embeddable
                     console.log($(".embeddable").css("display"));
                     $(".embeddable").after($(".input-group"));
                     $(".choose-file-button").text("Load Another File");
                     $(".input-group").show();
-
                     $(".embeddable-xml-input").val(cdn_url);
+                }
+                else if (res.message == 'PENDING' && res.status == '210') {
+                    mov_st(url);
                 }
             },
             error: function () {
@@ -469,16 +315,13 @@ var thumbnail_url = "";
             dataType: 'jsonp',
             success: function (res) {
                 if (res.message !== 'SUCCESS') {
-                    sleep(300);
                     getThumb(text, url);
-
                 } else {
                     console.log("res:", res);
                     $.each(res.data.thumb, function (index, value) {
-                        path = value.path.replace('/data/convert/mme', 'http://mme.kmoocs.kr/doc')
+                        path = value.path.replace('/data/convert/mme', 'http://vod.kmoocs.kr/doc')
                         thumbnail_url = path;
                         console.log("path:",path);
-                        //$('.container').append('<div class="row"><div class="col-md-12"><label>' + text + ': ' + index + '<br><img src="' + path + '"></label></div></div>');
                     });
                 }
             },
@@ -497,6 +340,7 @@ var trCdnFile = ""
 + "<tr>"
 + "    <td class=\"thumb-col\">"
 + "    <div class=\"thumb\">"
++ "         <img src=\"{{thumbnail}}\" alt=\"No description available\">"
 + "    </div>"
 + "</td>"
 + "<td class=\"name-col\">"
@@ -585,6 +429,7 @@ var trCdnFile = ""
                         $.each(arrAssets, function( key, value ) {
                             asset = value;
                             $('#asset-table-body').append(trCdnFile
+                                    .replace('{{thumbnail}}', asset.thumbnail)
                                     .replace('{{display_name}}', asset.display_name)
                                     .replace(/{{url}}/g, asset.external_url)
                                     .replace('{{content_type}}', asset.content_type)

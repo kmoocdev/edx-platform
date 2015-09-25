@@ -92,11 +92,16 @@ def login_and_registration_form(request, initial_mode="login"):
             pass
 
     # Otherwise, render the combined login/registration page
+
+    third_party_auth_json = None
+    if initial_mode == 'login':
+        third_party_auth_json = json.dumps(_third_party_auth_context(request, redirect_to));
+
     context = {
         'login_redirect_url': redirect_to,  # This gets added to the query string of the "Sign In" button in the header
         'disable_courseware_js': True,
         'initial_mode': initial_mode,
-        'third_party_auth': json.dumps(_third_party_auth_context(request, redirect_to)),
+        'third_party_auth': third_party_auth_json,
         'third_party_auth_hint': third_party_auth_hint or '',
         'platform_name': settings.PLATFORM_NAME,
         'responsive': True,

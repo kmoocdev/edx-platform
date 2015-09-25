@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 from collections import defaultdict
 from fs.errors import ResourceNotFoundError
 import logging
@@ -228,11 +229,22 @@ def get_course_about_section(course, section_key):
     elif section_key == "title":
         return course.display_name_with_default
     elif section_key == "university":
-        return course.display_org_with_default
+
+
+        return replace_hangul_org(course.display_org_with_default)
     elif section_key == "number":
         return course.display_number_with_default
 
     raise KeyError("Invalid about key " + str(section_key))
+
+def replace_hangul_org(eng_org):
+    dic_univ = {'KHUk':u'경희대학교', 'KoreaUnivK':u'고려대학교', 'PNUk':u'부산대학교', 'SNUk':u'서울대학교', 'SKKUk':u'성균관대학교',
+                'YSUk':u'연세대학교', 'EwhaK':u'이화여자대학교', 'POSTECHk':u'포항공과대학교', 'KAISTk':u'한국과학기술원', 'HYUk':u'한양대학교'}
+    if eng_org in dic_univ:
+        eng_org = dic_univ[eng_org]
+
+    return eng_org
+
 
 
 def get_course_info_section_module(request, course, section_key):
@@ -360,6 +372,25 @@ def get_courses(user, domain=None):
     courses = sorted(courses, key=lambda course: course.number)
 
     return courses
+
+
+def get_courses_by_org(user, org_id, domain=None):
+    '''
+    Returns a list of courses available, sorted by course.number
+    '''
+    courses = branding.get_visible_courses_by_org(org_id)
+
+    permission_name = microsite.get_value(
+        'COURSE_CATALOG_VISIBILITY_PERMISSION',
+        settings.COURSE_CATALOG_VISIBILITY_PERMISSION
+    )
+
+    courses = [c for c in courses if has_access(user, permission_name, c)]
+
+    courses = sorted(courses, key=lambda course: course.number)
+
+    return courses
+
 
 
 def sort_by_announcement(courses):
