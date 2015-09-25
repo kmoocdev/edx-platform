@@ -31,7 +31,7 @@ from django_comment_client.permissions import has_permission
                 </div>
                 % if course is UNDEFINED or has_permission(user, 'create_comment', course.id):
                 <form class="discussion-reply-new" data-id="${'<%- id %>'}">
-                    <h4>${_("Post a response:")}</h4>
+                    <h4>답변 작성:</h4>
                     <ul class="discussion-errors"></ul>
                     <div class="reply-body" data-id="${'<%- id %>'}"></div>
                     <div class="reply-post-control">
@@ -82,7 +82,7 @@ from django_comment_client.permissions import has_permission
                 <ul class="discussion-errors"></ul>
                 <label class="sr" for="add-new-comment">${_("Add a comment")}</label>
                 <div class="comment-body" id="add-new-comment" data-id="${'<%- wmdId %>'}"
-                data-placeholder="${_('Add a comment') | h}"></div>
+                data-placeholder="댓글 추가"></div>
                 <div class="comment-post-control">
                     <a class="discussion-submit-comment control-button" href="#">${_("Submit")}</a>
                 </div>
