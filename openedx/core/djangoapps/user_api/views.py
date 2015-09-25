@@ -158,8 +158,8 @@ class RegistrationView(APIView):
     DEFAULT_FIELDS = ["email", "name", "username", "password"]
 
     EXTRA_FIELDS = [
-        "city",
         "country",
+        "city",
         "gender",
         "year_of_birth",
         "level_of_education",
