@@ -37,8 +37,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2015-07-06 12:11+0000\n"
-"PO-Revision-Date: 2015-07-06 12:11:43.963099\n"
+"POT-Creation-Date: 2015-08-21 08:04+0000\n"
+"PO-Revision-Date: 2015-08-21 08:04:17.624985\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -10417,24 +10417,6 @@ msgstr ""
 "Déädlïné för pürçhäsïng änd réqüéstïng çrédït. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
 "¢σηѕє¢тєтυя α#"
 
-#: openedx/core/djangoapps/import_export/courses/views.py
-msgid "We only support uploading a .tar.gz file."
-msgstr ""
-"Wé önlý süppört üplöädïng ä .tär.gz fïlé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
-"¢σηѕє¢тєтυя #"
-
-#: openedx/core/djangoapps/import_export/courses/views.py
-msgid "File upload corrupted. Please try again"
-msgstr ""
-"Fïlé üplöäd çörrüptéd. Pléäsé trý ägäïn Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
-"¢σηѕє¢тєтυя#"
-
-#: openedx/core/djangoapps/import_export/courses/views.py
-msgid "Could not find the {root_xml_file} file in the package."
-msgstr ""
-"Çöüld nöt fïnd thé {root_xml_file} fïlé ïn thé päçkägé. Ⱡ'σяєм ιρѕυм ∂σłσя "
-"ѕιт αмєт, ¢σηѕє¢тєтυя #"
-
 #: openedx/core/djangoapps/profile_images/images.py
 msgid "bytes"
 msgstr "ßýtés Ⱡ'σяєм ιρѕ#"
@@ -10892,12 +10874,22 @@ msgid "Empty"
 msgstr "Émptý Ⱡ'σяєм ιρѕ#"
 
 #: cms/djangoapps/contentstore/views/import_export.py
-msgid ""
-"An invalid parent key was supplied: \"{supplied_key}\" is not a valid course"
-" unit."
+msgid "We only support uploading a .tar.gz file."
 msgstr ""
-"Àn ïnvälïd pärént kéý wäs süpplïéd: \"{supplied_key}\" ïs nöt ä välïd çöürsé"
-" ünït. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυя #"
+"Wé önlý süppört üplöädïng ä .tär.gz fïlé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя #"
+
+#: cms/djangoapps/contentstore/views/import_export.py
+msgid "File upload corrupted. Please try again"
+msgstr ""
+"Fïlé üplöäd çörrüptéd. Pléäsé trý ägäïn Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя#"
+
+#: cms/djangoapps/contentstore/views/import_export.py
+msgid "Could not find the {0} file in the package."
+msgstr ""
+"Çöüld nöt fïnd thé {0} fïlé ïn thé päçkägé. Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, "
+"¢σηѕє¢тєтυя #"
 
 #: cms/djangoapps/contentstore/views/item.py
 msgid "Invalid data"
@@ -14510,11 +14502,10 @@ msgstr "Ýöür çértïfïçäté ïs äväïläßlé Ⱡ'σяєм ιρѕυм �
 #: lms/templates/courseware/progress.html
 msgid ""
 "You can now access your certificate. If you keep working and receive a "
-"higher grade,you can request an {link_start} updated certificate {link_end}."
+"higher grade, you can request an updated certificate."
 msgstr ""
 "Ýöü çän nöw äççéss ýöür çértïfïçäté. Ìf ýöü kéép wörkïng änd réçéïvé ä "
-"hïghér grädé,ýöü çän réqüést än {link_start} üpdätéd çértïfïçäté {link_end}."
-" Ⱡ#"
+"hïghér grädé, ýöü çän réqüést än üpdätéd çértïfïçäté. Ⱡ'σяєм ι#"
 
 #: lms/templates/courseware/progress.html
 msgid "View certificate in a new browser window or tab."

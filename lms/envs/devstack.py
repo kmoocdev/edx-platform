@@ -124,7 +124,7 @@ FEATURES['LICENSING'] = True
 
 
 ########################## Courseware Search #######################
-FEATURES['ENABLE_COURSEWARE_SEARCH'] = False
+FEATURES['ENABLE_COURSEWARE_SEARCH'] = True
 SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
 
 
@@ -153,7 +153,7 @@ COURSE_DISCOVERY_MEANINGS = {
     'language': LANGUAGE_MAP,
 }
 
-FEATURES['ENABLE_COURSE_DISCOVERY'] = False
+FEATURES['ENABLE_COURSE_DISCOVERY'] = True
 FEATURES['COURSES_ARE_BROWSEABLE'] = True
 HOMEPAGE_COURSE_MAX = 9
 

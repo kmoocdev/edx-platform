@@ -29,6 +29,8 @@ from pymongo import ASCENDING, DESCENDING
 from student.auth import has_course_author_access
 from xmodule.modulestore.exceptions import ItemNotFoundError
 
+from django.views.decorators.csrf import csrf_exempt
+
 __all__ = ['assets_handler']
 
 # pylint: disable=unused-argument
@@ -81,7 +83,6 @@ def _asset_index(request, course_key):
     Supports start (0-based index into the list of assets) and max query parameters.
     """
     course_module = modulestore().get_course(course_key)
-
     return render_to_response('asset_index.html', {
         'context_course': course_module,
         'max_file_size_in_mbs': settings.MAX_ASSET_UPLOAD_FILE_SIZE_IN_MB,
@@ -164,14 +165,26 @@ def _assets_json(request, course_key):
                 'thumbnail', thumbnail_location[4])
 
         asset_locked = asset.get('locked', False)
-        asset_json.append(_get_asset_json(
-            asset['displayname'],
-            asset['contentType'],
-            asset['uploadDate'],
-            asset_location,
-            thumbnail_location,
-            asset_locked
-        ))
+        url_split = request.META.get('HTTP_REFERER').split("/")
+        if ( url_split[3] == 'cdn' ) :
+            asset_json.append(_get_cdn_json(
+                asset['displayname'],
+                asset['contentType'],
+                asset['uploadDate'],
+                asset_location,
+                thumbnail_location,
+                asset_locked,
+                asset['cdn_url']
+            ))
+        else :
+            asset_json.append(_get_asset_json(
+                asset['displayname'],
+                asset['contentType'],
+                asset['uploadDate'],
+                asset_location,
+                thumbnail_location,
+                asset_locked
+            ))
 
     return JsonResponse({
         'start': start,
@@ -193,10 +206,16 @@ def _get_assets_for_page(request, course_key, options):
     sort = options['sort']
     filter_params = options['filter_params'] if options['filter_params'] else None
     start = current_page * page_size
+    url_split = request.META.get('HTTP_REFERER').split("/")
 
-    return contentstore().get_all_content_for_course(
-        course_key, start=start, maxresults=page_size, sort=sort, filter_params=filter_params
-    )
+    if ( url_split[3] == 'cdn' ):
+        return contentstore().get_all_cdn_content_for_course(
+            course_key, start=start, maxresults=page_size, sort=sort, filter_params=filter_params
+        )
+    else:
+        return contentstore().get_all_content_for_course(
+            course_key, start=start, maxresults=page_size, sort=sort, filter_params=filter_params
+        )
 
 
 def get_file_size(upload_file):
@@ -283,6 +302,7 @@ def _upload_asset(request, course_key):
 
     # readback the saved content - we need the database timestamp
     readback = contentstore().find(content.location)
+    # readback = contentstore().find_cdn(content.location)
     locked = getattr(content, 'locked', False)
     response_payload = {
         'asset': _get_asset_json(
@@ -295,7 +315,32 @@ def _upload_asset(request, course_key):
         ),
         'msg': _('Upload completed')
     }
+    return JsonResponse(response_payload)
 
+
+def save_cdn(request, course_key):
+    content = request.REQUEST
+    content.name=request.REQUEST['file_name']
+    content.cdn_url=request.REQUEST['cdn_url']
+    content.content_type=request.REQUEST['file_type']
+    content.thumbnail_location=request.REQUEST['thumbnail_url']
+    content.location = StaticContent.compute_cdn_location(course_key, request.REQUEST['file_name'])
+    contentstore().save_cdn(content)
+
+    readback = contentstore().find_cdn(content.location)
+    locked = False;
+    response_payload = {
+        'asset': _get_asset_json(
+            content.name,
+            content.content_type,
+            readback.last_modified_at,
+            content.location,
+            content.thumbnail_location,
+            locked
+        ),
+        'msg': _('Upload completed'),
+        'result': 'success'
+    }
     return JsonResponse(response_payload)
 
 
@@ -315,10 +360,12 @@ def _update_asset(request, course_key, asset_key):
             return JsonResponse()
         except AssetNotFoundException:
             return JsonResponse(status=404)
-
     elif request.method in ('PUT', 'POST'):
         if 'file' in request.FILES:
             return _upload_asset(request, course_key)
+        elif 'cdn_url' in request.REQUEST:
+            logging.info("____________________ cdn_url")
+            return save_cdn(request, course_key)
         else:
             # Update existing asset
             try:
@@ -381,5 +428,18 @@ def _get_asset_json(display_name, content_type, date, location, thumbnail_locati
         'thumbnail': StaticContent.serialize_asset_key_with_slash(thumbnail_location) if thumbnail_location else None,
         'locked': locked,
         # Needed for Backbone delete/update.
+        'id': unicode(location)
+    }
+
+def _get_cdn_json(display_name, content_type, date, location, thumbnail_location, locked, cdn_url):
+    return {
+        'display_name': display_name,
+        'content_type': content_type,
+        'date_added': get_default_time_display(date),
+        'url': cdn_url,
+        'external_url': cdn_url,
+        'portable_url': StaticContent.get_static_path_from_location(location),
+        'thumbnail': StaticContent.serialize_asset_key_with_slash(thumbnail_location) if thumbnail_location else None,
+        # 'locked': locked,
         'id': unicode(location)
     }

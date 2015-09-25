@@ -15,6 +15,7 @@
     <%static:include path="js/${template_name}.underscore" />
 </script>
 % endfor
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 </%block>
 
 <%block name="requirejs">
@@ -28,7 +29,167 @@
     });
 </%block>
 
+
 <%block name="content">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plupload/2.1.2/plupload.full.min.js"></script>
+    <script type="text/javascript">
+        /*!
+         * bootstrap-progressbar v0.8.2 by @minddust
+         * Copyright (c) 2012-2014 Stephan Gro횩
+         *
+         * http://www.minddust.com/project/bootstrap-progressbar/
+         *
+         * Licensed under the MIT license:
+         * http://www.opensource.org/licenses/MIT
+         */
+        (function (c) {
+            var b = function (e, d) {
+                this.$element = c(e);
+                this.options = c.extend({}, b.defaults, d)
+            };
+            b.defaults = {
+                transition_delay: 300,
+                refresh_speed: 50,
+                display_text: "none",
+                use_percentage: true,
+                percent_format: function (d) {
+                    return d + "%"
+                },
+                amount_format: function (e, d, f) {
+                    return e + " / " + d
+                },
+                update: c.noop,
+                done: c.noop,
+                fail: c.noop
+            };
+            b.prototype.transition = function () {
+                var i = this.$element;
+                var h = i.parent();
+                var p = this.$back_text;
+                var l = this.$front_text;
+                var q = this.options;
+                var j = parseInt(i.attr("data-transitiongoal"));
+                var m = parseInt(i.attr("aria-valuemin")) || 0;
+                var d = parseInt(i.attr("aria-valuemax")) || 100;
+                var o = h.hasClass("vertical");
+                var g = q.update && typeof q.update === "function" ? q.update : b.defaults.update;
+                var f = q.done && typeof q.done === "function" ? q.done : b.defaults.done;
+                var e = q.fail && typeof q.fail === "function" ? q.fail : b.defaults.fail;
+                if (isNaN(j)) {
+                    e("data-transitiongoal not set");
+                    return
+                }
+                var n = Math.round(100 * (j - m) / (d - m));
+                if (q.display_text === "center" && !p && !l) {
+                    this.$back_text = p = c("<span>").addClass("progressbar-back-text").prependTo(h);
+                    this.$front_text = l = c("<span>").addClass("progressbar-front-text").prependTo(i);
+                    var k;
+                    if (o) {
+                        k = h.css("height");
+                        p.css({height: k, "line-height": k});
+                        l.css({height: k, "line-height": k});
+                        c(window).resize(function () {
+                            k = h.css("height");
+                            p.css({height: k, "line-height": k});
+                            l.css({height: k, "line-height": k})
+                        })
+                    } else {
+                        k = h.css("width");
+                        l.css({width: k});
+                        c(window).resize(function () {
+                            k = h.css("width");
+                            l.css({width: k})
+                        })
+                    }
+                }
+                setTimeout(function () {
+                    var v;
+                    var t;
+                    var r;
+                    var u;
+                    var w;
+                    if (o) {
+                        i.css("height", n + "%")
+                    } else {
+                        i.css("width", n + "%")
+                    }
+                    var s = setInterval(function () {
+                        if (o) {
+                            r = i.height();
+                            u = h.height()
+                        } else {
+                            r = i.width();
+                            u = h.width()
+                        }
+                        v = Math.round(100 * r / u);
+                        t = Math.round(m + r / u * (d - m));
+                        if (v >= n) {
+                            v = n;
+                            t = j;
+                            f(i);
+                            clearInterval(s)
+                        }
+                        if (q.display_text !== "none") {
+                            w = q.use_percentage ? q.percent_format(v) : q.amount_format(t, d, m);
+                            if (q.display_text === "fill") {
+                                i.text(w)
+                            } else {
+                                if (q.display_text === "center") {
+                                    p.text(w);
+                                    l.text(w)
+                                }
+                            }
+                        }
+                        i.attr("aria-valuenow", t);
+                        g(v, i)
+                    }, q.refresh_speed)
+                }, q.transition_delay)
+            };
+            var a = c.fn.progressbar;
+            c.fn.progressbar = function (d) {
+                return this.each(function () {
+                    var g = c(this);
+                    var f = g.data("bs.progressbar");
+                    var e = typeof d === "object" && d;
+                    if (!f) {
+                        g.data("bs.progressbar", (f = new b(this, e)))
+                    }
+                    f.transition()
+                })
+            };
+            c.fn.progressbar.Constructor = b;
+            c.fn.progressbar.noConflict = function () {
+                c.fn.progressbar = a;
+                return this
+            }
+        })(window.jQuery);</script>
+
+    <script type="text/javascript">
+        (function ($, window, undefined) {
+            //is onprogress supported by browser?
+            var hasOnProgress = ("onprogress" in $.ajaxSettings.xhr());
+
+            //If not supported, do nothing
+            if (!hasOnProgress) {
+                return;
+            }
+
+            //patch ajax settings to call a progress callback
+            var oldXHR = $.ajaxSettings.xhr;
+            $.ajaxSettings.xhr = function () {
+                var xhr = oldXHR();
+                if (xhr instanceof window.XMLHttpRequest) {
+                    xhr.addEventListener('progress', this.progress, false);
+                }
+
+                if (xhr.upload) {
+                    xhr.upload.addEventListener('progress', this.progress, false);
+                }
+
+                return xhr;
+            };
+        })(jQuery, window);
+    </script>
 
 <div class="wrapper-mast wrapper">
     <header class="mast has-actions has-subtitle">
@@ -84,6 +245,11 @@
     </section>
 </div>
 
+<%
+    path_info = request.path_info
+    path_info_split = path_info.split('/')
+%>
+% if path_info_split[1] == 'assets':
 <div class="upload-modal modal">
     <a href="#" class="close-button"><i class="icon fa fa-times-circle"></i> <span class="sr">${_('close')}</span></a>
     <div class="modal-body">
@@ -104,8 +270,342 @@
         </form>
     </div>
 </div>
+% else :
+<div class="upload-modal modal">
+    <a href="#" class="close-button"><i class="icon fa fa-times-circle"></i> <span class="sr">${_('close')}</span></a>
+    <div class="modal-body">
+        <h1 class="title">${_("Upload New File")}</h1>
+        <div class="container">
+            <div class="input-group">
+                <input type="hidden" class="form-control" disabled="disabled" id="zfp-thumbnail-selected" value="" />
+                    <a href="#" id="zfp-thumbnail-selector" class="choose-file-button">${_("Choose File")}</a>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="embeddable" id="movie-info">
+                <label>URL:</label>
+                <input type="text" class="embeddable-xml-input" value=''>
+            </div>
+        </div>
+    </div>
+</div>
+% endif
 
 
+<script type="text/javascript">
+var file_name = "";
+var cdn_url = "";
+var content_type = "";
+var thumbnail_url = "";
+
+    if ($("#zfp-thumbnail-selector").length > 0) {
+        var thumbnail = new plupload.Uploader({
+            browse_button: 'zfp-thumbnail-selector',
+            //runtimes: 'flash,html4,html5,silverlight',
+            runtimes: 'html5,browserplus,silverlight,flash,gears,html4',
+            //chunk_size : '64kb',
+            chunk_size: '1mb',
+            // MME General settings
+            url: "http://mme.kmoocs.kr/upload",
+            file_data_name: "uploadFile",
+            max_file_count: 1,
+            max_retries: 3,
+            filters: {
+                max_file_size: '0',
+                mime_types: [
+                    {title: "Image files", extensions: "mov,mp4,avi,mpeg,wmv,mkv"}
+                ]
+            },
+            flash_swf_url: 'js/Moxie.swf',
+            silverlight_xap_url: 'js/Moxie.xap',
+            init: {
+                PostInit: function () {
+                    console.log('PostInit');
+                },
+
+                FilesAdded: function (up, files) {
+                    $(".input-group").hide();
+                    $(".progress-bar").show();
+
+                    console.log("embeddable-xml-input:");
+                    console.log($(".embeddable-xml-input").val());
+                    if ($(".embeddable-xml-input").val() != "") {
+                        $(".embeddable-xml-input").val("");
+                    }
+                    $(".progress-fill").width("0%");
+                    $(".progress-fill").text("uploading:0%");
+//                    $("#zfp-thumbnail-progress").show();
+//                    $("#zfp-thumbnail-progress .progress-bar").attr('data-transitiongoal', 0).progressbar({
+//                        display_text: 'center',
+//                        use_percentage: true,
+//                    });
+//                    plupload.each(files, function (file) {
+//                        $("#zfp-thumbnail-selected").val(file.name);
+//                    });
+                    thumbnail.start();
+                    console.log('FilesAdded:', files);
+                },
+
+                UploadProgress: function (up, file) {
+                    $(".progress-fill").width(file.percent+"%");
+                    $(".progress-fill").text("uploading:"+file.percent+"%");
+                },
+
+                Error: function (up, err) {
+                    $(".progress-bar").hide();
+                    console.log('Error:', err);
+                },
+
+                StateChanged: function (up) {
+                    console.log('StateChanged:', up);
+                },
+
+                FileUploaded: function (up, file, info) {
+                    if (info.status === 200) {
+                        var result = $.parseJSON(info.response);
+
+                        //영상 엔코딩 요청 상태 체크
+                        $.ajax({
+                            url: 'http://mme.kmoocs.kr/mov_extract',
+                            dataType: 'json',
+                            data: 'uuid=' + result.data.up_path + '&is_re=y',
+                            type: 'get',
+                            success: function (res) {
+//                                $("#zfp-thumbnail-progress").hide();
+//                                $("#zfp-mov-progress").show();
+//                                $("#zfp-mov-progress .progress-bar").attr('data-transitiongoal', 0).progressbar({
+//                                    display_text: 'center',
+//                                    use_percentage: true,
+//                                });
+
+                                if (res.status == 200) {
+                                    var movie_status = 'http://mme.kmoocs.kr' + res.data.movie_status;
+                                    var thumb_div_status = 'http://mme.kmoocs.kr' + res.data.thumb_div_status;
+                                    var thumb_status = 'http://mme.kmoocs.kr' + res.data.thumb_status;
+                                    //console.log(movie_status, thumb_div_status, thumb_status);
+                                    //$("#mov_url").text('http://mme.kmoocs.kr' + res.data.mov_url);
+                                    $(".progress-fill").width("0%");
+                                    $(".progress-fill").text("encoding:0%");
+                                    cdn_url = 'http://mme.kmoocs.kr' + res.data.mov_url;
+                                    mov_st(movie_status);
+                                    //getThumb('구간썸네일', thumb_div_status);
+                                    getThumb('대표섬네일', thumb_status);
+                                } else if (res.status == 700) {
+                                    console.log('중복엔코딩 요청입니다.');
+                                } else {
+                                    alert('엔코딩 요청이 완료되지 않았습니다.');
+                                }
+                                //var extract_result = $.parseJSON(res);
+                            },
+                            error: function (e) {
+                                console.log(e);
+                            },
+                            complete: function () {
+                                //영상 상태체크
+                                //썸네일 체크
+                                //구간썸네일 체크
+                            }
+                        });
+                    } else {
+                        up.refresh();
+                    }
+                    console.log('FileUploaded:', file, info);
+                    file_name = file.name;
+                    file_type = file.type;
+                    console.log('filname', file.name);
+                    console.log('filetype', file.type);
+                    $("#zfp-thumbnail-progress").hide();
+                }
+            }
+        });
+
+        //Pluploade Init
+        thumbnail.init();
+    };
+
+    var mov_st = function (url) {
+        sleep(1000);
+        $.ajax({
+            method: 'GET',
+            url: url,
+            dataType: 'jsonp',
+            async: false,
+            success: function (res) {
+                if (res.message !== 'SUCCESS') {
+                    $(".progress-fill").width(parseInt(res.data.data.percent)+"%");
+                    sleep(300);
+                    mov_st(url);
+                    $(".progress-fill").text("encoding:"+res.data.data.percent+"%");
+                    console.log(res.data.data.percent);
+                }
+                else {
+                    console.warn('Encoding Finish');
+                    ajaxPutEdX();
+                    $(".progress-fill").width("100%");
+                    $(".progress-fill").text("encoding completed");
+                    //$("#zfp-mov-progress .progress-bar").attr('data-transitiongoal', 100).progressbar();
+                    $("#movie-info").show(); //영상정보 호출 -> 플레이어 연동
+
+                    //embeddable
+                    console.log($(".embeddable").css("display"));
+                    $(".embeddable").after($(".input-group"));
+                    $(".choose-file-button").text("Load Another File");
+                    $(".input-group").show();
+
+                    $(".embeddable-xml-input").val(cdn_url);
+                }
+            },
+            error: function () {
+            }
+        });
+    };
+
+    var getThumb = function (text, url) {
+        var path = '';
+        $.ajax({
+            method: 'GET',
+            url: url,
+            dataType: 'jsonp',
+            success: function (res) {
+                if (res.message !== 'SUCCESS') {
+                    sleep(300);
+                    getThumb(text, url);
+
+                } else {
+                    console.log("res:", res);
+                    $.each(res.data.thumb, function (index, value) {
+                        path = value.path.replace('/data/convert/mme', 'http://mme.kmoocs.kr/doc')
+                        thumbnail_url = path;
+                        console.log("path:",path);
+                        //$('.container').append('<div class="row"><div class="col-md-12"><label>' + text + ': ' + index + '<br><img src="' + path + '"></label></div></div>');
+                    });
+                }
+            },
+            error: function () {
+            }
+        });
+    };
+
+    var sleep = function (delay) {
+        var start = new Date().getTime();
+        while (new Date().getTime() < start + delay);
+    };
+
+
+var trCdnFile = ""
++ "<tr>"
++ "    <td class=\"thumb-col\">"
++ "    <div class=\"thumb\">"
++ "    </div>"
++ "</td>"
++ "<td class=\"name-col\">"
++ "    <span class=\"title\"><a data-tooltip=\"Open/download this file\" href=\"{{url}}\" class=\"filename\">{{display_name}}</a></span>"
++ "    <div class=\"embeddable-xml\"></div>"
++ "</td>"
++ "<td class=\"type-col\">"
++ "    {{content_type}}"
++ "</td>"
++ "<td class=\"date-col\">"
++ "    {{date_added}}"
++ "</td>"
++ "<td class=\"embed-col\">"
++ "    <ul>"
++ "        <li class=\"embed-url\">"
++ "            <label>"
++ "                <span class=\"label\">Studio:</span>"
++ "                <input type=\"text\" class=\"embeddable-xml-input\" value=\"{{portable_url}}\" readonly=\"\">"
++ "            </label>"
++ "        </li>"
++ "        <li class=\"external-url\">"
++ "            <label>"
++ "                <span class=\"label\">Web:</span>"
++ "                <input type=\"text\" class=\"embeddable-xml-input\" value=\"{{url}}\" readonly=\"\">"
++ "            </label>"
++ "        </li>"
++ "    </ul>"
++ "</td>"
++ "<td class=\"actions-col\">"
++ "    <ul class=\"actions-list\">"
++ "        <li class=\"action-item action-delete\">"
++ "            <a href=\"javascript:ajaxDeleteEdX('{{id}}');\" data-tooltip=\"Delete this asset\" class=\"remove-asset-button action-button\"><i class=\"icon fa fa-times-circle\" aria-hidden=\"true\"></i> <span class=\"sr\">Delete this asset</span></a>"
++ "        </li>"
++ "    </ul>"
++ "</td>"
++ "</tr>";
+
+    var ajaxPutEdX = function() {
+        $.ajaxSetup({
+            type: 'PUT'
+        });
+        $.ajax({
+            url: '${asset_callback_url}?file_name='+file_name+'&cdn_url='+cdn_url+'&file_type='+file_type+'&thumbnail_url='+thumbnail_url,
+            success: function (res) {
+                if (res.result == 'success') {
+                    ajaxGetEdX();
+                }
+            },
+            error: function () {
+                console.log('ajaxPutEdX error');
+            }
+        });
+    }
+
+    var ajaxDeleteEdX = function(id) {
+        $.ajaxSetup({
+            type : 'DELETE'
+        });
+        $.ajax({
+            url: '${asset_callback_url}'+id,
+            error: function () {
+                console.log('ajaxDeleteEdX error');
+            }
+        }).done(function(data){
+            console.log("ajaxDeleteEdX done");
+            ajaxGetEdX();
+        });
+    }
+
+    var ajaxGetEdX = function() {
+        $.ajaxSetup({
+            type: 'GET'
+        });
+        $.ajax({
+            url: '${asset_callback_url}',
+            error: function () {
+                console.log('ajaxGetEdX error');
+            }
+        }).done(function(data){
+                    if (data.totalCount > 0) {
+                        $('#asset-table-body').html('');
+                        $(".assets-library").css("display", "block");
+                        $(".no-asset-content").css("display", "none");
+                        var arrAssets = data.assets;
+                        var asset = null;
+                        $.each(arrAssets, function( key, value ) {
+                            asset = value;
+                            $('#asset-table-body').append(trCdnFile
+                                    .replace('{{display_name}}', asset.display_name)
+                                    .replace(/{{url}}/g, asset.external_url)
+                                    .replace('{{content_type}}', asset.content_type)
+                                    .replace('{{date_added}}', asset.date_added)
+                                    .replace('{{portable_url}}', asset.portable_url)
+                                    .replace('{{id}}', encodeURIComponent(asset.id))
+                            );
+                        });
+                    } else if (data.totalCount == 0) {
+                        $(".assets-library").css("display", "none");
+                        $(".no-asset-content").css("display", "block");
+                    }
+            console.log("ajaxGetEdX done");
+        });
+    }
+
+    $(".close-button").click(function(){
+        $('#uploadProgress').text('');
+    });
+
+</script>
 </%block>
 
 <%block name="view_alerts">

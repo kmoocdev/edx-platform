@@ -5,7 +5,8 @@ from .models import (
     OAuth2ProviderConfig, SAMLConfiguration, SAMLProviderConfig,
     _PSA_OAUTH2_BACKENDS, _PSA_SAML_BACKENDS
 )
-
+from social.backends import google, linkedin, facebook, twitter, username
+from . import lifelongedu
 
 class Registry(object):
     """

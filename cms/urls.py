@@ -93,6 +93,9 @@ urlpatterns += patterns(
     url(r'^container/{}$'.format(settings.USAGE_KEY_PATTERN), 'container_handler'),
     url(r'^checklists/{}/(?P<checklist_index>\d+)?$'.format(settings.COURSE_KEY_PATTERN), 'checklists_handler'),
     url(r'^orphan/{}$'.format(settings.COURSE_KEY_PATTERN), 'orphan_handler'),
+
+    url(r'^cdn/{}/{}?$'.format(settings.COURSE_KEY_PATTERN, settings.ASSET_KEY_PATTERN), 'assets_handler'),
+
     url(r'^assets/{}/{}?$'.format(settings.COURSE_KEY_PATTERN, settings.ASSET_KEY_PATTERN), 'assets_handler'),
     url(r'^import/{}$'.format(COURSELIKE_KEY_PATTERN), 'import_handler'),
     url(r'^import_status/{}/(?P<filename>.+)$'.format(COURSELIKE_KEY_PATTERN), 'import_status_handler'),
