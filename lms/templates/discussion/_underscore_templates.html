@@ -42,8 +42,8 @@ from django_comment_client.permissions import has_permission
             </div>
         </div>
         <div class="post-tools">
-            <a href="javascript:void(0)" class="forum-thread-expand"><span class="icon fa fa-plus"/> ${_("Expand discussion")}</a>
-            <a href="javascript:void(0)" class="forum-thread-collapse"><span class="icon fa fa-minus"/> ${_("Collapse discussion")}</a>
+            <a href="javascript:void(0)" class="forum-thread-expand"><span class="icon fa fa-plus"/>더보기</a>
+            <a href="javascript:void(0)" class="forum-thread-collapse"><span class="icon fa fa-minus"/>감추기</a>
         </div>
     </article>
 </script>
@@ -606,3 +606,4 @@ ${secondaryAction("delete", "remove", _("Delete"))}
     ${_('anonymous') | h}
     ${"<% } %>"}
 </script>
+
