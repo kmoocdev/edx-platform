@@ -83,11 +83,9 @@ class CourseViewMixin(object):
         Determines if the user is staff or an instructor for the course.
         Always returns True if DEBUG mode is enabled.
         """
-        return bool(
-            settings.DEBUG
-            or has_access(user, CourseStaffRole.ROLE, course)
-            or has_access(user, CourseInstructorRole.ROLE, course)
-        )
+        return (settings.DEBUG
+                or has_access(user, CourseStaffRole.ROLE, course)
+                or has_access(user, CourseInstructorRole.ROLE, course))
 
     def check_course_permissions(self, user, course):
         """
@@ -321,7 +319,7 @@ class CourseBlocksAndNavigation(ListAPIView):
         GET api/course_structure/v0/courses/{course_id}/blocks+navigation/
            &block_count=video
            &block_json={"video":{"profiles":["mobile_low"]}}
-           &fields=graded,format,multi_device
+           &fields=graded,format,responsive_ui
 
     **Parameters**:
 
@@ -335,9 +333,9 @@ class CourseBlocksAndNavigation(ListAPIView):
           Example: block_count="video,problem"
 
         * fields: (list) Indicates which additional fields to return for each block.
-          Default is "children,graded,format,multi_device"
+          Default is "children,graded,format,responsive_ui"
 
-          Example: fields=graded,format,multi_device
+          Example: fields=graded,format,responsive_ui
 
         * navigation_depth (integer) Indicates how far deep to traverse into the course hierarchy before bundling
           all the descendants.
@@ -387,9 +385,8 @@ class CourseBlocksAndNavigation(ListAPIView):
             Possible values can be "Homework", "Lab", "Midterm Exam", and "Final Exam".
             Returned only if "format" is included in the "fields" parameter.
 
-          * multi_device: (boolean) Whether or not the block's rendering obtained via block_url has support
-            for multiple devices.
-            Returned only if "multi_device" is included in the "fields" parameter.
+          * responsive_ui: (boolean) Whether or not the block's rendering obtained via block_url is responsive.
+            Returned only if "responsive_ui" is included in the "fields" parameter.
 
         * navigation: A dictionary that maps block IDs to a collection of navigation information about each block.
           Each block contains the following fields. Returned only if using the "navigation" endpoint.
@@ -406,7 +403,7 @@ class CourseBlocksAndNavigation(ListAPIView):
         """
         A class for encapsulating the request information, including what optional fields are requested.
         """
-        DEFAULT_FIELDS = "children,graded,format,multi_device"
+        DEFAULT_FIELDS = "children,graded,format,responsive_ui"
 
         def __init__(self, request, course):
             self.request = request
@@ -417,6 +414,10 @@ class CourseBlocksAndNavigation(ListAPIView):
             try:
                 # fields
                 self.fields = set(request.GET.get('fields', self.DEFAULT_FIELDS).split(","))
+
+                # children
+                self.children = 'children' in self.fields
+                self.fields.discard('children')
 
                 # block_count
                 self.block_count = request.GET.get('block_count', "")
@@ -486,7 +487,7 @@ class CourseBlocksAndNavigation(ListAPIView):
                 self.descendants_of_parent = parent_block_info.descendants_of_self
 
                 # add ourselves to the parent's children, if requested.
-                if 'children' in request_info.fields:
+                if request_info.children:
                     parent_block_info.value.setdefault("children", []).append(unicode(block.location))
 
             # the block's data to include in the response
@@ -589,13 +590,6 @@ class CourseBlocksAndNavigation(ListAPIView):
         # block JSON data
         self.add_block_json(request_info, block_info)
 
-        # multi-device support
-        if 'multi_device' in request_info.fields:
-            block_info.value['multi_device'] = block_info.block.has_support(
-                getattr(block_info.block, 'student_view', None),
-                'multi_device'
-            )
-
         # additional fields
         self.add_additional_fields(request_info, block_info)
 
@@ -671,6 +665,7 @@ class CourseBlocksAndNavigation(ListAPIView):
     FIELD_MAP = {
         'graded': BlockApiField(block_field_name='graded', api_field_default=False),
         'format': BlockApiField(block_field_name='format', api_field_default=None),
+        'responsive_ui': BlockApiField(block_field_name='has_responsive_ui', api_field_default=False),
     }
 
     def add_additional_fields(self, request_info, block_info):

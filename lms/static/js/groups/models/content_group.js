@@ -1,13 +1,15 @@
-;(function (define) {
+var edx = edx || {};
+
+(function(Backbone) {
     'use strict';
-    define(['backbone'], function(Backbone) {
-        var ContentGroupModel = Backbone.Model.extend({
-            idAttribute: 'id',
-            defaults: {
-                name: '',
-                user_partition_id: null
-            }
-        });
-        return ContentGroupModel;
+
+    edx.groups = edx.groups || {};
+
+    edx.groups.ContentGroupModel = Backbone.Model.extend({
+        idAttribute: 'id',
+        defaults: {
+            name: '',
+            user_partition_id: null
+        }
     });
-}).call(this, define || RequireJS.define);
+}).call(this, Backbone);

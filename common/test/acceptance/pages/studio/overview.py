@@ -8,6 +8,7 @@ from bok_choy.promise import EmptyPromise
 
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 
 from .course_page import CoursePage
 from .container import ContainerPage
@@ -404,7 +405,7 @@ class CourseOutlineSection(CourseOutlineContainer, CourseOutlineChild):
         self.add_child()
 
 
-class ExpandCollapseLinkState(object):
+class ExpandCollapseLinkState:
     """
     Represents the three states that the expand/collapse link can be in
     """

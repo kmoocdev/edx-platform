@@ -4,7 +4,6 @@ from django.conf import settings
 
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
 from microsite_configuration import microsite
-from staticfiles.storage import staticfiles_storage
 
 
 def get_visible_courses():
@@ -99,8 +98,14 @@ def get_logo_url():
     university = microsite.get_value('university')
 
     if university is None and settings.FEATURES.get('IS_EDX_DOMAIN', False):
-        return staticfiles_storage.url('images/edx-theme/edx-logo-77x36.png')
+        return '{static_url}images/edx-theme/edx-logo-77x36.png'.format(
+            static_url=settings.STATIC_URL
+        )
     elif university:
-        return staticfiles_storage.url('images/{uni}-on-edx-logo.png'.format(uni=university))
+        return '{static_url}images/{uni}-on-edx-logo.png'.format(
+            static_url=settings.STATIC_URL, uni=university
+        )
     else:
-        return staticfiles_storage.url('images/default-theme/logo.png')
+        return '{static_url}images/default-theme/logo.png'.format(
+            static_url=settings.STATIC_URL
+        )

@@ -4,7 +4,6 @@ Add and create new modes for running courses on this particular LMS
 import pytz
 from datetime import datetime
 
-from django.core.exceptions import ValidationError
 from django.db import models
 from collections import namedtuple, defaultdict
 from django.utils.translation import ugettext_lazy as _
@@ -31,45 +30,28 @@ class CourseMode(models.Model):
 
     """
     # the course that this mode is attached to
-    course_id = CourseKeyField(max_length=255, db_index=True, verbose_name=_("Course"))
+    course_id = CourseKeyField(max_length=255, db_index=True)
 
     # the reference to this mode that can be used by Enrollments to generate
     # similar behavior for the same slug across courses
-    mode_slug = models.CharField(max_length=100, verbose_name=_("Mode"))
+    mode_slug = models.CharField(max_length=100)
 
     # The 'pretty' name that can be translated and displayed
-    mode_display_name = models.CharField(max_length=255, verbose_name=_("Display Name"))
+    mode_display_name = models.CharField(max_length=255)
 
-    # The price in USD that we would like to charge for this mode of the course
-    # Historical note: We used to allow users to choose from several prices, but later
-    # switched to using a single price.  Although this field is called `min_price`, it is
-    # really just the price of the course.
-    min_price = models.IntegerField(default=0, verbose_name=_("Price"))
+    # minimum price in USD that we would like to charge for this mode of the course
+    min_price = models.IntegerField(default=0)
+
+    # the suggested prices for this mode
+    suggested_prices = models.CommaSeparatedIntegerField(max_length=255, blank=True, default='')
 
     # the currency these prices are in, using lower case ISO currency codes
     currency = models.CharField(default="usd", max_length=8)
 
-    # The datetime at which the course mode will expire.
-    # This is used to implement "upgrade" deadlines.
-    # For example, if there is a verified mode that expires on 1/1/2015,
-    # then users will be able to upgrade into the verified mode before that date.
-    # Once the date passes, users will no longer be able to enroll as verified.
-    expiration_datetime = models.DateTimeField(
-        default=None, null=True, blank=True,
-        verbose_name=_(u"Upgrade Deadline"),
-        help_text=_(
-            u"OPTIONAL: After this date/time, users will no longer be able to enroll in this mode. "
-            u"Leave this blank if users can enroll in this mode until enrollment closes for the course."
-        ),
-    )
-
-    # DEPRECATED: the `expiration_date` field has been replaced by `expiration_datetime`
+    # turn this mode off after the given expiration date
     expiration_date = models.DateField(default=None, null=True, blank=True)
 
-    # DEPRECATED: the suggested prices for this mode
-    # We used to allow users to choose from a set of prices, but we now allow only
-    # a single price.  This field has been deprecated by `min_price`
-    suggested_prices = models.CommaSeparatedIntegerField(max_length=255, blank=True, default='')
+    expiration_datetime = models.DateTimeField(default=None, null=True, blank=True)
 
     # optional description override
     # WARNING: will not be localized
@@ -81,10 +63,7 @@ class CourseMode(models.Model):
         null=True,
         blank=True,
         verbose_name="SKU",
-        help_text=_(
-            u"OPTIONAL: This is the SKU (stock keeping unit) of this mode in the external ecommerce service.  "
-            u"Leave this blank if the course has not yet been migrated to the ecommerce service."
-        )
+        help_text="This is the SKU (stock keeping unit) of this mode in the external ecommerce service."
     )
 
     HONOR = 'honor'
@@ -103,25 +82,9 @@ class CourseMode(models.Model):
     # Modes that allow a student to earn credit with a university partner
     CREDIT_MODES = [CREDIT_MODE]
 
-    class Meta(object):
+    class Meta:
         """ meta attributes of this model """
         unique_together = ('course_id', 'mode_slug', 'currency')
-
-    def clean(self):
-        """
-        Object-level validation - implemented in this method so DRF serializers
-        catch errors in advance of a save() attempt.
-        """
-        if self.is_professional_slug(self.mode_slug) and self.expiration_datetime is not None:
-            raise ValidationError(
-                _(u"Professional education modes are not allowed to have expiration_datetime set.")
-            )
-
-    def save(self, force_insert=False, force_update=False, using=None):
-        # Ensure currency is always lowercase.
-        self.clean()  # ensure object-level validation is performed before we save.
-        self.currency = self.currency.lower()
-        super(CourseMode, self).save(force_insert, force_update, using)
 
     @classmethod
     def all_modes_for_courses(cls, course_id_list):
@@ -249,7 +212,7 @@ class CourseMode(models.Model):
         return modes
 
     @classmethod
-    def modes_for_course_dict(cls, course_id, modes=None, **kwargs):
+    def modes_for_course_dict(cls, course_id, modes=None, only_selectable=True):
         """Returns the non-expired modes for a particular course.
 
         Arguments:
@@ -259,9 +222,6 @@ class CourseMode(models.Model):
             modes (list of `Mode`): If provided, search through this list
                 of course modes.  This can be used to avoid an additional
                 database query if you have already loaded the modes list.
-
-            include_expired (bool): If True, expired course modes will be included
-                in the returned values. If False, these modes will be omitted.
 
             only_selectable (bool): If True, include only modes that are shown
                 to users on the track selection page.  (Currently, "credit" modes
@@ -273,7 +233,7 @@ class CourseMode(models.Model):
 
         """
         if modes is None:
-            modes = cls.modes_for_course(course_id, **kwargs)
+            modes = cls.modes_for_course(course_id, only_selectable=only_selectable)
 
         return {mode.slug: mode for mode in modes}
 
@@ -348,7 +308,7 @@ class CourseMode(models.Model):
         """
         modes = cls.modes_for_course(course_id)
         for mode in modes:
-            if (mode.currency.lower() == currency.lower()) and (mode.slug == 'verified'):
+            if (mode.currency == currency) and (mode.slug == 'verified'):
                 return mode.min_price
         return 0
 
@@ -492,7 +452,7 @@ class CourseMode(models.Model):
             return False
 
         # Check that the default mode is available.
-        return cls.HONOR in modes_dict
+        return (cls.HONOR in modes_dict)
 
     @classmethod
     def is_white_label(cls, course_id, modes_dict=None):
@@ -530,7 +490,7 @@ class CourseMode(models.Model):
         If there is no mode found, will return the price of DEFAULT_MODE, which is 0
         """
         modes = cls.modes_for_course(course_id)
-        return min(mode.min_price for mode in modes if mode.currency.lower() == currency.lower())
+        return min(mode.min_price for mode in modes if mode.currency == currency)
 
     @classmethod
     def enrollment_mode_display(cls, mode, verification_status):

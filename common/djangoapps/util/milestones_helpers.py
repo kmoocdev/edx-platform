@@ -9,7 +9,6 @@ from django.utils.translation import ugettext as _
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import CourseKey
 
-from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 from xmodule.modulestore.django import modulestore
 
 NAMESPACE_CHOICES = {
@@ -87,46 +86,33 @@ def set_prerequisite_courses(course_key, prerequisite_course_keys):
             add_prerequisite_course(course_key, prerequisite_course_key)
 
 
-def get_pre_requisite_courses_not_completed(user, enrolled_courses):  # pylint: disable=invalid-name
+def get_pre_requisite_courses_not_completed(user, enrolled_courses):
     """
-    Makes a dict mapping courses to their unfulfilled milestones using the
-    fulfillment API of the milestones app.
-
-    Arguments:
-        user (User): the user for whom we are checking prerequisites.
-        enrolled_courses (CourseKey): a list of keys for the courses to be
-            checked. The given user must be enrolled in all of these courses.
-
-    Returns:
-        dict[CourseKey: dict[
-            'courses': list[dict['key': CourseKey, 'display': str]]
-        ]]
-        If a course has no incomplete prerequisites, it will be excluded from the
-        dictionary.
+    It would make dict of prerequisite courses not completed by user among courses
+    user has enrolled in. It calls the fulfilment api of milestones app and
+    iterates over all fulfilment milestones not achieved to make dict of
+    prerequisite courses yet to be completed.
     """
-    if not settings.FEATURES.get('ENABLE_PREREQUISITE_COURSES', False):
-        return {}
-
-    from milestones import api as milestones_api
     pre_requisite_courses = {}
+    if settings.FEATURES.get('ENABLE_PREREQUISITE_COURSES', False):
+        from milestones import api as milestones_api
+        for course_key in enrolled_courses:
+            required_courses = []
+            fulfilment_paths = milestones_api.get_course_milestones_fulfillment_paths(course_key, {'id': user.id})
+            for milestone_key, milestone_value in fulfilment_paths.items():  # pylint: disable=unused-variable
+                for key, value in milestone_value.items():
+                    if key == 'courses' and value:
+                        for required_course in value:
+                            required_course_key = CourseKey.from_string(required_course)
+                            required_course_descriptor = modulestore().get_course(required_course_key)
+                            required_courses.append({
+                                'key': required_course_key,
+                                'display': get_course_display_name(required_course_descriptor)
+                            })
 
-    for course_key in enrolled_courses:
-        required_courses = []
-        fulfillment_paths = milestones_api.get_course_milestones_fulfillment_paths(course_key, {'id': user.id})
-        for __, milestone_value in fulfillment_paths.items():
-            for key, value in milestone_value.items():
-                if key == 'courses' and value:
-                    for required_course in value:
-                        required_course_key = CourseKey.from_string(required_course)
-                        required_course_overview = CourseOverview.get_from_id(required_course_key)
-                        required_courses.append({
-                            'key': required_course_key,
-                            'display': get_course_display_string(required_course_overview)
-                        })
-        # If there are required courses, add them to the result dict.
-        if required_courses:
-            pre_requisite_courses[course_key] = {'courses': required_courses}
-
+            # if there are required courses add to dict
+            if required_courses:
+                pre_requisite_courses[course_key] = {'courses': required_courses}
     return pre_requisite_courses
 
 
@@ -143,18 +129,15 @@ def get_prerequisite_courses_display(course_descriptor):
             required_course_descriptor = modulestore().get_course(course_key)
             prc = {
                 'key': course_key,
-                'display': get_course_display_string(required_course_descriptor)
+                'display': get_course_display_name(required_course_descriptor)
             }
             pre_requisite_courses.append(prc)
     return pre_requisite_courses
 
 
-def get_course_display_string(descriptor):
+def get_course_display_name(descriptor):
     """
-    Returns a string to display for a course or course overview.
-
-    Arguments:
-        descriptor (CourseDescriptor|CourseOverview): a course or course overview.
+    It would return display name from given course descriptor
     """
     return ' '.join([
         descriptor.display_org_with_default,

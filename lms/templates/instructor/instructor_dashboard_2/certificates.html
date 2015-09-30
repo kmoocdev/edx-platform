@@ -3,7 +3,6 @@
 <div class="certificates-wrapper">
 
     <div class="example-certificates">
-        % if not section_data['html_cert_enabled']:
         <h2>${_('Example Certificates')}</h2>
 
         <div class="generate-example-certificates-wrapper">
@@ -14,7 +13,6 @@
                 <input type="submit" id="generate-example-certificates-submit" value="${_('Generate Example Certificates')}"/>
             </form>
         </div>
-        % endif
 
         % if section_data['example_certificate_status'] is not None:
         <div class="example-certificate-status-wrapper">
@@ -58,7 +56,7 @@
         % endif
     </div>
 
-    % if section_data['instructor_generation_enabled'] and not (section_data['enabled_for_course'] and section_data['html_cert_enabled']):
+    % if section_data['instructor_generation_enabled']:
         <hr />
 
         <div class="start-certificate-generation">

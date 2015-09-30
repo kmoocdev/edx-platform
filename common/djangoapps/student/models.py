@@ -12,19 +12,16 @@ file and check it in at the same time as your model changes. To do that,
 2. ./manage.py lms schemamigration student --auto description_of_your_change
 3. Add the migration file created in edx-platform/common/djangoapps/student/migrations/
 """
-from collections import defaultdict, OrderedDict
 from datetime import datetime, timedelta
-from functools import total_ordering
 import hashlib
-from importlib import import_module
 import json
 import logging
 from pytz import UTC
-from urllib import urlencode
 import uuid
+from collections import defaultdict, OrderedDict
+import dogstats_wrapper as dog_stats_api
+from urllib import urlencode
 
-import analytics
-from config_models.models import ConfigurationModel
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 from django.utils import timezone
@@ -38,22 +35,28 @@ from django.dispatch import receiver, Signal
 from django.core.exceptions import ObjectDoesNotExist
 from django.utils.translation import ugettext_noop
 from django_countries.fields import CountryField
-import dogstats_wrapper as dog_stats_api
-from eventtracking import tracker
-from opaque_keys.edx.keys import CourseKey
-from opaque_keys.edx.locations import SlashSeparatedCourseKey
-from simple_history.models import HistoricalRecords
-from south.modelsinspector import add_introspection_rules
+from config_models.models import ConfigurationModel
 from track import contexts
+from eventtracking import tracker
+from importlib import import_module
+
+from south.modelsinspector import add_introspection_rules
+
+from opaque_keys.edx.locations import SlashSeparatedCourseKey
+
+import lms.lib.comment_client as cc
+from util.model_utils import emit_field_changed_events, get_changed_fields_dict
+from util.query import use_read_replica_if_available
 from xmodule_django.models import CourseKeyField, NoneToEmptyManager
+from xmodule.modulestore.exceptions import ItemNotFoundError
+from xmodule.modulestore.django import modulestore
+from opaque_keys.edx.keys import CourseKey
+from functools import total_ordering
 
 from certificates.models import GeneratedCertificate
 from course_modes.models import CourseMode
-import lms.lib.comment_client as cc
-from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
-from util.model_utils import emit_field_changed_events, get_changed_fields_dict
-from util.query import use_read_replica_if_available
 
+import analytics
 
 UNENROLL_DONE = Signal(providing_args=["course_enrollment", "skip_refund"])
 log = logging.getLogger(__name__)
@@ -215,7 +218,7 @@ class UserProfile(models.Model):
     MITx fall prototype.
     """
 
-    class Meta(object):  # pylint: disable=missing-docstring
+    class Meta:  # pylint: disable=missing-docstring
         db_table = "auth_userprofile"
 
     # CRITICAL TODO/SECURITY
@@ -337,7 +340,7 @@ class UserProfile(models.Model):
             return default_requires_consent
         if date is None:
             date = datetime.now(UTC)
-        return date.year - year_of_birth <= age_limit
+        return date.year - year_of_birth <= age_limit    # pylint: disable=maybe-no-member
 
 
 @receiver(pre_save, sender=UserProfile)
@@ -433,7 +436,7 @@ class Registration(models.Model):
         registration profile is created when the user creates an
         account, but that account is inactive. Once the user clicks
         on the activation key, it becomes active. '''
-    class Meta(object):  # pylint: disable=missing-docstring
+    class Meta:
         db_table = "auth_registration"
 
     user = models.ForeignKey(User, unique=True)
@@ -843,19 +846,9 @@ class CourseEnrollment(models.Model):
 
     objects = CourseEnrollmentManager()
 
-    # Maintain a history of requirement status updates for auditing purposes
-    history = HistoricalRecords()
-
-    class Meta(object):  # pylint: disable=missing-docstring
+    class Meta:
         unique_together = (('user', 'course_id'),)
         ordering = ('user', 'course_id')
-
-    def __init__(self, *args, **kwargs):
-        super(CourseEnrollment, self).__init__(*args, **kwargs)
-
-        # Private variable for storing course_overview to minimize calls to the database.
-        # When the property .course_overview is accessed for the first time, this variable will be set.
-        self._course_overview = None
 
     def __unicode__(self):
         return (
@@ -885,7 +878,7 @@ class CourseEnrollment(models.Model):
         # save it to the database so that it can have an ID that we can throw
         # into our CourseEnrollment object. Otherwise, we'll get an
         # IntegrityError for having a null user_id.
-        assert isinstance(course_key, CourseKey)
+        assert(isinstance(course_key, CourseKey))
 
         if user.id is None:
             user.save()
@@ -994,7 +987,7 @@ class CourseEnrollment(models.Model):
 
         try:
             context = contexts.course_context_from_course_id(self.course_id)
-            assert isinstance(self.course_id, CourseKey)
+            assert(isinstance(self.course_id, CourseKey))
             data = {
                 'user_id': self.user.id,
                 'course_id': self.course_id.to_deprecated_string(),
@@ -1064,15 +1057,18 @@ class CourseEnrollment(models.Model):
         """
         # All the server-side checks for whether a user is allowed to enroll.
         try:
-            course = CourseOverview.get_from_id(course_key)
-        except CourseOverview.DoesNotExist:
-            # This is here to preserve legacy behavior which allowed enrollment in courses
-            # announced before the start of content creation.
-            if check_access:
-                log.warning(u"User %s failed to enroll in non-existent course %s", user.username, unicode(course_key))
-                raise NonExistentCourseError
+            course = modulestore().get_course(course_key)
+        except ItemNotFoundError:
+            log.warning(
+                u"User %s failed to enroll in non-existent course %s",
+                user.username,
+                course_key.to_deprecated_string(),
+            )
+            raise NonExistentCourseError
 
         if check_access:
+            if course is None:
+                raise NonExistentCourseError
             if CourseEnrollment.is_enrollment_closed(user, course):
                 log.warning(
                     u"User %s failed to enroll in course %s because enrollment is closed",
@@ -1317,26 +1313,15 @@ class CourseEnrollment(models.Model):
 
     @property
     def course(self):
-        # Deprecated. Please use the `course_overview` property instead.
-        return self.course_overview
+        return modulestore().get_course(self.course_id)
 
     @property
     def course_overview(self):
         """
-        Returns a CourseOverview of the course to which this enrollment refers.
-        Returns None if an error occurred while trying to load the course.
-
-        Note:
-            If the course is re-published within the lifetime of this
-            CourseEnrollment object, then the value of this property will
-            become stale.
-       """
-        if not self._course_overview:
-            try:
-                self._course_overview = CourseOverview.get_from_id(self.course_id)
-            except (CourseOverview.DoesNotExist, IOError):
-                self._course_overview = None
-        return self._course_overview
+        Return a CourseOverview of this enrollment's course.
+        """
+        from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
+        return CourseOverview.get_from_id(self.course_id)
 
     def is_verified_enrollment(self):
         """
@@ -1404,7 +1389,7 @@ class CourseEnrollmentAllowed(models.Model):
 
     created = models.DateTimeField(auto_now_add=True, null=True, db_index=True)
 
-    class Meta(object):  # pylint: disable=missing-docstring
+    class Meta:  # pylint: disable=missing-docstring
         unique_together = (('email', 'course_id'),)
 
     def __unicode__(self):
@@ -1441,7 +1426,7 @@ class CourseAccessRole(models.Model):
     course_id = CourseKeyField(max_length=255, db_index=True, blank=True)
     role = models.CharField(max_length=64, db_index=True)
 
-    class Meta(object):  # pylint: disable=missing-docstring
+    class Meta:  # pylint: disable=missing-docstring
         unique_together = ('user', 'org', 'course_id', 'role')
 
     @property
@@ -1832,7 +1817,7 @@ class LanguageProficiency(models.Model):
     /edx-platform/openedx/core/djangoapps/user_api/accounts/views.py or its associated api method
     (update_account_settings) so that the events are emitted.
     """
-    class Meta(object):  # pylint: disable=missing-docstring
+    class Meta:
         unique_together = (('code', 'user_profile'),)
 
     user_profile = models.ForeignKey(UserProfile, db_index=True, related_name='language_proficiencies')
@@ -1869,47 +1854,3 @@ class CourseEnrollmentAttribute(models.Model):
             name=self.name,
             value=self.value,
         )
-
-    @classmethod
-    def add_enrollment_attr(cls, enrollment, data_list):
-        """Delete all the enrollment attributes for the given enrollment and
-        add new attributes.
-
-        Args:
-            enrollment(CourseEnrollment): 'CourseEnrollment' for which attribute is to be added
-            data(list): list of dictionaries containing data to save
-        """
-        cls.objects.filter(enrollment=enrollment).delete()
-        attributes = [
-            cls(enrollment=enrollment, namespace=data['namespace'], name=data['name'], value=data['value'])
-            for data in data_list
-        ]
-        cls.objects.bulk_create(attributes)
-
-    @classmethod
-    def get_enrollment_attributes(cls, enrollment):
-        """Retrieve list of all enrollment attributes.
-
-        Args:
-            enrollment(CourseEnrollment): 'CourseEnrollment' for which list is to retrieve
-
-        Returns: list
-
-        Example:
-        >>> CourseEnrollmentAttribute.get_enrollment_attributes(CourseEnrollment)
-        [
-            {
-                "namespace": "credit",
-                "name": "provider_id",
-                "value": "hogwarts",
-            },
-        ]
-        """
-        return [
-            {
-                "namespace": attribute.namespace,
-                "name": attribute.name,
-                "value": attribute.value,
-            }
-            for attribute in cls.objects.filter(enrollment=enrollment)
-        ]

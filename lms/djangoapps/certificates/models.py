@@ -241,7 +241,7 @@ class ExampleCertificateSet(TimeStampedModel):
     """
     course_key = CourseKeyField(max_length=255, db_index=True)
 
-    class Meta(object):  # pylint: disable=missing-docstring
+    class Meta:  # pylint: disable=missing-docstring, old-style-class
         get_latest_by = 'created'
 
     @classmethod
@@ -498,7 +498,7 @@ class CertificateGenerationCourseSetting(TimeStampedModel):
     course_key = CourseKeyField(max_length=255, db_index=True)
     enabled = models.BooleanField(default=False)
 
-    class Meta(object):  # pylint: disable=missing-docstring
+    class Meta:  # pylint: disable=missing-docstring, old-style-class
         get_latest_by = 'created'
 
     @classmethod

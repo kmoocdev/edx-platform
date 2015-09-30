@@ -30,7 +30,6 @@ class RenderXBlockTestMixin(object):
         '<footer id="footer-openedx"',
         '<div class="window-wrap"',
         '<div class="preview-menu"',
-        '<div class="container"'
     ]
 
     # DOM elements that appear in an xBlock,
@@ -154,24 +153,24 @@ class RenderXBlockTestMixin(object):
     def test_unauthenticated(self):
         self.setup_course()
         self.setup_user(admin=False, enroll=True, login=False)
-        self.verify_response(expected_response_code=404)
+        self.verify_response(expected_response_code=302)
 
     def test_unenrolled_student(self):
         self.setup_course()
         self.setup_user(admin=False, enroll=False, login=True)
-        self.verify_response(expected_response_code=404)
+        self.verify_response(expected_response_code=302)
 
     @patch.dict('django.conf.settings.FEATURES', {'DISABLE_START_DATES': False})
     def test_fail_block_unreleased(self):
         self.setup_course()
         self.setup_user(admin=False, enroll=True, login=True)
         self.html_block.start = datetime.max
-        modulestore().update_item(self.html_block, self.user.id)
+        modulestore().update_item(self.html_block, self.user.id)  # pylint: disable=no-member
         self.verify_response(expected_response_code=404)
 
     def test_fail_block_nonvisible(self):
         self.setup_course()
         self.setup_user(admin=False, enroll=True, login=True)
         self.html_block.visible_to_staff_only = True
-        modulestore().update_item(self.html_block, self.user.id)
+        modulestore().update_item(self.html_block, self.user.id)  # pylint: disable=no-member
         self.verify_response(expected_response_code=404)

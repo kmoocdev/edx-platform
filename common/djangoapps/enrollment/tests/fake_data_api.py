@@ -19,8 +19,6 @@ _ENROLLMENTS = []
 
 _COURSES = []
 
-_ENROLLMENT_ATTRIBUTES = []
-
 
 # pylint: disable=unused-argument
 def get_course_enrollments(student_id):
@@ -78,23 +76,6 @@ def add_enrollment(student_id, course_id, is_active=True, mode='honor'):
     }
     _ENROLLMENTS.append(enrollment)
     return enrollment
-
-
-# pylint: disable=unused-argument
-def add_or_update_enrollment_attr(user_id, course_id, attributes):
-    """Add or update enrollment attribute array"""
-    for attribute in attributes:
-        _ENROLLMENT_ATTRIBUTES.append({
-            'namespace': attribute['namespace'],
-            'name': attribute['name'],
-            'value': attribute['value']
-        })
-
-
-# pylint: disable=unused-argument
-def get_enrollment_attributes(user_id, course_id):
-    """Retrieve enrollment attribute array"""
-    return _ENROLLMENT_ATTRIBUTES
 
 
 def add_course(course_id, enrollment_start=None, enrollment_end=None, invite_only=False, course_modes=None):

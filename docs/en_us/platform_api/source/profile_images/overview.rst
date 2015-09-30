@@ -9,27 +9,16 @@ The requesting user can upload or remove his or her own profile image.
 Users with staff access can remove profile images from any user account.
 
 *************************************
-Profile Images API Version and Status
+Profile Images API Version 1.0
 *************************************
 
 The Profile Images API is currently at version 1.0.
 
 **********************************************
-Profile Images API Endpoints
+Profile Images API Capabilities
 **********************************************
 
-The Profile Images API supports the following tasks, methods, and endpoints.
+With the Profile Images API, you can complete these tasks.
 
-.. list-table::
-   :widths: 20 10 70
-   :header-rows: 1
-
-   * - Task
-     - Method
-     - Endpoint
-   * - :ref:`Upload a profile image <Upload a Profile Image>`
-     - POST 
-     - /api/profile_images/v1/{username}/upload
-   * - :ref:`Remove a profile image <Remove a Profile Image>`
-     - POST 
-     - /api/profile_images/v1/{username}/remove
+* :ref:`Upload profile images <Upload a Profile Image>`
+* :ref:`Remove profile images <Remove Profile Images>`

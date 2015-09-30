@@ -1,12 +1,13 @@
 ;(function (define, undefined) {
     'use strict';
     define([
-        'gettext', 'jquery', 'underscore', 'backbone', 'text!templates/student_profile/learner_profile.underscore'],
-        function (gettext, $, _, Backbone, learnerProfileTemplate) {
+        'gettext', 'jquery', 'underscore', 'backbone'
+    ], function (gettext, $, _, Backbone) {
 
         var LearnerProfileView = Backbone.View.extend({
 
             initialize: function () {
+                this.template = _.template($('#learner_profile-tpl').text());
                 _.bindAll(this, 'showFullProfile', 'render', 'renderFields', 'showLoadingError');
                 this.listenTo(this.options.preferencesModel, "change:" + 'account_privacy', this.render);
             },
@@ -21,7 +22,7 @@
             },
 
             render: function () {
-                this.$el.html(_.template(learnerProfileTemplate, {
+                this.$el.html(this.template({
                     username: this.options.accountSettingsModel.get('username'),
                     ownProfile: this.options.ownProfile,
                     showFullProfile: this.showFullProfile()

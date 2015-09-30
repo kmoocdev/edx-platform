@@ -1,6 +1,7 @@
 """
 Unit tests for the Mongo modulestore
 """
+# pylint: disable=no-member
 # pylint: disable=protected-access
 # pylint: disable=no-name-in-module
 # pylint: disable=bad-continuation
@@ -216,7 +217,7 @@ class TestMongoModuleStore(TestMongoModuleStoreBase):
         # When we fix the caching issue, we should reduce this
         # to 6 and remove the 'treexport_peer_component' course_id
         # from the list below
-        assert_equals(len(courses), 7)
+        assert_equals(len(courses), 7)  # pylint: disable=no-value-for-parameter
         course_ids = [course.id for course in courses]
 
         for course_key in [
@@ -251,7 +252,7 @@ class TestMongoModuleStore(TestMongoModuleStoreBase):
         """
 
         courses = self.draft_store.get_courses(org='guestx')
-        assert_equals(len(courses), 1)
+        assert_equals(len(courses), 1)  # pylint: disable=no-value-for-parameter
         course_ids = [course.id for course in courses]
 
         for course_key in [
@@ -260,7 +261,7 @@ class TestMongoModuleStore(TestMongoModuleStoreBase):
                 ['guestx', 'foo', 'bar']
             ]
         ]:
-            assert_in(course_key, course_ids)
+            assert_in(course_key, course_ids)  # pylint: disable=no-value-for-parameter
 
         courses = self.draft_store.get_courses(org='edX')
         # note, the number of courses expected is really
@@ -269,7 +270,7 @@ class TestMongoModuleStore(TestMongoModuleStoreBase):
         # When we fix the caching issue, we should reduce this
         # to 6 and remove the 'treexport_peer_component' course_id
         # from the list below
-        assert_equals(len(courses), 6)
+        assert_equals(len(courses), 6)  # pylint: disable=no-value-for-parameter
         course_ids = [course.id for course in courses]
 
         for course_key in [
@@ -285,7 +286,7 @@ class TestMongoModuleStore(TestMongoModuleStoreBase):
                 ['edX', 'treeexport_peer_component', 'export_peer_component'],
             ]
         ]:
-            assert_in(course_key, course_ids)
+            assert_in(course_key, course_ids)  # pylint: disable=no-value-for-parameter
 
     def test_no_such_course(self):
         """

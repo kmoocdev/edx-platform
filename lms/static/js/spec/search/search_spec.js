@@ -13,8 +13,8 @@ define([
     'js/search/dashboard/views/search_form',
     'js/search/course/views/search_results_view',
     'js/search/dashboard/views/search_results_view',
-    'js/search/course/course_search_factory',
-    'js/search/dashboard/dashboard_search_factory'
+    'js/search/course/search_app',
+    'js/search/dashboard/search_app'
 ], function(
     $,
     Sinon,
@@ -30,8 +30,8 @@ define([
     DashSearchForm,
     CourseSearchResultsView,
     DashSearchResultsView,
-    CourseSearchFactory,
-    DashboardSearchFactory
+    CourseSearchApp,
+    DashSearchApp
 ) {
     'use strict';
 
@@ -51,8 +51,8 @@ define([
 
     });
 
-    // TODO: fix and re-enable. See SOL-1065
-    xdescribe('SearchCollection', function () {
+
+    describe('SearchCollection', function () {
 
         beforeEach(function () {
             this.server = Sinon.fakeServer.create();
@@ -681,7 +681,13 @@ define([
 
                 this.server = Sinon.fakeServer.create();
                 var courseId = 'a/b/c';
-                CourseSearchFactory(courseId);
+                this.app = new CourseSearchApp(
+                    courseId,
+                    SearchRouter,
+                    CourseSearchForm,
+                    SearchCollection,
+                    CourseSearchResultsView
+                );
                 spyOn(Backbone.history, 'navigate');
                 this.$contentElement = $('#course-content');
                 this.$searchResults = $('#courseware-search-results');
@@ -712,7 +718,12 @@ define([
                 loadTemplates.call(this);
 
                 this.server = Sinon.fakeServer.create();
-                DashboardSearchFactory();
+                this.app = new DashSearchApp(
+                    SearchRouter,
+                    DashSearchForm,
+                    SearchCollection,
+                    DashSearchResultsView
+                );
 
                 spyOn(Backbone.history, 'navigate');
                 this.$contentElement = $('#my-courses');

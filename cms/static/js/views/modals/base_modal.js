@@ -34,7 +34,6 @@ define(["jquery", "underscore", "gettext", "js/views/baseview"],
                 modalType: 'generic',
                 modalSize: 'lg',
                 title: '',
-                modalWindowClass: '.modal-window',
                 // A list of class names, separated by space.
                 viewSpecificClasses: ''
             }),
@@ -47,7 +46,7 @@ define(["jquery", "underscore", "gettext", "js/views/baseview"],
                 if (parent) {
                     parentElement = parent.$el;
                 } else if (!parentElement) {
-                    parentElement = this.$el.closest(this.options.modalWindowClass);
+                    parentElement = this.$el.closest('.modal-window');
                     if (parentElement.length === 0) {
                         parentElement = $('body');
                     }
@@ -88,10 +87,6 @@ define(["jquery", "underscore", "gettext", "js/views/baseview"],
                 this.render();
                 this.resize();
                 $(window).resize(_.bind(this.resize, this));
-
-                // after showing and resizing, send focus
-                var modal = this.$el.find(this.options.modalWindowClass);
-                modal.focus();
             },
 
             hide: function() {
@@ -137,7 +132,7 @@ define(["jquery", "underscore", "gettext", "js/views/baseview"],
              * Returns the action bar that contains the modal's action buttons.
              */
             getActionBar: function() {
-                return this.$(this.options.modalWindowClass + ' > div > .modal-actions');
+                return this.$('.modal-window > div > .modal-actions');
             },
 
             /**
@@ -151,7 +146,7 @@ define(["jquery", "underscore", "gettext", "js/views/baseview"],
                 var top, left, modalWindow, modalWidth, modalHeight,
                     availableWidth, availableHeight, maxWidth, maxHeight;
 
-                modalWindow = this.$el.find(this.options.modalWindowClass);
+                modalWindow = this.$('.modal-window');
                 availableWidth = $(window).width();
                 availableHeight = $(window).height();
                 maxWidth = availableWidth * 0.80;

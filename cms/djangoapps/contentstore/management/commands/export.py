@@ -26,17 +26,11 @@ class Command(BaseCommand):
         try:
             course_key = CourseKey.from_string(args[0])
         except InvalidKeyError:
-            try:
-                course_key = SlashSeparatedCourseKey.from_deprecated_string(args[0])
-            except InvalidKeyError:
-                raise CommandError("Invalid course_key: '%s'. " % args[0])
-
-        if not modulestore().get_course(course_key):
-            raise CommandError("Course with %s key not found." % args[0])
+            course_key = SlashSeparatedCourseKey.from_deprecated_string(args[0])
 
         output_path = args[1]
 
-        print "Exporting course id = {0} to {1}".format(course_key, output_path)
+        print("Exporting course id = {0} to {1}".format(course_key, output_path))
 
         if not output_path.endswith('/'):
             output_path += '/'

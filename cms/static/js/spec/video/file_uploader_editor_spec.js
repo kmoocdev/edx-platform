@@ -1,8 +1,8 @@
 define(
     [
-        'jquery', 'underscore', 'squire'
+        'jquery', 'underscore', 'common/js/spec_helpers/ajax_helpers', 'squire'
     ],
-function ($, _, Squire) {
+function ($, _, AjaxHelpers, Squire) {
     'use strict';
     describe('FileUploader', function () {
         var FileUploaderTemplate = readFixtures(

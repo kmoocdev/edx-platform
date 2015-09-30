@@ -1,15 +1,16 @@
-;(function (define) {
+var edx = edx || {};
+
+(function(Backbone, CohortModel) {
     'use strict';
-    define(['backbone', 'js/groups/models/cohort'], function(Backbone, CohortModel) {
 
-        var CohortCollection = Backbone.Collection.extend({
-            model : CohortModel,
-            comparator: "name",
+    edx.groups = edx.groups || {};
 
-            parse: function(response) {
-                return response.cohorts;
-            }
-        });
-        return CohortCollection;
+    edx.groups.CohortCollection = Backbone.Collection.extend({
+        model : CohortModel,
+        comparator: "name",
+
+        parse: function(response) {
+            return response.cohorts;
+        }
     });
-}).call(this, define || RequireJS.define);
+}).call(this, Backbone, edx.groups.CohortModel);

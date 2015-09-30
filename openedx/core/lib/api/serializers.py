@@ -31,6 +31,7 @@ class PaginationSerializer(pagination.PaginationSerializer):
 
 class CollapsedReferenceSerializer(serializers.HyperlinkedModelSerializer):
     """Serializes arbitrary models in a collapsed format, with just an id and url."""
+    id = serializers.CharField(read_only=True)  # pylint: disable=invalid-name
     url = serializers.HyperlinkedIdentityField(view_name='')
 
     def __init__(self, model_class, view_name, id_source='id', lookup_field=None, *args, **kwargs):
@@ -41,8 +42,7 @@ class CollapsedReferenceSerializer(serializers.HyperlinkedModelSerializer):
             view_name (string): Name of the Django view used to lookup the
                 model.
             id_source (string): Optional name of the id field on the model.
-                Defaults to 'id'. Also used as the property name of the field
-                in the serialized representation.
+                Defaults to 'id'.
             lookup_field (string): Optional name of the model field used to
                 lookup the model in the view. Defaults to the value of
                 id_source.
@@ -54,7 +54,7 @@ class CollapsedReferenceSerializer(serializers.HyperlinkedModelSerializer):
 
         super(CollapsedReferenceSerializer, self).__init__(*args, **kwargs)
 
-        self.fields[id_source] = serializers.CharField(read_only=True, source=id_source)
+        self.fields['id'].source = id_source
         self.fields['url'].view_name = view_name
         self.fields['url'].lookup_field = lookup_field
 
@@ -63,4 +63,4 @@ class CollapsedReferenceSerializer(serializers.HyperlinkedModelSerializer):
 
         model is set dynamically in __init__.
         """
-        fields = ("url",)
+        fields = ("id", "url")

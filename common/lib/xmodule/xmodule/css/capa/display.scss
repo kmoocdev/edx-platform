@@ -1,7 +1,7 @@
-// capa - styling
+// capa - styling 
 // ====================
 
-// Table of Contents
+// Table of Contents 
 // * +Variables - Capa
 // * +Extends - Capa
 // * +Mixins - Status Icon - Capa
@@ -17,18 +17,16 @@
 // * +Problem - Annotation
 // * +Problem - Choice Text Group
 // * +Problem - Image Input Overrides
-// * +Problem - Annotation Problem Overrides
 
 // +Variables - Capa
-// ====================
+// ==================== 
 $annotation-yellow: rgba(255,255,10,0.3);
 $color-copy-tip: rgb(100,100,100);
 $correct: $green-d1;
-$partiallycorrect: $green-d1;
-$incorrect: $red;
+$incorrect: $red; 
 
 // +Extends - Capa
-// ====================
+// ==================== 
 // Duplicated from _mixins.scss due to xmodule compilation, inheritance issues
 %use-font-awesome {
   font-family: FontAwesome;
@@ -38,9 +36,9 @@ $incorrect: $red;
 }
 
 // +Mixins - Status Icon - Capa
-// ====================
+// ==================== 
 @mixin status-icon($color: $gray, $fontAwesomeIcon: "\f00d"){
-
+  
   &:after {
     @extend %use-font-awesome;
     @include margin-left(17px);
@@ -51,7 +49,7 @@ $incorrect: $red;
 }
 
 // +Resets - Deprecate Please
-// ====================
+// ==================== 
 h2 {
   margin-top: 0;
   margin-bottom: ($baseline*0.75);
@@ -74,11 +72,6 @@ h2 {
 .feedback-hint-correct {
   margin-top: ($baseline/2);
   color: $correct;
-}
-
-.feedback-hint-partially-correct {
-  margin-top: ($baseline/2);
-  color: $partiallycorrect;
 }
 
 .feedback-hint-incorrect {
@@ -130,7 +123,7 @@ div.problem-progress {
 }
 
 // +Problem - Base
-// ====================
+// ==================== 
 div.problem {
   @media print {
     display: block;
@@ -144,15 +137,11 @@ div.problem {
 
   .inline {
     display: inline;
-
-    + p {
-      margin-top: $baseline;
-    }
   }
 }
 
 // +Problem - Choice Group
-// ====================
+// ==================== 
 div.problem {
   .choicegroup {
     @include clearfix();
@@ -174,19 +163,9 @@ div.problem {
         @include status-icon($correct, "\f00c");
         border: 2px solid $correct;
 
-        // keep green for correct answers on hover.
-        &:hover {
-          border-color: $correct;
-        }
-      }
-
-      &.choicegroup_partially-correct {
-        @include status-icon($partiallycorrect, "\f00c");
-        border: 2px solid $partiallycorrect;
-
         // keep green for correct answers on hover. 
         &:hover {
-          border-color: $partiallycorrect;
+          border-color: $correct;
         }
       }
 
@@ -194,7 +173,7 @@ div.problem {
         @include status-icon($incorrect, "\f00d");
         border: 2px solid $incorrect;
 
-        // keep red for incorrect answers on hover.
+        // keep red for incorrect answers on hover. 
         &:hover {
           border-color: $incorrect;
         }
@@ -227,10 +206,10 @@ div.problem {
   }
 }
 
-// +Problem - Status Indicators
-// ====================
-// Summary status indicators shown after the input area
-div.problem {
+// +Problem - Status Indicators 
+// ==================== 
+// Summary status indicators shown after the input area 
+div.problem { 
 
   .indicator-container {
 
@@ -241,11 +220,6 @@ div.problem {
       // CASE: correct answer
       &.correct {
         @include status-icon($correct, "\f00c");
-      }
-
-      // CASE: partially correct answer
-      &.partially-correct {
-        @include status-icon($partiallycorrect, "\f00c");
       }
 
       // CASE: incorrect answer
@@ -266,8 +240,8 @@ div.problem {
 }
 
 // +Problem - Misc, Unclassified Mess
-// ====================
-div.problem {
+// ==================== 
+div.problem { 
   ol.enumerate {
     li {
       &:before {
@@ -356,19 +330,6 @@ div.problem {
 
       input {
         border-color: $correct;
-      }
-    }
-
-    &.partially-correct, &.ui-icon-check {
-      p.status {
-        display: inline-block;
-        width: 25px;
-        height: 20px;
-        background: url('../images/partially-correct-icon.png') center center no-repeat;
-      }
-
-      input {
-        border-color: $partiallycorrect;
       }
     }
 
@@ -461,12 +422,12 @@ div.problem {
           background: #f1f1f1;
         }
       }
-    }
+    } 
 
     // Hides equation previews in symbolic response problems when printing
     [id^='display'].equation {
       @media print {
-        display: none;
+        display:none;
       }
     }
 
@@ -497,6 +458,15 @@ div.problem {
         width: 25px;
         height: 20px;
         background: url('../images/correct-icon.png') center center no-repeat;
+      }
+
+      &.partially-correct {
+        display: inline-block;
+        position: relative;
+        top: 6px;
+        width: 25px;
+        height: 20px;
+        background: url('../images/partially-correct-icon.png') center center no-repeat;
       }
 
       &.incomplete, &.ui-icon-close {
@@ -604,12 +574,6 @@ div.problem {
 
     .submit-message-container {
       margin: $baseline 0px ;
-    }
-  }
-
-  div.inline {
-    > span {
-      display: inline;
     }
   }
 
@@ -735,10 +699,10 @@ div.problem {
 }
 
 // +Problem - Text Input, Numerical Input
-// ====================
+// ==================== 
 .problem {
   .capa_inputtype.textline, .inputtype.formulaequationinput {
-
+    
     input {
       @include box-sizing(border-box);
       border: 2px solid $gray-l4;
@@ -747,7 +711,7 @@ div.problem {
       height: 46px;
     }
 
-    > .incorrect, .partially-correct, .correct, .unanswered {
+    > .incorrect, .correct, .unanswered {
 
       .status {
         display: inline-block;
@@ -759,7 +723,7 @@ div.problem {
     // CASE: incorrect answer
     > .incorrect {
 
-      input {
+      input { 
         border: 2px solid $incorrect;
       }
 
@@ -768,22 +732,10 @@ div.problem {
       }
     }
 
-    // CASE: partially correct answer
-    > .partially-correct {
-      
-      input { 
-        border: 2px solid $partiallycorrect;
-      }
-
-      .status {
-        @include status-icon($partiallycorrect, "\f00c");
-      }
-    }
-
     // CASE: correct answer
     > .correct {
-
-      input {
+      
+      input { 
         border: 2px solid $correct;
       }
 
@@ -795,7 +747,7 @@ div.problem {
     // CASE: unanswered
     > .unanswered {
 
-      input {
+      input { 
         border: 2px solid $gray-l4;
       }
 
@@ -808,7 +760,7 @@ div.problem {
 
 
 // +Problem - Option Input (Dropdown)
-// ====================
+// ==================== 
 .problem {
   .inputtype.option-input {
     margin: (-$baseline/2) 0 $baseline;
@@ -821,7 +773,7 @@ div.problem {
     .indicator-container {
       display: inline-block;
 
-      .status.correct:after, .status.partially-correct:after, .status.incorrect:after, .status.unanswered:after {
+      .status.correct:after, .status.incorrect:after {
         @include margin-left(0);
       }
     }
@@ -829,8 +781,8 @@ div.problem {
 }
 
 // +Problem - CodeMirror
-// ====================
-div.problem {
+// ==================== 
+div.problem { 
 
   .CodeMirror {
     border: 1px solid black;
@@ -884,7 +836,7 @@ div.problem {
 }
 
 // +Problem - Actions
-// ====================
+// ==================== 
 div.problem .action {
   margin-top: $baseline;
 
@@ -895,9 +847,6 @@ div.problem .action {
     vertical-align: middle;
     text-transform: uppercase;
     font-weight: 600;
-    @media print {
-      display: none;
-    }
   }
 
   .save {
@@ -928,8 +877,8 @@ div.problem .action {
 }
 
 // +Problem - Misc, Unclassified Mess Part 2
-// ====================
-div.problem {
+// ==================== 
+div.problem { 
   hr {
     float: none;
     clear: both;
@@ -958,7 +907,7 @@ div.problem {
     padding: lh();
     border: 1px solid $gray-l3;
   }
-
+  
   .detailed-solution {
     > p:first-child {
       @extend %t-strong;
@@ -977,20 +926,6 @@ div.problem {
     > p:first-child {
        @extend %t-strong;
       color: $incorrect;
-      text-transform: uppercase;
-      font-style: normal;
-      font-size: 0.9em;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  .detailed-targeted-feedback-partially-correct {
-    > p:first-child {
-       @extend %t-strong;
-      color: $partiallycorrect;
       text-transform: uppercase;
       font-style: normal;
       font-size: 0.9em;
@@ -1195,14 +1130,6 @@ div.problem {
           }
         }
 
-        .result-partially-correct {
-          background: url('../images/partially-correct-icon.png') left 20px no-repeat;
-
-          .result-actual-output {
-            color: #090;
-          }
-        }
-
         .result-incorrect {
           background: url('../images/incorrect-icon.png') left 20px no-repeat;
 
@@ -1232,7 +1159,7 @@ div.problem {
 
 
 // +Problem - Rubric
-// ====================
+// ==================== 
 div.problem {
   .rubric {
     tr {
@@ -1289,7 +1216,7 @@ div.problem {
 }
 
 // +Problem - Annotation
-// ====================
+// ==================== 
 div.problem {
   .annotation-input {
     margin: 0 0 1em 0;
@@ -1391,7 +1318,7 @@ div.problem {
 }
 
 // +Problem - Choice Text Group
-// ====================
+// ==================== 
 div.problem {
   .choicetextgroup {
     @extend .choicegroup;
@@ -1405,14 +1332,6 @@ div.problem {
 
       input[type="text"] {
         border-color: $correct;
-      }
-    }
-
-    label.choicetextgroup_partially-correct, section.choicetextgroup_partially-correct {
-      @extend label.choicegroup_partially-correct;
-
-      input[type="text"] {
-        border-color: $partiallycorrect;
       }
     }
 
@@ -1446,44 +1365,10 @@ div.problem .imageinput.capa_inputtype {
     width: 25px;
     height: 20px;
   }
-
   .correct {
     background: url('../images/correct-icon.png') center center no-repeat;
   }
-
   .incorrect {
     background: url('../images/incorrect-icon.png') center center no-repeat;
   }
-
-  .partially-correct {
-    background: url('../images/partially-correct-icon.png') center center no-repeat;
-  }
 }
-
-// +Problem - Annotation Problem Overrides
-// ====================
-
-// NOTE: temporary override until annotation problem inputs use same base html structure as other common capa input types.
-div.problem .annotation-input {
-
-  .tag-status {
-    display: inline-block;
-    position: relative;
-    top: 3px;
-    width: 25px;
-    height: 20px;
-  }
-
-  .correct {
-    background: url('../images/correct-icon.png') center center no-repeat;
-  }
-
-  .incorrect {
-    background: url('../images/incorrect-icon.png') center center no-repeat;
-  }
-
-  .partially-correct {
-    background: url('../images/partially-correct-icon.png') center center no-repeat;
-  }
-}
-

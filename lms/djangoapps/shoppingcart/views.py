@@ -50,6 +50,7 @@ from .processors import (
 )
 
 import json
+from xmodule_django.models import CourseKeyField
 from .decorators import enforce_shopping_cart_enabled
 
 

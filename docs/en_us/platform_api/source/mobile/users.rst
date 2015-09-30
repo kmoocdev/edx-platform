@@ -1,13 +1,13 @@
 ####################################
-Mobile API User Resource
+Mobile User API
 ####################################
 
-With the Mobile API **User** resource, you can complete the following tasks.
+This page describes how to use the Mobile User API to complete
+these actions:
 
-* :ref:`Get details about a user<Get User Details>`.
-* :ref:`Get course enrollments for a user<Get a User's Course Enrollments>`.
-* :ref:`Get a user's status in a course<Get or Change User Status in a Course>`.
-* :ref:`Change a user's status in a course<Get or Change User Status in a Course>`.
+* `Get User Details`_
+* `Get a User's Course Enrollments`_
+* `Get or Change User Status in a Course`_
 
 .. _Get User Details:
 

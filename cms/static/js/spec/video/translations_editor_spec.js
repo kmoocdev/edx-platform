@@ -1,8 +1,8 @@
 define(
     [
-        'jquery', 'underscore', 'squire'
+        'jquery', 'underscore', 'common/js/spec_helpers/ajax_helpers', 'squire'
     ],
-function ($, _, Squire) {
+function ($, _, AjaxHelpers, Squire) {
     'use strict';
     // TODO: fix BLD-1100 Disabled due to intermittent failure on master and in PR builds
     xdescribe('VideoTranslations', function () {

@@ -4,8 +4,8 @@ Tests for credit courses on the student dashboard.
 import unittest
 import datetime
 
-from mock import patch
 import pytz
+from mock import patch
 
 from django.conf import settings
 from django.core.urlresolvers import reverse
@@ -108,6 +108,7 @@ class CreditCourseDashboardTest(ModuleStoreTestCase):
         response = self._load_dashboard()
         self.assertContains(response, "credit-eligibility-msg")
         self.assertContains(response, "purchase-credit-btn")
+        self.assertContains(response, "purchase credit for this course expires")
 
     def test_purchased_credit(self):
         # Simulate that the user has purchased credit, but has not

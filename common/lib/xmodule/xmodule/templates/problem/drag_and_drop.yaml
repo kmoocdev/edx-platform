@@ -2,7 +2,6 @@
 metadata:
     display_name: Drag and Drop
     markdown: !!null
-    showanswer: never
 data: |
     <problem>
       <p>

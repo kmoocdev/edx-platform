@@ -81,8 +81,7 @@
                         description: description,
                         action_class: this.callIfFunction(this.actionClass),
                         action_url: this.callIfFunction(this.actionUrl),
-                        action_content: this.callIfFunction(this.actionContent),
-                        configuration: this.callIfFunction(this.configuration)
+                        action_content: this.callIfFunction(this.actionContent)
                     }));
                     var detailsEl = this.$el.find('.card-meta');
                     _.each(this.callIfFunction(this.details), function (detail) {

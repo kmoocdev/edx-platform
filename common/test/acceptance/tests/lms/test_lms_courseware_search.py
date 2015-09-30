@@ -1,6 +1,7 @@
 """
 Test courseware search
 """
+import os
 import json
 
 from nose.plugins.attrib import attr

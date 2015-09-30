@@ -201,6 +201,4 @@ class AdvancedSettingsPage(CoursePage):
             'social_sharing_url',
             'teams_configuration',
             'video_bumper',
-            'cert_html_view_enabled',
-            'enable_proctored_exams',
         ]

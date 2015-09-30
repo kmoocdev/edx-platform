@@ -637,7 +637,7 @@ class TestTOC(ModuleStoreTestCase):
             course = self.store.get_course(self.toy_course.id, depth=2)
             with check_mongo_calls(toc_finds):
                 actual = render.toc_for_course(
-                    self.request.user, self.request, course, self.chapter, None, self.field_data_cache
+                    self.request, course, self.chapter, None, self.field_data_cache
                 )
         for toc_section in expected:
             self.assertIn(toc_section, actual)
@@ -676,7 +676,7 @@ class TestTOC(ModuleStoreTestCase):
 
             with check_mongo_calls(toc_finds):
                 actual = render.toc_for_course(
-                    self.request.user, self.request, self.toy_course, self.chapter, section, self.field_data_cache
+                    self.request, self.toy_course, self.chapter, section, self.field_data_cache
                 )
             for toc_section in expected:
                 self.assertIn(toc_section, actual)
@@ -794,19 +794,16 @@ class TestHtmlModifiers(ModuleStoreTestCase):
         self.assertTrue(url.startswith('/static/toy_course_dir/'))
         self.course.static_asset_path = ""
 
-    @override_settings(DEFAULT_COURSE_ABOUT_IMAGE_URL='test.png')
-    @override_settings(STATIC_URL='static/')
     @ddt.data(ModuleStoreEnum.Type.mongo, ModuleStoreEnum.Type.split)
     def test_course_image_for_split_course(self, store):
         """
-        for split courses if course_image is empty then course_image_url will be
-        the default image url defined in settings
+        for split courses if course_image is empty then course_image_url will be blank
         """
         self.course = CourseFactory.create(default_store=store)
         self.course.course_image = ''
 
         url = course_image_url(self.course)
-        self.assertEqual('static/test.png', url)
+        self.assertEqual('', url)
 
     def test_get_course_info_section(self):
         self.course.static_asset_path = "toy_course_dir"
@@ -1173,7 +1170,7 @@ class TestAnonymousStudentId(ModuleStoreTestCase, LoginEnrollmentTestCase):
         return render.get_module_for_descriptor_internal(
             user=self.user,
             descriptor=descriptor,
-            student_data=Mock(spec=FieldData, name='student_data'),
+            field_data_cache=Mock(spec=FieldDataCache, name='field_data_cache'),
             course_id=course_id,
             track_function=Mock(name='track_function'),  # Track Function
             xqueue_callback_url_prefix=Mock(name='xqueue_callback_url_prefix'),  # XQueue Callback Url Prefix
@@ -1489,7 +1486,7 @@ class LMSXBlockServiceBindingTest(ModuleStoreTestCase):
         """
         super(LMSXBlockServiceBindingTest, self).setUp()
         self.user = UserFactory()
-        self.student_data = Mock()
+        self.field_data_cache = Mock()
         self.course = CourseFactory.create()
         self.track_function = Mock()
         self.xqueue_callback_url_prefix = Mock()
@@ -1504,7 +1501,7 @@ class LMSXBlockServiceBindingTest(ModuleStoreTestCase):
         descriptor = ItemFactory(category="pure", parent=self.course)
         runtime, _ = render.get_module_system_for_user(
             self.user,
-            self.student_data,
+            self.field_data_cache,
             descriptor,
             self.course.id,
             self.track_function,
@@ -1523,7 +1520,7 @@ class LMSXBlockServiceBindingTest(ModuleStoreTestCase):
         descriptor.days_early_for_beta = 5
         runtime, _ = render.get_module_system_for_user(
             self.user,
-            self.student_data,
+            self.field_data_cache,
             descriptor,
             self.course.id,
             self.track_function,

@@ -1,7 +1,5 @@
 """Django models related to teams functionality."""
 
-from uuid import uuid4
-
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import ugettext_lazy
@@ -17,8 +15,7 @@ class CourseTeam(models.Model):
     """This model represents team related info."""
 
     team_id = models.CharField(max_length=255, unique=True)
-    discussion_topic_id = models.CharField(max_length=255, unique=True)
-    name = models.CharField(max_length=255, db_index=True)
+    name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
     course_id = CourseKeyField(max_length=255, db_index=True)
     topic_id = models.CharField(max_length=255, db_index=True, blank=True)
@@ -51,11 +48,9 @@ class CourseTeam(models.Model):
         """
 
         team_id = generate_unique_readable_id(name, cls.objects.all(), 'team_id')
-        discussion_topic_id = uuid4().hex
 
         course_team = cls(
             team_id=team_id,
-            discussion_topic_id=discussion_topic_id,
             name=name,
             course_id=course_id,
             topic_id=topic_id if topic_id else '',
@@ -88,23 +83,3 @@ class CourseTeamMembership(models.Model):
     user = models.ForeignKey(User)
     team = models.ForeignKey(CourseTeam, related_name='membership')
     date_joined = models.DateTimeField(auto_now_add=True)
-
-    @classmethod
-    def get_memberships(cls, username=None, course_ids=None, team_id=None):
-        """
-        Get a queryset of memberships.
-
-        Args:
-            username (unicode, optional): The username to filter on.
-            course_ids (list of unicode, optional) Course Ids to filter on.
-            team_id (unicode, optional): The team_id to filter on.
-        """
-        queryset = cls.objects.all()
-        if username is not None:
-            queryset = queryset.filter(user__username=username)
-        if course_ids is not None:
-            queryset = queryset.filter(team__course_id__in=course_ids)
-        if team_id is not None:
-            queryset = queryset.filter(team__team_id=team_id)
-
-        return queryset

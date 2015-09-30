@@ -311,6 +311,7 @@ class TestInstructorEnrollmentStudentModule(ModuleStoreTestCase):
         self.course_key = self.course.location.course_key
         self.parent = ItemFactory(
             category="library_content",
+            # pylint: disable=no-member
             user_id=self.user.id,
             parent=self.course,
             publish_item=True,
@@ -318,6 +319,7 @@ class TestInstructorEnrollmentStudentModule(ModuleStoreTestCase):
         )
         self.child = ItemFactory(
             category="html",
+            # pylint: disable=no-member
             user_id=self.user.id,
             parent=self.parent,
             publish_item=True,
@@ -325,6 +327,7 @@ class TestInstructorEnrollmentStudentModule(ModuleStoreTestCase):
         )
         self.unrelated = ItemFactory(
             category="html",
+            # pylint: disable=no-member
             user_id=self.user.id,
             parent=self.course,
             publish_item=True,

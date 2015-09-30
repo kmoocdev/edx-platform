@@ -28,13 +28,8 @@ import newrelic.agent
 
 from capa.xqueue_interface import XQueueInterface
 from courseware.access import has_access, get_user_role
-from courseware.masquerade import (
-    MasqueradingKeyValueStore,
-    filter_displayed_blocks,
-    is_masquerading_as_specific_student,
-    setup_masquerade,
-)
-from courseware.model_data import DjangoKeyValueStore, FieldDataCache, set_score
+from courseware.masquerade import setup_masquerade
+from courseware.model_data import FieldDataCache, DjangoKeyValueStore
 from courseware.models import SCORE_CHANGED
 from courseware.entrance_exams import (
     get_entrance_exam_score,
@@ -118,7 +113,7 @@ def make_track_function(request):
     return function
 
 
-def toc_for_course(user, request, course, active_chapter, active_section, field_data_cache):
+def toc_for_course(request, course, active_chapter, active_section, field_data_cache):
     '''
     Create a table of contents from the module store
 
@@ -144,7 +139,7 @@ def toc_for_course(user, request, course, active_chapter, active_section, field_
 
     with modulestore().bulk_operations(course.id):
         course_module = get_module_for_descriptor(
-            user, request, course, field_data_cache, course.id, course=course
+            request.user, request, course, field_data_cache, course.id, course=course
         )
         if course_module is None:
             return None
@@ -153,10 +148,10 @@ def toc_for_course(user, request, course, active_chapter, active_section, field_
         chapters = course_module.get_display_items()
 
         # See if the course is gated by one or more content milestones
-        required_content = milestones_helpers.get_required_content(course, user)
+        required_content = milestones_helpers.get_required_content(course, request.user)
 
         # The user may not actually have to complete the entrance exam, if one is required
-        if not user_must_complete_entrance_exam(request, user, course):
+        if not user_must_complete_entrance_exam(request, request.user, course):
             required_content = [content for content in required_content if not content == course.entrance_exam_id]
 
         for chapter in chapters:
@@ -275,15 +270,10 @@ def get_module_for_descriptor(user, request, descriptor, field_data_cache, cours
 
     user_location = getattr(request, 'session', {}).get('country_code')
 
-    student_kvs = DjangoKeyValueStore(field_data_cache)
-    if is_masquerading_as_specific_student(user, course_key):
-        student_kvs = MasqueradingKeyValueStore(student_kvs, request.session)
-    student_data = KvsFieldData(student_kvs)
-
     return get_module_for_descriptor_internal(
         user=user,
         descriptor=descriptor,
-        student_data=student_data,
+        field_data_cache=field_data_cache,
         course_id=course_key,
         track_function=track_function,
         xqueue_callback_url_prefix=xqueue_callback_url_prefix,
@@ -298,7 +288,7 @@ def get_module_for_descriptor(user, request, descriptor, field_data_cache, cours
     )
 
 
-def get_module_system_for_user(user, student_data,  # TODO  # pylint: disable=too-many-statements
+def get_module_system_for_user(user, field_data_cache,  # TODO  # pylint: disable=too-many-statements
                                # Arguments preceding this comment have user binding, those following don't
                                descriptor, course_id, track_function, xqueue_callback_url_prefix,
                                request_token, position=None, wrap_xmodule_display=True, grade_bucket_type=None,
@@ -312,7 +302,7 @@ def get_module_system_for_user(user, student_data,  # TODO  # pylint: disable=to
     closures that feed the instantiation of ModuleSystem.
 
     The arguments fall into two categories: those that have explicit or implicit user binding, which are user
-    and student_data, and those don't and are just present so that ModuleSystem can be instantiated, which
+    and field_data_cache, and those don't and are just present so that ModuleSystem can be instantiated, which
     are all the other arguments.  Ultimately, this isn't too different than how get_module_for_descriptor_internal
     was before refactoring.
 
@@ -323,6 +313,7 @@ def get_module_system_for_user(user, student_data,  # TODO  # pylint: disable=to
     Returns:
         (LmsModuleSystem, KvsFieldData):  (module system, student_data) bound to, primarily, the user and descriptor
     """
+    student_data = KvsFieldData(DjangoKeyValueStore(field_data_cache))
 
     def make_xqueue_callback(dispatch='score_update'):
         """
@@ -387,7 +378,7 @@ def get_module_system_for_user(user, student_data,  # TODO  # pylint: disable=to
         return get_module_for_descriptor_internal(
             user=user,
             descriptor=descriptor,
-            student_data=student_data,
+            field_data_cache=field_data_cache,
             course_id=course_id,
             track_function=track_function,
             xqueue_callback_url_prefix=xqueue_callback_url_prefix,
@@ -439,7 +430,7 @@ def get_module_system_for_user(user, student_data,  # TODO  # pylint: disable=to
         grade = event.get('value')
         max_grade = event.get('max_value')
 
-        set_score(
+        field_data_cache.set_score(
             user_id,
             descriptor.location,
             grade,
@@ -481,7 +472,7 @@ def get_module_system_for_user(user, student_data,  # TODO  # pylint: disable=to
 
     def publish(block, event_type, event):
         """A function that allows XModules to publish events."""
-        if event_type == 'grade' and not is_masquerading_as_specific_student(user, course_id):
+        if event_type == 'grade':
             handle_grade_event(block, event_type, event)
         else:
             track_function(event_type, event)
@@ -511,11 +502,10 @@ def get_module_system_for_user(user, student_data,  # TODO  # pylint: disable=to
             module.descriptor,
             asides=XBlockAsidesConfig.possible_asides(),
         )
-        student_data_real_user = KvsFieldData(DjangoKeyValueStore(field_data_cache_real_user))
 
         (inner_system, inner_student_data) = get_module_system_for_user(
             user=real_user,
-            student_data=student_data_real_user,  # These have implicit user bindings, rest of args considered not to
+            field_data_cache=field_data_cache_real_user,  # These have implicit user bindings, rest of args considered not to
             descriptor=module.descriptor,
             course_id=course_id,
             track_function=track_function,
@@ -549,9 +539,6 @@ def get_module_system_for_user(user, student_data,  # TODO  # pylint: disable=to
     # Build a list of wrapping functions that will be applied in order
     # to the Fragment content coming out of the xblocks that are about to be rendered.
     block_wrappers = []
-
-    if is_masquerading_as_specific_student(user, course_id):
-        block_wrappers.append(filter_displayed_blocks)
 
     if settings.FEATURES.get("LICENSING", False):
         block_wrappers.append(wrap_with_license)
@@ -595,23 +582,9 @@ def get_module_system_for_user(user, student_data,  # TODO  # pylint: disable=to
     ))
 
     if settings.FEATURES.get('DISPLAY_DEBUG_INFO_TO_STAFF'):
-        if is_masquerading_as_specific_student(user, course_id):
-            # When masquerading as a specific student, we want to show the debug button
-            # unconditionally to enable resetting the state of the student we are masquerading as.
-            # We already know the user has staff access when masquerading is active.
-            staff_access = True
-            # To figure out whether the user has instructor access, we temporarily remove the
-            # masquerade_settings from the real_user.  With the masquerading settings in place,
-            # the result would always be "False".
-            masquerade_settings = user.real_user.masquerade_settings
-            del user.real_user.masquerade_settings
-            instructor_access = bool(has_access(user.real_user, 'instructor', descriptor, course_id))
-            user.real_user.masquerade_settings = masquerade_settings
-        else:
-            staff_access = has_access(user, 'staff', descriptor, course_id)
-            instructor_access = bool(has_access(user, 'instructor', descriptor, course_id))
-        if staff_access:
-            block_wrappers.append(partial(add_staff_markup, user, instructor_access, disable_staff_debug_info))
+        if has_access(user, 'staff', descriptor, course_id):
+            has_instructor_access = has_access(user, 'instructor', descriptor, course_id)
+            block_wrappers.append(partial(add_staff_markup, user, has_instructor_access, disable_staff_debug_info))
 
     # These modules store data using the anonymous_student_id as a key.
     # To prevent loss of data, we will continue to provide old modules with
@@ -629,7 +602,7 @@ def get_module_system_for_user(user, student_data,  # TODO  # pylint: disable=to
 
     field_data = LmsFieldData(descriptor._field_data, student_data)  # pylint: disable=protected-access
 
-    user_is_staff = bool(has_access(user, u'staff', descriptor.location, course_id))
+    user_is_staff = has_access(user, u'staff', descriptor.location, course_id)
 
     system = LmsModuleSystem(
         track_function=track_function,
@@ -703,7 +676,7 @@ def get_module_system_for_user(user, student_data,  # TODO  # pylint: disable=to
         )
 
     system.set(u'user_is_staff', user_is_staff)
-    system.set(u'user_is_admin', bool(has_access(user, u'staff', 'global')))
+    system.set(u'user_is_admin', has_access(user, u'staff', 'global'))
     system.set(u'user_is_beta_tester', CourseBetaTesterRole(course_id).has_user(user))
     system.set(u'days_early_for_beta', getattr(descriptor, 'days_early_for_beta'))
 
@@ -718,7 +691,7 @@ def get_module_system_for_user(user, student_data,  # TODO  # pylint: disable=to
 
 # TODO: Find all the places that this method is called and figure out how to
 # get a loaded course passed into it
-def get_module_for_descriptor_internal(user, descriptor, student_data, course_id,  # pylint: disable=invalid-name
+def get_module_for_descriptor_internal(user, descriptor, field_data_cache, course_id,  # pylint: disable=invalid-name
                                        track_function, xqueue_callback_url_prefix, request_token,
                                        position=None, wrap_xmodule_display=True, grade_bucket_type=None,
                                        static_asset_path='', user_location=None, disable_staff_debug_info=False,
@@ -734,7 +707,7 @@ def get_module_for_descriptor_internal(user, descriptor, student_data, course_id
 
     (system, student_data) = get_module_system_for_user(
         user=user,
-        student_data=student_data,  # These have implicit user bindings, the rest of args are considered not to
+        field_data_cache=field_data_cache,  # These have implicit user bindings, the rest of args are considered not to
         descriptor=descriptor,
         course_id=course_id,
         track_function=track_function,
@@ -917,9 +890,10 @@ def get_module_by_usage_id(request, course_id, usage_id, disable_staff_debug_inf
         descriptor_orig_usage_key, descriptor_orig_version = modulestore().get_block_original_usage(usage_key)
     except ItemNotFoundError:
         log.warn(
-            "Invalid location for course id %s: %s",
-            usage_key.course_key,
-            usage_key
+            "Invalid location for course id {course_id}: {usage_key}".format(
+                course_id=usage_key.course_key,
+                usage_key=usage_key
+            )
         )
         raise Http404
 
@@ -935,12 +909,12 @@ def get_module_by_usage_id(request, course_id, usage_id, disable_staff_debug_inf
         tracking_context['module']['original_usage_key'] = unicode(descriptor_orig_usage_key)
         tracking_context['module']['original_usage_version'] = unicode(descriptor_orig_version)
 
-    unused_masquerade, user = setup_masquerade(request, course_id, has_access(user, 'staff', descriptor, course_id))
     field_data_cache = FieldDataCache.cache_for_descriptor_descendents(
         course_id,
         user,
         descriptor
     )
+    setup_masquerade(request, course_id, has_access(user, 'staff', descriptor, course_id))
     instance = get_module_for_descriptor(
         user,
         request,
@@ -1081,9 +1055,9 @@ def get_score_bucket(grade, max_grade):
     Used with statsd tracking.
     """
     score_bucket = "incorrect"
-    if grade > 0 and grade < max_grade:
+    if(grade > 0 and grade < max_grade):
         score_bucket = "partial"
-    elif grade == max_grade:
+    elif(grade == max_grade):
         score_bucket = "correct"
 
     return score_bucket

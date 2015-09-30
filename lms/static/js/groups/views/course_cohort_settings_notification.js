@@ -1,30 +1,31 @@
-;(function (define) {
+var edx = edx || {};
+
+(function($, _, Backbone, gettext) {
     'use strict';
-    define(['jquery', 'underscore', 'backbone', 'gettext'], function($, _, Backbone, gettext) {
 
-        var CourseCohortSettingsNotificationView = Backbone.View.extend({
-            initialize: function(options) {
-                this.template = _.template($('#cohort-state-tpl').text());
-                this.cohortEnabled = options.cohortEnabled;
-            },
+    edx.groups = edx.groups || {};
 
-            render: function() {
-                this.$el.html(this.template({}));
-                this.showCohortStateMessage();
-                return this;
-            },
+    edx.groups.CourseCohortSettingsNotificationView = Backbone.View.extend({
+        initialize: function(options) {
+            this.template = _.template($('#cohort-state-tpl').text());
+            this.cohortEnabled = options.cohortEnabled;
+        },
 
-            showCohortStateMessage: function () {
-                var actionToggleMessage = this.$('.action-toggle-message');
+        render: function() {
+            this.$el.html(this.template({}));
+            this.showCohortStateMessage();
+            return this;
+        },
 
-                AnimationUtil.triggerAnimation(actionToggleMessage);
-                if (this.cohortEnabled) {
-                    actionToggleMessage.text(gettext('Cohorts Enabled'));
-                } else {
-                    actionToggleMessage.text(gettext('Cohorts Disabled'));
-                }
+        showCohortStateMessage: function () {
+            var actionToggleMessage = this.$('.action-toggle-message');
+
+            AnimationUtil.triggerAnimation(actionToggleMessage);
+            if (this.cohortEnabled) {
+                actionToggleMessage.text(gettext('Cohorts Enabled'));
+            } else {
+                actionToggleMessage.text(gettext('Cohorts Disabled'));
             }
-        });
-        return CourseCohortSettingsNotificationView;
+        }
     });
-}).call(this, define || RequireJS.define);
+}).call(this, $, _, Backbone, gettext);

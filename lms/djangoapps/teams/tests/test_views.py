@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """Tests for the teams API at the HTTP request level."""
+# pylint: disable=maybe-no-member
 import json
 
 import ddt
 
 from django.core.urlresolvers import reverse
-from django.conf import settings
 from nose.plugins.attrib import attr
 from rest_framework.test import APITestCase, APIClient
 
@@ -14,44 +14,34 @@ from student.tests.factories import UserFactory, AdminFactory, CourseEnrollmentF
 from student.models import CourseEnrollment
 from xmodule.modulestore.tests.factories import CourseFactory
 from .factories import CourseTeamFactory
-from xmodule.modulestore.tests.django_utils import SharedModuleStoreTestCase
-
-from django_comment_common.models import Role, FORUM_ROLE_COMMUNITY_TA
-from django_comment_common.utils import seed_permissions_roles
+from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
 
 
 @attr('shard_1')
-class TestDashboard(SharedModuleStoreTestCase):
+class TestDashboard(ModuleStoreTestCase):
     """Tests for the Teams dashboard."""
     test_password = "test"
-
-    @classmethod
-    def setUpClass(cls):
-        super(TestDashboard, cls).setUpClass()
-        cls.course = CourseFactory.create(
-            teams_configuration={"max_team_size": 10, "topics": [{"name": "foo", "id": 0, "description": "test topic"}]}
-        )
 
     def setUp(self):
         """
         Set up tests
         """
         super(TestDashboard, self).setUp()
+        self.course = CourseFactory.create(
+            teams_configuration={"max_team_size": 10, "topics": [{"name": "foo", "id": 0, "description": "test topic"}]}
+        )
         # will be assigned to self.client by default
         self.user = UserFactory.create(password=self.test_password)
         self.teams_url = reverse('teams_dashboard', args=[self.course.id])
 
     def test_anonymous(self):
-        """Verifies that an anonymous client cannot access the team
-        dashboard, and is redirected to the login page."""
+        """ Verifies that an anonymous client cannot access the team dashboard. """
         anonymous_client = APIClient()
         response = anonymous_client.get(self.teams_url)
-        redirect_url = '{0}?next={1}'.format(settings.LOGIN_URL, self.teams_url)
-        self.assertRedirects(response, redirect_url)
+        self.assertEqual(404, response.status_code)
 
     def test_not_enrolled_not_staff(self):
         """ Verifies that a student who is not enrolled cannot access the team dashboard. """
-        self.client.login(username=self.user.username, password=self.test_password)
         response = self.client.get(self.teams_url)
         self.assertEqual(404, response.status_code)
 
@@ -92,8 +82,6 @@ class TestDashboard(SharedModuleStoreTestCase):
         """
         bad_org = "badorgxxx"
         bad_team_url = self.teams_url.replace(self.course.id.org, bad_org)
-        CourseEnrollmentFactory.create(user=self.user, course_id=self.course.id)
-        self.client.login(username=self.user.username, password=self.test_password)
         response = self.client.get(bad_team_url)
         self.assertEqual(404, response.status_code)
 
@@ -102,14 +90,14 @@ class TestDashboard(SharedModuleStoreTestCase):
         self.assertEqual(404, response.status_code)
 
 
-class TeamAPITestCase(APITestCase, SharedModuleStoreTestCase):
+class TeamAPITestCase(APITestCase, ModuleStoreTestCase):
     """Base class for Team API test cases."""
 
     test_password = 'password'
 
-    @classmethod
-    def setUpClass(cls):
-        super(TeamAPITestCase, cls).setUpClass()
+    def setUp(self):
+        super(TeamAPITestCase, self).setUp()
+
         teams_configuration = {
             'topics':
             [
@@ -120,52 +108,44 @@ class TeamAPITestCase(APITestCase, SharedModuleStoreTestCase):
                 } for i, name in enumerate([u'sólar power', 'Wind Power', 'Nuclear Power', 'Coal Power'])
             ]
         }
-        cls.test_course_1 = CourseFactory.create(
+        self.topics_count = 4
+
+        self.test_course_1 = CourseFactory.create(
             org='TestX',
             course='TS101',
             display_name='Test Course',
             teams_configuration=teams_configuration
         )
-        cls.test_course_2 = CourseFactory.create(org='MIT', course='6.002x', display_name='Circuits')
+        self.test_course_2 = CourseFactory.create(org='MIT', course='6.002x', display_name='Circuits')
 
-    def setUp(self):
-        super(TeamAPITestCase, self).setUp()
-        self.topics_count = 4
         self.users = {
+            'student_unenrolled': UserFactory.create(password=self.test_password),
+            'student_enrolled': UserFactory.create(password=self.test_password),
+            'student_enrolled_not_on_team': UserFactory.create(password=self.test_password),
+
+            # This student is enrolled in both test courses and is a member of a team in each course, but is not on the
+            # same team as student_enrolled.
+            'student_enrolled_both_courses_other_team': UserFactory.create(password=self.test_password),
+
             'staff': AdminFactory.create(password=self.test_password),
             'course_staff': StaffFactory.create(course_key=self.test_course_1.id, password=self.test_password)
         }
-        self.create_and_enroll_student(username='student_enrolled')
-        self.create_and_enroll_student(username='student_enrolled_not_on_team')
-        self.create_and_enroll_student(username='student_unenrolled', courses=[])
-
-        # Make this student a community TA.
-        self.create_and_enroll_student(username='community_ta')
-        seed_permissions_roles(self.test_course_1.id)
-        community_ta_role = Role.objects.get(name=FORUM_ROLE_COMMUNITY_TA, course_id=self.test_course_1.id)
-        community_ta_role.users.add(self.users['community_ta'])
-
-        # This student is enrolled in both test courses and is a member of a team in each course, but is not on the
-        # same team as student_enrolled.
-        self.create_and_enroll_student(
-            courses=[self.test_course_1, self.test_course_2],
-            username='student_enrolled_both_courses_other_team'
-        )
-
         # 'solar team' is intentionally lower case to test case insensitivity in name ordering
         self.test_team_1 = CourseTeamFactory.create(
             name=u'sólar team',
             course_id=self.test_course_1.id,
-            topic_id='topic_0'
+            topic_id='renewable'
         )
         self.test_team_2 = CourseTeamFactory.create(name='Wind Team', course_id=self.test_course_1.id)
         self.test_team_3 = CourseTeamFactory.create(name='Nuclear Team', course_id=self.test_course_1.id)
         self.test_team_4 = CourseTeamFactory.create(name='Coal Team', course_id=self.test_course_1.id, is_active=False)
-        self.test_team_5 = CourseTeamFactory.create(name='Another Team', course_id=self.test_course_2.id)
+        self.test_team_4 = CourseTeamFactory.create(name='Another Team', course_id=self.test_course_2.id)
 
         for user, course in [
-                ('staff', self.test_course_1),
-                ('course_staff', self.test_course_1),
+                ('student_enrolled', self.test_course_1),
+                ('student_enrolled_not_on_team', self.test_course_1),
+                ('student_enrolled_both_courses_other_team', self.test_course_1),
+                ('student_enrolled_both_courses_other_team', self.test_course_2)
         ]:
             CourseEnrollment.enroll(
                 self.users[user], course.id, check_access=True
@@ -173,25 +153,7 @@ class TeamAPITestCase(APITestCase, SharedModuleStoreTestCase):
 
         self.test_team_1.add_user(self.users['student_enrolled'])
         self.test_team_3.add_user(self.users['student_enrolled_both_courses_other_team'])
-        self.test_team_5.add_user(self.users['student_enrolled_both_courses_other_team'])
-
-    def create_and_enroll_student(self, courses=None, username=None):
-        """ Creates a new student and enrolls that student in the course.
-
-        Adds the new user to the self.users dictionary with the username as the key.
-
-        Returns the username once the user has been created.
-        """
-        if username is not None:
-            user = UserFactory.create(password=self.test_password, username=username)
-        else:
-            user = UserFactory.create(password=self.test_password)
-        courses = courses if courses is not None else [self.test_course_1]
-        for course in courses:
-            CourseEnrollment.enroll(user, course.id, check_access=True)
-        self.users[user.username] = user
-
-        return user.username
+        self.test_team_4.add_user(self.users['student_enrolled_both_courses_other_team'])
 
     def login(self, user):
         """Given a user string, logs the given user in.
@@ -213,7 +175,7 @@ class TeamAPITestCase(APITestCase, SharedModuleStoreTestCase):
 
         If a user is specified in kwargs, that user is first logged in.
         """
-        user = kwargs.pop('user', 'student_enrolled_not_on_team')
+        user = kwargs.pop('user', 'student_enrolled')
         if user:
             self.login(user)
         func = getattr(self.client, method)
@@ -350,7 +312,7 @@ class TestListTeamsAPI(TeamAPITestCase):
         self.verify_names({'course_id': self.test_course_2.id}, 200, ['Another Team'], user='staff')
 
     def test_filter_topic_id(self):
-        self.verify_names({'course_id': self.test_course_1.id, 'topic_id': 'topic_0'}, 200, [u'sólar team'])
+        self.verify_names({'course_id': self.test_course_1.id, 'topic_id': 'renewable'}, 200, [u'sólar team'])
 
     def test_filter_include_inactive(self):
         self.verify_names({'include_inactive': True}, 200, ['Coal Team', 'Nuclear Team', u'sólar team', 'Wind Team'])
@@ -371,10 +333,9 @@ class TestListTeamsAPI(TeamAPITestCase):
         data = {'order_by': field} if field else {}
         self.verify_names(data, status, names)
 
-    @ddt.data((404, {'course_id': 'no/such/course'}), (400, {'topic_id': 'no_such_topic'}))
-    @ddt.unpack
-    def test_no_results(self, status, data):
-        self.get_teams_list(status, data)
+    @ddt.data({'course_id': 'no/such/course'}, {'topic_id': 'no_such_topic'})
+    def test_no_results(self, data):
+        self.get_teams_list(404, data)
 
     def test_page_size(self):
         result = self.get_teams_list(200, {'page_size': 2})
@@ -387,7 +348,7 @@ class TestListTeamsAPI(TeamAPITestCase):
         self.assertIsNotNone(result['previous'])
 
     def test_expand_user(self):
-        result = self.get_teams_list(200, {'expand': 'user', 'topic_id': 'topic_0'})
+        result = self.get_teams_list(200, {'expand': 'user', 'topic_id': 'renewable'})
         self.verify_expanded_user(result['results'][0]['membership'][0]['user'])
 
 
@@ -399,7 +360,7 @@ class TestCreateTeamAPI(TeamAPITestCase):
         (None, 401),
         ('student_inactive', 401),
         ('student_unenrolled', 403),
-        ('student_enrolled_not_on_team', 200),
+        ('student_enrolled', 200),
         ('staff', 200),
         ('course_staff', 200)
     )
@@ -408,13 +369,12 @@ class TestCreateTeamAPI(TeamAPITestCase):
         team = self.post_create_team(status, self.build_team_data(name="New Team"), user=user)
         if status == 200:
             self.assertEqual(team['id'], 'new-team')
-            self.assertIn('discussion_topic_id', team)
             teams = self.get_teams_list(user=user)
             self.assertIn("New Team", [team['name'] for team in teams['results']])
 
     def test_naming(self):
         new_teams = [
-            self.post_create_team(data=self.build_team_data(name=name), user=self.create_and_enroll_student())
+            self.post_create_team(data=self.build_team_data(name=name))
             for name in ["The Best Team", "The Best Team", "The Best Team", "The Best Team 2"]
         ]
         self.assertEquals(
@@ -445,8 +405,7 @@ class TestCreateTeamAPI(TeamAPITestCase):
     def test_bad_fields(self, kwargs):
         self.post_create_team(400, self.build_team_data(**kwargs))
 
-    def test_full_student_creator(self):
-        creator = self.create_and_enroll_student()
+    def test_full(self):
         team = self.post_create_team(data=self.build_team_data(
             name="Fully specified team",
             course=self.test_course_1,
@@ -454,43 +413,21 @@ class TestCreateTeamAPI(TeamAPITestCase):
             topic_id='great-topic',
             country='CA',
             language='fr'
-        ), user=creator)
+        ))
 
-        # Remove date_created and discussion_topic_id because they change between test runs
+        # Remove date_created because it changes between test runs
         del team['date_created']
-        del team['discussion_topic_id']
-
-        # Since membership is its own list, we want to examine this separately.
-        team_membership = team['membership']
-        del team['membership']
-
-        # Verify that the creating user gets added to the team.
-        self.assertEqual(len(team_membership), 1)
-        member = team_membership[0]['user']
-        self.assertEqual(member['username'], creator)
-
-        self.assertEqual(team, {
+        self.assertEquals(team, {
             'name': 'Fully specified team',
             'language': 'fr',
             'country': 'CA',
             'is_active': True,
+            'membership': [],
             'topic_id': 'great-topic',
             'course_id': str(self.test_course_1.id),
             'id': 'fully-specified-team',
             'description': 'Another fantastic team'
         })
-
-    @ddt.data('staff', 'course_staff', 'community_ta')
-    def test_membership_staff_creator(self, user):
-        # Verify that staff do not automatically get added to a team
-        # when they create one.
-        team = self.post_create_team(data=self.build_team_data(
-            name="New team",
-            course=self.test_course_1,
-            description="Another fantastic team",
-        ), user=user)
-
-        self.assertEqual(team['membership'], [])
 
 
 @ddt.ddt
@@ -509,8 +446,7 @@ class TestDetailTeamAPI(TeamAPITestCase):
     def test_access(self, user, status):
         team = self.get_team_detail(self.test_team_1.team_id, status, user=user)
         if status == 200:
-            self.assertEqual(team['description'], self.test_team_1.description)
-            self.assertEqual(team['discussion_topic_id'], self.test_team_1.discussion_topic_id)
+            self.assertEquals(team['description'], self.test_team_1.description)
 
     def test_does_not_exist(self):
         self.get_team_detail('no_such_team', 404)
@@ -625,16 +561,6 @@ class TestListTopicsAPI(TeamAPITestCase):
         response = self.get_topics_list(data={'course_id': self.test_course_1.id})
         self.assertEqual(response['sort_order'], 'name')
 
-    def test_team_count(self):
-        """Test that team_count is included for each topic"""
-        response = self.get_topics_list(data={'course_id': self.test_course_1.id})
-        for topic in response['results']:
-            self.assertIn('team_count', topic)
-            if topic['id'] == u'topic_0':
-                self.assertEqual(topic['team_count'], 1)
-            else:
-                self.assertEqual(topic['team_count'], 0)
-
 
 @ddt.ddt
 class TestDetailTopicAPI(TeamAPITestCase):
@@ -662,13 +588,6 @@ class TestDetailTopicAPI(TeamAPITestCase):
     def test_invalid_topic_id(self):
         self.get_topic_detail('no_such_topic', self.test_course_1.id, 404)
 
-    def test_team_count(self):
-        """Test that team_count is included with a topic"""
-        topic = self.get_topic_detail(topic_id='topic_0', course_id=self.test_course_1.id)
-        self.assertEqual(topic['team_count'], 1)
-        topic = self.get_topic_detail(topic_id='topic_1', course_id=self.test_course_1.id)
-        self.assertEqual(topic['team_count'], 0)
-
 
 @ddt.ddt
 class TestListMembershipAPI(TeamAPITestCase):
@@ -688,7 +607,7 @@ class TestListMembershipAPI(TeamAPITestCase):
         membership = self.get_membership_list(status, {'team_id': self.test_team_1.team_id}, user=user)
         if status == 200:
             self.assertEqual(membership['count'], 1)
-            self.assertEqual(membership['results'][0]['user']['username'], self.users['student_enrolled'].username)
+            self.assertEqual(membership['results'][0]['user']['id'], self.users['student_enrolled'].username)
 
     @ddt.data(
         (None, 401, False),
@@ -705,7 +624,7 @@ class TestListMembershipAPI(TeamAPITestCase):
         if status == 200:
             if has_content:
                 self.assertEqual(membership['count'], 1)
-                self.assertEqual(membership['results'][0]['team']['team_id'], self.test_team_1.team_id)
+                self.assertEqual(membership['results'][0]['team']['id'], self.test_team_1.team_id)
             else:
                 self.assertEqual(membership['count'], 0)
 
@@ -754,8 +673,8 @@ class TestCreateMembershipAPI(TeamAPITestCase):
             user=user
         )
         if status == 200:
-            self.assertEqual(membership['user']['username'], self.users['student_enrolled_not_on_team'].username)
-            self.assertEqual(membership['team']['team_id'], self.test_team_1.team_id)
+            self.assertEqual(membership['user']['id'], self.users['student_enrolled_not_on_team'].username)
+            self.assertEqual(membership['team']['id'], self.test_team_1.team_id)
             memberships = self.get_membership_list(200, {'team_id': self.test_team_1.team_id})
             self.assertEqual(memberships['count'], 2)
 

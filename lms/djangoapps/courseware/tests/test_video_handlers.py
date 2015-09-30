@@ -569,7 +569,11 @@ class TestTranscriptTranslationGetDispatch(TestVideo):
         Set course static_asset_path and ensure we get redirected to that path
         if it isn't found in the contentstore
         """
-        self._set_static_asset_path()
+        self.course.static_asset_path = 'dummy/static'
+        self.course.save()
+        store = modulestore()
+        with store.branch_setting(ModuleStoreEnum.Branch.draft_preferred, self.course.id):
+            store.update_item(self.course, self.user.id)
 
         if attach:
             attach(self.item, sub)
@@ -581,27 +585,6 @@ class TestTranscriptTranslationGetDispatch(TestVideo):
                 ('Location', '/static/dummy/static/subs_{}.srt.sjson'.format(sub)),
                 response.headerlist
             )
-
-    @patch('xmodule.video_module.VideoModule.course_id', return_value='not_a_course_locator')
-    def test_translation_static_non_course(self, __):
-        """
-        Test that get_static_transcript short-circuits in the case of a non-CourseLocator.
-        This fixes a bug for videos inside of content libraries.
-        """
-        self._set_static_asset_path()
-
-        # When course_id is not mocked out, these values would result in 307, as tested above.
-        request = Request.blank('/translation/en?videoId=12345')
-        response = self.item.transcript(request=request, dispatch='translation/en')
-        self.assertEqual(response.status, '404 Not Found')
-
-    def _set_static_asset_path(self):
-        """ Helper method for setting up the static_asset_path information """
-        self.course.static_asset_path = 'dummy/static'
-        self.course.save()
-        store = modulestore()
-        with store.branch_setting(ModuleStoreEnum.Branch.draft_preferred, self.course.id):
-            store.update_item(self.course, self.user.id)
 
 
 @attr('shard_1')

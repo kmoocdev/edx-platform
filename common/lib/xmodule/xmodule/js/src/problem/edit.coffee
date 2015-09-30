@@ -353,7 +353,7 @@ class @MarkdownEditingDescriptor extends XModule.Descriptor
           var groupString = '<choiceresponse>\n',
               options, value, correct;
 
-          groupString += '  <checkboxgroup>\n';
+          groupString += '  <checkboxgroup direction="vertical">\n';
           options = match.split('\n');
           
           endHints = '';  // save these up to emit at the end

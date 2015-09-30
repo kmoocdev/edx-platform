@@ -26,13 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-<<<<<<< .merge_file_fh6bv9
 "POT-Creation-Date: 2015-08-21 08:03+0000\n"
 "PO-Revision-Date: 2015-08-21 08:04:17.892246\n"
-=======
-"POT-Creation-Date: 2015-08-07 13:49+0000\n"
-"PO-Revision-Date: 2015-08-07 13:50:42.221639\n"
->>>>>>> .merge_file_OZ0md9
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -2228,7 +2223,6 @@ msgstr "يشفث حخسفثي"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 #: lms/static/js/courseware/credit_progress.js
-#: lms/templates/discovery/facet.underscore
 #: lms/templates/edxnotes/note-item.underscore
 msgid "More"
 msgstr "وخقث"
@@ -2301,137 +2295,22 @@ msgstr "قثحمغ"
 msgid "Tags:"
 msgstr "فشلس:"
 
-<<<<<<< .merge_file_fh6bv9
-=======
-#: lms/djangoapps/teams/static/teams/js/collections/team.js
->>>>>>> .merge_file_OZ0md9
 #: lms/djangoapps/teams/static/teams/js/collections/topic.js
 #: lms/templates/edxnotes/tab-item.underscore
 msgid "name"
 msgstr "رشوث"
 
-<<<<<<< .merge_file_fh6bv9
-=======
-#: lms/djangoapps/teams/static/teams/js/collections/team.js
-msgid "open_slots"
-msgstr "خحثر_سمخفس"
-
->>>>>>> .merge_file_OZ0md9
 #: lms/djangoapps/teams/static/teams/js/collections/topic.js
 msgid "team count"
 msgstr "فثشو ذخعرف"
 
-<<<<<<< .merge_file_fh6bv9
-=======
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Team Name (Required) *"
-msgstr "فثشو رشوث (قثضعهقثي) *"
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "A name that identifies your team (maximum 255 characters)."
-msgstr "ش رشوث فاشف هيثرفهبهثس غخعق فثشو (وشطهوعو 255 ذاشقشذفثقس)."
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Team Description (Required) *"
-msgstr "فثشو يثسذقهحفهخر (قثضعهقثي) *"
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid ""
-"A short description of the team to help other learners understand the goals "
-"or direction of the team (maximum 300 characters)."
-msgstr ""
-"ش ساخقف يثسذقهحفهخر خب فاث فثشو فخ اثمح خفاثق مثشقرثقس عريثقسفشري فاث لخشمس "
-"خق يهقثذفهخر خب فاث فثشو (وشطهوعو 300 ذاشقشذفثقس)."
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Optional Characteristics"
-msgstr "خحفهخرشم ذاشقشذفثقهسفهذس"
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid ""
-"Help other learners decide whether to join your team by specifying some "
-"characteristics for your team. Choose carefully, because fewer people might "
-"be interested in joining your team if it seems too restrictive."
-msgstr ""
-"اثمح خفاثق مثشقرثقس يثذهيث صاثفاثق فخ تخهر غخعق فثشو زغ سحثذهبغهرل سخوث "
-"ذاشقشذفثقهسفهذس بخق غخعق فثشو. ذاخخسث ذشقثبعممغ, زثذشعسث بثصثق حثخحمث وهلاف "
-"زث هرفثقثسفثي هر تخهرهرل غخعق فثشو هب هف سثثوس فخخ قثسفقهذفهدث."
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid "Language"
-msgstr "مشرلعشلث"
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid ""
-"The language that team members primarily use to communicate with each other."
-msgstr ""
-"فاث مشرلعشلث فاشف فثشو وثوزثقس حقهوشقهمغ عسث فخ ذخووعرهذشفث صهفا ثشذا خفاثق."
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-#: lms/static/js/student_profile/views/learner_profile_factory.js
-msgid "Country"
-msgstr "ذخعرفقغ"
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "The country that team members primarily identify with."
-msgstr "فاث ذخعرفقغ فاشف فثشو وثوزثقس حقهوشقهمغ هيثرفهبغ صهفا."
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-#: lms/static/js/views/fields.js
-msgid "An error occurred. Please try again."
-msgstr "شر ثققخق خذذعققثي. حمثشسث فقغ شلشهر."
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Check the highlighted fields below and try again."
-msgstr "ذاثذن فاث اهلامهلافثي بهثميس زثمخص شري فقغ شلشهر."
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Enter team name."
-msgstr "ثرفثق فثشو رشوث."
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Team name cannot have more than 255 characters."
-msgstr "فثشو رشوث ذشررخف اشدث وخقث فاشر 255 ذاشقشذفثقس."
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Enter team description."
-msgstr "ثرفثق فثشو يثسذقهحفهخر."
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Team description cannot have more than 300 characters."
-msgstr "فثشو يثسذقهحفهخر ذشررخف اشدث وخقث فاشر 300 ذاشقشذفثقس."
-
-#: lms/djangoapps/teams/static/teams/js/views/team_actions.js
-msgid ""
-"Try {browse_span_start}browsing all teams{span_end} or "
-"{search_span_start}searching team descriptions{span_end}. If you still can't"
-" find a team to join, {create_span_start}create a new team in this "
-"topic{span_end}."
-msgstr ""
-"فقغ {browse_span_start}زقخصسهرل شمم فثشوس{span_end} خق "
-"{search_span_start}سثشقذاهرل فثشو يثسذقهحفهخرس{span_end}. هب غخع سفهمم ذشر'ف"
-" بهري ش فثشو فخ تخهر, {create_span_start}ذقثشفث ش رثص فثشو هر فاهس "
-"فخحهذ{span_end}."
-
-#: lms/djangoapps/teams/static/teams/js/views/team_card.js
-msgid "%(member_count)s / %(max_member_count)s Member"
-msgid_plural "%(member_count)s / %(max_member_count)s Members"
-msgstr[0] "%(member_count)s / %(max_member_count)s وثوزثق"
-msgstr[1] "%(member_count)s / %(max_member_count)s وثوزثقس"
-
-#: lms/djangoapps/teams/static/teams/js/views/team_card.js
-msgid "View %(span_start)s %(team_name)s %(span_end)s"
-msgstr "دهثص %(span_start)s %(team_name)s %(span_end)s"
-
->>>>>>> .merge_file_OZ0md9
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid ""
-"See all teams in your course, organized by topic. Join a team to collaborate"
-" with other learners who are interested in the same topic as you are."
+"Course teams are organized into topics created by course instructors. Try to"
+" join others in an existing team before you decide to create a new team!"
 msgstr ""
-"سثث شمم فثشوس هر غخعق ذخعقسث, خقلشرهظثي زغ فخحهذ. تخهر ش فثشو فخ ذخممشزخقشفث"
-" صهفا خفاثق مثشقرثقس صاخ شقث هرفثقثسفثي هر فاث سشوث فخحهذ شس غخع شقث."
+"ذخعقسث فثشوس شقث خقلشرهظثي هرفخ فخحهذس ذقثشفثي زغ ذخعقسث هرسفقعذفخقس. فقغ فخ"
+" تخهر خفاثقس هر شر ثطهسفهرل فثشو زثبخقث غخع يثذهيث فخ ذقثشفث ش رثص فثشو!"
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Teams"
@@ -2444,34 +2323,6 @@ msgstr "وغ فثشوس"
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Browse"
 msgstr "زقخصسث"
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid ""
-"Create a new team if you can't find existing teams to join, or if you would "
-"like to learn with friends you know."
-msgstr ""
-"ذقثشفث ش رثص فثشو هب غخع ذشر'ف بهري ثطهسفهرل فثشوس فخ تخهر, خق هب غخع صخعمي "
-"مهنث فخ مثشقر صهفا بقهثريس غخع نرخص."
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "Create a New Team"
-msgstr "ذقثشفث ش رثص فثشو"
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "All Topics"
-msgstr "شمم فخحهذس"
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "The page \"%(route)s\" could not be found."
-msgstr "فاث حشلث \"%(route)s\" ذخعمي رخف زث بخعري."
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "The topic \"%(topic)s\" could not be found."
-msgstr "فاث فخحهذ \"%(topic)s\" ذخعمي رخف زث بخعري."
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "The team \"%(team)s\" could not be found."
-msgstr "فاث فثشو \"%(team)s\" ذخعمي رخف زث بخعري."
 
 #: lms/djangoapps/teams/static/teams/js/views/topic_card.js
 msgid "%(team_count)s Team"
@@ -2791,6 +2642,7 @@ msgid "There was an error obtaining email content history for this course."
 msgstr "فاثقث صشس شر ثققخق خزفشهرهرل ثوشهم ذخرفثرف اهسفخقغ بخق فاهس ذخعقسث."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
+#: lms/static/js/spec/instructor_dashboard/student_admin_spec.js
 msgid "Please enter a student email address or username."
 msgstr "حمثشسث ثرفثق ش سفعيثرف ثوشهم شييقثسس خق عسثقرشوث."
 
@@ -2875,10 +2727,12 @@ msgstr ""
 "ذخوحمثفث شري ذخققثذف."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
+#: lms/static/js/spec/instructor_dashboard/student_admin_spec.js
 msgid "Entrance exam attempts is being reset for student '{student_id}'."
 msgstr "ثرفقشرذث ثطشو شففثوحفس هس زثهرل قثسثف بخق سفعيثرف '{student_id}'."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
+#: lms/static/js/spec/instructor_dashboard/student_admin_spec.js
 msgid ""
 "Error resetting entrance exam attempts for student '{student_id}'. Make sure"
 " student identifier is correct."
@@ -2907,6 +2761,7 @@ msgstr ""
 "ذخققثذف."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
+#: lms/static/js/spec/instructor_dashboard/student_admin_spec.js
 msgid "Enter a student's username or email address."
 msgstr "ثرفثق ش سفعيثرف'س عسثقرشوث خق ثوشهم شييقثسس."
 
@@ -2927,6 +2782,7 @@ msgstr ""
 " ذخققثذف شري فقغ شلشهر."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
+#: lms/static/js/spec/instructor_dashboard/student_admin_spec.js
 msgid "Entrance exam state is being deleted for student '{student_id}'."
 msgstr "ثرفقشرذث ثطشو سفشفث هس زثهرل يثمثفثي بخق سفعيثرف '{student_id}'."
 
@@ -3336,7 +3192,6 @@ msgid "Enter Start Date"
 msgstr "ثرفثق سفشقف يشفث"
 
 #: lms/static/js/courseware/credit_progress.js
-#: lms/templates/discovery/facet.underscore
 #: lms/templates/edxnotes/note-item.underscore
 msgid "Less"
 msgstr "مثسس"
@@ -3353,17 +3208,11 @@ msgstr "غخعق يخرشفهخر ذخعمي رخف زث سعزوهففثي."
 msgid "An error occurred. Please try again later."
 msgstr "شر ثققخق خذذعققثي. حمثشسث فقغ شلشهر مشفثق."
 
-#: lms/static/js/discovery/views/search_form.js
-msgid "Viewing %s course"
-msgid_plural "Viewing %s courses"
-msgstr[0] "دهثصهرل %س ذخعقسث"
-msgstr[1] "دهثصهرل %س ذخعقسثس"
-
-#: lms/static/js/discovery/views/search_form.js
+#: lms/static/js/discovery/form.js
 msgid "We couldn't find any results for \"%s\"."
 msgstr "صث ذخعمير'ف بهري شرغ قثسعمفس بخق \"%س\"."
 
-#: lms/static/js/discovery/views/search_form.js
+#: lms/static/js/discovery/form.js
 #: lms/templates/search/search_error.underscore
 msgid "There was an error, try searching again."
 msgstr "فاثقث صشس شر ثققخق, فقغ سثشقذاهرل شلشهر."
@@ -3372,30 +3221,14 @@ msgstr "فاثقث صشس شر ثققخق, فقغ سثشقذاهرل شلشهر.
 msgid "Focus grabber"
 msgstr "بخذعس لقشززثق"
 
-#: lms/static/js/edxnotes/views/notes_visibility_factory.js
 #: lms/static/js/edxnotes/views/search_box.js
+#: lms/static/js/edxnotes/views/toggle_notes_factory.js
 msgid ""
 "An error has occurred. Make sure that you are connected to the Internet, and"
 " then try refreshing the page."
 msgstr ""
 "شر ثققخق اشس خذذعققثي. وشنث سعقث فاشف غخع شقث ذخررثذفثي فخ فاث هرفثقرثف, شري"
 " فاثر فقغ قثبقثساهرل فاث حشلث."
-
-#: lms/static/js/edxnotes/views/notes_visibility_factory.js
-msgid "Hide notes"
-msgstr "اهيث رخفثس"
-
-#: lms/static/js/edxnotes/views/notes_visibility_factory.js
-msgid "Notes visible"
-msgstr "رخفثس دهسهزمث"
-
-#: lms/static/js/edxnotes/views/notes_visibility_factory.js
-msgid "Show notes"
-msgstr "ساخص رخفثس"
-
-#: lms/static/js/edxnotes/views/notes_visibility_factory.js
-msgid "Notes hidden"
-msgstr "رخفثس اهييثر"
 
 #: lms/static/js/edxnotes/views/search_box.js
 msgid ""
@@ -3406,6 +3239,22 @@ msgstr ""
 #: lms/static/js/edxnotes/views/tab_item.js
 msgid "Current tab"
 msgstr "ذعققثرف فشز"
+
+#: lms/static/js/edxnotes/views/toggle_notes_factory.js
+msgid "Hide notes"
+msgstr "اهيث رخفثس"
+
+#: lms/static/js/edxnotes/views/toggle_notes_factory.js
+msgid "Notes visible"
+msgstr "رخفثس دهسهزمث"
+
+#: lms/static/js/edxnotes/views/toggle_notes_factory.js
+msgid "Show notes"
+msgstr "ساخص رخفثس"
+
+#: lms/static/js/edxnotes/views/toggle_notes_factory.js
+msgid "Notes hidden"
+msgstr "رخفثس اهييثر"
 
 #: lms/static/js/edxnotes/views/tabs/course_structure.js
 msgid "Location in Course"
@@ -3597,6 +3446,24 @@ msgid_plural "%s results"
 msgstr[0] "%س قثسعمف"
 msgstr[1] "%س قثسعمفس"
 
+#: lms/static/js/spec/instructor_dashboard/student_admin_spec.js
+msgid "Started entrance exam rescore task for student '{student_id}'."
+msgstr "سفشقفثي ثرفقشرذث ثطشو قثسذخقث فشسن بخق سفعيثرف '{student_id}'."
+
+#: lms/static/js/spec/instructor_dashboard/student_admin_spec.js
+msgid ""
+"Error starting a task to rescore entrance exam for student '{student_id}'."
+msgstr ""
+"ثققخق سفشقفهرل ش فشسن فخ قثسذخقث ثرفقشرذث ثطشو بخق سفعيثرف '{student_id}'."
+
+#: lms/static/js/spec/instructor_dashboard/student_admin_spec.js
+msgid "Error deleting entrance exam state for student '{student_id}'. "
+msgstr "ثققخق يثمثفهرل ثرفقشرذث ثطشو سفشفث بخق سفعيثرف '{student_id}'. "
+
+#: lms/static/js/spec/instructor_dashboard/student_admin_spec.js
+msgid "Error getting entrance exam task history for student '{student_id}'. "
+msgstr "ثققخق لثففهرل ثرفقشرذث ثطشو فشسن اهسفخقغ بخق سفعيثرف '{student_id}'. "
+
 #: lms/static/js/student_account/account.js
 msgid "The data could not be saved."
 msgstr "فاث يشفش ذخعمي رخف زث سشدثي."
@@ -3700,6 +3567,10 @@ msgstr ""
 "شييقثسس. ذمهذن فاث مهرن هر فاث وثسسشلث فخ قثسثف غخعق حشسسصخقي."
 
 #: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Language"
+msgstr "مشرلعشلث"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
 "The language used throughout this site. This site is currently available in "
 "a limited number of languages."
@@ -3785,6 +3656,10 @@ msgstr "مهوهفثي حقخبهمث"
 #: lms/static/js/student_profile/views/learner_profile_factory.js
 msgid "Full Profile"
 msgstr "بعمم حقخبهمث"
+
+#: lms/static/js/student_profile/views/learner_profile_factory.js
+msgid "Country"
+msgstr "ذخعرفقغ"
 
 #: lms/static/js/student_profile/views/learner_profile_factory.js
 msgid "Add Country"
@@ -3968,6 +3843,10 @@ msgid "Placeholder"
 msgstr "حمشذثاخميثق"
 
 #: lms/static/js/views/fields.js
+msgid "An error occurred. Please try again."
+msgstr "شر ثققخق خذذعققثي. حمثشسث فقغ شلشهر."
+
+#: lms/static/js/views/fields.js
 msgid "Upload an image"
 msgstr "عحمخشي شر هوشلث"
 
@@ -4127,22 +4006,6 @@ msgstr "سهلرشفخقغ فهفمث ساخعمي اشدث وشطهوعو خب 
 #: cms/static/js/certificates/models/signatory.js
 msgid "Signatory organization should not be more than 40 characters long."
 msgstr "سهلرشفخقغ خقلشرهظشفهخر ساخعمي رخف زث وخقث فاشر 40 ذاشقشذفثقس مخرل."
-
-#: cms/static/js/certificates/views/certificate_details.js
-msgid "Edit this certificate?"
-msgstr "ثيهف فاهس ذثقفهبهذشفث?"
-
-#: cms/static/js/certificates/views/certificate_details.js
-msgid ""
-"This certificate has already been activated and is live. Are you sure you "
-"want to continue editing?"
-msgstr ""
-"فاهس ذثقفهبهذشفث اشس شمقثشيغ زثثر شذفهدشفثي شري هس مهدث. شقث غخع سعقث غخع "
-"صشرف فخ ذخرفهرعث ثيهفهرل?"
-
-#: cms/static/js/certificates/views/certificate_details.js
-msgid "Yes, allow edits to the active Certificate"
-msgstr "غثس, شممخص ثيهفس فخ فاث شذفهدث ذثقفهبهذشفث"
 
 #: cms/static/js/certificates/views/certificate_editor.js
 msgid "Upload organization logo."
@@ -4411,20 +4274,12 @@ msgid "The course must have an assigned start date."
 msgstr "فاث ذخعقسث وعسف اشدث شر شسسهلرثي سفشقف يشفث."
 
 #: cms/static/js/models/settings/course_details.js
-msgid ""
-"The course must have at least one active certificate configuration before it"
-" can be started."
-msgstr ""
-"فاث ذخعقسث وعسف اشدث شف مثشسف خرث شذفهدث ذثقفهبهذشفث ذخربهلعقشفهخر زثبخقث هف"
-" ذشر زث سفشقفثي."
+msgid "The course end date cannot be before the course start date."
+msgstr "فاث ذخعقسث ثري يشفث ذشررخف زث زثبخقث فاث ذخعقسث سفشقف يشفث."
 
 #: cms/static/js/models/settings/course_details.js
-msgid "The course end date must be later than the course start date."
-msgstr "فاث ذخعقسث ثري يشفث وعسف زث مشفثق فاشر فاث ذخعقسث سفشقف يشفث."
-
-#: cms/static/js/models/settings/course_details.js
-msgid "The course start date must be later than the enrollment start date."
-msgstr "فاث ذخعقسث سفشقف يشفث وعسف زث مشفثق فاشر فاث ثرقخمموثرف سفشقف يشفث."
+msgid "The course start date cannot be before the enrollment start date."
+msgstr "فاث ذخعقسث سفشقف يشفث ذشررخف زث زثبخقث فاث ثرقخمموثرف سفشقف يشفث."
 
 #: cms/static/js/models/settings/course_details.js
 msgid "The enrollment start date cannot be after the enrollment end date."
@@ -4470,6 +4325,11 @@ msgstr "لقشذث حثقهخي وعسف زث سحثذهبهثي هر اا:وو 
 msgid "Not able to set passing grade to less than %(minimum_grade_cutoff)s%."
 msgstr "رخف شزمث فخ سثف حشسسهرل لقشيث فخ مثسس فاشر %(minimum_grade_cutoff)s%."
 
+#: cms/static/js/spec/views/assets_spec.js cms/static/js/views/assets.js
+#: cms/templates/js/asset-library.underscore
+msgid "Type"
+msgstr "فغحث"
+
 #: cms/static/js/views/asset.js
 msgid "Delete File Confirmation"
 msgstr "يثمثفث بهمث ذخربهقوشفهخر"
@@ -4492,10 +4352,6 @@ msgstr "غخعق بهمث اشس زثثر يثمثفثي."
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "Date Added"
 msgstr "يشفث شييثي"
-
-#: cms/static/js/views/assets.js cms/templates/js/asset-library.underscore
-msgid "Type"
-msgstr "فغحث"
 
 #: cms/static/js/views/assets.js
 msgid "File {filename} exceeds maximum size of {maxFileSizeInMBs} MB"
@@ -5061,12 +4917,12 @@ msgstr ""
 "حخمهذغ حشهقس."
 
 #: cms/static/js/views/settings/main.js
-msgid "Course Credit Requirements"
-msgstr "ذخعقسث ذقثيهف قثضعهقثوثرفس"
+msgid "Credit Eligibility Requirements"
+msgstr "ذقثيهف ثمهلهزهمهفغ قثضعهقثوثرفس"
 
 #: cms/static/js/views/settings/main.js
-msgid "The minimum grade for course credit is not set."
-msgstr "فاث وهرهوعو لقشيث بخق ذخعقسث ذقثيهف هس رخف سثف."
+msgid "Minimum passing grade for credit is not set."
+msgstr "وهرهوعو حشسسهرل لقشيث بخق ذقثيهف هس رخف سثف."
 
 #: cms/static/js/views/settings/main.js
 msgid "%(hours)s:%(minutes)s (current UTC time)"
@@ -5194,11 +5050,6 @@ msgstr "هرذخققثذف عقم بخقوشف."
 msgid "Actions"
 msgstr "شذفهخرس"
 
-#: cms/templates/js/course-outline.underscore
-#: lms/templates/ccx/schedule.underscore
-msgid "Due Date"
-msgstr "يعث يشفث"
-
 #: cms/templates/js/previous-video-upload-list.underscore
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Status"
@@ -5213,6 +5064,10 @@ msgid "Start Date"
 msgstr "سفشقف يشفث"
 
 #: lms/templates/ccx/schedule.underscore
+msgid "Due Date"
+msgstr "يعث يشفث"
+
+#: lms/templates/ccx/schedule.underscore
 msgid "remove all"
 msgstr "قثوخدث شمم"
 
@@ -5220,23 +5075,9 @@ msgstr "قثوخدث شمم"
 msgid "remove"
 msgstr "قثوخدث"
 
-#: lms/templates/commerce/provider.underscore
 #: lms/templates/commerce/receipt.underscore
-#: lms/templates/discovery/course_card.underscore
-msgid "gettext("
-msgstr "لثففثطف("
-
-#: lms/templates/commerce/provider.underscore
-msgid "<img src='%s' alt='%s'></image>"
-msgstr "<img src='%s' alt='%s'></image>"
-
-#: lms/templates/commerce/provider.underscore
-msgid ""
-"<button data-provider=\"%s\" data-course-key=\"%s\" data-username=\"%s\" "
-"class=\"complete-course\" onClick=completeOrder(this)>%s</button>"
-msgstr ""
-"<button data-provider=\"%s\" data-course-key=\"%s\" data-username=\"%s\" "
-"class=\"complete-course\" onClick=completeOrder(this)>%س</button>"
+msgid "Thank you! We have received your payment."
+msgstr "فاشرن غخع! صث اشدث قثذثهدثي غخعق حشغوثرف."
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
@@ -5315,17 +5156,33 @@ msgstr "دثقهبغ رخص"
 msgid "Donate"
 msgstr "يخرشفث"
 
-#: lms/templates/discovery/course_card.underscore
+#: lms/templates/discovery/filter_bar.underscore
+msgid "CLEAR ALL"
+msgstr "ذمثشق شمم"
+
+#: lms/templates/discovery/more_less_links.underscore
+msgid "MORE..."
+msgstr "وخقث..."
+
+#: lms/templates/discovery/more_less_links.underscore
+msgid "LESS..."
+msgstr "مثسس..."
+
+#: lms/templates/discovery/result_item.underscore
 msgid "LEARN MORE"
 msgstr "مثشقر وخقث"
 
-#: lms/templates/discovery/course_card.underscore
+#: lms/templates/discovery/result_item.underscore
+msgid "gettext("
+msgstr "لثففثطف("
+
+#: lms/templates/discovery/result_item.underscore
 msgid "Starts"
 msgstr "سفشقفس"
 
-#: lms/templates/discovery/filter_bar.underscore
-msgid "Clear All"
-msgstr "ذمثشق شمم"
+#: lms/templates/discovery/search_facets_list.underscore
+msgid "Refine your search"
+msgstr "قثبهرث غخعق سثشقذا"
 
 #: lms/templates/edxnotes/note-item.underscore
 msgid "Highlighted text"
@@ -6283,6 +6140,10 @@ msgstr "سفشفعس"
 msgid "Common Problem Types"
 msgstr "ذخووخر حقخزمثو فغحثس"
 
+#: cms/templates/js/add-xblock-component-menu-problem.underscore
+msgid "Common Problems with Hints and Feedback"
+msgstr "ذخووخر حقخزمثوس صهفا اهرفس شري بثثيزشذن"
+
 #: cms/templates/js/add-xblock-component.underscore
 msgid "Add New Component"
 msgstr "شيي رثص ذخوحخرثرف"
@@ -6391,12 +6252,8 @@ msgid "Course title"
 msgstr "ذخعقسث فهفمث"
 
 #: cms/templates/js/certificate-editor.underscore
-msgid ""
-"Specify an alternative to the official course title to display on "
-"certificates. Leave blank to use the official course title."
-msgstr ""
-"سحثذهبغ شر شمفثقرشفهدث فخ فاث خببهذهشم ذخعقسث فهفمث فخ يهسحمشغ خر "
-"ذثقفهبهذشفثس. مثشدث زمشرن فخ عسث فاث خببهذهشم ذخعقسث فهفمث."
+msgid "Title of the course"
+msgstr "فهفمث خب فاث ذخعقسث"
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Organization Logo"
@@ -6545,14 +6402,6 @@ msgstr "لقشيثي شس:"
 #: cms/templates/js/course-outline.underscore
 msgid "Due:"
 msgstr "يعث:"
-
-#: cms/templates/js/course-outline.underscore
-msgid "Proctored Exam"
-msgstr "حقخذفخقثي ثطشو"
-
-#: cms/templates/js/course-outline.underscore
-msgid "Timed and Proctored Exam"
-msgstr "فهوثي شري حقخذفخقثي ثطشو"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/xblock-outline.underscore
@@ -6994,36 +6843,20 @@ msgid "Name of the signatory"
 msgstr "رشوث خب فاث سهلرشفخقغ"
 
 #: cms/templates/js/signatory-editor.underscore
-msgid ""
-"The name of this signatory as it should appear on certificates. Maximum 40 "
-"characters."
-msgstr ""
-"فاث رشوث خب فاهس سهلرشفخقغ شس هف ساخعمي شححثشق خر ذثقفهبهذشفثس. وشطهوعو 40 "
-"ذاشقشذفثقس."
+msgid "Maximum 40 characters"
+msgstr "وشطهوعو 40 ذاشقشذفثقس"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Title of the signatory"
 msgstr "فهفمث خب فاث سهلرشفخقغ"
 
 #: cms/templates/js/signatory-editor.underscore
-msgid ""
-"The title of this signatory as it should appear on certificates. Maximum 2 "
-"lines, 40 characters each."
-msgstr ""
-"فاث فهفمث خب فاهس سهلرشفخقغ شس هف ساخعمي شححثشق خر ذثقفهبهذشفثس. وشطهوعو 2 "
-"مهرثس, 40 ذاشقشذفثقس ثشذا."
+msgid "2 Lines, 40 characters each"
+msgstr "2 مهرثس, 40 ذاشقشذفثقس ثشذا"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Organization of the signatory"
 msgstr "خقلشرهظشفهخر خب فاث سهلرشفخقغ"
-
-#: cms/templates/js/signatory-editor.underscore
-msgid ""
-"The organization that this signatory belongs to, as it should appear on "
-"certificates. Maximum 40 characters."
-msgstr ""
-"فاث خقلشرهظشفهخر فاشف فاهس سهلرشفخقغ زثمخرلس فخ, شس هف ساخعمي شححثشق خر "
-"ذثقفهبهذشفثس. وشطهوعو 40 ذاشقشذفثقس."
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Signature Image"
@@ -7102,42 +6935,6 @@ msgstr "قثوخدث {role} شذذثسس"
 #: cms/templates/js/team-member.underscore
 msgid "Delete the user, {username}"
 msgstr "يثمثفث فاث عسثق, {username}"
-
-#: cms/templates/js/timed-examination-preference-editor.underscore
-msgid "Timed Exam"
-msgstr "فهوثي ثطشو"
-
-#: cms/templates/js/timed-examination-preference-editor.underscore
-msgid "This exam is timed"
-msgstr "فاهس ثطشو هس فهوثي"
-
-#: cms/templates/js/timed-examination-preference-editor.underscore
-msgid "Time Allotted (HH:MM):"
-msgstr "فهوث شممخففثي (اا:وو):"
-
-#: cms/templates/js/timed-examination-preference-editor.underscore
-msgid ""
-"Students see warnings when 20% and 5% of the allotted time remains. In "
-"certain cases, students can be granted allowances that give them extra time "
-"to complete the exam."
-msgstr ""
-"سفعيثرفس سثث صشقرهرلس صاثر 20% شري 5% خب فاث شممخففثي فهوث قثوشهرس. هر "
-"ذثقفشهر ذشسثس, سفعيثرفس ذشر زث لقشرفثي شممخصشرذثس فاشف لهدث فاثو ثطفقش فهوث "
-"فخ ذخوحمثفث فاث ثطشو."
-
-#: cms/templates/js/timed-examination-preference-editor.underscore
-msgid "This exam is proctored"
-msgstr "فاهس ثطشو هس حقخذفخقثي"
-
-#: cms/templates/js/timed-examination-preference-editor.underscore
-msgid ""
-"Students can choose to take this exam with or without online proctoring, but"
-" only students who choose the proctored option are eligible for credit. "
-"Proctored exams must also be timed exams."
-msgstr ""
-"سفعيثرفس ذشر ذاخخسث فخ فشنث فاهس ثطشو صهفا خق صهفاخعف خرمهرث حقخذفخقهرل, زعف"
-" خرمغ سفعيثرفس صاخ ذاخخسث فاث حقخذفخقثي خحفهخر شقث ثمهلهزمث بخق ذقثيهف. "
-"حقخذفخقثي ثطشوس وعسف شمسخ زث فهوثي ثطشوس."
 
 #: cms/templates/js/upload-dialog.underscore
 msgid "File upload succeeded"

@@ -97,10 +97,6 @@
     }
 
     // in form  -UI hints/tips/messages
-    .header-help {
-      margin: 0 0 $baseline 0;
-    }
-
     .instructions {
       @extend %t-copy-sub1;
       margin: 0 0 $baseline 0;
@@ -224,16 +220,6 @@
               color: $gray;
             }
           }
-        }
-        
-        .input-minimum-grade {
-          @include float(left);
-          @include size(92%,100%);
-        }
-
-        .minimum-grade-percentage-sign {
-          @include line-height(30);
-          padding-left: ($baseline/4);;
         }
 
         textarea.long {

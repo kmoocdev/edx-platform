@@ -1,6 +1,4 @@
-"""
-Test LMS Notes
-"""
+import os
 from uuid import uuid4
 from datetime import datetime
 from nose.plugins.attrib import attr

@@ -8,4 +8,5 @@ Profile Images API Version 1.0
     :maxdepth: 2
     
     overview
+    endpoints
     profile_images

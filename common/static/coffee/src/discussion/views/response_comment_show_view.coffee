@@ -9,8 +9,7 @@ if Backbone?
           _.extend(
             {
               cid: @model.cid,
-              author_display: @getAuthorDisplay(),
-              readOnly: $('.discussion-module').data('read-only')
+              author_display: @getAuthorDisplay()
             },
             @model.attributes
           )

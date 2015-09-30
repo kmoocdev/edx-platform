@@ -7,6 +7,7 @@ import ddt
 from django.core.management import CommandError, call_command
 from tempfile import mkdtemp
 
+from opaque_keys import InvalidKeyError
 from xmodule.modulestore.tests.factories import CourseFactory
 from xmodule.modulestore import ModuleStoreEnum
 from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
@@ -21,9 +22,6 @@ class TestArgParsingCourseExport(unittest.TestCase):
         super(TestArgParsingCourseExport, self).setUp()
 
     def test_no_args(self):
-        """
-        Test export command with no arguments
-        """
         errstring = "export requires two arguments: <course id> <output path>"
         with self.assertRaises(SystemExit) as ex:
             with self.assertRaisesRegexp(CommandError, errstring):
@@ -59,22 +57,9 @@ class TestCourseExport(ModuleStoreTestCase):
             "Could not find course in {}".format(store)
         )
         # Test `export` management command with invalid course_id
-        errstring = "Invalid course_key 'InvalidCourseID'."
-        with self.assertRaises(SystemExit) as ex:
-            with self.assertRaisesRegexp(CommandError, errstring):
-                call_command('export', "InvalidCourseID", self.temp_dir_1)
-        self.assertEqual(ex.exception.code, 1)
+        with self.assertRaises(InvalidKeyError):
+            call_command('export', "InvalidCourseID", self.temp_dir_1)
 
         # Test `export` management command with correct course_id
         for output_dir in [self.temp_dir_1, self.temp_dir_2]:
             call_command('export', course_id, output_dir)
-
-    def test_course_key_not_found(self):
-        """
-        Test export command with a valid course key that doesn't exist
-        """
-        errstring = "Course with x/y/z key not found."
-        with self.assertRaises(SystemExit) as ex:
-            with self.assertRaisesRegexp(CommandError, errstring):
-                call_command('export', "x/y/z", self.temp_dir_1)
-        self.assertEqual(ex.exception.code, 1)

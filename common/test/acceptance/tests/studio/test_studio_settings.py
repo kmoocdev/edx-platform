@@ -14,6 +14,7 @@ from ...pages.studio.settings import SettingsPage
 from ...pages.studio.settings_advanced import AdvancedSettingsPage
 from ...pages.studio.settings_group_configurations import GroupConfigurationsPage
 from ...pages.lms.courseware import CoursewarePage
+from unittest import skip
 from textwrap import dedent
 from xmodule.partitions.partitions import Group
 
@@ -136,7 +137,7 @@ class ContentGroupConfigurationTest(StudioCourseTest):
             <problem markdown="Simple Problem" max_attempts="" weight="">
               <p>Choose Yes.</p>
               <choiceresponse>
-                <checkboxgroup>
+                <checkboxgroup direction="vertical">
                   <choice correct="true">Yes</choice>
                 </checkboxgroup>
               </choiceresponse>

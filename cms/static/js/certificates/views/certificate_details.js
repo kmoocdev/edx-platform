@@ -7,10 +7,9 @@ define([ // jshint ignore:line
     'gettext',
     'js/views/baseview',
     'js/certificates/models/signatory',
-    'js/certificates/views/signatory_details',
-    'js/views/utils/view_utils'
+    'js/certificates/views/signatory_details'
 ],
-function($, _, str, gettext, BaseView, SignatoryModel, SignatoryDetailsView, ViewUtils) {
+function($, _, str, gettext, BaseView, SignatoryModel, SignatoryDetailsView) {
     'use strict';
     var CertificateDetailsView = BaseView.extend({
         tagName: 'div',
@@ -37,20 +36,7 @@ function($, _, str, gettext, BaseView, SignatoryModel, SignatoryDetailsView, Vie
         editCertificate: function(event) {
             // Flip the model into 'editing' mode
             if (event && event.preventDefault) { event.preventDefault(); }
-            var self = this;
-            if (this.model.get("is_active") === true){
-                ViewUtils.confirmThenRunOperation(
-                    gettext('Edit this certificate?'),
-                    gettext('This certificate has already been activated and is live. Are you sure you want to continue editing?'),
-                    gettext('Yes, allow edits to the active Certificate'),
-                    function() {
-                        return self.model.set('editing', true);
-                    }
-                );
-            }
-            else{
-                this.model.set('editing', true);
-            }
+            this.model.set('editing', true);
         },
 
         render: function(showDetails) {

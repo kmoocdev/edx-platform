@@ -711,13 +711,7 @@ class @Problem
     else
       next_index = parseInt(hint_index) + 1
     $.postWithPrefix "#{@url}/hint_button", hint_index: next_index, input_id: @id, (response) =>
-      hint_container = @.$('.problem-hint')
-      hint_container.html(response.contents)
-      MathJax.Hub.Queue [
-        'Typeset'
-        MathJax.Hub
-        hint_container[0]
-      ]
-      hint_container.attr('hint_index', response.hint_index)
+      @$('.problem-hint').html(response.contents)
+      @$('.problem-hint').attr('hint_index', response.hint_index)
       @$('.hint-button').focus()  # a11y focus on click, like the Check button
 

@@ -1,6 +1,5 @@
-"""
-Test UserPreferenceModel and UserPreference events
-"""
+import json
+
 from django.db import IntegrityError
 from django.test import TestCase
 

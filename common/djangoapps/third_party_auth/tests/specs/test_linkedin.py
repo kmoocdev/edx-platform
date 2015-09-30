@@ -1,5 +1,6 @@
 """Integration tests for LinkedIn providers."""
 
+from third_party_auth import provider
 from third_party_auth.tests.specs import base
 
 

@@ -493,6 +493,8 @@ function (HTML5Video, Resizer) {
 
         if (this.videoPlayer.isPlaying()) {
             this.videoPlayer.stopTimer();
+        } else {
+            this.videoPlayer.currentTime = time;
         }
         var isUnplayed = this.videoPlayer.isUnstarted() ||
                          this.videoPlayer.isCued();
@@ -519,8 +521,6 @@ function (HTML5Video, Resizer) {
         if (this.videoPlayer.isPlaying()) {
             this.videoPlayer.runTimer();
         }
-        // Update the the current time when user seek. (YoutubePlayer)
-        this.videoPlayer.currentTime = time;
     }
 
     function runTimer() {

@@ -528,7 +528,6 @@ class EntranceExamTestCases(LoginEnrollmentTestCase, ModuleStoreTestCase):
             self.entrance_exam
         )
         return toc_for_course(
-            self.request.user,
             self.request,
             self.course,
             self.entrance_exam.url_name,
@@ -550,7 +549,7 @@ def answer_entrance_exam_problem(course, request, problem, user=None):
     if not user:
         user = request.user
 
-    # pylint: disable=maybe-no-member
+    # pylint: disable=maybe-no-member,no-member
     grade_dict = {'value': 1, 'max_value': 1, 'user_id': user.id}
     field_data_cache = FieldDataCache.cache_for_descriptor_descendents(
         course.id,

@@ -79,18 +79,8 @@ class CertificatesPage(CoursePage):
         We can't use confirm_prompt because its wait_for_notification is flaky when asynchronous operation
         completed very quickly.
         """
-        EmptyPromise(
-            lambda: self.q(css='.prompt').present,
-            'Confirmation prompt is displayed'
-        ).fulfill()
-        EmptyPromise(
-            lambda: self.q(css='.prompt .action-primary').present,
-            'Primary button is displayed'
-        ).fulfill()
-        EmptyPromise(
-            lambda: self.q(css='.prompt .action-primary').visible,
-            'Primary button is visible'
-        ).fulfill()
+        self.wait_for_element_visibility('.prompt', 'Prompt is visible')
+        self.wait_for_element_visibility('.prompt .action-primary', 'Confirmation button is visible')
 
     def wait_for_first_certificate_button(self):
         """
@@ -118,23 +108,17 @@ class CertificatesPage(CoursePage):
         """
         Clicks the 'Create your first certificate' button, which is only displayed at zero state
         """
-        self.wait_for_first_certificate_button()
         self.q(css=self.certficate_css + " .new-button").first.click()
 
     def click_add_certificate_button(self):
         """
         Clicks the 'Add new certificate' button, which is displayed when certificates already exist
         """
-        self.wait_for_add_certificate_button()
         self.q(css=self.certficate_css + " .action-add").first.click()
 
-    def click_confirmation_prompt_primary_button(self):
-        """
-        Clicks the main action presented by the prompt (such as 'Delete')
-        """
-        self.wait_for_confirmation_prompt()
-        self.q(css='a.button.action-primary').first.click()
-        self.wait_for_ajax()
+    ################
+    # Workflows
+    ################
 
 
 class Certificate(object):
@@ -256,19 +240,13 @@ class Certificate(object):
         """
         Returns whether or not the certificate delete icon is present.
         """
-        EmptyPromise(
-            lambda: self.find_css('.actions .delete').present,
-            'Certificate delete button is displayed'
-        ).fulfill()
+        return self.find_css('.actions .delete').present
 
     def wait_for_hide_details_toggle(self):
         """
         Certificate details are expanded.
         """
-        EmptyPromise(
-            lambda: self.find_css('a.detail-toggle.hide-details').present,
-            'Certificate details are expanded'
-        ).fulfill()
+        return self.find_css('a.detail-toggle.hide-details').present
 
     ################
     # Click Actions
@@ -312,12 +290,20 @@ class Certificate(object):
         """
         self.find_css('a.detail-toggle').first.click()
 
-    def click_delete_certificate_button(self):
+    ################
+    # Workflows
+    ################
+
+    def delete_certificate(self):
         """
-        Remove the first (possibly the only) certificate from the set
+        Delete the certificate
         """
         self.wait_for_certificate_delete_button()
+
         self.find_css('.actions .delete').first.click()
+        self.page.wait_for_confirmation_prompt()
+        self.page.q(css='a.button.action-primary').first.click()
+        self.page.q(css='a.button.action-primary').first.click()
         self.page.wait_for_ajax()
 
 

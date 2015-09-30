@@ -197,7 +197,7 @@ class RegistrationView(APIView):
 
         # Map field names to the instance method used to add the field to the form
         self.field_handlers = {}
-        for field_name in self.DEFAULT_FIELDS + self.EXTRA_FIELDS:
+        for field_name in (self.DEFAULT_FIELDS + self.EXTRA_FIELDS):
             handler = getattr(self, "_add_{field_name}_field".format(field_name=field_name))
             self.field_handlers[field_name] = handler
 
@@ -570,14 +570,6 @@ class RegistrationView(APIView):
         # Translators: This label appears above a field on the registration form
         # which allows the user to input the city in which they live.
         city_label = _(u"City")
-        error_msg = _(u"Please select your City.")
-
-        citys = [(u'서울특별시', u'서울특별시'), (u'부산광역시', u'부산광역시'), (u'대구광역시', u'대구광역시'),
-                 (u'울산광역시', u'울산광역시'), (u'광주광역시', u'광주광역시'), (u'대전광역시', u'대전광역시'),
-                 (u'인천광역시', u'인천광역시'), (u'세종특별자치시', u'세종특별자치시'), (u'경기도', u'경기도'),
-                 (u'강원도', u'강원도'), (u'충청북도', u'충청북도'), (u'충청남도', u'충청남도'),
-                 (u'경상북도', u'경상북도'), (u'경상남도', u'경상남도'), (u'전라북도', u'전라북도'),
-                 (u'전라남도', u'전라남도'), (u'제주특별자치도', u'제주특별자치도'), (u'해외', u'해외')]
 
         error_msg = _(u"해당 도시를 선택하세요.")
 

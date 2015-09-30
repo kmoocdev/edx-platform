@@ -47,8 +47,7 @@ define([
         });
 
         describe('Initial display', function() {
-            // TODO fix this, see TNL-1475
-            xit('can render itself', function() {
+            it('can render itself', function() {
                 var view = initializePage();
                 expect(view.$('.ui-loading')).toBeVisible();
                 view.render();

@@ -18,10 +18,10 @@ var edx = edx || {};
             validate: {
 
                 msg: {
-                    email: '<li><%- gettext("The email address you\'ve provided isn\'t formatted correctly.") %></li>',
-                    min: '<li><%- _.sprintf( gettext("%(field)s must have at least %(count)d characters."), context ) %></li>',
-                    max: '<li><%- _.sprintf( gettext("%(field)s can only contain up to %(count)d characters."), context ) %></li>',
-                    required: '<li><%- _.sprintf( gettext("Please enter your %(field)s."), context ) %></li>',
+                    email: '<li><%- gettext("이메일형식이 올바르지 않습니다.") %></li>',
+                    min: '<li><%- _.sprintf( gettext("%(field)s 는 반드시 최소 %(count)d자 이상입니다."), context ) %></li>',
+                    max: '<li><%- _.sprintf( gettext("%(field)s 는 최대 %(count)d자 허용범위입니다."), context ) %></li>',
+                    required: '<li><%- _.sprintf( gettext("%(field)s(을)를 입력하세요."), context ) %></li>',
                     custom: '<li><%= content %></li>'
                 },
 

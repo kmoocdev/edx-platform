@@ -111,7 +111,8 @@ class SearchIndexerBase(object):
             exclude_dictionary={"id": list(exclude_items)}
         )
         result_ids = [result["data"]["id"] for result in response["results"]]
-        searcher.remove(cls.DOCUMENT_TYPE, result_ids)
+        for result_id in result_ids:
+            searcher.remove(cls.DOCUMENT_TYPE, result_id)
 
     @classmethod
     def index(cls, modulestore, structure_key, triggered_at=None, reindex_age=REINDEX_AGE):
@@ -141,7 +142,7 @@ class SearchIndexerBase(object):
         structure_key = cls.normalize_structure_key(structure_key)
         location_info = cls._get_location_info(structure_key)
 
-        # Wrap counter in dictionary - otherwise we seem to lose scope inside the embedded function `prepare_item_index`
+        # Wrap counter in dictionary - otherwise we seem to lose scope inside the embedded function `index_item`
         indexed_count = {
             "count": 0
         }
@@ -152,20 +153,15 @@ class SearchIndexerBase(object):
         # list - those are ready to be destroyed
         indexed_items = set()
 
-        # items_index is a list of all the items index dictionaries.
-        # it is used to collect all indexes and index them using bulk API,
-        # instead of per item index API call.
-        items_index = []
-
         def get_item_location(item):
             """
             Gets the version agnostic item location
             """
             return item.location.version_agnostic().replace(branch=None)
 
-        def prepare_item_index(item, skip_index=False, groups_usage_info=None):
+        def index_item(item, skip_index=False, groups_usage_info=None):
             """
-            Add this item to the items_index and indexed_items list
+            Add this item to the search index and indexed_items list
 
             Arguments:
             item - item to add to index, its children will be processed recursively
@@ -216,7 +212,7 @@ class SearchIndexerBase(object):
                 for child_item in item.get_children():
                     if modulestore.has_published_version(child_item):
                         children_groups_usage.append(
-                            prepare_item_index(
+                            index_item(
                                 child_item,
                                 skip_index=skip_child_index,
                                 groups_usage_info=groups_usage_info
@@ -238,7 +234,7 @@ class SearchIndexerBase(object):
                     item_index['start_date'] = item.start
                 item_index['content_groups'] = item_content_groups if item_content_groups else None
                 item_index.update(cls.supplemental_fields(item))
-                items_index.append(item_index)
+                searcher.index(cls.DOCUMENT_TYPE, item_index)
                 indexed_count["count"] += 1
                 return item_content_groups
             except Exception as err:  # pylint: disable=broad-except
@@ -256,8 +252,7 @@ class SearchIndexerBase(object):
 
                 # Now index the content
                 for item in structure.get_children():
-                    prepare_item_index(item, groups_usage_info=groups_usage_info)
-                searcher.index(cls.DOCUMENT_TYPE, items_index)
+                    index_item(item, groups_usage_info=groups_usage_info)
                 cls.remove_deleted_items(searcher, structure_key, indexed_items)
         except Exception as err:  # pylint: disable=broad-except
             # broad exception so that index operation does not prevent the rest of the application from working
@@ -628,7 +623,7 @@ class CourseAboutSearchIndexer(object):
 
         # Broad exception handler to protect around and report problems with indexing
         try:
-            searcher.index(cls.DISCOVERY_DOCUMENT_TYPE, [course_info])
+            searcher.index(cls.DISCOVERY_DOCUMENT_TYPE, course_info)
         except:  # pylint: disable=bare-except
             log.exception(
                 "Course discovery indexing error encountered, course discovery index may be out of date %s",

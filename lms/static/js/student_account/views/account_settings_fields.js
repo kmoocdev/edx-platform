@@ -1,8 +1,8 @@
 ;(function (define, undefined) {
     'use strict';
     define([
-        'gettext', 'jquery', 'underscore', 'backbone', 'js/views/fields'
-    ], function (gettext, $, _, Backbone, FieldViews) {
+        'gettext', 'jquery', 'underscore', 'backbone', 'js/mustache', 'js/views/fields'
+    ], function (gettext, $, _, Backbone, RequireMustache, FieldViews) {
 
         var AccountSettingsFieldViews = {};
 
@@ -99,13 +99,12 @@
             },
 
             saveValue: function () {
-                if (this.persistChanges === true) {
-                    var attributes = {},
-                        value = this.fieldValue() ? [{'code': this.fieldValue()}] : [];
-                    attributes[this.options.valueAttribute] = value;
-                    this.saveAttributes(attributes);
-                }
+                var attributes = {},
+                    value = this.fieldValue() ? [{'code': this.fieldValue()}] : [];
+                attributes[this.options.valueAttribute] = value;
+                this.saveAttributes(attributes);
             }
+
         });
 
         AccountSettingsFieldViews.AuthFieldView = FieldViews.LinkFieldView.extend({

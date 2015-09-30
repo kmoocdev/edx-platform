@@ -7,6 +7,7 @@ import urllib
 import json
 import cgi
 
+from collections import OrderedDict
 from datetime import datetime
 from django.utils import translation
 from django.utils.translation import ugettext as _
@@ -31,26 +32,20 @@ from markupsafe import escape
 
 from courseware import grades
 from courseware.access import has_access, in_preview_mode, _adjust_start_date_for_beta_testers
-from courseware.access_response import StartDateError
 from courseware.courses import (
-    get_courses, get_course, get_course_by_id,
+    get_courses, get_course,
     get_studio_url, get_course_with_access,
     sort_by_announcement,
     sort_by_start_date,
-<<<<<<< .merge_file_zxH4Um
     get_courses_by_org,
 )
-=======
-    UserNotEnrolled)
->>>>>>> .merge_file_ZjzbJm
 from courseware.masquerade import setup_masquerade
 from openedx.core.djangoapps.credit.api import (
     get_credit_requirement_status,
     is_user_eligible_for_credit,
     is_credit_course
 )
-from courseware.models import StudentModuleHistory
-from courseware.model_data import FieldDataCache, ScoresClient
+from courseware.model_data import FieldDataCache
 from .module_render import toc_for_course, get_module_for_descriptor, get_module, get_module_by_usage_id
 from .entrance_exams import (
     course_has_entrance_exam,
@@ -67,7 +62,6 @@ from open_ended_grading.views import StaffGradingTab, PeerGradingTab, OpenEndedG
 from student.models import UserTestGroup, CourseEnrollment
 from student.views import is_course_blocked
 from util.cache import cache, cache_if_anonymous
-from util.date_utils import strftime_localized
 from xblock.fragment import Fragment
 from xmodule.modulestore.django import modulestore
 from xmodule.modulestore.exceptions import ItemNotFoundError, NoPathToItem
@@ -147,7 +141,6 @@ def courses(request):
     )
 
 
-<<<<<<< .merge_file_zxH4Um
 @ensure_csrf_cookie
 @cache_if_anonymous()
 def haewoondaex(request, univ_id):
@@ -167,9 +160,6 @@ def schools(request):
 
 
 def render_accordion(request, course, chapter, section, field_data_cache):
-=======
-def render_accordion(user, request, course, chapter, section, field_data_cache):
->>>>>>> .merge_file_ZjzbJm
     """
     Draws navigation bar. Takes current position in accordion as
     parameter.
@@ -181,7 +171,7 @@ def render_accordion(user, request, course, chapter, section, field_data_cache):
     Returns the html string
     """
     # grab the table of contents
-    toc = toc_for_course(user, request, course, chapter, section, field_data_cache)
+    toc = toc_for_course(request, course, chapter, section, field_data_cache)
 
     context = dict([
         ('toc', toc),
@@ -408,10 +398,10 @@ def _index_bulk_op(request, course_key, chapter, section, position):
         except ValueError:
             raise Http404(u"Position {} is not an integer!".format(position))
 
-    course = get_course_with_access(request.user, 'load', course_key, depth=2)
-    staff_access = has_access(request.user, 'staff', course)
-    masquerade, user = setup_masquerade(request, course_key, staff_access, reset_masquerade_data=True)
+    user = request.user
+    course = get_course_with_access(user, 'load', course_key, depth=2)
 
+    staff_access = has_access(user, 'staff', course)
     registered = registered_for_course(course, user)
     if not registered:
         # TODO (vshnayder): do course instructors need to be registered to see course?
@@ -443,6 +433,8 @@ def _index_bulk_op(request, course_key, chapter, section, position):
     if survey.utils.must_answer_survey(course, user):
         return redirect(reverse('course_survey', args=[unicode(course.id)]))
 
+    masquerade = setup_masquerade(request, course_key, staff_access)
+
     try:
         field_data_cache = FieldDataCache.cache_for_descriptor_descendents(
             course_key, user, course, depth=2)
@@ -459,7 +451,7 @@ def _index_bulk_op(request, course_key, chapter, section, position):
 
         context = {
             'csrf': csrf(request)['csrf_token'],
-            'accordion': render_accordion(user, request, course, chapter, section, field_data_cache),
+            'accordion': render_accordion(request, course, chapter, section, field_data_cache),
             'COURSE_TITLE': course.display_name_with_default,
             'course': course,
             'init': '',
@@ -503,7 +495,7 @@ def _index_bulk_op(request, course_key, chapter, section, position):
         # settings.
         show_chat = course.show_chat and settings.FEATURES['ENABLE_CHAT']
         if show_chat:
-            context['chat'] = chat_settings(course, request.user)
+            context['chat'] = chat_settings(course, user)
             # If we couldn't load the chat settings, then don't show
             # the widget in the courseware.
             if context['chat'] is None:
@@ -564,7 +556,7 @@ def _index_bulk_op(request, course_key, chapter, section, position):
             )
 
             section_module = get_module_for_descriptor(
-                user,
+                request.user,
                 request,
                 section_descriptor,
                 field_data_cache,
@@ -578,10 +570,9 @@ def _index_bulk_op(request, course_key, chapter, section, position):
                 # they don't have access to.
                 raise Http404
 
-            # Save where we are in the chapter.
+            # Save where we are in the chapter
             save_child_position(chapter_module, section)
-            section_render_context = {'activate_block_id': request.GET.get('activate_block_id')}
-            context['fragment'] = section_module.render(STUDENT_VIEW, section_render_context)
+            context['fragment'] = section_module.render(STUDENT_VIEW)
             context['section_title'] = section_descriptor.display_name_with_default
         else:
             # section is none, so display a message
@@ -627,9 +618,14 @@ def _index_bulk_op(request, course_key, chapter, section, position):
             raise
         else:
             log.exception(
-                u"Error in index view: user=%s, effective_user=%s, course=%s, chapter=%s section=%s position=%s",
-                request.user, user, course, chapter, section, position
-            )
+                u"Error in index view: user={user}, course={course}, chapter={chapter}"
+                u" section={section} position={position}".format(
+                    user=user,
+                    course=course,
+                    chapter=chapter,
+                    section=section,
+                    position=position
+                ))
             try:
                 result = render_to_response('courseware/courseware-error.html', {
                     'staff_access': staff_access,
@@ -661,12 +657,9 @@ def jump_to_id(request, course_id, module_id):
             ))
     if len(items) > 1:
         log.warning(
-            u"Multiple items found with id: %s in course_id: %s. Referer: %s. Using first: %s",
-            module_id,
-            course_id,
-            request.META.get("HTTP_REFERER", ""),
-            items[0].location.to_deprecated_string()
-        )
+            u"Multiple items found with id: {0} in course_id: {1}. Referer: {2}. Using first: {3}".format(
+                module_id, course_id, request.META.get("HTTP_REFERER", ""), items[0].location.to_deprecated_string()
+            ))
 
     return jump_to(request, course_id, items[0].location.to_deprecated_string())
 
@@ -705,36 +698,22 @@ def course_info(request, course_id):
     Assumes the course_id is in a valid format.
     """
     course_key = SlashSeparatedCourseKey.from_deprecated_string(course_id)
+
     with modulestore().bulk_operations(course_key):
-        course = get_course_by_id(course_key, depth=2)
-        access_response = has_access(request.user, 'load', course, course_key)
-
-        if not access_response:
-
-            # The user doesn't have access to the course. If they're
-            # denied permission due to the course not being live yet,
-            # redirect to the dashboard page.
-            if isinstance(access_response, StartDateError):
-                start_date = strftime_localized(course.start, 'SHORT_DATE')
-                params = urllib.urlencode({'notlive': start_date})
-                return redirect('{0}?{1}'.format(reverse('dashboard'), params))
-            # Otherwise, give a 404 to avoid leaking info about access
-            # control.
-            raise Http404("Course not found.")
-
-        staff_access = has_access(request.user, 'staff', course)
-        masquerade, user = setup_masquerade(request, course_key, staff_access, reset_masquerade_data=True)
+        course = get_course_with_access(request.user, 'load', course_key)
 
         # If the user needs to take an entrance exam to access this course, then we'll need
         # to send them to that specific course module before allowing them into other areas
-        if user_must_complete_entrance_exam(request, user, course):
+        if user_must_complete_entrance_exam(request, request.user, course):
             return redirect(reverse('courseware', args=[unicode(course.id)]))
 
         # check to see if there is a required survey that must be taken before
         # the user can access the course.
-        if request.user.is_authenticated() and survey.utils.must_answer_survey(course, user):
+        if request.user.is_authenticated() and survey.utils.must_answer_survey(course, request.user):
             return redirect(reverse('course_survey', args=[unicode(course.id)]))
 
+        staff_access = has_access(request.user, 'staff', course)
+        masquerade = setup_masquerade(request, course_key, staff_access)  # allow staff to masquerade on the info page
         studio_url = get_studio_url(course, 'course_info')
 
         # link to where the student should go to enroll in the course:
@@ -743,7 +722,7 @@ def course_info(request, course_id):
         if settings.FEATURES.get('ENABLE_MKTG_SITE'):
             url_to_enroll = marketing_link('COURSES')
 
-        show_enroll_banner = request.user.is_authenticated() and not CourseEnrollment.is_enrolled(user, course.id)
+        show_enroll_banner = request.user.is_authenticated() and not CourseEnrollment.is_enrolled(request.user, course.id)
 
         context = {
             'request': request,
@@ -758,7 +737,7 @@ def course_info(request, course_id):
         }
 
         now = datetime.now(UTC())
-        effective_start = _adjust_start_date_for_beta_testers(user, course, course_key)
+        effective_start = _adjust_start_date_for_beta_testers(request.user, course, course_key)
         if not in_preview_mode() and staff_access and now < effective_start:
             # Disable student view button if user is staff and
             # course is not yet visible to students.
@@ -811,7 +790,7 @@ def syllabus(request, course_id):
     course_key = SlashSeparatedCourseKey.from_deprecated_string(course_id)
 
     course = get_course_with_access(request.user, 'load', course_key)
-    staff_access = bool(has_access(request.user, 'staff', course))
+    staff_access = has_access(request.user, 'staff', course)
 
     return render_to_response('courseware/syllabus.html', {
         'course': course,
@@ -873,7 +852,7 @@ def course_about(request, course_id):
 
         registered = registered_for_course(course, request.user)
 
-        staff_access = bool(has_access(request.user, 'staff', course))
+        staff_access = has_access(request.user, 'staff', course)
         studio_url = get_studio_url(course, 'settings/details')
 
         if has_access(request.user, 'load', course):
@@ -881,7 +860,7 @@ def course_about(request, course_id):
         else:
             course_target = reverse('about_course', args=[course.id.to_deprecated_string()])
 
-        show_courseware_link = bool(
+        show_courseware_link = (
             (
                 has_access(request.user, 'load', course)
                 and has_access(request.user, 'view_courseware_with_prerequisites', course)
@@ -910,7 +889,7 @@ def course_about(request, course_id):
         can_add_course_to_cart = _is_shopping_cart_enabled and registration_price
 
         # Used to provide context to message to student if enrollment not allowed
-        can_enroll = bool(has_access(request.user, 'enroll', course))
+        can_enroll = has_access(request.user, 'enroll', course)
         invitation_only = course.invitation_only
         is_course_full = CourseEnrollment.objects.is_course_full(course)
 
@@ -976,10 +955,10 @@ def mktg_course_about(request, course_id):
     else:
         course_target = reverse('about_course', args=[course.id.to_deprecated_string()])
 
-    allow_registration = bool(has_access(request.user, 'enroll', course))
+    allow_registration = has_access(request.user, 'enroll', course)
 
-    show_courseware_link = bool(has_access(request.user, 'load', course) or
-                                settings.FEATURES.get('ENABLE_LMS_MIGRATION'))
+    show_courseware_link = (has_access(request.user, 'load', course) or
+                            settings.FEATURES.get('ENABLE_LMS_MIGRATION'))
     course_modes = CourseMode.modes_for_course_dict(course.id)
 
     context = {
@@ -1073,7 +1052,7 @@ def _progress(request, course_key, student_id):
     if survey.utils.must_answer_survey(course, request.user):
         return redirect(reverse('course_survey', args=[unicode(course.id)]))
 
-    staff_access = bool(has_access(request.user, 'staff', course))
+    staff_access = has_access(request.user, 'staff', course)
 
     if student_id is None or student_id == request.user.id:
         # always allowed to see your own profile
@@ -1094,15 +1073,10 @@ def _progress(request, course_key, student_id):
     # The pre-fetching of groups is done to make auth checks not require an
     # additional DB lookup (this kills the Progress page in particular).
     student = User.objects.prefetch_related("groups").get(id=student.id)
-    field_data_cache = grades.field_data_cache_for_grading(course, student)
-    scores_client = ScoresClient.from_field_data_cache(field_data_cache)
-    courseware_summary = grades.progress_summary(
-        student, request, course, field_data_cache=field_data_cache, scores_client=scores_client
-    )
-    grade_summary = grades.grade(
-        student, request, course, field_data_cache=field_data_cache, scores_client=scores_client
-    )
+
+    courseware_summary = grades.progress_summary(student, request, course)
     studio_url = get_studio_url(course, 'settings/grading')
+    grade_summary = grades.grade(student, request, course)
 
     if courseware_summary is None:
         #This means the student didn't have access to the course (which the instructor requested)
@@ -1126,14 +1100,15 @@ def _progress(request, course_key, student_id):
     if show_generate_cert_btn:
         context.update(certs_api.certificate_downloadable_status(student, course_key))
         # showing the certificate web view button if feature flags are enabled.
-        if certs_api.has_html_certificates_enabled(course_key, course):
+        if settings.FEATURES.get('CERTIFICATES_HTML_VIEW', False):
             if certs_api.get_active_web_certificate(course) is not None:
                 context.update({
                     'show_cert_web_view': True,
                     'cert_web_view_url': u'{url}'.format(
                         url=certs_api.get_certificate_url(
                             user_id=student.id,
-                            course_id=unicode(course.id)
+                            course_id=unicode(course.id),
+                            verify_uuid=None
                         )
                     )
                 })
@@ -1220,7 +1195,7 @@ def submission_history(request, course_id, student_username, location):
         return HttpResponse(escape(_(u'Invalid location.')))
 
     course = get_course_with_access(request.user, 'load', course_key)
-    staff_access = bool(has_access(request.user, 'staff', course))
+    staff_access = has_access(request.user, 'staff', course)
 
     # Permission Denied if they don't have staff access and are trying to see
     # somebody else's submission history.
@@ -1229,45 +1204,15 @@ def submission_history(request, course_id, student_username, location):
 
     user_state_client = DjangoXBlockUserStateClient()
     try:
-        history_entries = list(user_state_client.get_history(student_username, usage_key))
+        history_entries = user_state_client.get_history(student_username, usage_key)
     except DjangoXBlockUserStateClient.DoesNotExist:
         return HttpResponse(escape(_(u'User {username} has never accessed problem {location}').format(
             username=student_username,
             location=location
         )))
 
-    # This is ugly, but until we have a proper submissions API that we can use to provide
-    # the scores instead, it will have to do.
-    scores = list(StudentModuleHistory.objects.filter(
-        student_module__module_state_key=usage_key,
-        student_module__student__username=student_username,
-        student_module__course_id=course_key
-    ).order_by('-id'))
-
-    if len(scores) != len(history_entries):
-        log.warning(
-            "Mismatch when fetching scores for student "
-            "history for course %s, user %s, xblock %s. "
-            "%d scores were found, and %d history entries were found. "
-            "Matching scores to history entries by date for display.",
-            course_id,
-            student_username,
-            location,
-            len(scores),
-            len(history_entries),
-        )
-        scores_by_date = {
-            score.created: score
-            for score in scores
-        }
-        scores = [
-            scores_by_date[history.updated]
-            for history in history_entries
-        ]
-
     context = {
         'history_entries': history_entries,
-        'scores': scores,
         'username': student_username,
         'location': location,
         'course_id': course_key.to_deprecated_string()
@@ -1310,7 +1255,7 @@ def get_static_tab_contents(request, course, tab):
         request.user, request, loc, field_data_cache, static_asset_path=course.static_asset_path, course=course
     )
 
-    logging.debug('course_module = %s', tab_module)
+    logging.debug('course_module = {0}'.format(tab_module))
 
     html = ''
     if tab_module is not None:
@@ -1319,7 +1264,7 @@ def get_static_tab_contents(request, course, tab):
         except Exception:  # pylint: disable=broad-except
             html = render_to_string('courseware/error-message.html', None)
             log.exception(
-                u"Error rendering course=%s, tab=%s", course, tab['url_slug']
+                u"Error rendering course={course}, tab={tab_url}".format(course=course, tab_url=tab['url_slug'])
             )
 
     return html
@@ -1505,8 +1450,8 @@ def _track_successful_certificate_generation(user_id, course_id):  # pylint: dis
 
     """
     if settings.FEATURES.get('SEGMENT_IO_LMS') and hasattr(settings, 'SEGMENT_IO_LMS_KEY'):
-        event_name = 'edx.bi.user.certificate.generate'
-        tracking_context = tracker.get_tracker().resolve_context()
+        event_name = 'edx.bi.user.certificate.generate'  # pylint: disable=no-member
+        tracking_context = tracker.get_tracker().resolve_context()  # pylint: disable=no-member
 
         analytics.track(
             user_id,
@@ -1535,10 +1480,7 @@ def render_xblock(request, usage_key_string, check_if_enrolled=True):
 
     with modulestore().bulk_operations(course_key):
         # verify the user has access to the course, including enrollment check
-        try:
-            course = get_course_with_access(request.user, 'load', course_key, check_if_enrolled=check_if_enrolled)
-        except UserNotEnrolled:
-            raise Http404("Course not found.")
+        course = get_course_with_access(request.user, 'load', course_key, check_if_enrolled=check_if_enrolled)
 
         # get the block, which verifies whether the user has access to the block.
         block, _ = get_module_by_usage_id(
@@ -1553,7 +1495,7 @@ def render_xblock(request, usage_key_string, check_if_enrolled=True):
             'disable_header': True,
             'disable_window_wrap': True,
             'disable_preview_menu': True,
-            'staff_access': bool(has_access(request.user, 'staff', course)),
+            'staff_access': has_access(request.user, 'staff', course),
             'xqa_server': settings.FEATURES.get('XQA_SERVER', 'http://your_xqa_server.com'),
         }
         return render_to_response('courseware/courseware-chromeless.html', context)

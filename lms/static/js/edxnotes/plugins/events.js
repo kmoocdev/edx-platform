@@ -1,7 +1,7 @@
 ;(function (define, undefined) {
 'use strict';
 define([
-    'underscore', 'annotator_1.2.9'
+    'underscore', 'annotator_1.2.9', 'underscore.string'
 ], function (_, Annotator) {
     /**
      * Modifies Annotator.Plugin.Store.annotationCreated to make it trigger a new
