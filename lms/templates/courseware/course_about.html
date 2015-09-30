@@ -1,5 +1,6 @@
 <%namespace name='static' file='../static_content.html'/>
 <%!
+import os.path
 from urllib import quote_plus
 
 from microsite_configuration import microsite
@@ -258,7 +259,8 @@ from edxmako.shortcuts import marketing_link
                 # tweet_action = u"http://twitter.com/intent/tweet?text={tweet_text}".format(tweet_text=tweet_text)
                 tweet_action = u"http://twitter.com/intent/tweet?text="+quote_plus(tweet_text.encode('utf-8'), safe=':/')
 
-                facebook_link = microsite.get_value('course_about_facebook_link', settings.PLATFORM_FACEBOOK_ACCOUNT)
+                # facebook_link = microsite.get_value('course_about_facebook_link', settings.PLATFORM_FACEBOOK_ACCOUNT)
+                facebook_link = u"http://www.facebook.com/sharer/sharer.php?u="+site_domain+reverse('about_course', args=[course.id.to_deprecated_string()])
 
                 email_subject = u"mailto:?subject={subject}&body={body}".format(
                     subject=_("Take a course with {platform} online").format(platform=platform_name),
@@ -277,11 +279,10 @@ from edxmako.shortcuts import marketing_link
                 <i class="icon fa fa-twitter"></i><span class="sr">${_("Tweet that you've registered for this course")}</span>
               </a>
 
-              <!-- 강좌소개란에서 facebook 아이콘 제거
               <a onmouseover="$('.sharing-message').text('페이스북으로 공유하기');" href="${facebook_link}" class="share">
                 <i class="icon fa fa-thumbs-up"></i><span class="sr">${_("Post a Facebook message to say you've registered for this course")}</span>
               </a>
-              -->
+
               <a onmouseover="$('.sharing-message').text('이메일로 공유하기');" href="${email_subject}" class="share">
                 <i class="icon fa fa-envelope"></i><span class="sr">${_("Email someone to say you've registered for this course")}</span>
               </a>
