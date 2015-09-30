@@ -1,5 +1,7 @@
 <%namespace name='static' file='../static_content.html'/>
 <%!
+from urllib import quote_plus
+
 from microsite_configuration import microsite
 from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
@@ -252,7 +254,9 @@ from edxmako.shortcuts import marketing_link
                         path=reverse('about_course', args=[course.id.to_deprecated_string()])
                     )
                 ).replace(u" ", u"+")
-                tweet_action = u"http://twitter.com/intent/tweet?text={tweet_text}".format(tweet_text=tweet_text)
+
+                # tweet_action = u"http://twitter.com/intent/tweet?text={tweet_text}".format(tweet_text=tweet_text)
+                tweet_action = u"http://twitter.com/intent/tweet?text="+quote_plus(tweet_text.encode('utf-8'), safe=':/')
 
                 facebook_link = microsite.get_value('course_about_facebook_link', settings.PLATFORM_FACEBOOK_ACCOUNT)
 
