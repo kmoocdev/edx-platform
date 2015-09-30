@@ -145,7 +145,7 @@ def courses(request):
 @cache_if_anonymous()
 def haewoondaex(request, univ_id):
     courses_list = get_courses_by_org(request.user, univ_id, request.META.get('HTTP_HOST'))
-    course_discovery_meanings = getattr(settings, 'COURSE_DISCOVERY_MEANINGS', {})
+    course_discovery_meanings = getattr(settings, 'COURSE_DISCOVERY_MEANINGS', False)
 
     return render_to_response(
         "courseware/univ_intro_"+univ_id+".html",
