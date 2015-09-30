@@ -105,11 +105,6 @@ div.course-wrapper {
 
     p {
       margin-bottom: lh();
-
-      &:empty {
-        display: none;
-        margin-bottom: 0;
-      }
     }
 
     .sequential-status-message {
@@ -302,7 +297,7 @@ div.course-wrapper {
     }
 
     @media print {
-      padding: 0 2mm;
+      padding: 4mm 2mm 0;
       background: transparent !important;
     }
   }

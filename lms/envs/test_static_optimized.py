@@ -35,7 +35,7 @@ XQUEUE_INTERFACE = {
 ######################### Static file overrides ####################################
 
 # Redirect to the test_root folder within the repo
-TEST_ROOT = REPO_ROOT / "test_root"  # pylint: disable=no-value-for-parameter
+TEST_ROOT = REPO_ROOT / "test_root"
 LOG_DIR = (TEST_ROOT / "log").abspath()
 
 # Store the static files under test root so that they don't overwrite existing static assets
@@ -45,3 +45,4 @@ STATIC_ROOT = (TEST_ROOT / "staticfiles" / "lms").abspath()
 # 1. Uglify is by far the slowest part of the build process
 # 2. Having full source code makes debugging tests easier for developers
 os.environ['REQUIRE_BUILD_PROFILE_OPTIMIZE'] = 'none'
+PIPELINE_JS_COMPRESSOR = None

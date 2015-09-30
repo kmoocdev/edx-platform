@@ -1,9 +1,9 @@
 """
-Settings for Bok Choy tests that are used for running CMS and LMS.
+Settings for Bok Choy tests that are used when running Studio.
 
 Bok Choy uses two different settings files:
 1. test_static_optimized is used when invoking collectstatic
-2. bok_choy is used when running CMS and LMS
+2. bok_choy is used when running the tests
 
 Note: it isn't possible to have a single settings file, because Django doesn't
 support both generating static assets to a directory and also serving static
@@ -26,7 +26,7 @@ from path import path
 # This is a convenience for ensuring (a) that we can consistently find the files
 # and (b) that the files are the same in Jenkins as in local dev.
 os.environ['SERVICE_VARIANT'] = 'bok_choy'
-os.environ['CONFIG_ROOT'] = path(__file__).abspath().dirname()  # pylint: disable=no-value-for-parameter
+os.environ['CONFIG_ROOT'] = path(__file__).abspath().dirname()
 
 from .aws import *  # pylint: disable=wildcard-import, unused-wildcard-import
 
@@ -36,7 +36,7 @@ from .aws import *  # pylint: disable=wildcard-import, unused-wildcard-import
 INSTALLED_APPS += ('django_extensions',)
 
 # Redirect to the test_root folder within the repo
-TEST_ROOT = REPO_ROOT / "test_root"  # pylint: disable=no-value-for-parameter
+TEST_ROOT = REPO_ROOT / "test_root"
 GITHUB_REPO_ROOT = (TEST_ROOT / "data").abspath()
 LOG_DIR = (TEST_ROOT / "log").abspath()
 DATA_DIR = TEST_ROOT / "data"
@@ -45,7 +45,7 @@ DATA_DIR = TEST_ROOT / "data"
 update_module_store_settings(
     MODULESTORE,
     module_store_options={
-        'fs_root': (TEST_ROOT / "data").abspath(),  # pylint: disable=no-value-for-parameter
+        'fs_root': (TEST_ROOT / "data").abspath(),
     },
     xml_store_options={
         'data_dir': (TEST_ROOT / "data").abspath(),
@@ -112,7 +112,7 @@ FEATURES['ENABLE_LIBRARY_INDEX'] = True
 SEARCH_ENGINE = "search.tests.mock_search_engine.MockSearchEngine"
 # Path at which to store the mock index
 MOCK_SEARCH_BACKING_FILE = (
-    TEST_ROOT / "index_file.dat"  # pylint: disable=no-value-for-parameter
+    TEST_ROOT / "index_file.dat"
 ).abspath()
 
 # Generate a random UUID so that different runs of acceptance tests don't break each other

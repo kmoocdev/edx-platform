@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This file demonstrates writing tests using the unittest module. These will pass
-when you run "manage.py test".
-
-Replace this with more appropriate tests for your application.
+Miscellaneous tests for the student app.
 """
 from datetime import datetime, timedelta
 import logging
@@ -13,23 +10,25 @@ import ddt
 
 from django.conf import settings
 from django.contrib.auth.models import User, AnonymousUser
-from django.contrib.sessions.middleware import SessionMiddleware
 from django.core.urlresolvers import reverse
 from django.test import TestCase
-from django.test.client import RequestFactory, Client
+from django.test.client import Client
 from mock import Mock, patch
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
 
 from student.models import (
     anonymous_id_for_user, user_by_anonymous_id, CourseEnrollment, unique_id_for_user, LinkedInAddToProfileConfiguration
 )
-from student.views import (process_survey_link, _cert_info,
-                           change_enrollment, complete_course_mode_info)
+from student.views import (
+    process_survey_link,
+    _cert_info,
+    complete_course_mode_info,
+)
 from student.tests.factories import UserFactory, CourseModeFactory
 from util.testing import EventTestMixin
 from util.model_utils import USER_SETTINGS_CHANGED_EVENT_NAME
-from xmodule.modulestore.tests.factories import CourseFactory
-from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
+from xmodule.modulestore.tests.factories import CourseFactory, check_mongo_calls
+from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase, ModuleStoreEnum
 
 # These imports refer to lms djangoapps.
 # Their testcases are only run under lms.
@@ -193,6 +192,7 @@ class CourseEndingTest(TestCase):
         self.assertIsNone(_cert_info(user, course2, cert_status, course_mode))
 
 
+@ddt.ddt
 class DashboardTest(ModuleStoreTestCase):
     """
     Tests for dashboard utility functions
@@ -487,6 +487,59 @@ class DashboardTest(ModuleStoreTestCase):
         )
         self.assertContains(response, expected_url)
 
+    @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
+    @ddt.data((ModuleStoreEnum.Type.mongo, 1), (ModuleStoreEnum.Type.split, 3))
+    @ddt.unpack
+    def test_dashboard_metadata_caching(self, modulestore_type, expected_mongo_calls):
+        """
+        Check that the student dashboard makes use of course metadata caching.
+
+        After enrolling a student in a course, that course's metadata should be
+        cached as a CourseOverview. The student dashboard should never have to make
+        calls to the modulestore.
+
+        Arguments:
+            modulestore_type (ModuleStoreEnum.Type): Type of modulestore to create
+                test course in.
+            expected_mongo_calls (int >=0): Number of MongoDB queries expected for
+                a single call to the module store.
+
+        Note to future developers:
+            If you break this test so that the "check_mongo_calls(0)" fails,
+            please do NOT change it to "check_mongo_calls(n>1)". Instead, change
+            your code to not load courses from the module store. This may
+            involve adding fields to CourseOverview so that loading a full
+            CourseDescriptor isn't necessary.
+        """
+        # Create a course and log in the user.
+        test_course = CourseFactory.create(default_store=modulestore_type)
+        self.client.login(username="jack", password="test")
+
+        # Enrolling the user in the course will result in a modulestore query.
+        with check_mongo_calls(expected_mongo_calls):
+            CourseEnrollment.enroll(self.user, test_course.id)
+
+        # Subsequent requests will only result in SQL queries to load the
+        # CourseOverview object that has been created.
+        with check_mongo_calls(0):
+            response_1 = self.client.get(reverse('dashboard'))
+            self.assertEquals(response_1.status_code, 200)
+            response_2 = self.client.get(reverse('dashboard'))
+            self.assertEquals(response_2.status_code, 200)
+
+    @unittest.skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
+    @patch.dict(settings.FEATURES, {"IS_EDX_DOMAIN": True})
+    def test_dashboard_header_nav_has_find_courses(self):
+        self.client.login(username="jack", password="test")
+        response = self.client.get(reverse("dashboard"))
+
+        # "Find courses" is shown in the side panel
+        self.assertContains(response, "Find courses")
+
+        # But other links are hidden in the navigation
+        self.assertNotContains(response, "How it Works")
+        self.assertNotContains(response, "Schools & Partners")
+
 
 class UserSettingsEventTestMixin(EventTestMixin):
     """
@@ -505,7 +558,7 @@ class UserSettingsEventTestMixin(EventTestMixin):
             kwargs['truncated'] = []
         self.assert_event_emitted(
             USER_SETTINGS_CHANGED_EVENT_NAME,
-            table=self.table,  # pylint: disable=no-member
+            table=self.table,
             user_id=self.user.id,
             **kwargs
         )

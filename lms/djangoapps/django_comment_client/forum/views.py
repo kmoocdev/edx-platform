@@ -23,20 +23,21 @@ from openedx.core.djangoapps.course_groups.cohorts import (
     is_course_cohorted,
     get_cohort_id,
     get_course_cohorts,
-    is_commentable_cohorted
 )
 from courseware.tabs import EnrolledTab
 from courseware.access import has_access
 from xmodule.modulestore.django import modulestore
 from ccx.overrides import get_current_ccx
 
-from django_comment_client.permissions import has_permission
+from django_comment_common.utils import ThreadContext
+from django_comment_client.permissions import has_permission, get_team
 from django_comment_client.utils import (
     merge_dict,
     extract,
     strip_none,
     add_courseware_context,
-    get_group_id_for_comments_service
+    get_group_id_for_comments_service,
+    is_commentable_cohorted
 )
 import django_comment_client.utils as utils
 import lms.lib.comment_client as cc
@@ -111,6 +112,7 @@ def get_threads(request, course, discussion_id=None, per_page=THREADS_PER_PAGE):
         'text': '',
         'course_id': unicode(course.id),
         'user_id': request.user.id,
+        'context': ThreadContext.COURSE,
         'group_id': get_group_id_for_comments_service(request, course.id, discussion_id),  # may raise ValueError
     }
 
@@ -118,6 +120,9 @@ def get_threads(request, course, discussion_id=None, per_page=THREADS_PER_PAGE):
     # comments_service.
     if discussion_id is not None:
         default_query_params['commentable_id'] = discussion_id
+        # Use the discussion id/commentable id to determine the context we are going to pass through to the backend.
+        if get_team(discussion_id) is not None:
+            default_query_params['context'] = ThreadContext.STANDALONE
 
     if not request.GET.get('sort_key'):
         # If the user did not select a sort key, use their last used sort key
@@ -272,11 +277,16 @@ def forum_form_discussion(request, course_key):
             'csrf': csrf(request)['csrf_token'],
             'course': course,
             #'recent_active_threads': recent_active_threads,
-            'staff_access': has_access(request.user, 'staff', course),
+            'staff_access': bool(has_access(request.user, 'staff', course)),
             'threads': _attr_safe_json(threads),
             'thread_pages': query_params['num_pages'],
             'user_info': _attr_safe_json(user_info),
-            'flag_moderator': (
+            'can_create_comment': _attr_safe_json(
+                has_permission(request.user, "create_comment", course.id)),
+            'can_create_subcomment': _attr_safe_json(
+                has_permission(request.user, "create_sub_comment", course.id)),
+            'can_create_thread': has_permission(request.user, "create_thread", course.id),
+            'flag_moderator': bool(
                 has_permission(request.user, 'openclose_thread', course.id) or
                 has_access(request.user, 'staff', course)
             ),
@@ -310,10 +320,6 @@ def single_thread(request, course_key, discussion_id, thread_id):
     user_info = cc_user.to_dict()
     is_moderator = has_permission(request.user, "see_all_cohorts", course_key)
 
-    # Verify that the student has access to this thread if belongs to a discussion module
-    if discussion_id not in utils.get_discussion_categories_ids(course, request.user):
-        raise Http404
-
     # Currently, the front end always loads responses via AJAX, even for this
     # page; it would be a nice optimization to avoid that extra round trip to
     # the comments service.
@@ -328,6 +334,11 @@ def single_thread(request, course_key, discussion_id, thread_id):
         if e.status_code == 404:
             raise Http404
         raise
+
+    # Verify that the student has access to this thread if belongs to a course discussion module
+    thread_context = getattr(thread, "context", "course")
+    if thread_context == "course" and not utils.discussion_category_id_access(course, request.user, discussion_id):
+        raise Http404
 
     # verify that the thread belongs to the requesting student's cohort
     if is_commentable_cohorted(course_key, discussion_id) and not is_moderator:
@@ -375,6 +386,11 @@ def single_thread(request, course_key, discussion_id, thread_id):
             'csrf': csrf(request)['csrf_token'],
             'init': '',   # TODO: What is this?
             'user_info': _attr_safe_json(user_info),
+            'can_create_comment': _attr_safe_json(
+                has_permission(request.user, "create_comment", course.id)),
+            'can_create_subcomment': _attr_safe_json(
+                has_permission(request.user, "create_sub_comment", course.id)),
+            'can_create_thread': has_permission(request.user, "create_thread", course.id),
             'annotated_content_info': _attr_safe_json(annotated_content_info),
             'course': course,
             #'recent_active_threads': recent_active_threads,
@@ -385,7 +401,7 @@ def single_thread(request, course_key, discussion_id, thread_id):
             'is_moderator': is_moderator,
             'thread_pages': query_params['num_pages'],
             'is_course_cohorted': is_course_cohorted(course_key),
-            'flag_moderator': (
+            'flag_moderator': bool(
                 has_permission(request.user, 'openclose_thread', course.id) or
                 has_access(request.user, 'staff', course)
             ),

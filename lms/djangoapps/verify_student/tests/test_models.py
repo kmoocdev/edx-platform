@@ -7,17 +7,21 @@ import pytz
 
 from django.conf import settings
 from django.db.utils import IntegrityError
+from django.test import TestCase
 from mock import patch
-from nose.tools import assert_is_none, assert_equals, assert_raises, assert_true, assert_false  # pylint: disable=E0611
-from opaque_keys.edx.locations import SlashSeparatedCourseKey
+from nose.tools import assert_is_none, assert_equals, assert_raises, assert_true, assert_false  # pylint: disable=no-name-in-module
 
 from student.tests.factories import UserFactory
 from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
 from xmodule.modulestore.tests.factories import CourseFactory
 
+from opaque_keys.edx.keys import CourseKey
+
 from verify_student.models import (
-    SoftwareSecurePhotoVerification, VerificationException, VerificationCheckpoint, VerificationStatus,
-    SkippedReverification
+    SoftwareSecurePhotoVerification,
+    VerificationException, VerificationCheckpoint,
+    VerificationStatus, SkippedReverification,
+    VerificationDeadline
 )
 
 FAKE_SETTINGS = {
@@ -215,18 +219,6 @@ class TestPhotoVerification(ModuleStoreTestCase):
         attempt.submit()
 
         return attempt
-
-    def test_fetch_photo_id_image(self):
-        user = UserFactory.create()
-        orig_attempt = SoftwareSecurePhotoVerification(user=user)
-        orig_attempt.save()
-
-        old_key = orig_attempt.photo_id_key
-
-        new_attempt = SoftwareSecurePhotoVerification(user=user)
-        new_attempt.save()
-        new_attempt.fetch_photo_id_image()
-        assert_equals(new_attempt.photo_id_key, old_key)
 
     def test_submissions(self):
         """Test that we set our status correctly after a submission."""
@@ -497,7 +489,7 @@ class VerificationCheckpointTest(ModuleStoreTestCase):
         )
 
     @ddt.data('midterm', 'final')
-    def test_get_verification_checkpoint(self, checkpoint):
+    def test_get_or_create_verification_checkpoint(self, checkpoint):
         """
         Test that a reverification checkpoint is created properly.
         """
@@ -510,25 +502,39 @@ class VerificationCheckpointTest(ModuleStoreTestCase):
             checkpoint_location=checkpoint_location
         )
         self.assertEqual(
-            VerificationCheckpoint.get_verification_checkpoint(self.course.id, checkpoint_location),
+            VerificationCheckpoint.get_or_create_verification_checkpoint(self.course.id, checkpoint_location),
             verification_checkpoint
         )
 
-    def test_get_verification_checkpoint_for_not_existing_values(self):
-        """Test that 'get_verification_checkpoint' method returns None if user
-        tries to access a checkpoint with an invalid location.
-        """
-        # create the VerificationCheckpoint checkpoint
-        VerificationCheckpoint.objects.create(course_id=self.course.id, checkpoint_location=self.checkpoint_midterm)
+    def test_get_or_create_verification_checkpoint_for_not_existing_values(self):
+        # Retrieving a checkpoint that doesn't yet exist will create it
+        location = u'i4x://edX/DemoX/edx-reverification-block/invalid_location'
+        checkpoint = VerificationCheckpoint.get_or_create_verification_checkpoint(self.course.id, location)
 
-        # get verification for a non existing checkpoint
-        self.assertEqual(
-            VerificationCheckpoint.get_verification_checkpoint(
-                self.course.id,
-                u'i4x://edX/DemoX/edx-reverification-block/invalid_location'
-            ),
-            None
+        self.assertIsNot(checkpoint, None)
+        self.assertEqual(checkpoint.course_id, self.course.id)
+        self.assertEqual(checkpoint.checkpoint_location, location)
+
+    def test_get_or_create_integrity_error(self):
+        # Create the checkpoint
+        VerificationCheckpoint.objects.create(
+            course_id=self.course.id,
+            checkpoint_location=self.checkpoint_midterm,
         )
+
+        # Simulate that the get-or-create operation raises an IntegrityError
+        # This can happen when two processes both try to get-or-create at the same time
+        # when the database is set to REPEATABLE READ.
+        with patch.object(VerificationCheckpoint.objects, "get_or_create") as mock_get_or_create:
+            mock_get_or_create.side_effect = IntegrityError
+            checkpoint = VerificationCheckpoint.get_or_create_verification_checkpoint(
+                self.course.id,
+                self.checkpoint_midterm
+            )
+
+        # The checkpoint should be retrieved without error
+        self.assertEqual(checkpoint.course_id, self.course.id)
+        self.assertEqual(checkpoint.checkpoint_location, self.checkpoint_midterm)
 
     def test_unique_together_constraint(self):
         """
@@ -764,3 +770,45 @@ class SkippedReverificationTest(ModuleStoreTestCase):
         self.assertFalse(
             SkippedReverification.check_user_skipped_reverification_exists(course_id=self.course.id, user=user2)
         )
+
+
+class VerificationDeadlineTest(TestCase):
+    """
+    Tests for the VerificationDeadline model.
+    """
+
+    def test_caching(self):
+        deadlines = {
+            CourseKey.from_string("edX/DemoX/Fall"): datetime.now(pytz.UTC),
+            CourseKey.from_string("edX/DemoX/Spring"): datetime.now(pytz.UTC) + timedelta(days=1)
+        }
+        course_keys = deadlines.keys()
+
+        # Initially, no deadlines are set
+        with self.assertNumQueries(1):
+            all_deadlines = VerificationDeadline.deadlines_for_courses(course_keys)
+            self.assertEqual(all_deadlines, {})
+
+        # Create the deadlines
+        for course_key, deadline in deadlines.iteritems():
+            VerificationDeadline.objects.create(
+                course_key=course_key,
+                deadline=deadline,
+            )
+
+        # Warm the cache
+        with self.assertNumQueries(1):
+            VerificationDeadline.deadlines_for_courses(course_keys)
+
+        # Load the deadlines from the cache
+        with self.assertNumQueries(0):
+            all_deadlines = VerificationDeadline.deadlines_for_courses(course_keys)
+            self.assertEqual(all_deadlines, deadlines)
+
+        # Delete the deadlines
+        VerificationDeadline.objects.all().delete()
+
+        # Verify that the deadlines are updated correctly
+        with self.assertNumQueries(1):
+            all_deadlines = VerificationDeadline.deadlines_for_courses(course_keys)
+            self.assertEqual(all_deadlines, {})

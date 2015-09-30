@@ -22,6 +22,7 @@ from microsite_configuration import microsite
 from courseware.access import has_access
 from courseware.model_data import FieldDataCache
 from courseware.module_render import get_module
+from lms.djangoapps.courseware.courseware_access_exception import CoursewareAccessException
 from student.models import CourseEnrollment
 import branding
 
@@ -99,11 +100,12 @@ def get_course_with_access(user, action, course_key, depth=0, check_if_enrolled=
     """
     assert isinstance(course_key, CourseKey)
     course = get_course_by_id(course_key, depth=depth)
+    access_response = has_access(user, action, course, course_key)
 
-    if not has_access(user, action, course, course_key):
+    if not access_response:
         # Deliberately return a non-specific error message to avoid
         # leaking info about access control settings
-        raise Http404("Course not found.")
+        raise CoursewareAccessException(access_response)
 
     if check_if_enrolled:
         # Verify that the user is either enrolled in the course or a staff member.
@@ -127,10 +129,9 @@ def course_image_url(course):
             url += '/' + course.course_image
         else:
             url += '/images/course_image.jpg'
-    elif course.course_image == '':
-        # if course_image is empty the url will be blank as location
-        # of the course_image does not exist
-        url = ''
+    elif not course.course_image:
+        # if course_image is empty, use the default image url from settings
+        url = settings.STATIC_URL + settings.DEFAULT_COURSE_ABOUT_IMAGE_URL
     else:
         loc = StaticContent.compute_location(course.id, course.course_image)
         url = StaticContent.serialize_asset_key_with_slash(loc)
@@ -152,6 +153,16 @@ def find_file(filesystem, dirs, filename):
         if filesystem.exists(filepath):
             return filepath
     raise ResourceNotFoundError(u"Could not find {0}".format(filename))
+
+
+def get_course_university_about_section(course):  # pylint: disable=invalid-name
+    """
+    Returns a snippet of HTML displaying the course's university.
+
+    Arguments:
+        course (CourseDescriptor|CourseOverview): A course.
+    """
+    return course.display_org_with_default
 
 
 def get_course_about_section(course, section_key):
@@ -216,22 +227,27 @@ def get_course_about_section(course, section_key):
                 except Exception:  # pylint: disable=broad-except
                     html = render_to_string('courseware/error-message.html', None)
                     log.exception(
-                        u"Error rendering course={course}, section_key={section_key}".format(
-                            course=course, section_key=section_key
-                        ))
+                        u"Error rendering course=%s, section_key=%s",
+                        course, section_key
+                    )
             return html
 
         except ItemNotFoundError:
             log.warning(
-                u"Missing about section {key} in course {url}".format(key=section_key, url=course.location.to_deprecated_string())
+                u"Missing about section %s in course %s",
+                section_key, course.location.to_deprecated_string()
             )
             return None
     elif section_key == "title":
         return course.display_name_with_default
     elif section_key == "university":
+<<<<<<< .merge_file_8oVlqh
 
 
         return replace_hangul_org(course.display_org_with_default)
+=======
+        return get_course_university_about_section(course)
+>>>>>>> .merge_file_uMTGSh
     elif section_key == "number":
         return course.display_number_with_default
 
@@ -294,9 +310,9 @@ def get_course_info_section(request, course, section_key):
         except Exception:  # pylint: disable=broad-except
             html = render_to_string('courseware/error-message.html', None)
             log.exception(
-                u"Error rendering course={course}, section_key={section_key}".format(
-                    course=course, section_key=section_key
-                ))
+                u"Error rendering course=%s, section_key=%s",
+                course, section_key
+            )
 
     return html
 
@@ -333,7 +349,8 @@ def get_course_syllabus_section(course, section_key):
                 )
         except ResourceNotFoundError:
             log.exception(
-                u"Missing syllabus section {key} in course {url}".format(key=section_key, url=course.location.to_deprecated_string())
+                u"Missing syllabus section %s in course %s",
+                section_key, course.location.to_deprecated_string()
             )
             return "! Syllabus missing !"
 

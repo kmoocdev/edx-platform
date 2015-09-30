@@ -20,7 +20,7 @@ class EnrolledTab(CourseTab):
     def is_enabled(cls, course, user=None):
         if user is None:
             return True
-        return CourseEnrollment.is_enrolled(user, course.id) or has_access(user, 'staff', course, course.id)
+        return bool(CourseEnrollment.is_enrolled(user, course.id) or has_access(user, 'staff', course, course.id))
 
 
 class CoursewareTab(EnrolledTab):
@@ -64,7 +64,7 @@ class SyllabusTab(EnrolledTab):
     is_default = False
 
     @classmethod
-    def is_enabled(cls, course, user=None):  # pylint: disable=unused-argument
+    def is_enabled(cls, course, user=None):
         if not super(SyllabusTab, cls).is_enabled(course, user=user):
             return False
         return getattr(course, 'syllabus_present', False)

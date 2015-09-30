@@ -18,15 +18,13 @@ from django.test import TestCase
 from django.test.utils import override_settings
 from django.test.client import RequestFactory
 
-from embargo.test_utils import restrict_course
 from openedx.core.djangoapps.user_api.accounts.api import activate_account, create_account
 from openedx.core.djangoapps.user_api.accounts import EMAIL_MAX_LENGTH
-from student.tests.factories import CourseModeFactory, UserFactory
+from student.tests.factories import UserFactory
 from student_account.views import account_settings_context
 from third_party_auth.tests.testutil import simulate_running_pipeline, ThirdPartyAuthTestMixin
 from util.testing import UrlResetMixin
 from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
-from xmodule.modulestore.tests.factories import CourseFactory
 
 
 @ddt.ddt
@@ -461,3 +459,60 @@ class AccountSettingsViewTest(ThirdPartyAuthTestMixin, TestCase):
 
         for attribute in self.FIELDS:
             self.assertIn(attribute, response.content)
+
+
+@override_settings(SITE_NAME=settings.MICROSITE_LOGISTRATION_HOSTNAME)
+class MicrositeLogistrationTests(TestCase):
+    """
+    Test to validate that microsites can display the logistration page
+    """
+
+    def test_login_page(self):
+        """
+        Make sure that we get the expected logistration page on our specialized
+        microsite
+        """
+
+        resp = self.client.get(
+            reverse('account_login'),
+            HTTP_HOST=settings.MICROSITE_LOGISTRATION_HOSTNAME
+        )
+        self.assertEqual(resp.status_code, 200)
+
+        self.assertIn('<div id="login-and-registration-container"', resp.content)
+
+    def test_registration_page(self):
+        """
+        Make sure that we get the expected logistration page on our specialized
+        microsite
+        """
+
+        resp = self.client.get(
+            reverse('account_register'),
+            HTTP_HOST=settings.MICROSITE_LOGISTRATION_HOSTNAME
+        )
+        self.assertEqual(resp.status_code, 200)
+
+        self.assertIn('<div id="login-and-registration-container"', resp.content)
+
+    @override_settings(SITE_NAME=settings.MICROSITE_TEST_HOSTNAME)
+    def test_no_override(self):
+        """
+        Make sure we get the old style login/registration if we don't override
+        """
+
+        resp = self.client.get(
+            reverse('account_login'),
+            HTTP_HOST=settings.MICROSITE_TEST_HOSTNAME
+        )
+        self.assertEqual(resp.status_code, 200)
+
+        self.assertNotIn('<div id="login-and-registration-container"', resp.content)
+
+        resp = self.client.get(
+            reverse('account_register'),
+            HTTP_HOST=settings.MICROSITE_TEST_HOSTNAME
+        )
+        self.assertEqual(resp.status_code, 200)
+
+        self.assertNotIn('<div id="login-and-registration-container"', resp.content)

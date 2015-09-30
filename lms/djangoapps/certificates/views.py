@@ -21,7 +21,8 @@ from certificates.api import (
     get_active_web_certificate,
     get_certificate_url,
     generate_user_certificates,
-    emit_certificate_event
+    emit_certificate_event,
+    has_html_certificates_enabled
 )
 from certificates.models import (
     certificate_status_for_student,
@@ -42,6 +43,7 @@ from student.models import LinkedInAddToProfileConfiguration
 from util.json_request import JsonResponse, JsonResponseBadRequest
 from util.bad_request_rate_limiter import BadRequestRateLimiter
 from courseware.courses import course_image_url
+from util import organizations_helpers as organization_api
 
 logger = logging.getLogger(__name__)
 
@@ -104,10 +106,13 @@ def update_certificate(request):
                 key=xqueue_header['lms_key'])
 
         except GeneratedCertificate.DoesNotExist:
-            logger.critical('Unable to lookup certificate\n'
-                            'xqueue_body: {0}\n'
-                            'xqueue_header: {1}'.format(
-                                xqueue_body, xqueue_header))
+            logger.critical(
+                'Unable to lookup certificate\n'
+                'xqueue_body: %s\n'
+                'xqueue_header: %s',
+                xqueue_body,
+                xqueue_header
+            )
 
             return HttpResponse(json.dumps({
                 'return_code': 1,
@@ -138,8 +143,9 @@ def update_certificate(request):
             elif cert.status in [status.deleting]:
                 cert.status = status.deleted
             else:
-                logger.critical('Invalid state for cert update: {0}'.format(
-                    cert.status))
+                logger.critical(
+                    'Invalid state for cert update: %s', cert.status
+                )
                 return HttpResponse(
                     json.dumps({
                         'return_code': 1,
@@ -294,16 +300,24 @@ def _update_certificate_context(context, course, user, user_certificate):
     user_fullname = user.profile.name
     platform_name = microsite.get_value("platform_name", settings.PLATFORM_NAME)
     certificate_type = context.get('certificate_type')
+    partner_name = course.org
+    organizations = organization_api.get_course_organizations(course_id=course.id)
+    if organizations:
+        #TODO Need to add support for multiple organizations, Currently we are interested in the first one.
+        organization = organizations[0]
+        partner_name = organization.get('name', course.org)
+        context['organization_logo'] = organization.get('logo', None)
 
     context['username'] = user.username
     context['course_mode'] = user_certificate.mode
     context['accomplishment_user_id'] = user.id
     context['accomplishment_copy_name'] = user_fullname
     context['accomplishment_copy_username'] = user.username
-    context['accomplishment_copy_course_org'] = course.org
+    context['accomplishment_copy_course_org'] = partner_name
     context['accomplishment_copy_course_name'] = course.display_name
     context['course_image_url'] = course_image_url(course)
     context['share_settings'] = settings.FEATURES.get('SOCIAL_SHARING_SETTINGS', {})
+    context['course_number'] = course.number
     try:
         badge = BadgeAssertion.objects.get(user=user, course_id=course.location.course_key)
     except BadgeAssertion.DoesNotExist:
@@ -325,14 +339,10 @@ def _update_certificate_context(context, course, user, user_certificate):
         year=user_certificate.modified_date.year
     )
 
-    accd_course_org_html = '<span class="detail--xuniversity">{partner_name}</span>'.format(partner_name=course.org)
-    accd_platform_name_html = '<span class="detail--company">{platform_name}</span>'.format(platform_name=platform_name)
-    # Translators: This line appears on the certificate after the name of a course, and provides more
-    # information about the organizations providing the course material to platform users
     context['accomplishment_copy_course_description'] = _('a course of study offered by {partner_name}, '
                                                           'through {platform_name}.').format(
-        partner_name=accd_course_org_html,
-        platform_name=accd_platform_name_html
+        partner_name=partner_name,
+        platform_name=platform_name
     )
 
     # Translators: Accomplishments describe the awards/certifications obtained by students on this platform
@@ -407,13 +417,13 @@ def _update_certificate_context(context, course, user, user_certificate):
                                              'who participated in {partner_name} {course_number}').format(
         platform_name=platform_name,
         user_name=user_fullname,
-        partner_name=course.org,
+        partner_name=partner_name,
         course_number=course.number
     )
 
     # Translators:  This text is bound to the HTML 'title' element of the page and appears in the browser title bar
     context['document_title'] = _("{partner_name} {course_number} Certificate | {platform_name}").format(
-        partner_name=course.org,
+        partner_name=partner_name,
         course_number=course.number,
         platform_name=platform_name
     )
@@ -442,8 +452,7 @@ def _update_certificate_context(context, course, user, user_certificate):
             user_certificate.mode,
             get_certificate_url(
                 user_id=user.id,
-                course_id=unicode(course.id),
-                verify_uuid=user_certificate.verify_uuid
+                course_id=unicode(course.id)
             )
         )
 
@@ -507,7 +516,7 @@ def render_html_view(request, user_id, course_id):
     invalid_template_path = 'certificates/invalid.html'
 
     # Kick the user back to the "Invalid" screen if the feature is disabled
-    if not settings.FEATURES.get('CERTIFICATES_HTML_VIEW', False):
+    if not has_html_certificates_enabled(course_id):
         return render_to_response(invalid_template_path, context)
 
     # Load the core building blocks for the view context

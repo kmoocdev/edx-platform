@@ -137,7 +137,7 @@ js_info_dict = {
 
 urlpatterns += (
     # Serve catalog of localized strings to be rendered by Javascript
-    url(r'^jsi18n/$', 'django.views.i18n.javascript_catalog', js_info_dict),
+    url(r'^i18n.js$', 'django.views.i18n.javascript_catalog', js_info_dict),
 )
 
 # sysadmin dashboard, to see what courses are loaded, to delete & load courses
@@ -624,7 +624,6 @@ if settings.FEATURES.get('RUN_AS_ANALYTICS_SERVER_ENABLED'):
     urlpatterns += (
         url(r'^edinsights_service/', include('edinsights.core.urls')),
     )
-    import edinsights.core.registry
 
 # FoldIt views
 urlpatterns += (
@@ -728,7 +727,13 @@ if settings.DEBUG:
     # in debug mode, allow any template to be rendered (most useful for UX reference templates)
     urlpatterns += url(r'^template/(?P<template>.+)$', 'debug.views.show_reference_template'),
 
-#Custom error pages
+if 'debug_toolbar' in settings.INSTALLED_APPS:
+    import debug_toolbar
+    urlpatterns += (
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    )
+
+# Custom error pages
 handler404 = 'static_template_view.views.render_404'
 handler500 = 'static_template_view.views.render_500'
 
