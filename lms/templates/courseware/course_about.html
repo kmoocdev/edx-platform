@@ -260,7 +260,8 @@ from edxmako.shortcuts import marketing_link
                 tweet_action = u"http://twitter.com/intent/tweet?text="+quote_plus(tweet_text.encode('utf-8'), safe=':/')
 
                 # facebook_link = microsite.get_value('course_about_facebook_link', settings.PLATFORM_FACEBOOK_ACCOUNT)
-                facebook_link = u"http://www.facebook.com/sharer/sharer.php?u="+site_domain+reverse('about_course', args=[course.id.to_deprecated_string()])
+                kmooc_url = site_domain+reverse('about_course', args=[course.id.to_deprecated_string()])
+                facebook_link = u"http://www.facebook.com/sharer/sharer.php?u="+quote_plus(kmooc_url.encode('utf-8'), safe=':/')
 
                 email_subject = u"mailto:?subject={subject}&body={body}".format(
                     subject=_("Take a course with {platform} online").format(platform=platform_name),
