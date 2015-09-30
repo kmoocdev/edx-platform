@@ -52,6 +52,7 @@
 # Translators:
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
 # Jong-Dae Park <jdpark7@gmail.com>, 2013
 # jeon <bluerespect@nate.com>, 2014-2015
 # Jong-Dae Park <jdpark7@gmail.com>, 2013
@@ -66,6 +67,7 @@
 # SEUNGWON <baeksw0620@gmail.com>, 2014
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
 # Jong-Dae Park <jdpark7@gmail.com>, 2013
 # jeon <bluerespect@nate.com>, 2014-2015
 # Chanseok <kcsgoodboy@gmail.com>, 2014
@@ -79,6 +81,7 @@
 # Translators:
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
 # jeon <bluerespect@nate.com>, 2014
 # Jong-Dae Park <jdpark7@gmail.com>, 2015
 # Kevin Min <gr326887@graded.br>, 2015
@@ -91,6 +94,7 @@
 # 
 # Translators:
 # Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
 # jeon <bluerespect@nate.com>, 2014-2015
 # Kevin Min <gr326887@graded.br>, 2015
 # Kunwoo Kim <crazyabtmath@naver.com>, 2015
@@ -99,9 +103,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2015-09-21 14:29+0000\n"
-"PO-Revision-Date: 2015-09-21 14:36+0000\n"
-"Last-Translator: Sarina Canelake <sarina@edx.org>\n"
+"POT-Creation-Date: 2015-09-24 03:06+0000\n"
+"PO-Revision-Date: 2015-09-25 11:18+0000\n"
+"Last-Translator: Hongseob Lee <shevious@yahoo.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/open-edx/edx-platform/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2284,7 +2288,7 @@ msgstr "더보기"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "My Notes"
-msgstr "나의 노트"
+msgstr "내 노트"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "Instructor"
@@ -3479,7 +3483,7 @@ msgstr "모든 소주제"
 
 #: lms/static/js/ccx/schedule.js
 msgid "All units"
-msgstr "모든 학습활동"
+msgstr "전체 학습활동"
 
 #: lms/static/js/ccx/schedule.js lms/static/js/ccx/schedule.js.c
 #: lms/templates/ccx/schedule.underscore
@@ -3670,7 +3674,7 @@ msgstr "설정된 학습 집단이 현재 없습니다."
 #: lms/static/js/groups/views/cohorts.js
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Add Cohort"
-msgstr "학습 집단 추가하기"
+msgstr "학습집단 추가하기"
 
 #: lms/static/js/groups/views/cohorts.js
 msgid ""
@@ -3866,7 +3870,7 @@ msgstr "성 "
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Year of Birth"
-msgstr "출생 연도"
+msgstr "출생연도"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: lms/static/js/student_profile/views/learner_profile_factory.js
@@ -3961,8 +3965,8 @@ msgid ""
 "You must be over 13 to share a full profile. If you are over 13, make sure "
 "that you have specified a birth year on the {account_settings_page_link}"
 msgstr ""
-"전체 프로필을 공유하려면 13세 이상이어야 합니다. 13세 이상이라면,  {account_settings_page_link}에서 출생 "
-"연도를 입력하세요."
+"전체 프로필을 공유하려면 13세 이상이어야 합니다. 13세 이상이라면,  {account_settings_page_link}에서 "
+"출생연도를 입력하세요."
 
 #: lms/static/js/student_profile/views/learner_profile_fields.js
 msgid "Profile Image"
@@ -4630,7 +4634,7 @@ msgstr "사용 안 함"
 #: cms/static/js/views/group_configuration_details.js
 msgid "Used in %(count)s unit"
 msgid_plural "Used in %(count)s units"
-msgstr[0] "학습 활동에서 사용된 수  : %(count)s"
+msgstr[0] "학습활동에서 사용된 수  : %(count)s"
 
 #. Translators: 'outlineAnchor' is an anchor pointing to
 #. the course outline page.
@@ -5178,7 +5182,7 @@ msgstr "소주제"
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "unit"
-msgstr "학습 활동"
+msgstr "학습활동"
 
 #: cms/static/js/views/video/translations_editor.js
 msgid ""
@@ -5241,7 +5245,7 @@ msgstr "액션"
 #: cms/templates/js/course-outline.underscore
 #: lms/templates/ccx/schedule.underscore
 msgid "Due Date"
-msgstr "마감 날짜"
+msgstr "마감일"
 
 #: cms/templates/js/paging-header.underscore
 #: common/static/common/templates/components/paging-footer.underscore
@@ -5765,7 +5769,7 @@ msgstr ""
 #: lms/static/js/fixtures/donation.underscore
 #: lms/templates/dashboard/donation.underscore
 msgid "Donate"
-msgstr "기부"
+msgstr "기부하기"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Expand All"
@@ -5991,7 +5995,7 @@ msgstr "학습자 관리"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Add students to this cohort"
-msgstr "학습 집단에 학습자 추가하기"
+msgstr "학습집단에 학습자 추가하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid ""
@@ -6240,7 +6244,7 @@ msgstr ""
 
 #: lms/templates/student_account/login.underscore
 msgid "Password Reset Email Sent"
-msgstr "암호 재설정 이메일이 보내어졌습니다."
+msgstr "비밀번호 재설정 메일이 발신되었습니다."
 
 #: lms/templates/student_account/login.underscore
 msgid ""
@@ -6300,13 +6304,13 @@ msgstr "에러가 발생했습니다."
 
 #: lms/templates/student_account/password_reset.underscore
 msgid "Password assistance"
-msgstr "암호 도움"
+msgstr "비밀번호 도움"
 
 #: lms/templates/student_account/password_reset.underscore
 msgid ""
 "Please enter your email address below and we will send you instructions for "
 "setting a new password."
-msgstr "아래에 이메일 주소를 입력 해주십시오, 새로운 암호를 설정하기 위한 안내를 이메일로 보내드립니다."
+msgstr "아래에 이메일 주소를 입력 해주십시오, 새로운 비밀번호를 설정하기 위한 안내를 이메일로 보내드립니다."
 
 #: lms/templates/student_account/password_reset.underscore
 msgid "Reset my password"
@@ -6978,7 +6982,7 @@ msgstr "주의 : 가장 최근 버전으로 학습자가 보고 있는 내용입
 #: cms/templates/js/content-group-details.underscore
 #: cms/templates/js/content-group-editor.underscore
 msgid "Cannot delete when in use by a unit"
-msgstr "학습 활동에서 사용될 때 삭제할 수 없습니다."
+msgstr "학습활동에서 사용될 때 삭제할 수 없습니다."
 
 #: cms/templates/js/content-group-details.underscore
 msgid "This content group is used in:"
@@ -7453,7 +7457,7 @@ msgstr "운영팀과 학습자"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Some content in this unit is visible only to particular content groups"
-msgstr "이 학습 활동의 일부 내용은 특정 콘텐츠 그룹만 볼 수 있습니다."
+msgstr "이 학습활동의 일부 내용은 특정 콘텐츠 그룹만 볼 수 있습니다."
 
 #: cms/templates/js/publish-xblock.underscore
 #: cms/templates/js/staff-lock-editor.underscore
@@ -7662,7 +7666,7 @@ msgid ""
 "Learners who require verification must pass the selected checkpoint to see "
 "the content in this unit. Learners who do not require verification see this "
 "content by default."
-msgstr "인증을 신청한 학습자는 인증 기준에 해당하는 학습 활동을 통과해야 합니다. "
+msgstr "인증을 신청한 학습자는 인증 기준에 해당하는 학습활동을 통과해야 합니다. "
 
 #: cms/templates/js/xblock-string-field-editor.underscore
 msgid "Edit the name"
