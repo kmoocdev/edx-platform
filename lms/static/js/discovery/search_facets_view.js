@@ -96,7 +96,6 @@ define([
                     return '기관명';
                 }
                 else {
-                    console.log('___________________ search_facets_views else return '+name);
                     return name;
                 }
             }
