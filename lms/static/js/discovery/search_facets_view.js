@@ -93,6 +93,7 @@ define([
                 }
                 else if(this.facetsTypes[name].hasOwnProperty('name')) {
                     //return this.facetsTypes[name]['name'];
+                    console.log('___________________ search_facets_views return 기관명');
                     return '기관명';
                 }
                 else {
