@@ -97,10 +97,14 @@ define([
                     return '기관명';
                 }
                 else {
+                    console.log('___________________ search_facets_views else return '+name);
                     return name;
                 }
             }
             else{
+                //return term ? term : name;
+                console.log("_____________ term:"+term);
+                console.log("_____________ name:"+name);
                 return term ? term : name;
             }
         },
