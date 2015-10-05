@@ -13,6 +13,10 @@ define([
         return dateUTC(date).toString('MMM dd, yyyy');
     }
 
+    function formatDateKOR(date) {
+        return dateUTC(date).toString('yyyy년M월dd일');
+    }
+
     // Return a date object using UTC time instead of local time
     function dateUTC(date) {
         return new Date(
@@ -45,7 +49,7 @@ define([
                     break;
                 }
             }
-            data.start = formatDate(new Date(data.start));
+            data.start = formatDateKOR(new Date(data.start));
             data.enrollment_start = formatDate(new Date(data.enrollment_start));
             this.$el.html(this.tpl(data));
             return this;
