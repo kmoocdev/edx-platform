@@ -23,7 +23,7 @@ var edx = edx || {};
             hintedLogin: {}
         },
 
-        nextUrl: '/courses',
+        nextUrl: '/dashboard',
 
         // The form currently loaded
         activeForm: '',
@@ -239,8 +239,7 @@ var edx = edx || {};
                 this.redirect(this.thirdPartyAuth.finishAuthUrl);
                 // Note: the third party auth URL likely contains another redirect URL embedded inside
             } else {
-                console.log("______________ "+ this.nextUrl);
-                //this.redirect(this.nextUrl);
+                this.redirect(this.nextUrl);
             }
         },
 
@@ -249,7 +248,7 @@ var edx = edx || {};
          * @param  {string} url The URL to redirect to.
          */
         redirect: function( url ) {
-            console.log("______________2 "+ this.nextUrl);
+            window.location.replace('http://lms.kmooc.kr/dashboard');
             //window.location.replace(url);
         },
 
