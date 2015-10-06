@@ -149,7 +149,7 @@ class ProceduralCourseTestMixin(object):
     """
     Contains methods for testing courses generated procedurally
     """
-    def populate_course(self, branching=2, emit_signals=False):
+    def populate_course(self, branching=2):
         """
         Add k chapters, k^2 sections, k^3 verticals, k^4 problems to self.course (where k = branching)
         """
@@ -172,5 +172,4 @@ class ProceduralCourseTestMixin(object):
                 )
                 descend(child, stack[1:])
 
-        with self.store.bulk_operations(self.course.id, emit_signals=emit_signals):
-            descend(self.course, ['chapter', 'sequential', 'vertical', 'problem'])
+        descend(self.course, ['chapter', 'sequential', 'vertical', 'problem'])

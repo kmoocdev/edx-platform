@@ -1,7 +1,6 @@
 """
 Acceptance tests for course in studio
 """
-from flaky import flaky
 from nose.plugins.attrib import attr
 
 from .base_studio_test import StudioCourseTest
@@ -11,7 +10,6 @@ from ...pages.studio.users import CourseTeamPage
 from ...pages.studio.index import DashboardPage
 
 
-@flaky  # TODO fix this, see TNL-2667
 @attr('shard_2')
 class CourseTeamPageTest(StudioCourseTest):
     """ As a course author, I want to be able to add others to my team """

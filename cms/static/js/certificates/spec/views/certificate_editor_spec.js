@@ -41,6 +41,7 @@ function(_, Course, CertificateModel, SignatoryModel, CertificatesCollection, Ce
         uploadDialog: 'form.upload-dialog',
         uploadDialogButton: '.action-upload',
         uploadDialogFileInput: 'form.upload-dialog input[type=file]',
+        uploadOrgLogoButton: '.action-upload-org-logo',
         saveCertificateButton: 'button.action-primary'
     };
 
@@ -85,12 +86,12 @@ function(_, Course, CertificateModel, SignatoryModel, CertificatesCollection, Ce
             num: 'course_num',
             revision: 'course_rev'
         });
-        window.CMS.User = {isGlobalStaff: true};
+
+
     });
 
     afterEach(function() {
         delete window.course;
-        delete window.CMS.User;
     });
 
     describe('Certificate editor view', function() {
@@ -112,8 +113,7 @@ function(_, Course, CertificateModel, SignatoryModel, CertificatesCollection, Ce
             this.newModelOptions = {add: true};
             this.model = new CertificateModel({
                 name: 'Test Name',
-                description: 'Test Description',
-                is_active: true
+                description: 'Test Description'
 
             }, this.newModelOptions);
 
@@ -149,12 +149,6 @@ function(_, Course, CertificateModel, SignatoryModel, CertificatesCollection, Ce
                 expect(this.view.$("[name='certificate-name']").val()).toBe('Test Name');
                 expect(this.view.$("[name='certificate-description']").val()).toBe('Test Description');
                 expect(this.view.$('.action-delete')).toExist();
-            });
-
-            it('should not have delete button if user is not global staff and certificate is active', function() {
-                window.CMS.User = {isGlobalStaff: false};
-                appendSetFixtures(this.view.render().el);
-                expect(this.view.$('.action-delete')).not.toExist();
             });
 
             it('should save properly', function() {
@@ -310,6 +304,9 @@ function(_, Course, CertificateModel, SignatoryModel, CertificatesCollection, Ce
                 setValuesToInputs(this.view, {
                     inputCertificateDescription: 'New Test Description'
                 });
+                this.view.$(SELECTORS.uploadOrgLogoButton).click();
+                var org_logo_path = '/c4x/edX/DemoX/asset/org-logo.png';
+                uploadFile(org_logo_path, requests);
 
                 setValuesToInputs(this.view, {
                     inputSignatoryName: 'New Signatory Name'
@@ -330,7 +327,8 @@ function(_, Course, CertificateModel, SignatoryModel, CertificatesCollection, Ce
                 ViewHelpers.submitAndVerifyFormSuccess(this.view, requests, notificationSpy);
                 expect(this.model).toBeCorrectValuesInModel({
                     name: 'New Test Name',
-                    description: 'New Test Description'
+                    description: 'New Test Description',
+                    org_logo_path: org_logo_path
                 });
 
                 // get the first signatory from the signatories collection.

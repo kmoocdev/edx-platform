@@ -248,8 +248,7 @@ var edx = edx || {};
          * @param  {string} url The URL to redirect to.
          */
         redirect: function( url ) {
-            window.location.replace('http://lms.kmooc.kr/dashboard');
-            //window.location.replace(url);
+            window.location.replace(url);
         },
 
         form: {

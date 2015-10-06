@@ -13,8 +13,7 @@ if Backbone?
           mode: @mode,
           flagged: @model.isFlagged(),
           author_display: @getAuthorDisplay(),
-          cid: @model.cid,
-          readOnly: $('.discussion-module').data('read-only')
+          cid: @model.cid
         },
         @model.attributes,
       )

@@ -188,8 +188,6 @@ class ConditionalDescriptor(ConditionalFields, SequenceDescriptor):
 
     has_score = False
 
-    show_in_read_only_mode = True
-
     def __init__(self, *args, **kwargs):
         """
         Create an instance of the conditional module.

@@ -8,4 +8,5 @@ Course Structure API Version 0
     :maxdepth: 2
     
     overview
+    endpoints
     course_structure

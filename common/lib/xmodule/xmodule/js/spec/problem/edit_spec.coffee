@@ -724,7 +724,7 @@ describe 'MarkdownEditingDescriptor', ->
 
         <p>Choice checks</p>
         <choiceresponse>
-          <checkboxgroup>
+          <checkboxgroup direction="vertical">
             <choice correct="false">option1 [x]</choice>
             <choice correct="true">correct</choice>
             <choice correct="true">redundant</choice>

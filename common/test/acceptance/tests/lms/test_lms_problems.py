@@ -4,13 +4,12 @@ Bok choy acceptance tests for problems in the LMS
 
 See also old lettuce tests in lms/djangoapps/courseware/features/problems.feature
 """
-from textwrap import dedent
-
 from ..helpers import UniqueCourseTest
 from ...pages.studio.auto_auth import AutoAuthPage
 from ...pages.lms.courseware import CoursewarePage
 from ...pages.lms.problem import ProblemPage
 from ...fixtures.course import CourseFixture, XBlockFixtureDesc
+from textwrap import dedent
 from ..helpers import EventsTestMixin
 
 
@@ -54,7 +53,6 @@ class ProblemClarificationTest(ProblemsTest):
     """
     Tests the <clarification> element that can be used in problem XML.
     """
-
     def get_problem(self):
         """
         Create a problem with a <clarification>
@@ -95,7 +93,6 @@ class ProblemExtendedHintTest(ProblemsTest, EventsTestMixin):
     """
     Test that extended hint features plumb through to the page html and tracking log.
     """
-
     def get_problem(self):
         """
         Problem with extended hint features.
@@ -164,84 +161,3 @@ class ProblemExtendedHintTest(ProblemsTest, EventsTestMixin):
                 {'event': {u'hint_index': 0, u'hint_len': 2, u'hint_text': u'demand-hint1'}}
             ],
             actual_events)
-
-
-class ProblemWithMathjax(ProblemsTest):
-    """
-    Tests the <MathJax> used in problem
-    """
-
-    def get_problem(self):
-        """
-        Create a problem with a <MathJax> in body and hint
-        """
-        xml = dedent(r"""
-            <problem>
-                <p>Check mathjax has rendered [mathjax]E=mc^2[/mathjax]</p>
-                <multiplechoiceresponse>
-                  <choicegroup label="Answer this?" type="MultipleChoice">
-                    <choice correct="true">Choice1 <choicehint>Correct choice message</choicehint></choice>
-                    <choice correct="false">Choice2<choicehint>Wrong choice message</choicehint></choice>
-                  </choicegroup>
-                </multiplechoiceresponse>
-                <demandhint>
-                        <hint>mathjax should work1 \(E=mc^2\) </hint>
-                        <hint>mathjax should work2 [mathjax]E=mc^2[/mathjax]</hint>
-                </demandhint>
-            </problem>
-        """)
-        return XBlockFixtureDesc('problem', 'MATHJAX TEST PROBLEM', data=xml)
-
-    def test_mathjax_in_hint(self):
-        """
-        Test that MathJax have successfully rendered in problem hint
-        """
-        self.courseware_page.visit()
-        problem_page = ProblemPage(self.browser)
-        self.assertEqual(problem_page.problem_name, "MATHJAX TEST PROBLEM")
-
-        # Verify Mathjax have been rendered
-        self.assertTrue(problem_page.mathjax_rendered_in_problem, "MathJax did not rendered in body")
-
-        # The hint button rotates through multiple hints
-        problem_page.click_hint()
-        self.assertIn("Hint (1 of 2): mathjax should work1", problem_page.hint_text)
-        self.assertTrue(problem_page.mathjax_rendered_in_hint, "MathJax did not rendered in problem hint")
-
-        # Rotate the hint and check the problem hint
-        problem_page.click_hint()
-
-        self.assertIn("Hint (2 of 2): mathjax should work2", problem_page.hint_text)
-        self.assertTrue(problem_page.mathjax_rendered_in_hint, "MathJax did not rendered in problem hint")
-
-
-class ProblemPartialCredit(ProblemsTest):
-    """
-    Makes sure that the partial credit is appearing properly.
-    """
-    def get_problem(self):
-        """
-        Create a problem with partial credit.
-        """
-        xml = dedent("""
-            <problem>
-                <p>The answer is 1. Partial credit for -1.</p>
-                <numericalresponse answer="1" partial_credit="list">
-                    <formulaequationinput label="How many miles away from Earth is the sun? Use scientific notation to answer." />
-                    <responseparam type="tolerance" default="0.01" />
-                    <responseparam partial_answers="-1" />
-                </numericalresponse>
-            </problem>
-        """)
-        return XBlockFixtureDesc('problem', 'PARTIAL CREDIT TEST PROBLEM', data=xml)
-
-    def test_partial_credit(self):
-        """
-        Test that we can see the partial credit value and feedback.
-        """
-        self.courseware_page.visit()
-        problem_page = ProblemPage(self.browser)
-        self.assertEqual(problem_page.problem_name, 'PARTIAL CREDIT TEST PROBLEM')
-        problem_page.fill_answer_numerical('-1')
-        problem_page.click_check()
-        self.assertTrue(problem_page.simpleprob_is_partially_correct())

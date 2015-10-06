@@ -1,12 +1,13 @@
 if Backbone?
   class @DiscussionThreadProfileView extends Backbone.View
     render: ->
+      @template = DiscussionUtil.getTemplate("_profile_thread")
       @convertMath()
       @abbreviateBody()
       params = $.extend(@model.toJSON(),{permalink: @model.urlFor('retrieve')})
       if not @model.get('anonymous')
         params = $.extend(params, user:{username: @model.username, user_url: @model.user_url})
-      @$el.html(_.template($("#profile-thread-template").html())(params))
+      @$el.html(Mustache.render(@template, params))
       @$("span.timeago").timeago()
       element = @$(".post-body")
       if MathJax?

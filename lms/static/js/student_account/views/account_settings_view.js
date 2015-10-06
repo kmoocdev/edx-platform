@@ -1,17 +1,18 @@
 ;(function (define, undefined) {
     'use strict';
     define([
-        'gettext', 'jquery', 'underscore', 'backbone', 'text!templates/student_account/account_settings.underscore'
-    ], function (gettext, $, _, Backbone, accountSettingsTemplate) {
+        'gettext', 'jquery', 'underscore', 'backbone'
+    ], function (gettext, $, _, Backbone) {
 
         var AccountSettingsView = Backbone.View.extend({
 
             initialize: function () {
+                this.template = _.template($('#account_settings-tpl').text());
                 _.bindAll(this, 'render', 'renderFields', 'showLoadingError');
             },
 
             render: function () {
-                this.$el.html(_.template(accountSettingsTemplate, {
+                this.$el.html(this.template({
                     sections: this.options.sectionsData
                 }));
                 return this;

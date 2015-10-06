@@ -25,10 +25,7 @@ define('video/09_poster.js', [], function () {
         template: _.template([
             '<div class="video-pre-roll is-<%= type %> poster" ',
                 'style="background-image: url(<%= url %>)">',
-                '<button class="btn-play btn-pre-roll">',
-                    '<img src="/static/images/play.png" alt="">',
-                    '<span class="sr">', gettext('Play video'), '</span>',
-                '</button>',
+                '<button class="btn-play">', gettext('Play video'), '</button>',
             '</div>'
         ].join('')),
 

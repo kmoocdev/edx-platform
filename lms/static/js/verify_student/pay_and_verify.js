@@ -34,8 +34,6 @@ var edx = edx || {};
         errorModel: errorView.model,
         displaySteps: el.data('display-steps'),
         currentStep: el.data('current-step'),
-        courseKey: el.data('course-key'),
-        checkpointLocation: el.data('checkpoint-location'),
         stepInfo: {
             'intro-step': {
                 courseName: el.data('course-name'),

@@ -1,13 +1,14 @@
 ##################################################
-Mobile API Course Information Resource
+Mobile Course Information API
 ##################################################
 
-With the Mobile API **Course Information** resource, you can complete the
-following tasks.
+This page describes how to use the Mobile Course Information API
+to complete these actions:
 
-* :ref:`Get updates about a course<Get Course Updates>`.
-* :ref:`Get a list of course handouts<Get Course Handouts>`.
+* `Get Course Updates`_
+* `Get Course Handouts`_
   
+
 .. _Get Course Updates:
 
 *******************
@@ -48,6 +49,18 @@ Get Course Handouts
 *******************
 
 .. autoclass:: mobile_api.course_info.views.CourseHandoutsList
+
+**Use Case**
+
+Get the HTML for course handouts.
+
+**Example request**:
+
+``GET /api/mobile/v0.5/course_info/{organization}/{course_number}/{course_run}/handouts``
+
+**Response Values**
+
+* handouts_html: The HTML for course handouts.
 
 **Example response**
 

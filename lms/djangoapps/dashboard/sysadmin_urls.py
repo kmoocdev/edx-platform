@@ -1,6 +1,7 @@
 """
 Urls for sysadmin dashboard feature
 """
+# pylint: disable=no-value-for-parameter
 
 from django.conf.urls import patterns, url
 

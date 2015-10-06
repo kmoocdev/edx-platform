@@ -22,12 +22,7 @@ from xmodule.modulestore.tests.factories import CourseFactory
 from capa.xqueue_interface import XQueueInterface
 
 from certificates.queue import XQueueCertInterface
-from certificates.models import (
-    ExampleCertificateSet,
-    ExampleCertificate,
-    GeneratedCertificate,
-    CertificateStatuses,
-)
+from certificates.models import ExampleCertificateSet, ExampleCertificate
 
 
 @attr('shard_1')
@@ -69,9 +64,6 @@ class XQueueCertInterfaceAddCertificateTest(ModuleStoreTestCase):
 
         # Verify that add_cert method does not add message to queue
         self.assertFalse(mock_send.called)
-        certificate = GeneratedCertificate.objects.get(user=self.user, course_id=self.course.id)
-        self.assertEqual(certificate.status, CertificateStatuses.downloadable)
-        self.assertIsNotNone(certificate.verify_uuid)
 
 
 @attr('shard_1')

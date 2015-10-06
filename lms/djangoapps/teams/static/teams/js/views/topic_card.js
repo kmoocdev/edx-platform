@@ -32,7 +32,7 @@
 
                 action: function (event) {
                     event.preventDefault();
-                    this.router.navigate('topics/' + this.model.get('id'), {trigger: true});
+                    // TODO implement actual navigation
                 },
 
                 configuration: 'square_card',

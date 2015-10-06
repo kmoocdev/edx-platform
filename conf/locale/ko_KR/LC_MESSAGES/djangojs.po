@@ -1,44 +1,3 @@
-# #-#-#-#-#  kmoocjs.po (kmooc-platform)  #-#-#-#-#
-# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2015 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# jeon <bluerespect@nate.com>, 2014-2015
-# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file.
-# Copyright (C) 2015 EdX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# jeon <bluerespect@nate.com>, 2014-2015
-# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2015 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
-# edX translation file
-# Copyright (C) 2015 edX
-# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# 
-# Translators:
-# jeon <bluerespect@nate.com>, 2014-2015
-# Translators:
-# Translators:
-# bossnm11 <bossnm11@gmail.com>, 2014
-# Chanseok <kcsgoodboy@gmail.com>, 2014
-# jeon <bluerespect@nate.com>, 2014
-# Jong-Dae Park <jdpark7@gmail.com>, 2013,2015
-# Kevin Min <gr326887@graded.br>, 2015
-# Kunwoo Kim <crazyabtmath@naver.com>, 2015
-# LEE SI HYEONG <super2451894@gmail.com>, 2014
-# Sam Ryoo <samryoo@gmail.com>, 2014
-# Seo. Junmin <sof.midnight@live.co.kr>, 2015
-# seungil <luck8778@gmail.com>, 2014
-# SEUNGWON <baeksw0620@gmail.com>, 2014
 # #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 # edX translation file.
 # Copyright (C) 2015 EdX
@@ -47,10 +6,6 @@
 # Translators:
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Hongseob Lee <shevious@gmail.com>, 2015
-<<<<<<< .merge_file_hALsgI
-# Hongseob Lee <shevious@yahoo.com>, 2015
-=======
->>>>>>> .merge_file_XU6NgF
 # Jong-Dae Park <jdpark7@gmail.com>, 2013
 # jeon <bluerespect@nate.com>, 2014-2015
 # Jong-Dae Park <jdpark7@gmail.com>, 2013
@@ -65,10 +20,6 @@
 # SEUNGWON <baeksw0620@gmail.com>, 2014
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Hongseob Lee <shevious@gmail.com>, 2015
-<<<<<<< .merge_file_hALsgI
-# Hongseob Lee <shevious@yahoo.com>, 2015
-=======
->>>>>>> .merge_file_XU6NgF
 # Jong-Dae Park <jdpark7@gmail.com>, 2013
 # jeon <bluerespect@nate.com>, 2014-2015
 # Chanseok <kcsgoodboy@gmail.com>, 2014
@@ -82,10 +33,6 @@
 # Translators:
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Hongseob Lee <shevious@gmail.com>, 2015
-<<<<<<< .merge_file_hALsgI
-# Hongseob Lee <shevious@yahoo.com>, 2015
-=======
->>>>>>> .merge_file_XU6NgF
 # jeon <bluerespect@nate.com>, 2014
 # Jong-Dae Park <jdpark7@gmail.com>, 2015
 # Kevin Min <gr326887@graded.br>, 2015
@@ -98,10 +45,6 @@
 # 
 # Translators:
 # Hongseob Lee <shevious@gmail.com>, 2015
-<<<<<<< .merge_file_hALsgI
-# Hongseob Lee <shevious@yahoo.com>, 2015
-=======
->>>>>>> .merge_file_XU6NgF
 # jeon <bluerespect@nate.com>, 2014-2015
 # Kevin Min <gr326887@graded.br>, 2015
 # Kunwoo Kim <crazyabtmath@naver.com>, 2015
@@ -110,15 +53,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-<<<<<<< .merge_file_hALsgI
-"POT-Creation-Date: 2015-09-30 13:05+0000\n"
-"PO-Revision-Date: 2015-09-25 11:18+0000\n"
-"Last-Translator: Hongseob Lee <shevious@yahoo.com>\n"
-=======
-"POT-Creation-Date: 2015-08-07 13:41+0000\n"
-"PO-Revision-Date: 2015-08-07 08:53+0000\n"
-"Last-Translator: Hongseob Lee <shevious@gmail.com>\n"
->>>>>>> .merge_file_XU6NgF
+"POT-Creation-Date: 2015-09-11 12:15+0000\n"
+"PO-Revision-Date: 2015-09-11 12:17+0000\n"
+"Last-Translator: Sarina Canelake <sarina@edx.org>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/open-edx/edx-platform/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -126,39 +63,6 @@ msgstr ""
 "Generated-By: Babel 1.3\n"
 "Language: ko_KR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: this is a message from the raw HTML editor displayed in the
-#. browser when a user needs to edit HTML
-#: cms/templates/js/add-xblock-component-menu-problem.underscore
-#: cms/templates/js/add-xblock-component-menu.underscore
-#: cms/templates/js/certificate-editor.underscore
-#: cms/templates/js/content-group-editor.underscore
-#: cms/templates/js/course_info_handouts.underscore
-#: cms/templates/js/course_info_update.underscore
-#: cms/templates/js/edit-textbook.underscore
-#: cms/templates/js/group-configuration-editor.underscore
-#: cms/templates/js/section-name-edit.underscore
-#: cms/templates/js/xblock-string-field-editor.underscore
-#: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
-#: cms/static/coffee/src/views/tabs.js
-#: cms/static/js/certificates/views/signatory_editor.js
-#: cms/static/js/factories/export.js cms/static/js/views/asset.js
-#: cms/static/js/views/course_info_update.js
-#: cms/static/js/views/manage_users_and_roles.js
-#: cms/static/js/views/show_textbook.js cms/static/js/views/validation.js
-#: cms/static/js/views/modals/base_modal.js
-#: cms/static/js/views/modals/course_outline_modals.js
-#: common/lib/xmodule/xmodule/js/src/html/edit.js
-#: common/static/common/js/components/utils/view_utils.js
-#: cms/templates/js/signatory-actions.underscore
-#: common/static/common/templates/discussion/new-post.underscore
-#: common/static/common/templates/discussion/response-comment-edit.underscore
-#: common/static/common/templates/discussion/thread-edit.underscore
-#: common/static/common/templates/discussion/thread-response-edit.underscore
-#: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
-msgid "Cancel"
-msgstr "취소"
 
 #: cms/static/coffee/src/views/tabs.js
 #: cms/static/coffee/src/xblock/cms.runtime.v1.js
@@ -184,8 +88,6 @@ msgstr "저장중"
 #: common/static/coffee/src/discussion/utils.js
 msgid "OK"
 msgstr "확인"
-<<<<<<< .merge_file_hALsgI
-=======
 
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -198,8 +100,8 @@ msgstr "확인"
 #: cms/static/js/views/show_textbook.js cms/static/js/views/validation.js
 #: cms/static/js/views/modals/base_modal.js
 #: cms/static/js/views/modals/course_outline_modals.js
-#: cms/static/js/views/utils/view_utils.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: common/static/common/js/components/utils/view_utils.js
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 #: cms/templates/js/add-xblock-component-menu.underscore
 #: cms/templates/js/certificate-editor.underscore
@@ -209,18 +111,22 @@ msgstr "확인"
 #: cms/templates/js/edit-textbook.underscore
 #: cms/templates/js/group-configuration-editor.underscore
 #: cms/templates/js/section-name-edit.underscore
+#: cms/templates/js/signatory-actions.underscore
 #: cms/templates/js/xblock-string-field-editor.underscore
+#: common/static/common/templates/discussion/new-post.underscore
+#: common/static/common/templates/discussion/response-comment-edit.underscore
+#: common/static/common/templates/discussion/thread-edit.underscore
+#: common/static/common/templates/discussion/thread-response-edit.underscore
+#: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Cancel"
 msgstr "취소"
->>>>>>> .merge_file_XU6NgF
 
 #: cms/static/js/certificates/views/signatory_editor.js
 #: cms/static/js/views/asset.js cms/static/js/views/list_item.js
 #: cms/static/js/views/manage_users_and_roles.js
 #: cms/static/js/views/show_textbook.js
 #: common/static/js/vendor/ova/catch/js/catch.js
-<<<<<<< .merge_file_hALsgI
 #: lms/djangoapps/teams/static/teams/js/views/instructor_tools.js
 #: cms/templates/js/certificate-details.underscore
 #: cms/templates/js/certificate-editor.underscore
@@ -234,8 +140,6 @@ msgstr "취소"
 #: cms/templates/js/signatory-editor.underscore
 #: cms/templates/js/xblock-outline.underscore
 #: common/static/common/templates/discussion/forum-action-delete.underscore
-=======
->>>>>>> .merge_file_XU6NgF
 msgid "Delete"
 msgstr "삭제"
 
@@ -245,10 +149,15 @@ msgstr "삭제"
 msgid "Uploading"
 msgstr "업로드 중"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: cms/static/js/views/assets.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: cms/templates/js/asset-library.underscore
+#: cms/templates/js/previous-video-upload-list.underscore
+#: cms/templates/js/signatory-details.underscore
+#: cms/templates/js/signatory-editor.underscore
 msgid "Name"
 msgstr "이름"
 
@@ -305,15 +214,13 @@ msgstr "오류"
 msgid "Save"
 msgstr "저장"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: cms/static/js/views/modals/edit_xblock.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
-<<<<<<< .merge_file_hALsgI
 #: common/static/common/templates/image-modal.underscore
 #: common/static/common/templates/discussion/forum-action-close.underscore
-=======
->>>>>>> .merge_file_XU6NgF
 msgid "Close"
 msgstr "닫기"
 
@@ -369,21 +276,13 @@ msgstr "답:"
 #. student must solve.;
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 msgid "Hide Answer"
-<<<<<<< .merge_file_hALsgI
 msgstr "정답 감추기"
-=======
-msgstr "답 숨기기"
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: the word Answer here refers to the answer to a problem the
 #. student must solve.;
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 msgid "Show Answer"
-<<<<<<< .merge_file_hALsgI
 msgstr "정답 보기"
-=======
-msgstr "답 보기"
->>>>>>> .merge_file_XU6NgF
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 msgid "Answer hidden"
@@ -391,11 +290,7 @@ msgstr "숨은 답"
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 msgid "Status: unsubmitted"
-<<<<<<< .merge_file_hALsgI
 msgstr "상태: 미제출"
-=======
-msgstr "상태:미제출"
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: A "rating" is a score a student gives to indicate how well
 #. they feel they were graded on this problem
@@ -413,12 +308,9 @@ msgstr "다음 단계로 가기 위한 기준 점수 미달입니다."
 
 #: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
 #: lms/static/coffee/src/staff_grading/staff_grading.js
-<<<<<<< .merge_file_hALsgI
 #: common/static/common/templates/discussion/thread-response.underscore
 #: common/static/common/templates/discussion/thread.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
-=======
->>>>>>> .merge_file_XU6NgF
 msgid "Submit"
 msgstr "제출"
 
@@ -432,11 +324,7 @@ msgstr " 평가 제출"
 #: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
 msgid ""
 "Your response has been submitted. Please check back later for your grade."
-<<<<<<< .merge_file_hALsgI
 msgstr "귀하의 답변이 제출되었습니다.성적을 나중에 확인해 보세요."
-=======
-msgstr "당신의 반응이 제출되었습니다. 당신의 성적을 나중에 확인해 보세요."
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: this button is clicked to submit a student's rating of
 #. an evaluator's assessment
@@ -458,20 +346,12 @@ msgstr "과제를 제출할 것인지 확인하세요. 제출 후에는 어떠�
 msgid ""
 "You are trying to upload a file that is too large for our system.  Please "
 "choose a file under 2MB or paste a link to it into the answer box."
-<<<<<<< .merge_file_hALsgI
 msgstr "업로드하기에 파일이 너무 큽니다. 2MB 이하의 파일을 선택하거나 답안박스에 파일 링크를 붙여 넣으세요. "
-=======
-msgstr "이 시스템에 업로드하기에 파일이 너무 큽니다. 2MB 이하의 파일을 선택하거나 답안박스에 그 파일의 링크를 붙여 넣으세요. "
->>>>>>> .merge_file_XU6NgF
 
 #: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
 msgid ""
 "Are you sure you want to remove your previous response to this question?"
-<<<<<<< .merge_file_hALsgI
 msgstr "문제의 이전 답변을  삭제하시겠습니까?"
-=======
-msgstr "이 문제에 대한 이전 응답을  삭제하시겠습니까?"
->>>>>>> .merge_file_XU6NgF
 
 #: common/lib/xmodule/xmodule/js/src/combinedopenended/display.js
 msgid "Moved to next step."
@@ -484,13 +364,8 @@ msgid ""
 " uploaded the image to another website, you can paste a link to it into the "
 "answer box."
 msgstr ""
-<<<<<<< .merge_file_hALsgI
 "이 문제는 파일을 업로드해야 하지만, 브라우저가 기능을 지원하지 않습니다. 구글 Chrome 최신 버전을 설치한 후 시도해 보세요. 혹은"
 " 다른 웹사이트에 이미지를 업로드후 링크를 복사했다면 답안 박스에 이미지의 링크를 붙여넣기 하면 됩니다."
-=======
-"이 문제를 위해 파일을 업로드해야 하지만, 이 브라우저는 이를 지원하지 않습니다. 구글 Chrome 최신 버전으로 시도해보세요.  혹은 "
-"다른 웹사이트에 이미지를 업로드했다면 답안 박스에 링크를 붙여넣기 하시면 됩니다."
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: "Show Question" is some text that, when clicked, shows a
 #. question's
@@ -537,9 +412,11 @@ msgstr "제목 3"
 msgid "Add to Dictionary"
 msgstr "모음에 추가하기"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Advanced"
 msgstr "고급"
 
@@ -620,11 +497,7 @@ msgstr "본문"
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 msgid "Bold"
-<<<<<<< .merge_file_hALsgI
 msgstr "진하게"
-=======
-msgstr "굵게"
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -710,9 +583,11 @@ msgstr "포맷팅 초기화"
 msgid "Code block"
 msgstr "코드 블럭"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Code"
 msgstr "코드"
 
@@ -744,11 +619,7 @@ msgstr "칼럼"
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 msgid "Constrain proportions"
-<<<<<<< .merge_file_hALsgI
 msgstr "비율 제한"
-=======
-msgstr "비율제한"
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -766,11 +637,7 @@ msgstr " 복사"
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 msgid "Could not find the specified string."
-<<<<<<< .merge_file_hALsgI
 msgstr "특정 문자열을 찾을 수 없습니다."
-=======
-msgstr "특정 문자열을 찾을수 없음."
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -841,11 +708,7 @@ msgstr "설명"
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 msgid "Dimensions"
-<<<<<<< .merge_file_hALsgI
 msgstr " 이미지 크기"
-=======
-msgstr " 차원"
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -871,11 +734,11 @@ msgstr "문서 특징"
 msgid "Edit HTML"
 msgstr " html 편집"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: common/static/js/vendor/ova/catch/js/catch.js
-<<<<<<< .merge_file_hALsgI
 #: cms/templates/js/certificate-details.underscore
 #: cms/templates/js/content-group-details.underscore
 #: cms/templates/js/course_info_handouts.underscore
@@ -884,8 +747,6 @@ msgstr " html 편집"
 #: cms/templates/js/signatory-details.underscore
 #: cms/templates/js/xblock-string-field-editor.underscore
 #: common/static/common/templates/discussion/forum-action-edit.underscore
-=======
->>>>>>> .merge_file_XU6NgF
 msgid "Edit"
 msgstr "편집"
 
@@ -893,11 +754,7 @@ msgstr "편집"
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 msgid "Embed"
-<<<<<<< .merge_file_hALsgI
 msgstr "Embed"
-=======
-msgstr " 삽입하다"
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -921,11 +778,7 @@ msgstr "파일"
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 msgid "Find and replace"
-<<<<<<< .merge_file_hALsgI
 msgstr "검색 및 바꾸기"
-=======
-msgstr "검색 후 바꾸기"
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1041,11 +894,7 @@ msgstr "머릿글 6"
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 msgid "Header cell"
-<<<<<<< .merge_file_hALsgI
 msgstr "Header cell"
-=======
-msgstr "머릿글 셀"
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1196,11 +1045,7 @@ msgstr "템플릿 삽입"
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 msgid "Insert video"
-<<<<<<< .merge_file_hALsgI
 msgstr "동영상 삽입"
-=======
-msgstr "비디오 삽입"
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1224,11 +1069,7 @@ msgstr "링크 편집/삽입"
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 msgid "Insert/edit video"
-<<<<<<< .merge_file_hALsgI
 msgstr "동영상 편집/삽입"
-=======
-msgstr "비디오 편집/삽입"
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1360,13 +1201,9 @@ msgstr "텍스트로 붙이기"
 msgid ""
 "Paste is now in plain text mode. Contents will now be pasted as plain text "
 "until you toggle this option off."
-<<<<<<< .merge_file_hALsgI
 msgstr ""
 "콘텐츠가 일반 텍스트 모드로 붙여집니다. Contents will now be pasted as plain text until you "
 "toggle this option off."
-=======
-msgstr "붙이기는 이제 텍스트 모드입니다. 콘텐츠는 당신이 이 옵션을 토글로 해제할 때까지는 플레인텍스트로 붙여집니다."
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1410,10 +1247,12 @@ msgstr "Pre"
 msgid "Prev"
 msgstr "이전"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: lms/static/coffee/src/customwmd.js
+#: cms/templates/js/asset-library.underscore
 msgid "Preview"
 msgstr "미리보기"
 
@@ -1447,9 +1286,12 @@ msgstr "모두 바꾸기"
 msgid "Replace with"
 msgstr "바꾸기"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: cms/templates/js/metadata-file-uploader-item.underscore
+#: cms/templates/js/video/metadata-translations-item.underscore
 msgid "Replace"
 msgstr "바꾸기"
 
@@ -1621,11 +1463,7 @@ msgstr "표"
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 msgid "Target"
-<<<<<<< .merge_file_hALsgI
 msgstr "Target"
-=======
-msgstr "타겟"
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1651,11 +1489,7 @@ msgstr "표시할 글자"
 msgid ""
 "The URL you entered seems to be an email address. Do you want to add the "
 "required mailto: prefix?"
-<<<<<<< .merge_file_hALsgI
 msgstr "입력한 URL이 이메일주소와 같습니다. 필요한 접두어 mailto: 를 추가하시겠습니까?"
-=======
-msgstr "입력한 URL이 이메일주소 같습니다. 필요한 접두어 mailto: 를 추가하시겠습니까?"
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1665,16 +1499,14 @@ msgid ""
 "required http:// prefix?"
 msgstr "입력한 URL이 외부링크 같습니다. 필요한 접두어 http://  를 추가하시겠습니까?"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
-<<<<<<< .merge_file_hALsgI
 #: cms/templates/js/signatory-details.underscore
 #: cms/templates/js/signatory-editor.underscore
 #: common/static/common/templates/discussion/new-post.underscore
 #: common/static/common/templates/discussion/thread-edit.underscore
-=======
->>>>>>> .merge_file_XU6NgF
 msgid "Title"
 msgstr "제목"
 
@@ -1810,19 +1642,11 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
 msgid "incorrect"
-<<<<<<< .merge_file_hALsgI
 msgstr "오답을 입력하세요."
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
 msgid "correct"
 msgstr "정답을 입력하세요."
-=======
-msgstr "틀렸습니다."
-
-#: common/lib/xmodule/xmodule/js/src/problem/edit.js
-msgid "correct"
-msgstr "맞았습니다."
->>>>>>> .merge_file_XU6NgF
 
 #: common/lib/xmodule/xmodule/js/src/problem/edit.js
 msgid "answer"
@@ -1838,11 +1662,7 @@ msgid ""
 "\n"
 "Proceed to the Advanced Editor and convert this problem to XML?"
 msgstr ""
-<<<<<<< .merge_file_hALsgI
 "고급 편집기를 사용한다면, 이 문제는 XML로 전환되며, 간편 편집기 인터페이스로 다시 돌아올 수 없습니다. \n"
-=======
-"고급 편집기를 사용한다면, 이 문제는 XML로 전환되며, 단순 편집기 인터페이스로 다시 돌아올 수 없습니다. \n"
->>>>>>> .merge_file_XU6NgF
 "고급 편집기에서 이 문제를 XML로 전환하시겠습니까?"
 
 #: common/lib/xmodule/xmodule/js/src/sequence/display.js
@@ -1949,11 +1769,7 @@ msgstr "HD 화질  켜기"
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 msgid "Video position"
-<<<<<<< .merge_file_hALsgI
 msgstr "동영상 위치"
-=======
-msgstr "비디오 위치"
->>>>>>> .merge_file_XU6NgF
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 msgid "Video ended"
@@ -2017,11 +1833,7 @@ msgstr "자막 켜기"
 
 #: common/lib/xmodule/xmodule/public/js/library_content_edit.js
 msgid "Updating with latest library content"
-<<<<<<< .merge_file_hALsgI
 msgstr "최신 콘텐츠 보관함으로 업데이트"
-=======
-msgstr "최신 라이브러리 콘텐츠로 업데이트"
->>>>>>> .merge_file_XU6NgF
 
 #: common/lib/xmodule/xmodule/public/js/split_test_author_view.js
 msgid "Creating missing groups"
@@ -2046,20 +1858,12 @@ msgstr "죄송합니다"
 
 #: common/static/coffee/src/discussion/discussion_module_view.js
 msgid "We had some trouble loading the discussion. Please try again."
-<<<<<<< .merge_file_hALsgI
 msgstr "게시판을 로딩하는데 문제가 있습니다. 다시 시도하세요."
-=======
-msgstr "게시판을 로딩하는데 문제가 있습니다. 다시 시도하세요"
->>>>>>> .merge_file_XU6NgF
 
 #: common/static/coffee/src/discussion/discussion_module_view.js
 msgid ""
 "We had some trouble loading the threads you requested. Please try again."
-<<<<<<< .merge_file_hALsgI
 msgstr "요청한 게시물을 로딩하는 중 오류가 발생했습니다. 다시 시도하세요."
-=======
-msgstr "요청한 게시물을 로딩하는데 문제가 있습니다. 다시 시도하세요"
->>>>>>> .merge_file_XU6NgF
 
 #: common/static/coffee/src/discussion/utils.js
 msgid "Loading content"
@@ -2104,20 +1908,12 @@ msgstr "이 게시물 구독 취소에 오류가 발생했습니다. 다시 시�
 #: common/static/coffee/src/discussion/views/discussion_content_view.js
 msgid ""
 "We had some trouble marking this response as an answer.  Please try again."
-<<<<<<< .merge_file_hALsgI
 msgstr "채택하는 도중 오류가 발생했습니다. 다시 시도하세요."
-=======
-msgstr "이 답변을 정답으로 채택하는데 오류가 발생했습니다. 다시 시도하세요."
->>>>>>> .merge_file_XU6NgF
 
 #: common/static/coffee/src/discussion/views/discussion_content_view.js
 msgid ""
 "We had some trouble removing this response as an answer.  Please try again."
-<<<<<<< .merge_file_hALsgI
 msgstr "채택 취소 중 오류가 발생했습니다. 다시 시도하세요."
-=======
-msgstr "정답으로 채택된 이 답변을 제거하는데 오류가 발생했습니다. 다시 시도하세요."
->>>>>>> .merge_file_XU6NgF
 
 #: common/static/coffee/src/discussion/views/discussion_content_view.js
 msgid "We had some trouble marking this response endorsed.  Please try again."
@@ -2209,11 +2005,7 @@ msgstr "선택한 게시물은 삭제되었습니다. 다른 게시물을 선택
 
 #: common/static/coffee/src/discussion/views/discussion_thread_view.js
 msgid "We had some trouble loading responses. Please reload the page."
-<<<<<<< .merge_file_hALsgI
 msgstr "오류가 발생했습니다. 다시 시도하세요."
-=======
-msgstr "답변 로드중 문제가 생겼습니다. 페이지를 다시 로드하세요."
->>>>>>> .merge_file_XU6NgF
 
 #: common/static/coffee/src/discussion/views/discussion_thread_view.js
 msgid "We had some trouble loading more responses. Please try again."
@@ -2252,11 +2044,7 @@ msgstr "이 게시물을 삭제하시겠습니까?"
 
 #: common/static/coffee/src/discussion/views/discussion_user_profile_view.js
 msgid "We had some trouble loading the page you requested. Please try again."
-<<<<<<< .merge_file_hALsgI
 msgstr "요청한 페이지를 로딩 중 오류가 발생했습니다. 잠시 후에 다시 시도하세요."
-=======
-msgstr "당신이 요청한 페이지를 로딩하는데 문제가 있습니다. 다시 시도하세요"
->>>>>>> .merge_file_XU6NgF
 
 #: common/static/coffee/src/discussion/views/new_post_view.js
 msgid "Your post will be discarded."
@@ -2274,7 +2062,6 @@ msgstr "이 댓글을 삭제하시겠습니까?"
 
 #: common/static/coffee/src/discussion/views/response_comment_view.js
 msgid "We had some trouble deleting this comment. Please try again."
-<<<<<<< .merge_file_hALsgI
 msgstr "코멘트를 삭제하는데 오류가 발생했습니다. 다시 시도하세요."
 
 #: common/static/coffee/src/discussion/views/thread_response_view.js
@@ -2292,13 +2079,6 @@ msgstr "이 필드에 공백을 사용하지 마세요."
 #: common/static/common/js/components/utils/view_utils.js
 msgid "Please do not use any spaces or special characters in this field."
 msgstr "영어 알파벳을 입력하고, 공백이나 특수문자를 사용하지 마세요."
-=======
-msgstr "코멘트를 삭제하는데 문제가 있습니다. 다시 시도하세요"
-
-#: common/static/coffee/src/discussion/views/thread_response_view.js
-msgid "Are you sure you want to delete this response?"
-msgstr "이 응답을  삭제하시겠습니까?"
->>>>>>> .merge_file_XU6NgF
 
 #: common/static/common/js/components/views/paging_header.js
 msgid "Showing %(first_index)s out of %(num_items)s total"
@@ -2318,11 +2098,7 @@ msgstr "슬라이더 당기기"
 
 #: common/static/js/capa/drag_and_drop/draggable_events.js
 msgid "dragging"
-<<<<<<< .merge_file_hALsgI
 msgstr "마우스로 끌고 오기"
-=======
-msgstr "드래그하기"
->>>>>>> .merge_file_XU6NgF
 
 #: common/static/js/capa/drag_and_drop/draggable_events.js
 msgid "dropped in slider"
@@ -2454,22 +2230,15 @@ msgstr "게시된 날짜"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 #: lms/static/js/courseware/credit_progress.js
-<<<<<<< .merge_file_hALsgI
 #: common/static/common/templates/discussion/forum-actions.underscore
 #: lms/templates/discovery/facet.underscore
 #: lms/templates/edxnotes/note-item.underscore
-=======
->>>>>>> .merge_file_XU6NgF
 msgid "More"
 msgstr "더보기"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "My Notes"
-<<<<<<< .merge_file_hALsgI
-msgstr "내 노트"
-=======
 msgstr "나의 노트"
->>>>>>> .merge_file_XU6NgF
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "Instructor"
@@ -2506,16 +2275,19 @@ msgid "Annotation Text"
 msgstr "주석 텍스트"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
+#: cms/templates/js/metadata-dict-entry.underscore
+#: cms/templates/js/metadata-file-uploader-entry.underscore
+#: cms/templates/js/metadata-list-entry.underscore
+#: cms/templates/js/metadata-number-entry.underscore
+#: cms/templates/js/metadata-option-entry.underscore
+#: cms/templates/js/metadata-string-entry.underscore
+#: cms/templates/js/video/metadata-translations-entry.underscore
 msgid "Clear"
 msgstr "지우기"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "Text"
-<<<<<<< .merge_file_hALsgI
 msgstr "Text"
-=======
-msgstr "텍스트"
->>>>>>> .merge_file_XU6NgF
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "Video"
@@ -2531,9 +2303,9 @@ msgid "Reply"
 msgstr "답글"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
+#: lms/templates/edxnotes/note-item.underscore
 msgid "Tags:"
 msgstr "Tags:"
-<<<<<<< .merge_file_hALsgI
 
 #: lms/djangoapps/support/static/support/js/views/certificates.js
 msgid "An unexpected error occurred.  Please try again."
@@ -2743,8 +2515,8 @@ msgid "All teams"
 msgstr "모든 팀"
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "Topics"
-msgstr ""
+msgid "teams"
+msgstr "팀"
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Teams"
@@ -2867,177 +2639,6 @@ msgid ""
 "find a team to join, {create_span_start}create a new team in this "
 "topic{span_end}."
 msgstr ""
-=======
-
-#: lms/djangoapps/teams/static/teams/js/collections/team.js
-#: lms/djangoapps/teams/static/teams/js/collections/topic.js
-#: lms/templates/edxnotes/tab-item.underscore
-msgid "name"
-msgstr "이름"
-
-#: lms/djangoapps/teams/static/teams/js/collections/team.js
-msgid "open_slots"
-msgstr "open_slots"
-
-#: lms/djangoapps/teams/static/teams/js/collections/topic.js
-msgid "team count"
-msgstr "팀 인원 수"
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Team Name (Required) *"
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "A name that identifies your team (maximum 255 characters)."
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Team Description (Required) *"
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid ""
-"A short description of the team to help other learners understand the goals "
-"or direction of the team (maximum 300 characters)."
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Optional Characteristics"
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid ""
-"Help other learners decide whether to join your team by specifying some "
-"characteristics for your team. Choose carefully, because fewer people might "
-"be interested in joining your team if it seems too restrictive."
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid "Language"
-msgstr "언어"
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid ""
-"The language that team members primarily use to communicate with each other."
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-#: lms/static/js/student_profile/views/learner_profile_factory.js
-msgid "Country"
-msgstr "국가"
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "The country that team members primarily identify with."
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-#: lms/static/js/views/fields.js
-msgid "An error occurred. Please try again."
-msgstr "오류가 발생했습니다. 다시 시도해 주세요. "
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Check the highlighted fields below and try again."
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Enter team name."
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Team name cannot have more than 255 characters."
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Enter team description."
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-msgid "Team description cannot have more than 300 characters."
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/team_actions.js
-msgid ""
-"Try {browse_span_start}browsing all teams{span_end} or "
-"{search_span_start}searching team descriptions{span_end}. If you still can't"
-" find a team to join, {create_span_start}create a new team in this "
-"topic{span_end}."
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/team_card.js
-msgid "%(member_count)s / %(max_member_count)s Member"
-msgid_plural "%(member_count)s / %(max_member_count)s Members"
-msgstr[0] "%(member_count)s / %(max_member_count)s 멤버"
-
-#: lms/djangoapps/teams/static/teams/js/views/team_card.js
-msgid "View %(span_start)s %(team_name)s %(span_end)s"
-msgstr "%(span_start)s %(team_name)s %(span_end)s 보기"
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid ""
-"See all teams in your course, organized by topic. Join a team to collaborate"
-" with other learners who are interested in the same topic as you are."
-msgstr "강좌에서 주제별로 조직된 모든 팀을 보세요. 관심사가 같은 다른 학습자들과 협력하기 위해 팀에 참여하세요."
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "Teams"
-msgstr "팀"
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "My Teams"
-msgstr "나의 팀"
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "Browse"
-msgstr "살펴보기"
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid ""
-"Create a new team if you can't find existing teams to join, or if you would "
-"like to learn with friends you know."
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "Create a New Team"
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "All Topics"
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "The page \"%(route)s\" could not be found."
-msgstr "\"%(route)s\" 페이지를 찾을 수 없습니다."
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "The topic \"%(topic)s\" could not be found."
-msgstr "\"%(topic)s\" 주제로 찾을 수 없습니다."
-
-#: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "The team \"%(team)s\" could not be found."
-msgstr ""
-
-#: lms/djangoapps/teams/static/teams/js/views/topic_card.js
-msgid "%(team_count)s Team"
-msgid_plural "%(team_count)s Teams"
-msgstr[0] "%(team_count)s 팀"
-
-#: lms/djangoapps/teams/static/teams/js/views/topic_card.js
-msgid "View Teams in the %(topic_name)s Topic"
-msgstr "%(topic_name)s 주제의 팀 보기"
-
-#: lms/static/coffee/src/calculator.js
-msgid "Open Calculator"
-msgstr "계산기 열기"
-
-#: lms/static/coffee/src/calculator.js
-msgid "Close Calculator"
-msgstr "계산기 닫기"
-
-#: lms/static/coffee/src/customwmd.js
-msgid "Post body"
-msgstr "본문 게시글 올리기"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/djangoapps/teams/static/teams/js/views/topics.js
 msgid "All topics"
@@ -3061,11 +2662,7 @@ msgstr "감독이 있는 평가 결과 생성 중에 오류가 발생했습니�
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 msgid "Error generating student profile information. Please try again."
-<<<<<<< .merge_file_hALsgI
-msgstr "학습자 정보를 만드는 중 오류가 발생했습니다. 다시 시도하세요."
-=======
-msgstr "학생 프로필 정보를 만드는데 오류가 발생했습니다. 다시 시도하세요."
->>>>>>> .merge_file_XU6NgF
+msgstr "학습자 프로필 정보를 만드는 중 오류가 발생했습니다. 다시 시도하세요."
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 #: lms/templates/search/search_loading.underscore
@@ -3075,19 +2672,11 @@ msgstr "로딩"
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 msgid "Error getting student list."
-<<<<<<< .merge_file_hALsgI
 msgstr "학습자 목록 가져오기 에러."
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 msgid "Error generating list of students who may enroll. Please try again."
 msgstr "수강신청한 학습자 목록을 생성하는 중 오류가 발생했습니다. 다시 시도하세요."
-=======
-msgstr "학생리스트 가져오기 에러."
-
-#: lms/static/coffee/src/instructor_dashboard/data_download.js
-msgid "Error generating list of students who may enroll. Please try again."
-msgstr "수강신청한 학습자 목록을 생성하는 데 오류가 발생했습니다. 다시 시도해주세요."
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 msgid "Error retrieving grading configuration."
@@ -3095,19 +2684,11 @@ msgstr "성적설정 가져오기 에러"
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 msgid "Error generating grades. Please try again."
-<<<<<<< .merge_file_hALsgI
 msgstr "성적 생성 중 오류가 발생했습니다. 다시 시도하세요."
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 msgid "Error generating problem grade report. Please try again."
 msgstr "성적 보고서 생성 중 오류가 발생했습니다. 다시 시도하세요."
-=======
-msgstr "성적생성 에러, 다시 시도하세요"
-
-#: lms/static/coffee/src/instructor_dashboard/data_download.js
-msgid "Error generating problem grade report. Please try again."
-msgstr "성적 보고서 생성 오류입니다. 다시 시도하세요."
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/coffee/src/instructor_dashboard/instructor_analytics.js
 msgid "Unavailable metric display."
@@ -3170,11 +2751,7 @@ msgstr "오류: 자신을 교수자 그룹에서 제거할 수 없습니다. "
 
 #: lms/static/coffee/src/instructor_dashboard/membership.js
 msgid "Errors"
-<<<<<<< .merge_file_hALsgI
 msgstr "오류"
-=======
-msgstr "오류들"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/coffee/src/instructor_dashboard/membership.js
 msgid "The following errors were generated:"
@@ -3259,11 +2836,7 @@ msgstr "다음 이용자들을 성공적으로 등록했습니다."
 msgid ""
 "Successfully sent enrollment emails to the following users. They will be "
 "allowed to enroll once they register:"
-<<<<<<< .merge_file_hALsgI
 msgstr "등록 이메일을 다음 이용자들에게  발송했습니다. "
-=======
-msgstr "성공적으로 등록 이메일을 다음 이용자들에게  발송했습니다. 이용자들이 등록을 하면  .. 용어 확인이 필요합니다."
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/coffee/src/instructor_dashboard/membership.js
@@ -3275,20 +2848,12 @@ msgstr "이 사용자들은 등록하면 바로 수강신청할 수 있습니다
 msgid ""
 "Successfully sent enrollment emails to the following users. They will be "
 "enrolled once they register:"
-<<<<<<< .merge_file_hALsgI
 msgstr "다음 사용자에게  성공적으로 등록 이메일을 발송했습니다. 가입신청하면 강좌에 등록이 될 것입니다: "
-=======
-msgstr "성공적으로 등록이메일을 다음 사용자에게  발송. 그들이 확인하면 등록이 완료됨:"
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/coffee/src/instructor_dashboard/membership.js
 msgid "These users will be enrolled once they register:"
-<<<<<<< .merge_file_hALsgI
 msgstr "가입 신청하면 강좌에 등록이 될 것입니다: "
-=======
-msgstr "그들이 확인하면 등록이 완료됨:"
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/coffee/src/instructor_dashboard/membership.js
@@ -3443,11 +3008,7 @@ msgid ""
 "complete and correct."
 msgstr ""
 "'<%= problem_id %>' 문제와  '<%= student_id %>' 학습자의 작업 기록을 가져오는 중 오류가 발생했습니다. "
-<<<<<<< .merge_file_hALsgI
 "문제와 학습자 ID가 정확한지 확인하세요."
-=======
-"문제와 학생ID가 정확한지 확인하세요."
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Entrance exam attempts is being reset for student '{student_id}'."
@@ -3474,11 +3035,7 @@ msgid ""
 "Make sure that entrance exam has problems in it and student identifier is "
 "correct."
 msgstr ""
-<<<<<<< .merge_file_hALsgI
 " '{student_id}' 학습자의 사전 평가 재채점에 오류가 발생했습니다. 사전 평가에 문항이 있는지와 학습자 아이디가 정확한지 "
-=======
-" '{student_id}' 학습자의 사전 평가 재채점에 오류가 발생했습니다. 사전 평가에 문항이 있는지와 학습자 ID가 정확한지 "
->>>>>>> .merge_file_XU6NgF
 "확인하세요."
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
@@ -3517,11 +3074,7 @@ msgstr ""
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Reset attempts for all students on problem '<%= problem_id %>'?"
-<<<<<<< .merge_file_hALsgI
 msgstr " '<%= problem_id %>'문제에 대한 모든 학습자의 시도를 초기화합니다."
-=======
-msgstr " '<%= problem_id %>'문제의 모든 학생의 시도를 모두 초기화하세요."
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3541,11 +3094,7 @@ msgstr " '<%= problem_id %>' 문제의 초기화 작업 시작에 오류가 발�
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Rescore problem '<%= problem_id %>' for all students?"
-<<<<<<< .merge_file_hALsgI
 msgstr "모든 학습자가 푼 문제 '<%= problem_id %>'을 재채점할까요?"
-=======
-msgstr "모든 학생에 대해 문제 '<%= problem_id %>'의 재채점을 할까요?"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid ""
@@ -3565,11 +3114,7 @@ msgstr ""
 
 #: lms/static/coffee/src/instructor_dashboard/student_admin.js
 msgid "Error listing task history for this student and problem."
-<<<<<<< .merge_file_hALsgI
 msgstr "학습자 및 문제 대한 작업 오류 내역 표시에서 오류가 발생했습니다."
-=======
-msgstr "학생들과 문제에 대한 작업 내역을 표시하는 오류가 발생했습니다."
->>>>>>> .merge_file_XU6NgF
 
 #. Translators: a "Task" is a background process such as grading students or
 #. sending email
@@ -3673,11 +3218,7 @@ msgstr "본문: "
 
 #: lms/static/coffee/src/instructor_dashboard/util.js
 msgid "No tasks currently running."
-<<<<<<< .merge_file_hALsgI
 msgstr "작업이 없습니다."
-=======
-msgstr "실행중인 작업이 없습니다."
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/coffee/src/instructor_dashboard/util.js
 msgid "File Name"
@@ -3772,19 +3313,11 @@ msgstr "Markdow 편집 도움말"
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Bold (Ctrl+B)"
-<<<<<<< .merge_file_hALsgI
 msgstr "진하게 (Ctrl+B)"
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Italic (Ctrl+I)"
 msgstr "기울임 (Ctrl+I)"
-=======
-msgstr "볼드체 (Ctrl+B)"
-
-#: lms/static/js/Markdown.Editor.js
-msgid "Italic (Ctrl+I)"
-msgstr "이탤릭체 (Ctrl+I)"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Hyperlink (Ctrl+L)"
@@ -3804,11 +3337,7 @@ msgstr "이미지 (Ctrl+G)"
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Numbered List (Ctrl+O)"
-<<<<<<< .merge_file_hALsgI
 msgstr "문단 번호 (Ctrl+O)"
-=======
-msgstr "Numbered List (Ctrl+O)"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Bulleted List (Ctrl+U)"
@@ -3816,7 +3345,6 @@ msgstr "글머리표 (Ctrl+U)"
 
 #: lms/static/js/Markdown.Editor.js
 msgid "Heading (Ctrl+H)"
-<<<<<<< .merge_file_hALsgI
 msgstr "제목 (Ctrl+H)"
 
 #: lms/static/js/Markdown.Editor.js
@@ -3834,25 +3362,6 @@ msgstr "다시실행 (Ctrl+Y)"
 #: lms/static/js/Markdown.Editor.js
 msgid "Redo (Ctrl+Shift+Z)"
 msgstr "다시실행 (Ctrl+Shift+Z)"
-=======
-msgstr "Heading (Ctrl+H)"
-
-#: lms/static/js/Markdown.Editor.js
-msgid "Horizontal Rule (Ctrl+R)"
-msgstr "Horizontal Rule (Ctrl+R)"
-
-#: lms/static/js/Markdown.Editor.js
-msgid "Undo (Ctrl+Z)"
-msgstr "Undo (Ctrl+Z)"
-
-#: lms/static/js/Markdown.Editor.js
-msgid "Redo (Ctrl+Y)"
-msgstr "Redo (Ctrl+Y)"
-
-#: lms/static/js/Markdown.Editor.js
-msgid "Redo (Ctrl+Shift+Z)"
-msgstr "Redo (Ctrl+Shift+Z)"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/Markdown.Editor.js
 msgid "strong text"
@@ -3872,7 +3381,6 @@ msgstr "링크 설명을 여기에 입력하세요"
 
 #: lms/static/js/Markdown.Editor.js
 msgid "enter code here"
-<<<<<<< .merge_file_hALsgI
 msgstr "코드 입력하세요"
 
 #: lms/static/js/Markdown.Editor.js
@@ -3886,21 +3394,6 @@ msgstr "제목"
 #: lms/static/js/ajax-error.js
 msgid "You have been logged out of your edX account. "
 msgstr "로그아웃 되었습니다."
-=======
-msgstr "코드를 여기에 입력하세요"
-
-#: lms/static/js/Markdown.Editor.js
-msgid "List item"
-msgstr "아이템을 리스트하세요"
-
-#: lms/static/js/Markdown.Editor.js
-msgid "Heading"
-msgstr "Heading"
-
-#: lms/static/js/ajax-error.js
-msgid "You have been logged out of your edX account. "
-msgstr "로그아웃 되셨습니다."
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/course_survey.js
 msgid "There has been an error processing your survey."
@@ -3920,11 +3413,7 @@ msgstr "시도를 초기화하는데 실패했습니다."
 
 #: lms/static/js/staff_debug_actions.js
 msgid "Successfully deleted student state for user {user}"
-<<<<<<< .merge_file_hALsgI
 msgstr " {user} 학습자 상태 삭제 성공"
-=======
-msgstr "사용자 {user} 학생상태 삭제 성공"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/staff_debug_actions.js
 msgid "Failed to delete student state."
@@ -3944,16 +3433,12 @@ msgstr "모든 소주제"
 
 #: lms/static/js/ccx/schedule.js
 msgid "All units"
-<<<<<<< .merge_file_hALsgI
-msgstr "전체 학습활동"
+msgstr "모든 학습활동"
 
 #: lms/static/js/ccx/schedule.js lms/static/js/ccx/schedule.js.c
 #: lms/templates/ccx/schedule.underscore
 msgid "Click to change"
 msgstr "변경을 위해 클릭하세요"
-=======
-msgstr "모든 학습활동"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/ccx/schedule.js
 msgid "Select a chapter"
@@ -3964,7 +3449,6 @@ msgid "Save changes"
 msgstr "변경사항 저장"
 
 #: lms/static/js/ccx/schedule.js
-<<<<<<< .merge_file_hALsgI
 msgid "Enter Due Date and Time"
 msgstr "마감 일시 입력"
 
@@ -3975,16 +3459,6 @@ msgstr "시작 일시 입력"
 #: lms/static/js/courseware/credit_progress.js
 #: lms/templates/discovery/facet.underscore
 #: lms/templates/edxnotes/note-item.underscore
-=======
-msgid "Enter Due Date"
-msgstr "마감 날짜 입력"
-
-#: lms/static/js/ccx/schedule.js
-msgid "Enter Start Date"
-msgstr "시작 날짜 입력"
-
-#: lms/static/js/courseware/credit_progress.js
->>>>>>> .merge_file_XU6NgF
 msgid "Less"
 msgstr "적게"
 
@@ -3998,7 +3472,6 @@ msgstr "기부 처리가 될 수 없습니다."
 
 #: lms/static/js/dashboard/legacy.js
 msgid "An error occurred. Please try again later."
-<<<<<<< .merge_file_hALsgI
 msgstr "오류가 발생했습니다. 잠시 후에 다시 시도하세요."
 
 #: lms/static/js/discovery/views/search_form.js
@@ -4007,27 +3480,13 @@ msgid_plural "Viewing %s courses"
 msgstr[0] "%s 강좌 보기"
 
 #: lms/static/js/discovery/views/search_form.js
-=======
-msgstr "오류가 발생하였습니다. 다음에 다시 시도하십시요."
-
-#: lms/static/js/discovery/views/search_form.js
-msgid "Viewing %s course"
-msgid_plural "Viewing %s courses"
-msgstr[0] "%s 강좌 보기"
-
-#: lms/static/js/discovery/views/search_form.js
->>>>>>> .merge_file_XU6NgF
 msgid "We couldn't find any results for \"%s\"."
 msgstr "\"%s\"를 찾을 수 없습니다. "
 
 #: lms/static/js/discovery/views/search_form.js
 #: lms/templates/search/search_error.underscore
 msgid "There was an error, try searching again."
-<<<<<<< .merge_file_hALsgI
 msgstr "오류가 발생했습니다. 다시 검색하세요."
-=======
-msgstr "오류가 발생했습니다. 다시 검색해 보세요."
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/edxnotes/plugins/accessibility.js
 msgid "Focus grabber"
@@ -4113,11 +3572,7 @@ msgstr "아이디 혹은 이메일을 입력하세요."
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "{numUsersAdded} student has been added to this cohort"
 msgid_plural "{numUsersAdded} students have been added to this cohort"
-<<<<<<< .merge_file_hALsgI
 msgstr[0] "본 학습 집단에 {numUsersAdded}명의 학습자가 추가되었습니다."
-=======
-msgstr[0] "본 학습집단에 {numUsersAdded}명의 학습자가 추가되었습니다."
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "{numMoved} student was removed from {oldCohort}"
@@ -4127,11 +3582,7 @@ msgstr[0] "{oldCohort}에서 삭제된 학습자는 {numMoved} 명입니다."
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "{numPresent} student was already in the cohort"
 msgid_plural "{numPresent} students were already in the cohort"
-<<<<<<< .merge_file_hALsgI
 msgstr[0] "{numPresent}명의 학습자가 이미 학습 집단에 속해 있습니다."
-=======
-msgstr[0] "{numPresent}명의 학생이 이미 학습 집단에 속해 있습니다."
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "Unknown user: {user}"
@@ -4171,12 +3622,9 @@ msgid "You currently have no cohorts configured"
 msgstr "설정된 학습 집단이 현재 없습니다."
 
 #: lms/static/js/groups/views/cohorts.js
+#: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Add Cohort"
-<<<<<<< .merge_file_hALsgI
-msgstr "학습집단 추가하기"
-=======
 msgstr "학습 집단 추가하기"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/groups/views/cohorts.js
 msgid ""
@@ -4215,7 +3663,6 @@ msgstr "학습집단이 비활성화되었습니다."
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Allow students to generate certificates for this course?"
-<<<<<<< .merge_file_hALsgI
 msgstr "학습자의 이수증 생성을 허용하시겠습니까?"
 
 #: lms/static/js/instructor_dashboard/certificates.js
@@ -4229,21 +3676,6 @@ msgstr "본 강좌의 모든 학습자를 위한 강좌 이수증 생성을 시�
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Error while generating certificates. Please try again."
 msgstr "강좌 이수증을 발급하는 동안 오류가 발생했습니다. 다시 시도하세요."
-=======
-msgstr "학습자의 수료증 생성을 허용하시겠습니까?"
-
-#: lms/static/js/instructor_dashboard/certificates.js
-msgid "Prevent students from generating certificates in this course?"
-msgstr "학습자의 수료증 생성을 제한하시겠습니까?"
-
-#: lms/static/js/instructor_dashboard/certificates.js
-msgid "Start generating certificates for all students in this course?"
-msgstr "본 강좌의 모든 학습자를 위한 강좌 수료증 생성을 시작하시겠습니까?"
-
-#: lms/static/js/instructor_dashboard/certificates.js
-msgid "Error while generating certificates. Please try again."
-msgstr "강좌 수료증을 생성하는 동안 오류가 발생했습니다. 다시 시도하세요."
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/instructor_dashboard/ecommerce.js
 msgid ""
@@ -4322,29 +3754,17 @@ msgstr "계정 기본  정보 (필수)"
 msgid ""
 "The name that identifies you throughout {platform_name}. You cannot change "
 "your username."
-<<<<<<< .merge_file_hALsgI
-msgstr "{platform_name}에서 쓰게 되는 이름입니다. 변경할 수 없습니다. "
+msgstr "{platform_name}에서 귀하를 나타낼 이름입니다. 아이디는 변경할 수 없습니다. "
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Full Name"
 msgstr "실명"
-=======
-msgstr "{platform_name}에서 귀하를 나타낼 이름입니다. 이용자 이름은 변경할 수 없습니다. "
-
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid "Full Name"
-msgstr "이름"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
 "The name that appears on your certificates. Other learners never see your "
 "full name."
-<<<<<<< .merge_file_hALsgI
 msgstr "이수증에 나타나는 이름입니다. 다른 학습자들은 당신의 이름을 볼 수 없습니다. "
-=======
-msgstr "수료증에 나타나는 이름입니다. 다른 학습자들은 당신의 이름을 볼 수 없습니다. "
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Email Address"
@@ -4354,11 +3774,7 @@ msgstr "이메일 주소"
 msgid ""
 "The email address you use to sign in. Communications from {platform_name} "
 "and your courses are sent to this address."
-<<<<<<< .merge_file_hALsgI
 msgstr "로그인에 사용되는 이메일 주소입니다. {platform_name}와 수강중인 강좌에서 이 이메일 주소로 메일을 발송합니다. "
-=======
-msgstr "로그인에 사용되는 이메일 주소입니다. {platform_name}과 수강하는 강좌에서 이 이메일 주소로 메일을 발송합니다. "
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: lms/templates/student_account/account.underscore
@@ -4378,21 +3794,13 @@ msgstr "비밀번호 재설정"
 msgid ""
 "When you click \"Reset Password\", a message will be sent to your email "
 "address. Click the link in the message to reset your password."
-<<<<<<< .merge_file_hALsgI
 msgstr "\"비밀번호 재설정\"을 선택하면, 이메일로 메세지가 발송됩니다. 메일로 발송된 링크를 클릭하면 비밀번호를 재설정할 수 있습니다. "
-=======
-msgstr "\"암호 재설정\"을 선택하면, 이메일로 메세지가 발송됩니다. 암호를 재설정하기 위해 메세지에 포함된 링크를 클릭해 주십시오. "
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
 "The language used throughout this site. This site is currently available in "
 "a limited number of languages."
-<<<<<<< .merge_file_hALsgI
 msgstr "K-MOOC에서 사용할 언어를 선택하세요. "
-=======
-msgstr "사용되는 언어. 현재 제한된 언어만 이용가능합니다. "
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Country or Region"
@@ -4412,11 +3820,7 @@ msgstr "성 "
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Year of Birth"
-<<<<<<< .merge_file_hALsgI
-msgstr "출생연도"
-=======
-msgstr "생년"
->>>>>>> .merge_file_XU6NgF
+msgstr "출생 연도"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: lms/static/js/student_profile/views/learner_profile_factory.js
@@ -4470,11 +3874,7 @@ msgstr "{platform_name} 학습자가 나에 대해 볼 수 있는 것은 :"
 
 #: lms/static/js/student_profile/views/learner_profile_factory.js
 msgid "Limited Profile"
-<<<<<<< .merge_file_hALsgI
-msgstr "제한적 프로필"
-=======
 msgstr "짧은 프로필"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/student_profile/views/learner_profile_factory.js
 msgid "Full Profile"
@@ -4515,13 +3915,8 @@ msgid ""
 "You must be over 13 to share a full profile. If you are over 13, make sure "
 "that you have specified a birth year on the {account_settings_page_link}"
 msgstr ""
-<<<<<<< .merge_file_hALsgI
-"전체 프로필을 공유하려면 13세 이상이어야 합니다. 13세 이상이라면,  {account_settings_page_link}에서 "
-"출생연도를 입력하세요."
-=======
 "전체 프로필을 공유하려면 13세 이상이어야 합니다. 13세 이상이라면,  {account_settings_page_link}에서 출생 "
 "연도를 입력하세요."
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/student_profile/views/learner_profile_fields.js
 msgid "Profile Image"
@@ -4533,11 +3928,7 @@ msgstr "{username}의 프로필 이미지"
 
 #: lms/static/js/verify_student/views/image_input_view.js
 msgid "Image Upload Error"
-<<<<<<< .merge_file_hALsgI
 msgstr "이미지 업로드 오류"
-=======
-msgstr "이미지 업로드 에러"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/verify_student/views/image_input_view.js
 msgid "Please verify that you have uploaded a valid image (PNG and JPEG)."
@@ -4546,11 +3937,7 @@ msgstr "적합한 이미지 형식(PNG 및 JPEG)인지 확인해 주십시오."
 #: lms/static/js/verify_student/views/incourse_reverify_view.js
 #: lms/static/js/verify_student/views/review_photos_step_view.js
 msgid "An error has occurred. Please try again later."
-<<<<<<< .merge_file_hALsgI
 msgstr "오류가 발생했습니다. 다시 시도하세요."
-=======
-msgstr "오류가 발생했습니다. 다시 시도해주세요."
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/verify_student/views/incourse_reverify_view.js
 #: lms/static/js/verify_student/views/review_photos_step_view.js
@@ -4559,11 +3946,7 @@ msgstr "사진을 제출 할 수 없습니다."
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Professional Education Verified Certificate"
-<<<<<<< .merge_file_hALsgI
 msgstr "전문 과정 이수증"
-=======
-msgstr "전문 과정 수료증 "
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Professional Education"
@@ -4571,19 +3954,11 @@ msgstr "전문 교육 과정"
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Verified Certificate upgrade"
-<<<<<<< .merge_file_hALsgI
 msgstr "인증 이수증 업그레이드하기"
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Verified Certificate"
 msgstr "인증 이수증"
-=======
-msgstr "인증 수료증 업그레이드하기"
-
-#: lms/static/js/verify_student/views/make_payment_step_view.js
-msgid "Verified Certificate"
-msgstr "인증 수료증"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Checkout"
@@ -4601,11 +3976,7 @@ msgstr "{processor}로 결제하기"
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "An error has occurred. Please try again."
-<<<<<<< .merge_file_hALsgI
 msgstr "오류가 발생했습니다. 다시 시도하세요."
-=======
-msgstr "오류가 발생했습니다. 다시 시도해주세요."
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 msgid "Could not submit order"
@@ -4622,14 +3993,6 @@ msgstr "신분증 사진을 찍어 주세요."
 #: lms/static/js/verify_student/views/reverify_view.js
 msgid "Review your info"
 msgstr "입력 정보를 확인하세요."
-<<<<<<< .merge_file_hALsgI
-=======
-
-#: lms/static/js/verify_student/views/reverify_view.js
-#: lms/templates/verify_student/review_photos_step.underscore
-msgid "Confirm"
-msgstr "확인"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/verify_student/views/step_view.js
 msgid "An error has occurred. Please try reloading the page."
@@ -4686,13 +4049,10 @@ msgstr "진행 중"
 #: lms/static/js/views/fields.js
 msgid "Placeholder"
 msgstr "플레이스홀더"
-<<<<<<< .merge_file_hALsgI
 
 #: lms/static/js/views/file_uploader.js
 msgid "Your upload of '{file}' succeeded."
 msgstr "'{file}'파일 업로드를 성공했습니다."
-=======
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/views/file_uploader.js
 msgid "Your upload of '{file}' failed."
@@ -4705,13 +4065,6 @@ msgstr "이미지 업로드"
 #: lms/static/js/views/image_field.js
 msgid "Change image"
 msgstr "이미지 변경"
-<<<<<<< .merge_file_hALsgI
-=======
-
-#: lms/static/js/views/fields.js
-msgid "Remove"
-msgstr "제거"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/static/js/views/image_field.js
 msgid "Removing"
@@ -4752,17 +4105,6 @@ msgstr "KB"
 #: lms/static/js/views/image_field.js
 msgid "MB"
 msgstr "MB"
-<<<<<<< .merge_file_hALsgI
-=======
-
-#: lms/static/js/views/file_uploader.js
-msgid "Your upload of '{file}' succeeded."
-msgstr "'{file}'파일 업로드를 성공했습니다."
-
-#: lms/static/js/views/file_uploader.js
-msgid "Your upload of '{file}' failed."
-msgstr "'{file}'파일 업로드를 실패했습니다."
->>>>>>> .merge_file_XU6NgF
 
 #: lms/templates/class_dashboard/all_section_metrics.js
 msgid "Unable to retrieve data, please try again later."
@@ -4851,34 +4193,19 @@ msgstr "서명인의 직위는 2줄을 넘을 수 없습니다."
 msgid "Signatory title should have maximum of 40 characters per line."
 msgstr "서명인의 직위는 행마다 40자를 넘을 수 없습니다."
 
+#: cms/static/js/certificates/models/signatory.js
+msgid "Signatory organization should not be more than 40 characters long."
+msgstr "서명인의 기관은 40자 이내라야 합니다."
+
 #: cms/static/js/certificates/views/certificate_details.js
 msgid "Edit this certificate?"
 msgstr "이수증을 편집하시겠습니까?"
 
 #: cms/static/js/certificates/views/certificate_details.js
-<<<<<<< .merge_file_hALsgI
 msgid ""
 "This certificate has already been activated and is live. Are you sure you "
 "want to continue editing?"
 msgstr "이미 사용되고 있는 이수증입니다. 편집을 계속하시겠습니까?"
-=======
-msgid "Edit this certificate?"
-msgstr ""
-
-#: cms/static/js/certificates/views/certificate_details.js
-msgid ""
-"This certificate has already been activated and is live. Are you sure you "
-"want to continue editing?"
-msgstr ""
-
-#: cms/static/js/certificates/views/certificate_details.js
-msgid "Yes, allow edits to the active Certificate"
-msgstr ""
-
-#: cms/static/js/certificates/views/certificate_editor.js
-msgid "Upload organization logo."
-msgstr ""
->>>>>>> .merge_file_XU6NgF
 
 #: cms/static/js/certificates/views/certificate_details.js
 msgid "Yes, allow edits to the active Certificate"
@@ -5136,7 +4463,6 @@ msgstr "강좌는 할당된 개강일이 있어야 합니다."
 msgid ""
 "The course must have at least one active certificate configuration before it"
 " can be started."
-<<<<<<< .merge_file_hALsgI
 msgstr "개강 전에 1개 이상의 활성화된 강좌 이수증이 있어야 합니다."
 
 #: cms/static/js/models/settings/course_details.js
@@ -5146,17 +4472,6 @@ msgstr "종강일은 개강일 보다 이후가 되어야 합니다."
 #: cms/static/js/models/settings/course_details.js
 msgid "The course start date must be later than the enrollment start date."
 msgstr "개강일은 수강신청 시작일보다 늦어서는 안됩니다."
-=======
-msgstr ""
-
-#: cms/static/js/models/settings/course_details.js
-msgid "The course end date must be later than the course start date."
-msgstr ""
-
-#: cms/static/js/models/settings/course_details.js
-msgid "The course start date must be later than the enrollment start date."
-msgstr ""
->>>>>>> .merge_file_XU6NgF
 
 #: cms/static/js/models/settings/course_details.js
 msgid "The enrollment start date cannot be after the enrollment end date."
@@ -5200,11 +4515,7 @@ msgstr "추가 연장 기간은 HH:MM 형식으로 명시되어야 합니다."
 
 #: cms/static/js/models/settings/course_grading_policy.js
 msgid "Not able to set passing grade to less than %(minimum_grade_cutoff)s%."
-<<<<<<< .merge_file_hALsgI
 msgstr " %(minimum_grade_cutoff)s% 이하로 통과 성적을 설정할 수 없습니다."
-=======
-msgstr ""
->>>>>>> .merge_file_XU6NgF
 
 #: cms/static/js/views/asset.js
 msgid "Delete File Confirmation"
@@ -5233,10 +4544,6 @@ msgstr "추가된 날짜"
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 msgid "Type"
 msgstr "종류"
-
-#: cms/static/js/views/assets.js cms/templates/js/asset-library.underscore
-msgid "Type"
-msgstr ""
 
 #: cms/static/js/views/assets.js
 msgid "File {filename} exceeds maximum size of {maxFileSizeInMBs} MB"
@@ -5281,7 +4588,7 @@ msgstr "사용 안 함"
 #: cms/static/js/views/group_configuration_details.js
 msgid "Used in %(count)s unit"
 msgid_plural "Used in %(count)s units"
-msgstr[0] "학습활동에서 사용된 수  : %(count)s"
+msgstr[0] "학습 활동에서 사용된 수  : %(count)s"
 
 #. Translators: 'outlineAnchor' is an anchor pointing to
 #. the course outline page.
@@ -5566,46 +4873,6 @@ msgstr ""
 msgid "%(total_items)s total"
 msgstr "총 %(total_items)s"
 
-#. Translators: sample result:
-#. "Showing 0-9 out of 25 total, filtered by Images, sorted by Date Added
-#. ascending"
-#: cms/static/js/views/paging_header.js
-msgid ""
-"Showing %(current_item_range)s out of %(total_items_count)s, filtered by "
-"%(asset_type)s, sorted by %(sort_name)s ascending"
-msgstr ""
-
-#. Translators: sample result:
-#. "Showing 0-9 out of 25 total, filtered by Images, sorted by Date Added
-#. descending"
-#: cms/static/js/views/paging_header.js
-msgid ""
-"Showing %(current_item_range)s out of %(total_items_count)s, filtered by "
-"%(asset_type)s, sorted by %(sort_name)s descending"
-msgstr ""
-
-#. Translators: sample result:
-#. "Showing 0-9 out of 25 total, sorted by Date Added ascending"
-#: cms/static/js/views/paging_header.js
-msgid ""
-"Showing %(current_item_range)s out of %(total_items_count)s, sorted by "
-"%(sort_name)s ascending"
-msgstr ""
-
-#. Translators: sample result:
-#. "Showing 0-9 out of 25 total, sorted by Date Added descending"
-#: cms/static/js/views/paging_header.js
-msgid ""
-"Showing %(current_item_range)s out of %(total_items_count)s, sorted by "
-"%(sort_name)s descending"
-msgstr ""
-
-#. Translators: turns into "25 total" to be used in other sentences, e.g.
-#. "Showing 0-9 out of 25 total".
-#: cms/static/js/views/paging_header.js
-msgid "%(total_items)s total"
-msgstr ""
-
 #. Translators: This is listed as the duration for a video
 #. that has not yet reached the point in its processing by
 #. the servers where its duration is determined.
@@ -5813,19 +5080,11 @@ msgstr "고급 설정의 입력값의 유효성 검증이 완료 되지 않았�
 
 #: cms/static/js/views/settings/main.js
 msgid "Course Credit Requirements"
-<<<<<<< .merge_file_hALsgI
 msgstr "강좌 학점 요구 조건"
 
 #: cms/static/js/views/settings/main.js
 msgid "The minimum grade for course credit is not set."
 msgstr "강좌 credit 위한 최소 성적이 설정되지 않았습니다."
-=======
-msgstr ""
-
-#: cms/static/js/views/settings/main.js
-msgid "The minimum grade for course credit is not set."
-msgstr ""
->>>>>>> .merge_file_XU6NgF
 
 #: cms/static/js/views/settings/main.js
 msgid "%(hours)s:%(minutes)s (current UTC time)"
@@ -5877,7 +5136,7 @@ msgstr "소주제"
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "unit"
-msgstr "학습활동"
+msgstr "학습 활동"
 
 #: cms/static/js/views/video/translations_editor.js
 msgid ""
@@ -5940,7 +5199,7 @@ msgstr "액션"
 #: cms/templates/js/course-outline.underscore
 #: lms/templates/ccx/schedule.underscore
 msgid "Due Date"
-msgstr "마감일"
+msgstr "마감 날짜"
 
 #: cms/templates/js/paging-header.underscore
 #: common/static/common/templates/components/paging-footer.underscore
@@ -5978,7 +5237,6 @@ msgstr ""
 msgid "Sorted by"
 msgstr ""
 
-<<<<<<< .merge_file_hALsgI
 #: common/static/common/templates/components/search-field.underscore
 msgid "Clear search"
 msgstr "검색 초기화"
@@ -5988,13 +5246,11 @@ msgid "DISCUSSION HOME:"
 msgstr "게시판 홈:"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
-msgid "How to use %(platform_name)s discussions"
-msgstr ""
-=======
-#: cms/static/js/views/utils/view_utils.js
-msgid "Please do not use any spaces or special characters in this field."
-msgstr "영어 알파벳을 입력하고, 공백이나 특수문자를 사용하지 마세요."
->>>>>>> .merge_file_XU6NgF
+#: lms/templates/commerce/provider.underscore
+#: lms/templates/commerce/receipt.underscore
+#: lms/templates/discovery/course_card.underscore
+msgid "gettext("
+msgstr "gettext("
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Find discussions"
@@ -6256,6 +5512,14 @@ msgid "Add a comment"
 msgstr "코멘트 추가"
 
 #: common/static/common/templates/discussion/thread-show.underscore
+msgid "This post is visible only to %(group_name)s."
+msgstr "이 계시물은 오직 %(group_name)s에게만 공개됩니다."
+
+#: common/static/common/templates/discussion/thread-show.underscore
+msgid "This post is visible to everyone."
+msgstr "이 게시물은 모두에게 공개됩니다."
+
+#: common/static/common/templates/discussion/thread-show.underscore
 msgid "%(post_type)s posted %(time_ago)s by %(author)s"
 msgstr "이 %(post_type)s는 %(time_ago)s전에 %(author)s님이 적으셨습니다."
 
@@ -6266,14 +5530,6 @@ msgstr "닫혔습니다. "
 #: common/static/common/templates/discussion/thread-show.underscore
 msgid "Related to: %(courseware_title_linked)s"
 msgstr ""
-
-#: common/static/common/templates/discussion/thread-show.underscore
-msgid "This post is visible only to %(group_name)s."
-msgstr "이 계시물은 오직 %(group_name)s에게만 공개됩니다."
-
-#: common/static/common/templates/discussion/thread-show.underscore
-msgid "This post is visible to everyone."
-msgstr "이 게시물은 모두에게 공개됩니다."
 
 #: common/static/common/templates/discussion/thread-type.underscore
 msgid "Post type:"
@@ -6464,11 +5720,10 @@ msgstr ""
 msgid "Leave Team"
 msgstr ""
 
-<<<<<<< .merge_file_hALsgI
 #: lms/static/js/fixtures/donation.underscore
 #: lms/templates/dashboard/donation.underscore
 msgid "Donate"
-msgstr "기부하기"
+msgstr "기부"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Expand All"
@@ -6477,17 +5732,6 @@ msgstr "모두 펼치기"
 #: lms/templates/ccx/schedule.underscore
 msgid "Collapse All"
 msgstr "모두 접기"
-=======
-#: cms/templates/js/course-outline.underscore
-#: lms/templates/ccx/schedule.underscore
-msgid "Due Date"
-msgstr ""
-
-#: cms/templates/js/previous-video-upload-list.underscore
-#: lms/templates/verify_student/enrollment_confirmation_step.underscore
-msgid "Status"
-msgstr "상태"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Unit"
@@ -6499,7 +5743,6 @@ msgstr "시작일"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "remove all"
-<<<<<<< .merge_file_hALsgI
 msgstr "모두 제거"
 
 #: lms/templates/ccx/schedule.underscore
@@ -6509,9 +5752,6 @@ msgstr "챕터 전환"
 #: lms/templates/ccx/schedule.underscore
 msgid "Section"
 msgstr "주제"
-=======
-msgstr ""
->>>>>>> .merge_file_XU6NgF
 
 #: lms/templates/ccx/schedule.underscore
 msgid "remove"
@@ -6526,18 +5766,6 @@ msgid "Subsection"
 msgstr "소주제"
 
 #: lms/templates/commerce/provider.underscore
-msgid ""
-"You still need to visit the %(display_name)s website to complete the credit "
-"process."
-msgstr ""
-
-#: lms/templates/commerce/provider.underscore
-msgid ""
-"To finalize course credit, %(provider_id)s requires %(platform_name)s "
-"learners to submit a credit request."
-msgstr ""
-
-#: lms/templates/commerce/provider.underscore
 msgid "<img src='%s' alt='%s'></image>"
 msgstr "<img src='%s' alt='%s'></image>"
 
@@ -6548,26 +5776,6 @@ msgid ""
 msgstr ""
 "<button data-provider=\"%s\" data-course-key=\"%s\" data-username=\"%s\" "
 "class=\"complete-course\" onClick=completeOrder(this)>%s</button>"
-
-#: lms/templates/commerce/provider.underscore
-#: lms/templates/commerce/receipt.underscore
-<<<<<<< .merge_file_hALsgI
-msgid "Thank you! We have received your payment for %(course_name)s."
-=======
-#: lms/templates/discovery/course_card.underscore
-msgid "gettext("
-msgstr ""
-
-#: lms/templates/commerce/provider.underscore
-msgid "<img src='%s' alt='%s'></image>"
-msgstr ""
-
-#: lms/templates/commerce/provider.underscore
-msgid ""
-"<button data-provider=\"%s\" data-course-key=\"%s\" data-username=\"%s\" "
-"class=\"complete-course\" onClick=completeOrder(this)>%s</button>"
->>>>>>> .merge_file_XU6NgF
-msgstr ""
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
@@ -6639,7 +5847,6 @@ msgstr "신분증을 나중에 확인받겠습니까?"
 msgid "Verify Now"
 msgstr "지금 인증하세요"
 
-<<<<<<< .merge_file_hALsgI
 #: lms/templates/courseware/proctored-exam-controls.underscore
 msgid "Mark Exam As Completed"
 msgstr "'완료'로 평가 분류하기"
@@ -6652,30 +5859,17 @@ msgstr ""
 msgid "End My Exam"
 msgstr "내 시험 종료"
 
-=======
->>>>>>> .merge_file_XU6NgF
 #: lms/templates/discovery/course_card.underscore
 msgid "LEARN MORE"
-msgstr "자세히 알아보기"
+msgstr "더 알아보기"
 
 #: lms/templates/discovery/course_card.underscore
-<<<<<<< .merge_file_hALsgI
-msgid "Starts: %(start_date)s"
-msgstr ""
-
-#: lms/templates/discovery/course_card.underscore
-=======
->>>>>>> .merge_file_XU6NgF
 msgid "Starts"
 msgstr "개강일"
 
 #: lms/templates/discovery/filter_bar.underscore
 msgid "Clear All"
-<<<<<<< .merge_file_hALsgI
 msgstr "모두 지우기"
-=======
-msgstr ""
->>>>>>> .merge_file_XU6NgF
 
 #: lms/templates/edxnotes/note-item.underscore
 msgid "Highlighted text"
@@ -6695,11 +5889,7 @@ msgstr "기록된 곳: "
 
 #: lms/templates/edxnotes/note-item.underscore
 msgid "Last Edited:"
-<<<<<<< .merge_file_hALsgI
 msgstr "마지막 편집 시간:"
-=======
-msgstr ""
->>>>>>> .merge_file_XU6NgF
 
 #: lms/templates/edxnotes/tab-item.underscore
 msgid "Clear search results"
@@ -6759,11 +5949,7 @@ msgstr "학습자 관리"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Add students to this cohort"
-<<<<<<< .merge_file_hALsgI
-msgstr "학습집단에 학습자 추가하기"
-=======
 msgstr "학습 집단에 학습자 추가하기"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid ""
@@ -6806,11 +5992,7 @@ msgstr "학습집단명을 입력하세요."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Cohort Name"
-<<<<<<< .merge_file_hALsgI
 msgstr "학습집단명"
-=======
-msgstr "학습 집단명"
->>>>>>> .merge_file_XU6NgF
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Cohort Assignment Method"
@@ -6852,21 +6034,6 @@ msgstr "선택되지 않았습니다."
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Deleted Content Group"
 msgstr "컨텐츠 그룹 삭제"
-<<<<<<< .merge_file_hALsgI
-
-#: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
-msgid ""
-"%(screen_reader_start)sWarning:%(screen_reader_end)s The previously selected"
-" content group was deleted. Select another content group."
-msgstr ""
-=======
->>>>>>> .merge_file_XU6NgF
-
-#: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
-msgid ""
-"%(screen_reader_start)sWarning:%(screen_reader_end)s No content groups "
-"exist."
-msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Create a content group"
@@ -6921,8 +6088,8 @@ msgid ""
 "file, download course profile information or cohort results on "
 "%(link_start)s the Data Download page. %(link_end)s"
 msgstr ""
-"학습 집단의 과제를 검토하거나 CSV 파일 업로드의 결과를 보려면,  학습자 정보나 %(link_start)s 데이터 페이지  "
-"%(link_end)s 에 있는 학습 집단 결과를 다운로드하세요.  "
+"학습 집단의 과제를 검토하거나 CSV 파일 업로드의 결과를 보려면, 강좌 프로필 정보나 %(link_start)s 데이터 다운로드 페이지"
+"  %(link_end)s 에 있는 학습 집단 결과를 다운로드하세요.  "
 
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Used"
@@ -7025,13 +6192,12 @@ msgid ""
 "%(currentProvider)s account does not have a linked %(platformName)s account."
 " To link your accounts, sign in now using your %(platformName)s password."
 msgstr ""
-"%(currentProvider)s로 로그인되었습니다.\n"
-"%(currentProvider)s 계정과 연동된 %(platformName)s 계정이 필요합니다.\n"
-"계정을 연동하기 위해서, %(platformName)s 가입 시 입력한 이메일과 비밀번호를 입력한 후, 로그인을 진행하세요."
+"%(currentProvider)s으로 로그인했지만, %(currentProvider)s 계정이 링크된 %(platformName)s "
+"계정을 갖지 못했습니다. 계정을 링크하기 위해서, %(platformName)s 비밀번호로 로그인하세요."
 
 #: lms/templates/student_account/login.underscore
 msgid "Password Reset Email Sent"
-msgstr "비밀번호 재설정 메일이 발신되었습니다."
+msgstr "암호 재설정 이메일이 보내어졌습니다."
 
 #: lms/templates/student_account/login.underscore
 msgid ""
@@ -7063,7 +6229,7 @@ msgstr "계정이 아직 없다면, 아래의 버튼을 눌러 가입하세요. 
 
 #: lms/templates/student_account/login.underscore
 msgid "or sign in with"
-msgstr "다음 계정을 통해서도 간편하게 로그인 가능합니다."
+msgstr "또는 아래 계정으로 로그인"
 
 #: lms/templates/student_account/login.underscore
 msgid "Sign in with %(providerName)s"
@@ -7089,13 +6255,13 @@ msgstr "에러가 발생했습니다."
 
 #: lms/templates/student_account/password_reset.underscore
 msgid "Password assistance"
-msgstr "비밀번호 도움"
+msgstr "암호 도움"
 
 #: lms/templates/student_account/password_reset.underscore
 msgid ""
 "Please enter your email address below and we will send you instructions for "
 "setting a new password."
-msgstr "아래에 이메일 주소를 입력 해주십시오, 새로운 비밀번호를 설정하기 위한 안내를 이메일로 보내드립니다."
+msgstr "아래에 이메일 주소를 입력 해주십시오, 새로운 암호를 설정하기 위한 안내를 이메일로 보내드립니다."
 
 #: lms/templates/student_account/password_reset.underscore
 msgid "Reset my password"
@@ -7103,11 +6269,11 @@ msgstr "비밀번호 재설정"
 
 #: lms/templates/student_account/register.underscore
 msgid "We couldn't create your account."
-msgstr "회원가입을 하실 수 없습니다. "
+msgstr "계정을 생성할 수 없습니다."
 
 #: lms/templates/student_account/register.underscore
 msgid "You've successfully signed into %(currentProvider)s."
-msgstr "%(currentProvider)s로 로그인하였습니다.  "
+msgstr "%(currentProvider)s에 로그인 성공했습니다."
 
 #: lms/templates/student_account/register.underscore
 msgid ""
@@ -7145,11 +6311,11 @@ msgstr "이미 계정이 있으십니까?"
 
 #: lms/templates/student_profile/learner_profile.underscore
 msgid "You are currently sharing a limited profile."
-msgstr "현재 아이디만 공개하고 있습니다."
+msgstr "현재 제한적인 프로필을 공유하고 있습니다."
 
 #: lms/templates/student_profile/learner_profile.underscore
 msgid "This edX learner is currently sharing a limited profile."
-msgstr "학습자가 현재 제한적 프로필을 공유하고 있습니다."
+msgstr "edX 학습자가 현제 제한적인 프로필을 공유하고 있습니다."
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Congratulations! You are now verified on %(platformName)s!"
@@ -7600,13 +6766,10 @@ msgstr ""
 msgid "%(type)s Component Template Menu"
 msgstr ""
 
-<<<<<<< .merge_file_hALsgI
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Common Problem Types"
 msgstr "일반 문제 유형"
 
-=======
->>>>>>> .merge_file_XU6NgF
 #: cms/templates/js/add-xblock-component.underscore
 msgid "Add New Component"
 msgstr "신규 구성요소 추가"
@@ -7717,25 +6880,7 @@ msgstr "이수증 내용"
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Course title"
-<<<<<<< .merge_file_hALsgI
 msgstr "강좌명"
-=======
-msgstr ""
-
-#: cms/templates/js/certificate-editor.underscore
-msgid ""
-"Specify an alternative to the official course title to display on "
-"certificates. Leave blank to use the official course title."
-msgstr ""
-
-#: cms/templates/js/certificate-editor.underscore
-msgid "Organization Logo"
-msgstr ""
-
-#: cms/templates/js/certificate-editor.underscore
-msgid "Path to organization logo"
-msgstr ""
->>>>>>> .merge_file_XU6NgF
 
 #: cms/templates/js/certificate-editor.underscore
 msgid ""
@@ -7788,7 +6933,7 @@ msgstr "주의 : 가장 최근 버전으로 학습자가 보고 있는 내용입
 #: cms/templates/js/content-group-details.underscore
 #: cms/templates/js/content-group-editor.underscore
 msgid "Cannot delete when in use by a unit"
-msgstr "학습활동에서 사용될 때 삭제할 수 없습니다."
+msgstr "학습 활동에서 사용될 때 삭제할 수 없습니다."
 
 #: cms/templates/js/content-group-details.underscore
 msgid "This content group is used in:"
@@ -7796,11 +6941,7 @@ msgstr "콘텐츠 그룹이 다음에서 사용중입니다:"
 
 #: cms/templates/js/content-group-editor.underscore
 msgid "Content Group Name"
-<<<<<<< .merge_file_hALsgI
 msgstr "콘텐츠 그룹 이름"
-=======
-msgstr "컨텐츠 그룹의 이름"
->>>>>>> .merge_file_XU6NgF
 
 #: cms/templates/js/content-group-editor.underscore
 msgid "Content Group ID"
@@ -7884,14 +7025,6 @@ msgid "Timed and Proctored Exam"
 msgstr "시간제한 및 감독관 평가"
 
 #: cms/templates/js/course-outline.underscore
-msgid "Proctored Exam"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore
-msgid "Timed and Proctored Exam"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore
 #: cms/templates/js/xblock-outline.underscore
 msgid "You haven't added any content to this course yet."
 msgstr "강좌 콘텐츠가 없습니다."
@@ -7943,11 +7076,7 @@ msgstr "연습문제 전체는 성적에 반영되지 않습니다."
 
 #: cms/templates/js/course_info_handouts.underscore
 msgid "Course Handouts"
-<<<<<<< .merge_file_hALsgI
 msgstr "학습 자료"
-=======
-msgstr "강좌 자료"
->>>>>>> .merge_file_XU6NgF
 
 #: cms/templates/js/course_info_handouts.underscore
 msgid "You have no handouts defined"
@@ -8185,10 +7314,6 @@ msgstr "아직 교재를 추가하지 않으셨습니다."
 msgid "Add your first textbook"
 msgstr "첫 교재 추가하기"
 
-#: cms/templates/js/paging-header.underscore
-msgid "Previous"
-msgstr ""
-
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "Previous Uploads"
 msgstr "이전 업로드들"
@@ -8283,7 +7408,7 @@ msgstr "운영팀과 학습자"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Some content in this unit is visible only to particular content groups"
-msgstr "이 학습활동의 일부 내용은 특정 콘텐츠 그룹만 볼 수 있습니다."
+msgstr "이 학습 활동의 일부 내용은 특정 콘텐츠 그룹만 볼 수 있습니다."
 
 #: cms/templates/js/publish-xblock.underscore
 #: cms/templates/js/staff-lock-editor.underscore
@@ -8327,11 +7452,7 @@ msgstr "서명인 이름"
 msgid ""
 "The name of this signatory as it should appear on certificates. Maximum 40 "
 "characters."
-<<<<<<< .merge_file_hALsgI
 msgstr "강좌 이수증에 나타나는 서명인의 이름으로 최대 40자입니다. "
-=======
-msgstr ""
->>>>>>> .merge_file_XU6NgF
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Title of the signatory"
@@ -8339,14 +7460,9 @@ msgstr "서명인의 지위"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid ""
-<<<<<<< .merge_file_hALsgI
-"The title of this signatory as it should appear on certificates.  Maximum of"
-" 106 characters."
-=======
 "The title of this signatory as it should appear on certificates. Maximum 2 "
 "lines, 40 characters each."
->>>>>>> .merge_file_XU6NgF
-msgstr ""
+msgstr "서명인의 직위는 강좌 이수증에 나타나야 합니다. 최대 2줄, 40자입니다. "
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Organization of the signatory"
@@ -8355,14 +7471,8 @@ msgstr "서명인의 소속기관"
 #: cms/templates/js/signatory-editor.underscore
 msgid ""
 "The organization that this signatory belongs to, as it should appear on "
-"certificates."
-msgstr ""
-
-#: cms/templates/js/signatory-editor.underscore
-msgid ""
-"The organization that this signatory belongs to, as it should appear on "
 "certificates. Maximum 40 characters."
-msgstr ""
+msgstr "강좌 이수증에 나타나야 하는 서명인이 소속된 기관. 최대 40자."
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Signature Image"
@@ -8480,36 +7590,6 @@ msgstr ""
 "학습자는 온라인 감독관 유무로 평가를 선택할 수 있습니다. 또한 감독관 시험을 선택한 학습자는 학점을 받을 자격이 부여된다. 감독관 "
 "시험은 또한 시간제한이 있는 시험이라야 합니다."
 
-#: cms/templates/js/timed-examination-preference-editor.underscore
-msgid "Timed Exam"
-msgstr ""
-
-#: cms/templates/js/timed-examination-preference-editor.underscore
-msgid "This exam is timed"
-msgstr ""
-
-#: cms/templates/js/timed-examination-preference-editor.underscore
-msgid "Time Allotted (HH:MM):"
-msgstr ""
-
-#: cms/templates/js/timed-examination-preference-editor.underscore
-msgid ""
-"Students see warnings when 20% and 5% of the allotted time remains. In "
-"certain cases, students can be granted allowances that give them extra time "
-"to complete the exam."
-msgstr ""
-
-#: cms/templates/js/timed-examination-preference-editor.underscore
-msgid "This exam is proctored"
-msgstr ""
-
-#: cms/templates/js/timed-examination-preference-editor.underscore
-msgid ""
-"Students can choose to take this exam with or without online proctoring, but"
-" only students who choose the proctored option are eligible for credit. "
-"Proctored exams must also be timed exams."
-msgstr ""
-
 #: cms/templates/js/upload-dialog.underscore
 msgid "File upload succeeded"
 msgstr "파일 업로드 완료"
@@ -8537,7 +7617,7 @@ msgid ""
 "Learners who require verification must pass the selected checkpoint to see "
 "the content in this unit. Learners who do not require verification see this "
 "content by default."
-msgstr "인증을 신청한 학습자는 인증 기준에 해당하는 학습활동을 통과해야 합니다. "
+msgstr "인증을 신청한 학습자는 인증 기준에 해당하는 학습 활동을 통과해야 합니다. "
 
 #: cms/templates/js/xblock-string-field-editor.underscore
 msgid "Edit the name"

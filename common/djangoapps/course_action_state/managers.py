@@ -10,7 +10,7 @@ class CourseActionStateManager(models.Manager):
     An abstract Model Manager class for Course Action State models.
     This abstract class expects child classes to define the ACTION (string) field.
     """
-    class Meta(object):
+    class Meta:
         """Abstract manager class, with subclasses defining the ACTION (string) field."""
         abstract = True
 

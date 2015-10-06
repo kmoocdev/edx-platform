@@ -14,4 +14,5 @@ urlpatterns = patterns(
             usage_id=settings.USAGE_ID_PATTERN
         ),
         'lti_provider.views.lti_launch', name="lti_provider_launch"),
+    url(r'^lti_run$', 'lti_provider.views.lti_run', name="lti_provider_run"),
 )

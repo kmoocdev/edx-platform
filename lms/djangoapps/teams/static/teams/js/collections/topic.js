@@ -13,7 +13,6 @@
                     delete this.server_api['sort_order']; // Sort order is not specified for the Team API
 
                     this.registerSortableField('name', gettext('name'));
-                    // Translators: This refers to the number of teams (a count of how many teams there are)
                     this.registerSortableField('team_count', gettext('team count'));
                 },
 

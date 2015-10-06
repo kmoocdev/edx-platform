@@ -1,7 +1,6 @@
 """
 Acceptance tests for Studio's Setting pages
 """
-from unittest import skip
 from .base_studio_test import StudioCourseTest
 from ...pages.studio.settings_certificates import CertificatesPage
 
@@ -10,8 +9,8 @@ class CertificatesTest(StudioCourseTest):
     """
     Tests for settings/certificates Page.
     """
-    def setUp(self):  # pylint: disable=arguments-differ
-        super(CertificatesTest, self).setUp(is_staff=True)
+    def setUp(self, is_staff=False):
+        super(CertificatesTest, self).setUp(is_staff)
         self.certificates_page = CertificatesPage(
             self.browser,
             self.course_info['org'],
@@ -106,7 +105,6 @@ class CertificatesTest(StudioCourseTest):
 
         self.assertIn("Updated Course Title Override 2", certificate.course_title)
 
-    @skip  # TODO fix this, see SOL-1053
     def test_can_delete_certificate(self):
         """
         Scenario: Ensure that the user can delete certificate.
@@ -128,11 +126,9 @@ class CertificatesTest(StudioCourseTest):
 
         self.assertEqual(len(self.certificates_page.certificates), 1)
 
-        # Delete the certificate we just created
-        certificate.click_delete_certificate_button()
-        self.certificates_page.click_confirmation_prompt_primary_button()
+        # Delete certificate
+        certificate.delete_certificate()
 
-        # Reload the page and confirm there are no certificates
         self.certificates_page.visit()
         self.assertEqual(len(self.certificates_page.certificates), 0)
 

@@ -1,6 +1,7 @@
 """Tests for the login and registration form rendering. """
 import urllib
 import unittest
+from collections import OrderedDict
 
 import ddt
 from mock import patch
@@ -9,6 +10,7 @@ from django.core.urlresolvers import reverse
 
 from util.testing import UrlResetMixin
 from xmodule.modulestore.tests.factories import CourseFactory
+from student.tests.factories import CourseModeFactory
 from third_party_auth.tests.testutil import ThirdPartyAuthTestMixin
 from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
 

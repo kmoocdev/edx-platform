@@ -30,8 +30,7 @@ define(['jquery.cookie', 'utility'], function() {
                     if (next && next.length > 1 && !isExternal(next[1])) {
                         location.href = next[1];
                     } else {
-                        //location.href = homepageURL;
-                        location.href = 'http://studio.kmooc.kr/home/';
+                        location.href = homepageURL;
                     }
                 } else if($('#login_error').length === 0) {
                     $('#login_form').prepend(

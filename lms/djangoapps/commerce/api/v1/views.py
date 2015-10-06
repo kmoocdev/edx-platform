@@ -41,8 +41,3 @@ class CourseRetrieveUpdateView(RetrieveUpdateAPIView):
             return course
 
         raise Http404
-
-    def pre_save(self, obj):
-        # There is nothing to pre-save. The default behavior changes the Course.id attribute from
-        # a CourseKey to a string, which is not desired.
-        pass

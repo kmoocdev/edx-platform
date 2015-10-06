@@ -1,48 +1,34 @@
 import threading
 
-
-class _RequestCache(threading.local):
-    """
-    A thread-local for storing the per-request cache.
-    """
-    def __init__(self):
-        super(_RequestCache, self).__init__()
-        self.data = {}
-        self.request = None
-
-
-REQUEST_CACHE = _RequestCache()
+_request_cache_threadlocal = threading.local()
+_request_cache_threadlocal.data = {}
+_request_cache_threadlocal.request = None
 
 
 class RequestCache(object):
     @classmethod
-    def get_request_cache(cls, name=None):
-        """
-        This method is deprecated. Please use :func:`request_cache.get_cache`.
-        """
-        if name is None:
-            return REQUEST_CACHE
-        else:
-            return REQUEST_CACHE.data.setdefault(name, {})
+    def get_request_cache(cls):
+        return _request_cache_threadlocal
 
     @classmethod
     def get_current_request(cls):
         """
-        This method is deprecated. Please use :func:`request_cache.get_request`.
+        Get a reference to the HttpRequest object, if we are presently
+        servicing one.
         """
-        return REQUEST_CACHE.request
+        return _request_cache_threadlocal.request
 
     @classmethod
     def clear_request_cache(cls):
         """
         Empty the request cache.
         """
-        REQUEST_CACHE.data = {}
-        REQUEST_CACHE.request = None
+        _request_cache_threadlocal.data = {}
+        _request_cache_threadlocal.request = None
 
     def process_request(self, request):
         self.clear_request_cache()
-        REQUEST_CACHE.request = request
+        _request_cache_threadlocal.request = request
         return None
 
     def process_response(self, request, response):

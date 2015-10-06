@@ -1,3 +1,4 @@
+# pylint: disable=no-member
 """
 Tests for users sharing preferences
 """

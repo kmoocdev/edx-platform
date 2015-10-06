@@ -80,8 +80,6 @@ class ABTestModule(ABTestFields, XModule):
 class ABTestDescriptor(ABTestFields, RawDescriptor, XmlDescriptor):
     module_class = ABTestModule
 
-    show_in_read_only_mode = True
-
     @classmethod
     def definition_from_xml(cls, xml_object, system):
         """

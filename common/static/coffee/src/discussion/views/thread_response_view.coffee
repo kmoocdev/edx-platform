@@ -13,21 +13,12 @@ if Backbone?
     initialize: (options) ->
       @collapseComments = options.collapseComments
       @createShowView()
-      @readOnly = $('.discussion-module').data('read-only')
 
     renderTemplate: ->
       @template = _.template($("#thread-response-template").html())
 
-      container = $("#discussion-container")
-      if !container.length
-        # inline discussion
-        container = $(".discussion-module")
-      templateData = _.extend(
-        @model.toJSON(),
-        wmdId: @model.id ? (new Date()).getTime(),
-        create_sub_comment: container.data("user-create-subcomment"),
-        readOnly: @readOnly
-      )
+      templateData = @model.toJSON()
+      templateData.wmdId = @model.id ? (new Date()).getTime()
       @template(templateData)
 
     render: ->
@@ -92,10 +83,7 @@ if Backbone?
       comment.set('thread', @model.get('thread'))
       view = new ResponseCommentView(model: comment)
       view.render()
-      if @readOnly
-        @$el.find('.comments').append(view.el)
-      else
-        @$el.find(".comments .new-comment").before(view.el)
+      @$el.find(".comments .new-comment").before(view.el)
       view.bind "comment:edit", (event) =>
         @cancelEdit(event) if @editView?
         @cancelCommentEdits()

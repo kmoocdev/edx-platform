@@ -75,6 +75,7 @@ class LmsHandlerUrls(object):
     a course_id
     """
     # pylint: disable=unused-argument
+    # pylint: disable=no-member
     def handler_url(self, block, handler_name, suffix='', query='', thirdparty=False):
         """See :method:`xblock.runtime:Runtime.handler_url`"""
         view_name = 'xblock_handler'

@@ -80,15 +80,6 @@ class FieldsMixin(object):
         query = self.q(css='.u-field-{} .u-field-message'.format(field_id))
         return query.text[0] if query.present else None
 
-    def message_for_textarea_field(self, field_id):
-        """
-        Return the current message for textarea field.
-        """
-        self.wait_for_field(field_id)
-
-        query = self.q(css='.u-field-{} .u-field-message-help'.format(field_id))
-        return query.text[0] if query.present else None
-
     def wait_for_message(self, field_id, message):
         """
         Wait for a message to appear in a field.
@@ -238,10 +229,3 @@ class FieldsMixin(object):
         query = self.q(css='.u-field-{} a'.format(field_id))
         if query.present:
             query.first.click()
-
-    def error_for_field(self, field_id):
-        """
-        Returns bool based on the highlighted border for field.
-        """
-        query = self.q(css='.u-field-{}.error'.format(field_id))
-        return True if query.present else False

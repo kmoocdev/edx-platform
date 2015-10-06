@@ -39,8 +39,7 @@
                                 model: userAccountModel,
                                 title: gettext('Full Name'),
                                 valueAttribute: 'name',
-                                helpMessage: gettext('The name that appears on your certificates. Other learners never see your full name.'),
-                                persistChanges: true
+                                helpMessage: gettext('The name that appears on your certificates. Other learners never see your full name.')
                             })
                         },
                         {
@@ -50,8 +49,7 @@
                                 valueAttribute: 'email',
                                 helpMessage: interpolate_text(
                                     gettext('The email address you use to sign in. Communications from {platform_name} and your courses are sent to this address.'), {platform_name: platformName}
-                                ),
-                                persistChanges: true
+                                )
                             })
                         },
                         {
@@ -76,8 +74,7 @@
                                 helpMessage: interpolate_text(
                                     gettext('The language used throughout this site. This site is currently available in a limited number of languages.'), {platform_name: platformName}
                                 ),
-                                options: fieldsData.language.options,
-                                persistChanges: true
+                                options: fieldsData.language.options
                             })
                         },
                         {
@@ -86,8 +83,7 @@
                                 required: true,
                                 title: gettext('Country or Region'),
                                 valueAttribute: 'country',
-                                options: fieldsData['country']['options'],
-                                persistChanges: true
+                                options: fieldsData['country']['options']
                             })
                         }
                     ]
@@ -100,8 +96,7 @@
                                 model: userAccountModel,
                                 title: gettext('Education Completed'),
                                 valueAttribute: 'level_of_education',
-                                options: fieldsData.level_of_education.options,
-                                persistChanges: true
+                                options: fieldsData.level_of_education.options
                             })
                         },
                         {
@@ -109,8 +104,7 @@
                                 model: userAccountModel,
                                 title: gettext('Gender'),
                                 valueAttribute: 'gender',
-                                options: fieldsData.gender.options,
-                                persistChanges: true
+                                options: fieldsData.gender.options
                             })
                         },
                         {
@@ -118,8 +112,7 @@
                                 model: userAccountModel,
                                 title: gettext('Year of Birth'),
                                 valueAttribute: 'year_of_birth',
-                                options: fieldsData['year_of_birth']['options'],
-                                persistChanges: true
+                                options: fieldsData['year_of_birth']['options']
                             })
                         },
                         {
@@ -127,8 +120,7 @@
                                 model: userAccountModel,
                                 title: gettext('Preferred Language'),
                                 valueAttribute: 'language_proficiencies',
-                                options: fieldsData.preferred_language.options,
-                                persistChanges: true
+                                options: fieldsData.preferred_language.options
                             })
                         }
                     ]

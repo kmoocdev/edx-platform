@@ -3,12 +3,10 @@
 Tests courseware views.py
 """
 import cgi
-from urllib import urlencode
 import ddt
 import json
 import unittest
 from datetime import datetime
-from HTMLParser import HTMLParser
 from nose.plugins.attrib import attr
 
 from django.conf import settings
@@ -31,10 +29,9 @@ from certificates import api as certs_api
 from certificates.models import CertificateStatuses, CertificateGenerationConfiguration
 from certificates.tests.factories import GeneratedCertificateFactory
 from course_modes.models import CourseMode
-from courseware.model_data import set_score
 from courseware.testutils import RenderXBlockTestMixin
 from courseware.tests.factories import StudentModuleFactory
-from courseware.user_state_client import DjangoXBlockUserStateClient
+from edxmako.middleware import MakoMiddleware
 from edxmako.tests import mako_middleware_process_request
 from student.models import CourseEnrollment
 from student.tests.factories import AdminFactory, UserFactory, CourseEnrollmentFactory
@@ -87,11 +84,10 @@ class TestJumpTo(ModuleStoreTestCase):
         course = CourseFactory.create()
         chapter = ItemFactory.create(category='chapter', parent_location=course.location)
         section = ItemFactory.create(category='sequential', parent_location=chapter.location)
-        expected = 'courses/{course_id}/courseware/{chapter_id}/{section_id}/?{activate_block_id}'.format(
+        expected = 'courses/{course_id}/courseware/{chapter_id}/{section_id}/'.format(
             course_id=unicode(course.id),
             chapter_id=chapter.url_name,
             section_id=section.url_name,
-            activate_block_id=urlencode({'activate_block_id': unicode(section.location)})
         )
         jumpto_url = '{0}/{1}/jump_to/{2}'.format(
             '/courses',
@@ -110,11 +106,10 @@ class TestJumpTo(ModuleStoreTestCase):
         module1 = ItemFactory.create(category='html', parent_location=vertical1.location)
         module2 = ItemFactory.create(category='html', parent_location=vertical2.location)
 
-        expected = 'courses/{course_id}/courseware/{chapter_id}/{section_id}/1?{activate_block_id}'.format(
+        expected = 'courses/{course_id}/courseware/{chapter_id}/{section_id}/1'.format(
             course_id=unicode(course.id),
             chapter_id=chapter.url_name,
             section_id=section.url_name,
-            activate_block_id=urlencode({'activate_block_id': unicode(module1.location)})
         )
         jumpto_url = '{0}/{1}/jump_to/{2}'.format(
             '/courses',
@@ -124,11 +119,10 @@ class TestJumpTo(ModuleStoreTestCase):
         response = self.client.get(jumpto_url)
         self.assertRedirects(response, expected, status_code=302, target_status_code=302)
 
-        expected = 'courses/{course_id}/courseware/{chapter_id}/{section_id}/2?{activate_block_id}'.format(
+        expected = 'courses/{course_id}/courseware/{chapter_id}/{section_id}/2'.format(
             course_id=unicode(course.id),
             chapter_id=chapter.url_name,
             section_id=section.url_name,
-            activate_block_id=urlencode({'activate_block_id': unicode(module2.location)})
         )
         jumpto_url = '{0}/{1}/jump_to/{2}'.format(
             '/courses',
@@ -152,11 +146,10 @@ class TestJumpTo(ModuleStoreTestCase):
 
         # internal position of module2 will be 1_2 (2nd item withing 1st item)
 
-        expected = 'courses/{course_id}/courseware/{chapter_id}/{section_id}/1?{activate_block_id}'.format(
+        expected = 'courses/{course_id}/courseware/{chapter_id}/{section_id}/1'.format(
             course_id=unicode(course.id),
             chapter_id=chapter.url_name,
             section_id=section.url_name,
-            activate_block_id=urlencode({'activate_block_id': unicode(module2.location)})
         )
         jumpto_url = '{0}/{1}/jump_to/{2}'.format(
             '/courses',
@@ -182,7 +175,7 @@ class ViewsTestCase(ModuleStoreTestCase):
     def setUp(self):
         super(ViewsTestCase, self).setUp()
         self.course = CourseFactory.create()
-        self.chapter = ItemFactory.create(category='chapter', parent_location=self.course.location)
+        self.chapter = ItemFactory.create(category='chapter', parent_location=self.course.location)  # pylint: disable=no-member
         self.section = ItemFactory.create(category='sequential', parent_location=self.chapter.location, due=datetime(2013, 9, 18, 11, 30, 00))
         self.vertical = ItemFactory.create(category='vertical', parent_location=self.section.location)
         self.component = ItemFactory.create(category='problem', parent_location=self.vertical.location)
@@ -208,7 +201,6 @@ class ViewsTestCase(ModuleStoreTestCase):
         course = CourseFactory.create(org="new", number="unenrolled", display_name="course")
         request = self.request_factory.get(reverse('about_course', args=[course.id.to_deprecated_string()]))
         request.user = AnonymousUser()
-        mako_middleware_process_request(request)
         response = views.course_about(request, course.id.to_deprecated_string())
         self.assertEqual(response.status_code, 200)
         self.assertNotIn(in_cart_span, response.content)
@@ -351,7 +343,7 @@ class ViewsTestCase(ModuleStoreTestCase):
         request.user = self.user
 
         # TODO: Remove the dependency on MakoMiddleware (by making the views explicitly supply a RequestContext)
-        mako_middleware_process_request(request)
+        MakoMiddleware().process_request(request)
 
         result = views.course_about(request, course_id)
         if expected_end_text is not None:
@@ -527,51 +519,6 @@ class ViewsTestCase(ModuleStoreTestCase):
         response = self.client.get(url)
         self.assertFalse('<script>' in response.content)
 
-    def test_submission_history_contents(self):
-        # log into a staff account
-        admin = AdminFactory.create()
-
-        self.client.login(username=admin.username, password='test')
-
-        usage_key = self.course_key.make_usage_key('problem', 'test-history')
-        state_client = DjangoXBlockUserStateClient(admin)
-
-        # store state via the UserStateClient
-        state_client.set(
-            username=admin.username,
-            block_key=usage_key,
-            state={'field_a': 'x', 'field_b': 'y'}
-        )
-
-        set_score(admin.id, usage_key, 0, 3)
-
-        state_client.set(
-            username=admin.username,
-            block_key=usage_key,
-            state={'field_a': 'a', 'field_b': 'b'}
-        )
-        set_score(admin.id, usage_key, 3, 3)
-
-        url = reverse('submission_history', kwargs={
-            'course_id': unicode(self.course_key),
-            'student_username': admin.username,
-            'location': unicode(usage_key),
-        })
-        response = self.client.get(url)
-        response_content = HTMLParser().unescape(response.content)
-
-        # We have update the state 4 times: twice to change content, and twice
-        # to set the scores. We'll check that the identifying content from each is
-        # displayed (but not the order), and also the indexes assigned in the output
-        # #1 - #4
-
-        self.assertIn('#1', response_content)
-        self.assertIn(json.dumps({'field_a': 'a', 'field_b': 'b'}, sort_keys=True, indent=2), response_content)
-        self.assertIn("Score: 0.0 / 3.0", response_content)
-        self.assertIn(json.dumps({'field_a': 'x', 'field_b': 'y'}, sort_keys=True, indent=2), response_content)
-        self.assertIn("Score: 3.0 / 3.0", response_content)
-        self.assertIn('#4', response_content)
-
     def _load_mktg_about(self, language=None, org=None):
         """Retrieve the marketing about button (iframed into the marketing site)
         and return the HTTP response.
@@ -632,12 +579,12 @@ class BaseDueDateTests(ModuleStoreTestCase):
         :param course_kwargs: All kwargs are passed to through to the :class:`CourseFactory`
         """
         course = CourseFactory.create(**course_kwargs)
-        chapter = ItemFactory.create(category='chapter', parent_location=course.location)
+        chapter = ItemFactory.create(category='chapter', parent_location=course.location)  # pylint: disable=no-member
         section = ItemFactory.create(category='sequential', parent_location=chapter.location, due=datetime(2013, 9, 18, 11, 30, 00))
         vertical = ItemFactory.create(category='vertical', parent_location=section.location)
         ItemFactory.create(category='problem', parent_location=vertical.location)
 
-        course = modulestore().get_course(course.id)
+        course = modulestore().get_course(course.id)  # pylint: disable=no-member
         self.assertIsNotNone(course.get_children()[0].get_children()[0].due)
         CourseEnrollmentFactory(user=self.user, course_id=course.id)
         return course
@@ -726,8 +673,8 @@ class TestAccordionDueDate(BaseDueDateTests):
     def get_text(self, course):
         """ Returns the HTML for the accordion """
         return views.render_accordion(
-            self.request.user, self.request, course,
-            unicode(course.get_children()[0].scope_ids.usage_id), None, None
+            self.request, course, course.get_children()[0].scope_ids.usage_id.to_deprecated_string(),
+            None, None
         )
 
 
@@ -752,7 +699,7 @@ class StartDateTests(ModuleStoreTestCase):
         :param course_kwargs: All kwargs are passed to through to the :class:`CourseFactory`
         """
         course = CourseFactory.create(start=datetime(2013, 9, 16, 7, 17, 28))
-        course = modulestore().get_course(course.id)
+        course = modulestore().get_course(course.id)  # pylint: disable=no-member
         return course
 
     def get_about_text(self, course_key):
@@ -801,15 +748,16 @@ class ProgressPageTests(ModuleStoreTestCase):
         self.request = self.request_factory.get("foo")
         self.request.user = self.user
 
-        mako_middleware_process_request(self.request)
+        MakoMiddleware().process_request(self.request)
+
         course = CourseFactory.create(
             start=datetime(2013, 9, 16, 7, 17, 28),
             grade_cutoffs={u'çü†øƒƒ': 0.75, 'Pass': 0.5},
         )
-        self.course = modulestore().get_course(course.id)
+        self.course = modulestore().get_course(course.id)  # pylint: disable=no-member
         CourseEnrollmentFactory(user=self.user, course_id=self.course.id)
 
-        self.chapter = ItemFactory.create(category='chapter', parent_location=self.course.location)
+        self.chapter = ItemFactory.create(category='chapter', parent_location=self.course.location)  # pylint: disable=no-member
         self.section = ItemFactory.create(category='sequential', parent_location=self.chapter.location)
         self.vertical = ItemFactory.create(category='vertical', parent_location=self.section.location)
 
@@ -897,6 +845,7 @@ class ProgressPageTests(ModuleStoreTestCase):
                 'name': 'Name 1',
                 'description': 'Description 1',
                 'course_title': 'course_title_1',
+                'org_logo_path': '/t4x/orgX/testX/asset/org-logo-1.png',
                 'signatories': [],
                 'version': 1,
                 'is_active': True
@@ -904,17 +853,17 @@ class ProgressPageTests(ModuleStoreTestCase):
         ]
 
         self.course.certificates = {'certificates': certificates}
-        self.course.cert_html_view_enabled = True
         self.course.save()
         self.store.update_item(self.course, self.user.id)
 
         resp = views.progress(self.request, course_id=unicode(self.course.id))
         self.assertContains(resp, u"View Certificate")
 
-        self.assertContains(resp, u"You can keep working for a higher grade")
+        self.assertContains(resp, u"You can now access your certificate")
         cert_url = certs_api.get_certificate_url(
             user_id=self.user.id,
-            course_id=self.course.id
+            course_id=self.course.id,
+            verify_uuid=certificate.verify_uuid
         )
         self.assertContains(resp, cert_url)
 
@@ -1136,23 +1085,6 @@ class GenerateUserCertTests(ModuleStoreTestCase):
         ), resp.content)
 
 
-class ActivateIDCheckerBlock(XBlock):
-    """
-    XBlock for checking for an activate_block_id entry in the render context.
-    """
-    # We don't need actual children to test this.
-    has_children = False
-
-    def student_view(self, context):
-        """
-        A student view that displays the activate_block_id context variable.
-        """
-        result = Fragment()
-        if 'activate_block_id' in context:
-            result.add_content(u"Activate Block ID: {block_id}</p>".format(block_id=context['activate_block_id']))
-        return result
-
-
 class ViewCheckerBlock(XBlock):
     """
     XBlock for testing user state in views.
@@ -1225,34 +1157,6 @@ class TestIndexView(ModuleStoreTestCase):
         # Trigger the assertions embedded in the ViewCheckerBlocks
         response = views.index(request, unicode(course.id), chapter=chapter.url_name, section=section.url_name)
         self.assertEquals(response.content.count("ViewCheckerPassed"), 3)
-
-    @XBlock.register_temp_plugin(ActivateIDCheckerBlock, 'id_checker')
-    def test_activate_block_id(self):
-        user = UserFactory()
-
-        course = CourseFactory.create()
-        chapter = ItemFactory.create(parent=course, category='chapter')
-        section = ItemFactory.create(parent=chapter, category='sequential', display_name="Sequence")
-        vertical = ItemFactory.create(parent=section, category='vertical', display_name="Vertical")
-        ItemFactory.create(parent=vertical, category='id_checker', display_name="ID Checker")
-
-        CourseEnrollmentFactory(user=user, course_id=course.id)
-
-        request = RequestFactory().get(
-            reverse(
-                'courseware_section',
-                kwargs={
-                    'course_id': unicode(course.id),
-                    'chapter': chapter.url_name,
-                    'section': section.url_name,
-                }
-            ) + '?activate_block_id=test_block_id'
-        )
-        request.user = user
-        mako_middleware_process_request(request)
-
-        response = views.index(request, unicode(course.id), chapter=chapter.url_name, section=section.url_name)
-        self.assertIn("Activate Block ID: test_block_id", response.content)
 
 
 class TestRenderXBlock(RenderXBlockTestMixin, ModuleStoreTestCase):

@@ -3,7 +3,7 @@
 
 header.global {
   @extend %ui-depth1;
-  border-bottom: 1px solid $gray-l1;
+  border-bottom: 1px solid $m-gray;
   box-shadow: 0 1px 5px 0 $shadow-l1;
   background: $header-bg;
   position: relative;
@@ -88,6 +88,8 @@ header.global {
     > a {
       @include background-image($button-bg-image);
       background-color: $button-bg-color;
+      border: 1px solid $border-color-2;
+      border-radius: 3px;
       @include box-sizing(border-box);
       box-shadow: 0 1px 0 0 rgba(255,255,255, 0.6);
       color: $base-font-color;
@@ -126,12 +128,15 @@ header.global {
 
       > a {
         margin: 0;
+        @include border-right-radius(0px);
         background-image: none;
       }
 
       &:last-child {
         > a {
-          padding: ($baseline/5) ($baseline/2);
+          @include border-radius(0, 4px, 4px, 0);
+          @include border-left(none);
+          padding: ($baseline/4) 8px 11px ($baseline/2);
 
           &.shopping-cart {
             border-radius: 4px;
@@ -144,7 +149,7 @@ header.global {
     }
 
     a.user-link {
-      @include padding(5px, 2px, 10px, 10px);
+      @include padding(5px, 12px, 10px, 10px);
       position: relative;
       text-transform: none;
       font-size: 14px;
@@ -284,7 +289,7 @@ header.global {
       a {
         display:block;
         padding: ($baseline/4);
-        color: $link-color;
+        color: $lighter-base-font-color;
         font-weight: 600;
 
         &:hover, &:focus, &:active {
@@ -434,6 +439,8 @@ header.global-new {
     > a {
       @include background-image($button-bg-image);
       background-color: $button-bg-color;
+      border: 1px solid $border-color-2;
+      border-radius: 3px;
       @include box-sizing(border-box);
       box-shadow: 0 1px 0 0 rgba(255,255,255, 0.6);
       color: $base-font-color;
@@ -477,7 +484,7 @@ header.global-new {
         > a {
           @include border-radius(0, 4px, 4px, 0);
           @include border-left(none);
-          padding: ($baseline/5) ($baseline/2);
+          padding: 5px 8px 7px 8px;
 
           &.shopping-cart {
             border-radius: 4px;
@@ -489,7 +496,7 @@ header.global-new {
       }
     }
      a.user-link {
-      @include padding(5px, 2px, 10px, 10px);
+      @include padding(3px, 12px, 8px, 8px);
       position: relative;
       text-transform: none;
       font-size: 14px;
@@ -622,8 +629,8 @@ header.global-new {
       a {
         display:block;
         padding: 3px 10px;
-        font-size: 14px;
-        line-height: 1.5;
+        font-size: 18px;
+        line-height: 24px;
         font-weight: 600;
         font-family: $header-sans-serif;
         color: $courseware-navigation-color;
@@ -710,6 +717,7 @@ header.global-new {
         font-size: 14px;
 
         &.nav-courseware-button {
+          width: 86px;
           text-align: center;
           margin-top: -3px;
         }
@@ -826,6 +834,13 @@ header.global-new {
     @include media( $edx-bp-huge ) {
       .wrapper-header {
         padding: 17px 0;
+      }
+
+      .nav-global,
+      .nav-courseware {
+        a {
+          font-size: 18px;
+        }
       }
     }
   }

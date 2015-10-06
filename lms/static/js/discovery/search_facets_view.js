@@ -100,14 +100,7 @@ define([
                 }
             }
             else{
-                //return term ? term : name;
-                var arrWords = [ ['khuk','koreaunivk', 'pnuk', 'snuk', 'skkuk', 'ysuk', 'ewhak', 'postechk', 'kaistk', 'hyuk'],
-                ['경희대학교','고려대학교','부산대학교','서울대학교','성균관대학교','연세대학교','이화여자대학교','포항공과대학교','한국과학기술원','한양대학교'] ];
-                for (var i=0; i < arrWords[0].length; i++) {
-                    if (term == arrWords[0][i]) {
-                        return arrWords[1][i];
-                    }
-                }
+                return term ? term : name;
             }
         },
 

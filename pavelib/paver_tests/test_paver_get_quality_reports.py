@@ -1,9 +1,12 @@
-"""
-Tests to ensure only the report files we want are returned as part of run_quality.
-"""
+import os
+import tempfile
 import unittest
-from mock import patch
+from mock import patch, Mock
+from ddt import ddt, file_data
+
 import pavelib.quality
+import paver.easy
+from paver.easy import BuildFailure
 
 
 class TestGetReportFiles(unittest.TestCase):

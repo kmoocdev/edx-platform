@@ -6,9 +6,7 @@ import pytz
 import ddt
 from datetime import timedelta, datetime
 
-from django.conf import settings
 from django.test.client import RequestFactory
-from unittest import skipUnless
 
 from openedx.core.djangoapps.credit.api import (
     set_credit_requirements, get_credit_requirement_status
@@ -21,7 +19,6 @@ from xmodule.modulestore.tests.django_utils import ModuleStoreTestCase
 from xmodule.modulestore.tests.factories import CourseFactory
 
 
-@skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in LMS')
 @ddt.ddt
 class TestMinGradedRequirementStatus(ModuleStoreTestCase):
     """Test cases to check the minimum grade requirement status updated.

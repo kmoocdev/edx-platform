@@ -8,8 +8,7 @@
         'js/student_profile/views/learner_profile_fields',
         'js/student_profile/views/learner_profile_view',
         'js/student_account/views/account_settings_fields',
-        'js/views/message_banner',
-        'string_utils'
+        'js/views/message_banner'
     ], function (gettext, $, _, Backbone, Logger, AccountSettingsModel, AccountPreferencesModel, FieldsView,
                  LearnerProfileFieldsView, LearnerProfileView, AccountSettingsFieldViews, MessageBannerView) {
 
@@ -54,8 +53,7 @@
                     ['all_users', gettext('Full Profile')]
                 ],
                 helpMessage: '',
-                accountSettingsPageUrl: options.account_settings_page_url,
-                persistChanges: true
+                accountSettingsPageUrl: options.account_settings_page_url
             });
 
             var profileImageFieldView = new LearnerProfileFieldsView.ProfileImageFieldView({
@@ -88,8 +86,7 @@
                     placeholderValue: gettext('Add Country'),
                     valueAttribute: "country",
                     options: options.country_options,
-                    helpMessage: '',
-                    persistChanges: true
+                    helpMessage: ''
                 }),
                 new AccountSettingsFieldViews.LanguageProficienciesFieldView({
                     model: accountSettingsModel,
@@ -102,8 +99,7 @@
                     placeholderValue: gettext('Add language'),
                     valueAttribute: "language_proficiencies",
                     options: options.language_options,
-                    helpMessage: '',
-                    persistChanges: true
+                    helpMessage: ''
                 })
             ];
 
@@ -115,9 +111,7 @@
                     title: gettext('About me'),
                     placeholderValue: gettext("Tell other learners a little about yourself: where you live, what your interests are, why you're taking courses, or what you hope to learn."),
                     valueAttribute: "bio",
-                    helpMessage: '',
-                    persistChanges: true,
-                    messagePosition: 'header'
+                    helpMessage: ''
                 })
             ];
 

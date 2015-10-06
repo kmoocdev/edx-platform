@@ -1,6 +1,5 @@
 <%namespace name='static' file='../static_content.html'/>
 <%!
-import os.path
 from urllib import quote_plus
 
 from microsite_configuration import microsite
@@ -228,12 +227,12 @@ from edxmako.shortcuts import marketing_link
         <header>
           % if microsite.get_value('course_about_show_social_links', True):
           <div class="social-sharing">
-            <div class="sharing-message"></div>
+            <div class="sharing-message">${_("Share with friends and family!")}</div>
             ## TODO: this should probably be an overrideable block,
             ##       or something allowing themes to do whatever they
             ##       want here (and on this whole page, really).
             % if self.stanford_theme_enabled():
-              <a href="http://twitter.com/intent/tweet?text=I+just+registered+for+${course.number}+${get_course_about_section(course, 'title')}!+(http://class.stanford.edu)" class="share" >
+              <a href="http://twitter.com/intent/tweet?text=I+just+registered+for+${course.number}+${get_course_about_section(course, 'title')}!+(http://class.stanford.edu)" class="share">
                 <i class="icon fa fa-twitter"></i><span class="sr">${_("Tweet that you've registered for this course")}</span>
               </a>
               <a href="mailto:?subject=Take%20a%20course%20at%20Stanford%20online!&body=I%20just%20registered%20for%20${course.number}%20${get_course_about_section(course, 'title')}+(http://class.stanford.edu)" class="share">
@@ -259,9 +258,7 @@ from edxmako.shortcuts import marketing_link
                 # tweet_action = u"http://twitter.com/intent/tweet?text={tweet_text}".format(tweet_text=tweet_text)
                 tweet_action = u"http://twitter.com/intent/tweet?text="+quote_plus(tweet_text.encode('utf-8'), safe=':/')
 
-                # facebook_link = microsite.get_value('course_about_facebook_link', settings.PLATFORM_FACEBOOK_ACCOUNT)
-                kmooc_url = site_domain+reverse('about_course', args=[course.id.to_deprecated_string()])
-                facebook_link = u"http://www.facebook.com/sharer/sharer.php?u="+quote_plus(kmooc_url.encode('utf-8'), safe=':/')
+                facebook_link = microsite.get_value('course_about_facebook_link', settings.PLATFORM_FACEBOOK_ACCOUNT)
 
                 email_subject = u"mailto:?subject={subject}&body={body}".format(
                     subject=_("Take a course with {platform} online").format(platform=platform_name),
@@ -276,15 +273,15 @@ from edxmako.shortcuts import marketing_link
                     )
                 ).replace(u" ", u"%20")
               %>
-              <a onmouseover="$('.sharing-message').text('트위터로 공유하기');" href="${tweet_action}" class="share">
+              <a href="${tweet_action}" class="share">
                 <i class="icon fa fa-twitter"></i><span class="sr">${_("Tweet that you've registered for this course")}</span>
               </a>
-
-              <a onmouseover="$('.sharing-message').text('페이스북으로 공유하기');" href="${facebook_link}" class="share">
-                <i class="icon fa fa-facebook-official"></i><span class="sr">${_("Post a Facebook message to say you've registered for this course")}</span>
+              <!-- 강좌소개란에서 facebook 아이콘 제거
+              <a href="${facebook_link}" class="share">
+                <i class="icon fa fa-thumbs-up"></i><span class="sr">${_("Post a Facebook message to say you've registered for this course")}</span>
               </a>
-
-              <a onmouseover="$('.sharing-message').text('이메일로 공유하기');" href="${email_subject}" class="share">
+              -->
+              <a href="${email_subject}" class="share">
                 <i class="icon fa fa-envelope"></i><span class="sr">${_("Email someone to say you've registered for this course")}</span>
               </a>
             % endif

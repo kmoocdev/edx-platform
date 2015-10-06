@@ -37,7 +37,6 @@ from certificates.tests.factories import (
     BadgeAssertionFactory,
 )
 from lms import urls
-from util import organizations_helpers as organizations_api
 
 FEATURES_WITH_CERTS_ENABLED = settings.FEATURES.copy()
 FEATURES_WITH_CERTS_ENABLED['CERTIFICATES_HTML_VIEW'] = True
@@ -260,6 +259,7 @@ class MicrositeCertificatesViewsTests(ModuleStoreTestCase):
                 'name': 'Name ' + str(i),
                 'description': 'Description ' + str(i),
                 'course_title': 'course_title_' + str(i),
+                'org_logo_path': '/t4x/orgX/testX/asset/org-logo-{}.png'.format(i),
                 'signatories': signatories,
                 'version': 1,
                 'is_active': is_active
@@ -267,7 +267,6 @@ class MicrositeCertificatesViewsTests(ModuleStoreTestCase):
         ]
 
         self.course.certificates = {'certificates': certificates}
-        self.course.cert_html_view_enabled = True
         self.course.save()
         self.store.update_item(self.course, self.user.id)
 
@@ -309,7 +308,8 @@ class MicrositeCertificatesViewsTests(ModuleStoreTestCase):
         self.assertEquals(config.configuration, test_configuration_string)
         test_url = get_certificate_url(
             user_id=self.user.id,
-            course_id=unicode(self.course.id)
+            course_id=unicode(self.course.id),
+            verify_uuid=self.cert.verify_uuid
         )
         self._add_course_certificates(count=1, signatory_count=2)
         response = self.client.get(test_url)
@@ -319,7 +319,6 @@ class MicrositeCertificatesViewsTests(ModuleStoreTestCase):
         self.assertIn('Microsite title', response.content)
 
     @patch("microsite_configuration.microsite.get_value", fakemicrosite)
-    @override_settings(FEATURES=FEATURES_WITH_CERTS_ENABLED)
     def test_html_view_microsite_configuration_missing(self):
         test_configuration_string = """{
             "default": {
@@ -343,7 +342,8 @@ class MicrositeCertificatesViewsTests(ModuleStoreTestCase):
         self.assertEquals(config.configuration, test_configuration_string)
         test_url = get_certificate_url(
             user_id=self.user.id,
-            course_id=unicode(self.course.id)
+            course_id=unicode(self.course.id),
+            verify_uuid=self.cert.verify_uuid
         )
         self._add_course_certificates(count=1, signatory_count=2)
         response = self.client.get(test_url)
@@ -379,7 +379,6 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
             course_id=self.course_id,
             verify_uuid=uuid4(),
             download_uuid=uuid4(),
-            download_url="http://www.example.com/certificates/download",
             grade="0.95",
             key='the_key',
             distinction=True,
@@ -423,48 +422,15 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
         ]
 
         self.course.certificates = {'certificates': certificates}
-        self.course.cert_html_view_enabled = True
         self.course.save()
         self.store.update_item(self.course, self.user.id)
-
-    @override_settings(FEATURES=FEATURES_WITH_CERTS_ENABLED)
-    def test_rendering_course_organization_data(self):
-        """
-        Test: organization data should render on certificate web view if course has organization.
-        """
-        test_organization_data = {
-            'name': 'test_organization',
-            'description': 'Test Organization Description',
-            'active': True,
-            'logo': '/logo_test1.png/'
-        }
-        test_org = organizations_api.add_organization(organization_data=test_organization_data)
-        organizations_api.add_organization_course(organization_data=test_org, course_id=unicode(self.course.id))
-        self._add_course_certificates(count=1, signatory_count=1, is_active=True)
-        test_url = get_certificate_url(
-            user_id=self.user.id,
-            course_id=unicode(self.course.id)
-        )
-        response = self.client.get(test_url)
-        self.assertIn(
-            'a course of study offered by test_organization',
-            response.content
-        )
-        self.assertNotIn(
-            'a course of study offered by testorg',
-            response.content
-        )
-        self.assertIn(
-            '<title>test_organization {} Certificate |'.format(self.course.number, ),
-            response.content
-        )
-        self.assertIn('logo_test1.png', response.content)
 
     @override_settings(FEATURES=FEATURES_WITH_CERTS_ENABLED)
     def test_render_html_view_valid_certificate(self):
         test_url = get_certificate_url(
             user_id=self.user.id,
-            course_id=unicode(self.course.id)
+            course_id=unicode(self.course.id),
+            verify_uuid=self.cert.verify_uuid
         )
         self._add_course_certificates(count=1, signatory_count=2)
         response = self.client.get(test_url)
@@ -486,11 +452,13 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
     def test_render_html_view_with_valid_signatories(self):
         test_url = get_certificate_url(
             user_id=self.user.id,
-            course_id=unicode(self.course.id)
+            course_id=unicode(self.course.id),
+            verify_uuid=self.cert.verify_uuid
         )
         self._add_course_certificates(count=1, signatory_count=2)
         response = self.client.get(test_url)
         self.assertIn('course_title_0', response.content)
+        self.assertIn('/t4x/orgX/testX/asset/org-logo-0.png', response.content)
         self.assertIn('Signatory_Name 0', response.content)
         self.assertIn('Signatory_Title 0', response.content)
         self.assertIn('Signatory_Organization 0', response.content)
@@ -501,7 +469,8 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
         # if certificate in descriptor has not course_title then course name should not be overridden with this title.
         test_url = get_certificate_url(
             user_id=self.user.id,
-            course_id=unicode(self.course.id)
+            course_id=unicode(self.course.id),
+            verify_uuid=self.cert.verify_uuid
         )
         test_certificates = [
             {
@@ -514,7 +483,6 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
             }
         ]
         self.course.certificates = {'certificates': test_certificates}
-        self.course.cert_html_view_enabled = True
         self.course.save()
         self.store.update_item(self.course, self.user.id)
         response = self.client.get(test_url)
@@ -525,7 +493,8 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
     def test_certificate_view_without_org_logo(self):
         test_url = get_certificate_url(
             user_id=self.user.id,
-            course_id=unicode(self.course.id)
+            course_id=unicode(self.course.id),
+            verify_uuid=self.cert.verify_uuid
         )
         test_certificates = [
             {
@@ -537,7 +506,6 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
             }
         ]
         self.course.certificates = {'certificates': test_certificates}
-        self.course.cert_html_view_enabled = True
         self.course.save()
         self.store.update_item(self.course, self.user.id)
         response = self.client.get(test_url)
@@ -548,7 +516,8 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
     def test_render_html_view_without_signatories(self):
         test_url = get_certificate_url(
             user_id=self.user.id,
-            course_id=unicode(self.course)
+            course_id=unicode(self.course),
+            verify_uuid=self.cert.verify_uuid
         )
         self._add_course_certificates(count=1, signatory_count=0)
         response = self.client.get(test_url)
@@ -559,15 +528,17 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
     def test_render_html_view_disabled_feature_flag_returns_static_url(self):
         test_url = get_certificate_url(
             user_id=self.user.id,
-            course_id=unicode(self.course.id)
+            course_id=unicode(self.course.id),
+            verify_uuid=self.cert.verify_uuid
         )
-        self.assertIn(str(self.cert.download_url), test_url)
+        self.assertIn(str(self.cert.verify_uuid), test_url)
 
     @override_settings(FEATURES=FEATURES_WITH_CERTS_ENABLED)
     def test_render_html_view_invalid_course_id(self):
         test_url = get_certificate_url(
             user_id=self.user.id,
-            course_id='az/23423/4vs'
+            course_id='az/23423/4vs',
+            verify_uuid=self.cert.verify_uuid
         )
 
         response = self.client.get(test_url)
@@ -577,7 +548,8 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
     def test_render_html_view_invalid_course(self):
         test_url = get_certificate_url(
             user_id=self.user.id,
-            course_id='missing/course/key'
+            course_id='missing/course/key',
+            verify_uuid=self.cert.verify_uuid
         )
         response = self.client.get(test_url)
         self.assertIn('invalid', response.content)
@@ -586,7 +558,8 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
     def test_render_html_view_invalid_user(self):
         test_url = get_certificate_url(
             user_id=111,
-            course_id=unicode(self.course.id)
+            course_id=unicode(self.course.id),
+            verify_uuid=self.cert.verify_uuid
         )
         response = self.client.get(test_url)
         self.assertIn('invalid', response.content)
@@ -597,7 +570,8 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
         self.assertEqual(len(GeneratedCertificate.objects.all()), 0)
         test_url = get_certificate_url(
             user_id=self.user.id,
-            course_id=unicode(self.course.id)
+            course_id=unicode(self.course.id),
+            verify_uuid=self.cert.verify_uuid
         )
         response = self.client.get(test_url)
         self.assertIn('invalid', response.content)
@@ -613,7 +587,8 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
         self._add_course_certificates(count=1, signatory_count=2)
         test_url = get_certificate_url(
             user_id=self.user.id,
-            course_id=unicode(self.course.id)
+            course_id=unicode(self.course.id),
+            verify_uuid=self.cert.verify_uuid
         )
         response = self.client.get(test_url + '?preview=honor')
         self.assertNotIn(self.course.display_name, response.content)
@@ -631,7 +606,8 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
     def test_render_html_view_invalid_certificate_configuration(self):
         test_url = get_certificate_url(
             user_id=self.user.id,
-            course_id=unicode(self.course.id)
+            course_id=unicode(self.course.id),
+            verify_uuid=self.cert.verify_uuid
         )
         response = self.client.get(test_url)
         self.assertIn("Invalid Certificate", response.content)
@@ -643,7 +619,8 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
         self.recreate_tracker()
         test_url = get_certificate_url(
             user_id=self.user.id,
-            course_id=unicode(self.course.id)
+            course_id=unicode(self.course.id),
+            verify_uuid=self.cert.verify_uuid
         )
         response = self.client.get(test_url)
         self.assertEqual(response.status_code, 200)
@@ -665,10 +642,10 @@ class CertificatesViewsTests(ModuleStoreTestCase, EventTrackingTestCase):
     def test_evidence_event_sent(self):
         cert_url = get_certificate_url(
             user_id=self.user.id,
-            course_id=self.course_id
+            course_id=self.course_id,
+            verify_uuid=self.cert.verify_uuid
         )
         test_url = '{}?evidence_visit=1'.format(cert_url)
-        self._add_course_certificates(count=1, signatory_count=2)
         self.recreate_tracker()
         assertion = BadgeAssertion(
             user=self.user, course_id=self.course_id, mode='honor',

@@ -4,7 +4,6 @@ from django.conf.urls import patterns, url, include
 
 from commerce.api.v1 import views
 
-
 COURSE_URLS = patterns(
     '',
     url(r'^$', views.CourseListView.as_view(), name='list'),
