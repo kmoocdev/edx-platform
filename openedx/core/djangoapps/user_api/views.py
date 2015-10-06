@@ -425,7 +425,7 @@ class RegistrationView(APIView):
         # meant to hold the user's password.
         password_label = _(u"Password")
 
-        username_instructions = _(u"숫자, 특수기호 포함 8자리이상")
+        username_instructions = _(u"영문과 숫자, 특수기호를 사용하여 8자리이상으로 설정")
 
         form_desc.add_field(
             "password",
