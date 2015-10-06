@@ -120,7 +120,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .wrapper-footer footer#footer-openedx .nav-legal li{margin:0 0 10px 0;}
 .wrapper-footer footer#footer-openedx .nav-legal a{font-size:14px;font-weight:bold;color:#b7b7b7;}
 .wrapper-footer footer#footer-openedx .nav-legal a:hover {color:#f2f2f2;}
-.wrapper-footer footer#footer-openedx .sns{position:absolute;right:0px;top:25px;}
+.wrapper-footer footer#footer-openedx .sns{position:absolute;right:10px;top:25px;}
 .wrapper-footer footer#footer-openedx .sns a{margin:0 5px 0 0;}
 
 .school_list{padding:30px 0 0 0;background:url('/static/images/bg01.png') repeat  left top;}
@@ -185,6 +185,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .container.faq .faq_box dt > a i {color:#f58026;position:absolute;left:0;top:20px;}
 .container.faq .faq_box dd {font-size:0.875em;padding:15px 18px;background:#f2f2f2;}
 
+.container.about {padding:0 10px;}
 .container.about .school_info {padding:0;}
 .container.about .school_info .inner {width:auto;}
 .container.about .school_info .inner p.title_type2{margin:0;}
@@ -220,7 +221,7 @@ header.global .nav-global li:nth-child(2) {right:10px;}
 
 	.container.about .school_list .inner{padding:0;}
 
-	.school_info .inner{padding:0 10px;}
+	/*.school_info .inner{padding:0 10px;}*/
 	
 	.school_list2 .inner > a{width:32.5%;}
 	.school_list2 .inner > a:nth-child(4),
@@ -229,7 +230,8 @@ header.global .nav-global li:nth-child(2) {right:10px;}
 	.school_list2 .inner > a:nth-child(5),
 	.school_list2 .inner > a:nth-child(6){margin-left:1%;}
 
-	.container.about > nav {padding:0 10px;box-sizing:border-box;height:48px;}
+	/*.container.about > nav {padding:0 10px;box-sizing:border-box;height:48px;}*/
+	.container.about > nav {box-sizing:border-box;height:48px;}
 
 	@media only screen and (max-width:813px) {
 
@@ -307,7 +309,7 @@ header.global .nav-global li:nth-child(2) {right:10px;}
 				.school_info  .inner p.title_type2{text-align:center;}
 
 				.container.about .school_info  .inner p.title_type2{text-align:left;}
-				.container.about > nav {padding:0 5px;}
+				/*.container.about > nav {padding:0 5px;}*/
 				.container.about > nav a {width:50%;margin:0;}
 
 				@media only screen and (max-width:580px) {
