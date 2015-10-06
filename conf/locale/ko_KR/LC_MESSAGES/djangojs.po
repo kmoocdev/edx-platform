@@ -6406,7 +6406,7 @@ msgstr "강좌"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Starts: %(start)s"
-msgstr "시작일자: %(start)s"
+msgstr "개강일: %(start)s"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Explore your course!"
