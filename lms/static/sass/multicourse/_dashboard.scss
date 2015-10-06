@@ -13,16 +13,37 @@
 // ====================
 .dashboard {
   @include clearfix();
+<<<<<<< .merge_file_94vPYr
   padding: ($baseline*2) 0 ($baseline*1.5) 0;
+=======
+  padding: ($baseline*2) 0 $baseline 0;
+
+  .wrapper-find-courses {
+    @include float(right);
+    @include margin-left(flex-gutter());
+    width: flex-grid(3);
+    margin-top: ($baseline*2);
+    border-top: 3px solid $blue;
+    padding: $baseline 0;
+
+    .copy {
+      @extend %t-copy-sub1;
+    }
+
+    .btn-find-courses {
+      @extend %btn-pl-elevated-alt;
+    }
+  }
+>>>>>>> .merge_file_TDDtCx
 
   .profile-sidebar {
     background: transparent;
     @include float(right);
-    margin-top: ($baseline*2);
+    @include margin-left(flex-gutter());
     width: flex-grid(3);
-    box-shadow: 0 0 1px $shadow-l1;
-    border: 1px solid $border-color-2;
-    border-radius: 3px;
+    margin-top: ($baseline*2);
+    border-top: 3px solid $blue;
+    padding: $baseline 0;
 
     .profile {display:none;}
 
@@ -33,7 +54,7 @@
         @include box-sizing(border-box);
         @include clearfix();
         margin: 0;
-        padding: $baseline;
+        padding: 0;
         width: flex-grid(12);
 
         li {
@@ -61,7 +82,7 @@
           }
 
           span.title {
-            @extend %t-copy-sub1;
+            @extend %t-title6;
             @extend %t-strong;
 
             a {
@@ -570,8 +591,22 @@
         @include float(right);
       }
 
-      .purchase-credit-btn {
+      .pending-credit-btn{
+        @include float(right);
+      }
+
+      .denied-credit-btn{
+        @include float(right);
+      }
+      .credit-request-pending-msg{
+        display: inline-block;
+      }
+
+      .credit-btn {
         @extend %btn-pl-yellow-base;
+        background-image: none ;
+        text-shadow: none;
+        box-shadow: none;
       }
 
       .message {

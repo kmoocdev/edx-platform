@@ -1,4 +1,3 @@
-# pylint: disable=no-member
 """
 Unit tests for the Mixed Modulestore, with DDT for the various stores (Split, Draft, XML)
 """
@@ -8,7 +7,6 @@ import logging
 import ddt
 import itertools
 import mimetypes
-from unittest import skip
 from uuid import uuid4
 from contextlib import contextmanager
 from mock import patch
@@ -284,7 +282,7 @@ class CommonMixedModuleStoreSetup(CourseComparisonTest):
         # and then to the root UsageKey
         self.course_locations = {
             course_id: course_key.make_usage_key('course', course_key.run)
-            for course_id, course_key in self.course_locations.iteritems()  # pylint: disable=maybe-no-member
+            for course_id, course_key in self.course_locations.iteritems()
         }
 
         mongo_course_key = self.course_locations[self.MONGO_COURSEID].course_key
@@ -635,6 +633,30 @@ class TestMixedModuleStore(CommonMixedModuleStoreSetup):
         vertical = self.store.get_item(vertical.location)
         self.assertTrue(self._has_changes(vertical.location))
 
+<<<<<<< .merge_file_3lJLvG
+=======
+    @ddt.data('draft', 'split')
+    def test_publish_automatically_after_delete_unit(self, default_ms):
+        """
+        Check that sequential publishes automatically after deleting a unit
+        """
+        self.initdb(default_ms)
+
+        test_course = self.store.create_course('test_org', 'test_course', 'test_run', self.user_id)
+
+        # create sequential and vertical to test against
+        sequential = self.store.create_item(self.user_id, test_course.id, 'sequential', 'test_sequential')
+        vertical = self.store.create_child(self.user_id, sequential.location, 'vertical', 'test_vertical')
+
+        # publish sequential changes
+        self.store.publish(sequential.location, self.user_id)
+        self.assertFalse(self._has_changes(sequential.location))
+
+        # delete vertical and check sequential has no changes
+        self.store.delete_item(vertical.location, self.user_id)
+        self.assertFalse(self._has_changes(sequential.location))
+
+>>>>>>> .merge_file_2mFBuD
     def setup_has_changes(self, default_ms):
         """
         Common set up for has_changes tests below.
@@ -855,7 +877,7 @@ class TestMixedModuleStore(CommonMixedModuleStoreSetup):
     # Split:
     #    queries: active_versions, draft and published structures, definition (unnecessary)
     #    sends: update published (why?), draft, and active_versions
-    @ddt.data(('draft', 9, 2), ('split', 2, 2))
+    @ddt.data(('draft', 9, 2), ('split', 4, 3))
     @ddt.unpack
     def test_delete_private_vertical(self, default_ms, max_find, max_send):
         """
@@ -1222,15 +1244,16 @@ class TestMixedModuleStore(CommonMixedModuleStoreSetup):
 
             should_work = (
                 (self.problem_x1a_2,
-                 (course_key, u"Chapter_x", u"Sequential_x1", '1')),
+                 (course_key, u"Chapter_x", u"Sequential_x1", u'Vertical_x1a', '1', self.problem_x1a_2)),
                 (self.chapter_x,
-                 (course_key, "Chapter_x", None, None)),
+                 (course_key, "Chapter_x", None, None, None, self.chapter_x)),
             )
 
             for location, expected in should_work:
                 # each iteration has different find count, pop this iter's find count
                 with check_mongo_calls(num_finds.pop(0), num_sends):
-                    self.assertEqual(path_to_location(self.store, location), expected)
+                    path = path_to_location(self.store, location)
+                    self.assertEqual(path, expected)
 
         not_found = (
             course_key.make_usage_key('video', 'WelcomeX'),
@@ -1260,11 +1283,13 @@ class TestMixedModuleStore(CommonMixedModuleStoreSetup):
         # only needs course_locations set
         self.initdb('draft')
         course_key = self.course_locations[self.XML_COURSEID1].course_key
+        video_key = course_key.make_usage_key('video', 'Welcome')
+        chapter_key = course_key.make_usage_key('chapter', 'Overview')
         should_work = (
-            (course_key.make_usage_key('video', 'Welcome'),
-             (course_key, "Overview", "Welcome", None)),
-            (course_key.make_usage_key('chapter', 'Overview'),
-             (course_key, "Overview", None, None)),
+            (video_key,
+             (course_key, "Overview", "Welcome", None, None, video_key)),
+            (chapter_key,
+             (course_key, "Overview", None, None, None, chapter_key)),
         )
 
         for location, expected in should_work:
@@ -1408,7 +1433,7 @@ class TestMixedModuleStore(CommonMixedModuleStoreSetup):
             course_id.make_usage_key('course_info', 'updates'),
         ]
 
-        for location in (orphan_locations + detached_locations):
+        for location in orphan_locations + detached_locations:
             self.store.create_item(
                 self.user_id,
                 location.course_key,
@@ -2414,6 +2439,34 @@ class TestMixedModuleStore(CommonMixedModuleStoreSetup):
                         self.store.update_item(unit, self.user_id)
                         self.assertEqual(receiver.call_count, 0)
                     self.assertEqual(receiver.call_count, 0)
+
+    @ddt.data(ModuleStoreEnum.Type.mongo, ModuleStoreEnum.Type.split)
+    def test_course_deleted_signal(self, default):
+        with MongoContentstoreBuilder().build() as contentstore:
+            self.store = MixedModuleStore(
+                contentstore=contentstore,
+                create_modulestore_instance=create_modulestore_instance,
+                mappings={},
+                signal_handler=SignalHandler(MixedModuleStore),
+                **self.OPTIONS
+            )
+            self.addCleanup(self.store.close_all_connections)
+
+            with self.store.default_store(default):
+                self.assertIsNotNone(self.store.thread_cache.default_store.signal_handler)
+
+                with mock_signal_receiver(SignalHandler.course_deleted) as receiver:
+                    self.assertEqual(receiver.call_count, 0)
+
+                    # Create a course
+                    course = self.store.create_course('org_x', 'course_y', 'run_z', self.user_id)
+                    course_key = course.id
+
+                    # Delete the course
+                    course = self.store.delete_course(course_key, self.user_id)
+
+                    # Verify that the signal was emitted
+                    self.assertEqual(receiver.call_count, 1)
 
 
 @ddt.ddt

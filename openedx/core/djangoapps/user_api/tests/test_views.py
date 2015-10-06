@@ -78,7 +78,7 @@ class ApiTestCase(TestCase):
         """Given a user preference object, get the URI for the corresponding resource"""
         prefs = self.get_json(USER_PREFERENCE_LIST_URI)["results"]
         for pref in prefs:
-            if (pref["user"]["id"] == target_pref.user.id and pref["key"] == target_pref.key):
+            if pref["user"]["id"] == target_pref.user.id and pref["key"] == target_pref.key:
                 return pref["url"]
         self.fail()
 
@@ -1016,7 +1016,7 @@ class RegistrationViewTest(ThirdPartyAuthTestMixin, ApiTestCase):
         )
 
     def test_register_form_year_of_birth(self):
-        this_year = datetime.datetime.now(UTC).year  # pylint: disable=maybe-no-member
+        this_year = datetime.datetime.now(UTC).year
         year_options = (
             [{"value": "", "name": "--", "default": True}] + [
                 {"value": unicode(year), "name": unicode(year)}

@@ -51,6 +51,20 @@
   text-align: center;
 }
 
+// Below divider rules are moved here from _instructor_2.scss
+// UI: visual dividers
+.divider-lv0 {
+  border-top: ($baseline/5) solid $gray-l4;
+}
+
+.divider-lv1 {
+  border-top: ($baseline/10) solid $gray-l4;
+}
+
+.divider-lv2 {
+  border-top: ($baseline/20) solid $gray-l4;
+}
+
 // for verify_student/make_payment_step.underscore
 .payment-buttons {
 
@@ -76,9 +90,6 @@
 
 // teams temporary
 .view-teams {
-  .global-new, #global-navigation {
-    display: none;
-  }
 
   // Copied from _pagination.scss in cms
   .pagination {

@@ -10,7 +10,6 @@ html, body {
   font-size: 1em;
   font-style: normal;
   line-height: 1em;
-  //-webkit-font-smoothing: antialiased;
 }
 
 html{
@@ -32,7 +31,6 @@ h1 {
   font: 600 2em/1.4em $sans-serif;
   margin-bottom: ($baseline*1.5);
   text-align: center;
-  //text-transform: uppercase;
 }
 
 h2 {
@@ -48,14 +46,23 @@ p + h2, ul + h2, ol + h2 {
 }
 
 p {
+<<<<<<< .merge_file_lAOY1I
   color: $base-font-color;
   font: normal 1em/1.6em $sans-serif;
+=======
+  color: inherit;
+>>>>>>> .merge_file_YE4KEH
   margin: 0;
 }
 
 span {
+<<<<<<< .merge_file_lAOY1I
   font: inherit 1em/1.6em $sans-serif;
   color: $base-font-color;
+=======
+  font: inherit;
+  color: inherit;
+>>>>>>> .merge_file_YE4KEH
 }
 
 /* Fix for CodeMirror: prevent top-level span from affecting deeply-embedded span in CodeMirror */
@@ -77,9 +84,14 @@ p + p, ul + p, ol + p {
 }
 
 p {
-  a:link, a:visited {
+  a, a:visited {
     color: $link-color;
+<<<<<<< .merge_file_lAOY1I
     font: normal 1em/1em $sans-serif;
+=======
+    font: inherit;
+    font-weight: inherit;
+>>>>>>> .merge_file_YE4KEH
     text-decoration: none;
     @include transition(all 0.1s linear 0s);
 
@@ -90,9 +102,13 @@ p {
   }
 }
 
-a:link, a:visited {
+a, a:visited {
   color: $link-color;
+<<<<<<< .merge_file_lAOY1I
   font: inherit 1em/1em $sans-serif;
+=======
+  font: inherit;
+>>>>>>> .merge_file_YE4KEH
   text-decoration: none;
   /**
   @include transition(all 0.1s linear 0s);
@@ -109,19 +125,10 @@ a:link, a:visited {
   }
 }
 
-a:focus {
-  /**
-   *  Add general focus styling here
-   *  for example:
-   *      outline: 3px groove $black;
-   **/
-}
-
 .content-wrapper {
   width: flex-grid(12);
   margin: 0 auto;
   background: $content-wrapper-bg;
-  padding-bottom: ($baseline*2);
 
   @media print {
     padding-bottom: 0;

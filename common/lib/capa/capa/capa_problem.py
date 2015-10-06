@@ -575,11 +575,13 @@ class LoncapaProblem(object):
             return {}
 
     @property
-    def has_responsive_ui(self):
+    def has_multi_device_support(self):
         """
-        Returns whether this capa problem has support for responsive UI.
+        Returns whether this capa problem has multi-device support.
         """
-        return all(responder.has_responsive_ui for responder in self.responders.values())
+        return all(
+            responder.multi_device_support for responder in self.responders.values()
+        )
 
     # ======= Private Methods Below ========
 
@@ -631,7 +633,7 @@ class LoncapaProblem(object):
                 parent = inc.getparent()
                 parent.insert(parent.index(inc), incxml)
                 parent.remove(inc)
-                log.debug('Included %s into %s' % (filename, self.problem_id))
+                log.debug('Included %s into %s', filename, self.problem_id)
 
     def _extract_system_path(self, script):
         """
@@ -853,7 +855,7 @@ class LoncapaProblem(object):
             answer_id = 1
             input_tags = inputtypes.registry.registered_tags()
             inputfields = tree.xpath(
-                "|".join(['//' + response.tag + '[@id=$id]//' + x for x in (input_tags + solution_tags)]),
+                "|".join(['//' + response.tag + '[@id=$id]//' + x for x in input_tags + solution_tags]),
                 id=response_id_str
             )
 

@@ -67,7 +67,9 @@ def login_and_registration_form(request, initial_mode="login"):
 
     # If this is a microsite, revert to the old login/registration pages.
     # We need to do this for now to support existing themes.
-    if microsite.is_request_in_microsite():
+    # Microsites can use the new logistration page by setting
+    # 'ENABLE_COMBINED_LOGIN_REGISTRATION' in their microsites configuration file.
+    if microsite.is_request_in_microsite() and not microsite.get_value('ENABLE_COMBINED_LOGIN_REGISTRATION', False):
         if initial_mode == "login":
             return old_login_view(request)
         elif initial_mode == "register":
@@ -384,6 +386,7 @@ def account_settings_context(request):
         'platform_name': settings.PLATFORM_NAME,
         'user_accounts_api_url': reverse("accounts_api", kwargs={'username': user.username}),
         'user_preferences_api_url': reverse('preferences_api', kwargs={'username': user.username}),
+        'disable_courseware_js': True,
     }
 
     if third_party_auth.is_enabled():
