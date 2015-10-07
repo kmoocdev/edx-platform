@@ -132,7 +132,7 @@ a:focus {
   @include clearfix();
   @include box-sizing(border-box);
   margin: 0 auto 0;
-  padding: ($baseline*2) 0;
+  padding: ($baseline*2) 10px;
   max-width: grid-width(12);
 /**  min-width: 760px;**/
   width: flex-grid(12);
