@@ -142,6 +142,11 @@ msgstr ""
 msgid "Cancel"
 msgstr "취소"
 
+msgid ""
+"We've sent a message to {email_address}. Click the link in the message to "
+"reset your password."
+msgstr "{email_address}로 이메일이 발송되었습니다. 메일로 발송된 링크를 클릭하면 비밀번호를 재설정할 수 있습니다."
+
 #: cms/static/coffee/src/views/tabs.js
 #: cms/static/coffee/src/xblock/cms.runtime.v1.js
 #: cms/static/js/certificates/views/signatory_details.js

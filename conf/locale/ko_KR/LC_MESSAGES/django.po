@@ -214,13 +214,11 @@ msgstr "글이 없습니다."
 msgid "Terms of Service and Honor Code"
 msgstr "약관 및 개인정보 보호 정책"
 
-#: openedx/core/djangoapps/user_api/views.py
 msgid "Agreement"
-msgstr "약관"
+msgstr "이용약관"
 
-#: openedx/core/djangoapps/user_api/views.py
 msgid "Privacy"
-msgstr "개인정보 보호"
+msgstr "개인정보처리방침"
 
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
 #. the discussion forums
@@ -13189,12 +13187,12 @@ msgstr "안녕하세요 {full_name}님"
 msgid ""
 "You have been invited to be a beta tester for {course_name} at {site_name} "
 "by a member of the course staff."
-msgstr "강좌 운영팀 멤버가 당신을  {site_name}의  {course_name}에 베타테스터로 초대하였습니다."
+msgstr "강좌 운영팀에서 회원님을  {site_name}의  '{course_name}' 강좌에 베타테스터로 초대하였습니다."
 
 #: lms/templates/emails/add_beta_tester_email_message.txt
 #: lms/templates/emails/enroll_email_enrolledmessage.txt
 msgid "To start accessing course materials, please visit {course_url}"
-msgstr "강좌 자료에 이용하기 위해 {course_url} 에 방문하세요"
+msgstr "해당 강좌로 이동하시려면 로그인을 하신 뒤에, {course_url} 을 클릭하세요."
 
 #: lms/templates/emails/add_beta_tester_email_message.txt
 msgid "Visit {course_about_url} to join the course and begin the beta test."
@@ -13424,7 +13422,7 @@ msgstr "친애하는 학습자에게,"
 msgid ""
 "You have been invited to join {course_name} at {site_name} by a member of "
 "the course staff."
-msgstr "강좌 운영팀이 귀하를 {site_name} {course_name}에 초대하였습니다."
+msgstr "강좌 운영팀이 회원님을 {site_name} '{course_name}' 강좌에 초대하였습니다."
 
 #: lms/templates/emails/enroll_email_allowedmessage.txt
 msgid "To access the course visit {course_url} and login."
