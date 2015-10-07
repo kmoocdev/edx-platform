@@ -210,6 +210,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 header.global .nav-global li:nth-child(1) {right:95px;}
 header.global .nav-global li:nth-child(2) {right:10px;}
 
+
 @media only screen and (max-width:1100px) {
 
 	.school_list .inner > a{width:20%;}
@@ -223,7 +224,7 @@ header.global .nav-global li:nth-child(2) {right:10px;}
 	.container.about .school_list .inner{padding:0;}
 
 	/*.school_info .inner{padding:0 10px;}*/
-	
+
 	.school_list2 .inner > a{width:32.5%;}
 	.school_list2 .inner > a:nth-child(4),
 	.school_list2 .inner > a:nth-child(7),
@@ -234,101 +235,107 @@ header.global .nav-global li:nth-child(2) {right:10px;}
 	/*.container.about > nav {padding:0 10px;box-sizing:border-box;height:48px;}*/
 	.container.about > nav {box-sizing:border-box;height:48px;}
 
-	@media only screen and (max-width:813px) {
+}
 
-		.home>header.type1{padding-bottom:0;}
-		.school_info .inner{padding-top:15px;}
-		.container.about .school_info .inner{padding-top:0;}
+@media only screen and (max-width:813px) {
 
-		.home>header .vod{text-align:center;padding:20px 0 30px 0;}
-		.home > header .title {float:none !important;margin:0 auto;padding:20px 0 30px 0;}
+	.home>header.type1{padding-bottom:0;}
+	.school_info .inner{padding-top:15px;}
+	.container.about .school_info .inner{padding-top:0;}
 
-		.container.about > nav a {width:33%;}
+	.home>header .vod{text-align:center;padding:20px 0 30px 0;}
+	.home > header .title {float:none !important;margin:0 auto;padding:20px 0 30px 0;}
 
-		@media only screen and (max-width:750px) {
-			header.global h1.logo{float:none;margin:0 auto;padding:20px 0 0 0;}
-			header.global.slim h1.logo{float:none;margin:0 auto;padding:20px 0 0 0;}
-			header.global.slim h1.logo a {text-align:center;}
-			header.global.slim h2.course-header{float:none;width:100%;text-align:center;margin:0 auto;padding-bottom:10px;}
-			header.global .nav-global{margin:0;padding:20px;}
-			header.global .nav-global li[class^="gnb"]{width:22%;}
-			header.global .nav-global li:nth-child(1){right:100px;top:85px;}
-			header.global .nav-global li:nth-child(2){right:10px;top:85px;}
-			header.global .user{margin-top:-55px;}
-			header.global.slim .user {margin-top:-35px;}
-
-			.home>header .title .course-search{padding:10px 120px 10px 10px;}
-			.home>header .title .course-search .search-button,
-			.home>header .title .course-search .search-button:hover{right:20px;}
-					
-			.school_list2 .inner > a{width:49.5%;}
-			.school_list2 .inner > a:nth-child(3),
-			.school_list2 .inner > a:nth-child(5),
-			.school_list2 .inner > a:nth-child(7),
-			.school_list2 .inner > a:nth-child(9){margin-left:0;}
-			.school_list2 .inner > a:nth-child(4),
-			.school_list2 .inner > a:nth-child(6),
-			.school_list2 .inner > a:nth-child(8),
-			.school_list2 .inner > a:nth-child(10){margin-left:1%;}
-
-			.container {width:auto;padding:15px;}
-
-			.dashboard .my-courses, .course-info .details {float:none;width:100%;}
-			.dashboard .profile-sidebar {float:none;width:auto;margin:20px 0;}
-
-			.course-info .details {float:none;margin-right:0;width:auto;}
-			.course-info .course-sidebar {float:none;width:auto;}
-			.course-info header.course-profile .intro-inner-wrapper .media {display:none;}
-			.course-info header.course-profile .intro-inner-wrapper .intro {width:auto;display:block;}
-			
-			.container.about > nav a {width:40%;}
+	.container.about > nav a {width:33%;}
 
 
-			@media only screen and (max-width:640px) {
-				header.global .nav-global{padding:0;display:none;}
-				header.global h1.logo, header.global.slim h1.logo {padding:20px 0;}
-				header.global .user{padding:0;display:none;}
-				header.global .close + .nav-global{display:block;}
-				header.global .nav-global li:nth-child(1){position:relative;right:0px;top:0px;padding:0;width:50%;}
-				header.global .nav-global li:nth-child(2){float:right;position:relative;right:0px;top:0px;padding:0;width:50%;border-left:solid 1px #fff;}
-				header.global .nav-global li a.btn,
-				header.global .nav-global li a.btn.type2{height:60px;line-height:60px;font-size:18px;color:#fff;border-radius:0;border:none;background:#007db8;}
+}
 
-				header.global .nav-global li[class^="gnb"]{float:none;width:100%;border-top:solid 1px #ddd;}
-				header.global .nav-global li[class^="gnb"] a{float:none;padding:0 0 0 20px;width:auto;height:58px;line-height:58px;font-size:18px;color:#777;background:none;}
-				
-				*[data-btn="gnb"]{display:block;}
+@media only screen and (max-width:750px) {
+	header.global h1.logo{float:none;margin:0 auto;padding:20px 0 0 0;}
+	header.global.slim h1.logo{float:none;margin:0 auto;padding:20px 0 0 0;}
+	header.global.slim h1.logo a {text-align:center;}
+	header.global.slim h2.course-header{float:none;width:100%;text-align:center;margin:0 auto;padding-bottom:10px;}
+	header.global .nav-global{margin:0;padding:20px;}
+	header.global .nav-global li[class^="gnb"]{width:22%;}
+	header.global .nav-global li:nth-child(1){right:100px;top:85px;}
+	header.global .nav-global li:nth-child(2){right:10px;top:85px;}
+	header.global .user{margin-top:-55px;}
+	header.global.slim .user {margin-top:-35px;}
 
-				.wrapper-footer footer#footer-openedx .wrapper-logo{display:none;}
-				.wrapper-footer footer#footer-openedx .colophon .nav-colophon{margin:0 10px 0 10px;}
-				.wrapper-footer footer#footer-openedx .copyright{margin:0 10px 5px 10px;}
-				.wrapper-footer footer#footer-openedx .nav-legal{margin:0 10px 10px 10px;}
-				.wrapper-footer footer#footer-openedx .sns{position:relative;right:auto;top:auto;margin:0 0 10px 10px;}
+	.home>header .title .course-search{padding:10px 120px 10px 10px;}
+	.home>header .title .course-search .search-button,
+	.home>header .title .course-search .search-button:hover{right:20px;}
 
-				.school_info  .inner p.title_type2 img{float:none;margin:20px 0 20px 0;}
-				.school_info  .inner p.title_type2 span{float:none;margin:25px 0 0 0;line-height:1em;}
-				.school_info  .inner p.title_type2{text-align:center;}
+	.school_list2 .inner > a{width:49.5%;}
+	.school_list2 .inner > a:nth-child(3),
+	.school_list2 .inner > a:nth-child(5),
+	.school_list2 .inner > a:nth-child(7),
+	.school_list2 .inner > a:nth-child(9){margin-left:0;}
+	.school_list2 .inner > a:nth-child(4),
+	.school_list2 .inner > a:nth-child(6),
+	.school_list2 .inner > a:nth-child(8),
+	.school_list2 .inner > a:nth-child(10){margin-left:1%;}
 
-				.container.about .school_info  .inner p.title_type2{text-align:left;}
-				/*.container.about > nav {padding:0 5px;}*/
-				.container.about > nav a {width:50%;margin:0;}
+	.container {width:auto;padding:15px;}
 
-				@media only screen and (max-width:580px) {
-					.school_list .inner > a{width:50%;}
-					.school_list .inner > a:nth-child(6){border-left:none;}					
-					.school_list .inner > a:nth-child(2n + 1){border-left:solid 1px #d1d1d1;}
-					.school_list .inner > a:nth-child(3),
-					.school_list .inner > a:nth-child(4),
-					.school_list .inner > a:nth-child(5),
-					.school_list .inner > a:nth-child(6),
-					.school_list .inner > a:nth-child(7),
-					.school_list .inner > a:nth-child(8),
-					.school_list .inner > a:nth-child(9),
-					.school_list .inner > a:nth-child(10){border-top:none;}
+	.dashboard .my-courses, .course-info .details {float:none;width:100%;}
+	.dashboard .profile-sidebar {float:none;width:auto;margin:20px 0;}
 
-					.school_list2 .inner > a{margin:0 0 10px 0! important;width:100%;}
-				}
-			}
-		}
-	}
+	.course-info .details {float:none;margin-right:0;width:auto;}
+	.course-info .course-sidebar {float:none;width:auto;}
+	.course-info header.course-profile .intro-inner-wrapper .media {display:none;}
+	.course-info header.course-profile .intro-inner-wrapper .intro {width:auto;display:block;}
+
+	.container.about > nav a {width:40%;}
+
+
+
+}
+
+@media only screen and (max-width:640px) {
+	header.global .nav-global{padding:0;display:none;}
+	header.global h1.logo, header.global.slim h1.logo {padding:20px 0;}
+	header.global .user{padding:0;display:none;}
+	header.global .close + .nav-global{display:block;}
+	header.global .nav-global li:nth-child(1){position:relative;right:0px;top:0px;padding:0;width:50%;}
+	header.global .nav-global li:nth-child(2){float:right;position:relative;right:0px;top:0px;padding:0;width:50%;border-left:solid 1px #fff;}
+	header.global .nav-global li a.btn,
+	header.global .nav-global li a.btn.type2{height:60px;line-height:60px;font-size:18px;color:#fff;border-radius:0;border:none;background:#007db8;}
+
+	header.global .nav-global li[class^="gnb"]{float:none;width:100%;border-top:solid 1px #ddd;}
+	header.global .nav-global li[class^="gnb"] a{float:none;padding:0 0 0 20px;width:auto;height:58px;line-height:58px;font-size:18px;color:#777;background:none;}
+
+	*[data-btn="gnb"]{display:block;}
+
+	.wrapper-footer footer#footer-openedx .wrapper-logo{display:none;}
+	.wrapper-footer footer#footer-openedx .colophon .nav-colophon{margin:0 10px 0 10px;}
+	.wrapper-footer footer#footer-openedx .copyright{margin:0 10px 5px 10px;}
+	.wrapper-footer footer#footer-openedx .nav-legal{margin:0 10px 10px 10px;}
+	.wrapper-footer footer#footer-openedx .sns{position:relative;right:auto;top:auto;margin:0 0 10px 10px;}
+
+	.school_info  .inner p.title_type2 img{float:none;margin:20px 0 20px 0;}
+	.school_info  .inner p.title_type2 span{float:none;margin:25px 0 0 0;line-height:1em;}
+	.school_info  .inner p.title_type2{text-align:center;}
+
+	.container.about .school_info  .inner p.title_type2{text-align:left;}
+	/*.container.about > nav {padding:0 5px;}*/
+	.container.about > nav a {width:50%;margin:0;}
+
+}
+
+@media only screen and (max-width:580px) {
+	.school_list .inner > a{width:50%;}
+	.school_list .inner > a:nth-child(6){border-left:none;}
+	.school_list .inner > a:nth-child(2n + 1){border-left:solid 1px #d1d1d1;}
+	.school_list .inner > a:nth-child(3),
+	.school_list .inner > a:nth-child(4),
+	.school_list .inner > a:nth-child(5),
+	.school_list .inner > a:nth-child(6),
+	.school_list .inner > a:nth-child(7),
+	.school_list .inner > a:nth-child(8),
+	.school_list .inner > a:nth-child(9),
+	.school_list .inner > a:nth-child(10){border-top:none;}
+
+	.school_list2 .inner > a{margin:0 0 10px 0! important;width:100%;}
 }
