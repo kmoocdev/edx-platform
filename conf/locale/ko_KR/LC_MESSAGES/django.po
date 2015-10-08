@@ -156,7 +156,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2015-09-30 13:05+0000\n"
+"POT-Creation-Date: 2015-09-24 03:06+0000\n"
 "PO-Revision-Date: 2015-09-25 11:11+0000\n"
 "Last-Translator: Hongseob Lee <shevious@yahoo.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/open-edx/edx-platform/language/ko_KR/)\n"
@@ -214,11 +214,17 @@ msgstr "글이 없습니다."
 msgid "Terms of Service and Honor Code"
 msgstr "약관 및 개인정보 보호 정책"
 
+#: openedx/core/djangoapps/user_api/views.py
 msgid "Agreement"
 msgstr "이용약관"
 
+#: openedx/core/djangoapps/user_api/views.py
 msgid "Privacy"
 msgstr "개인정보처리방침"
+
+#: lms/templates/dashboard.html
+msgid "Current Courses"
+msgstr "수강중인 강좌"
 
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
 #. the discussion forums
