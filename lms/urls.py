@@ -314,6 +314,9 @@ if settings.COURSEWARE_ENABLED:
         ## Copyright-Policy
         url(r'^Copyright-Policy/?$', 'courseware.views.copyright', name="copyright"),
 
+        ## browser info
+        url(r'^otherbrowser/?$', 'courseware.views.otherbrowser', name="copyright"),
+
 
         url(r'^change_enrollment$',
             'student.views.change_enrollment', name="change_enrollment"),
