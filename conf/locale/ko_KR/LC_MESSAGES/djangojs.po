@@ -6,6 +6,7 @@
 # Translators:
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
 # Jong-Dae Park <jdpark7@gmail.com>, 2013
 # jeon <bluerespect@nate.com>, 2014-2015
 # Jong-Dae Park <jdpark7@gmail.com>, 2013
@@ -20,6 +21,7 @@
 # SEUNGWON <baeksw0620@gmail.com>, 2014
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
 # Jong-Dae Park <jdpark7@gmail.com>, 2013
 # jeon <bluerespect@nate.com>, 2014-2015
 # Chanseok <kcsgoodboy@gmail.com>, 2014
@@ -33,6 +35,7 @@
 # Translators:
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
 # jeon <bluerespect@nate.com>, 2014
 # Jong-Dae Park <jdpark7@gmail.com>, 2015
 # Kevin Min <gr326887@graded.br>, 2015
@@ -45,6 +48,7 @@
 # 
 # Translators:
 # Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
 # jeon <bluerespect@nate.com>, 2014-2015
 # Kevin Min <gr326887@graded.br>, 2015
 # Kunwoo Kim <crazyabtmath@naver.com>, 2015
@@ -53,9 +57,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2015-09-11 12:15+0000\n"
-"PO-Revision-Date: 2015-09-11 12:17+0000\n"
-"Last-Translator: Sarina Canelake <sarina@edx.org>\n"
+"POT-Creation-Date: 2015-09-24 03:06+0000\n"
+"PO-Revision-Date: 2015-09-25 11:18+0000\n"
+"Last-Translator: Hongseob Lee <shevious@yahoo.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/open-edx/edx-platform/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2238,7 +2242,7 @@ msgstr "더보기"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "My Notes"
-msgstr "나의 노트"
+msgstr "내 노트"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "Instructor"
@@ -2515,8 +2519,8 @@ msgid "All teams"
 msgstr "모든 팀"
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-msgid "teams"
-msgstr "팀"
+msgid "Topics"
+msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 msgid "Teams"
@@ -2662,7 +2666,7 @@ msgstr "감독이 있는 평가 결과 생성 중에 오류가 발생했습니�
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 msgid "Error generating student profile information. Please try again."
-msgstr "학습자 프로필 정보를 만드는 중 오류가 발생했습니다. 다시 시도하세요."
+msgstr "학습자 정보를 만드는 중 오류가 발생했습니다. 다시 시도하세요."
 
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 #: lms/templates/search/search_loading.underscore
@@ -3433,7 +3437,7 @@ msgstr "모든 소주제"
 
 #: lms/static/js/ccx/schedule.js
 msgid "All units"
-msgstr "모든 학습활동"
+msgstr "전체 학습활동"
 
 #: lms/static/js/ccx/schedule.js lms/static/js/ccx/schedule.js.c
 #: lms/templates/ccx/schedule.underscore
@@ -3624,7 +3628,7 @@ msgstr "설정된 학습 집단이 현재 없습니다."
 #: lms/static/js/groups/views/cohorts.js
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Add Cohort"
-msgstr "학습 집단 추가하기"
+msgstr "학습집단 추가하기"
 
 #: lms/static/js/groups/views/cohorts.js
 msgid ""
@@ -3754,7 +3758,7 @@ msgstr "계정 기본  정보 (필수)"
 msgid ""
 "The name that identifies you throughout {platform_name}. You cannot change "
 "your username."
-msgstr "{platform_name}에서 귀하를 나타낼 이름입니다. 아이디는 변경할 수 없습니다. "
+msgstr "{platform_name}에서 쓰게 되는 이름입니다. 변경할 수 없습니다. "
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Full Name"
@@ -3820,7 +3824,7 @@ msgstr "성 "
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Year of Birth"
-msgstr "출생 연도"
+msgstr "출생연도"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: lms/static/js/student_profile/views/learner_profile_factory.js
@@ -3874,7 +3878,7 @@ msgstr "{platform_name} 학습자가 나에 대해 볼 수 있는 것은 :"
 
 #: lms/static/js/student_profile/views/learner_profile_factory.js
 msgid "Limited Profile"
-msgstr "짧은 프로필"
+msgstr "제한적 프로필"
 
 #: lms/static/js/student_profile/views/learner_profile_factory.js
 msgid "Full Profile"
@@ -3915,8 +3919,8 @@ msgid ""
 "You must be over 13 to share a full profile. If you are over 13, make sure "
 "that you have specified a birth year on the {account_settings_page_link}"
 msgstr ""
-"전체 프로필을 공유하려면 13세 이상이어야 합니다. 13세 이상이라면,  {account_settings_page_link}에서 출생 "
-"연도를 입력하세요."
+"전체 프로필을 공유하려면 13세 이상이어야 합니다. 13세 이상이라면,  {account_settings_page_link}에서 "
+"출생연도를 입력하세요."
 
 #: lms/static/js/student_profile/views/learner_profile_fields.js
 msgid "Profile Image"
@@ -4192,10 +4196,6 @@ msgstr "서명인의 직위는 2줄을 넘을 수 없습니다."
 #: cms/static/js/certificates/models/signatory.js
 msgid "Signatory title should have maximum of 40 characters per line."
 msgstr "서명인의 직위는 행마다 40자를 넘을 수 없습니다."
-
-#: cms/static/js/certificates/models/signatory.js
-msgid "Signatory organization should not be more than 40 characters long."
-msgstr "서명인의 기관은 40자 이내라야 합니다."
 
 #: cms/static/js/certificates/views/certificate_details.js
 msgid "Edit this certificate?"
@@ -4588,7 +4588,7 @@ msgstr "사용 안 함"
 #: cms/static/js/views/group_configuration_details.js
 msgid "Used in %(count)s unit"
 msgid_plural "Used in %(count)s units"
-msgstr[0] "학습 활동에서 사용된 수  : %(count)s"
+msgstr[0] "학습활동에서 사용된 수  : %(count)s"
 
 #. Translators: 'outlineAnchor' is an anchor pointing to
 #. the course outline page.
@@ -5136,7 +5136,7 @@ msgstr "소주제"
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "unit"
-msgstr "학습 활동"
+msgstr "학습활동"
 
 #: cms/static/js/views/video/translations_editor.js
 msgid ""
@@ -5199,7 +5199,7 @@ msgstr "액션"
 #: cms/templates/js/course-outline.underscore
 #: lms/templates/ccx/schedule.underscore
 msgid "Due Date"
-msgstr "마감 날짜"
+msgstr "마감일"
 
 #: cms/templates/js/paging-header.underscore
 #: common/static/common/templates/components/paging-footer.underscore
@@ -5246,11 +5246,8 @@ msgid "DISCUSSION HOME:"
 msgstr "게시판 홈:"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
-#: lms/templates/commerce/provider.underscore
-#: lms/templates/commerce/receipt.underscore
-#: lms/templates/discovery/course_card.underscore
-msgid "gettext("
-msgstr "gettext("
+msgid "How to use %(platform_name)s discussions"
+msgstr ""
 
 #: common/static/common/templates/discussion/discussion-home.underscore
 msgid "Find discussions"
@@ -5512,14 +5509,6 @@ msgid "Add a comment"
 msgstr "코멘트 추가"
 
 #: common/static/common/templates/discussion/thread-show.underscore
-msgid "This post is visible only to %(group_name)s."
-msgstr "이 계시물은 오직 %(group_name)s에게만 공개됩니다."
-
-#: common/static/common/templates/discussion/thread-show.underscore
-msgid "This post is visible to everyone."
-msgstr "이 게시물은 모두에게 공개됩니다."
-
-#: common/static/common/templates/discussion/thread-show.underscore
 msgid "%(post_type)s posted %(time_ago)s by %(author)s"
 msgstr "이 %(post_type)s는 %(time_ago)s전에 %(author)s님이 적으셨습니다."
 
@@ -5530,6 +5519,14 @@ msgstr "닫혔습니다. "
 #: common/static/common/templates/discussion/thread-show.underscore
 msgid "Related to: %(courseware_title_linked)s"
 msgstr ""
+
+#: common/static/common/templates/discussion/thread-show.underscore
+msgid "This post is visible only to %(group_name)s."
+msgstr "이 계시물은 오직 %(group_name)s에게만 공개됩니다."
+
+#: common/static/common/templates/discussion/thread-show.underscore
+msgid "This post is visible to everyone."
+msgstr "이 게시물은 모두에게 공개됩니다."
 
 #: common/static/common/templates/discussion/thread-type.underscore
 msgid "Post type:"
@@ -5723,7 +5720,7 @@ msgstr ""
 #: lms/static/js/fixtures/donation.underscore
 #: lms/templates/dashboard/donation.underscore
 msgid "Donate"
-msgstr "기부"
+msgstr "기부하기"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Expand All"
@@ -5766,6 +5763,18 @@ msgid "Subsection"
 msgstr "소주제"
 
 #: lms/templates/commerce/provider.underscore
+msgid ""
+"You still need to visit the %(display_name)s website to complete the credit "
+"process."
+msgstr ""
+
+#: lms/templates/commerce/provider.underscore
+msgid ""
+"To finalize course credit, %(provider_id)s requires %(platform_name)s "
+"learners to submit a credit request."
+msgstr ""
+
+#: lms/templates/commerce/provider.underscore
 msgid "<img src='%s' alt='%s'></image>"
 msgstr "<img src='%s' alt='%s'></image>"
 
@@ -5776,6 +5785,10 @@ msgid ""
 msgstr ""
 "<button data-provider=\"%s\" data-course-key=\"%s\" data-username=\"%s\" "
 "class=\"complete-course\" onClick=completeOrder(this)>%s</button>"
+
+#: lms/templates/commerce/receipt.underscore
+msgid "Thank you! We have received your payment for %(course_name)s."
+msgstr ""
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
@@ -5861,7 +5874,11 @@ msgstr "내 시험 종료"
 
 #: lms/templates/discovery/course_card.underscore
 msgid "LEARN MORE"
-msgstr "더 알아보기"
+msgstr "자세히 알아보기"
+
+#: lms/templates/discovery/course_card.underscore
+msgid "Starts: %(start_date)s"
+msgstr ""
 
 #: lms/templates/discovery/course_card.underscore
 msgid "Starts"
@@ -5949,7 +5966,7 @@ msgstr "학습자 관리"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Add students to this cohort"
-msgstr "학습 집단에 학습자 추가하기"
+msgstr "학습집단에 학습자 추가하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid ""
@@ -6036,6 +6053,18 @@ msgid "Deleted Content Group"
 msgstr "컨텐츠 그룹 삭제"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+msgid ""
+"%(screen_reader_start)sWarning:%(screen_reader_end)s The previously selected"
+" content group was deleted. Select another content group."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+msgid ""
+"%(screen_reader_start)sWarning:%(screen_reader_end)s No content groups "
+"exist."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Create a content group"
 msgstr "콘텐츠 그룹 만들기"
 
@@ -6088,8 +6117,8 @@ msgid ""
 "file, download course profile information or cohort results on "
 "%(link_start)s the Data Download page. %(link_end)s"
 msgstr ""
-"학습 집단의 과제를 검토하거나 CSV 파일 업로드의 결과를 보려면, 강좌 프로필 정보나 %(link_start)s 데이터 다운로드 페이지"
-"  %(link_end)s 에 있는 학습 집단 결과를 다운로드하세요.  "
+"학습 집단의 과제를 검토하거나 CSV 파일 업로드의 결과를 보려면,  학습자 정보나 %(link_start)s 데이터 페이지  "
+"%(link_end)s 에 있는 학습 집단 결과를 다운로드하세요.  "
 
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Used"
@@ -6192,12 +6221,13 @@ msgid ""
 "%(currentProvider)s account does not have a linked %(platformName)s account."
 " To link your accounts, sign in now using your %(platformName)s password."
 msgstr ""
-"%(currentProvider)s으로 로그인했지만, %(currentProvider)s 계정이 링크된 %(platformName)s "
-"계정을 갖지 못했습니다. 계정을 링크하기 위해서, %(platformName)s 비밀번호로 로그인하세요."
+"%(currentProvider)s로 로그인되었습니다.\n"
+"%(currentProvider)s 계정과 연동된 %(platformName)s 계정이 필요합니다.\n"
+"계정을 연동하기 위해서, %(platformName)s 가입 시 입력한 이메일과 비밀번호를 입력한 후, 로그인을 진행하세요."
 
 #: lms/templates/student_account/login.underscore
 msgid "Password Reset Email Sent"
-msgstr "암호 재설정 이메일이 보내어졌습니다."
+msgstr "비밀번호 재설정 메일이 발신되었습니다."
 
 #: lms/templates/student_account/login.underscore
 msgid ""
@@ -6229,7 +6259,7 @@ msgstr "계정이 아직 없다면, 아래의 버튼을 눌러 가입하세요. 
 
 #: lms/templates/student_account/login.underscore
 msgid "or sign in with"
-msgstr "또는 아래 계정으로 로그인"
+msgstr "다음 계정을 통해서도 간편하게 로그인 가능합니다."
 
 #: lms/templates/student_account/login.underscore
 msgid "Sign in with %(providerName)s"
@@ -6255,13 +6285,13 @@ msgstr "에러가 발생했습니다."
 
 #: lms/templates/student_account/password_reset.underscore
 msgid "Password assistance"
-msgstr "암호 도움"
+msgstr "비밀번호 도움"
 
 #: lms/templates/student_account/password_reset.underscore
 msgid ""
 "Please enter your email address below and we will send you instructions for "
 "setting a new password."
-msgstr "아래에 이메일 주소를 입력 해주십시오, 새로운 암호를 설정하기 위한 안내를 이메일로 보내드립니다."
+msgstr "아래에 이메일 주소를 입력 해주십시오, 새로운 비밀번호를 설정하기 위한 안내를 이메일로 보내드립니다."
 
 #: lms/templates/student_account/password_reset.underscore
 msgid "Reset my password"
@@ -6269,11 +6299,11 @@ msgstr "비밀번호 재설정"
 
 #: lms/templates/student_account/register.underscore
 msgid "We couldn't create your account."
-msgstr "계정을 생성할 수 없습니다."
+msgstr "회원가입을 하실 수 없습니다. "
 
 #: lms/templates/student_account/register.underscore
 msgid "You've successfully signed into %(currentProvider)s."
-msgstr "%(currentProvider)s에 로그인 성공했습니다."
+msgstr "%(currentProvider)s로 로그인하였습니다.  "
 
 #: lms/templates/student_account/register.underscore
 msgid ""
@@ -6311,11 +6341,11 @@ msgstr "이미 계정이 있으십니까?"
 
 #: lms/templates/student_profile/learner_profile.underscore
 msgid "You are currently sharing a limited profile."
-msgstr "현재 제한적인 프로필을 공유하고 있습니다."
+msgstr "현재 아이디만 공개하고 있습니다."
 
 #: lms/templates/student_profile/learner_profile.underscore
 msgid "This edX learner is currently sharing a limited profile."
-msgstr "edX 학습자가 현제 제한적인 프로필을 공유하고 있습니다."
+msgstr "학습자가 현재 제한적 프로필을 공유하고 있습니다."
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Congratulations! You are now verified on %(platformName)s!"
@@ -6335,7 +6365,7 @@ msgstr "강좌"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Starts: %(start)s"
-msgstr "시작일자: %(start)s"
+msgstr "개강일: %(start)s"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Explore your course!"
@@ -6933,7 +6963,7 @@ msgstr "주의 : 가장 최근 버전으로 학습자가 보고 있는 내용입
 #: cms/templates/js/content-group-details.underscore
 #: cms/templates/js/content-group-editor.underscore
 msgid "Cannot delete when in use by a unit"
-msgstr "학습 활동에서 사용될 때 삭제할 수 없습니다."
+msgstr "학습활동에서 사용될 때 삭제할 수 없습니다."
 
 #: cms/templates/js/content-group-details.underscore
 msgid "This content group is used in:"
@@ -7408,7 +7438,7 @@ msgstr "운영팀과 학습자"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Some content in this unit is visible only to particular content groups"
-msgstr "이 학습 활동의 일부 내용은 특정 콘텐츠 그룹만 볼 수 있습니다."
+msgstr "이 학습활동의 일부 내용은 특정 콘텐츠 그룹만 볼 수 있습니다."
 
 #: cms/templates/js/publish-xblock.underscore
 #: cms/templates/js/staff-lock-editor.underscore
@@ -7460,9 +7490,9 @@ msgstr "서명인의 지위"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid ""
-"The title of this signatory as it should appear on certificates. Maximum 2 "
-"lines, 40 characters each."
-msgstr "서명인의 직위는 강좌 이수증에 나타나야 합니다. 최대 2줄, 40자입니다. "
+"The title of this signatory as it should appear on certificates.  Maximum of"
+" 106 characters."
+msgstr ""
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Organization of the signatory"
@@ -7471,8 +7501,8 @@ msgstr "서명인의 소속기관"
 #: cms/templates/js/signatory-editor.underscore
 msgid ""
 "The organization that this signatory belongs to, as it should appear on "
-"certificates. Maximum 40 characters."
-msgstr "강좌 이수증에 나타나야 하는 서명인이 소속된 기관. 최대 40자."
+"certificates."
+msgstr ""
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Signature Image"
@@ -7617,7 +7647,7 @@ msgid ""
 "Learners who require verification must pass the selected checkpoint to see "
 "the content in this unit. Learners who do not require verification see this "
 "content by default."
-msgstr "인증을 신청한 학습자는 인증 기준에 해당하는 학습 활동을 통과해야 합니다. "
+msgstr "인증을 신청한 학습자는 인증 기준에 해당하는 학습활동을 통과해야 합니다. "
 
 #: cms/templates/js/xblock-string-field-editor.underscore
 msgid "Edit the name"
