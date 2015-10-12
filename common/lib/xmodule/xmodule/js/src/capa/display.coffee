@@ -498,7 +498,8 @@ class @Problem
       $(element).find('input').on 'input', ->
         $p = $(element).find('span.status')
         `// Translators: the word unanswered here is about answering a problem the student must solve.`
-        $p.parent().removeClass("correct incorrect").addClass "unsubmitted"
+        `// $p.parent().removeClass("correct incorrect").addClass "unsubmitted"`
+        $p.parent().removeClass("correct incorrect").addClass "incorrect"
 
   inputtypeSetupMethods:
 
