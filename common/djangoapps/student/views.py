@@ -12,7 +12,6 @@ from collections import defaultdict
 from pytz import UTC
 from requests import HTTPError
 from ipware.ip import get_ip
-from datetime import datetime
 
 from django.conf import settings
 from django.contrib.auth import logout, authenticate, login
