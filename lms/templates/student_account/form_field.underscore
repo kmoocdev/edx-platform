@@ -62,7 +62,7 @@
         </label>
     <% } %>
 
-    <% if( name === 'password' ) { %>
+    <% if( form === 'login' && name === 'password' ) { %>
         <a href="#" class="forgot-password field-link"><%- gettext("Forgot password?") %></a>
     <% } %>
 </div>
