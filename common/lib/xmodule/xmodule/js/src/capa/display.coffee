@@ -497,6 +497,10 @@ class @Problem
     textline: (element) ->
       $(element).find('input').on 'input', ->
         $p = $(element).find('span.status')
+        `//alert($p.parents().find('.problem').find('.check-label').text())`
+        if $p.parents().find('.problem').find('.check-label').text() != 'check'
+          return
+
         `// Translators: the word unanswered here is about answering a problem the student must solve.`
         $p.parent().removeClass("correct incorrect").addClass "unsubmitted"
 
