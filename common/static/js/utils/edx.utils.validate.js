@@ -34,6 +34,10 @@ var edx = edx || {};
                         response = {},
                         isBlank = _fn.validate.isBlank( $el );
 
+                    if($el.attr('name') == 'password' && $el.attr('type') == 'hidden'){
+                        return true;
+                    }
+
                     if ( _fn.validate.isRequired( $el ) ) {
                         if ( isBlank ) {
                             required = false;
