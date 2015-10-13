@@ -1529,3 +1529,10 @@ def copyright(request):
     return render_to_response(
         "courseware/copyright.html"
     )
+
+@ensure_csrf_cookie
+@cache_if_anonymous()
+def otherbrowser(request):
+    return render_to_response(
+        "otherBrowser.html"
+    )

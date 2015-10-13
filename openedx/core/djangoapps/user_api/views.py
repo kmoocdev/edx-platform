@@ -425,7 +425,7 @@ class RegistrationView(APIView):
         # meant to hold the user's password.
         password_label = _(u"Password")
 
-        username_instructions = _(u"숫자, 특수기호 포함 8자리이상")
+        username_instructions = _(u"영문과 숫자, 특수기호를 사용하여 8자리이상으로 설정")
 
         form_desc.add_field(
             "password",
@@ -640,11 +640,16 @@ class RegistrationView(APIView):
         else:
             # Translators: This is a legal document users must agree to
             # in order to register a new account.
-            terms_text = _(u"Terms of Service and Honor Code")
 
-        terms_link = u"<a href=\"javascript:termPop();\">{terms_text}</a>".format(
+            # terms_text = _(u"Terms of Service and Honor Code")
+            Agreement = _(u"Agreement")
+            Privacy = _(u"Privacy")
+
+        terms_link = u"<a href=\"javascript:agreementPop();\">{Agreement}</a> 및 <a href=\"javascript:privacyPop();\">{Privacy}</a>".format(
             url=marketing_link("HONOR"),
-            terms_text=terms_text
+            # terms_text=terms_text,
+            Agreement=Agreement,
+            Privacy=Privacy
         )
 
         # Translators: "Terms of Service" is a legal document users must agree to

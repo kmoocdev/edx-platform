@@ -229,8 +229,8 @@ var thumbnail_url = "";
                             type: 'get',
                             success: function (res) {
                                 if (res.status == 200) {
-                                    var movie_status = 'http://vod.kmoocs.kr' + res.data.movie_status;
-                                    var thumb_status = 'http://vod.kmoocs.kr' + res.data.thumb_status;
+                                    var movie_status = 'http://mme.kmoocs.kr' + res.data.movie_status;
+                                    var thumb_status = 'http://mme.kmoocs.kr' + res.data.thumb_status;
                                     $(".progress-fill").width("0%");
                                     $(".progress-fill").text("encoding:0%");
                                     cdn_url = 'http://vod.kmoocs.kr' + res.data.mov_url;

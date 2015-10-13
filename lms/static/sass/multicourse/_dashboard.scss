@@ -578,7 +578,9 @@
         @extend %ui-depth1;
         border-radius: 3px;
         display: none;
-        margin: $baseline 0 ($baseline/2) 0;
+        //margin: $baseline 0 ($baseline/2) 0;
+        margin: $baseline 0 0 0;
+
         padding: ($baseline/2) $baseline;
         background: $gray-l5;
         border: 1px solid $gray-l4;
