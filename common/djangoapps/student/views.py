@@ -1520,10 +1520,18 @@ def create_account_with_params(request, params):
         log.debug(u'In create_account with external_auth: user = %s, email=%s', params["name"], params["email"])
 
     extended_profile_fields = microsite.get_value('extended_profile_fields', [])
+    log.info(u'pipeline.running(request) =  {}'.format(pipeline.running(request)))
+    log.info(u'do_external_auth =  {}'.format(do_external_auth))
     enforce_password_policy = (
         settings.FEATURES.get("ENFORCE_PASSWORD_POLICY", False) and
         not do_external_auth
     )
+
+    log.info(u'enforce_password_policy {}"'.format(enforce_password_policy))
+
+    if pipeline.running(request):
+        enforce_password_policy = False
+
     # Can't have terms of service for certain SHIB users, like at Stanford
     tos_required = (
         not settings.FEATURES.get("AUTH_USE_SHIB") or
@@ -1967,6 +1975,12 @@ def password_reset_confirm_wrapper(
         if settings.FEATURES.get('ENFORCE_PASSWORD_POLICY', False):
             try:
                 validate_password_length(password)
+
+		log.info(u'pipeline.running(request) {}"'.format(pipeline.running(request)))
+
+                if not pipeline.running(request):
+                    validate_password_complexity(password)
+
                 validate_password_complexity(password)
                 validate_password_dictionary(password)
             except ValidationError, err:
