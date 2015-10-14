@@ -98,7 +98,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2015-09-30 13:05+0000\n"
+"POT-Creation-Date: 2015-09-24 03:06+0000\n"
 "PO-Revision-Date: 2015-09-25 11:18+0000\n"
 "Last-Translator: Hongseob Lee <shevious@yahoo.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/open-edx/edx-platform/language/ko_KR/)\n"
@@ -5556,7 +5556,7 @@ msgstr "코멘트 추가"
 
 #: common/static/common/templates/discussion/thread-show.underscore
 msgid "%(post_type)s posted %(time_ago)s by %(author)s"
-msgstr "이 %(post_type)s는 %(time_ago)s전에 %(author)s님이 적으셨습니다."
+msgstr "이 %(post_type)s는 %(time_ago)s에 %(author)s님이 적으셨습니다."
 
 #: common/static/common/templates/discussion/thread-show.underscore
 msgid "Closed"
