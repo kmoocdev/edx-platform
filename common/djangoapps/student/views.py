@@ -168,7 +168,6 @@ def index(request, extra_context=None, user=AnonymousUser()):
         course1 = []
         course2 = []
         for course in courses:
-            print(course.start.date())
             if course.start.date() >= datetime.datetime.now().date():
                 course1.append(course)
             else:
