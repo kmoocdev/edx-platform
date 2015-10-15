@@ -80,6 +80,24 @@
                         {
                             view: new FieldViews.DropdownFieldView({
                                 model: userAccountModel,
+                                title: gettext('Gender'),
+                                valueAttribute: 'gender',
+                                required: true,
+                                options: fieldsData.gender.options
+                            })
+                        },
+                        {
+                            view: new FieldViews.DropdownFieldView({
+                                model: userAccountModel,
+                                title: gettext('Year of Birth'),
+                                valueAttribute: 'year_of_birth',
+                                required: true,
+                                options: fieldsData['year_of_birth']['options']
+                            })
+                        },
+                        {
+                            view: new FieldViews.DropdownFieldView({
+                                model: userAccountModel,
                                 required: true,
                                 title: gettext('Country or Region'),
                                 valueAttribute: 'country',
@@ -97,22 +115,6 @@
                                 title: gettext('Education Completed'),
                                 valueAttribute: 'level_of_education',
                                 options: fieldsData.level_of_education.options
-                            })
-                        },
-                        {
-                            view: new FieldViews.DropdownFieldView({
-                                model: userAccountModel,
-                                title: gettext('Gender'),
-                                valueAttribute: 'gender',
-                                options: fieldsData.gender.options
-                            })
-                        },
-                        {
-                            view: new FieldViews.DropdownFieldView({
-                                model: userAccountModel,
-                                title: gettext('Year of Birth'),
-                                valueAttribute: 'year_of_birth',
-                                options: fieldsData['year_of_birth']['options']
                             })
                         },
                         {
