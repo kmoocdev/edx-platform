@@ -30,25 +30,14 @@
 <%block name="bodyclass">${upload_body_class()}</%block>
 <%namespace name='static' file='static_content.html'/>
 <%block name="header_extras">
-<%
-    path_info = request.path_info
-    path_info_split = path_info.split('/')
-%>
-% if path_info_split[1] == 'assets':
 % for template_name in ["asset-library", "asset"]:
 <script type="text/template" id="${template_name}-tpl">
     <%static:include path="js/${template_name}.underscore" />
 </script>
 % endfor
-% else:
-% for template_name in ["asset-library", "asset"]:
-<script type="text/template" id="${template_name}-tpl">
-    <%static:include path="js/cdn.underscore" />
-</script>
-% endfor
-% endif
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 </%block>
+
 <%block name="requirejs">
     require(["js/factories/asset_index"], function (AssetIndexFactory) {
         AssetIndexFactory({
@@ -202,15 +191,9 @@ var thumbnail_url = "";
                 FilesAdded: function (up, files) {
                     $(".input-group").hide();
                     $(".progress-bar").show();
-                    console.log("embeddable-xml-input:");
-                    console.log($(".embeddable-xml-input").val());
-                    if ($(".embeddable-xml-input").val() != "") {
-                        $(".embeddable-xml-input").val("");
-                    }
                     $(".progress-fill").width("0%");
                     $(".progress-fill").text("uploading:0%");
                     thumbnail.start();
-                    console.log('FilesAdded:', files);
                 },
 
                 UploadProgress: function (up, file) {
@@ -228,9 +211,13 @@ var thumbnail_url = "";
                 },
 
                 FileUploaded: function (up, file, info) {
-                    if (info.status === 200) {
+                    if (info.status == 200) {
                         up.refresh();
                         var result = $.parseJSON(info.response);
+//                        $(".embeddable").after($(".input-group"));
+//                        $(".embeddable-xml-input").val(cdn_url);
+                        $(".choose-file-button").text("Load Another File");
+                        $(".input-group").show();
 
                         //영상 엔코딩 요청 상태 체크
                         $.ajax({
@@ -242,11 +229,9 @@ var thumbnail_url = "";
                                 if (res.status == 200) {
                                     var movie_status = 'http://mme.kmoocs.kr' + res.data.movie_status;
                                     var thumb_status = 'http://mme.kmoocs.kr' + res.data.thumb_status;
-                                    $(".progress-fill").width("0%");
-                                    $(".progress-fill").text("encoding:0%");
                                     cdn_url = 'http://vod.kmoocs.kr' + res.data.mov_url;
+                                    ajaxPutEdX();
                                     mov_st(movie_status);
-                                    getThumb('대표섬네일', thumb_status);
                                 } else if (res.status == 700) {
                                     console.log('중복엔코딩 요청입니다.');
                                 } else {
@@ -280,7 +265,6 @@ var thumbnail_url = "";
     };
 
     var mov_st = function (url) {
-        sleep(4000);
         $.ajax({
             method: 'GET',
             url: url,
@@ -288,26 +272,18 @@ var thumbnail_url = "";
             async: false,
             success: function (res) {
                 console.log(res);
+
+
                 if (res.message == 'PENDING' && res.status == '200') {
-                    console.log("res.data.data.percent:"+res.data.data.percent);
-                    $(".progress-fill").width(parseInt(res.data.data.percent)+"%");
+
                     mov_st(url);
-                    console.log("res.data.data.percent:"+res.data.data.percent);
-                    $(".progress-fill").text("encoding:"+res.data.data.percent+"%");
                 }
                 else if (res.message == 'SUCCESS' && res.status == '200' && 
                          res.data.msg == 'Transcoding Finish') {
-                    console.warn('Encoding Finish');
-                    ajaxPutEdX();
-                    $(".progress-fill").width("100%");
-                    $(".progress-fill").text("encoding completed");
-                    $("#movie-info").show(); //영상정보 호출 -> 플레이어 연동
+
+//                    $("#movie-info").show(); //영상정보 호출 -> 플레이어 연동
                     //embeddable
                     console.log($(".embeddable").css("display"));
-                    $(".embeddable").after($(".input-group"));
-                    $(".choose-file-button").text("Load Another File");
-                    $(".input-group").show();
-                    $(".embeddable-xml-input").val(cdn_url);
                 }
                 else if (res.message == 'PENDING' && res.status == '210') {
                     mov_st(url);
@@ -368,8 +344,8 @@ var trCdnFile = ""
 + "    <ul>"
 + "        <li class=\"embed-url\">"
 + "            <label>"
-+ "                <span class=\"label\">Studio:</span>"
-+ "                <input type=\"text\" class=\"embeddable-xml-input\" value=\"{{portable_url}}\" readonly=\"\">"
++ "                <span class=\"label\">Status:</span>"
++ "                <input type=\"text\" class=\"embeddable-xml-input\" value=\"{{encoding_status}}\" readonly=\"\">"
 + "            </label>"
 + "        </li>"
 + "        <li class=\"external-url\">"
@@ -436,6 +412,8 @@ var trCdnFile = ""
                         $(".assets-library").css("display", "block");
                         $(".no-asset-content").css("display", "none");
                         var arrAssets = data.assets;
+                        console.log(arrAssets);
+                        console.log('arrAssets');
                         var asset = null;
                         $.each(arrAssets, function( key, value ) {
                             asset = value;
@@ -445,7 +423,7 @@ var trCdnFile = ""
                                     .replace(/{{url}}/g, asset.external_url)
                                     .replace('{{content_type}}', asset.content_type)
                                     .replace('{{date_added}}', asset.date_added)
-                                    .replace('{{portable_url}}', asset.portable_url)
+                                    .replace('{{encoding_status}}', "동영상 인코딩 진행중")
                                     .replace('{{id}}', encodeURIComponent(asset.id))
                             );
                         });

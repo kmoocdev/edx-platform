@@ -20,7 +20,7 @@
     <ul>
         <li class="embed-url">
             <label>
-                <span class="label">Status: cdn</span>
+                <span class="label">Status: </span>
                 <input type="text" class="embeddable-xml-input" value="<%= portable_url %>" readonly>
             </label>
         </li>
@@ -36,7 +36,7 @@
 <td class="actions-col">
     <ul class="actions-list">
         <li class="action-item action-delete">
-            <a href="javascript:ajaxDeleteEdX('');" data-tooltip="<%= gettext('Delete this asset') %>" class="remove-asset-button action-button"><i class="icon fa fa-times-circle" aria-hidden="true"></i> <span class="sr"><%= gettext('Delete this asset') %></span></a>
+            <a href="#" data-tooltip="<%= gettext('Delete this asset') %>" class="remove-asset-button action-button"><i class="icon fa fa-times-circle" aria-hidden="true"></i> <span class="sr"><%= gettext('Delete this asset') %></span></a>
         </li>
     </ul>
 </td>
