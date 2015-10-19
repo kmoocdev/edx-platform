@@ -13,59 +13,71 @@ var AssetView = BaseView.extend({
     "click .remove-asset-button": "confirmDelete",
     "click .lock-checkbox": "lockAsset"
   },
-    getPortable_Url : function () {
-        var arrUrl = this.model.get('url').split('/');
-        var url = 'http://mme.kmoocs.kr/movie_status?uuid=' + arrUrl[arrUrl.length-1];
-        var arrPath = location.pathname.split('/');
-        var portable_url_value = null;
-
-        if (arrPath[1] == 'cdn') {
-            $.ajax({
-                method: 'GET',
-                url: url,
-                dataType: 'jsonp',
-                async: false,
-                success: function (res) {
-                    console.log('res');
-                    console.log(res);
-                    console.log('res.data.data.percent:'+res.data.data.percent);
-                    console.log('res.data.msg:'+res.data.msg);
-                    console.log('res.status:'+res.status);
-                    if (res.status == '200' && res.data.msg == 'PENDING') {
-                        portable_url_value = '동영상 인코딩 진행중 '+res.data.data.percent+'%';
-                    }
-                    else if (res.status == '200' && res.data.msg == 'Transcoding Finish') {
-                        portable_url_value = '동영상 인코딩 완료';
-                        console.log(portable_url_value);
-                    }
-                    else if (res.status == '210' && res.data.msg == 'PENDING') {
-                        portable_url_value = '동영상 인코딩 진행중 '+res.data.data.percent+'%';
-                    }
-                },
-                error: function () {
-                    portable_url_value = '동영상 인코딩 에러';
-                }
-            });
-        } else {
-          portable_url_value = this.model.get('portable_url');
-        }
-        //console.log('portable_url_value'+portable_url_value);
-        //return portable_url_value;
-        return portable_url_value;
-    },
-
   render: function() {
     var uniqueId = _.uniqueId('lock_asset_');
-    this.$el.html(this.template({
-      display_name: this.model.get('display_name'),
-      thumbnail: this.model.get('thumbnail'),
-      date_added: this.model.get('date_added'),
-      url: this.model.get('url'),
-      external_url: this.model.get('external_url'),
-      portable_url: this.getPortable_Url(),
-      asset_type: this.model.get_extension(),
-      uniqueId: uniqueId
-    }));
+    var arrPath = location.pathname.split('/');
+    var arrUrl = this.model.get('url').split('/');
+    var arrCdnFilename = arrUrl[arrUrl.length-1].split('.')[0];
+    var that = this;
+
+    if (arrPath[1] == 'cdn') {
+        var ajaxComplete = false;
+        $.ajax({
+           method: 'GET',
+           url:'http://mme.kmoocs.kr/movie_status?uuid=' + arrCdnFilename,
+           dataType: 'jsonp',
+           async: false,
+           success: function(res) {
+               var encMsg = '동영상 인코딩 진행중';
+               //console.log(res.status+' '+res.data.msg+' '+res.data.data.percent);
+               if (res.status == '200' && res.data.msg == 'Transcoding Processing') {
+                   encMsg = '동영상 인코딩 진행중 '+res.data.data.percent+'%';
+               }
+               else if (res.status == '200' && res.data.msg == 'Transcoding Finish') {
+                   encMsg = '동영상 인코딩 완료';
+               }
+               else if (res.status == '210' && res.data.msg == 'Transcoding Processing') {
+                   encMsg = '동영상 인코딩 진행중 '+res.data.data.percent+'%';
+               }
+                that.$el.html(that.template({
+                    display_name: that.model.get('display_name'),
+                    thumbnail: that.model.get('thumbnail'),
+                    date_added: that.model.get('date_added'),
+                    url: that.model.get('url'),
+                    external_url: that.model.get('external_url'),
+                    portable_url: encMsg,
+                    asset_type: that.model.get_extension(),
+                    uniqueId: uniqueId,
+                    status: 'status'
+                }));
+           },
+           error: function() {
+                that.$el.html(that.template({
+                    display_name: that.model.get('display_name'),
+                    thumbnail: that.model.get('thumbnail'),
+                    date_added: that.model.get('date_added'),
+                    url: that.model.get('url'),
+                    external_url: that.model.get('external_url'),
+                    portable_url: '동영상 인코딩 에러',
+                    asset_type: that.model.get_extension(),
+                    uniqueId: uniqueId,
+                    status: 'status'
+                }));
+           }
+        });
+    } else {
+        this.$el.html(this.template({
+          display_name: this.model.get('display_name'),
+          thumbnail: this.model.get('thumbnail'),
+          date_added: this.model.get('date_added'),
+          url: this.model.get('url'),
+          external_url: this.model.get('external_url'),
+          portable_url: this.model.get('portable_url'),
+          asset_type: this.model.get_extension(),
+          uniqueId: uniqueId,
+          status: 'status'
+        }));
+    }
     this.updateLockState();
     return this;
   },
