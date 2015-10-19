@@ -23,7 +23,6 @@ from microsite_configuration import microsite
         //layer popup..
         showNotice();
 
-
     	$("body").prepend("<div id='mask' style='position: absolute; left: 0; top: 0; z-index: 10000; display: none; opacity: 0.4; background:#363636;'></div>");
 
         var videoHtml = "";
@@ -58,16 +57,7 @@ from microsite_configuration import microsite
     function showNotice(){
 
         var d = new Date();
-
-        console.log('현재 년: ' + d.getFullYear());
-        console.log('현재 월: ' + (d.getMonth() + 1));
-        console.log('현재 일: ' + d.getDate());
-        console.log('현재 시: ' + d.getHours());
-        console.log('현재 분: ' + d.getMinutes());
-        console.log('현재 초: ' + d.getSeconds());
-        console.log('현재 날: ' + d.getDay());
-
-        if(d.getDay() == 1 && d.getHours() == 8 && ( d.getMinutes() >= 0 && d.getMinutes() <= 30)){
+        if((d.getDay() == 2 || d.getDay() == 5) && d.getHours() == 8 && ( d.getMinutes() >= 0 && d.getMinutes() <= 30)){
 
             setTimeout(showNotice, 10000);
 
@@ -89,7 +79,10 @@ from microsite_configuration import microsite
                     "       line-height: 55px;" +
                     "       padding:50px;'>" +
                     "       <b>"+str+"</b>" +
-                             "</div>" ;
+                    "       <div style='width:100%; text-align:right;font-size:22px;'>" +
+                    "       <a href='javascript:noticeLayerHide();'>[ 닫기 ]</a>" +
+                    "       </div>" +
+                    "</div>" ;
             $("body").prepend(noticeHtml);
 
             $("#noticeLayer").dblclick(function(){
@@ -101,6 +94,11 @@ from microsite_configuration import microsite
         }
 
     }
+
+    function noticeLayerHide(){
+        $("#noticeLayer").hide();
+    }
+
 
     function playVideo(){
         var video = document.getElementById("indexVideo");
