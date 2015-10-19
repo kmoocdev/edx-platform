@@ -30,11 +30,23 @@
 <%block name="bodyclass">${upload_body_class()}</%block>
 <%namespace name='static' file='static_content.html'/>
 <%block name="header_extras">
+<%
+    path_info = request.path_info
+    path_info_split = path_info.split('/')
+%>
+% if path_info_split[1] == 'assets':
 % for template_name in ["asset-library", "asset"]:
 <script type="text/template" id="${template_name}-tpl">
     <%static:include path="js/${template_name}.underscore" />
 </script>
 % endfor
+% else:
+% for template_name in ["asset-library", "asset"]:
+<script type="text/template" id="${template_name}-tpl">
+    <%static:include path="js/cdn.underscore" />
+</script>
+% endfor
+% endif
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 </%block>
 
@@ -231,7 +243,7 @@ var thumbnail_url = "";
                                     var thumb_status = 'http://mme.kmoocs.kr' + res.data.thumb_status;
                                     cdn_url = 'http://vod.kmoocs.kr' + res.data.mov_url;
                                     ajaxPutEdX();
-                                    mov_st(movie_status);
+//                                    mov_st(movie_status);
                                 } else if (res.status == 700) {
                                     console.log('중복엔코딩 요청입니다.');
                                 } else {
@@ -271,19 +283,12 @@ var thumbnail_url = "";
             dataType: 'jsonp',
             async: false,
             success: function (res) {
-                console.log(res);
-
-
+//                console.log(res);
                 if (res.message == 'PENDING' && res.status == '200') {
-
                     mov_st(url);
                 }
                 else if (res.message == 'SUCCESS' && res.status == '200' && 
-                         res.data.msg == 'Transcoding Finish') {
-
-//                    $("#movie-info").show(); //영상정보 호출 -> 플레이어 연동
-                    //embeddable
-                    console.log($(".embeddable").css("display"));
+                     res.data.msg == 'Transcoding Finish') {
                 }
                 else if (res.message == 'PENDING' && res.status == '210') {
                     mov_st(url);
@@ -407,30 +412,66 @@ var trCdnFile = ""
                 console.log('ajaxGetEdX error');
             }
         }).done(function(data){
-                    if (data.totalCount > 0) {
-                        $('#asset-table-body').html('');
-                        $(".assets-library").css("display", "block");
-                        $(".no-asset-content").css("display", "none");
-                        var arrAssets = data.assets;
-                        console.log(arrAssets);
-                        console.log('arrAssets');
-                        var asset = null;
-                        $.each(arrAssets, function( key, value ) {
-                            asset = value;
+            if (data.totalCount > 0) {
+                $('#asset-table-body').html('');
+                $(".assets-library").css("display", "block");
+                $(".no-asset-content").css("display", "none");
+                var arrAssets = data.assets;
+                var asset = null;
+                $.each(arrAssets, function( key, value ) {
+                    asset = value;
+                    var arrUrl = asset.external_url.split('/');
+                    var thumbnail = asset.thumbnail;
+                    var display_name = asset.display_name;
+                    var external_url = asset.external_url;
+                    var content_type = asset.content_type;
+                    var date_added = asset.date_added;
+                    var asset_id = encodeURIComponent(asset.id);
+                    sleep(1000);
+                    $.ajax({
+                        method: 'GET',
+                        url: 'http://mme.kmoocs.kr/movie_status?uuid='+arrUrl[arrUrl.length-1].replace('.mp4', ''),
+                        dataType: 'jsonp',
+                        async: false,
+                        success: function (res) {
+                            var encMsg = null;
+                           if (res.status == '200' && res.data.msg == 'Transcoding Processing') {
+                               encMsg = '동영상 인코딩 진행중 '+res.data.data.percent+'%';
+                           }
+                           else if (res.status == '200' && res.data.msg == 'Transcoding Finish') {
+                               encMsg = '동영상 인코딩 완료';
+                           }
+                           else if (res.status == '210' && res.data.msg == 'Transcoding Processing') {
+                               encMsg = '동영상 인코딩 진행중 '+res.data.data.percent+'%';
+                           }
                             $('#asset-table-body').append(trCdnFile
-                                    .replace('{{thumbnail}}', asset.thumbnail)
-                                    .replace('{{display_name}}', asset.display_name)
-                                    .replace(/{{url}}/g, asset.external_url)
-                                    .replace('{{content_type}}', asset.content_type)
-                                    .replace('{{date_added}}', asset.date_added)
-                                    .replace('{{encoding_status}}', "동영상 인코딩 진행중")
-                                    .replace('{{id}}', encodeURIComponent(asset.id))
+                                    .replace('{{thumbnail}}', thumbnail)
+                                    .replace('{{display_name}}', display_name)
+                                    .replace(/{{url}}/g, external_url)
+                                    .replace('{{content_type}}', content_type)
+                                    .replace('{{date_added}}', date_added)
+                                    .replace('{{encoding_status}}', encMsg)
+                                    .replace('{{id}}', asset_id)
                             );
-                        });
-                    } else if (data.totalCount == 0) {
-                        $(".assets-library").css("display", "none");
-                        $(".no-asset-content").css("display", "block");
-                    }
+                        },
+                        error: function () {
+                            $('#asset-table-body').append(trCdnFile
+                                    .replace('{{thumbnail}}', thumbnail)
+                                    .replace('{{display_name}}', display_name)
+                                    .replace(/{{url}}/g, external_url)
+                                    .replace('{{content_type}}', content_type)
+                                    .replace('{{date_added}}', date_added)
+                                    .replace('{{encoding_status}}', "동영상 인코딩 에러")
+                                    .replace('{{id}}', asset_id)
+                            );
+                        }
+                    });
+
+                });
+            } else if (data.totalCount == 0) {
+                $(".assets-library").css("display", "none");
+                $(".no-asset-content").css("display", "block");
+            }
             console.log("ajaxGetEdX done");
         });
     }
