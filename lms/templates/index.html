@@ -20,6 +20,10 @@ from microsite_configuration import microsite
 <script>
     $(document).ready(function(){
 
+        //layer popup..
+        showNotice();
+
+
     	$("body").prepend("<div id='mask' style='position: absolute; left: 0; top: 0; z-index: 10000; display: none; opacity: 0.4; background:#363636;'></div>");
 
         var videoHtml = "";
@@ -50,6 +54,53 @@ from microsite_configuration import microsite
         });
 
     });
+
+    function showNotice(){
+
+        var d = new Date();
+
+        console.log('현재 년: ' + d.getFullYear());
+        console.log('현재 월: ' + (d.getMonth() + 1));
+        console.log('현재 일: ' + d.getDate());
+        console.log('현재 시: ' + d.getHours());
+        console.log('현재 분: ' + d.getMinutes());
+        console.log('현재 초: ' + d.getSeconds());
+        console.log('현재 날: ' + d.getDay());
+
+        if(d.getDay() == 1 && d.getHours() == 8 && ( d.getMinutes() >= 0 && d.getMinutes() <= 30)){
+
+            setTimeout(showNotice, 10000);
+
+            if($("#noticeLayer").length)
+                return;
+
+            //notice string
+            var str = "금일 AM08:00 ~ AM08:30중 업데이트가 진행예정입니다.<br/> 일시적으로 화면이 틀어지거나 로그인이 안될 수 있습니다. <br/> 양해 부탁 드립니다. 감사합니다.";
+            var noticeHtml = "<div id='noticeLayer' " +
+                    "style='position: absolute; " +
+                    "       left: 25px; " +
+                    "       top: 20px; " +
+                    "       z-index: 10010; " +
+                    "       display: block; " +
+                    "       border:2px solid #b2b2b2; " +
+                    "       opacity: 1; " +
+                    "       background:#f2f2f2;" +
+                    "       font-size: 30px;" +
+                    "       line-height: 55px;" +
+                    "       padding:50px;'>" +
+                    "       <b>"+str+"</b>" +
+                             "</div>" ;
+            $("body").prepend(noticeHtml);
+
+            $("#noticeLayer").dblclick(function(){
+                $(this).hide();
+            });
+
+        } else {
+            $("#noticeLayer").remove();
+        }
+
+    }
 
     function playVideo(){
         var video = document.getElementById("indexVideo");
