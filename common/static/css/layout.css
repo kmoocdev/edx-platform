@@ -167,7 +167,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .container.rule dd li ul {margin:5px 0 7px 12px;}
 .container.rule dd table {border-top:solid 2px #f58026;margin-top:10px;width:100%;background:#fff;border-bottom:solid 1px #c8c8c8;}
 .container.rule dd caption {display:none;}
-.container.rule dd th {background:#f8f8f8;padding:10px 0;text-align:center;border-left:solid 1px #c8c8c8;}
+.container.rule dd th {background:#f8f8f8;padding:10px 0;text-align:center;border-left:solid 1px #c8c8c8;text-indent: 0;}
 .container.rule dd td {padding:2px 10px;border-left:solid 1px #c8c8c8;border-bottom:solid 0px #c8c8c8;text-indent:0;}
 .container.rule dd tr th:first-child,.container.rule dd tr td:first-child {border-left:0;}
 .container.rule dl.license dt > img {position:absolute;left:0;top:7px;}
