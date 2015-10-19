@@ -226,6 +226,17 @@ msgstr "개인정보처리방침"
 msgid "Current Courses"
 msgstr "수강중인 강좌"
 
+#: lms/templates/courseware/course_about.html
+msgid "Register for {course_name}"
+msgstr "{course_name} 수강신청"
+
+#: lms/templates/courseware/course_about.html
+msgid "You are registered for this course"
+msgstr "수강중입니다."
+
+msgid "Blank Common Problem"
+msgstr "입력되지 않은 일반문제"
+
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
 #. the discussion forums
 #: cms/djangoapps/contentstore/views/component.py
@@ -11639,6 +11650,38 @@ msgid ""
 "If you are sure that the URL or ID number is correct, contact support."
 msgstr ""
 
+#: lms/templates/certificates/server-error.html
+msgid "Invalid Certificate Configuration."
+msgstr ""
+
+#: lms/templates/certificates/server-error.html
+msgid "There is a problem with this certificate on {platform_name}"
+msgstr ""
+
+#: lms/templates/certificates/server-error.html
+msgid ""
+"To resolve the problem, your partner manager should verify that the "
+"following information is correct."
+msgstr ""
+
+#: lms/templates/certificates/server-error.html
+msgid "The institution&#39;s logo."
+msgstr ""
+
+#: lms/templates/certificates/server-error.html
+msgid "The institution that is linked to the course."
+msgstr ""
+
+#: lms/templates/certificates/server-error.html
+msgid "The course information in the Course Administration tool."
+msgstr ""
+
+#: lms/templates/certificates/server-error.html
+msgid ""
+"If all of the information is correct and the problem persists, contact "
+"technical support."
+msgstr ""
+
 #: lms/templates/chat/toggle_chat.html
 msgid "Open Chat"
 msgstr "대화창 열기"
@@ -12430,6 +12473,10 @@ msgstr "인증이 제출되었습니다. "
 #: lms/templates/courseware/progress.html
 msgid "Verification Failed"
 msgstr "인증이 실패 했습니다."
+
+#: lms/templates/courseware/progress.html
+msgid "Verification Declined"
+msgstr ""
 
 #: lms/templates/courseware/progress.html
 msgid "Completed"
