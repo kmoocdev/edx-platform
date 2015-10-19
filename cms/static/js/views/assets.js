@@ -157,6 +157,7 @@ define(["jquery", "underscore", "gettext", "js/views/baseview", "js/models/asset
             },
 
             showUploadModal: function (event) {
+
                 var self = this;
                 event.preventDefault();
                 self.resetUploadModal();
@@ -167,7 +168,39 @@ define(["jquery", "underscore", "gettext", "js/views/baseview", "js/models/asset
                     dataType: 'json',
                     type: 'POST',
                     maxChunkSize: self.uploadChunkSizeInBytes,
-                    autoUpload: true,
+                    autoUpload: false,
+                    add: function(e, data) {
+
+                            var uploadErrors = [];
+                            var acceptFileTypes = /(\.)(exe|sh|php|bat)$/i;
+
+                            //console.log(self.uploadChunkSizeInBytes + ":" + data.originalFiles[0]['name']);
+                            if(acceptFileTypes.test(data.originalFiles[0]['name'])) {
+                                uploadErrors.push(gettext("허용되지 않은 확장자 입니다."));
+                            }
+
+                            if(data.originalFiles[0]['size'] > self.maxFileSizeInBytes) {
+                                uploadErrors.push(gettext("Max file size exceeded"));
+                            }
+
+                            if(uploadErrors.length > 0) {
+
+                                self.displayFailedUpload({
+                                    "msg": uploadErrors.join("\n")
+                                });
+
+                                self.largeFileErrorMsg = new NotificationView.Error({
+                                    "title": gettext("Your file could not be uploaded"),
+                                    "message": uploadErrors.join("\n")
+                                });
+
+                                self.largeFileErrorMsg.show();
+
+                            } else {
+                                data.submit();
+                            }
+
+                    },
                     progressall: function(event, data) {
                         var percentComplete = parseInt((100 * data.loaded) / data.total, 10);
                         self.showUploadFeedback(event, percentComplete);
