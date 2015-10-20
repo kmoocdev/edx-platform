@@ -364,7 +364,7 @@ var trCdnFile = ""
 + "<td class=\"actions-col\">"
 + "    <ul class=\"actions-list\">"
 + "        <li class=\"action-item action-delete\">"
-+ "            <a href=\"javascript:ajaxDeleteEdX('{{id}}');\" data-tooltip=\"Delete this asset\" class=\"remove-asset-button action-button\"><i class=\"icon fa fa-times-circle\" aria-hidden=\"true\"></i> <span class=\"sr\">Delete this asset</span></a>"
++ "            <a href=\"javascript:ajaxDeleteEdX('{{id}}', '{{mme_path}}');\" data-tooltip=\"Delete this asset\" class=\"remove-asset-button action-button\"><i class=\"icon fa fa-times-circle\" aria-hidden=\"true\"></i> <span class=\"sr\">Delete this asset</span></a>"
 + "        </li>"
 + "    </ul>"
 + "</td>"
@@ -387,7 +387,7 @@ var trCdnFile = ""
         });
     }
 
-    var ajaxDeleteEdX = function(id) {
+    var ajaxDeleteEdX = function(id, mme_path) {
         $.ajaxSetup({
             type : 'DELETE'
         });
@@ -397,6 +397,15 @@ var trCdnFile = ""
                 console.log('ajaxDeleteEdX error');
             }
         }).done(function(data){
+            $.ajaxSetup({
+                type : 'GET'
+            });
+            $.ajax({
+                url: 'http://mme.kmoocs.kr/mov_delete?uuid='+mme_path+'&origin=1',
+                error: function () {
+                    console.log('mov_delete error');
+                }
+            });
             console.log("ajaxDeleteEdX done");
             ajaxGetEdX();
         });
@@ -452,6 +461,7 @@ var trCdnFile = ""
                                     .replace('{{date_added}}', date_added)
                                     .replace('{{encoding_status}}', encMsg)
                                     .replace('{{id}}', asset_id)
+                                    .replace('{{mme_path}}', external_url.replace('http://vod.kmoocs.kr/vod/', ''))
                             );
                         },
                         error: function () {
@@ -463,6 +473,7 @@ var trCdnFile = ""
                                     .replace('{{date_added}}', date_added)
                                     .replace('{{encoding_status}}', "동영상 인코딩 에러")
                                     .replace('{{id}}', asset_id)
+                                    .replace('{{mme_path}}', external_url.replace('http://vod.kmoocs.kr/vod/', ''))
                             );
                         }
                     });
