@@ -100,6 +100,7 @@ var AssetView = BaseView.extend({
   confirmDelete: function(e) {
     if(e && e.preventDefault) { e.preventDefault(); }
     var asset = this.model, collection = this.model.collection;
+    var mme_uuid = this.model.get('url').replace('http://vod.kmoocs.kr/vod/','');
     new PromptView.Warning({
       title: gettext("Delete File Confirmation"),
       message: gettext("Are you sure you wish to delete this item. It cannot be reversed!\n\nAlso any content that links/refers to this item will no longer work (e.g. broken images and/or links)"),
@@ -111,6 +112,13 @@ var AssetView = BaseView.extend({
             asset.destroy({
                 wait: true, // Don't remove the asset from the collection until successful.
                 success: function () {
+                    $.ajax({
+                        url: 'http://mme.kmoocs.kr/mov_delete?uuid='+mme_uuid+'&origin=1',
+                        error: function () {
+                            console.log('mov_delete error');
+                        }
+                    });
+
                   new NotificationView.Confirmation({
                     title: gettext("Your file has been deleted."),
                     closeIcon: false,
