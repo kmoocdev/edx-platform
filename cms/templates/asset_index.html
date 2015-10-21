@@ -364,7 +364,7 @@ var trCdnFile = ""
 + "<td class=\"actions-col\">"
 + "    <ul class=\"actions-list\">"
 + "        <li class=\"action-item action-delete\">"
-+ "            <a href=\"javascript:ajaxDeleteEdX('{{id}}', '{{mme_path}}');\" data-tooltip=\"Delete this asset\" class=\"remove-asset-button action-button\"><i class=\"icon fa fa-times-circle\" aria-hidden=\"true\"></i> <span class=\"sr\">Delete this asset</span></a>"
++ "            <a href=\"javascript:ajaxDeleteEdX('{{id}}', '{{mme_path}}');\" style=\"display:inline\" data-tooltip=\"Delete this asset\" class=\"remove-asset-button action-button\" ><i class=\"icon fa fa-times-circle\" aria-hidden=\"true\"></i> <span class=\"sr\">Delete this asset</span></a>"
 + "        </li>"
 + "    </ul>"
 + "</td>"
@@ -446,9 +446,11 @@ var trCdnFile = ""
                             var encMsg = null;
                            if (res.status == '200' && res.data.msg == 'Transcoding Processing') {
                                encMsg = '동영상 인코딩 진행중 '+res.data.data.percent+'%';
+                               trCdnFile = trCdnFile.replace("display:inline", "display:none");
                            }
                            else if (res.status == '200' && res.data.msg == 'Transcoding Finish') {
                                encMsg = '동영상 인코딩 완료';
+
                            }
                            else if (res.status == '210' && res.data.msg == 'Transcoding Processing') {
                                encMsg = '동영상 인코딩 진행중 '+res.data.data.percent+'%';
@@ -462,6 +464,7 @@ var trCdnFile = ""
                                     .replace('{{encoding_status}}', encMsg)
                                     .replace('{{id}}', asset_id)
                                     .replace('{{mme_path}}', external_url.replace('http://vod.kmoocs.kr/vod/', ''))
+
                             );
                         },
                         error: function () {
