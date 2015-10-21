@@ -228,8 +228,6 @@ var thumbnail_url = "";
                         var result = $.parseJSON(info.response);
 //                        $(".embeddable").after($(".input-group"));
 //                        $(".embeddable-xml-input").val(cdn_url);
-                        $(".choose-file-button").text("Load Another File");
-                        $(".input-group").show();
 
                         //영상 엔코딩 요청 상태 체크
                         $.ajax({
@@ -257,6 +255,8 @@ var thumbnail_url = "";
                                 //영상 상태체크
                                 //썸네일 체크
                                 //구간썸네일 체크
+                                $(".choose-file-button").text("Load Another File");
+                                $(".input-group").show();
                             }
                         });
                     } else {
