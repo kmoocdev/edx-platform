@@ -181,6 +181,11 @@ define(["jquery", "underscore", "gettext", "js/views/feedback_notification", "js
          * Helper method for course/library creation - verifies a required field is not blank.
          */
         validateRequiredField = function (msg) {
+            //console.log("validateRequiredField called = " + msg);
+            var filter = /(<|>|&lt;|&gt;)/gi;
+            if(filter.test(msg))
+                return '사용할수 없는 문자 입니다.';
+
             return msg.length === 0 ? gettext('Required field.') : '';
         };
 
