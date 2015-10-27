@@ -181,9 +181,9 @@ var thumbnail_url = "";
             //runtimes: 'flash,html4,html5,silverlight',
             runtimes: 'html5,browserplus,silverlight,flash,gears,html4',
             //chunk_size : '64kb',
-            chunk_size: '2048kb',
+            chunk_size: 0,
             // MME General settings
-            url: "http://mme.kmoocs.kr/upload",
+            url: "http://mme.kmoocs.kr/upload_static",
             file_data_name: "uploadFile",
             max_file_count: 1,
             max_retries: 3,
@@ -228,6 +228,9 @@ var thumbnail_url = "";
                         var result = $.parseJSON(info.response);
 //                        $(".embeddable").after($(".input-group"));
 //                        $(".embeddable-xml-input").val(cdn_url);
+
+
+			            console.log('result.data.up_path='+result.data.up_path);
 
                         //영상 엔코딩 요청 상태 체크
                         $.ajax({
@@ -436,7 +439,7 @@ var trCdnFile = ""
                     var content_type = asset.content_type;
                     var date_added = asset.date_added;
                     var asset_id = encodeURIComponent(asset.id);
-                    sleep(1000);
+//                    sleep(1000);
                     $.ajax({
                         method: 'GET',
                         url: 'http://mme.kmoocs.kr/movie_status?uuid='+arrUrl[arrUrl.length-1].replace('.mp4', ''),
