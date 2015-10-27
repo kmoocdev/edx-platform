@@ -15417,27 +15417,6 @@ msgid "Grader Type"
 msgstr "채점자 유형"
 
 #: lms/templates/peer_grading/peer_grading.html
-msgid ""
-"\n"
-"{p_tag}You currently do not have any peer grading to do.  In order to have peer grading to do:\n"
-"{ul_tag}\n"
-"{li_tag}You need to have submitted a response to a peer grading problem.{end_li_tag}\n"
-"{li_tag}The course team needs to score the essays that are used to help you better understand the grading\n"
-"criteria.{end_li_tag}\n"
-"{li_tag}There must be submissions that are waiting for grading.{end_li_tag}\n"
-"{end_ul_tag}\n"
-"{end_p_tag}\n"
-msgstr ""
-"\n"
-"{p_tag} 진행중인 상호 평가가 없습니다. 상호평가를 위해\n"
-"{ul_tag}\n"
-"{li_tag} 문제의 답안을 제출해야 합니다.{end_li_tag}\n"
-"{li_tag} 귀하가 채점 항목을 더욱 잘 이해하실 수 있도록,  강좌 운영팀이 에세이에 점수를 매겨야 합니다. {end_li_tag}\n"
-"{li_tag} 채점 대기 중인 제출이 있을 것입니다. {end_li_tag}\n"
-"{end_ul_tag}\n"
-"{end_p_tag}\n"
-
-#: lms/templates/peer_grading/peer_grading.html
 #: lms/templates/peer_grading/peer_grading_closed.html
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid "Peer Grading"
