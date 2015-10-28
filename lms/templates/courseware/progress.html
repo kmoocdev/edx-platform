@@ -28,6 +28,23 @@ from django.utils.http import urlquote_plus
 <script type="text/javascript" src="${static.url('js/courseware/credit_progress.js')}"></script>
 <script>
   ${progress_graph.body(grade_summary, course.grade_cutoffs, "grade-detail-graph", not course.no_grade, not course.no_grade)}
+
+//for mobile layout..
+      $(document).ready(function(){
+        $("html").css("min-width","1200px");
+        $("*[data-btn=gnb]").hide();
+        $("#global-navigation h1").css("float", "left")
+                                .css("padding-right", "15px")
+                                .css("margin", "10px 10px 0 0")
+                                .css("padding-bottom", "10px")
+                                .css("padding-top", "0px")
+                                .css("width", "auto");
+        $("#global-navigation h2").css("margin-top", "25px")
+                                .css("text-align", "left")
+                                .css("width", "auto");
+        $("ol.user").show();
+      });
+
 </script>
 </%block>
 

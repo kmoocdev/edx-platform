@@ -21,6 +21,23 @@ from django.core.urlresolvers import reverse
 <%block name="js_extra">
 <%include file="_js_body_dependencies.html" />
 <%static:js group='discussion'/>
+
+      //for mobile layout..
+      $(document).ready(function(){
+        $("html").css("min-width","1200px");
+        $("*[data-btn=gnb]").hide();
+        $("#global-navigation h1").css("float", "left")
+                                .css("padding-right", "15px")
+                                .css("margin", "10px 10px 0 0")
+                                .css("padding-bottom", "10px")
+                                .css("padding-top", "0px")
+                                .css("width", "auto");
+        $("#global-navigation h2").css("margin-top", "25px")
+                                .css("text-align", "left")
+                                .css("width", "auto");
+        $("ol.user").show();
+      });
+
 </%block>
 
 <%include file="_discussion_course_navigation.html" args="active_page='discussion'" />

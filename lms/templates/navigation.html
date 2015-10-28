@@ -81,8 +81,8 @@ site_status_msg = get_site_status_msg(course_id)
 ##         <li><a class="btn type2" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">회원가입</a></li>
 
 ##         <li><a class="btn type1" href="#">개인정보수정</a></li>
-        <li></li> <!-- 없으면 화면 깨짐.. -->
-        <li></li>
+        <li class="deactive"><a class="btn type1" href="/logout">로그아웃</a></li>
+        <li class="deactive"><a class="btn type2" href="/dashboard">대시보드</a></li>
 
         <li class="gnb1"><a href="/about">K-MOOC란?</a></li>
         <li class="gnb2"><a href="/schools">대학목록</a></li>
@@ -152,8 +152,8 @@ site_status_msg = get_site_status_msg(course_id)
           </li>
           % else:
 
-          <li><a class="btn type1" href="/login${login_query()}">로그인</a></li>
-          <li><a class="btn type2" href="/register">회원가입</a></li>
+          <li class="active1"><a class="btn type1" href="/login${login_query()}">로그인</a></li>
+          <li class="active2"><a class="btn type2" href="/register">회원가입</a></li>
           <!-- 필요에 따라 바꿔 쓰세요
           <li><a class="btn type1" href="#">개인정보수정</a></li>
           <li><a class="btn type2" href="#">로그아웃</a></li>
