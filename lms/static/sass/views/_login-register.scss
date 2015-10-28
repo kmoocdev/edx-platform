@@ -138,7 +138,7 @@ $sm-btn-lifelongedu: #00759e;
     .toggle-form {
         @include box-sizing(border-box);
         max-width: 650px;
-        min-width: 400px;
+        min-width: 315px;
         margin: 0 auto;
         padding-left: $baseline; // Don't want to override any top or bottom (CR)
         padding-right: $baseline // Don't want to override any top or bottom (CR)
