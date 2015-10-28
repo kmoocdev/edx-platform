@@ -323,8 +323,6 @@ if settings.COURSEWARE_ENABLED:
         url(r'^change_email_settings$', 'student.views.change_email_settings', name="change_email_settings"),
 
         #About the course
-        url(r'^courses/{}/$'.format(settings.COURSE_ID_PATTERN),
-            'courseware.views.course_about', name="about_course"),
         url(r'^courses/{}/about$'.format(settings.COURSE_ID_PATTERN),
             'courseware.views.course_about', name="about_course"),
         #View for mktg site (kept for backwards compatibility TODO - remove before merge to master)
@@ -335,8 +333,8 @@ if settings.COURSEWARE_ENABLED:
             'courseware.views.mktg_course_about', name="mktg_about_course"),
 
         #Inside the course
-        # url(r'^courses/{}/$'.format(settings.COURSE_ID_PATTERN),
-        #     'courseware.views.course_info', name="course_root"),
+        url(r'^courses/{}/$'.format(settings.COURSE_ID_PATTERN),
+            'courseware.views.course_info', name="course_root"),
         url(r'^courses/{}/info$'.format(settings.COURSE_ID_PATTERN),
             'courseware.views.course_info', name="info"),
         url(r'^courses/{}/syllabus$'.format(settings.COURSE_ID_PATTERN),
