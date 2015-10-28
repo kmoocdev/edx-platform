@@ -5,7 +5,6 @@ import json
 import urlparse
 
 from django.conf import settings
-from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import (
     HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
@@ -42,6 +41,7 @@ from openedx.core.djangoapps.user_api.errors import UserNotFound
 from django.contrib.auth import logout
 from django.contrib import messages
 from django.contrib.auth.models import User
+import time
 
 
 
@@ -419,10 +419,12 @@ def account_settings_context(request):
 
 
 def remove_account(request):
+
     if request.user.is_authenticated():
         find_user = User.objects.get(id=request.user.id)
         find_user.is_active = False
-        find_user.email = 'delete_'+request.user.email
+        ts = int(time.time())
+        find_user.email = 'delete_'+request.user.email+str(ts)
         find_user.save()
         logout(request)
 
