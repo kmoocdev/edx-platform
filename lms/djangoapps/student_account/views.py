@@ -39,6 +39,11 @@ from util.bad_request_rate_limiter import BadRequestRateLimiter
 from openedx.core.djangoapps.user_api.accounts.api import request_password_change
 from openedx.core.djangoapps.user_api.errors import UserNotFound
 
+from django.contrib.auth import logout
+from django.contrib import messages
+from django.contrib.auth.models import User
+
+
 
 AUDIT_LOG = logging.getLogger("audit")
 
@@ -411,3 +416,14 @@ def account_settings_context(request):
         } for state in auth_states]
 
     return context
+
+
+def remove_account(request):
+    if request.user.is_authenticated():
+        find_user = User.objects.get(id=request.user.id)
+        find_user.is_active = False
+        find_user.email = 'delete_'+request.user.email
+        find_user.save()
+        logout(request)
+
+    return redirect('/')
