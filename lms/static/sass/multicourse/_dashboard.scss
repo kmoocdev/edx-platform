@@ -368,7 +368,7 @@
         display: block;
         @include float(right);
        // width: flex-grid(8);
-        padding: 0;
+        padding: 20px 0 0 0;
        // margin-top: ($baseline/4);
        // position:absolute;
        bottom:0;
@@ -583,7 +583,8 @@
         margin: $baseline 0 0 0;
 
         //padding: ($baseline/2) $baseline;
-        padding: 0px $baseline;
+        //padding: 0px $baseline;
+        padding: 0 0 0 10px;
 
         background: $gray-l5;
         border: 1px solid $gray-l4;

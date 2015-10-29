@@ -9,6 +9,12 @@
   {% compressed_css 'course' %}
 
   <script type="text/javascript">
+
+      //for mobile layout..
+      $(document).ready(function(){
+        fullview();
+      });
+
     function ajaxError(){}
 
     $.ajaxSetup({

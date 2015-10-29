@@ -97,6 +97,8 @@ ${page_title_breadcrumbs(course_name())}
           $(this).html(finalTitle);
         });
       });
+
+       fullview();
   </script>
 
 % if show_chat:
@@ -106,6 +108,7 @@ ${page_title_breadcrumbs(course_name())}
   <script type="text/javascript">
     // initialize the Candy.js plugin
     $(document).ready(function() {
+
       Candy.init("http://${chat['domain']}:5280/http-bind/", {
         core: { debug: true, autojoin: ["${chat['room']}@conference.${chat['domain']}"] },
         view: { resources: "${static.url('candy_res/')}"}

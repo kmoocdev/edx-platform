@@ -19,8 +19,14 @@ from django.core.urlresolvers import reverse
 </%block>
 
 <%block name="js_extra">
+    <script>
+        $(document).ready(function(){
+            fullview();
+        });
+    </script>
 <%include file="_js_body_dependencies.html" />
 <%static:js group='discussion'/>
+
 </%block>
 
 <%include file="_discussion_course_navigation.html" args="active_page='discussion'" />
