@@ -2,4 +2,53 @@
     결과내 검색
 </h2>
 <section class="search-facets-lists">
+
+    <section data-parent-element="sidebar" data-facet="org">
+        <h3>전공분류</h3>
+        <ul data-facet="org" class="facet-list">
+            <li data-facet="org">
+                <button data-value="PNUk" data-text="부산대학교" class="facet-option discovery-button">사회과학<span class="count">2</span></button>
+            </li>
+
+            <li data-facet="org">
+                <button data-value="PNUk" data-text="부산대학교" class="facet-option discovery-button">인문과학<span class="count">2</span></button>
+            </li>
+            <li data-facet="org">
+                <button data-value="PNUk" data-text="부산대학교" class="facet-option discovery-button">생물·화학·환경<span class="count">2</span></button>
+            </li>
+            <li data-facet="org">
+                <button data-value="PNUk" data-text="부산대학교" class="facet-option discovery-button">경영·경제<span class="count">2</span></button>
+            </li>
+            <li data-facet="org">
+                <button data-value="PNUk" data-text="부산대학교" class="facet-option discovery-button">언어·문학<span class="count">2</span></button>
+            </li>
+            <li data-facet="org">
+                <button data-value="PNUk" data-text="부산대학교" class="facet-option discovery-button">수학·물리·천문·지리<span class="count">2</span></button>
+            </li>
+            <li data-facet="org">
+                <button data-value="PNUk" data-text="부산대학교" class="facet-option discovery-button">언어·문학<span class="count">2</span></button>
+            </li>
+            <li data-facet="org">
+                <button data-value="PNUk" data-text="부산대학교" class="facet-option discovery-button">미술·조형<span class="count">2</span></button>
+            </li>
+            <li data-facet="org">
+                <button data-value="PNUk" data-text="부산대학교" class="facet-option discovery-button">사회과학<span class="count">2</span></button>
+            </li>
+            <li data-facet="org">
+                <button data-value="PNUk" data-text="부산대학교" class="facet-option discovery-button">기계·금속<span class="count">2</span></button>
+            </li>
+            <li data-facet="org">
+                <button data-value="PNUk" data-text="부산대학교" class="facet-option discovery-button">전기·전자<span class="count">2</span></button>
+            </li>
+            <li data-facet="org">
+                <button data-value="PNUk" data-text="부산대학교" class="facet-option discovery-button">건축<span class="count">2</span></button>
+            </li>
+
+
+        </ul>
+    </section>
+
 </section>
+
+
+
