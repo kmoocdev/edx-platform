@@ -409,7 +409,7 @@ from django_comment_client.permissions import has_permission
                 <span class="sr">${_("Title:")}</span>
                 <input aria-describedby="field_help_title" type="text" class="field-input js-post-title" name="title" placeholder="${_('Title')}">
             </label><span class="field-help" id="field_help_title">
-                참여를 장려하기 위해 명확하고 설명 제목을 추가합니다.
+                ${_("Add a clear and descriptive title to encourage participation.")}
             </span>
         </div>
         <div class="post-field js-post-body editor" name="body" data-placeholder="질문 또는 댓글을 입력하세요."></div>
@@ -460,7 +460,7 @@ from django_comment_client.permissions import has_permission
                 </label>
             </fieldset>
         </div><span class="field-help" id="field_help_post_type">
-            질문하세요. 토론은 아이디어를 공유하고 대화를 시작합니다.
+            ${_("Questions raise issues that need answers. Discussions share ideas and start conversations.")}
         </span>
     </div>
 </script>
@@ -496,7 +496,7 @@ from django_comment_client.permissions import has_permission
            </div>
        </div>
     </div><span class="field-help" id="field_help_topic_area">
-        다른 사람들이 그것을 찾을수 있도록 관련 주제에 게시물을 추가합니다.
+        ${_("Add your post to a relevant topic to help others find it.")}
     </span>
 </script>
 
