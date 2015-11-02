@@ -28,6 +28,12 @@ from django.utils.http import urlquote_plus
 <script type="text/javascript" src="${static.url('js/courseware/credit_progress.js')}"></script>
 <script>
   ${progress_graph.body(grade_summary, course.grade_cutoffs, "grade-detail-graph", not course.no_grade, not course.no_grade)}
+
+//for mobile layout..
+      $(document).ready(function(){
+        fullview();
+      });
+
 </script>
 </%block>
 

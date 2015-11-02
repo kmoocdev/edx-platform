@@ -159,7 +159,7 @@ FEATURES = {
     'ALLOW_COURSE_RERUNS': True,
 
     # Certificates Web/HTML Views
-    'CERTIFICATES_HTML_VIEW': False,
+    'CERTIFICATES_HTML_VIEW': True,
 
     # Social Media Sharing on Student Dashboard
     'SOCIAL_SHARING_SETTINGS': {
