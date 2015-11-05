@@ -112,6 +112,7 @@ define([
         },
 
         renderFacets: function(facets) {
+            console.log('_____________ 123');
             var self = this;
             // Remove old facets
             $.each(this.facetViews, function(key, facetsList) {

@@ -19,6 +19,7 @@ define([
         },
 
         render: function (type, name, term, count) {
+            console.log('___________ 124 type:'+type+' name:'+name+' term:'+term+' count:'+count);
             this.$el.html(this.tpl({name: name, term: term, count: count}));
             this.$el.attr('data-facet', type);
             return this;

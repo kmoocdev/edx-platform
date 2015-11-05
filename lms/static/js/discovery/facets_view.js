@@ -25,6 +25,8 @@ define([
         },
 
         render: function (facetName, displayName, facetStats) {
+            console.log('________ 125 facetName:'+facetName+' displayName:'+displayName+' facetStats:' );
+            console.log(facetStats);
             this.$el.html(this.tpl({name: facetName, displayName: displayName, stats: facetStats}));
             this.$el.attr('data-facet', facetName);
             this.$views = this.$el.find('ul');

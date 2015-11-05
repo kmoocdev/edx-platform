@@ -52,6 +52,11 @@ define([
             data.start = formatDateKOR(new Date(data.start));
             data.enrollment_start = formatDate(new Date(data.enrollment_start));
             this.$el.html(this.tpl(data));
+
+            console.log('_____________ 122');
+            //console.log(data);
+            //console.log(data.content.short_description);
+
             return this;
         }
 

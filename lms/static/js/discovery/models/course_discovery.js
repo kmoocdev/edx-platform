@@ -33,6 +33,7 @@ define([
             });
 
             var options = this.facetOptions;
+
             _(facets).each(function (obj, key) {
                 _(obj.terms).each(function (count, term) {
                     options.add({

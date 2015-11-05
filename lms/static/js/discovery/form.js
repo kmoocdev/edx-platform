@@ -15,6 +15,7 @@ define(['jquery', 'backbone'], function ($, Backbone) {
             this.$searchButton = this.$el.find('button');
             this.$message = this.$el.find('#discovery-message');
             this.$loadingIndicator = this.$el.find('#loading-indicator');
+            console.log('__________________ 112');
         },
 
         submitForm: function (event) {
@@ -23,6 +24,8 @@ define(['jquery', 'backbone'], function ($, Backbone) {
         },
 
         doSearch: function (term) {
+            console.log('__________________ 114 term:'+term);
+
             if (term) {
                 this.$searchField.val(term);
             }
@@ -30,6 +33,7 @@ define(['jquery', 'backbone'], function ($, Backbone) {
                 term = this.$searchField.val();
             }
             this.trigger('search', $.trim(term));
+            console.log('__________________ 116 term:'+term);
             this.$message.empty();
         },
 

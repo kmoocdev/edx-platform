@@ -16,6 +16,7 @@ define([
         $document: $(document),
 
         initialize: function () {
+            console.log('_____________ 118');
             this.$list = this.$el.find('.courses-listing');
             this.attachScrollHandler();
         },
@@ -37,6 +38,8 @@ define([
                 var item = new ResultItemView({ model: result });
                 return item.render().el;
             }, this);
+            //console.log('_______');
+            //console.log(items);
             this.$list.append(items);
         },
 
