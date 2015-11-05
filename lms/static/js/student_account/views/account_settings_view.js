@@ -20,12 +20,13 @@
 
             renderFields: function () {
                 this.$('.ui-loading-indicator').addClass('is-hidden');
-
                 var view = this;
                 _.each(this.$('.account-settings-section-body'), function (sectionEl, index) {
-                    _.each(view.options.sectionsData[index].fields, function (field) {
-                        $(sectionEl).append(field.view.render().el);
-                    });
+                    if (index != 2) {
+                        _.each(view.options.sectionsData[index].fields, function (field) {
+                            $(sectionEl).append(field.view.render().el);
+                        });
+                    }
                 });
                 return this;
             },

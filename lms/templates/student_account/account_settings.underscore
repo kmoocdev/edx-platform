@@ -20,16 +20,19 @@
                 </div>
             </div>
         <% }); %>
-            <div class="section">
-                <h3 class="section-header">회원 탈퇴</h3>
-                <div class="account-settings-section-body">
-                    <div class="u-field u-field-dropdown u-field-level_of_education editable-always mode-edit">
-                        <label class="u-field-title" for="u-field-select-level_of_education">
-                            회원 탈퇴하기
-                        </label>
-                        <button onclick="window.location='/remove_account'">회원 탈퇴</button>
-                    </div>
+        <div class="section">
+            <h3 class="section-header">회원 탈퇴</h3>
+            <div class="account-settings-section-body">
+                <div class="u-field u-field-dropdown u-field-level_of_education editable-always mode-edit">
+                    <label class="u-field-title" for="u-field-select-level_of_education">
+                        회원 탈퇴하기
+                    </label>
+                    <button onclick="window.location='/remove_account'">회원 탈퇴</button>
                 </div>
             </div>
+        </div>
     </div>
 </div>
+
+
+
