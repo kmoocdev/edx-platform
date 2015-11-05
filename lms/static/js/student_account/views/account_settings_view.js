@@ -22,7 +22,7 @@
                 this.$('.ui-loading-indicator').addClass('is-hidden');
                 var view = this;
                 _.each(this.$('.account-settings-section-body'), function (sectionEl, index) {
-                    if (index != 2) {
+                    if (view.options.sectionsData[index]) {
                         _.each(view.options.sectionsData[index].fields, function (field) {
                             $(sectionEl).append(field.view.render().el);
                         });
