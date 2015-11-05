@@ -469,7 +469,7 @@ if settings.COURSEWARE_ENABLED:
             include('edxnotes.urls'), name="edxnotes_endpoints"),
 
         url(r'^api/branding/v1/', include('branding.api_urls')),
-
+        url(r'^remove_account_view/$', 'student_account.views.remove_account_view', name="remove_account_view"),
         url(r'^remove_account$', 'student_account.views.remove_account', name="remove_account"),
 
     )

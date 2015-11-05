@@ -418,6 +418,9 @@ def account_settings_context(request):
     return context
 
 
+def remove_account_view(request):
+    return render_to_response('student_account/remove_account.html')
+
 def remove_account(request):
 
     if request.user.is_authenticated():
@@ -429,3 +432,4 @@ def remove_account(request):
         logout(request)
 
     return redirect('/')
+
