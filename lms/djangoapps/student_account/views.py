@@ -38,11 +38,13 @@ from util.bad_request_rate_limiter import BadRequestRateLimiter
 from openedx.core.djangoapps.user_api.accounts.api import request_password_change
 from openedx.core.djangoapps.user_api.errors import UserNotFound
 
-from django.contrib.auth import logout
 from django.contrib import messages
+from django.contrib.auth import logout
 from django.contrib.auth.models import User
 import time
-
+from openedx.core.djangoapps.user_api.preferences.api import update_user_preferences
+from openedx.core.djangoapps.profile_images.images import remove_profile_images
+from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_names, set_has_profile_image
 
 
 AUDIT_LOG = logging.getLogger("audit")
@@ -422,7 +424,13 @@ def remove_account_view(request):
 
 def remove_account(request):
 
+
     if request.user.is_authenticated():
+        set_has_profile_image(request.user.username, False)
+        profile_image_names = get_profile_image_names(request.user.username)
+        remove_profile_images(profile_image_names)
+        account_privacy_setting = {u'account_privacy': u'private'}
+        update_user_preferences(request.user, account_privacy_setting, request.user.username)
         find_user = User.objects.get(id=request.user.id)
         find_user.is_active = False
         ts = int(time.time())
