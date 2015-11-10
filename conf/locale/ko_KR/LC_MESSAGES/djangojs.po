@@ -482,6 +482,491 @@
 # Kevin Min <gr326887@graded.br>, 2015
 # Kunwoo Kim <crazyabtmath@naver.com>, 2015
 # Sam Ryoo <samryoo@gmail.com>, 2014
+# #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  kmoocjs.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013,2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# seungil <luck8778@gmail.com>, 2014
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# Rang Kim <lovinrang@gmail.com>, 2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# seungil <luck8778@gmail.com>, 2014
+# SANG WOO KIM <jimroid@gmail.com>, 2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  kmoocjs.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013,2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# seungil <luck8778@gmail.com>, 2014
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# Rang Kim <lovinrang@gmail.com>, 2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# seungil <luck8778@gmail.com>, 2014
+# SANG WOO KIM <jimroid@gmail.com>, 2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  kmoocjs.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013,2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# seungil <luck8778@gmail.com>, 2014
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# Rang Kim <lovinrang@gmail.com>, 2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# seungil <luck8778@gmail.com>, 2014
+# SANG WOO KIM <jimroid@gmail.com>, 2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  kmoocjs.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013,2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# seungil <luck8778@gmail.com>, 2014
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# Rang Kim <lovinrang@gmail.com>, 2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# seungil <luck8778@gmail.com>, 2014
+# SANG WOO KIM <jimroid@gmail.com>, 2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  kmoocjs.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013,2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# seungil <luck8778@gmail.com>, 2014
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# Rang Kim <lovinrang@gmail.com>, 2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# seungil <luck8778@gmail.com>, 2014
+# SANG WOO KIM <jimroid@gmail.com>, 2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# Sam Ryoo <samryoo@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
@@ -497,6 +982,26 @@ msgstr ""
 "Language: ko_KR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -719,12 +1224,33 @@ msgstr "업로드 중"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: cms/static/js/views/assets.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/asset-library.underscore
 #: cms/templates/js/previous-video-upload-list.underscore
 #: cms/templates/js/signatory-details.underscore
 #: cms/templates/js/signatory-editor.underscore
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 #: test_root/staticfiles/cms/coffee/fixtures/asset-library.a80d4a190855.underscore
 #: test_root/staticfiles/cms/coffee/fixtures/asset-library.underscore
 #: test_root/staticfiles/cms/coffee/fixtures/previous-video-upload-list.51e26b0e6476.underscore
@@ -778,6 +1304,26 @@ msgstr "변경사항이 저장되었습니다."
 msgid "Error"
 msgstr "오류"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -857,6 +1403,26 @@ msgstr "오류"
 msgid "Save"
 msgstr "저장"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1102,6 +1668,26 @@ msgstr "모음에 추가하기"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 #: test_root/staticfiles/cms/coffee/fixtures/add-xblock-component-menu-problem.9c0639087466.underscore
@@ -1293,6 +1879,26 @@ msgstr "코드 블럭"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 #: test_root/staticfiles/cms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.20b880ad7ec9.underscore
@@ -1423,6 +2029,26 @@ msgstr " 테이블 삭제"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/certificate-editor.underscore
 #: cms/templates/js/group-configuration-editor.underscore
@@ -1477,6 +2103,26 @@ msgstr "문서 특징"
 msgid "Edit HTML"
 msgstr " html 편집"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1621,6 +2267,26 @@ msgstr "형식"
 msgid "Formats"
 msgstr "형식"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1975,6 +2641,26 @@ msgstr "새 창"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/paging-header.underscore
 #: common/static/common/templates/components/paging-footer.underscore
@@ -2002,6 +2688,26 @@ msgstr "색깔이 없음"
 msgid "Nonbreaking space"
 msgstr "단어 잘림 방지 공백"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2102,6 +2808,26 @@ msgstr "이전"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: lms/static/coffee/src/customwmd.js
 #: cms/templates/js/asset-library.underscore
@@ -2142,6 +2868,26 @@ msgstr "모두 바꾸기"
 msgid "Replace with"
 msgstr "바꾸기"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2398,6 +3144,26 @@ msgstr "입력한 URL이 외부링크 같습니다. 필요한 접두어 http:// 
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/signatory-details.underscore
 #: cms/templates/js/signatory-editor.underscore
@@ -2468,6 +3234,26 @@ msgstr "세로 정렬"
 msgid "Vertical space"
 msgstr "수직 공간"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -4488,6 +5274,10 @@ msgstr "마감 일시 입력"
 msgid "Enter Start Date and Time"
 msgstr "시작 일시 입력"
 
+#: lms/static/js/certificates/models/certificate_exception.js
+msgid "Student username/email is required."
+msgstr ""
+
 #: lms/static/js/courseware/credit_progress.js
 #: lms/templates/discovery/facet.underscore
 #: lms/templates/edxnotes/note-item.underscore
@@ -5913,7 +6703,6 @@ msgid "Edit section release date"
 msgstr "주제 공개일 수정"
 
 #: cms/static/js/views/overview_assignment_grader.js
-#: cms/templates/js/course-outline.underscore
 #: cms/templates/js/grading-editor.underscore
 #: test_root/staticfiles/cms/coffee/fixtures/course-outline.05246d1f7f2d.underscore
 #: test_root/staticfiles/cms/coffee/fixtures/course-outline.underscore
@@ -5923,6 +6712,7 @@ msgstr "주제 공개일 수정"
 #: test_root/staticfiles/cms/templates/course-outline.underscore
 #: test_root/staticfiles/cms/templates/grading-editor.7ff8eefeea64.underscore
 #: test_root/staticfiles/cms/templates/grading-editor.underscore
+#: cms/templates/js/course-outline.underscore
 msgid "Not Graded"
 msgstr "성적 미반영"
 
@@ -6854,15 +7644,6 @@ msgstr "과제 유형"
 #: test_root/staticfiles/cms/templates/course-outline.underscore
 msgid "Due:"
 msgstr "마감:"
-
-#: cms/templates/js/course-outline.underscore
-#: lms/templates/ccx/schedule.underscore
-#: test_root/staticfiles/cms/templates/ccx/schedule.50fbfd435a6f.underscore
-#: test_root/staticfiles/cms/templates/ccx/schedule.underscore
-#: test_root/staticfiles/lms/templates/ccx/schedule.50fbfd435a6f.underscore
-#: test_root/staticfiles/lms/templates/ccx/schedule.underscore
-msgid "Due Date"
-msgstr "마감일"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/xblock-outline.underscore
@@ -8575,6 +9356,11 @@ msgid "endorsed %(time_ago)s"
 msgstr ""
 
 #: common/static/common/templates/discussion/thread-response.underscore
+msgid "Show Comment (%(num_comments)s)"
+msgid_plural "Show Comments (%(num_comments)s)"
+msgstr[0] ""
+
+#: common/static/common/templates/discussion/thread-response.underscore
 msgid "fmts"
 msgstr ""
 
@@ -8681,6 +9467,7 @@ msgid "username or email"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "No results"
 msgstr ""
 
@@ -8847,6 +9634,15 @@ msgstr "학습활동"
 #: test_root/staticfiles/lms/templates/ccx/schedule.underscore
 msgid "Start Date"
 msgstr "시작일"
+
+#: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/cms/templates/ccx/schedule.50fbfd435a6f.underscore
+#: test_root/staticfiles/cms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/lms/templates/ccx/schedule.50fbfd435a6f.underscore
+#: test_root/staticfiles/lms/templates/ccx/schedule.underscore
+#: cms/templates/js/course-outline.underscore
+msgid "Due Date"
+msgstr "마감일"
 
 #: lms/templates/ccx/schedule.underscore
 #: test_root/staticfiles/cms/templates/ccx/schedule.50fbfd435a6f.underscore
@@ -9182,6 +9978,52 @@ msgstr "수정하기 위해 클릭하세요."
 #: test_root/staticfiles/lms/templates/fields/field_text.underscore
 msgid "title"
 msgstr "제목"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
+msgid ""
+"Specify either Student's username or email for whom to create certificate "
+"exception"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
+msgid "Enter Notes associated with this certificate exception"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "User ID"
+msgstr "이용자 ID"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "User Email"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Date Exception Granted"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Notes"
+msgstr "안내"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Generate a Certificate for all"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "New"
+msgstr "새로운"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "additions to the Exception list"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Generate a Certificate for all users on the Exception list"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Generate Exception Certificates"
+msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
