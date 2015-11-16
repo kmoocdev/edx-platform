@@ -1549,6 +1549,103 @@
 # Kevin Min <gr326887@graded.br>, 2015
 # Kunwoo Kim <crazyabtmath@naver.com>, 2015
 # Sam Ryoo <samryoo@gmail.com>, 2014
+# #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  kmoocjs.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013,2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# seungil <luck8778@gmail.com>, 2014
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# Rang Kim <lovinrang@gmail.com>, 2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# seungil <luck8778@gmail.com>, 2014
+# SANG WOO KIM <jimroid@gmail.com>, 2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# Sam Ryoo <samryoo@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
@@ -1564,6 +1661,10 @@ msgstr ""
 "Language: ko_KR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1874,6 +1975,10 @@ msgstr "업로드 중"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: cms/static/js/views/assets.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/asset-library.underscore
@@ -1997,6 +2102,10 @@ msgstr "오류"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: cms/static/js/views/modals/base_modal.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/certificate-editor.underscore
@@ -2057,6 +2166,10 @@ msgstr "오류"
 msgid "Save"
 msgstr "저장"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2390,6 +2503,10 @@ msgstr "모음에 추가하기"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 #: test_root/staticfiles/cms/coffee/fixtures/add-xblock-component-menu-problem.9c0639087466.underscore
@@ -2562,6 +2679,10 @@ msgstr "포맷팅 초기화"
 msgid "Code block"
 msgstr "코드 블럭"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2799,6 +2920,10 @@ msgstr " 테이블 삭제"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/certificate-editor.underscore
 #: cms/templates/js/group-configuration-editor.underscore
@@ -2853,6 +2978,10 @@ msgstr "문서 특징"
 msgid "Edit HTML"
 msgstr " html 편집"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3041,6 +3170,10 @@ msgstr "형식"
 msgid "Formats"
 msgstr "형식"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3483,6 +3616,10 @@ msgstr "새 창"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/paging-header.underscore
 #: common/static/common/templates/components/paging-footer.underscore
@@ -3510,6 +3647,10 @@ msgstr "색깔이 없음"
 msgid "Nonbreaking space"
 msgstr "단어 잘림 방지 공백"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3698,6 +3839,10 @@ msgstr "이전"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: lms/static/coffee/src/customwmd.js
 #: cms/templates/js/asset-library.underscore
@@ -3738,6 +3883,10 @@ msgstr "모두 바꾸기"
 msgid "Replace with"
 msgstr "바꾸기"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -4082,6 +4231,10 @@ msgstr "입력한 URL이 외부링크 같습니다. 필요한 접두어 http:// 
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/signatory-details.underscore
 #: cms/templates/js/signatory-editor.underscore
@@ -4152,6 +4305,10 @@ msgstr "세로 정렬"
 msgid "Vertical space"
 msgstr "수직 공간"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -4336,6 +4493,7 @@ msgid "Play"
 msgstr "재생"
 
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+#: common/lib/xmodule/xmodule/js/src/video/09_play_pause_control.js
 msgid "Pause"
 msgstr "일시정지"
 
@@ -4416,12 +4574,16 @@ msgid "Try using a different browser, such as Google Chrome."
 msgstr "구글 Chrome 등 다른 브라우저를 사용하세요."
 
 #: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
-msgid "HD off"
-msgstr "HD 화질  끄기"
+msgid "High Definition"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
-msgid "HD on"
-msgstr "HD 화질  켜기"
+msgid "off"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
+msgid "on"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 msgid "Video position"
@@ -4448,14 +4610,15 @@ msgstr[0] "%(value)s 초"
 
 #: common/lib/xmodule/xmodule/js/src/video/07_video_volume_control.js
 msgid ""
-"Click on this button to mute or unmute this video or press UP or DOWN "
-"buttons to increase or decrease volume level."
+"Volume: Click on this button to mute or unmute this video or press UP or "
 msgstr ""
-"동영상의 음소거 혹은 음소거 해제를 위해 이 버튼을 클릭하거나, 볼륨을 높이거나 낮추기 위해 UP 버튼 혹은 DOWN 버튼을 눌러주세요."
 
 #: common/lib/xmodule/xmodule/js/src/video/08_video_speed_control.js
-msgid "Speeds"
-msgstr "배속"
+msgid ""
+"Speed: Press UP to enter the speed menu then use the UP and DOWN arrow keys "
+"to navigate the different speeds, then press ENTER to change to the selected"
+" speed."
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_play_skip_control.js
 msgid "Skip"
@@ -4470,8 +4633,19 @@ msgid "Do not show again"
 msgstr "다시 재생하지 말기"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
-msgid "Turn off captions"
-msgstr "자막 끄기"
+msgid "Turn off transcript"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid ""
+"Language: Press the UP arrow key to enter the language menu, then use UP and"
+" DOWN arrow keys to navigate language options. Press ENTER to change to the "
+"selected language."
+msgstr ""
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid "Open language menu"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 msgid ""
@@ -4484,8 +4658,12 @@ msgid "Caption will be displayed when "
 msgstr "자막이 다음의 경우 표시됩니다."
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
-msgid "Turn on captions"
-msgstr "자막 켜기"
+msgid "Turn on transcripts"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid "Turn off transcripts"
+msgstr ""
 
 #: common/lib/xmodule/xmodule/public/js/library_content_edit.js
 msgid "Updating with latest library content"
@@ -6209,6 +6387,14 @@ msgid "Save changes"
 msgstr "변경사항 저장"
 
 #: lms/static/js/ccx/schedule.js
+msgid "Please enter valid start date and time."
+msgstr ""
+
+#: lms/static/js/ccx/schedule.js
+msgid "Due date cannot be before start date."
+msgstr ""
+
+#: lms/static/js/ccx/schedule.js
 msgid "Enter Due Date and Time"
 msgstr "마감 일시 입력"
 
@@ -6457,6 +6643,14 @@ msgstr "본 강좌의 모든 학습자를 위한 강좌 이수증 생성을 시�
 msgid "Error while generating certificates. Please try again."
 msgstr "강좌 이수증을 발급하는 동안 오류가 발생했습니다. 다시 시도하세요."
 
+#: lms/static/js/instructor_dashboard/certificates.js
+msgid "Start regenerating certificates for students in this course?"
+msgstr ""
+
+#: lms/static/js/instructor_dashboard/certificates.js
+msgid "Error while regenerating certificates. Please try again."
+msgstr ""
+
 #: lms/static/js/instructor_dashboard/ecommerce.js
 msgid ""
 "There was a problem creating the report. Select \"Create Executive Summary\""
@@ -6624,17 +6818,15 @@ msgid "Connect your {accountName} account"
 msgstr "{accountName} 계정에 연결하십시오."
 
 #: lms/static/js/student_account/views/account_settings_fields.js
-msgid "We've sent a confirmation message to {new_email_address}. "
-msgstr "{new_email_address}로 확인 메세지를 보냈습니다. "
+msgid ""
+"We've sent a confirmation message to {new_email_address}. Click the link in "
+"the message to update your email address."
+msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
 msgid ""
 "You must sign out and sign back in before your language changes take effect."
 msgstr "언어가 바뀌어졌는지 확인하기 위해 로그아웃 하고 다시 로그인 하세요."
-
-#: lms/static/js/student_account/views/account_settings_fields.js
-msgid "We've sent a message to {email_address}. "
-msgstr "{email_address} 로 이메일을 보냈습니다. "
 
 #: lms/static/js/student_account/views/account_settings_fields.js
 msgid "Unlink"
@@ -6972,10 +7164,6 @@ msgstr "이수증 이름이 필요합니다."
 #: cms/static/js/certificates/models/certificate.js
 msgid "Signatory field(s) has invalid data."
 msgstr "서명인 필드(들)에 유효하지 않은 데이터가 있습니다."
-
-#: cms/static/js/certificates/models/signatory.js
-msgid "Signatory title should span over maximum of 2 lines."
-msgstr "서명인의 직위는 2줄을 넘을 수 없습니다."
 
 #: cms/static/js/certificates/views/certificate_details.js
 msgid "Edit this certificate?"
@@ -12935,6 +13123,45 @@ msgid ""
 "the content in this unit. Learners who do not require verification see this "
 "content by default."
 msgstr "인증을 신청한 학습자는 인증 기준에 해당하는 학습활동을 통과해야 합니다. "
+
+#: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
+msgid "HD off"
+msgstr "HD 화질  끄기"
+
+#: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
+msgid "HD on"
+msgstr "HD 화질  켜기"
+
+#: common/lib/xmodule/xmodule/js/src/video/07_video_volume_control.js
+msgid ""
+"Click on this button to mute or unmute this video or press UP or DOWN "
+"buttons to increase or decrease volume level."
+msgstr ""
+"동영상의 음소거 혹은 음소거 해제를 위해 이 버튼을 클릭하거나, 볼륨을 높이거나 낮추기 위해 UP 버튼 혹은 DOWN 버튼을 눌러주세요."
+
+#: common/lib/xmodule/xmodule/js/src/video/08_video_speed_control.js
+msgid "Speeds"
+msgstr "배속"
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid "Turn off captions"
+msgstr "자막 끄기"
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid "Turn on captions"
+msgstr "자막 켜기"
+
+#: lms/static/js/student_account/views/account_settings_fields.js
+msgid "We've sent a confirmation message to {new_email_address}. "
+msgstr "{new_email_address}로 확인 메세지를 보냈습니다. "
+
+#: lms/static/js/student_account/views/account_settings_fields.js
+msgid "We've sent a message to {email_address}. "
+msgstr "{email_address} 로 이메일을 보냈습니다. "
+
+#: cms/static/js/certificates/models/signatory.js
+msgid "Signatory title should span over maximum of 2 lines."
+msgstr "서명인의 직위는 2줄을 넘을 수 없습니다."
 
 #: cms/templates/js/course-outline.underscore
 msgid "Timed and Proctored Exam"
