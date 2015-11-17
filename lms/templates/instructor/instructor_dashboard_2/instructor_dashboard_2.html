@@ -127,7 +127,7 @@ from django.core.urlresolvers import reverse
         <% dname = section_data['section_display_name'] %>
         <li class="nav-item"><a href="" data-section="${ section_data['section_key'] }">${_(dname)}</a></li>
       % endfor
-      <li class="nav-item"><a href="" data-section="peer_asscessment">표절검사</a></li>
+      <li class="nav-item"><a href="" data-section="peer_asscessment">표절검사 ${is_assessment}</a></li>
     </ul>
 
     ## each section corresponds to a section_data sub-dictionary provided by the view

@@ -44,6 +44,8 @@ from class_dashboard.dashboard_data import get_section_display_name, get_array_s
 from .tools import get_units_with_due_date, title_or_url, bulk_email_is_enabled_for_course
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
 
+from pymongo import MongoClient
+
 log = logging.getLogger(__name__)
 
 
@@ -56,6 +58,7 @@ class InstructorDashboardTab(CourseTab):
     title = ugettext_noop('Instructor')
     view_name = "instructor_dashboard"
     is_dynamic = True    # The "Instructor" tab is instead dynamically added when it is enabled
+    is_assessment = False
 
     @classmethod
     def is_enabled(cls, course, user=None):  # pylint: disable=unused-argument,redefined-outer-name
@@ -151,10 +154,33 @@ def instructor_dashboard_2(request, course_id):
         'studio_url': get_studio_url(course, 'course'),
         'sections': sections,
         'disable_buttons': disable_buttons,
-        'analytics_dashboard_message': analytics_dashboard_message
+        'analytics_dashboard_message': analytics_dashboard_message,
+        'is_assessment': check_assessment(course_key._key[0]+'.'+course_key._key[1]+'.'+course_key._key[2])
     }
 
     return render_to_response('instructor/instructor_dashboard_2/instructor_dashboard_2.html', context)
+
+
+def check_assessment(active_versions_key):
+    client = MongoClient()
+    db = client.edxapp
+
+    cursor = db.modulestore.active_versions.find({'search_targets.wiki_slug':active_versions_key})
+    for document in cursor:
+        assessmentId = document.get('versions').get('published-branch')
+    cursor.close()
+
+    cursor = db.modulestore.structures.find({'_id':assessmentId})
+    for document in cursor:
+        blocks = document.get('blocks')
+    cursor.close()
+
+    for block in blocks:
+        if block.get('block_type') == 'openassessment':
+            is_assessment = True
+
+    return is_assessment
+
 
 
 ## Section functions starting with _section return a dictionary of section data.
