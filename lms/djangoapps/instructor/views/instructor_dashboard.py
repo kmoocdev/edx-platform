@@ -1,7 +1,7 @@
+# -*- coding: utf-8 -*-
 """
 Instructor Dashboard Views
 """
-
 import logging
 import datetime
 from opaque_keys import InvalidKeyError
@@ -45,6 +45,10 @@ from .tools import get_units_with_due_date, title_or_url, bulk_email_is_enabled_
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
 
 from pymongo import MongoClient
+import MySQLdb as mdb
+import sys
+from django.http import HttpResponse
+from django.utils import simplejson
 
 log = logging.getLogger(__name__)
 
@@ -155,7 +159,7 @@ def instructor_dashboard_2(request, course_id):
         'sections': sections,
         'disable_buttons': disable_buttons,
         'analytics_dashboard_message': analytics_dashboard_message,
-        'is_assessment': check_assessment(course_key._key[0]+'.'+course_key._key[1]+'.'+course_key._key[2])
+        'is_assessment': check_assessment(course.wiki_slug)
     }
 
     return render_to_response('instructor/instructor_dashboard_2/instructor_dashboard_2.html', context)
@@ -587,3 +591,115 @@ def _section_metrics(course, access):
         'post_metrics_data_csv_url': reverse('post_metrics_data_csv'),
     }
     return section_data
+
+
+def return_course(course_id):
+    try:
+        course_key = CourseKey.from_string(course_id)
+    except InvalidKeyError:
+        log.error(u"Unable to find course with course key %s while loading the Instructor Dashboard.", course_id)
+        return HttpResponseServerError()
+
+    course = get_course_by_id(course_key, depth=0)
+
+    return course
+
+
+def get_assessment_info(course):
+    client = MongoClient()
+    db = client.edxapp
+    cursor = db.modulestore.active_versions.find({'search_targets.wiki_slug':course.wiki_slug})
+    for document in cursor:
+        published_branch = document.get('versions').get('published-branch')
+    cursor.close()
+
+    cursor = db.modulestore.structures.find({'_id':published_branch})
+    for document in cursor:
+        blocks = document.get('blocks')
+        for block in blocks:
+            if block.get('block_type') == 'openassessment':
+                fields = block.get('fields')
+                arr_submission_start = fields['submission_start'].split('+')
+                arr_submission_due = fields['submission_due'].split('+')
+                accessment_info = {'display_name': fields['display_name'], 'submission_start': arr_submission_start[0].replace('-', '').replace(':', '').replace('T', ''), 'submission_due': arr_submission_due[0].replace('-', '').replace(':', '').replace('T', '')}
+    cursor.close()
+    client.close()
+
+    return accessment_info
+
+
+def create_temp_answer(course_id):
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
+
+    con = mdb.connect('localhost', 'root', '', 'edxapp');
+    # query = "select uuid, raw_answer from submissions_submission where uuid in (select submission_uuid from assessment_peerworkflow where item_id not like '%DEMO%' and course_id = 'course-v1:EwhaK+EW10164K+2015-01')";
+    query = "delete from tb_tmp_answer where course_id = '"+course_id+"'"
+    cur = con.cursor()
+    cur.execute(query)
+
+    query1 = "select uuid, raw_answer from submissions_submission "
+    arr_course_id = course_id.split('+')
+    query3 = "delete from vw_copykiller where class_id='"+arr_course_id[1]+"'"
+    with con:
+        cur.execute("set names utf8")
+        cur.execute(query1)
+        for (uuid, raw_answer) in cur:
+            answer = raw_answer.replace('{"parts": [{"text": "', '').replace('"}]}','')
+            answer = answer.decode('unicode_escape')
+            answer = answer.replace("\'", "\\\'")
+            answer = answer.encode('utf-8')
+            answer = answer.decode('utf-8')
+            query2 = "insert into tb_tmp_answer (course_id, uuid, raw_answer) "
+            query2 += "select '"+course_id+"', '"+uuid+"', '"+answer+"' "
+            query2 = str(query2)
+            cur.execute(query2)
+        cur.execute(query3)
+    cur.close()
+    con.close()
+
+
+def copykiller(request, course_id):
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
+
+    course = return_course(course_id)
+    assessment_info = get_assessment_info(course)
+    create_temp_answer(course_id)
+
+    con = mdb.connect('localhost', 'root', '', 'edxapp');
+    query = "insert into vw_copykiller"
+    query += "( uri, year_id, year_name, term_id, term_name, class_id, class_name, report_id, report_name,"
+    query += "student_id, student_name, student_number, start_date, end_date, submit_date, title, content )"
+    query += "select "
+    query += "student_id, "
+    query += "year(curdate()) year_id, concat(year(curdate()), '년') year_name, "
+    query += "'" + str(course.id.run) + "' term_id, '" + str(course.id.run) + "' term_name, "
+    query += "'" + str(course.id.course) + "' class_id, '"+ str(course.display_name) +"' class_name, "
+    query += "item_id report_id, '"+str(assessment_info['display_name'])+"' report_name, "
+    query += "(select user.username from auth_user user where user.id=(select anony.user_id from student_anonymoususerid anony where anony.anonymous_user_id=student_id)) student_id, "
+    query += "(select profile.name from auth_userprofile profile where profile.id=(select anony.user_id from student_anonymoususerid anony where anony.anonymous_user_id=student_id)) student_name, "
+    query += "(select user.id from auth_user user where user.id=(select anony.user_id from student_anonymoususerid anony where anony.anonymous_user_id=student_id)) student_number, "
+    query += "'"+str(assessment_info['submission_start'])+"' start_date, "
+    query += "'"+str(assessment_info['submission_due'])+"' end_date, "
+    query += "completed_at submit_date, "
+    query += "'"+str(assessment_info['display_name'])+"' title, "
+    query += "(select answer.raw_answer from tb_tmp_answer answer where answer.uuid=submission_uuid) content "
+    query += "from "
+    query += "assessment_peerworkflow "
+    query += "where "
+    #query += "completed_at is not null and item_id not like '%DEMOk%';"
+    query += "completed_at is not null;"
+    query1 = "delete from tb_tmp_answer"
+
+    with con:
+        cur = con.cursor()
+        cur.execute("set names utf8")
+        cur.execute(query)
+        cur.execute(query1)
+    cur.close()
+    con.close()
+
+    response_data = {}
+    response_data['result'] = 'success'
+    return HttpResponse(simplejson.dumps(response_data), mimetype='application/javascript')

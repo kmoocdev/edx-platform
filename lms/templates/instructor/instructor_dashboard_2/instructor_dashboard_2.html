@@ -156,10 +156,21 @@ from django.core.urlresolvers import reverse
   1일 1회 자동 스케줄러에 의해 수행되므로, 수행 요청 후 최대 1일 이내에 결과가 산출됩니다.
   </label>
   <br>
-  <input type="button" class="molly-guard" name="reset-attempts-all" value="표절검사 수행하기" data-endpoint="/courses/course-v1:EwhaK+EW10164K+2015-01/instructor/api/reset_student_attempts">
-
+  <input type="button" class="molly-guard" name="reset-attempts-all" value="표절검사 수행하기" onclick="run_copykiller();">
   <hr>
 </div>
+
+<script type="text/javascript">
+  function run_copykiller() {
+    $.ajax({
+      url: "/courses/course-v1:EwhaK+EW10164K+2015-01/instructor/copykiller",
+    }).done(function(data) {
+      if (data.result == 'success') {
+        alert('표절검사가 시작되었습니다.');
+      }
+    });
+  }
+</script>
 
 <div class="student-grade-container action-type-container">
   <h2>검사 진행상태</h2>
@@ -184,9 +195,6 @@ from django.core.urlresolvers import reverse
       <input type="button" class="molly-guard" name="reset-attempts-all" value="표절검사 CSV출력" data-endpoint="/courses/course-v1:EwhaK+EW10164K+2015-01/instructor/api/reset_student_attempts">
     </label>
   </div>
-
-
-
 
       </section>
 
