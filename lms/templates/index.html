@@ -18,11 +18,13 @@ from microsite_configuration import microsite
 %>
 
 
-<div id="popupWrap" class="popup-wrap popup-familymart" style="position: absolute; left: 25px; top: 100px;
-    z-index: 10010; display: block; border: 5px solid #EB9D43; opacity: 1; background: #f2f2f2; font-size: 15px;
+<!--popup K-mooc -->
+
+<div id="popupWrap" class="popup-wrap popup-kmooc" style="position: absolute; left: 25px; top: 100px;
+    z-index: 10010; display: block; border: 5px solid #b2b2b2; opacity: 1; background: #f2f2f2; font-size: 15px;
     line-height: 25px; padding:20px;">
-       	 <b> 안녕하세요. K-MOOC진흥본부에서 안내드립니다. <br>
-       	  내일(11.28(토)) K-MOOC 사이트가 일시 중단될 예정이오니 <br>
+         <b> 안녕하세요. K-MOOC진흥본부에서 안내드립니다. <br>
+          내일(11.28(토)) K-MOOC 사이트가 일시 중단될 예정이오니 <br>
           방문자 여러분들께서는 이 점을 숙지하시고 <br>
           사이트 이용에 차질이 없으시길 바랍니다. <br>
          &nbsp; ○ 중단일정 : 11월 28일(토) 02:00 ~ 02:20 (예정) <br>
@@ -32,7 +34,7 @@ from microsite_configuration import microsite
          이용에 불편을 드려 죄송합니다. 더 나은 서비스로 찾아뵙겠습니다. <br>
          감사합니다.</b><br>
          <p style="text-align:center;"><b> - K-MOOC 진흥본부 - </b></p>
-	<br>
+        <br>
         <form class="today" id="checkForm" name="checkForm" style="text-align:right; font-style: normal;">
             <label onclick="closeWin();">
                 <input id="chkbox" name="chkbox" type="checkbox">
@@ -41,6 +43,8 @@ from microsite_configuration import microsite
                 <span><a onClick="document.getElementById('popupWrap').style.display='none'">[ 닫기 ]</a></span>
         </form>
 </div>
+
+
 
 <script language="Javascript">
 <!--
@@ -74,6 +78,62 @@ if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
 
 //-->
 </script>
+
+
+<!--popup K-mooc(1)-->
+
+<div id="popupWrap_1" class="popup-wrap popup-kmooc2" style="position: absolute; left: 25px; top: 100px;
+    z-index: 10010; display: block; border: 5px solid #EB9D43; opacity: 1; background: #ffffff; font-size: 13px;
+    line-height: 25px; padding: 5px;">
+        <p style="text-align: center; font-size: 15px;">
+            <b>한국형 무크(K-MOOC)의 BI 및 표어(Slogan) 공모전을<br>
+            개최하오니 관심 있는 분의 많은 참여를 바랍니다. </b></p>
+        <p style="text-align: center"><a href="http://blog.naver.com/kmooc_kr"><img src="http://mme.kmoocs.kr/origin/K-mooc-pop.png" alt="공모전"></a></p>
+        <br>
+        <b>&nbsp;■ 공모내용 : </b>K-MOOC의 비전과 목표가 잘 드러나는 BI 및 표어(Slogan)<br>
+        <b>&nbsp;■ 응모자격 : </b>한국형 무크에 관심 있는 일반 국민 전체<br>
+        <b>&nbsp;■ 온라인 접수 : </b><font color="blue">kmooc@nile.or.kr</font><br>
+        <form class="today_1" id="checkForm_1" name="checkForm_1" style="text-align:right; font-style: normal;">
+            <label onclick="closeWin1();">
+                <input id="chkbox_1" name="chkbox_1" type="checkbox">
+                <span style="font-style:normal; font-size:13px;"><b>오늘 하루 열지 않음 &nbsp;&nbsp;</b></span>
+            </label>
+                <span><a onClick="document.getElementById('popupWrap_1').style.display='none'">[ 닫기 ]</a></span>
+        </form>
+</div>
+
+<script language="Javascript">
+<!--
+function setCookie1( name, value, expiredays ) {
+    var todayDate = new Date();
+    todayDate.setDate( todayDate.getDate() + expiredays );
+    document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+
+function closeWin1() {
+    if ( document.getElementById('checkForm_1').chkbox_1.checked ){
+        setCookie1( "popupdiv2", "done" , 1 );
+    }
+    document.all['popupWrap_1'].style.display = "none";
+}
+
+cookiedata = document.cookie;
+
+popupDate = new Date();
+if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
+     (popupDate.getFullYear() == 2015) &&
+     (popupDate.getMonth()== 11-1 || 
+         (popupDate.getMonth()== 12-1 && popupDate.getDate() <= 18)
+     ) 
+   ){
+    document.all['popupWrap_1'].style.display = "block";
+} else {
+    document.all['popupWrap_1'].style.display = "none";
+}
+
+//-->
+</script>
+
 
 <script>
     $(document).ready(function(){
@@ -152,6 +212,11 @@ if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
         }
 
     }
+
+    function noticeLayerHide(){
+        $("#noticeLayer").hide();
+    }
+
 
     function playVideo(){
         var video = document.getElementById("indexVideo");
