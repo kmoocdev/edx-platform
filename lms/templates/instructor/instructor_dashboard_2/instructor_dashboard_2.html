@@ -145,7 +145,7 @@ from django.core.urlresolvers import reverse
 </div>
 
 <div class="student-specific-container action-type-container">
-  <h2>표절검사 수행</h2>
+  <h2>표절검사 수행 </h2>
   <div class="request-response-error"></div>
   <br>
   <label>
@@ -163,7 +163,7 @@ from django.core.urlresolvers import reverse
 <script type="text/javascript">
   function run_copykiller() {
     $.ajax({
-      url: "/courses/course-v1:EwhaK+EW10164K+2015-01/instructor/copykiller",
+      url: "/courses/${course.id}/instructor/copykiller",
     }).done(function(data) {
       if (data.result == 'success') {
         alert('표절검사가 시작되었습니다.');
@@ -191,28 +191,9 @@ from django.core.urlresolvers import reverse
     <br>
     <label>
 
-      <input type="button" name="list-anon-ids" value="CSV 파일 다운로드" onclick="location.href='/courses/course-v1:EwhaK+EW10164K+2015-01/instructor/copykiller_csv'">
-      <!--
-      <input type="button" name="list-anon-ids" value="익명 학습자 아이디 CSV 파일" data-csv="true" class="csv" data-endpoint="/courses/course-v1:EwhaK+EW10164K+2015-01/instructor/api/get_anon_ids" aria-disabled="true">
-      -->
+      <input type="button" name="list-anon-ids" value="CSV 파일 다운로드" onclick="location.href='/courses/${course.id}/instructor/copykiller_csv'">
     </label>
   </div>
-
-
-<script type="text/javascript">
-
-  function get_copykiller_csv() {
-    $.ajax({
-      url: "/courses/course-v1:EwhaK+EW10164K+2015-01/instructor/copykiller_csv",
-    }).done(function(data) {
-      alert('done');
-//      if (data.result == 'success') {
-//        alert('표절검사가 시작되었습니다.');
-//      }
-    });
-  }
-
-</script>
 
       </section>
 
