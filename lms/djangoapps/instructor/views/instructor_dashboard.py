@@ -49,6 +49,8 @@ import MySQLdb as mdb
 import sys
 from django.http import HttpResponse
 from django.utils import simplejson
+import csv
+
 
 log = logging.getLogger(__name__)
 
@@ -703,3 +705,48 @@ def copykiller(request, course_id):
     response_data = {}
     response_data['result'] = 'success'
     return HttpResponse(simplejson.dumps(response_data), mimetype='application/javascript')
+
+
+
+def copykiller_csv(request, course_id):
+    dict = get_copykiller_result(request, course_id)
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="somefilename.csv"'
+
+    writer = csv.writer(response)
+    writer.writerow(['student id', 'assessment no', 'internet link', 'c lass', 'internet', 'report', 'term', 'total', 'year'])
+    for value in dict.itervalues():
+        writer.writerow(value)
+
+    return response
+
+
+def get_copykiller_result(request, course_id):
+    con = mdb.connect('localhost', 'root', '', 'edxapp');
+    cur = con.cursor()
+
+    query = "select "
+    query += "v.student_id, "
+    query += "v.report_id assessment_no, "
+    query += "'http://192.168.1.115/ckplus/copykiller.jsp?uri=ffcc76273516465fdde9181b3bb8f25c&property=100&lang=ko' internet_link, "
+    query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='class') class, "
+    query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='internet') internet, "
+    query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='report') report, "
+    query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='term') term, "
+    query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='total') total, "
+    query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='year') year "
+    query += "from "
+    query += "vw_copykiller v "
+    query += "where "
+    query += "v.uri in (select uri from tb_copykiller_copyratio) "
+
+    cur.execute(query)
+    rows = cur.fetchall()
+    dict = {}
+    # tmp = list()
+    for row in rows:
+        # tmp = list(row[0:])
+        # dict[str(row[0])] = tmp
+        dict[str(row[0])] = list(row[0:])
+    return dict

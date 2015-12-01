@@ -178,7 +178,6 @@ from django.core.urlresolvers import reverse
   <label>
   <input type="text" name="problem-select-single" size="30" placeholder="현재 진행중인 작업이 없습니다. ">
   </label>
-
   <hr>
 </div>
 
@@ -186,15 +185,34 @@ from django.core.urlresolvers import reverse
   <div class="course-specific-container action-type-container">
     <h2>표절 검사 결과</h2>
     <div class="request-response-error"></div>
-
     <label>
       최종 표절검사 결과를 CSV 파일로 출력합니다.
     </label>
     <br>
     <label>
-      <input type="button" class="molly-guard" name="reset-attempts-all" value="표절검사 CSV출력" data-endpoint="/courses/course-v1:EwhaK+EW10164K+2015-01/instructor/api/reset_student_attempts">
+
+      <input type="button" name="list-anon-ids" value="CSV 파일 다운로드" onclick="location.href='/courses/course-v1:EwhaK+EW10164K+2015-01/instructor/copykiller_csv'">
+      <!--
+      <input type="button" name="list-anon-ids" value="익명 학습자 아이디 CSV 파일" data-csv="true" class="csv" data-endpoint="/courses/course-v1:EwhaK+EW10164K+2015-01/instructor/api/get_anon_ids" aria-disabled="true">
+      -->
     </label>
   </div>
+
+
+<script type="text/javascript">
+
+  function get_copykiller_csv() {
+    $.ajax({
+      url: "/courses/course-v1:EwhaK+EW10164K+2015-01/instructor/copykiller_csv",
+    }).done(function(data) {
+      alert('done');
+//      if (data.result == 'success') {
+//        alert('표절검사가 시작되었습니다.');
+//      }
+    });
+  }
+
+</script>
 
       </section>
 
