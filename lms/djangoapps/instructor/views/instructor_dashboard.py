@@ -608,7 +608,7 @@ def return_course(course_id):
 
 
 def get_assessment_info(course):
-    client = MongoClient()
+    client = MongoClient('mongodb://192.168.1.112:27010/')
     db = client.edxapp
     cursor = db.modulestore.active_versions.find({'search_targets.wiki_slug':course.wiki_slug})
     for document in cursor:
