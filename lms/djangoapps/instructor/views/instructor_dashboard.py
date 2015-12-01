@@ -712,7 +712,7 @@ def copykiller_csv(request, course_id):
     dict = get_copykiller_result(request, course_id)
 
     response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="somefilename.csv"'
+    response['Content-Disposition'] = 'attachment; filename="'+course_id+'.csv"'
 
     writer = csv.writer(response)
     writer.writerow(['student id', 'assessment no', 'internet link', 'c lass', 'internet', 'report', 'term', 'total', 'year'])
