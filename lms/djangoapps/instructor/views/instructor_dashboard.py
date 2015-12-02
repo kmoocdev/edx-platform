@@ -168,7 +168,9 @@ def instructor_dashboard_2(request, course_id):
 
 
 def check_assessment(active_versions_key):
-    client = MongoClient()
+    # TODO : ip
+    client = MongoClient('mongodb://192.168.1.112:27010/')
+    # client = MongoClient()
     db = client.edxapp
 
     cursor = db.modulestore.active_versions.find({'search_targets.wiki_slug':active_versions_key})
