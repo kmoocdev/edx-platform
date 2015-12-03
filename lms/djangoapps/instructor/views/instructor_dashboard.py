@@ -169,7 +169,7 @@ def instructor_dashboard_2(request, course_id):
 
 def check_assessment(active_versions_key):
     # TODO : ip
-    client = MongoClient('192.168.1.112', 27017)
+    client = MongoClient('203.235.44.154', 27017)
     # client = MongoClient()
     db = client.edxapp
 
@@ -611,7 +611,7 @@ def return_course(course_id):
 
 def get_assessment_info(course):
     # TODO : ip
-    client = MongoClient('192.168.1.112', 27017)
+    client = MongoClient('203.235.44.154', 27017)
     # client = MongoClient()
     db = client.edxapp
     cursor = db.modulestore.active_versions.find({'search_targets.wiki_slug':course.wiki_slug})
@@ -638,7 +638,7 @@ def create_temp_answer(course_id):
     reload(sys)
     sys.setdefaultencoding('utf-8')
     # TODO : ip
-    con = mdb.connect('192.168.1.112', 'root', '', 'edxapp');
+    con = mdb.connect('203.235.44.154', 'root', '', 'edxapp');
     # con = mdb.connect('localhost', 'root', '', 'edxapp');
     # query = "select uuid, raw_answer from submissions_submission where uuid in (select submission_uuid from assessment_peerworkflow where item_id not like '%DEMO%' and course_id = 'course-v1:EwhaK+EW10164K+2015-01')";
     query = "delete from tb_tmp_answer where course_id = '"+course_id+"'"
@@ -673,7 +673,7 @@ def copykiller(request, course_id):
     assessment_info = get_assessment_info(course)
     create_temp_answer(course_id)
     # TODO : ip
-    con = mdb.connect('192.168.1.112', 'root', '', 'edxapp');
+    con = mdb.connect('203.235.44.154', 'root', '', 'edxapp');
     # con = mdb.connect('localhost', 'root', '', 'edxapp');
     query = "insert into vw_copykiller"
     query += "( uri, year_id, year_name, term_id, term_name, class_id, class_name, report_id, report_name,"
@@ -729,7 +729,7 @@ def copykiller_csv(request, course_id):
 
 def get_copykiller_result(request, course_id):
     # TODO : ip
-    con = mdb.connect('192.168.1.112', 'root', '', 'edxapp');
+    con = mdb.connect('203.235.44.154', 'root', '', 'edxapp');
     # con = mdb.connect('localhost', 'root', '', 'edxapp');
     cur = con.cursor()
 
