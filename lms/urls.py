@@ -383,6 +383,12 @@ if settings.COURSEWARE_ENABLED:
         url(r'^courses/{}/instructor$'.format(settings.COURSE_ID_PATTERN),
             'instructor.views.instructor_dashboard.instructor_dashboard_2', name="instructor_dashboard"),
 
+        url(r'^courses/{}/instructor/copykiller$'.format(settings.COURSE_ID_PATTERN),
+            'instructor.views.instructor_dashboard.copykiller', name="copykiller"),
+
+        url(r'^courses/{}/instructor/copykiller_csv'.format(settings.COURSE_ID_PATTERN),
+            'instructor.views.instructor_dashboard.copykiller_csv', name="copykiller_csv"),
+
 
         url(r'^courses/{}/set_course_mode_price$'.format(settings.COURSE_ID_PATTERN),
             'instructor.views.instructor_dashboard.set_course_mode_price', name="set_course_mode_price"),
