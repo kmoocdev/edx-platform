@@ -127,7 +127,7 @@ from django.core.urlresolvers import reverse
         <% dname = section_data['section_display_name'] %>
         <li class="nav-item"><a href="" data-section="${ section_data['section_key'] }">${_(dname)}</a></li>
       % endfor
-      <li class="nav-item"><a href="" data-section="peer_asscessment">표절검사 ${is_assessment}</a></li>
+      <li class="nav-item"><a href="" data-section="peer_asscessment">표절검사</a></li>
     </ul>
 
     ## each section corresponds to a section_data sub-dictionary provided by the view
@@ -156,27 +156,34 @@ from django.core.urlresolvers import reverse
   1일 1회 자동 스케줄러에 의해 수행되므로, 수행 요청 후 최대 1일 이내에 결과가 산출됩니다.
   </label>
   <br>
+  %if is_assessment:
   <input type="button" class="molly-guard" name="reset-attempts-all" value="표절검사 수행하기" onclick="run_copykiller();">
+  %else:
+  <input type="button" class="molly-guard" name="reset-attempts-all" value="표절검사 수행하기" disabled>
+  %endif
   <hr>
 </div>
 
+%if is_assessment:
 <script type="text/javascript">
   function run_copykiller() {
     $.ajax({
       url: "/courses/${course.id}/instructor/copykiller",
     }).done(function(data) {
       if (data.result == 'success') {
-        alert('표절검사가 시작되었습니다.');
+        $("#copykiller_status").val('표절검사가 진행중입니다.');
+        console.log($("#copykiller_status").val());
       }
     });
   }
 </script>
+%endif
 
 <div class="student-grade-container action-type-container">
   <h2>검사 진행상태</h2>
   <div class="request-response-error"></div>
   <label>
-  <input type="text" name="problem-select-single" size="30" placeholder="현재 진행중인 작업이 없습니다. ">
+  <input type="text" id="copykiller_status" name="problem-select-single" size="30" value="현재 진행중인 작업이 없습니다." disabled>
   </label>
   <hr>
 </div>
@@ -190,8 +197,11 @@ from django.core.urlresolvers import reverse
     </label>
     <br>
     <label>
-
+      %if is_assessment:
       <input type="button" name="list-anon-ids" value="CSV 파일 다운로드" onclick="location.href='/courses/${course.id}/instructor/copykiller_csv'">
+      %else:
+      <input type="button" name="list-anon-ids" value="CSV 파일 다운로드" disabled>
+      %endif
     </label>
   </div>
 
