@@ -610,7 +610,7 @@ def return_course(course_id):
 
 
 def get_assessment_info(course):
-    # TODO : dev db ip
+    # TODO : db ip
     client = MongoClient('192.168.1.113', 27017)
     db = client.edxapp
     cursor = db.modulestore.active_versions.find({'search_targets.wiki_slug':course.wiki_slug})
@@ -636,7 +636,7 @@ def get_assessment_info(course):
 def create_temp_answer(course_id):
     reload(sys)
     sys.setdefaultencoding('utf-8')
-    # TODO : dev db ip
+    # TODO : db ip
     con = mdb.connect('192.168.1.113', 'root', '', 'edxapp');
     # query = "select uuid, raw_answer from submissions_submission where uuid in (select submission_uuid from assessment_peerworkflow where item_id not like '%DEMO%' and course_id = 'course-v1:EwhaK+EW10164K+2015-01')";
     query = "delete from tb_tmp_answer where course_id = '"+course_id+"'"
@@ -670,7 +670,7 @@ def copykiller(request, course_id):
     course = return_course(course_id)
     assessment_info = get_assessment_info(course)
     create_temp_answer(course_id)
-    # TODO : dev db ip
+    # TODO : db ip
     con = mdb.connect('192.168.1.113', 'root', '', 'edxapp');
     query = "insert into vw_copykiller"
     query += "( uri, year_id, year_name, term_id, term_name, class_id, class_name, report_id, report_name,"
@@ -724,7 +724,7 @@ def copykiller_csv(request, course_id):
 
 
 def get_copykiller_result(request, course_id):
-    # TODO : dev db ip
+    # TODO : db ip
     con = mdb.connect('192.168.1.113', 'root', '', 'edxapp');
     cur = con.cursor()
 
