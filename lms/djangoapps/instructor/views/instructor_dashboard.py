@@ -64,7 +64,7 @@ class InstructorDashboardTab(CourseTab):
     title = ugettext_noop('Instructor')
     view_name = "instructor_dashboard"
     is_dynamic = True    # The "Instructor" tab is instead dynamically added when it is enabled
-    is_assessment = False
+
 
     @classmethod
     def is_enabled(cls, course, user=None):  # pylint: disable=unused-argument,redefined-outer-name
@@ -168,9 +168,8 @@ def instructor_dashboard_2(request, course_id):
 
 
 def check_assessment(active_versions_key):
-    # TODO : ip
-    client = MongoClient('192.168.1.113', 27017)
-    # client = MongoClient()
+    # TODO : dev db ip
+    client = MongoClient('203.235.44.154', 27017)
     db = client.edxapp
 
     cursor = db.modulestore.active_versions.find({'search_targets.wiki_slug':active_versions_key})
@@ -183,6 +182,7 @@ def check_assessment(active_versions_key):
         blocks = document.get('blocks')
     cursor.close()
 
+    is_assessment = False
     for block in blocks:
         if block.get('block_type') == 'openassessment':
             is_assessment = True
@@ -610,9 +610,8 @@ def return_course(course_id):
 
 
 def get_assessment_info(course):
-    # TODO : ip
-    client = MongoClient('192.168.1.113', 27017)
-    # client = MongoClient()
+    # TODO : dev db ip
+    client = MongoClient('203.235.44.154', 27017)
     db = client.edxapp
     cursor = db.modulestore.active_versions.find({'search_targets.wiki_slug':course.wiki_slug})
     for document in cursor:
@@ -637,9 +636,8 @@ def get_assessment_info(course):
 def create_temp_answer(course_id):
     reload(sys)
     sys.setdefaultencoding('utf-8')
-    # TODO : ip
-    con = mdb.connect('192.168.1.113', 'root', '', 'edxapp');
-    # con = mdb.connect('localhost', 'root', '', 'edxapp');
+    # TODO : dev db ip
+    con = mdb.connect('203.235.44.154', 'root', '', 'edxapp');
     # query = "select uuid, raw_answer from submissions_submission where uuid in (select submission_uuid from assessment_peerworkflow where item_id not like '%DEMO%' and course_id = 'course-v1:EwhaK+EW10164K+2015-01')";
     query = "delete from tb_tmp_answer where course_id = '"+course_id+"'"
     cur = con.cursor()
@@ -672,9 +670,8 @@ def copykiller(request, course_id):
     course = return_course(course_id)
     assessment_info = get_assessment_info(course)
     create_temp_answer(course_id)
-    # TODO : ip
-    con = mdb.connect('192.168.1.113', 'root', '', 'edxapp');
-    # con = mdb.connect('localhost', 'root', '', 'edxapp');
+    # TODO : dev db ip
+    con = mdb.connect('203.235.44.154', 'root', '', 'edxapp');
     query = "insert into vw_copykiller"
     query += "( uri, year_id, year_name, term_id, term_name, class_id, class_name, report_id, report_name,"
     query += "student_id, student_name, student_number, start_date, end_date, submit_date, title, content )"
@@ -695,8 +692,7 @@ def copykiller(request, course_id):
     query += "from "
     query += "assessment_peerworkflow "
     query += "where "
-    #query += "completed_at is not null and item_id not like '%DEMOk%';"
-    query += "completed_at is not null;"
+    query += "completed_at is not null and item_id not like '%DEMOk%';"
     query1 = "delete from tb_tmp_answer"
 
     with con:
@@ -728,9 +724,8 @@ def copykiller_csv(request, course_id):
 
 
 def get_copykiller_result(request, course_id):
-    # TODO : ip
-    con = mdb.connect('192.168.1.113', 'root', '', 'edxapp');
-    # con = mdb.connect('localhost', 'root', '', 'edxapp');
+    # TODO : dev db ip
+    con = mdb.connect('203.235.44.154', 'root', '', 'edxapp');
     cur = con.cursor()
 
     query = "select "
@@ -751,9 +746,6 @@ def get_copykiller_result(request, course_id):
     cur.execute(query)
     rows = cur.fetchall()
     dict = {}
-    # tmp = list()
     for row in rows:
-        # tmp = list(row[0:])
-        # dict[str(row[0])] = tmp
         dict[str(row[0])] = list(row[0:])
     return dict
