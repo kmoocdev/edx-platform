@@ -6,16 +6,69 @@
         <h3>전공분류</h3>
         <ul data-facet="search_string" class="facet-list">
             <li data-facet="search_string">
-                <button data-value="PNUk" data-text="부산대학교" class="facet-option discovery-button">사회과학<span class="count">2</span></button>
+                <button data-value="ku_hum_001,COS2034.01x,YSU_KOR02k,EW11151K" data-text="언어문학" class="facet-option discovery-button">언어문학<span class="count">4</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="KH101" data-text="인문과학" class="facet-option discovery-button">인문과학<span class="count">1</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="SE_C01,SNU044.008k,YSU_BIZ03k,HYUPAD3004k" data-text="경영경제" class="facet-option discovery-button">경영경제<span class="count">4</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="ku_soc_001" data-text="법률" class="facet-option discovery-button">법률<span class="count">1</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="KH102,EW36387K,HYUBUS3099k,HYUSOC1053k,SNU044.008k" data-text="사회과학" class="facet-option discovery-button">사회과학<span class="count">5</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="HYUARE4100k" data-text="건축" class="facet-option discovery-button">건축<span class="count">1</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="POSTECH.MECH583k,KMAE251" data-text="기계금속" class="facet-option discovery-button">기계금속<span class="count">2</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="ku_cpx_001,POSTECH.EECE341k,KCS470" data-text="전기전자" class="facet-option discovery-button">전기전자<span class="count">3</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="KCS470" data-text="컴퓨터통신" class="facet-option discovery-button">컴퓨터통신<span class="count">1</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="PL_C01,SNU046.101k" data-text="생물화학환경" class="facet-option discovery-button">생물화학환경<span class="count">2</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="GEDT011.01x" data-text="생활과학" class="facet-option discovery-button">생활과학<span class="count">1</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="ku_phy_001,SNU046.101k,YSU_UCC01k,EW10164K" data-text="수학물리천문지리" class="facet-option discovery-button">수학물리천문지리<span class="count">4</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="EW10771K" data-text="미술조형" class="facet-option discovery-button">미술조형<span class="count">1</span></button>
             </li>
         </ul>
     </section>
 
 </section>
-
-<script type="text/javascript">
-function go_category(params) {
-    $('#coursesaabb').val(params);
-    $('.button postfix discovery-submit').click();
-}
-</script>
