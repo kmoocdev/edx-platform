@@ -2,4 +2,20 @@
     결과내 검색
 </h2>
 <section class="search-facets-lists">
+    <section data-parent-element="sidebar" data-facet="org">
+        <h3>전공분류</h3>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="PNUk" data-text="부산대학교" class="facet-option discovery-button">사회과학<span class="count">2</span></button>
+            </li>
+        </ul>
+    </section>
+
 </section>
+
+<script type="text/javascript">
+function go_category(params) {
+    $('#coursesaabb').val(params);
+    $('.button postfix discovery-submit').click();
+}
+</script>
