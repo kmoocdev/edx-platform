@@ -2,6 +2,9 @@
     결과내 검색
 </h2>
 <section class="search-facets-lists">
+</section>
+
+
     <section data-parent-element="sidebar" data-facet="org">
         <h3>전공분류</h3>
         <ul data-facet="search_string" class="facet-list">
@@ -61,4 +64,3 @@
         </ul>
     </section>
 
-</section>
