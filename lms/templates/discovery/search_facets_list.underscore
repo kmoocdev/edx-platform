@@ -16,7 +16,7 @@
         </ul>
         <ul data-facet="search_string" class="facet-list">
             <li data-facet="search_string">
-                <button data-value="경영경제" data-text="경영경제" class="facet-option discovery-button">경영경제<span class="count">4</span></button>
+                <button data-value="경영경제" data-text="경영경제" class="facet-option discovery-button">경영경제<span class="count">2</span></button>
             </li>
         </ul>
         <ul data-facet="search_string" class="facet-list">
@@ -26,7 +26,7 @@
         </ul>
         <ul data-facet="search_string" class="facet-list">
             <li data-facet="search_string">
-                <button data-value="사회과학" data-text="사회과학" class="facet-option discovery-button">사회과학<span class="count">5</span></button>
+                <button data-value="사회과학" data-text="사회과학" class="facet-option discovery-button">사회과학<span class="count">3</span></button>
             </li>
         </ul>
         <ul data-facet="search_string" class="facet-list">
@@ -51,22 +51,12 @@
         </ul>
         <ul data-facet="search_string" class="facet-list">
             <li data-facet="search_string">
-                <button data-value="생물화학환경" data-text="생물화학환경" class="facet-option discovery-button">생물화학환경<span class="count">2</span></button>
+                <button data-value="생물화학환경" data-text="생물화학환경" class="facet-option discovery-button">생물화학환경<span class="count">1</span></button>
             </li>
         </ul>
         <ul data-facet="search_string" class="facet-list">
             <li data-facet="search_string">
-                <button data-value="생활과학" data-text="생활과학" class="facet-option discovery-button">생활과학<span class="count">1</span></button>
-            </li>
-        </ul>
-        <ul data-facet="search_string" class="facet-list">
-            <li data-facet="search_string">
-                <button data-value="수학물리천문지리" data-text="수학물리천문지리" class="facet-option discovery-button">수학물리천문지리<span class="count">4</span></button>
-            </li>
-        </ul>
-        <ul data-facet="search_string" class="facet-list">
-            <li data-facet="search_string">
-                <button data-value="미술조형" data-text="미술조형" class="facet-option discovery-button">미술조형<span class="count">1</span></button>
+                <button data-value="수학물리천문지리" data-text="수학물리천문지리" class="facet-option discovery-button">수학물리천문지리<span class="count">3</span></button>
             </li>
         </ul>
     </section>
