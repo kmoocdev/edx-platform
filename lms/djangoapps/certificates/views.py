@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 """URL handlers related to certificate handling by LMS"""
 from microsite_configuration import microsite
 from datetime import datetime
@@ -325,6 +326,12 @@ def _update_certificate_context(context, course, user, user_certificate):
         year=user_certificate.modified_date.year
     )
 
+    context['certificate_date_issued2'] = ('{year}년 {month}월 {day}일 ').format(
+        year=user_certificate.modified_date.year,
+        month=user_certificate.modified_date.month,
+        day=user_certificate.modified_date.day
+    )
+
     accd_course_org_html = '<span class="detail--xuniversity">{partner_name}</span>'.format(partner_name=course.org)
     accd_platform_name_html = '<span class="detail--company">{platform_name}</span>'.format(platform_name=platform_name)
     # Translators: This line appears on the certificate after the name of a course, and provides more
@@ -473,6 +480,7 @@ def render_html_view(request, user_id, course_id):
     context = {}
     context['platform_name'] = microsite.get_value("platform_name", settings.PLATFORM_NAME)
     context['course_id'] = course_id
+    context['course_id2'] = course_id.split('+')[1]
 
     # Update the view context with the default ConfigurationModel settings
     configuration = CertificateHtmlViewConfiguration.get_config()
@@ -607,7 +615,7 @@ def render_html_view(request, user_id, course_id):
         })
 
     # Append/Override the existing view context values with any course-specific static values from Advanced Settings
-    context.update(course.cert_html_view_overrides)
+    # context.update(course.cert_html_view_overrides)
 
     # FINALLY, generate and send the output the client
     return render_to_response("certificates/valid.html", context)

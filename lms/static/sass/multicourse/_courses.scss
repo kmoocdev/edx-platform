@@ -402,7 +402,12 @@ $facet-background-color: #007db8;
       list-style: outside none none;
 
       &.collapse {
+<<<<<<< HEAD
         max-height: ($baseline*18);
+=======
+        //max-height: ($baseline*14);
+        max-height: 310px;
+>>>>>>> modify_design3
       }
 
       li {

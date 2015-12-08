@@ -5,8 +5,6 @@ import json
 class LifelongeduOAuth2(BaseOAuth2):
     """Lifelongedu OAuth authentication backend"""
 
-    print "## called LifelongeduOAuth2"
-
     name = 'allprovider'
     AUTHORIZATION_URL = 'http://all.kmooc.kr/o/authorize'
     ACCESS_TOKEN_URL = 'http://all.kmooc.kr/o/token/'

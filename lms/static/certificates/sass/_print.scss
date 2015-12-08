@@ -1,3 +1,4 @@
+/*
 // ------------------------------
 // // Open edX Certificates: Print Specific Styling
 
@@ -321,5 +322,21 @@
             border-top-color: $cert-distinguished-color;
         }
     }
+}
+
+*/
+
+// certificate - distinguished
+@media print {
+    .wrapper-header{display: none;}
+    .divider{display: none;}
+    .sr-only{display: none;}
+    .wrapper-banner{display: none;}
+    .wrapper-banner-user{display: none;}
+    .wrapper-introduction{display: none;}
+    .wrapper-about{display: none;}
+    .divider{display: none;}
+    .wrapper-footer{display: none;}
+    .brDiv{display: none;}
 }
 
