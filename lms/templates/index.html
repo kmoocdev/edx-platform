@@ -68,7 +68,7 @@ if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
                 <input id="chkbox_1" name="chkbox_1" type="checkbox">
                 <span style="font-style:normal; font-size:13px;"><b>오늘 하루 열지 않음 &nbsp;&nbsp;</b></span>
             </label>
-                <span><a onClick="document.getElementById('popupWrap_1').style.display='none'">[ 닫기 ]</a></span>
+                <span><a href="javascript:$('#popupWrap_1').hide();">[ 닫기 ]</a></span>
         </form>
 </div>
 
@@ -81,10 +81,10 @@ function setCookie1( name, value, expiredays ) {
 }
 
 function closeWin1() {
-    if ( document.getElementById('checkForm_1').chkbox_1.checked ){
+    if ($("#chkbox_1").is(":checked")){
         setCookie1( "popupdiv2", "done" , 1 );
     }
-    document.all['popupWrap_1'].style.display = "none";
+    $('#popupWrap_1').hide();
 }
 
 cookiedata = document.cookie;
