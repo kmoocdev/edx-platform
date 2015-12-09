@@ -616,7 +616,7 @@ def render_html_view(request, user_id, course_id):
         })
 
     # Append/Override the existing view context values with any course-specific static values from Advanced Settings
-    # context.update(course.cert_html_view_overrides)
+    context.update(course.cert_html_view_overrides)
 
     # FINALLY, generate and send the output the client
     return render_to_response("certificates/valid.html", context)
