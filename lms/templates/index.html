@@ -31,21 +31,6 @@ function closeWin() {
     document.all['popupWrap'].style.display = "none";
 }
 
-cookiedata = document.cookie;
-
-popupDate = new Date();
-if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
-     (popupDate.getFullYear() == 2015) &&
-     (popupDate.getMonth()== 11-1) &&
-     (popupDate.getDate() == 27 ||
-        (popupDate.getDate() == 28 && popupDate.getHours() < 3)
-     )
-   ){
-    document.all['popupWrap'].style.display = "block";
-} else {
-    document.all['popupWrap'].style.display = "none";
-}
-
 //-->
 </script>
 
@@ -68,7 +53,7 @@ if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
                 <input id="chkbox_1" name="chkbox_1" type="checkbox">
                 <span style="font-style:normal; font-size:13px;"><b>오늘 하루 열지 않음 &nbsp;&nbsp;</b></span>
             </label>
-                <span><a href="javascript:$('#popupWrap_1').hide();">[ 닫기 ]</a></span>
+            <span><a href="javascript:$('#popupWrap_1').hide();">[ 닫기 ]</a></span>
         </form>
 </div>
 
@@ -88,9 +73,6 @@ function closeWin1() {
 }
 
 cookiedata = document.cookie;
-
-
-console.log("cookiedata = " + cookiedata);
 
 popupDate = new Date();
 if ( (cookiedata.indexOf("popupdiv1=done") < 0 ) &&
