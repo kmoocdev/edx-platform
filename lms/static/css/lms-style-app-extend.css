@@ -651,7 +651,7 @@
 		width:27px;
 		height:24px;
 		margin-right:15px;
-		background:url("/static/images/large-white-error-icon.c2e256e9d452.png") no-repeat
+		background:url("/static/images/large-white-error-icon.png") no-repeat
 	}
 	.site-status .inner-wrapper
 	{
@@ -1789,7 +1789,7 @@
 		width:27px;
 		height:24px;
 		margin-right:15px;
-		background:url("/static/images/large-white-error-icon.c2e256e9d452.png") no-repeat
+		background:url("/static/images/large-white-error-icon.png") no-repeat
 	}
 	.site-status .inner-wrapper
 	{
@@ -3939,7 +3939,7 @@
 		display:block;
 		width:45px;
 		height:45px;
-		background:transparent url("/static/images/verified-ribbon.9012ca1fca7b.png") no-repeat 0 0
+		background:transparent url("/static/images/verified-ribbon.png") no-repeat 0 0
 	}
 	.verification-process.step-select-track .register-choice-certificate .action-intro,.verification-process.step-select-track .register-choice-certificate .action-select,.midcourse-reverification-process.step-select-track .register-choice-certificate .action-intro,.midcourse-reverification-process.step-select-track .register-choice-certificate .action-select
 	{
@@ -6601,7 +6601,7 @@
 		display:inline-block;
 		width:20px;
 		height:20px;
-		background-image:url("/static/images/wmd-buttons-transparent.44fcbb2352fa.png");
+		background-image:url("/static/images/wmd-buttons-transparent.png");
 		background-position:0px 0px;
 		background-repeat:no-repeat
 	}
@@ -6867,7 +6867,7 @@
 	{
 		position:relative;
 		min-height:500px;
-		background-image:url("/static/images/bg-texture.ae64887d36d1.png")
+		background-image:url("/static/images/bg-texture.png")
 	}
 	.container .discussion-body .discussion-article a,.container .discussion-module .discussion-article a,.container .discussion-user-threads .discussion-article a
 	{
@@ -7069,7 +7069,7 @@
 	}
 	.container .discussion-body .comment-form .wmd-button span,.container .discussion-module .comment-form .wmd-button span,.container .discussion-user-threads .comment-form .wmd-button span
 	{
-		background-image:url("/static/images/wmd-buttons-transparent.44fcbb2352fa.png")
+		background-image:url("/static/images/wmd-buttons-transparent.png")
 	}
 	.container .discussion-body .comment-form-input,.container .discussion-module .comment-form-input,.container .discussion-user-threads .comment-form-input
 	{
@@ -7282,7 +7282,7 @@
 		margin-right:6px;
 		width:21px;
 		height:19px;
-		background:url("/static/images/show-hide-discussion-icon.21d556c224a5.png") no-repeat;
+		background:url("/static/images/show-hide-discussion-icon.png") no-repeat;
 		background-position:-21px 0
 	}
 	.discussion-module .new-post-btn,.discussion-user-threads .new-post-btn
@@ -8248,7 +8248,7 @@
 		display:inline-block;
 		width:20px;
 		height:20px;
-		background-image:url("/static/images/wmd-buttons-transparent.44fcbb2352fa.png");
+		background-image:url("/static/images/wmd-buttons-transparent.png");
 		background-position:0 0;
 		background-repeat:no-repeat
 	}
@@ -8307,7 +8307,7 @@
 	}
 	.discussion-module .wmd-button span,.discussion-user-threads .wmd-button span
 	{
-		background-image:url("/static/images/wmd-buttons.9984e05baa70.png");
+		background-image:url("/static/images/wmd-buttons.png");
 		display:inline-block
 	}
 		body.discussion .post-label-pinned,.discussion-module .post-label-pinned,.discussion-user-threads .post-label-pinned
@@ -9159,7 +9159,7 @@
 	{
 		padding:10px 20px 12px 45px;
 		border-bottom:1px solid #b20610;
-		background:url("/static/images/white-error-icon.97dc037801b5.png") no-repeat 15px 14px
+		background:url("/static/images/white-error-icon.png") no-repeat 15px 14px
 	}
 	.forum-new-post-form .post-errors .post-error:last-child,.edit-post-form .post-errors .post-error:last-child
 	{
