@@ -292,15 +292,15 @@ def _update_certificate_context(context, course, user, user_certificate):
     (Helper method to keep the view clean)
     """
     # Populate dynamic output values using the course/certificate data loaded above
-    user_fullname = user.profile.name
+    # user_fullname = user.profile.name
+    user_fullname = user_certificate.name
     platform_name = microsite.get_value("platform_name", settings.PLATFORM_NAME)
     certificate_type = context.get('certificate_type')
 
     context['username'] = user.username
     context['course_mode'] = user_certificate.mode
     context['accomplishment_user_id'] = user.id
-    # context['accomplishment_copy_name'] = user_fullname
-    context['accomplishment_copy_name'] = user_certificate.name
+    context['accomplishment_copy_name'] = user_fullname
     context['accomplishment_copy_username'] = user.username
     context['accomplishment_copy_course_org'] = course.org
     context['accomplishment_copy_course_name'] = course.display_name
