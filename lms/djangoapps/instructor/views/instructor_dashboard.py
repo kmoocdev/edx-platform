@@ -614,13 +614,12 @@ def get_assessment_info(course):
     for document in cursor:
         published_branch = document.get('versions').get('published-branch')
     cursor.close()
-
     cursor = db.modulestore.structures.find({'_id':published_branch})
     for document in cursor:
         blocks = document.get('blocks')
         for block in blocks:
-            if block.get('block_type') == 'openassessment':
-                fields = block.get('fields')
+            fields = block.get('fields')
+            if (block.get('block_type') == 'openassessment') and fields.has_key('submission_start') and fields.has_key('submission_due'):
                 arr_submission_start = fields['submission_start'].split('+')
                 arr_submission_due = fields['submission_due'].split('+')
                 accessment_info = {'display_name': fields['display_name'], 'submission_start': arr_submission_start[0].replace('-', '').replace(':', '').replace('T', ''), 'submission_due': arr_submission_due[0].replace('-', '').replace(':', '').replace('T', '')}
