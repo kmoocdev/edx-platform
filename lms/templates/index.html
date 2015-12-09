@@ -89,6 +89,9 @@ function closeWin1() {
 
 cookiedata = document.cookie;
 
+
+console.log("cookiedata = " + cookiedata);
+
 popupDate = new Date();
 if ( (cookiedata.indexOf("popupdiv1=done") < 0 ) &&
      (popupDate.getFullYear() == 2015) &&
@@ -96,9 +99,9 @@ if ( (cookiedata.indexOf("popupdiv1=done") < 0 ) &&
          (popupDate.getMonth()== 12-1 && popupDate.getDate() <= 18)
      )
    ){
-    document.all['popupWrap_1'].style.display = "block";
+    $("#popupWrap_1").show();
 } else {
-    document.all['popupWrap_1'].style.display = "none";
+    $("#popupWrap_1").hide();
 }
 
 //-->
