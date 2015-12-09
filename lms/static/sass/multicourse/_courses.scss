@@ -402,8 +402,7 @@ $facet-background-color: #007db8;
       list-style: outside none none;
 
       &.collapse {
-        //max-height: ($baseline*14);
-        max-height: 310px;
+        max-height: ($baseline*18);
       }
 
       li {
