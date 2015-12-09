@@ -292,7 +292,8 @@ def _update_certificate_context(context, course, user, user_certificate):
     (Helper method to keep the view clean)
     """
     # Populate dynamic output values using the course/certificate data loaded above
-    user_fullname = user.profile.name
+    # user_fullname = user.profile.name
+    user_fullname = user_certificate.name
     platform_name = microsite.get_value("platform_name", settings.PLATFORM_NAME)
     certificate_type = context.get('certificate_type')
 
@@ -615,7 +616,7 @@ def render_html_view(request, user_id, course_id):
         })
 
     # Append/Override the existing view context values with any course-specific static values from Advanced Settings
-    # context.update(course.cert_html_view_overrides)
+    context.update(course.cert_html_view_overrides)
 
     # FINALLY, generate and send the output the client
     return render_to_response("certificates/valid.html", context)
