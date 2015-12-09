@@ -53,7 +53,7 @@ if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
 <!--popup K-mooc(1)-->
 
 <div id="popupWrap_1" class="popup-wrap popup-kmooc2" style="position: absolute; left: 25px; top: 100px;
-    z-index: 10010; display: block; border: 5px solid #EB9D43; opacity: 1; background: #ffffff; font-size: 13px;
+    z-index: 10010; display: none; border: 5px solid #EB9D43; opacity: 1; background: #ffffff; font-size: 13px;
     line-height: 25px; padding: 5px;">
         <p style="text-align: center; font-size: 15px;">
             <b>한국형 무크(K-MOOC)의 BI 및 표어(Slogan) 공모전을<br>
@@ -82,23 +82,26 @@ function setCookie1( name, value, expiredays ) {
 
 function closeWin1() {
     if ($("#chkbox_1").is(":checked")){
-        setCookie1( "popupdiv2", "done" , 1 );
+        setCookie1( "popupdiv1", "done" , 1 );
     }
     $('#popupWrap_1').hide();
 }
 
 cookiedata = document.cookie;
 
+
+console.log("cookiedata = " + cookiedata);
+
 popupDate = new Date();
-if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
+if ( (cookiedata.indexOf("popupdiv1=done") < 0 ) &&
      (popupDate.getFullYear() == 2015) &&
      (popupDate.getMonth()== 11-1 ||
          (popupDate.getMonth()== 12-1 && popupDate.getDate() <= 18)
      )
    ){
-    document.all['popupWrap_1'].style.display = "block";
+    $("#popupWrap_1").show();
 } else {
-    document.all['popupWrap_1'].style.display = "none";
+    $("#popupWrap_1").hide();
 }
 
 //-->

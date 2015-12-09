@@ -545,6 +545,12 @@
 	  border:solid 1px $org-2;
 	  background:$org-2;
 	}
+
+    &:focus {
+	  color:$white;
+	  border:solid 1px $org-2;
+	  background:$org-2;
+	}
      //   &.archived {
     //      @extend %btn-pl-default-base;
     //    }

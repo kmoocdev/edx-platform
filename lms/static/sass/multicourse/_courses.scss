@@ -138,7 +138,7 @@ $facet-background-color: #007db8;
       text-align: center;
       width: flex-grid(12);
 
-      > hgroup {
+      .hgroup {
         background: $white;
         background: $course-header-bg;
         border: 1px solid $border-color-3;
@@ -151,7 +151,7 @@ $facet-background-color: #007db8;
       &.main-search, &.university-search {
         text-align: center;
 
-        hgroup {
+        .hgroup {
           display: inline-block;
         }
 
@@ -402,7 +402,8 @@ $facet-background-color: #007db8;
       list-style: outside none none;
 
       &.collapse {
-        max-height: ($baseline*18);
+        //max-height: ($baseline*14);
+        max-height: 310px;
       }
 
       li {
