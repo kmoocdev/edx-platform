@@ -82,7 +82,7 @@ function setCookie1( name, value, expiredays ) {
 
 function closeWin1() {
     if ($("#chkbox_1").is(":checked")){
-        setCookie1( "popupdiv2", "done" , 1 );
+        setCookie1( "popupdiv1", "done" , 1 );
     }
     $('#popupWrap_1').hide();
 }
@@ -90,7 +90,7 @@ function closeWin1() {
 cookiedata = document.cookie;
 
 popupDate = new Date();
-if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
+if ( (cookiedata.indexOf("popupdiv1=done") < 0 ) &&
      (popupDate.getFullYear() == 2015) &&
      (popupDate.getMonth()== 11-1 ||
          (popupDate.getMonth()== 12-1 && popupDate.getDate() <= 18)
