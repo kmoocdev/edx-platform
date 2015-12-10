@@ -1394,7 +1394,6 @@ PIPELINE_CSS = {
             'js/vendor/CodeMirror/codemirror.css',
             'css/vendor/jquery.treeview.css',
             'css/vendor/ui-lightness/jquery-ui-1.8.22.custom.css',
-            'css/lms-style-app-extend.css', #kmoocs Mathjax Integration
         ],
         'output_filename': 'css/lms-style-course-vendor.css',
     },
