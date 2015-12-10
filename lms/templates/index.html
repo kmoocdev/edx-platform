@@ -16,97 +16,6 @@ from microsite_configuration import microsite
   show_partners = microsite.get_value('show_partners', True)
 
 %>
-<script language="Javascript">
-<!--
-function setCookie( name, value, expiredays ) {
-    var todayDate = new Date();
-    todayDate.setDate( todayDate.getDate() + expiredays );
-    document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-}
-
-function closeWin() {
-    if ( document.getElementById('checkForm').chkbox.checked ){
-        setCookie( "popupdiv", "done" , 1 );
-    }
-    document.all['popupWrap'].style.display = "none";
-}
-
-cookiedata = document.cookie;
-
-popupDate = new Date();
-if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
-     (popupDate.getFullYear() == 2015) &&
-     (popupDate.getMonth()== 11-1) &&
-     (popupDate.getDate() == 27 ||
-        (popupDate.getDate() == 28 && popupDate.getHours() < 3)
-     )
-   ){
-    document.all['popupWrap'].style.display = "block";
-} else {
-    document.all['popupWrap'].style.display = "none";
-}
-
-//-->
-</script>
-
-
-<!--popup K-mooc(1)-->
-
-<div id="popupWrap_1" class="popup-wrap popup-kmooc2" style="position: absolute; left: 25px; top: 100px;
-    z-index: 10010; display: none; border: 5px solid #EB9D43; opacity: 1; background: #ffffff; font-size: 13px;
-    line-height: 25px; padding: 5px;">
-        <p style="text-align: center; font-size: 15px;">
-            <b>한국형 무크(K-MOOC)의 BI 및 표어(Slogan) 공모전을<br>
-            개최하오니 관심 있는 분의 많은 참여를 바랍니다. </b></p>
-        <p style="text-align: center"><a href="http://blog.naver.com/kmooc_kr/220550673535"><img src="http://mme.kmoocs.kr/origin/K-mooc-pop.png" alt="공모전"></a></p>
-        <br>
-        <b>&nbsp;■ 공모내용 : </b>K-MOOC의 비전과 목표가 잘 드러나는 BI 및 표어(Slogan)<br>
-        <b>&nbsp;■ 응모자격 : </b>한국형 무크에 관심 있는 일반 국민 전체<br>
-        <b>&nbsp;■ 온라인 접수 : </b><font color="blue">kmooc@nile.or.kr</font><br>
-        <form class="today_1" id="checkForm_1" name="checkForm_1" style="text-align:right; font-style: normal;">
-            <label onclick="closeWin1();">
-                <input id="chkbox_1" name="chkbox_1" type="checkbox">
-                <span style="font-style:normal; font-size:13px;"><b>오늘 하루 열지 않음 &nbsp;&nbsp;</b></span>
-            </label>
-                <span><a href="javascript:$('#popupWrap_1').hide();">[ 닫기 ]</a></span>
-        </form>
-</div>
-
-<script language="Javascript">
-<!--
-function setCookie1( name, value, expiredays ) {
-    var todayDate = new Date();
-    todayDate.setDate( todayDate.getDate() + expiredays );
-    document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-}
-
-function closeWin1() {
-    if ($("#chkbox_1").is(":checked")){
-        setCookie1( "popupdiv1", "done" , 1 );
-    }
-    $('#popupWrap_1').hide();
-}
-
-cookiedata = document.cookie;
-
-
-console.log("cookiedata = " + cookiedata);
-
-popupDate = new Date();
-if ( (cookiedata.indexOf("popupdiv1=done") < 0 ) &&
-     (popupDate.getFullYear() == 2015) &&
-     (popupDate.getMonth()== 11-1 ||
-         (popupDate.getMonth()== 12-1 && popupDate.getDate() <= 18)
-     )
-   ){
-    $("#popupWrap_1").show();
-} else {
-    $("#popupWrap_1").hide();
-}
-
-//-->
-</script>
-
 
 
 <!--popup K-mooc -->
@@ -155,7 +64,7 @@ function closeWin() {
 cookiedata = document.cookie;
 
 popupDate = new Date();
-if ( (cookiedata.indexOf("popupdiv=done") < 0 ) && 
+if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
      (popupDate.getFullYear() == 2015) &&
      (popupDate.getMonth()== 11-1) &&
      (popupDate.getDate() == 27 ||
@@ -173,7 +82,7 @@ if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
 
 <!--popup K-mooc(1)-->
 
-<div id="popupWrap_2" class="popup-wrap popup-kmooc2" style="position: absolute; left: 25px; top: 100px;
+<div id="popupWrap_1" class="popup-wrap popup-kmooc2" style="position: absolute; left: 25px; top: 100px;
     z-index: 10010; display: block; border: 5px solid #EB9D43; opacity: 1; background: #ffffff; font-size: 13px;
     line-height: 25px; padding: 5px;">
         <p style="text-align: center; font-size: 15px;">
@@ -189,7 +98,7 @@ if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
                 <input id="chkbox_1" name="chkbox_1" type="checkbox">
                 <span style="font-style:normal; font-size:13px;"><b>오늘 하루 열지 않음 &nbsp;&nbsp;</b></span>
             </label>
-                <span><a onClick="document.getElementById('popupWrap_2').style.display='none'">[ 닫기 ]</a></span>
+                <span><a onClick="document.getElementById('popupWrap_1').style.display='none'">[ 닫기 ]</a></span>
         </form>
 </div>
 
@@ -213,9 +122,9 @@ cookiedata = document.cookie;
 popupDate = new Date();
 if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
      (popupDate.getFullYear() == 2015) &&
-     (popupDate.getMonth()== 11-1 || 
+     (popupDate.getMonth()== 11-1 ||
          (popupDate.getMonth()== 12-1 && popupDate.getDate() <= 18)
-     ) 
+     )
    ){
     document.all['popupWrap_1'].style.display = "block";
 } else {
