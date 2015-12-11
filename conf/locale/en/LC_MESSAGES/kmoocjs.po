@@ -82,3 +82,51 @@ msgstr ""
 #: lms/djangoapps/instructor_analytics/distributions.py
 msgid "No Data"
 msgstr ""
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Signatory"
+msgstr ""
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Signatory Name"
+msgstr ""
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Signatory Title"
+msgstr ""
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Signatory Organization"
+msgstr ""
+
+#: cms/static/templates/certificate-editor.underscore
+msgid "Maximum logo width 220px, height 48px variable"
+msgstr ""
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Image must be 193px X 49px transparent PNG"
+msgstr ""
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Maximum 18 characters"
+msgstr ""
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Upload Signature Image"
+msgstr ""
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Upload Organization Logo"
+msgstr ""
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Add Signatory"
+msgstr ""
+
+#: cms/static/templates/certificate-editor.underscore
+msgid "Organization Logo"
+msgstr ""
+
+#: cms/static/templates/certificate-editor.underscore
+msgid "Path to organization logo"
+msgstr ""
