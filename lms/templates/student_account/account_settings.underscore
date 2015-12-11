@@ -1,6 +1,6 @@
 <div class="account-settings-container">
     <div class="wrapper-header">
-        <h2 class="header-title"><%- gettext("Account Settings") %></h2>
+        <h2 class="header-title"><%- gettext("Account Settings") %> </h2>
         <small class="account-settings-header-subtitle"><%- gettext("These settings include basic information about your account. You can also specify additional information and see your linked social accounts on this page.") %></small>
     </div>
 
@@ -20,5 +20,19 @@
                 </div>
             </div>
         <% }); %>
+        <div class="section">
+            <h3 class="section-header">회원 탈퇴</h3>
+            <div class="account-settings-section-body">
+                <div class="u-field u-field-dropdown u-field-level_of_education editable-always mode-edit">
+                    <label class="u-field-title" for="u-field-select-level_of_education">
+                        회원 탈퇴하기
+                    </label>
+                    <button onclick="window.location='/remove_account_view'">회원 탈퇴</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+
+

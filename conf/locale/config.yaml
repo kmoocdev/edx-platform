@@ -137,9 +137,12 @@ generate_merge:
         - mako-studio.po
         - messages.po
         - wiki.po
+        - underscore.po
+        - django.po
     djangojs.po:
         - kmoocjs.po
         - djangojs-partial.po
         - djangojs-studio.po
         - underscore.po
         - underscore-studio.po
+        - djangojs.po

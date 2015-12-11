@@ -3,3 +3,64 @@
 </h2>
 <section class="search-facets-lists">
 </section>
+
+
+    <section data-parent-element="sidebar" data-facet="org">
+        <h3>전공분류</h3>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="언어문학" data-text="언어문학" class="facet-option discovery-button">언어·문학<span class="count">4</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="인문과학" data-text="인문과학" class="facet-option discovery-button">인문·과학<span class="count">1</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="경영경제" data-text="경영경제" class="facet-option discovery-button">경영·경제<span class="count">4</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="법률" data-text="법률" class="facet-option discovery-button">법률<span class="count">1</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="사회과학" data-text="사회과학" class="facet-option discovery-button">사회·과학<span class="count">5</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="건축" data-text="건축" class="facet-option discovery-button">건축<span class="count">2</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="기계금속" data-text="기계금속" class="facet-option discovery-button">기계·금속<span class="count">1</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="전기전자" data-text="전기전자" class="facet-option discovery-button">전기·전자<span class="count">2</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="컴퓨터통신" data-text="컴퓨터통신" class="facet-option discovery-button">컴퓨터·통신<span class="count">1</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="생물화학환경" data-text="생물화학환경" class="facet-option discovery-button">생물·화학·환경<span class="count">1</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
+                <button data-value="수학물리천문지리" data-text="수학물리천문지리" class="facet-option discovery-button">수학·물리·천문·지리<span class="count">4</span></button>
+            </li>
+        </ul>
+    </section>
+

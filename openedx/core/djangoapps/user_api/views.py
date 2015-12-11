@@ -649,7 +649,16 @@ class RegistrationView(APIView):
             url=marketing_link("HONOR"),
             # terms_text=terms_text,
             Agreement=Agreement,
-            Privacy=Privacy
+            Privacy=Privacy,
+	    platform_name=settings.PLATFORM_NAME
+        )
+
+        terms_link2 = u"<a href=\"javascript:agreementPop();\">Terms of Service</a> and <a href=\"javascript:privacyPop();\">Privacy</a>".format(
+            url=marketing_link("HONOR"),
+            # terms_text=terms_text,
+            Agreement=Agreement,
+            Privacy=Privacy,
+	    platform_name=settings.PLATFORM_NAME
         )
 
         # Translators: "Terms of Service" is a legal document users must agree to
@@ -660,6 +669,15 @@ class RegistrationView(APIView):
             platform_name=settings.PLATFORM_NAME,
             terms_of_service=terms_link
         )
+
+        label2 = (
+            u"(I agree to the {platform_name} {terms_of_service}.)"
+        ).format(
+            platform_name=settings.PLATFORM_NAME,
+            terms_of_service=terms_link2
+        )
+
+	label += label2
 
         # Translators: "Terms of Service" is a legal document users must agree to
         # in order to register a new account.

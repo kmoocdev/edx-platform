@@ -152,6 +152,626 @@
 # Kevin Min <gr326887@graded.br>, 2015
 # Nicole <dlruddk1112@gmail.com>, 2014
 # shin2012 <shin2013@gmail.com>, 2014
+# #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2013 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Chul Park <parkchul@nate.com>, 2015
+# David10000 <gameness@naver.com>, 2014
+# Gil <gedwarp@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# JiyeonLee <leejiyeon00@gmail.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# KimKyudong <choemh@nate.com>, 2014
+# mariana1201 <gogo3135@naver.com>, 2014
+# Nicole <dlruddk1112@gmail.com>, 2014
+# Pope, 2014
+# Sarina Canelake <sarina@edx.org>, 2014
+# Seok Jun Yoon <fake2real@dctribe.com>, 2015
+# shin2012 <shin2013@gmail.com>, 2014
+# Sujin Lee <sujinlee.me@gmail.com>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# Young Kim <youngck.uw@gmail.com>, 2015
+# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Jun-Gu Kang <chr0m3.kr@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Seok Jun Yoon <fake2real@dctribe.com>, 2015
+# Sujin Lee <sujinlee.me@gmail.com>, 2014
+# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# mariana1201 <gogo3135@naver.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Young Kim <youngck.uw@gmail.com>, 2015
+# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chul Park <parkchul@nate.com>, 2015
+# mariana1201 <gogo3135@naver.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# Sarina Canelake <sarina@edx.org>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Pope, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# KimKyudong <choemh@nate.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Kevin Min <gr326887@graded.br>, 2015
+# JiyeonLee <leejiyeon00@gmail.com>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2013 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# David10000 <gameness@naver.com>, 2014
+# Gil <gedwarp@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Kevin Min <gr326887@graded.br>, 2015
+# Nicole <dlruddk1112@gmail.com>, 2014
+# shin2012 <shin2013@gmail.com>, 2014
+# #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2013 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Chul Park <parkchul@nate.com>, 2015
+# David10000 <gameness@naver.com>, 2014
+# Gil <gedwarp@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# JiyeonLee <leejiyeon00@gmail.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# KimKyudong <choemh@nate.com>, 2014
+# mariana1201 <gogo3135@naver.com>, 2014
+# Nicole <dlruddk1112@gmail.com>, 2014
+# Pope, 2014
+# Sarina Canelake <sarina@edx.org>, 2014
+# Seok Jun Yoon <fake2real@dctribe.com>, 2015
+# shin2012 <shin2013@gmail.com>, 2014
+# Sujin Lee <sujinlee.me@gmail.com>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# Young Kim <youngck.uw@gmail.com>, 2015
+# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Jun-Gu Kang <chr0m3.kr@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Seok Jun Yoon <fake2real@dctribe.com>, 2015
+# Sujin Lee <sujinlee.me@gmail.com>, 2014
+# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# mariana1201 <gogo3135@naver.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Young Kim <youngck.uw@gmail.com>, 2015
+# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chul Park <parkchul@nate.com>, 2015
+# mariana1201 <gogo3135@naver.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# Sarina Canelake <sarina@edx.org>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Pope, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# KimKyudong <choemh@nate.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Kevin Min <gr326887@graded.br>, 2015
+# JiyeonLee <leejiyeon00@gmail.com>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2013 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# David10000 <gameness@naver.com>, 2014
+# Gil <gedwarp@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Kevin Min <gr326887@graded.br>, 2015
+# Nicole <dlruddk1112@gmail.com>, 2014
+# shin2012 <shin2013@gmail.com>, 2014
+# #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2013 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Chul Park <parkchul@nate.com>, 2015
+# David10000 <gameness@naver.com>, 2014
+# Gil <gedwarp@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# JiyeonLee <leejiyeon00@gmail.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# KimKyudong <choemh@nate.com>, 2014
+# mariana1201 <gogo3135@naver.com>, 2014
+# Nicole <dlruddk1112@gmail.com>, 2014
+# Pope, 2014
+# Sarina Canelake <sarina@edx.org>, 2014
+# Seok Jun Yoon <fake2real@dctribe.com>, 2015
+# shin2012 <shin2013@gmail.com>, 2014
+# Sujin Lee <sujinlee.me@gmail.com>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# Young Kim <youngck.uw@gmail.com>, 2015
+# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Jun-Gu Kang <chr0m3.kr@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Seok Jun Yoon <fake2real@dctribe.com>, 2015
+# Sujin Lee <sujinlee.me@gmail.com>, 2014
+# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# mariana1201 <gogo3135@naver.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Young Kim <youngck.uw@gmail.com>, 2015
+# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chul Park <parkchul@nate.com>, 2015
+# mariana1201 <gogo3135@naver.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# Sarina Canelake <sarina@edx.org>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Pope, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# KimKyudong <choemh@nate.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Kevin Min <gr326887@graded.br>, 2015
+# JiyeonLee <leejiyeon00@gmail.com>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2013 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# David10000 <gameness@naver.com>, 2014
+# Gil <gedwarp@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Kevin Min <gr326887@graded.br>, 2015
+# Nicole <dlruddk1112@gmail.com>, 2014
+# shin2012 <shin2013@gmail.com>, 2014
+# #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2013 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Chul Park <parkchul@nate.com>, 2015
+# David10000 <gameness@naver.com>, 2014
+# Gil <gedwarp@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# JiyeonLee <leejiyeon00@gmail.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# KimKyudong <choemh@nate.com>, 2014
+# mariana1201 <gogo3135@naver.com>, 2014
+# Nicole <dlruddk1112@gmail.com>, 2014
+# Pope, 2014
+# Sarina Canelake <sarina@edx.org>, 2014
+# Seok Jun Yoon <fake2real@dctribe.com>, 2015
+# shin2012 <shin2013@gmail.com>, 2014
+# Sujin Lee <sujinlee.me@gmail.com>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# Young Kim <youngck.uw@gmail.com>, 2015
+# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Jun-Gu Kang <chr0m3.kr@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Seok Jun Yoon <fake2real@dctribe.com>, 2015
+# Sujin Lee <sujinlee.me@gmail.com>, 2014
+# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# mariana1201 <gogo3135@naver.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Young Kim <youngck.uw@gmail.com>, 2015
+# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chul Park <parkchul@nate.com>, 2015
+# mariana1201 <gogo3135@naver.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# Sarina Canelake <sarina@edx.org>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Pope, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# KimKyudong <choemh@nate.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Kevin Min <gr326887@graded.br>, 2015
+# JiyeonLee <leejiyeon00@gmail.com>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2013 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# David10000 <gameness@naver.com>, 2014
+# Gil <gedwarp@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Kevin Min <gr326887@graded.br>, 2015
+# Nicole <dlruddk1112@gmail.com>, 2014
+# shin2012 <shin2013@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
@@ -167,6 +787,38 @@ msgstr ""
 "Language: ko_KR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the city in which they live.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the city in which they live.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the city in which they live.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the city in which they live.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the city in which they live.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the city in which they live.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the city in which they live.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the city in which they live.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the registration form
@@ -236,6 +888,10 @@ msgstr "수강중입니다."
 
 msgid "Blank Common Problem"
 msgstr "입력되지 않은 일반문제"
+
+#: lms/templates/courseware/course_about.html
+msgid "I just registered for {number} {title} through {account}: {url}"
+msgstr "{account}: {url}을 통해 {number} {title} 에 수강신청 완료"
 
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
 #. the discussion forums
@@ -670,10 +1326,9 @@ msgid "Female"
 msgstr "여성"
 
 #. Translators: 'Other' refers to the student's gender
-#. Translators: 'Other' refers to the student's level of education
 #: common/djangoapps/student/models.py
-msgid "Other"
-msgstr "기타"
+msgid "Other/Prefer Not to Say"
+msgstr ""
 
 #: common/djangoapps/student/models.py
 msgid "Doctorate"
@@ -703,12 +1358,15 @@ msgstr "중학교"
 msgid "Elementary/primary school"
 msgstr "초등학교"
 
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'None' refers to the student's level of education
 #: common/djangoapps/student/models.py
-#: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
-msgid "None"
-msgstr "없음"
+msgid "No Formal Education"
+msgstr ""
+
+#. Translators: 'Other' refers to the student's level of education
+#: common/djangoapps/student/models.py
+msgid "Other Education"
+msgstr ""
 
 #: common/djangoapps/student/models.py
 msgid "{platform_name} Honor Code Certificate for {course_name}"
@@ -1338,7 +1996,7 @@ msgstr "시스템에 정의된 마일스톤"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "Invalid Length ({0})"
-msgstr "유효하지 않은 길이 ({0})"
+msgstr "의 길이가 유효하지 않습니다. ({0})"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "must be {0} characters or more"
@@ -1350,7 +2008,7 @@ msgstr "{0} 자 이하여야 합니다."
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "Must be more complex ({0})"
-msgstr "더 복잡해야 합니다.({0}) "
+msgstr "가 더 복잡해야 합니다.({0})"
 
 #: common/djangoapps/util/password_policy_validators.py
 msgid "must contain {0} or more uppercase characters"
@@ -1639,6 +2297,38 @@ msgstr "오류"
 #. Translators: this is the last choice of a number of choices of how to log
 #. in
 #. to the site.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: Separator used in StringResponse to display multiple answers.
+#. Example: "Answer: Answer_1 or Answer_2 or Answer_3".
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this is the last choice of a number of choices of how to log
+#. in
+#. to the site.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: Separator used in StringResponse to display multiple answers.
+#. Example: "Answer: Answer_1 or Answer_2 or Answer_3".
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this is the last choice of a number of choices of how to log
+#. in
+#. to the site.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: Separator used in StringResponse to display multiple answers.
+#. Example: "Answer: Answer_1 or Answer_2 or Answer_3".
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this is the last choice of a number of choices of how to log
+#. in
+#. to the site.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: Separator used in StringResponse to display multiple answers.
+#. Example: "Answer: Answer_1 or Answer_2 or Answer_3".
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this is the last choice of a number of choices of how to log
+#. in
+#. to the site.
 #: common/lib/capa/capa/responsetypes.py
 #: common/templates/course_modes/choose.html lms/templates/login.html
 #: lms/templates/register.html
@@ -1810,7 +2500,7 @@ msgstr "학습자들이 이 문제 풀기에 시도한 횟수 "
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid "Maximum Attempts"
-msgstr "문제 풀기 최대 횟수"
+msgstr "문제 풀이 최대 횟수"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid ""
@@ -1847,15 +2537,15 @@ msgstr "항상"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Answered"
-msgstr "응답했습니다."
+msgstr "응답"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Attempted"
-msgstr "시도했습니다."
+msgstr "문제 풀이"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Closed"
-msgstr "닫혔습니다. "
+msgstr "닫힘"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Finished"
@@ -1863,15 +2553,15 @@ msgstr "종료되었습니다"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Correct or Past Due"
-msgstr "올바르거나 지난 마감 기한"
+msgstr "정답 입력시 또는 기한 경과 후"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Past Due"
-msgstr "지난 마감 기한"
+msgstr "기한 경과 후"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Never"
-msgstr "절대 아님"
+msgstr "절대 표시하지 않음"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Whether to force the save button to appear on the page"
@@ -1879,14 +2569,14 @@ msgstr "페이지에 저장 버튼이 나타나도록 할 것인지 여부"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Show Reset Button"
-msgstr "재설정 버튼 보이기"
+msgstr "초기화 버튼 보이기"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid ""
 "Determines whether a 'Reset' button is shown so the user may reset their "
 "answer. A default value can be set in Advanced Settings."
 msgstr ""
-"학습자가 답을 다시 입력할 수 있도록, '재설정' 버튼을 보이게 할 것인지 정해주십시오. 기본 값 설정은 고급 설정에서 가능합니다.  "
+"학습자가 답을 다시 입력할 수 있도록, '초기화' 버튼을 보이게 할 것인지 정해주십시오. 기본값 설정은 고급 설정에서 가능합니다."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
@@ -1903,7 +2593,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "On Reset"
-msgstr "초기화 중"
+msgstr "초기화 가능"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Per Student"
@@ -2041,7 +2731,7 @@ msgstr "답변 제출 기한이 끝났습니다."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Problem must be reset before it can be checked again."
-msgstr "문제를 다시 확인하기 위해서는 문제가 재설정되어야 합니다."
+msgstr "문제에 대해 다시 확인받기 위해서는 문제가 초기화되어야 합니다."
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "You must wait at least {wait} seconds between submissions."
@@ -2101,7 +2791,7 @@ msgstr ""
 #. page before they can reset it.
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Refresh the page and make an attempt before resetting."
-msgstr "재설정 전에, 페이지를 새로 고침하고 시도하세요."
+msgstr "초기화 전에, 페이지를 새로 고침하고 시도하세요."
 
 #: common/lib/xmodule/xmodule/capa_module.py
 msgid ""
@@ -2151,11 +2841,11 @@ msgstr "채점되었습니다."
 msgid ""
 "Defines whether the student gets credit for this problem. Credit is based on"
 " peer grades of this problem."
-msgstr "학습자가 이 문제에 대한 점수를 취득할 지 여부를 정해주십시오. 점수는 동료 채점을 기반으로 하여 매겨집니다."
+msgstr "학습자가 이 문제에 대한 점수를 취득할 지 여부를 정해주십시오. 점수는 상호 평가를 기반으로 하여 매겨집니다."
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid "If the problem is ready to be reset or not."
-msgstr "문제가 재설정될 수 있는지 없는지 "
+msgstr "초기화 가능 여부"
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid "The number of times the student can try to answer this problem."
@@ -2193,7 +2883,7 @@ msgstr "각 문제의 점수를 정해주십시오. 점수 값이 정해지지 �
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid "Minimum Peer Grading Calibrations"
-msgstr "예비 상호 채점 최소 인원수"
+msgstr "예비 상호 평가 최소 인원수"
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid ""
@@ -2203,17 +2893,17 @@ msgstr "상호 평가를 위해, 각 학습자가 완성해야 하는 최소 에
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid "Maximum Peer Grading Calibrations"
-msgstr "예비 상호 채점 최대 인원수"
+msgstr "예비 상호 평가 최대 인원수"
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid ""
 "The maximum number of calibration essays each student will need to complete "
 "for peer grading."
-msgstr "상호 채점을 위해, 각 학습자가 완성해야 하는 최대 에세이 수"
+msgstr "상호 평가를 위해, 각 학습자가 완성해야 하는 최대 에세이 수"
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid "Peer Graders per Response"
-msgstr "답변별 상호 채점자"
+msgstr "답변별 상호 평가자"
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid "The number of peers who will grade each submission."
@@ -2221,7 +2911,7 @@ msgstr "상호 평가에서 각 제출물을 채점할 학습자의 수 "
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid "Required Peer Grading"
-msgstr "상호 채점이 필요합니다."
+msgstr "상호 평가가 필요합니다."
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid ""
@@ -2231,7 +2921,7 @@ msgstr "상호 평가에서, 한 학습자가 채점해야 할 다른 학습자�
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid "Allow \"overgrading\" of peer submissions"
-msgstr "상호 채점 시 기준 초과 점수 부여 허용"
+msgstr "상호 평가 시 기준 초과 점수 부여 허용"
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 msgid ""
@@ -2241,7 +2931,7 @@ msgid ""
 " when settings for `Required Peer Grading` > `Peer Graders per Response`"
 msgstr ""
 "필요 채점자 인원이 충원되어도 채점자 추가를 허용합니다. 단, 학습자에 채점 권한이 있는  모든 제출에 이미 채점자가 충원된 경우에 "
-"한합니다. 이는 '필수 상호 채점' > '답변별 상호채점' 기능을 사용하기 위함입니다. "
+"한합니다. 이는 '필수 상호 평가' > '답변별 상호 평가' 기능을 사용하기 위함입니다."
 
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 #: common/lib/xmodule/xmodule/peer_grading_module.py
@@ -3090,6 +3780,21 @@ msgstr "both"
 msgid "About"
 msgstr "소개"
 
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'None' refers to the student's level of education
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'None' refers to the student's level of education
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'None' refers to the student's level of education
+#: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
+#: common/djangoapps/student/models.py
+msgid "None"
+msgstr "없음"
+
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Entrance Exam Enabled"
 msgstr "사전 평가 활성화"
@@ -3680,7 +4385,7 @@ msgstr "Amount of grace to give on the due date. "
 
 #: common/lib/xmodule/xmodule/peer_grading_module.py
 msgid "Student data for a given peer grading problem."
-msgstr "상호 채점을 위한 학습자 데이터"
+msgstr "상호 평가를 위한 학습자 데이터"
 
 #: common/lib/xmodule/xmodule/peer_grading_module.py
 msgid "Peer Grading Interface"
@@ -4104,7 +4809,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid "Show Reset Button for Problems"
-msgstr "문제 재설정 버튼 보이기"
+msgstr "문제 초기화 버튼 보이기"
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid ""
@@ -4641,6 +5346,34 @@ msgstr ""
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Open edX' is a brand, please keep this untranslated. See
 #. http://openedx.org for more information.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Open edX' is a brand, please keep this untranslated.
+#. See http://openedx.org for more information.
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Open edX' is a brand, please keep this untranslated. See
+#. http://openedx.org for more information.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Open edX' is a brand, please keep this untranslated.
+#. See http://openedx.org for more information.
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Open edX' is a brand, please keep this untranslated. See
+#. http://openedx.org for more information.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Open edX' is a brand, please keep this untranslated.
+#. See http://openedx.org for more information.
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Open edX' is a brand, please keep this untranslated. See
+#. http://openedx.org for more information.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Open edX' is a brand, please keep this untranslated.
+#. See http://openedx.org for more information.
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Open edX' is a brand, please keep this untranslated. See
+#. http://openedx.org for more information.
 #: lms/djangoapps/branding/api.py cms/templates/widgets/footer.html
 #: themes/red-theme/lms/templates/footer.html
 msgid "Powered by Open edX"
@@ -4683,6 +5416,22 @@ msgstr "서비스 및 명예 과정 규정 "
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: A 'Privacy Policy' is a legal document/statement describing a
 #. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
 #: lms/djangoapps/branding/api.py lms/djangoapps/certificates/views/webview.py
 #: cms/templates/widgets/footer.html
 #: lms/templates/static_templates/privacy.html
@@ -4694,6 +5443,22 @@ msgstr "개인정보 보호 정책"
 msgid "Accessibility Policy"
 msgstr "접근성 정책"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is a legal document users must agree to
+#. in order to register a new account.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is a legal document users must agree to
+#. in order to register a new account.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is a legal document users must agree to
+#. in order to register a new account.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is a legal document users must agree to
+#. in order to register a new account.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is a legal document users must agree to
 #. in order to register a new account.
@@ -5290,11 +6055,71 @@ msgstr "진도"
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Textbooks' refers to the tab in the course that leads to the
 #. course' textbooks
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Textbooks' refers to the tab in the course that leads to the
+#. course' textbooks
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Textbooks' refers to the tab in the course that leads to the
+#. course' textbooks
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Textbooks' refers to the tab in the course that leads to the
+#. course' textbooks
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Textbooks' refers to the tab in the course that leads to the
+#. course' textbooks
 #: lms/djangoapps/courseware/tabs.py cms/templates/textbooks.html
 #: cms/templates/widgets/header.html
 msgid "Textbooks"
 msgstr "교재"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This will look like '$50', where {currency_symbol} is a symbol
+#. such as '$' and {price} is a
+#. numerical amount in that currency. Adjust this display as needed for your
+#. language.
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: currency_symbol is a symbol indicating type of currency, ex
+#. "$".
+#. This string would look like this when all variables are in:
+#. "$500.00"
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This will look like '$50', where {currency_symbol} is a symbol
+#. such as '$' and {price} is a
+#. numerical amount in that currency. Adjust this display as needed for your
+#. language.
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: currency_symbol is a symbol indicating type of currency, ex
+#. "$".
+#. This string would look like this when all variables are in:
+#. "$500.00"
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This will look like '$50', where {currency_symbol} is a symbol
+#. such as '$' and {price} is a
+#. numerical amount in that currency. Adjust this display as needed for your
+#. language.
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: currency_symbol is a symbol indicating type of currency, ex
+#. "$".
+#. This string would look like this when all variables are in:
+#. "$500.00"
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This will look like '$50', where {currency_symbol} is a symbol
+#. such as '$' and {price} is a
+#. numerical amount in that currency. Adjust this display as needed for your
+#. language.
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: currency_symbol is a symbol indicating type of currency, ex
+#. "$".
+#. This string would look like this when all variables are in:
+#. "$500.00"
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This will look like '$50', where {currency_symbol} is a symbol
 #. such as '$' and {price} is a
@@ -5775,10 +6600,58 @@ msgid "The registration codes for invoice {0} have been re-activated."
 msgstr "청구서 {0} 에 필요한 가입 코드가 재활성화되었습니다. "
 
 #: lms/djangoapps/instructor/views/api.py
+msgid "CourseID"
+msgstr ""
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "Certificate Type"
+msgstr ""
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "Total Certificates Issued"
+msgstr ""
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "Date Report Run"
+msgstr ""
+
+#: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/tasks_helper.py
 msgid "User ID"
 msgstr "이용자 ID"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the password reset
+#. form meant to hold the user's email address.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the password reset
+#. form meant to hold the user's email address.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the password reset
+#. form meant to hold the user's email address.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the password reset
+#. form meant to hold the user's email address.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the login form
 #. meant to hold the user's email address.
@@ -5807,6 +6680,22 @@ msgstr "지역"
 msgid "Birth Year"
 msgstr "생년월일 "
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's gender.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's gender.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's gender.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's gender.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the user's gender.
@@ -6408,8 +7297,24 @@ msgstr "재채점 되었습니다."
 #. messages as {action}.
 #: lms/djangoapps/instructor_task/tasks.py
 msgid "reset"
-msgstr "재설정"
+msgstr "초기화"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is a past-tense verb that is inserted into task progress
+#. messages as {action}.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is a past-tense verb that is inserted into task progress
+#. messages as {action}.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is a past-tense verb that is inserted into task progress
+#. messages as {action}.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is a past-tense verb that is inserted into task progress
+#. messages as {action}.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
@@ -6483,6 +7388,22 @@ msgstr "제목"
 msgid "Year of Birth"
 msgstr "출생연도"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the country in which the user lives.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the country in which the user lives.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the country in which the user lives.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the country in which the user lives.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the country in which the user lives.
@@ -8146,6 +9067,22 @@ msgstr "접수한 사진 인증"
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is the website name of www.facebook.com.  Please
 #. translate this the way that Facebook advertises in your language.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the website name of www.facebook.com.  Please
+#. translate this the way that Facebook advertises in your language.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the website name of www.facebook.com.  Please
+#. translate this the way that Facebook advertises in your language.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the website name of www.facebook.com.  Please
+#. translate this the way that Facebook advertises in your language.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the website name of www.facebook.com.  Please
+#. translate this the way that Facebook advertises in your language.
 #: lms/envs/common.py lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Facebook"
 msgstr "Facebook"
@@ -8154,6 +9091,22 @@ msgstr "Facebook"
 msgid "Like {platform_name} on Facebook"
 msgstr "Facebook에서 {platform_name} 좋아요하기"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the website name of www.twitter.com.  Please
+#. translate this the way that Twitter advertises in your language.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the website name of www.twitter.com.  Please
+#. translate this the way that Twitter advertises in your language.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the website name of www.twitter.com.  Please
+#. translate this the way that Twitter advertises in your language.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the website name of www.twitter.com.  Please
+#. translate this the way that Twitter advertises in your language.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is the website name of www.twitter.com.  Please
 #. translate this the way that Twitter advertises in your language.
@@ -8533,6 +9486,22 @@ msgstr "미리보기"
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a control to allow users to exit out of this modal
 #. interface (a menu or piece of UI that takes the full focus of the screen)
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a control to allow users to exit out of this modal
+#. interface (a menu or piece of UI that takes the full focus of the screen)
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a control to allow users to exit out of this modal
+#. interface (a menu or piece of UI that takes the full focus of the screen)
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a control to allow users to exit out of this modal
+#. interface (a menu or piece of UI that takes the full focus of the screen)
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a control to allow users to exit out of this modal
+#. interface (a menu or piece of UI that takes the full focus of the screen)
 #: lms/templates/wiki/edit.html lms/templates/wiki/history.html
 #: lms/templates/wiki/includes/cheatsheet.html lms/templates/dashboard.html
 #: lms/templates/forgot_password_modal.html lms/templates/help_modal.html
@@ -8552,6 +9521,22 @@ msgstr "닫기"
 msgid "Wiki Preview"
 msgstr "위키 미리보기"
 
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this text gives status on if the modal interface (a menu or
+#. piece of UI that takes the full focus of the screen) is open or not
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this text gives status on if the modal interface (a menu or
+#. piece of UI that takes the full focus of the screen) is open or not
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this text gives status on if the modal interface (a menu or
+#. piece of UI that takes the full focus of the screen) is open or not
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this text gives status on if the modal interface (a menu or
+#. piece of UI that takes the full focus of the screen) is open or not
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this text gives status on if the modal interface (a menu or
 #. piece of UI that takes the full focus of the screen) is open or not
@@ -8994,6 +9979,30 @@ msgstr "{platform_name} 회원 가입 시 입력한 이메일 주소"
 #. meant to hold the user's password.
 #. Translators: This label appears above a field on the registration form
 #. meant to hold the user's password.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's password.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's password.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's password.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's password.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's password.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's password.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's password.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's password.
 #: openedx/core/djangoapps/user_api/views.py cms/templates/login.html
 #: cms/templates/register.html lms/templates/login.html
 #: lms/templates/provider_login.html lms/templates/register.html
@@ -9023,6 +10032,26 @@ msgstr "{username} 은 이미 사용중인 아이디입니다. 다른 아이디�
 msgid "Jane Doe"
 msgstr "홍길동"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: These instructions appear on the registration form,
+#. immediately
+#. below a field meant to hold the user's full name.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: These instructions appear on the registration form,
+#. immediately
+#. below a field meant to hold the user's full name.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: These instructions appear on the registration form,
+#. immediately
+#. below a field meant to hold the user's full name.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: These instructions appear on the registration form,
+#. immediately
+#. below a field meant to hold the user's full name.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: These instructions appear on the registration form,
 #. immediately
@@ -9058,10 +10087,42 @@ msgstr "최종 학력"
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the user's year of birth.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's year of birth.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's year of birth.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's year of birth.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's year of birth.
 #: openedx/core/djangoapps/user_api/views.py lms/templates/signup_modal.html
 msgid "Year of birth"
 msgstr "출생연도"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's mailing address.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's mailing address.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's mailing address.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's mailing address.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the registration form
 #. meant to hold the user's mailing address.
@@ -9446,6 +10507,18 @@ msgstr "마지막 관리자를 제거할 수 없습니다. 다른 관리자를 �
 
 #. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
 #. Translators: This is the status of an active video upload
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the status of an active video upload
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the status of an active video upload
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the status of an active video upload
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the status of an active video upload
 #: cms/djangoapps/contentstore/views/videos.py cms/templates/import.html
 msgid "Uploading"
 msgstr "업로딩"
@@ -9500,6 +10573,26 @@ msgstr "지속기간"
 msgid "Date Added"
 msgstr "추가된 날짜"
 
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
 #. Translators: This is listed as the duration for a video that has not
 #. yet reached the point in its processing by the servers where its
@@ -9710,6 +10803,7 @@ msgstr "도움말"
 
 #: cms/templates/widgets/header.html lms/templates/navigation-edx.html
 #: lms/templates/navigation.html themes/red-theme/lms/templates/header.html
+#: themes/edx.org/lms/templates/header.html
 msgid "Sign Out"
 msgstr "로그아웃"
 
@@ -9873,7 +10967,7 @@ msgstr "주석 감추기"
 
 #: lms/templates/course.html
 msgid "LEARN MORE"
-msgstr "더 살펴보기"
+msgstr "자세히 알아보기"
 
 #: lms/templates/course.html
 msgid "Starts"
@@ -10045,16 +11139,17 @@ msgstr "퍼즐 순위표"
 msgid "User"
 msgstr "사용자"
 
-#: lms/templates/footer-edx-v3.html
+#: lms/templates/footer-edx-v3.html themes/edx.org/lms/templates/footer.html
 msgid "Page Footer"
 msgstr "꼬릿말"
 
-#: lms/templates/footer-edx-v3.html
+#: lms/templates/footer-edx-v3.html themes/edx.org/lms/templates/footer.html
 msgid "About edX"
 msgstr "edX 소개"
 
 #: lms/templates/footer-edx-v3.html lms/templates/footer.html
 #: themes/red-theme/lms/templates/footer.html
+#: themes/edx.org/lms/templates/footer.html
 msgid "Legal"
 msgstr "법률적"
 
@@ -10130,7 +11225,7 @@ msgid ""
 "will do our best to address your inquiry in any language, our responses will"
 " be in English."
 msgstr ""
-"주의:  {platform_name}지원팀은 영어를 사용합니다. 귀하의 질의에 응답하기위해 최선을 다하겠습니다. 응답은 영어가 "
+"주의:  {platform_name}지원팀은 영어를 사용합니다. 귀하의 질의에 응답하기 위해 최선을 다하겠습니다. 응답은 영어가 "
 "사용됩니다."
 
 #: lms/templates/help_modal.html
@@ -10490,31 +11585,35 @@ msgstr ""
 msgid "Raw data:"
 msgstr "원자료:"
 
-#: lms/templates/navigation-edx.html
+#: lms/templates/navigation-edx.html themes/edx.org/lms/templates/header.html
 msgid "Home Page"
 msgstr "홈페이지"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 #: themes/red-theme/lms/templates/header.html
+#: themes/edx.org/lms/templates/header.html
 msgid "How it Works"
 msgstr "동작 원리"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 #: themes/red-theme/lms/templates/header.html
+#: themes/edx.org/lms/templates/header.html
 msgid "Find Courses"
 msgstr "강좌 찾기"
 
-#: lms/templates/navigation-edx.html
+#: lms/templates/navigation-edx.html themes/edx.org/lms/templates/header.html
 msgid "Schools & Partners"
 msgstr "대학교 및 협력기관"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 #: themes/red-theme/lms/templates/header.html
+#: themes/edx.org/lms/templates/header.html
 msgid "Dashboard for:"
 msgstr "대시보드:"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 #: themes/red-theme/lms/templates/header.html
+#: themes/edx.org/lms/templates/header.html
 msgid "More options dropdown"
 msgstr "더 많은 평가 기준 드롭 다운"
 
@@ -10525,21 +11624,24 @@ msgstr "프로필"
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 #: lms/templates/shoppingcart/shopping_cart.html
 #: themes/red-theme/lms/templates/header.html
+#: themes/edx.org/lms/templates/header.html
 msgid "Shopping Cart"
 msgstr "장바구니"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 #: themes/red-theme/lms/templates/header.html
+#: themes/edx.org/lms/templates/header.html
 msgid "Sign in"
 msgstr "로그인"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
-#: lms/templates/register.html
+#: lms/templates/register.html themes/edx.org/lms/templates/header.html
 msgid "Register"
 msgstr "가입하기 "
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 #: themes/red-theme/lms/templates/header.html
+#: themes/edx.org/lms/templates/header.html
 msgid ""
 "<strong>Warning:</strong> Your browser is not fully supported. We strongly "
 "recommend using {chrome_link} or {ff_link}."
@@ -10575,7 +11677,7 @@ msgstr "힌트"
 
 #: lms/templates/problem.html lms/templates/shoppingcart/shopping_cart.html
 msgid "Reset"
-msgstr "재설정"
+msgstr "초기화"
 
 #: lms/templates/problem.html lms/templates/word_cloud.html
 #: lms/templates/combinedopenended/openended/open_ended.html
@@ -10776,7 +11878,7 @@ msgstr " {username} 님 안녕하세요!"
 
 #: lms/templates/register.html
 msgid "Enter a Public Display Name:"
-msgstr "공개 사용자명을 입력하세요:"
+msgstr "ID를 입력하세요."
 
 #: lms/templates/register.html
 msgid "Public Display Name"
@@ -10924,7 +12026,7 @@ msgstr "행동들"
 #: lms/templates/staff_problem_info.html
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Reset Student Attempts"
-msgstr "학습자 시도 재설정"
+msgstr "문제 풀이 횟수 설정 초기화"
 
 #: lms/templates/staff_problem_info.html
 msgid "Delete Student State"
@@ -11008,7 +12110,7 @@ msgstr "이메일 또는 아이디"
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "Delete user"
-msgstr "사용자명 삭제"
+msgstr "ID 삭제"
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "Create user"
@@ -11655,7 +12757,7 @@ msgid "Invalid Certificate Configuration."
 msgstr ""
 
 #: lms/templates/certificates/server-error.html
-msgid "There is a problem with this certificate on {platform_name}"
+msgid "There is a problem with this certificate."
 msgstr ""
 
 #: lms/templates/certificates/server-error.html
@@ -12724,27 +13826,34 @@ msgstr "이용가능한 액션"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
-"Are you sure you want to unenroll from the purchased course "
-"%(course_number)s?"
-msgstr "구매하신 %(course_number)s? 강좌에서 수강 취소를 원하는 것이 분명합니까?"
+"Are you sure you want to unenroll from the purchased course %(course_name)s "
+"($(course_number)s)?"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You will be refunded the amount you paid."
 msgstr "결제한 금액을 환불해 드릴것입니다."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
+msgid ""
+"Are you sure you want to unenroll from the purchased course %(course_name)s "
+"(%(course_number)s)?"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You will not be refunded the amount you paid."
 msgstr "결제한 금액을 환불해드리지 않을 것입니다. "
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-msgid "Are you sure you want to unenroll from %(course_number)s?"
-msgstr "%(course_number)s 수강을 취소하시겠습니까? "
+msgid ""
+"Are you sure you want to unenroll from %(course_name)s (%(course_number)s)?"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
-"Are you sure you want to unenroll from the verified {cert_name_long} track "
-"of %(course_number)s?"
-msgstr "%(course_number)s의 인증 {cert_name_long} 트랙을 수강취소 하시겠습니까?"
+"Are you sure you want to unenroll from the verified %(cert_name_long)s track"
+" of %(course_name)s (%(course_number)s)?"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
@@ -12805,27 +13914,21 @@ msgstr ""
 "재인증{end_link} 을 하세요. "
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-msgid "Challenge Yourself!"
-msgstr "자신에 도전하세요!"
-
-#: lms/templates/dashboard/_dashboard_course_listing.html
-msgid "Take this course as an ID-verified student."
-msgstr "ID인증 학습자로서 이 강좌를 수강합니다."
+msgid ""
+"Pursue a {cert_name_long} to highlight the knowledge and skills you gain in "
+"this course."
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
-"You can still sign up for an ID verified {cert_name_long} for this course. "
-"If you plan to complete the whole course, it is a great way to recognize "
-"your achievement. {link_start}Learn more about the verified "
+"It's official. It's easily shareable. It's a proven motivator to complete "
+"the course. <br>{link_start}Learn more about the verified "
 "{cert_name_long}{link_end}."
 msgstr ""
-"지금도 이 강좌의 ID 인증 {cert_name_long}에 등록할 수 있습니다. 전체 차시를 다 수강할 계획이 있다면, 귀하의 성취를 "
-"인정받을 좋은 방법입니다. {link_start} 인증{cert_name_long}에 대해 더 알고 싶으면 여기를 "
-"클릭하세요.{link_end}."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-msgid "Upgrade to Verified Track"
-msgstr "인증 유형으로 업그레이드하기"
+msgid "Upgrade to Verified"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
@@ -14134,6 +15237,18 @@ msgid "Download a CSV of problem responses"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Click to list certificates that are issued for this course:"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "View Certificates Issued"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Download CSV of Certificates Issued"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid ""
 "For smaller courses, click to list profile information for enrolled students"
 " directly on this page:"
@@ -14150,7 +15265,7 @@ msgstr "현재 수강신청한 전체 학습자에 대한 CSV 성적 보고서 �
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Generate Grade Report"
-msgstr "평가리포트 생성"
+msgstr "성적 보고서 생성"
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Generate Problem Grade Report"
@@ -14158,7 +15273,7 @@ msgstr "성적 보고서 생성 오류"
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Reports Available for Download"
-msgstr "보고서 다운로드"
+msgstr "다운로드 가능한 보고서"
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid ""
@@ -15260,7 +16375,7 @@ msgstr "학습자 사전 평가와 관련해서 선택해 주세요. 선택 결�
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Reset Number of Student Attempts"
-msgstr "학습자 응시 횟수 초기화"
+msgstr "문제 풀이 횟수 초기화"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Rescore All Problems"
@@ -15431,9 +16546,9 @@ msgstr ""
 "\n"
 "{p_tag} 진행중인 상호 평가가 없습니다. 상호평가를 위해\n"
 "{ul_tag}\n"
-"{li_tag} 문제의 답안을 제출해야 합니다.{end_li_tag}\n"
-"{li_tag} 귀하가 채점 항목을 더욱 잘 이해하실 수 있도록,  강좌 운영팀이 에세이에 점수를 매겨야 합니다. {end_li_tag}\n"
-"{li_tag} 채점 대기 중인 제출이 있을 것입니다. {end_li_tag}\n"
+"{li_tag} 문제에 대한 응답을 제출해야 합니다.{end_li_tag}\n"
+"{li_tag} 귀하가 채점 항목을 더욱 잘 이해하실 수 있도록,  강좌 운영팀이 먼저 에세이에 점수를 매겨야 합니다. {end_li_tag}\n"
+"{li_tag} 채점 대기 중인 응답이 있을 것입니다. {end_li_tag}\n"
 "{end_ul_tag}\n"
 "{end_p_tag}\n"
 
@@ -16100,6 +17215,7 @@ msgstr "현재 {platform_name}  서버가 과부하 상태 입니다."
 
 #: lms/templates/student_account/account_settings.html
 #: themes/red-theme/lms/templates/header.html
+#: themes/edx.org/lms/templates/header.html
 msgid "Account Settings"
 msgstr "계정 설정"
 
@@ -16335,6 +17451,7 @@ msgid ""
 msgstr ""
 
 #: themes/red-theme/lms/templates/header.html
+#: themes/edx.org/lms/templates/header.html
 msgid "My Profile"
 msgstr "내 프로필"
 
@@ -18140,7 +19257,7 @@ msgstr "첫 강좌를 만듭니다."
 
 #: cms/templates/index.html
 msgid "Your new course is just a click away!"
-msgstr "새 강좌를 클릭 하나로 만들 수 있습니다."
+msgstr "새 강좌를 클릭 한 번으로 만들 수 있습니다."
 
 #: cms/templates/index.html
 msgid "Becoming a Course Creator in {studio_name}"
@@ -19038,7 +20155,7 @@ msgstr "마감일이 지난 이후에, 학습자가 제출할 수 있는 기간�
 
 #: cms/templates/settings_graders.html
 msgid "Assignment Types"
-msgstr "과제명"
+msgstr "과제 유형"
 
 #: cms/templates/settings_graders.html
 msgid "Categories and labels for any exercises that are gradable"
@@ -20100,3 +21217,194 @@ msgid ""
 "A new revision was created: Merge between Revision #%(r1)d and Revision "
 "#%(r2)d"
 msgstr "새로운 수정본 생성: 수정본 #%(r1)d 과 수정본 #%(r2)d 의 병합"
+
+#. Translators: 'Other' refers to the student's gender
+#. Translators: 'Other' refers to the student's level of education
+#: common/djangoapps/student/models.py
+msgid "Other"
+msgstr "기타"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid "Challenge Yourself!"
+msgstr "자신에 도전하세요!"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid "Take this course as an ID-verified student."
+msgstr "ID인증 학습자로서 이 강좌를 수강합니다."
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid ""
+"You can still sign up for an ID verified {cert_name_long} for this course. "
+"If you plan to complete the whole course, it is a great way to recognize "
+"your achievement. {link_start}Learn more about the verified "
+"{cert_name_long}{link_end}."
+msgstr ""
+"지금도 이 강좌의 ID 인증 {cert_name_long}에 등록할 수 있습니다. 전체 차시를 다 수강할 계획이 있다면, 귀하의 성취를 "
+"인정받을 좋은 방법입니다. {link_start} 인증{cert_name_long}에 대해 더 알고 싶으면 여기를 "
+"클릭하세요.{link_end}."
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid "Upgrade to Verified Track"
+msgstr "인증 유형으로 업그레이드하기"
+
+#: lms/djangoapps/instructor/paidcourse_enrollment_report.py
+msgid ""
+"manually enrolled by user_id {user_id}, enrollment state transition: "
+"{transition}"
+msgstr ""
+"user_id {user_id}, enrollment state transition: {transition} 로 수강등록 수작업"
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid ""
+"\n"
+"                We're sorry, %(platform_name)s enrollment is not available in your region\n"
+"            "
+msgstr ""
+"\n"
+"죄송합니다. 당신이 계신 지역에서는 %(platform_name)s 등록이 가능하지 않습니다."
+
+#: lms/templates/register-shib.html lms/templates/register.html
+msgid ""
+"We're sorry, {platform_name} enrollment is not available in your region"
+msgstr "죄송합니다.  {platform_name}에 등록이 당신이 계신 지역에서는 가능하지 않습니다."
+
+#: lms/templates/courseware/course_about.html
+msgid ""
+"The currently logged-in user account does not have permission to enroll in "
+"this course. You may need to {start_logout_tag}log out{end_tag} then try the"
+" register button again. Please visit the {start_help_tag}help page{end_tag} "
+"for a possible solution."
+msgstr ""
+"현재 로그인된 사용자 게정은 본 강좌에 수강신청이 허용되지 않습니다.  {start_logout_tag}로그아웃{end_tag}후에 "
+"사용자 등록 버튼을 클릭해야 합니다.  해결방법으로 {start_help_tag}도움말{end_tag} 페이지를 방문하세요. "
+
+#: lms/templates/courseware/course_about.html
+msgid "Tweet that you've registered for this course"
+msgstr "본 강좌에 등록한 것을 Twitter에 알려보세요."
+
+#: lms/templates/courseware/course_about.html
+msgid "Email someone to say you've registered for this course"
+msgstr "이 강좌에 등록했음을 누군가에게 이메일하세요"
+
+#: lms/templates/courseware/course_about.html
+msgid "I just registered for {number} {title} through {platform} {url}"
+msgstr "{number} {title} through {platform}: {url} 로 방금 등록 완료"
+
+#: lms/templates/courseware/course_about.html
+msgid "Post a Facebook message to say you've registered for this course"
+msgstr "당신이 본 강좌에 등록했음을 Facebook에 게시하세요."
+
+#: lms/templates/credit_notifications/credit_eligibility_email.html
+msgid ""
+"To get course credit, simply go to your {link_start}{platform_name} "
+"dashboard{link_end} and click the <b>Get Credit</b> button. No application, "
+"transcript, or grade report is required."
+msgstr ""
+"학점을 받기 위해  {link_start}{platform_name} 대시보드{link_end}  및  <b>학점 얻기</b>버튼을 "
+"누르세요. 지원서, 성적증명서가 필요하지 않습니다. "
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid ""
+"Are you sure you want to unenroll from the purchased course "
+"%(course_number)s?"
+msgstr "구매하신 %(course_number)s? 강좌에서 수강 취소를 원하는 것이 분명합니까?"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid "Are you sure you want to unenroll from %(course_number)s?"
+msgstr "%(course_number)s 수강을 취소하시겠습니까? "
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid ""
+"Are you sure you want to unenroll from the verified {cert_name_long} track "
+"of %(course_number)s?"
+msgstr "%(course_number)s의 인증 {cert_name_long} 트랙을 수강취소 하시겠습니까?"
+
+#: lms/templates/dashboard/_dashboard_credit_info.html
+msgid "You are now eligible for credit. <b>Congratulations!</b>"
+msgstr "<b>축하합니다.</b> 학점을 받을 자격이 됩니다. "
+
+#: lms/templates/dashboard/_dashboard_credit_info.html
+msgid "Get credit"
+msgstr "학점 얻기"
+
+#. Translators: link_to_provider_site is a link to an external webpage. The
+#. text of the link will be the name of a
+#. credit provider, such as 'State University' or 'Happy Fun Company'
+#: lms/templates/dashboard/_dashboard_credit_info.html
+msgid ""
+"Thank you. Your credit is processing. Please see {link_to_provider_site} for"
+" more information."
+msgstr "감사합니다. 학점이 처리중입니다. 조금더 살펴보기 위해 {link_to_provider_site}를 보세요."
+
+#: lms/templates/dashboard/_dashboard_credit_info.html
+msgid "Learn more"
+msgstr "더 살펴보기"
+
+#. Translators: link_to_provider_site is a link to an external webpage. The
+#. text of the link will be the name of a
+#. credit provider, such as 'State University' or 'Happy Fun Company'
+#: lms/templates/dashboard/_dashboard_credit_info.html
+msgid ""
+"Thank you for your purchase. Please proceed to {link_to_provider_site} to "
+"finalize your credit."
+msgstr "구매에 감사드립니다. 학점을 마무리하기 위해 {link_to_provider_site} 로 이동하세요."
+
+#: lms/templates/dashboard/_dashboard_credit_info.html
+msgid "Finalize credit"
+msgstr "학점 완료하기"
+
+#. Translators: link_to_provider_site is a link to an external webpage. The
+#. text of the link will be the name of a
+#. credit provider, such as 'State University' or 'Happy Fun Company'
+#: lms/templates/dashboard/_dashboard_credit_info.html
+msgid ""
+"Your credit has been processed and approved. <b>Congratulations!</b>. Please"
+" see {link_to_provider_site} for more information."
+msgstr ""
+"<b>축하합니다! credit이 승인되었습니다.</b>  {link_to_provider_site}에서 더 자세한 정보를 얻을 수 "
+"있습니다."
+
+#: lms/templates/dashboard/_dashboard_credit_info.html
+msgid "Access credit"
+msgstr "credit 액세스"
+
+#. Translators: link_to_provider_site is a link to an external webpage. The
+#. text of the link will be the name of a
+#. credit provider, such as 'State University' or 'Happy Fun Company'
+#: lms/templates/dashboard/_dashboard_credit_info.html
+msgid ""
+"Your credit has been processed but denied. Please contact "
+"{link_to_provider_site} for more information."
+msgstr "학점이 처리되었으나 거부되었습니다. 추가된 정보를 위해 {link_to_provider_site}로 연락하세요."
+
+#: lms/templates/dashboard/_dashboard_credit_info.html
+msgid "Contact {provider}"
+msgstr "{provider}로 연락하세요."
+
+#: cms/templates/videos_index.html
+msgid ""
+"After a file uploads successfully, automated processing begins. After "
+"automated processing begins for a file it is listed under Previous Uploads "
+"as {em_start}In Progress{em_end}. You can add the video to your course as "
+"soon as it has a unique video ID and the status is {em_start}Ready{em_end}. "
+"Allow 24 hours for file processing at the external video hosting sites to "
+"complete."
+msgstr ""
+"파일이 성공적으로 업로드되면, 자동화된 프로세스가 시작됩니다. 파일의 자동화된 프로세스가 시작된 후,  {em_start} "
+"진행중{em_end} 상태일 때 파일은 이전 업로드 목록에 놓이게 됩니다. 고유 동영상 ID를 갖고 {em_start}준비{em_end}"
+" 상태일 때, 귀하는 동영상을 강좌에 추가할 수 있습니다. 외부 동영상 호스팅 사이트의 처리 완료에는 24시간이 걸립니다."
+
+#: cms/templates/videos_index.html
+msgid ""
+"As soon as the status for a file is {em_start}Ready{em_end}, you can add "
+"that video to a component in your course. Copy the unique video ID. In "
+"another browser window, on the Course Outline page, create or locate a video"
+" component to play this video. Edit the video component to paste the ID into"
+" the Advanced {em_start}Video ID{em_end} field. The video can play in the "
+"LMS as soon as its status is {em_start}Ready{em_end}, although processing "
+"may not be complete for all encodings and all video hosting sites."
+msgstr ""
+"파일의 상태가 {em_start}준비{em_end}가 되자마자, 동영상을 강좌의 구성요소에 추가할 수 있습니다. 동영상 고유 ID를 "
+"복사하세요.  새 창에서 강좌 개요 페이지를 연 다음, 동영상 구성요소를 생성해 동영상을 재생할 수 있도록 합니다. ID를 고급 "
+"{em_start} 동영상 ID {em_end} 필드에 넣기 위해 동영상 구성요소를 수정하세요. 인코딩과 모든 동영상 호스팅 사이트가 "
+"마무리되지 않았더라도, {em_start}준비{em_end} 상태가 되자마자  동영상은 LMS에서 재생될 수 있습니다.  "

@@ -1,0 +1,397 @@
+# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2013 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Translators:
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: kmooc-platform\n"
+"Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+"POT-Creation-Date: 2015-07-06 12:02+0000\n"
+"PO-Revision-Date: 2015-09-30 05:25+0000\n"
+"Last-Translator: Hongseob Lee <shevious@gmail.com>\n"
+"Language-Team: English (http://www.transifex.com/k-mooc/kmooc-platform/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the city in which they live.
+#: lms/djangoapps/instructor_task/tasks_helper.py
+#: openedx/core/djangoapps/user_api/views.py lms/templates/register.html
+#: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
+#: lms/templates/shoppingcart/receipt.html
+msgid "City"
+msgstr "City"
+
+#: lms/templates/emails/activation_email_subject.txt
+msgid "Activate Your {platform_name} Account"
+msgstr "Activate Your {platform_name} Account"
+
+#: lms/templates/emails/activation_email.txt
+msgid ""
+"Change your life and start learning today by activating your {platform_name}"
+" account. Click on the link below or copy and paste it into your browser's "
+"address bar."
+msgstr "Change your life and start learning today by activating your {platform_name} account. Click on the link below or copy and paste it into your browser's address bar."
+
+#: lms/templates/emails/activation_email.txt
+msgid ""
+"If you didn't request this, you don't need to do anything; you won't receive"
+" any more email from us. Please do not reply to this e-mail; if you require "
+"assistance, check the help section of the {platform_name} website."
+msgstr "If you didn't request this, you don't need to do anything; you won't receive any more email from us. Please do not reply to this e-mail; if you require assistance, check the help section of the {platform_name} website."
+
+msgid "Up one level"
+msgstr "Up one level"
+
+msgid "There are no articles in this level"
+msgstr "There are no articles in this level"
+
+#. Translators: This is a legal document users must agree to
+#. in order to register a new account.
+#: openedx/core/djangoapps/user_api/views.py
+msgid "Terms of Service and Honor Code"
+msgstr ""
+
+#: openedx/core/djangoapps/user_api/views.py
+msgid "Agreement"
+msgstr ""
+
+#: openedx/core/djangoapps/user_api/views.py
+msgid "Privacy"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "Current Courses"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "Register for {course_name}"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "You are registered for this course"
+msgstr ""
+
+msgid "Blank Common Problem"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "I just registered for {number} {title} through {account}: {url}"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/capa_base.py:1427
+msgid ""
+"Your answers have been saved but not graded. Click 'Check' to grade them."
+msgstr ""
+
+#: lms/templates/discussion/_underscore_templates.html:412
+msgid "Add a clear and descriptive title to encourage participation."
+msgstr ""
+
+#: common/djangoapps/student/views.py
+msgid ""
+"This account has been temporarily locked due to excessive login failures. "
+"Try again later."
+msgstr ""
+
+#: lms/templates/discussion/_underscore_templates.html:463
+msgid ""
+"Questions raise issues that need answers. Discussions share ideas and start "
+"conversations."
+msgstr ""
+
+#: lms/templates/discussion/_underscore_templates.html:499
+msgid "Add your post to a relevant topic to help others find it."
+msgstr ""
+
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the password reset
+#. form meant to hold the user's email address.
+#: lms/djangoapps/instructor/views/api.py
+#: lms/djangoapps/instructor/views/instructor_dashboard.py
+#: openedx/core/djangoapps/user_api/views.py
+#: lms/templates/courseware/legacy_instructor_dashboard.html
+#: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
+msgid "Email"
+msgstr ""
+
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's full name.
+#: lms/djangoapps/instructor/views/legacy.py
+#: openedx/core/djangoapps/user_api/views.py
+msgid "Full name"
+msgstr ""
+
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's public username.
+#: openedx/core/djangoapps/user_api/views.py
+msgid "Public username"
+msgstr ""
+
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's password.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's password.
+#: openedx/core/djangoapps/user_api/views.py cms/templates/login.html
+#: cms/templates/register.html lms/templates/login.html
+#: lms/templates/provider_login.html lms/templates/register.html
+#: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
+msgid "Password"
+msgstr ""
+
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the country in which the user lives.
+#: lms/djangoapps/instructor_task/tasks_helper.py
+#: openedx/core/djangoapps/user_api/views.py lms/templates/register.html
+#: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
+#: lms/templates/shoppingcart/receipt.html
+msgid "Country"
+msgstr ""
+
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's gender.
+#: lms/djangoapps/instructor/views/api.py
+#: lms/djangoapps/instructor_task/tasks_helper.py
+#: openedx/core/djangoapps/user_api/views.py lms/templates/register.html
+#: lms/templates/signup_modal.html
+msgid "Gender"
+msgstr ""
+
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's highest completed level of education.
+#: openedx/core/djangoapps/user_api/views.py
+msgid "Highest level of education completed"
+msgstr ""
+
+#: openedx/core/djangoapps/user_api/views.py
+msgid "Tell us why you're interested in {platform_name}"
+msgstr ""
+
+#: lms/djangoapps/instructor_task/tasks_helper.py lms/templates/register.html
+msgid "Year of Birth"
+msgstr ""
+
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's year of birth.
+#: openedx/core/djangoapps/user_api/views.py lms/templates/signup_modal.html
+msgid "Year of birth"
+msgstr ""
+
+#. Translators: a table of URL links to report files appears after this
+#. sentence.
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid ""
+"<b>Note</b>: To keep student data secure, you cannot save or email these "
+"links for direct access. Copies of links expire within 5 minutes."
+msgstr ""
+
+#. Translators: 'track' refers to the enrollment type ('honor', 'verified', or
+#. 'audit')
+#: lms/templates/instructor/instructor_dashboard_2/course_info.html:10
+msgid ""
+"Number of enrollees (instructors, staff members, and students) by track"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:117
+msgid ""
+"Note: Users must have an activated {platform_name} account before they can "
+"be enrolled as a beta tester."
+msgstr ""
+
+#. Translators: an "Administration List" is a list, such as Course Staff, that
+#. users can be added to.
+#: lms/templates/instructor/instructor_dashboard_2/membership.html
+msgid "Administration List Management"
+msgstr ""
+
+#. Translators: an "Administrator Group" is a group, such as Course Staff,
+#. that
+#. users can be added to.
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:165
+msgid "Select an Administrator Group:"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:186
+msgid ""
+"Course staff can help you manage limited aspects of your course. Staff can "
+"enroll and unenroll students, as well as modify their grades and see all "
+"course data. Course staff are not automatically given access to Studio and "
+"will not be able to edit your course."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:197
+msgid "Instructors"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:199
+msgid ""
+"Instructors are the core administration of your course. Instructors can add "
+"and remove course staff, as well as administer discussion access."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:210
+msgid ""
+"Beta testers can see course content before the rest of the students. They "
+"can make sure that the content works, but have no additional privileges."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:236
+msgid ""
+"Discussion admins can edit or delete any post, clear misuse flags, close"
+" and re-open threads, endorse responses, and see posts from all cohorts. "
+"They CAN add/delete other moderators and their posts are marked as "
+"'staff'."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:236
+msgid ""
+"Discussion moderators can edit or delete any post, clear misuse flags, close"
+" and re-open threads, endorse responses, and see posts from all cohorts. "
+"They CANNOT add/delete other moderators and their posts are marked as "
+"'staff'."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:248
+msgid ""
+"Community TA's are members of the community whom you deem particularly "
+"helpful on the discussion boards. They can edit or delete any post, clear "
+"misuse flags, close and re-open threads, endorse responses, and see posts "
+"from all cohorts. Their posts are marked 'Community TA'."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/student_admin.html:81
+#: lms/templates/instructor/instructor_dashboard_2/student_admin.html:122
+msgid ""
+"Rescoring runs in the background, and status for active tasks will appear in"
+" the 'Pending Instructor Tasks' table. To see status for all tasks submitted"
+" for this problem and student, click on this button:"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/instructor_analytics.html:57
+msgid "Gender Distribution"
+msgstr ""
+
+#: ./edxapp/src/django-wiki/wiki/templates/wiki/permission_denied.html:
+msgid "Sorry, you don't have permission to view this page."
+msgstr ""
+
+#: ./edxapp/src/django-wiki/wiki/templates/wiki/permission_denied.html:
+msgid "Permission Denied" 
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:13
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:15
+msgid "Staff and instructors"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:18
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:20
+msgid "All (students, staff and instructors)"
+msgstr ""
+
+#: lms/djangoapps/instructor_analytics/distributions.py
+msgid "No Data"
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html:25
+msgid "Specify the number of peer assessments that each student must complete."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit.html:135
+msgid ""
+"Specify the number of top-scoring responses to display. If the number is 0, "
+"the Top Responses section won't appear to students."
+msgstr ""
+
+#: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html:32
+msgid "Specify the number of students who must assess each response."
+msgstr ""
+
+#. Translators: The &amp; characters represent an ampersand character and can
+#. be ignored
+#: lms/djangoapps/certificates/views/webview.py
+msgid "Terms of Service &amp; Honor Code"
+msgstr ""
+
+#: cms/templates/certificates.html:68
+msgid ""
+"Upon successful completion of your course, learners receive a certificate to"
+" acknowledge their accomplishment. If you are a course team member with the "
+"Admin role in Studio, you can configure your course certificate."
+msgstr ""
+
+#: cms/templates/certificates.html:69
+msgid ""
+"Click {em_start}Add your first certificate{em_end} to add a certificate "
+"configuration. Upload the organization logo to be used on the certificate, "
+"and specify at least one signatory. You can include up to four signatories "
+"for a certificate. You can also upload a signature image file for each "
+"signatory. {em_start}Note:{em_end} Signature images are used only for "
+"verified certificates. Optionally, specify a different course title to use "
+"on your course certificate. You might want to use a different title if, for "
+"example, the official course name is too long to display well on a "
+"certificate."
+msgstr ""
+
+#: cms/templates/certificates.html:70
+msgid ""
+"Select a course mode and click {em_start}Preview Certificate{em_end} to "
+"preview the certificate that a learner in the selected enrollment track "
+"would receive. When the certificate is ready for issuing, click "
+"{em_start}Activate.{em_end} To stop issuing an active certificate, click "
+"{em_start}Deactivate{em_end}."
+msgstr ""
+
+#: cms/templates/certificates.html:71
+msgid ""
+" To edit the certificate configuration, hover over the top right corner of "
+"the form and click {em_start}Edit{em_end}. To delete a certificate, hover "
+"over the top right corner of the form and click the delete icon. In general,"
+" do not delete certificates after a course has started, because some "
+"certificates might already have been issued to learners."
+msgstr ""

@@ -327,7 +327,7 @@ from django_comment_client.permissions import has_permission
             <td class="row-title">게시물 찾기</td>
             <td class="row-item">
               <i class="icon fa fa-reorder"></i>
-              <span class="row-description">특정 주제 주목</span>
+              <span class="row-description">${_("Focus in on specific topics")}</span>
             </td>
             <td class="row-item">
               <i class="icon fa fa-search"></i>
@@ -335,14 +335,14 @@ from django_comment_client.permissions import has_permission
             </td>
             <td class="row-item">
               <i class="icon fa fa-sort"></i>
-              <span class="row-description">날짜, 투표 또는 댓글 기준으로 정렬</span>
+              <span class="row-description">${_("Sort by date, vote, or comments")}</span>
             </td>
           </tr>
           <tr class="helpgrid-row helpgrid-row-participation">
             <td class="row-title">게시물에 참여</td>
             <td class="row-item">
               <i class="icon fa fa-plus"></i>
-              <span class="row-description">추천하기 그리고 답변하기</span>
+              <span class="row-description">${_("Upvote posts and good responses")}</span>
             </td>
             <td class="row-item">
               <i class="icon fa fa-flag"></i>
@@ -350,7 +350,7 @@ from django_comment_client.permissions import has_permission
             </td>
             <td class="row-item">
               <i class="icon fa fa-star"></i>
-              <span class="row-description">관심 게시물로 지정하기</span>
+              <span class="row-description">${_("Follow posts for updates")}</span>
             </td>
           </tr>
           <tr class="helpgrid-row helpgrid-row-notification">
@@ -363,7 +363,7 @@ from django_comment_client.permissions import has_permission
                   <i class="icon fa fa-envelope"></i>
                 </span>
               </label>
-              <span class="row-description">이 체크박스를 체크하시면 관심글에 해당하는 읽지않은 글, 새로운 글에 대해서 이메일로 업데이트 알림을 받으실수 있습니다.</span>
+              <span class="row-description">${_("Check this box to receive an email digest once a day notifying you about new, unread activity from posts you are following.")}</span>
             </td>
           </tr>
         </table>
@@ -409,7 +409,7 @@ from django_comment_client.permissions import has_permission
                 <span class="sr">${_("Title:")}</span>
                 <input aria-describedby="field_help_title" type="text" class="field-input js-post-title" name="title" placeholder="${_('Title')}">
             </label><span class="field-help" id="field_help_title">
-                참여를 장려하기 위해 명확하고 설명 제목을 추가합니다.
+                ${_("Add a clear and descriptive title to encourage participation.")}
             </span>
         </div>
         <div class="post-field js-post-body editor" name="body" data-placeholder="질문 또는 댓글을 입력하세요."></div>
@@ -460,7 +460,7 @@ from django_comment_client.permissions import has_permission
                 </label>
             </fieldset>
         </div><span class="field-help" id="field_help_post_type">
-            질문하세요. 토론은 아이디어를 공유하고 대화를 시작합니다.
+            ${_("Questions raise issues that need answers. Discussions share ideas and start conversations.")}
         </span>
     </div>
 </script>
@@ -496,7 +496,7 @@ from django_comment_client.permissions import has_permission
            </div>
        </div>
     </div><span class="field-help" id="field_help_topic_area">
-        다른 사람들이 그것을 찾을수 있도록 관련 주제에 게시물을 추가합니다.
+        ${_("Add your post to a relevant topic to help others find it.")}
     </span>
 </script>
 
@@ -517,7 +517,7 @@ from django_comment_client.permissions import has_permission
 
 ${primaryAction("endorse", "check", _("Endorse"), _("Endorse"), _("Unendorse"))}
 ${primaryAction("answer", "check", _("Mark as Answer"), _("Mark as Answer"), _("Unmark as Answer"))}
-${primaryAction("follow", "star", _("Follow"), _("Follow"), _(u"팔로우 취소"))}
+${primaryAction("follow", "star", _("Follow"), _("Follow"), _(u"Unfollow"))}
 
 <script type="text/template" id="forum-action-vote">
     <li class="actions-item">

@@ -78,6 +78,7 @@ define([
         displayName: function(name, term){
             if(this.facetsTypes.hasOwnProperty(name)) {
                 if(term) {
+
                     if (typeof this.facetsTypes[name].terms !== 'undefined') {
                         return this.facetsTypes[name].terms.hasOwnProperty(term) ? this.facetsTypes[name].terms[term] : term;
                     }
@@ -100,14 +101,19 @@ define([
                 }
             }
             else{
-                //return term ? term : name;
-                var arrWords = [ ['khuk','koreaunivk', 'pnuk', 'snuk', 'skkuk', 'ysuk', 'ewhak', 'postechk', 'kaistk', 'hyuk', 'kmooc'],
-                ['경희대학교','고려대학교','부산대학교','서울대학교','성균관대학교','연세대학교','이화여자대학교','포항공과대학교','한국과학기술원','한양대학교', 'K-MOOC'] ];
-                for (var i=0; i < arrWords[0].length; i++) {
-                    if (term == arrWords[0][i]) {
-                        return arrWords[1][i];
+                if (term) {
+                    var arrWords = [ ['khuk','koreaunivk', 'pnuk', 'snuk', 'skkuk', 'ysuk', 'ewhak', 'postechk', 'kaistk', 'hyuk', 'kmooc'],
+                    ['경희대학교','고려대학교','부산대학교','서울대학교','성균관대학교','연세대학교','이화여자대학교','포항공과대학교','한국과학기술원','한양대학교', 'K-MOOC'] ];
+                    for (var i=0; i < arrWords[0].length; i++) {
+                        if (term == arrWords[0][i]) {
+                            return arrWords[1][i];
+                        }
                     }
                 }
+                else {
+                    return '기관명';
+                }
+
             }
         },
 

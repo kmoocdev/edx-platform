@@ -43,6 +43,8 @@ conf/locale/en/LC_MESSAGES/*.mo
 conf/locale/fake*/LC_MESSAGES/*.po
 conf/locale/fake*/LC_MESSAGES/*.mo
 conf/locale/messages.mo
+!conf/locale/en/LC_MESSAGES/kmooc.po
+!conf/locale/en/LC_MESSAGES/kmoocjs.po
 
 ### Testing artifacts
 .testids/
