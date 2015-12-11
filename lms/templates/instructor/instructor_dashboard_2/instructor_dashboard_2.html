@@ -145,7 +145,7 @@ from django.core.urlresolvers import reverse
 </div>
 
 <div class="student-specific-container action-type-container">
-  <h2>표절검사 수행 </h2>
+  <h2>표절검사 수행</h2>
   <div class="request-response-error"></div>
   <br>
   <label>
@@ -183,7 +183,11 @@ from django.core.urlresolvers import reverse
   <h2>검사 진행상태</h2>
   <div class="request-response-error"></div>
   <label>
+    %if is_assessment_ing:
+  <input type="text" id="copykiller_status" name="problem-select-single" size="30" value="표절검사가 진행중입니다." disabled>
+    %else:
   <input type="text" id="copykiller_status" name="problem-select-single" size="30" value="현재 진행중인 작업이 없습니다." disabled>
+    %endif
   </label>
   <hr>
 </div>

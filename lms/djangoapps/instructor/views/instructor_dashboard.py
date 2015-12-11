@@ -160,7 +160,8 @@ def instructor_dashboard_2(request, course_id):
         'sections': sections,
         'disable_buttons': disable_buttons,
         'analytics_dashboard_message': analytics_dashboard_message,
-        'is_assessment': check_assessment(course.wiki_slug)
+        'is_assessment': check_assessment(course.wiki_slug),
+        'is_assessment_ing' : check_assessment_ing(course_key.course)
     }
 
     return render_to_response('instructor/instructor_dashboard_2/instructor_dashboard_2.html', context)
@@ -186,6 +187,17 @@ def check_assessment(active_versions_key):
             is_assessment = True
 
     return is_assessment
+
+
+def check_assessment_ing(course_id):
+    con = mdb.connect(settings.DATABASES.get('default').get('HOST'), settings.DATABASES.get('default').get('USER'), settings.DATABASES.get('default').get('PASSWORD'), settings.DATABASES.get('default').get('NAME'));
+    cur = con.cursor()
+    query = "select class_id from vw_copykiller where class_id = '"+course_id+"'"
+    cur.execute(query)
+    if cur.rowcount > 0:
+        return True
+    else:
+        return False
 
 
 
@@ -633,7 +645,6 @@ def create_temp_answer(course_id):
     reload(sys)
     sys.setdefaultencoding('utf-8')
     con = mdb.connect(settings.DATABASES.get('default').get('HOST'), settings.DATABASES.get('default').get('USER'), settings.DATABASES.get('default').get('PASSWORD'), settings.DATABASES.get('default').get('NAME'));
-    # query = "select uuid, raw_answer from submissions_submission where uuid in (select submission_uuid from assessment_peerworkflow where item_id not like '%DEMO%' and course_id = 'course-v1:EwhaK+EW10164K+2015-01')";
     query = "delete from tb_tmp_answer where course_id = '"+course_id+"'"
     cur = con.cursor()
     cur.execute(query)
