@@ -1536,3 +1536,11 @@ def otherbrowser(request):
     return render_to_response(
         "otherBrowser.html"
     )
+
+
+@ensure_csrf_cookie
+@cache_if_anonymous()
+def ckplus(request):
+    return render_to_response(
+        "courseware/ckplus.html"
+    )
