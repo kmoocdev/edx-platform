@@ -82,22 +82,29 @@ if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
 
 <div id="popupWrap_1" class="popup-wrap popup-kmooc2" style="position: absolute; left: 25px; top: 100px;
     z-index: 10010; display: block; border: 5px solid #EB9D43; opacity: 1; background: #ffffff; font-size: 13px;
-    line-height: 25px; padding: 5px;">
+    line-height: 25px; padding: 5px; box-shadow: 0 -1px 4px 2px #444444;">
         <p style="text-align: center; font-size: 15px;">
             <b>한국형 무크(K-MOOC)의 BI 및 표어(Slogan) 공모전을<br>
             개최하오니 관심 있는 분의 많은 참여를 바랍니다. </b></p>
-        <p style="text-align: center"><a href="http://blog.naver.com/kmooc_kr/220550673535"><img src="http://mme.kmoocs.kr/origin/K-mooc-pop.png" alt="공모전"></a></p>
-        <br>
+        <p style="text-align: center">
+            <a href="http://blog.naver.com/kmooc_kr/220550673535">
+                <img src="http://mme.kmoocs.kr/origin/K-mooc-pop.png" alt="공모전">
+            </a>
+        </p>
+
+        <br/>
+
         <b>&nbsp;■ 공모내용 : </b>K-MOOC의 비전과 목표가 잘 드러나는 BI 및 표어(Slogan)<br>
         <b>&nbsp;■ 응모자격 : </b>한국형 무크에 관심 있는 일반 국민 전체<br>
         <b>&nbsp;■ 온라인 접수 : </b><font color="blue">kmooc@nile.or.kr</font><br>
-        <form class="today_1" id="checkForm_1" name="checkForm_1" style="text-align:right; font-style: normal;">
+        <div style="text-align: right;">
             <label onclick="closeWin1();">
-                <input id="chkbox_1" name="chkbox_1" type="checkbox">
+                <input id="chkbox_1" name="chkbox_1" type="checkbox" style="vertical-align: middle;">
                 <span style="font-style:normal; font-size:13px;"><b>오늘 하루 열지 않음 &nbsp;&nbsp;</b></span>
             </label>
-                <span><a onClick="document.getElementById('popupWrap_1').style.display='none'">[ 닫기 ]</a></span>
-        </form>
+
+            <span><a href="javascript:$('#popupWrap_1').hide();">[ 닫기 ]</a></span>
+        </div>
 </div>
 
 <script language="Javascript">
@@ -109,7 +116,7 @@ function setCookie1( name, value, expiredays ) {
 }
 
 function closeWin1() {
-    if ( document.getElementById('checkForm_1').chkbox_1.checked ){
+    if ($("#chkbox_1").is(":checked")){
         setCookie1( "popupdiv2", "done" , 1 );
     }
     document.all['popupWrap_1'].style.display = "none";
