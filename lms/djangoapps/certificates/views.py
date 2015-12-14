@@ -300,7 +300,8 @@ def _update_certificate_context(context, course, user, user_certificate):
     context['username'] = user.username
     context['course_mode'] = user_certificate.mode
     context['accomplishment_user_id'] = user.id
-    context['accomplishment_copy_name'] = user_certificate.name
+    # preview is use user.id, other use user_certificate.name
+    context['accomplishment_copy_name'] = user.id if user_certificate.name is None else user_certificate.name
     context['accomplishment_copy_username'] = user.username
     context['accomplishment_copy_course_org'] = course.org
     context['accomplishment_copy_course_name'] = course.display_name
