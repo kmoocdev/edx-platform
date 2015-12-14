@@ -365,7 +365,8 @@ def _update_certificate_context(context, course, user, user_certificate):
 
     # Translators: This text describes the purpose (and therefore, value) of a course certificate
     # 'verifying your identity' refers to the process for establishing the authenticity of the student
-    context['certificate_info_description'] = _("{platform_name} acknowledges achievements through certificates, which "
+
+    certificate_info_description = _("{platform_name} acknowledges achievements through certificates, which "
                                                 "are awarded for various activities {platform_name} students complete "
                                                 "under the <a href='{tos_url}'>{platform_name} Honor Code</a>.  Some "
                                                 "certificates require completing additional steps, such as "
@@ -374,6 +375,13 @@ def _update_certificate_context(context, course, user, user_certificate):
         tos_url=context.get('company_tos_url'),
         verified_cert_url=context.get('company_verified_certificate_url')
     )
+
+    logger.debug("certificate_info_description = ", certificate_info_description)
+
+    if "<a href='#'>" in certificate_info_description:
+        context['certificate_info_description'] = certificate_info_description.replace("<a href='#'>","").replace("</a>","")
+    else:
+        context['certificate_info_description'] = certificate_info_description
 
     context['certificate_verify_title'] = _("How {platform_name} Validates Student Certificates").format(
         platform_name=platform_name
