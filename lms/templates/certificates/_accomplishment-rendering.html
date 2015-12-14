@@ -82,7 +82,7 @@ course_mode_class = course_mode if course_mode else ''
         % if certificate_data:
             % for signatory in certificate_data.get('signatories', []):
             <dl class="pr8">
-                <dt><img src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}" style="max-width: 193px; max-height: 49px;" /></dt>
+                <dt><img src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}" style="width: 193px; height: 49px;" /></dt>
                 <dd class="kmooc_color">${signatory['name']}</dd>
                 <dd>${signatory['title']}</dd>
                 <dd>${signatory['organization']}</dd>
