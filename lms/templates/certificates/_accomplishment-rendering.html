@@ -74,7 +74,7 @@ course_mode_class = course_mode if course_mode else ''
 
       <li class="p10">
           % if certificate_data and certificate_data.get('org_logo_path', ''):
-            <img src="${static.url(certificate_data['org_logo_path'])}" alt="org_logo" style="width: 220px; height: 48px;" />
+            <img src="${static.url(certificate_data['org_logo_path'])}" alt="org_logo" style="max-width: 220px; max-height: 48px;" />
           % endif
       </li>
     </ul>
