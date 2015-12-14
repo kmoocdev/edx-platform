@@ -300,7 +300,8 @@ def _update_certificate_context(context, course, user, user_certificate):
     context['username'] = user.username
     context['course_mode'] = user_certificate.mode
     context['accomplishment_user_id'] = user.id
-    context['accomplishment_copy_name'] = user_certificate.name
+    # preview is use user.id, other use user_certificate.name
+    context['accomplishment_copy_name'] = user.id if user_certificate.name == '' else user_certificate.name
     context['accomplishment_copy_username'] = user.username
     context['accomplishment_copy_course_org'] = course.org
     context['accomplishment_copy_course_name'] = course.display_name
@@ -364,7 +365,8 @@ def _update_certificate_context(context, course, user, user_certificate):
 
     # Translators: This text describes the purpose (and therefore, value) of a course certificate
     # 'verifying your identity' refers to the process for establishing the authenticity of the student
-    context['certificate_info_description'] = _("{platform_name} acknowledges achievements through certificates, which "
+
+    certificate_info_description = _("{platform_name} acknowledges achievements through certificates, which "
                                                 "are awarded for various activities {platform_name} students complete "
                                                 "under the <a href='{tos_url}'>{platform_name} Honor Code</a>.  Some "
                                                 "certificates require completing additional steps, such as "
@@ -373,6 +375,13 @@ def _update_certificate_context(context, course, user, user_certificate):
         tos_url=context.get('company_tos_url'),
         verified_cert_url=context.get('company_verified_certificate_url')
     )
+
+    logger.debug("certificate_info_description = ", certificate_info_description)
+
+    if "<a href='#'>" in certificate_info_description:
+        context['certificate_info_description'] = certificate_info_description.replace("<a href='#'>","").replace("</a>","")
+    else:
+        context['certificate_info_description'] = certificate_info_description
 
     context['certificate_verify_title'] = _("How {platform_name} Validates Student Certificates").format(
         platform_name=platform_name
