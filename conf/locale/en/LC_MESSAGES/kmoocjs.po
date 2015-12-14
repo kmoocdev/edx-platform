@@ -130,3 +130,7 @@ msgstr ""
 #: cms/static/templates/certificate-editor.underscore
 msgid "Path to organization logo"
 msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore:25
+msgid "Title of the course"
+msgstr ""
