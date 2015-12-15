@@ -161,7 +161,8 @@ def instructor_dashboard_2(request, course_id):
         'disable_buttons': disable_buttons,
         'analytics_dashboard_message': analytics_dashboard_message,
         'is_assessment': check_assessment(course.wiki_slug),
-        'is_assessment_ing' : check_assessment_ing(course_key.course)
+        'is_assessment_ing' : check_assessment_ing(course_key.course),
+        'is_assessment_done' : check_assessment_done(course_key.course)
     }
 
     return render_to_response('instructor/instructor_dashboard_2/instructor_dashboard_2.html', context)
@@ -180,7 +181,7 @@ def check_assessment(active_versions_key):
     for document in cursor:
         blocks = document.get('blocks')
     cursor.close()
-
+    client.close()
     is_assessment = False
     for block in blocks:
         if block.get('block_type') == 'openassessment':
@@ -194,11 +195,34 @@ def check_assessment_ing(course_id):
     cur = con.cursor()
     query = "select class_id from vw_copykiller where class_id = '"+course_id+"'"
     cur.execute(query)
-    if cur.rowcount > 0:
+    cur_rowcount = cur.rowcount
+    cur.close()
+    con.close()
+    if cur_rowcount > 0:
         return True
     else:
         return False
 
+
+def check_assessment_done(course_id):
+    con = mdb.connect(settings.DATABASES.get('default').get('HOST'), settings.DATABASES.get('default').get('USER'), settings.DATABASES.get('default').get('PASSWORD'), settings.DATABASES.get('default').get('NAME'));
+    cur = con.cursor()
+    query = "select "
+    query += "    if(count(uri) = (select count(uri) from vw_copykiller where class_id ='"+course_id+"'), 'True', 'False') complete "
+    query += "from tb_copykiller_copyratio "
+    query += "where "
+    query += "    uri in (select uri from vw_copykiller where class_id ='"+course_id+"') "
+    query += "and "
+    query += "    complete_status = 'Y' and check_type='internet'"
+    cur.execute(query)
+    result = cur.fetchone()
+    cur.close()
+    con.close()
+
+    if result[0] == 'True':
+        return True
+    else:
+        return False
 
 
 ## Section functions starting with _section return a dictionary of section data.
