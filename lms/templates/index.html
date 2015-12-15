@@ -45,7 +45,6 @@ from microsite_configuration import microsite
 
 
 <script language="Javascript">
-<!--
 function setCookie( name, value, expiredays ) {
     var todayDate = new Date();
     todayDate.setDate( todayDate.getDate() + expiredays );
@@ -74,12 +73,12 @@ if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
     document.all['popupWrap'].style.display = "none";
 }
 
-//-->
+function popClose(id){
+    $("#" + id).hide();
+}
 </script>
 
-
 <!--popup K-mooc(1)-->
-
 <div id="popupWrap_1" class="popup-wrap popup-kmooc2" style="position: absolute; left: 25px; top: 100px;
     z-index: 10010; display: block; border: 5px solid #EB9D43; opacity: 1; background: #ffffff; font-size: 13px;
     line-height: 25px; padding: 5px; box-shadow: 0 -1px 4px 2px #444444;">
@@ -103,7 +102,7 @@ if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
                 <span style="font-style:normal; font-size:13px;"><b>오늘 하루 열지 않음 &nbsp;&nbsp;</b></span>
             </label>
 
-            <span><a href="javascript:$('#popupWrap_1').hide();">[ 닫기 ]</a></span>
+            <span><a href="javascript:popClose('popupWrap_1');">[ 닫기 ]</a></span>
         </div>
 </div>
 
