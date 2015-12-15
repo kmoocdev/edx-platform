@@ -721,7 +721,7 @@ def copykiller_csv(request, course_id):
     response['Content-Disposition'] = 'attachment; filename="'+course_id+'.csv"'
 
     writer = csv.writer(response)
-    writer.writerow(['student id', 'assessment no', 'internet link', 'c lass', 'internet', 'report', 'term', 'total', 'year'])
+    writer.writerow(['student id', 'assessment no', 'internet link', 'class', 'internet', 'report', 'term', 'total', 'year'])
     for value in dict.itervalues():
         writer.writerow(value)
 

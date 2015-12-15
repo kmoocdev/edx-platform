@@ -171,8 +171,9 @@ from django.core.urlresolvers import reverse
       url: "/courses/${course.id}/instructor/copykiller",
     }).done(function(data) {
       if (data.result == 'success') {
+        $(".molly-guard").prop('disabled', true);
         $("#copykiller_status").val('표절검사가 진행중입니다.');
-        console.log($("#copykiller_status").val());
+//        console.log(jQuery.fn.jquery);
       }
     });
   }
