@@ -67,7 +67,6 @@ define([
         },
 
         addFacet: function(event) {
-
             if($("#clear-all-filters"))
                 $("#clear-all-filters").click();
 
