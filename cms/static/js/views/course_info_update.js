@@ -128,6 +128,9 @@ define(["js/views/baseview", "codemirror", "js/models/course_update",
 
             $(this.editor(event)).show();
             var $textArea = this.$currentPost.find(".new-update-content").first();
+
+            console.log("$textArea = " + $textArea);
+
             var targetModel = this.eventModel(event);
             this.$codeMirror = CourseInfoHelper.editWithCodeMirror(
                 targetModel, 'content', self.options['base_asset_url'], $textArea.get(0));
