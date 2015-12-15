@@ -773,6 +773,9 @@ def get_copykiller_result(request, course_id):
 
     cur.execute(query)
     rows = cur.fetchall()
+    cur.close()
+    con.close()
+
     dict = {}
     for row in rows:
         dict[str(row[0])] = list(row[0:])
