@@ -156,7 +156,7 @@ from django.core.urlresolvers import reverse
   1일 1회 자동 스케줄러에 의해 수행되므로, 수행 요청 후 최대 1일 이내에 결과가 산출됩니다.
   </label>
   <br>
-  %if is_assessment:
+  %if is_assessment & is_assessment_ing != True:
   <input type="button" class="molly-guard" name="reset-attempts-all" value="표절검사 수행하기" onclick="run_copykiller();">
   %else:
   <input type="button" class="molly-guard" name="reset-attempts-all" value="표절검사 수행하기" disabled>
