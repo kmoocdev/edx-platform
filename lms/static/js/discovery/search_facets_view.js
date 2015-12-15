@@ -67,6 +67,9 @@ define([
         },
 
         addFacet: function(event) {
+            if($("#clear-all-filters"))
+                $("#clear-all-filters").click();
+
             event.preventDefault();
             var $target = $(event.currentTarget);
             var value = $target.find('.facet-option').data('value');

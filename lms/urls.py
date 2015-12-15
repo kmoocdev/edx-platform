@@ -301,6 +301,7 @@ if settings.COURSEWARE_ENABLED:
         url(r'^school/(?P<univ_id>.*?)$', 'courseware.views.haewoondaex', name="school"),
 
         # add custom pages
+        url(r'^ckplus/?$', 'courseware.views.ckplus', name="ckplus"),
 
         ## faqs
         url(r'^faqs/?$', 'courseware.views.faqs', name="faqs"),

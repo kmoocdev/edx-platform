@@ -814,6 +814,202 @@
 # Translators:
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Chanseok <kcsgoodboy@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013,2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# seungil <luck8778@gmail.com>, 2014
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# Rang Kim <lovinrang@gmail.com>, 2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# seungil <luck8778@gmail.com>, 2014
+# SANG WOO KIM <jimroid@gmail.com>, 2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  kmoocjs.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013,2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# seungil <luck8778@gmail.com>, 2014
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# Rang Kim <lovinrang@gmail.com>, 2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# seungil <luck8778@gmail.com>, 2014
+# SANG WOO KIM <jimroid@gmail.com>, 2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  kmoocjs.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
 # jeon <bluerespect@nate.com>, 2014
 # Jong-Dae Park <jdpark7@gmail.com>, 2013,2015
 # Kevin Min <gr326887@graded.br>, 2015
@@ -1433,6 +1629,14 @@ msgstr ""
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 #: cms/templates/js/add-xblock-component-menu.underscore
 #: cms/templates/js/certificate-editor.underscore
@@ -1460,6 +1664,16 @@ msgstr ""
 #: common/static/common/templates/discussion/thread-edit.underscore
 #: common/static/common/templates/discussion/thread-response-edit.underscore
 #: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/response-comment-edit.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-edit.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-response-edit.underscore
+#: test_root/staticfiles/teams/templates/edit-team.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/response-comment-edit.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-edit.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-edit.underscore
 msgid "Cancel"
 msgstr "취소"
 
@@ -1483,7 +1697,7 @@ msgstr "데이터 없음"
 
 #: cms/static/templates/signatory-editor.underscore
 msgid "Signatory"
-msgstr "서명자"
+msgstr "서명인"
 
 #: cms/static/templates/signatory-editor.underscore
 msgid "Signatory Name"
@@ -1521,9 +1735,18 @@ msgstr "기관 로고 업로드"
 msgid "Add Signatory"
 msgstr "서명인 추가"
 
+#: cms/static/templates/certificate-editor.underscore
 #: cms/static/templates/signatory-editor.underscore
 msgid "Organization Logo"
 msgstr "기관 로고"
+
+#: cms/static/templates/certificate-editor.underscore
+msgid "Path to organization logo"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore
+msgid "Title of the course"
+msgstr "강좌명"
 
 #: cms/static/coffee/src/views/tabs.js
 #: cms/static/coffee/src/xblock/cms.runtime.v1.js
@@ -1568,6 +1791,8 @@ msgstr "확인"
 #: cms/templates/js/signatory-editor.underscore
 #: cms/templates/js/xblock-outline.underscore
 #: common/static/common/templates/discussion/forum-action-delete.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-delete.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-delete.underscore
 msgid "Delete"
 msgstr "삭제"
 
@@ -1632,12 +1857,21 @@ msgstr "업로드 중"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: cms/static/js/views/assets.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/asset-library.underscore
 #: cms/templates/js/previous-video-upload-list.underscore
 #: cms/templates/js/signatory-details.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 #: cms/templates/js/signatory-editor.underscore
 msgid "Name"
 msgstr "이름"
@@ -1713,6 +1947,14 @@ msgstr "파일 업로드"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: cms/static/js/views/modals/base_modal.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/certificate-editor.underscore
@@ -1726,9 +1968,20 @@ msgstr "파일 업로드"
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Save"
 msgstr "저장"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -1788,6 +2041,10 @@ msgstr "저장"
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: common/static/common/templates/image-modal.underscore
 #: common/static/common/templates/discussion/forum-action-close.underscore
+#: test_root/staticfiles/common/templates/image-modal.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-close.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/image-modal.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-close.underscore
 msgid "Close"
 msgstr "닫기"
 
@@ -1896,6 +2153,11 @@ msgstr "다음 단계로 가기 위한 기준 점수 미달입니다."
 #: common/static/common/templates/discussion/thread-response.underscore
 #: common/static/common/templates/discussion/thread.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-response.underscore
+#: test_root/staticfiles/common/templates/discussion/thread.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread.underscore
 msgid "Submit"
 msgstr "제출"
 
@@ -1997,6 +2259,14 @@ msgstr "제목 3"
 msgid "Add to Dictionary"
 msgstr "모음에 추가하기"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -2275,8 +2545,17 @@ msgstr "코드 블럭"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Code"
 msgstr "코드"
 
@@ -2437,11 +2716,21 @@ msgstr " 테이블 삭제"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/certificate-editor.underscore
 #: cms/templates/js/group-configuration-editor.underscore
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Description"
 msgstr "설명"
 
@@ -2530,6 +2819,14 @@ msgstr " html 편집"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: common/static/js/vendor/ova/catch/js/catch.js
 #: cms/templates/js/certificate-details.underscore
@@ -2540,6 +2837,8 @@ msgstr " html 편집"
 #: cms/templates/js/signatory-details.underscore
 #: cms/templates/js/xblock-string-field-editor.underscore
 #: common/static/common/templates/discussion/forum-action-edit.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-edit.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-edit.underscore
 msgid "Edit"
 msgstr "편집"
 
@@ -2682,8 +2981,18 @@ msgstr "형식"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: common/static/common/templates/image-modal.underscore
+#: test_root/staticfiles/common/templates/image-modal.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/image-modal.underscore
 msgid "Fullscreen"
 msgstr "전체 화면"
 
@@ -3049,10 +3358,22 @@ msgstr "새 창"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/paging-header.underscore
 #: common/static/common/templates/components/paging-footer.underscore
 #: common/static/common/templates/discussion/pagination.underscore
+#: test_root/staticfiles/common/templates/components/paging-footer.underscore
+#: test_root/staticfiles/common/templates/discussion/pagination.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/components/paging-footer.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/pagination.underscore
 msgid "Next"
 msgstr "다음"
 
@@ -3068,6 +3389,14 @@ msgstr "색깔이 없음"
 msgid "Nonbreaking space"
 msgstr "단어 잘림 방지 공백"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3232,6 +3561,14 @@ msgstr "이전"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: lms/static/coffee/src/customwmd.js
 #: cms/templates/js/asset-library.underscore
@@ -3268,6 +3605,14 @@ msgstr "모두 바꾸기"
 msgid "Replace with"
 msgstr "바꾸기"
 
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -3588,10 +3933,22 @@ msgstr "입력한 URL이 외부링크 같습니다. 필요한 접두어 http:// 
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/signatory-details.underscore
 #: common/static/common/templates/discussion/new-post.underscore
 #: common/static/common/templates/discussion/thread-edit.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-edit.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-edit.underscore
 #: cms/templates/js/signatory-editor.underscore
 msgid "Title"
 msgstr "제목"
@@ -3705,9 +4062,19 @@ msgstr "수직 공간"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: lms/templates/search/course_search_item.underscore
 #: lms/templates/search/dashboard_search_item.underscore
+#: test_root/staticfiles/templates/search/course_search_item.underscore
+#: test_root/staticfiles/templates/search/dashboard_search_item.underscore
 msgid "View"
 msgstr "보기"
 
@@ -4042,6 +4409,8 @@ msgstr "요청 처리 중 오류가 발생했습니다. 다시 시도하세요"
 #: common/static/coffee/src/discussion/views/discussion_thread_list_view.js
 #: common/static/coffee/src/discussion/views/discussion_topic_menu_view.js
 #: common/static/common/templates/discussion/pagination.underscore
+#: test_root/staticfiles/common/templates/discussion/pagination.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/pagination.underscore
 msgid "…"
 msgstr "…"
 
@@ -4136,6 +4505,8 @@ msgstr "현재 대화"
 #: lms/static/js/edxnotes/views/tabs/search_results.js
 #: lms/templates/search/course_search_results.underscore
 #: lms/templates/search/dashboard_search_results.underscore
+#: test_root/staticfiles/templates/search/course_search_results.underscore
+#: test_root/staticfiles/templates/search/dashboard_search_results.underscore
 msgid "Search Results"
 msgstr "검색 결과"
 
@@ -4212,6 +4583,10 @@ msgstr "게시물이 삭제됩니다."
 #: common/static/coffee/src/discussion/views/response_comment_show_view.js
 #: common/static/common/templates/discussion/post-user-display.underscore
 #: common/static/common/templates/discussion/profile-thread.underscore
+#: test_root/staticfiles/common/templates/discussion/post-user-display.underscore
+#: test_root/staticfiles/common/templates/discussion/profile-thread.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/post-user-display.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/profile-thread.underscore
 msgid "anonymous"
 msgstr "익명"
 
@@ -4371,6 +4746,10 @@ msgstr "게시된 날짜"
 #: common/static/common/templates/discussion/forum-actions.underscore
 #: lms/templates/discovery/facet.underscore
 #: lms/templates/edxnotes/note-item.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-actions.underscore
+#: test_root/staticfiles/templates/discovery/facet.underscore
+#: test_root/staticfiles/templates/edxnotes/note-item.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-actions.underscore
 msgid "More"
 msgstr "더보기"
 
@@ -4389,6 +4768,9 @@ msgstr "공개"
 #: common/static/js/vendor/ova/catch/js/catch.js
 #: common/static/common/templates/components/search-field.underscore
 #: lms/djangoapps/support/static/support/templates/certificates.underscore
+#: test_root/staticfiles/common/templates/components/search-field.underscore
+#: test_root/staticfiles/support/templates/certificates.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/components/search-field.underscore
 msgid "Search"
 msgstr "검색"
 
@@ -4442,6 +4824,7 @@ msgstr "답글"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 #: lms/templates/edxnotes/note-item.underscore
+#: test_root/staticfiles/templates/edxnotes/note-item.underscore
 msgid "Tags:"
 msgstr "Tags:"
 
@@ -4496,6 +4879,7 @@ msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/collections/topic.js
 #: lms/templates/edxnotes/tab-item.underscore
+#: test_root/staticfiles/templates/edxnotes/tab-item.underscore
 msgid "name"
 msgstr "이름"
 
@@ -4541,6 +4925,7 @@ msgstr "언어"
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 #: lms/djangoapps/teams/static/teams/templates/team-profile.underscore
+#: test_root/staticfiles/teams/templates/team-profile.underscore
 msgid ""
 "The language that team members primarily use to communicate with each other."
 msgstr "팀 구성원 대부분의 사용 언어"
@@ -4552,6 +4937,7 @@ msgstr "국가"
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 #: lms/djangoapps/teams/static/teams/templates/team-profile.underscore
+#: test_root/staticfiles/teams/templates/team-profile.underscore
 msgid "The country that team members primarily identify with."
 msgstr "팀 구성원 대부분의 국가 "
 
@@ -4614,6 +5000,7 @@ msgstr ""
 #: lms/static/js/views/image_field.js
 #: cms/templates/js/video/metadata-translations-item.underscore
 #: lms/djangoapps/teams/static/teams/templates/edit-team-member.underscore
+#: test_root/staticfiles/teams/templates/edit-team-member.underscore
 msgid "Remove"
 msgstr "제거"
 
@@ -4669,6 +5056,7 @@ msgstr ""
 #: lms/djangoapps/teams/static/teams/js/views/team_profile.js
 #: lms/static/js/verify_student/views/reverify_view.js
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid "Confirm"
 msgstr "확인"
 
@@ -4747,6 +5135,7 @@ msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
 #: lms/djangoapps/teams/static/teams/templates/team-profile-header-actions.underscore
+#: test_root/staticfiles/teams/templates/team-profile-header-actions.underscore
 msgid "Edit Team"
 msgstr ""
 
@@ -4854,6 +5243,8 @@ msgstr "학습자 정보를 만드는 중 오류가 발생했습니다. 다시 �
 #: lms/static/coffee/src/instructor_dashboard/data_download.js
 #: lms/templates/search/search_loading.underscore
 #: lms/templates/student_account/account_settings.underscore
+#: test_root/staticfiles/templates/search/search_loading.underscore
+#: test_root/staticfiles/templates/student_account/account_settings.underscore
 msgid "Loading"
 msgstr "로딩"
 
@@ -4880,10 +5271,15 @@ msgstr "성적 보고서 생성 중 오류가 발생했습니다. 다시 시도�
 #: lms/static/coffee/src/instructor_dashboard/membership.js
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: lms/static/js/student_profile/views/learner_profile_factory.js
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
+#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+#: test_root/staticfiles/templates/financial-assistance/financial_assessment_form.underscore
 msgid "Username"
 msgstr "아이디"
 
 #: lms/static/coffee/src/instructor_dashboard/membership.js
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 msgid "Email"
 msgstr "이메일"
 
@@ -5576,6 +5972,7 @@ msgstr "전체 학습활동"
 
 #: lms/static/js/ccx/schedule.js lms/static/js/ccx/schedule.js.c
 #: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
 msgid "Click to change"
 msgstr "변경을 위해 클릭하세요"
 
@@ -5608,7 +6005,7 @@ msgid "Student username/email field is required and can not be empty. "
 msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid "Errors!"
+msgid "Uploaded file issues. Click on \"+\" to view."
 msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
@@ -5620,35 +6017,35 @@ msgid " learner is successfully added to the exception list"
 msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " records are not in correct format"
+msgid " records are not in correct format and not added to"
 msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " record is not in correct format"
+msgid " record is not in correct format and not added to the exception"
 msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learners do not exist in LMS"
+msgid " learners do not exist in LMS and not added to the"
 msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learner does not exist in LMS"
+msgid " learner does not exist in LMS and not added to the exception list"
 msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learners are already white listed"
+msgid " learners are already white listed and not added to"
 msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learner is already white listed"
+msgid " learner is already white listed and not added to the exception "
 msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learners are not enrolled in course"
+msgid " learners are not enrolled in course and not added to"
 msgstr ""
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
-msgid " learner is not enrolled in course"
+msgid " learner is not enrolled in course and not added to the exception"
 msgstr ""
 
 #: lms/static/js/course_survey.js
@@ -5658,6 +6055,8 @@ msgstr "설문을 처리하는 동안 오류가 발생했습니다."
 #: lms/static/js/courseware/credit_progress.js
 #: lms/templates/discovery/facet.underscore
 #: lms/templates/edxnotes/note-item.underscore
+#: test_root/staticfiles/templates/discovery/facet.underscore
+#: test_root/staticfiles/templates/edxnotes/note-item.underscore
 msgid "Less"
 msgstr "적게"
 
@@ -5684,6 +6083,7 @@ msgstr "\"%s\"를 찾을 수 없습니다. "
 
 #: lms/static/js/discovery/views/search_form.js
 #: lms/templates/search/search_error.underscore
+#: test_root/staticfiles/templates/search/search_error.underscore
 msgid "There was an error, try searching again."
 msgstr "오류가 발생했습니다. 다시 검색하세요."
 
@@ -5743,6 +6143,15 @@ msgstr "\"%(query_string)s\"로 검색된 결과가 없습니다. 다시 검색�
 msgid "[no tags]"
 msgstr "[no tags]"
 
+#: lms/static/js/financial-assistance/views/financial_assistance_form_view.js
+msgid "Choose one"
+msgstr ""
+
+#: lms/static/js/financial-assistance/views/financial_assistance_form_view.js
+#: lms/static/js/student_account/views/LoginView.js
+msgid "An error has occurred. Check your Internet connection and try again."
+msgstr ""
+
 #: lms/static/js/groups/views/cohort_discussions.js
 #: lms/static/js/groups/views/cohort_discussions_course_wide.js
 #: lms/static/js/groups/views/cohort_discussions_inline.js
@@ -5753,6 +6162,7 @@ msgstr "오류가 발생했습니다. 페이지를 새로고침한 후, 다시 �
 
 #: lms/static/js/groups/views/cohort_editor.js
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Selected tab"
 msgstr "선택된 탭"
 
@@ -5822,6 +6232,7 @@ msgstr "설정된 학습 집단이 현재 없습니다."
 
 #: lms/static/js/groups/views/cohorts.js
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Add Cohort"
 msgstr "학습집단 추가하기"
 
@@ -5982,10 +6393,6 @@ msgid "Loading your courses"
 msgstr "강좌를 불러오고 있습니다."
 
 #: lms/static/js/student_account/views/LoginView.js
-msgid "An error has occurred. Check your Internet connection and try again."
-msgstr ""
-
-#: lms/static/js/student_account/views/LoginView.js
 msgid ""
 "An error has occurred. Try refreshing the page, or check your Internet "
 "connection."
@@ -6023,6 +6430,7 @@ msgstr "로그인에 사용되는 이메일 주소입니다. {platform_name}와 
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: lms/templates/student_account/account.underscore
+#: test_root/staticfiles/templates/student_account/account.underscore
 msgid "Password"
 msgstr "비밀번호"
 
@@ -6032,6 +6440,7 @@ msgstr "비밀번호를 재설정합니다."
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: lms/templates/student_account/account.underscore
+#: test_root/staticfiles/templates/student_account/account.underscore
 msgid "Reset Password"
 msgstr "비밀번호 재설정"
 
@@ -6592,6 +7001,8 @@ msgstr " “{container}”에서 {email} 을 삭제하시겠습니까? "
 #: cms/static/js/factories/manage_users.js
 #: cms/static/js/factories/manage_users_lib.js
 #: common/static/common/templates/discussion/post-user-display.underscore
+#: test_root/staticfiles/common/templates/discussion/post-user-display.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/post-user-display.underscore
 msgid "Staff"
 msgstr "운영팀"
 
@@ -6743,12 +7154,19 @@ msgstr ""
 #: lms/templates/student_account/hinted_login.underscore
 #: lms/templates/student_account/institution_login.underscore
 #: lms/templates/student_account/institution_register.underscore
+#: test_root/staticfiles/templates/student_account/hinted_login.underscore
+#: test_root/staticfiles/templates/student_account/institution_login.underscore
+#: test_root/staticfiles/templates/student_account/institution_register.underscore
 msgid "or"
 msgstr "또는"
 
 #: cms/static/js/models/xblock_validation.js
 msgid "This component has validation issues."
 msgstr "이 구성 요소는 문제가 있습니다."
+
+#: cms/static/js/views/active_video_upload_list.js
+msgid "Your video uploads are not complete."
+msgstr ""
 
 #: cms/static/js/views/asset.js
 msgid "Delete File Confirmation"
@@ -6775,6 +7193,8 @@ msgstr "추가된 날짜"
 
 #: cms/static/js/views/assets.js cms/templates/js/asset-library.underscore
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+#: test_root/staticfiles/support/templates/certificates_results.underscore
 msgid "Type"
 msgstr "종류"
 
@@ -6799,6 +7219,7 @@ msgstr "최대 파일 크기를 초과했습니다."
 #: cms/static/js/views/assets.js
 #: cms/templates/js/asset-upload-modal.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid "Choose File"
 msgstr "파일을 선택하세요"
 
@@ -7422,6 +7843,7 @@ msgstr "편집기"
 
 #: cms/static/js/views/xblock_editor.js
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Settings"
 msgstr "설정"
 
@@ -7439,455 +7861,678 @@ msgstr "경고"
 #: cms/templates/js/asset-library.underscore
 #: cms/templates/js/basic-modal.underscore
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
+#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Actions"
 msgstr "액션"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/publish-xblock.underscore
+#: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
+msgid "Unscheduled"
+msgstr "지정되지 않음"
 
 #: cms/templates/js/paging-header.underscore
 #: common/static/common/templates/components/paging-footer.underscore
 #: common/static/common/templates/discussion/pagination.underscore
+#: test_root/staticfiles/common/templates/components/paging-footer.underscore
+#: test_root/staticfiles/common/templates/discussion/pagination.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/components/paging-footer.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/pagination.underscore
 msgid "Previous"
 msgstr "이전"
 
 #: cms/templates/js/previous-video-upload-list.underscore
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
+#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+#: test_root/staticfiles/support/templates/certificates_results.underscore
+#: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Status"
 msgstr "상태"
 
 #: common/static/common/templates/image-modal.underscore
+#: test_root/staticfiles/common/templates/image-modal.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/image-modal.underscore
 msgid "Large"
 msgstr "large"
 
 #: common/static/common/templates/image-modal.underscore
+#: test_root/staticfiles/common/templates/image-modal.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/image-modal.underscore
 msgid "Zoom In"
 msgstr "확대"
 
 #: common/static/common/templates/image-modal.underscore
+#: test_root/staticfiles/common/templates/image-modal.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/image-modal.underscore
 msgid "Zoom Out"
 msgstr "축소"
 
 #: common/static/common/templates/components/paging-footer.underscore
+#: test_root/staticfiles/common/templates/components/paging-footer.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/components/paging-footer.underscore
 msgid "Page number"
 msgstr "페이지 숫자"
 
 #: common/static/common/templates/components/paging-footer.underscore
+#: test_root/staticfiles/common/templates/components/paging-footer.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/components/paging-footer.underscore
 msgid "Enter the page number you'd like to quickly navigate to."
 msgstr ""
 
 #: common/static/common/templates/components/paging-header.underscore
+#: test_root/staticfiles/common/templates/components/paging-header.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/components/paging-header.underscore
 msgid "Sorted by"
 msgstr ""
 
 #: common/static/common/templates/components/search-field.underscore
+#: test_root/staticfiles/common/templates/components/search-field.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/components/search-field.underscore
 msgid "Clear search"
 msgstr "검색 초기화"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "DISCUSSION HOME:"
 msgstr "게시판 홈:"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "How to use %(platform_name)s discussions"
 msgstr ""
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Find discussions"
 msgstr "토론 찿기"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Focus in on specific topics"
 msgstr "주제 지정"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Search for specific posts"
 msgstr ""
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Sort by date, vote, or comments"
 msgstr "등록일, 추천수, 댓글수 기준으로 정렬"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Engage with posts"
 msgstr ""
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Upvote posts and good responses"
 msgstr "게시물 추천"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Report Forum Misuse"
 msgstr "포럼 오남용 보고"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Follow posts for updates"
 msgstr "업데이트 구독하기"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Receive updates"
 msgstr "업데이트를 받으세요"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Toggle Notifications Setting"
 msgstr "통지 설정 전환"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid ""
 "Check this box to receive an email digest once a day notifying you about "
 "new, unread activity from posts you are following."
 msgstr "여기에 체크하시면 구독 게시물에 해당하는 읽지않은 글, 새로운 글에 대해서 하루에 한번 이메일로 알림을 받으실수 있습니다."
 
 #: common/static/common/templates/discussion/forum-action-answer.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-answer.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-answer.underscore
 msgid "Mark as Answer"
 msgstr ""
 
 #: common/static/common/templates/discussion/forum-action-answer.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-answer.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-answer.underscore
 msgid "Unmark as Answer"
 msgstr ""
 
 #: common/static/common/templates/discussion/forum-action-close.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-close.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-close.underscore
 msgid "Open"
 msgstr "열기"
 
 #: common/static/common/templates/discussion/forum-action-endorse.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-endorse.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-endorse.underscore
 msgid "Endorse"
 msgstr ""
 
 #: common/static/common/templates/discussion/forum-action-endorse.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-endorse.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-endorse.underscore
 msgid "Unendorse"
 msgstr ""
 
 #: common/static/common/templates/discussion/forum-action-follow.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-follow.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-follow.underscore
 msgid "Follow"
 msgstr "구독"
 
 #: common/static/common/templates/discussion/forum-action-follow.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-follow.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-follow.underscore
 msgid "Unfollow"
 msgstr "구독 중지"
 
 #: common/static/common/templates/discussion/forum-action-pin.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-pin.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-pin.underscore
 msgid "Pin"
 msgstr ""
 
 #: common/static/common/templates/discussion/forum-action-pin.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-pin.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-pin.underscore
 msgid "Unpin"
 msgstr ""
 
 #: common/static/common/templates/discussion/forum-action-report.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-report.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-report.underscore
 msgid "Report abuse"
 msgstr ""
 
 #: common/static/common/templates/discussion/forum-action-report.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-report.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-report.underscore
 msgid "Report"
 msgstr "보고하기"
 
 #: common/static/common/templates/discussion/forum-action-report.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-report.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-report.underscore
 msgid "Unreport"
 msgstr ""
 
 #: common/static/common/templates/discussion/forum-action-vote.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-vote.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-vote.underscore
 msgid "Vote for this post,"
 msgstr ""
 
 #: common/static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid "Visible To:"
 msgstr "공개 설정:"
 
 #: common/static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid "All Groups"
 msgstr "모든 모둠"
 
 #: common/static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid ""
 "Discussion admins, moderators, and TAs can make their posts visible to all "
 "students or specify a single cohort."
 msgstr ""
 
 #: common/static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid "Title:"
 msgstr "제목:"
 
 #: common/static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid "Add a clear and descriptive title to encourage participation."
 msgstr ""
 
 #: common/static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid "Enter your question or comment"
 msgstr ""
 
 #: common/static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid "follow this post"
 msgstr "게시글 구독"
 
 #: common/static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid "post anonymously"
 msgstr "익명으로 게시"
 
 #: common/static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid "post anonymously to classmates"
 msgstr "수강동료들에게 익명으로 게시"
 
 #: common/static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid "Add Post"
 msgstr "게시물 추가"
 
 #: common/static/common/templates/discussion/post-user-display.underscore
+#: test_root/staticfiles/common/templates/discussion/post-user-display.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/post-user-display.underscore
 msgid "Community TA"
 msgstr "커뮤니티 조교"
 
 #: common/static/common/templates/discussion/profile-thread.underscore
 #: common/static/common/templates/discussion/thread.underscore
+#: test_root/staticfiles/common/templates/discussion/profile-thread.underscore
+#: test_root/staticfiles/common/templates/discussion/thread.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/profile-thread.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread.underscore
 msgid "This thread is closed."
 msgstr "이 글타래는 종료되었습니다."
 
 #: common/static/common/templates/discussion/profile-thread.underscore
+#: test_root/staticfiles/common/templates/discussion/profile-thread.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/profile-thread.underscore
 msgid "View discussion"
 msgstr "토의 보기"
 
 #: common/static/common/templates/discussion/response-comment-edit.underscore
+#: test_root/staticfiles/common/templates/discussion/response-comment-edit.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/response-comment-edit.underscore
 msgid "Editing comment"
 msgstr "코멘트 수정"
 
 #: common/static/common/templates/discussion/response-comment-edit.underscore
+#: test_root/staticfiles/common/templates/discussion/response-comment-edit.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/response-comment-edit.underscore
 msgid "Update comment"
 msgstr "코멘트 업데이트"
 
 #: common/static/common/templates/discussion/response-comment-show.underscore
+#: test_root/staticfiles/common/templates/discussion/response-comment-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/response-comment-show.underscore
 msgid "posted %(time_ago)s by %(author)s"
 msgstr ""
 
 #: common/static/common/templates/discussion/response-comment-show.underscore
 #: common/static/common/templates/discussion/thread-response-show.underscore
 #: common/static/common/templates/discussion/thread-show.underscore
+#: test_root/staticfiles/common/templates/discussion/response-comment-show.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-response-show.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/response-comment-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-show.underscore
 msgid "Reported"
 msgstr "보고됨"
 
 #: common/static/common/templates/discussion/thread-edit.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-edit.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-edit.underscore
 msgid "Editing post"
 msgstr "게시글 편집"
 
 #: common/static/common/templates/discussion/thread-edit.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-edit.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-edit.underscore
 msgid "Edit post title"
 msgstr "게시 제목 편집"
 
 #: common/static/common/templates/discussion/thread-edit.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-edit.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-edit.underscore
 msgid "Update post"
 msgstr "게시글 업데이트"
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-list-item.underscore
 msgid "discussion"
 msgstr ""
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-list-item.underscore
 msgid "answered question"
 msgstr "답변이 된 질문"
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-list-item.underscore
 msgid "unanswered question"
 msgstr "답변이 않된 질문"
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
 #: common/static/common/templates/discussion/thread-show.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-show.underscore
 msgid "Pinned"
 msgstr "고정됨"
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-list-item.underscore
 msgid "Following"
 msgstr "구독"
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-list-item.underscore
 msgid "By: Staff"
 msgstr "By: 스태프"
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-list-item.underscore
 msgid "By: Community TA"
 msgstr "By: 커뮤니티 조교"
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
 #: common/static/common/templates/discussion/thread-response-show.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-response-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-show.underscore
 msgid "fmt"
 msgstr ""
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-list-item.underscore
 msgid ""
 "%(comments_count)s %(span_sr_open)scomments (%(unread_comments_count)s "
 "unread comments)%(span_close)s"
 msgstr ""
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-list-item.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-list-item.underscore
 msgid "%(comments_count)s %(span_sr_open)scomments %(span_close)s"
 msgstr "%(comments_count)s %(span_sr_open)s 코멘트 %(span_close)s"
 
 #: common/static/common/templates/discussion/thread-response-edit.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-response-edit.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-edit.underscore
 msgid "Editing response"
 msgstr "응답 편집"
 
 #: common/static/common/templates/discussion/thread-response-edit.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-response-edit.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-edit.underscore
 msgid "Update response"
 msgstr "응답 업데이트"
 
 #: common/static/common/templates/discussion/thread-response-show.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-response-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-show.underscore
 msgid "marked as answer %(time_ago)s by %(user)s"
 msgstr ""
 
 #: common/static/common/templates/discussion/thread-response-show.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-response-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-show.underscore
 msgid "marked as answer %(time_ago)s"
 msgstr ""
 
 #: common/static/common/templates/discussion/thread-response-show.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-response-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-show.underscore
 msgid "endorsed %(time_ago)s by %(user)s"
 msgstr ""
 
 #: common/static/common/templates/discussion/thread-response-show.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-response-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-show.underscore
 msgid "endorsed %(time_ago)s"
 msgstr ""
 
 #: common/static/common/templates/discussion/thread-response.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-response.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response.underscore
 msgid "Show Comment (%(num_comments)s)"
 msgid_plural "Show Comments (%(num_comments)s)"
 msgstr[0] ""
 
 #: common/static/common/templates/discussion/thread-response.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-response.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response.underscore
 msgid "fmts"
 msgstr ""
 
 #: common/static/common/templates/discussion/thread-response.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-response.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response.underscore
 msgid "Add a comment"
 msgstr "코멘트 추가"
 
 #: common/static/common/templates/discussion/thread-show.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-show.underscore
 msgid "%(post_type)s posted %(time_ago)s by %(author)s"
-msgstr "이 %(post_type)s는 %(time_ago)s에 %(author)s님이 적으셨습니다."
+msgstr "이 %(post_type)s은 %(time_ago)s에 %(author)s님이 게시하였습니다."
 
 #: common/static/common/templates/discussion/thread-show.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-show.underscore
 msgid "Closed"
 msgstr "닫힘"
 
 #: common/static/common/templates/discussion/thread-show.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-show.underscore
 msgid "Related to: %(courseware_title_linked)s"
 msgstr ""
 
 #: common/static/common/templates/discussion/thread-show.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-show.underscore
 msgid "This post is visible only to %(group_name)s."
 msgstr "이 게시물은 오직 %(group_name)s에게만 공개됩니다."
 
 #: common/static/common/templates/discussion/thread-show.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-show.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-show.underscore
 msgid "This post is visible to everyone."
 msgstr "이 게시물은 모두에게 공개됩니다."
 
 #: common/static/common/templates/discussion/thread-type.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-type.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-type.underscore
 msgid "Post type:"
 msgstr "게시물 종류:"
 
 #: common/static/common/templates/discussion/thread-type.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-type.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-type.underscore
 msgid "Question"
 msgstr "질문"
 
 #: common/static/common/templates/discussion/thread-type.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-type.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-type.underscore
 msgid "Discussion"
 msgstr "게시판"
 
 #: common/static/common/templates/discussion/thread-type.underscore
+#: test_root/staticfiles/common/templates/discussion/thread-type.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-type.underscore
 msgid ""
 "Questions raise issues that need answers. Discussions share ideas and start "
 "conversations."
 msgstr ""
 
 #: common/static/common/templates/discussion/thread.underscore
+#: test_root/staticfiles/common/templates/discussion/thread.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread.underscore
 msgid "Add a Response"
 msgstr ""
 
 #: common/static/common/templates/discussion/thread.underscore
+#: test_root/staticfiles/common/templates/discussion/thread.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread.underscore
 msgid "Post a response:"
 msgstr "응답 게시:"
 
 #: common/static/common/templates/discussion/thread.underscore
+#: test_root/staticfiles/common/templates/discussion/thread.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread.underscore
 msgid "Expand discussion"
 msgstr "게시판 펼치기"
 
 #: common/static/common/templates/discussion/thread.underscore
+#: test_root/staticfiles/common/templates/discussion/thread.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread.underscore
 msgid "Collapse discussion"
 msgstr "게시판 접기"
 
 #: common/static/common/templates/discussion/topic.underscore
+#: test_root/staticfiles/common/templates/discussion/topic.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/topic.underscore
 msgid "Topic Area:"
 msgstr ""
 
 #: common/static/common/templates/discussion/topic.underscore
+#: test_root/staticfiles/common/templates/discussion/topic.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/topic.underscore
 msgid "Discussion topics; current selection is: "
 msgstr "주제: 현재 선택:"
 
 #: common/static/common/templates/discussion/topic.underscore
+#: test_root/staticfiles/common/templates/discussion/topic.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/topic.underscore
 msgid "Filter topics"
 msgstr ""
 
 #: common/static/common/templates/discussion/topic.underscore
+#: test_root/staticfiles/common/templates/discussion/topic.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/topic.underscore
 msgid "Add your post to a relevant topic to help others find it."
 msgstr "검색하기 쉽도록 게시물에 주제를 추가합니다."
 
 #: common/static/common/templates/discussion/user-profile.underscore
+#: test_root/staticfiles/common/templates/discussion/user-profile.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/user-profile.underscore
 msgid "Active Threads"
 msgstr "활성화된 글타래"
 
 #: lms/djangoapps/support/static/support/templates/certificates.underscore
+#: test_root/staticfiles/support/templates/certificates.underscore
 msgid "username or email"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/support/templates/certificates_results.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "No results"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: test_root/staticfiles/support/templates/certificates_results.underscore
 msgid "Course Key"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: test_root/staticfiles/support/templates/certificates_results.underscore
 msgid "Download URL"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: test_root/staticfiles/support/templates/certificates_results.underscore
 msgid "Grade"
 msgstr "성적"
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: test_root/staticfiles/support/templates/certificates_results.underscore
 msgid "Last Updated"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: test_root/staticfiles/support/templates/certificates_results.underscore
 msgid "Download the user's certificate"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: test_root/staticfiles/support/templates/certificates_results.underscore
 msgid "Not available"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: test_root/staticfiles/support/templates/certificates_results.underscore
 msgid "Regenerate"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: test_root/staticfiles/support/templates/certificates_results.underscore
 msgid "Regenerate the user's certificate"
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
+#: test_root/staticfiles/teams/templates/edit-team.underscore
 msgid "Your team could not be created."
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
+#: test_root/staticfiles/teams/templates/edit-team.underscore
 msgid "Your team could not be updated."
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
+#: test_root/staticfiles/teams/templates/edit-team.underscore
 msgid ""
 "Enter information to describe your team. You cannot change these details "
 "after you create the team."
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
+#: test_root/staticfiles/teams/templates/edit-team.underscore
 msgid "Optional Characteristics"
 msgstr "팀의 특징 "
 
 #: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
+#: test_root/staticfiles/teams/templates/edit-team.underscore
 msgid ""
 "Help other learners decide whether to join your team by specifying some "
 "characteristics for your team. Choose carefully, because fewer people might "
@@ -7897,140 +8542,191 @@ msgstr ""
 "선택해야 합니다."
 
 #: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
+#: test_root/staticfiles/teams/templates/edit-team.underscore
 msgid "Create team."
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
+#: test_root/staticfiles/teams/templates/edit-team.underscore
 msgid "Update team."
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
+#: test_root/staticfiles/teams/templates/edit-team.underscore
 msgid "Cancel team creating."
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
+#: test_root/staticfiles/teams/templates/edit-team.underscore
 msgid "Cancel team updating."
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/instructor-tools.underscore
+#: test_root/staticfiles/teams/templates/instructor-tools.underscore
 msgid "Instructor tools"
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/instructor-tools.underscore
+#: test_root/staticfiles/teams/templates/instructor-tools.underscore
 msgid "Delete Team"
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/instructor-tools.underscore
+#: test_root/staticfiles/teams/templates/instructor-tools.underscore
 msgid "Edit Membership"
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/team-actions.underscore
+#: test_root/staticfiles/teams/templates/team-actions.underscore
 msgid "Are you having trouble finding a team to join?"
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/team-profile-header-actions.underscore
+#: test_root/staticfiles/teams/templates/team-profile-header-actions.underscore
 msgid "Join Team"
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/team-profile.underscore
+#: test_root/staticfiles/teams/templates/team-profile.underscore
 msgid "New Post"
 msgstr "글쓰기"
 
 #: lms/djangoapps/teams/static/teams/templates/team-profile.underscore
+#: test_root/staticfiles/teams/templates/team-profile.underscore
 msgid "Team Details"
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/team-profile.underscore
+#: test_root/staticfiles/teams/templates/team-profile.underscore
 msgid "You are a member of this team."
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/team-profile.underscore
+#: test_root/staticfiles/teams/templates/team-profile.underscore
 msgid "Team member profiles"
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/team-profile.underscore
+#: test_root/staticfiles/teams/templates/team-profile.underscore
 msgid "Team capacity"
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/team-profile.underscore
+#: test_root/staticfiles/teams/templates/team-profile.underscore
 msgid "country"
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/team-profile.underscore
+#: test_root/staticfiles/teams/templates/team-profile.underscore
 msgid "language"
 msgstr ""
 
 #: lms/djangoapps/teams/static/teams/templates/team-profile.underscore
+#: test_root/staticfiles/teams/templates/team-profile.underscore
 msgid "Leave Team"
 msgstr ""
 
 #: lms/static/js/fixtures/donation.underscore
 #: lms/templates/dashboard/donation.underscore
+#: test_root/staticfiles/js/fixtures/donation.underscore
+#: test_root/staticfiles/templates/dashboard/donation.underscore
 msgid "Donate"
 msgstr "기부하기"
 
 #: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
 msgid "Expand All"
 msgstr "모두 펼치기"
 
 #: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
 msgid "Collapse All"
 msgstr "모두 접기"
 
 #: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
 msgid "Unit"
 msgstr "학습활동"
 
 #: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
 msgid "Start Date"
 msgstr "시작일"
 
 #: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
 #: cms/templates/js/course-outline.underscore
 msgid "Due Date"
 msgstr "마감일"
 
 #: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
 msgid "remove all"
 msgstr "모두 제거"
 
 #: lms/templates/ccx/schedule.underscore
-msgid "toggle chapter"
-msgstr "챕터 전환"
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
+msgid "gettext("
+msgstr "gettext("
 
 #: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
 msgid "Section"
 msgstr "주제"
 
 #: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
+msgid "N/A"
+msgstr "N/A"
+
+#: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
+msgid "Remove chapter %(chapterDisplayName)s"
+msgstr ""
+
+#: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
 msgid "remove"
 msgstr "제거"
 
 #: lms/templates/ccx/schedule.underscore
-msgid "toggle subsection"
-msgstr "소주제 전환"
-
-#: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
 msgid "Subsection"
 msgstr "소주제"
 
+#: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
+msgid "Remove subsection %(subsectionDisplayName)s"
+msgstr ""
+
+#: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
+msgid "Remove unit %(unitName)s"
+msgstr ""
+
 #: lms/templates/commerce/provider.underscore
+#: test_root/staticfiles/templates/commerce/provider.underscore
 msgid ""
 "You still need to visit the %(display_name)s website to complete the credit "
 "process."
 msgstr ""
 
 #: lms/templates/commerce/provider.underscore
+#: test_root/staticfiles/templates/commerce/provider.underscore
 msgid ""
 "To finalize course credit, %(display_name)s requires %(platform_name)s "
 "learners to submit a credit request."
 msgstr ""
 
 #: lms/templates/commerce/provider.underscore
+#: test_root/staticfiles/templates/commerce/provider.underscore
 msgid "<img src='%s' alt='%s'></image>"
 msgstr "<img src='%s' alt='%s'></image>"
 
 #: lms/templates/commerce/provider.underscore
+#: test_root/staticfiles/templates/commerce/provider.underscore
 msgid ""
 "<button data-provider=\"%s\" data-course-key=\"%s\" data-username=\"%s\" "
 "class=\"complete-course\" onClick=completeOrder(this)>%s</button>"
@@ -8039,15 +8735,19 @@ msgstr ""
 "class=\"complete-course\" onClick=completeOrder(this)>%s</button>"
 
 #: lms/templates/commerce/provider.underscore
+#: test_root/staticfiles/templates/commerce/provider.underscore
 msgid "Get Credit"
 msgstr ""
 
 #: lms/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
 msgid "Thank you! We have received your payment for %(course_name)s."
 msgstr ""
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid ""
 "Please print this page for your records; it serves as your receipt. You will"
 " also receive an email with the same information."
@@ -8055,50 +8755,73 @@ msgstr "본 영수증 페이지를 인쇄하십시오. 동일한 내용의 이�
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Order No."
 msgstr "주문 번호"
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Date"
 msgstr "날짜"
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Amount"
 msgstr "총액"
 
 #: lms/templates/commerce/receipt.underscore
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Total"
 msgstr "합계"
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Please Note"
 msgstr "참고하세요."
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Crossed out items have been refunded."
 msgstr "중복된 항목은 환불되었습니다."
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Billed to"
 msgstr "로 청구됨"
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "No receipt available"
 msgstr "청구인이 없습니다."
 
 #: lms/templates/commerce/receipt.underscore
+#: lms/templates/financial-assistance/financial_assessment_submitted.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/financial-assistance/financial_assessment_submitted.underscore
 msgid "Go to Dashboard"
 msgstr "대시보드로 가세요."
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid ""
 "If you don't verify your identity now, you can still explore your course "
 "from your dashboard. You will receive periodic reminders from "
@@ -8109,200 +8832,311 @@ msgstr ""
 
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Want to confirm your identity later?"
 msgstr "신분증을 나중에 확인받겠습니까?"
 
 #: lms/templates/commerce/receipt.underscore
+#: test_root/staticfiles/templates/commerce/receipt.underscore
 msgid "Verify Now"
 msgstr "지금 인증하세요"
 
 #: lms/templates/courseware/proctored-exam-controls.underscore
+#: test_root/staticfiles/templates/courseware/proctored-exam-controls.underscore
 msgid "Mark Exam As Completed"
 msgstr "'완료'로 평가 분류하기"
 
 #: lms/templates/courseware/proctored-exam-status.underscore
+#: test_root/staticfiles/templates/courseware/proctored-exam-status.underscore
 msgid "timed"
 msgstr ""
 
 #: lms/templates/courseware/proctored-exam-status.underscore
+#: test_root/staticfiles/templates/courseware/proctored-exam-status.underscore
 msgid "End My Exam"
 msgstr "내 시험 종료"
 
 #: lms/templates/discovery/course_card.underscore
+#: test_root/staticfiles/templates/discovery/course_card.underscore
 msgid "LEARN MORE"
 msgstr "자세히 알아보기"
 
 #: lms/templates/discovery/course_card.underscore
+#: test_root/staticfiles/templates/discovery/course_card.underscore
 msgid "Starts: %(start_date)s"
 msgstr ""
 
 #: lms/templates/discovery/course_card.underscore
+#: test_root/staticfiles/templates/discovery/course_card.underscore
 msgid "Starts"
 msgstr "개강일"
 
 #: lms/templates/discovery/filter_bar.underscore
+#: test_root/staticfiles/templates/discovery/filter_bar.underscore
 msgid "Clear All"
 msgstr "모두 지우기"
 
 #: lms/templates/edxnotes/note-item.underscore
+#: test_root/staticfiles/templates/edxnotes/note-item.underscore
 msgid "Highlighted text"
 msgstr "강조된 텍스트"
 
 #: lms/templates/edxnotes/note-item.underscore
+#: test_root/staticfiles/templates/edxnotes/note-item.underscore
 msgid "Note"
 msgstr "노트"
 
 #: lms/templates/edxnotes/note-item.underscore
+#: test_root/staticfiles/templates/edxnotes/note-item.underscore
 msgid "You commented..."
 msgstr "당신의 의견은..."
 
 #: lms/templates/edxnotes/note-item.underscore
+#: test_root/staticfiles/templates/edxnotes/note-item.underscore
 msgid "Noted in:"
 msgstr "기록된 곳: "
 
 #: lms/templates/edxnotes/note-item.underscore
+#: test_root/staticfiles/templates/edxnotes/note-item.underscore
 msgid "Last Edited:"
 msgstr "마지막 편집 시간:"
 
 #: lms/templates/edxnotes/tab-item.underscore
+#: test_root/staticfiles/templates/edxnotes/tab-item.underscore
 msgid "Clear search results"
 msgstr "검색 결과 삭제"
 
 #: lms/templates/fields/field_dropdown.underscore
 #: lms/templates/fields/field_textarea.underscore
+#: test_root/staticfiles/templates/fields/field_dropdown.underscore
+#: test_root/staticfiles/templates/fields/field_textarea.underscore
 msgid "Click to edit"
 msgstr "수정하기 위해 클릭하세요."
 
 #: lms/templates/fields/field_text.underscore
+#: test_root/staticfiles/templates/fields/field_text.underscore
 msgid "title"
 msgstr "제목"
 
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+#: lms/templates/financial-assistance/financial_assessment_submitted.underscore
+#: test_root/staticfiles/templates/financial-assistance/financial_assessment_form.underscore
+#: test_root/staticfiles/templates/financial-assistance/financial_assessment_submitted.underscore
+msgid "Financial Assistance Application"
+msgstr ""
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+#: test_root/staticfiles/templates/financial-assistance/financial_assessment_form.underscore
+msgid "Application not submitted"
+msgstr ""
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+#: test_root/staticfiles/templates/financial-assistance/financial_assessment_form.underscore
+msgid "About You"
+msgstr ""
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+#: test_root/staticfiles/templates/financial-assistance/financial_assessment_form.underscore
+msgid ""
+"The following information is already a part of your {platform} profile. "
+"We\\'ve included it here for your application."
+msgstr ""
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+#: test_root/staticfiles/templates/financial-assistance/financial_assessment_form.underscore
+msgid "Email address"
+msgstr "이메일 주소"
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+#: test_root/staticfiles/templates/financial-assistance/financial_assessment_form.underscore
+msgid "Legal name"
+msgstr ""
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+#: test_root/staticfiles/templates/financial-assistance/financial_assessment_form.underscore
+msgid "Country of residence"
+msgstr ""
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+#: test_root/staticfiles/templates/financial-assistance/financial_assessment_form.underscore
+msgid "Back to {platform} FAQs"
+msgstr ""
+
+#: lms/templates/financial-assistance/financial_assessment_form.underscore
+#: test_root/staticfiles/templates/financial-assistance/financial_assessment_form.underscore
+msgid "Submit Application"
+msgstr ""
+
+#: lms/templates/financial-assistance/financial_assessment_submitted.underscore
+#: test_root/staticfiles/templates/financial-assistance/financial_assessment_submitted.underscore
+msgid ""
+"Thank you for submitting your financial assistance application for "
+"{course_name}! You can expect a response in 2-4 business days."
+msgstr ""
+
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid "Bulk Exceptions"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid ""
-"You can upload a CSV file of usernames or email addresses to be added to the"
-" certificate exceptions white list."
+"Upload a comma separated values (.csv) file that contains the usernames or "
+"email addresses of learners who have been given exceptions. Include the "
+"username or email address in the first comma separated field. You can "
+"include an optional note describing the reason for the exception in the "
+"second comma separated field."
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid "Browse"
 msgstr "살펴보기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
-msgid "Upload CSV"
-msgstr "CSV 업로드 "
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
+msgid "Add to Exception List"
+msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
 msgid "Individual Exceptions"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
 msgid ""
-"You can add a username or email address to be added to the certificate "
-"exceptions white list."
+"Enter the username or email address of each learner that you want to add as "
+"an exception."
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "Generate a Certificate for all "
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "New"
-msgstr "새로운"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "additions to the Exception list"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "Generate a Certificate for all users on the Exception list"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Generate Exception Certificates"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "User ID"
-msgstr "이용자 ID"
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Generate a Certificate for all "
+msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "New"
+msgstr "새로운"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "additions to the Exception list"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Generate a Certificate for all users on the Exception list"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "User Email"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "Date Exception Granted"
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Exception Granted"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Certificate Generated"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Notes"
 msgstr "안내"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Action"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Remove from List"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Specify whether discussion topics are divided by cohort"
 msgstr "학습 집단별로 토의 주제를 달리할 지 여부를 정합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
 msgid "Course-Wide Discussion Topics"
 msgstr "일반 주제"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
 msgid ""
 "Select the course-wide discussion topics that you want to divide by cohort."
 msgstr "학습 집단별로 달리 제시할 주제를 선택하세요."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 msgid "Content-Specific Discussion Topics"
 msgstr "주제별 토의"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 msgid ""
 "Specify whether content-specific discussion topics are divided by cohort."
 msgstr "학습 집단별로 주제별 토의를 달리할 지 여부를 정합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 msgid "Always cohort content-specific discussion topics"
 msgstr "항상 학습 집단별로 주제별 토의를 진행합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 msgid "Cohort selected content-specific discussion topics"
 msgstr "주제별 토의를 하도록 선정된 학습 집단"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 msgid "No content-specific discussion topics exist."
 msgstr "주제별 토의가 없습니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-subcategory.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-subcategory.underscore
 msgid "Cohorted"
 msgstr "학습집단으로 분류"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Manage Students"
 msgstr "학습자 관리"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Add students to this cohort"
 msgstr "학습집단에 학습자 추가하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid ""
 "Note: Students can be in only one cohort. Adding students to this group "
 "overrides any previous group assignment."
 msgstr "학습자는 하나의 학습 집단에만 속할 수 있습니다. 학습자를 학습 집단에 추가하면,  이전의 학습집단 소속이 무효가 됩니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid ""
 "Enter email addresses and/or usernames, separated by new lines or commas, "
 "for the students you want to add. *"
@@ -8310,136 +9144,168 @@ msgstr "콤마로 분리하거나 다음 줄에 쓰는 방식으로, 추가하�
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "(Required Field)"
 msgstr "(필수 항목)"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "e.g. johndoe@example.com, JaneDoe, joeydoe@example.com"
 msgstr "예: johndoe@example.com, JaneDoe, joeydoe@example.com "
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid ""
 "You will not receive notification for emails that bounce, so double-check "
 "your spelling."
 msgstr "이메일 주소가 정확한지 확인해야 합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Add Students"
 msgstr "학습자 추가"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Add a New Cohort"
 msgstr "신규 학습 집단 추가"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Enter the name of the cohort"
 msgstr "학습집단명을 입력하세요."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Cohort Name"
 msgstr "학습집단명"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Cohort Assignment Method"
 msgstr "학습자 추가 방법"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Automatic"
 msgstr "자동"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Manual"
 msgstr "직접 지정"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid ""
 "There must be one cohort to which students can automatically be assigned."
 msgstr "반드시 한 학습 집단은 학습자가 자동으로 할당될 수 있어야 합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Associated Content Group"
 msgstr "관련 콘텐츠 그룹"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "No Content Group"
 msgstr "콘텐츠 그룹 없음"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Select a Content Group"
 msgstr "콘텐츠 그룹 선택"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Choose a content group to associate"
 msgstr "관련지을 콘텐츠 그룹을 선택합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Not selected"
 msgstr "선택되지 않았습니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Deleted Content Group"
 msgstr "컨텐츠 그룹 삭제"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid ""
 "%(screen_reader_start)sWarning:%(screen_reader_end)s The previously selected"
 " content group was deleted. Select another content group."
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid ""
 "%(screen_reader_start)sWarning:%(screen_reader_end)s No content groups "
 "exist."
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Create a content group"
 msgstr "콘텐츠 그룹 만들기"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid "(contains %(student_count)s student)"
 msgid_plural "(contains %(student_count)s students)"
 msgstr[0] "(%(student_count)s명) "
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid ""
 "Students are added to this cohort only when you provide their email "
 "addresses or usernames on this page."
 msgstr "학습자의 이메일 혹은 아이디를 아래 입력하면 학습 집단에 추가됩니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid "What does this mean?"
 msgstr "자세히 살펴보기"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid "Students are added to this cohort automatically."
 msgstr "학습자는 자동으로 이 학습 집단에 추가됩니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-selector.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-selector.underscore
 msgid "Select a cohort"
 msgstr "학습집단 선택"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-selector.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-selector.underscore
 msgid "%(cohort_name)s (%(user_count)s)"
 msgstr "%(cohort_name)s (%(user_count)s) "
 
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Enable Cohorts"
 msgstr "학습집단 활성화"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Select a cohort to manage"
 msgstr "관리할 학습 집단 선택"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "View Cohort"
 msgstr "학습집단 보기"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid "Assign students to cohorts by uploading a CSV file"
 msgstr "CSV 파일을 업로드하여 학습 집단에 학습자를 추가하세요."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid ""
 "To review student cohort assignments or see the results of uploading a CSV "
 "file, download course profile information or cohort results on "
@@ -8449,41 +9315,52 @@ msgstr ""
 "%(link_end)s 에 있는 학습 집단 결과를 다운로드하세요.  "
 
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Used"
 msgstr "사용됨"
 
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Valid"
 msgstr "유효함"
 
 #: lms/templates/search/course_search_results.underscore
 #: lms/templates/search/dashboard_search_results.underscore
+#: test_root/staticfiles/templates/search/course_search_results.underscore
+#: test_root/staticfiles/templates/search/dashboard_search_results.underscore
 msgid "Load next %(num_items)s result"
 msgid_plural "Load next %(num_items)s results"
 msgstr[0] "다음 %(num_items)s 결과를 로드합니다."
 
 #: lms/templates/search/course_search_results.underscore
 #: lms/templates/search/dashboard_search_results.underscore
+#: test_root/staticfiles/templates/search/course_search_results.underscore
+#: test_root/staticfiles/templates/search/dashboard_search_results.underscore
 msgid "Sorry, no results were found."
 msgstr "아무것도 찾지 못했습니다."
 
 #: lms/templates/search/dashboard_search_results.underscore
+#: test_root/staticfiles/templates/search/dashboard_search_results.underscore
 msgid "Back to Dashboard"
 msgstr "대시보드로 돌아 가세요."
 
 #: lms/templates/student_account/account.underscore
+#: test_root/staticfiles/templates/student_account/account.underscore
 msgid "New Address"
 msgstr "새 주소"
 
 #: lms/templates/student_account/account.underscore
+#: test_root/staticfiles/templates/student_account/account.underscore
 msgid "Change My Email Address"
 msgstr "이메일 주소 변경"
 
 #: lms/templates/student_account/account_settings.underscore
+#: test_root/staticfiles/templates/student_account/account_settings.underscore
 msgid "Account Settings"
 msgstr "계정 설정"
 
 #: lms/templates/student_account/account_settings.underscore
+#: test_root/staticfiles/templates/student_account/account_settings.underscore
 msgid ""
 "These settings include basic information about your account. You can also "
 "specify additional information and see your linked social accounts on this "
@@ -8492,58 +9369,75 @@ msgstr ""
 "KMOOC 계정과 관련된 기본 정보입니다. 추가 정보를 입력할 수 있으며, 링크된 소셜 계정을 이 페이지에서 볼 수도 있습니다."
 
 #: lms/templates/student_account/account_settings.underscore
+#: test_root/staticfiles/templates/student_account/account_settings.underscore
 msgid "section.title"
 msgstr "section.title"
 
 #: lms/templates/student_account/account_settings.underscore
 #: lms/templates/student_profile/learner_profile.underscore
+#: test_root/staticfiles/templates/student_account/account_settings.underscore
+#: test_root/staticfiles/templates/student_profile/learner_profile.underscore
 msgid "An error occurred. Please reload the page."
 msgstr "오류가 발생했습니다. 페이지를 다시 열어주세요."
 
 #: lms/templates/student_account/form_field.underscore
+#: test_root/staticfiles/templates/student_account/form_field.underscore
 msgid "Forgot password?"
 msgstr "비밀번호를 잊어버리셨나요?"
 
 #: lms/templates/student_account/hinted_login.underscore
 #: lms/templates/student_account/login.underscore
 #: lms/templates/student_account/register.underscore
+#: test_root/staticfiles/templates/student_account/hinted_login.underscore
+#: test_root/staticfiles/templates/student_account/login.underscore
+#: test_root/staticfiles/templates/student_account/register.underscore
 msgid "Sign in"
 msgstr "로그인"
 
 #: lms/templates/student_account/hinted_login.underscore
+#: test_root/staticfiles/templates/student_account/hinted_login.underscore
 msgid "Would you like to sign in using your %(providerName)s credentials?"
 msgstr "%(providerName)s으로 로그인 하시겠어요?"
 
 #: lms/templates/student_account/hinted_login.underscore
+#: test_root/staticfiles/templates/student_account/hinted_login.underscore
 msgid "Sign in using %(providerName)s"
 msgstr "%(providerName)s로 로그인 하기"
 
 #: lms/templates/student_account/hinted_login.underscore
+#: test_root/staticfiles/templates/student_account/hinted_login.underscore
 msgid "Show me other ways to sign in or register"
 msgstr "다른 방법으로 로그인 또는 가입하기"
 
 #: lms/templates/student_account/institution_login.underscore
+#: test_root/staticfiles/templates/student_account/institution_login.underscore
 msgid "Sign in with Institution/Campus Credentials"
 msgstr "기관 아이디로 로그인합니다."
 
 #: lms/templates/student_account/institution_login.underscore
 #: lms/templates/student_account/institution_register.underscore
+#: test_root/staticfiles/templates/student_account/institution_login.underscore
+#: test_root/staticfiles/templates/student_account/institution_register.underscore
 msgid "Choose your institution from the list below:"
 msgstr "아래 목록에서 해당 기관을 선택하세요."
 
 #: lms/templates/student_account/institution_login.underscore
+#: test_root/staticfiles/templates/student_account/institution_login.underscore
 msgid "Back to sign in"
 msgstr "로그인으로 돌아가기"
 
 #: lms/templates/student_account/institution_register.underscore
+#: test_root/staticfiles/templates/student_account/institution_register.underscore
 msgid "Register with Institution/Campus Credentials"
 msgstr "기관으로 가입합니다."
 
 #: lms/templates/student_account/institution_register.underscore
+#: test_root/staticfiles/templates/student_account/institution_register.underscore
 msgid "Register through edX"
 msgstr "KMOOC 통해 가입하기"
 
 #: lms/templates/student_account/login.underscore
+#: test_root/staticfiles/templates/student_account/login.underscore
 msgid ""
 "You have successfully signed into %(currentProvider)s, but your "
 "%(currentProvider)s account does not have a linked %(platformName)s account."
@@ -8554,160 +9448,199 @@ msgstr ""
 "계정을 연동하기 위해서, %(platformName)s 가입 시 입력한 이메일과 비밀번호를 입력한 후, 로그인을 진행하세요."
 
 #: lms/templates/student_account/login.underscore
+#: test_root/staticfiles/templates/student_account/login.underscore
 msgid "Password Reset Email Sent"
 msgstr "비밀번호 재설정 메일이 발신되었습니다."
 
 #: lms/templates/student_account/login.underscore
+#: test_root/staticfiles/templates/student_account/login.underscore
 msgid ""
 "We've sent instructions for resetting your password to the email address you"
 " provided."
 msgstr "입력한 이메일 주소로 비밀번호 재설정 안내를 보냈습니다. "
 
 #: lms/templates/student_account/login.underscore
+#: test_root/staticfiles/templates/student_account/login.underscore
 msgid "We couldn't sign you in."
 msgstr "로그인 실패"
 
 #: lms/templates/student_account/login.underscore
+#: test_root/staticfiles/templates/student_account/login.underscore
 msgid "An error occurred when signing you in to %(platformName)s."
 msgstr "%(platformName)s에 로그인하는 동안 오류가 발생했습니다."
 
 #: lms/templates/student_account/login.underscore
+#: test_root/staticfiles/templates/student_account/login.underscore
 msgid ""
 "Sign in here using your email address and password, or use one of the "
 "providers listed below."
 msgstr "메일 주소와 비밀번호를 입력하거나, 아래에 있는 방법으로 로그인하세요. "
 
 #: lms/templates/student_account/login.underscore
+#: test_root/staticfiles/templates/student_account/login.underscore
 msgid "Sign in here using your email address and password."
 msgstr "메일 주소와 비밀번호를 입력해 로그인합니다."
 
 #: lms/templates/student_account/login.underscore
+#: test_root/staticfiles/templates/student_account/login.underscore
 msgid "If you do not yet have an account, use the button below to register."
 msgstr "계정이 아직 없다면, 아래의 버튼을 눌러 가입하세요. "
 
 #: lms/templates/student_account/login.underscore
+#: test_root/staticfiles/templates/student_account/login.underscore
 msgid "or sign in with"
 msgstr "다음 계정을 통해서도 간편하게 로그인 가능합니다."
 
 #: lms/templates/student_account/login.underscore
+#: test_root/staticfiles/templates/student_account/login.underscore
 msgid "Sign in with %(providerName)s"
 msgstr "%(providerName)s로 로그인 "
 
 #: lms/templates/student_account/login.underscore
 #: lms/templates/student_account/register.underscore
+#: test_root/staticfiles/templates/student_account/login.underscore
+#: test_root/staticfiles/templates/student_account/register.underscore
 msgid "Use my institution/campus credentials"
 msgstr "소속 기관 계정을 사용합니다."
 
 #: lms/templates/student_account/login.underscore
+#: test_root/staticfiles/templates/student_account/login.underscore
 msgid "New to %(platformName)s?"
 msgstr " %(platformName)s에 처음 오셨나요?"
 
 #: lms/templates/student_account/login.underscore
+#: test_root/staticfiles/templates/student_account/login.underscore
 msgid "Create an account"
 msgstr "가입하기"
 
 #: lms/templates/student_account/password_reset.underscore
 #: lms/templates/student_account/register.underscore
+#: test_root/staticfiles/templates/student_account/password_reset.underscore
+#: test_root/staticfiles/templates/student_account/register.underscore
 msgid "An error occurred."
 msgstr "에러가 발생했습니다."
 
 #: lms/templates/student_account/password_reset.underscore
+#: test_root/staticfiles/templates/student_account/password_reset.underscore
 msgid "Password assistance"
 msgstr "비밀번호 도움"
 
 #: lms/templates/student_account/password_reset.underscore
+#: test_root/staticfiles/templates/student_account/password_reset.underscore
 msgid ""
 "Please enter your email address below and we will send you instructions for "
 "setting a new password."
 msgstr "아래에 이메일 주소를 입력 해주십시오, 새로운 비밀번호를 설정하기 위한 안내를 이메일로 보내드립니다."
 
 #: lms/templates/student_account/password_reset.underscore
+#: test_root/staticfiles/templates/student_account/password_reset.underscore
 msgid "Reset my password"
 msgstr "비밀번호 재설정"
 
 #: lms/templates/student_account/register.underscore
+#: test_root/staticfiles/templates/student_account/register.underscore
 msgid "We couldn't create your account."
 msgstr "회원가입을 하실 수 없습니다. "
 
 #: lms/templates/student_account/register.underscore
+#: test_root/staticfiles/templates/student_account/register.underscore
 msgid "You've successfully signed into %(currentProvider)s."
 msgstr "%(currentProvider)s로 로그인하였습니다.  "
 
 #: lms/templates/student_account/register.underscore
+#: test_root/staticfiles/templates/student_account/register.underscore
 msgid ""
 "We just need a little more information before you start learning with "
 "%(platformName)s."
 msgstr "%(platformName)s 에서 학습을 시작하기 전에 당신에 대한 정보가 조금더 필요합니다."
 
 #: lms/templates/student_account/register.underscore
+#: test_root/staticfiles/templates/student_account/register.underscore
 msgid "Create an account using"
 msgstr "계정 연동하기"
 
 #: lms/templates/student_account/register.underscore
+#: test_root/staticfiles/templates/student_account/register.underscore
 msgid "Create account using %(providerName)s."
 msgstr "%(providerName)s로 계정 만들기"
 
 #: lms/templates/student_account/register.underscore
+#: test_root/staticfiles/templates/student_account/register.underscore
 msgid "or create a new one here"
 msgstr "혹은 새로운 계정 만들기"
 
 #: lms/templates/student_account/register.underscore
+#: test_root/staticfiles/templates/student_account/register.underscore
 msgid "Create a new account"
 msgstr "가입하기"
 
 #: lms/templates/student_account/register.underscore
+#: test_root/staticfiles/templates/student_account/register.underscore
 msgid "Create your account"
 msgstr "가입하기"
 
 #: lms/templates/student_account/register.underscore
+#: test_root/staticfiles/templates/student_account/register.underscore
 msgid "Required field"
 msgstr "필수 항목"
 
 #: lms/templates/student_account/register.underscore
+#: test_root/staticfiles/templates/student_account/register.underscore
 msgid "Already have an account?"
 msgstr "이미 계정이 있으십니까?"
 
 #: lms/templates/student_profile/learner_profile.underscore
+#: test_root/staticfiles/templates/student_profile/learner_profile.underscore
 msgid "You are currently sharing a limited profile."
 msgstr "현재 아이디만 공개하고 있습니다."
 
 #: lms/templates/student_profile/learner_profile.underscore
+#: test_root/staticfiles/templates/student_profile/learner_profile.underscore
 msgid "This edX learner is currently sharing a limited profile."
 msgstr "학습자가 현재 제한적 프로필을 공유하고 있습니다."
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Congratulations! You are now verified on %(platformName)s!"
 msgstr "축하합니다. %(platformName)s에 대한 인증이 이루어졌습니다."
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "You are now enrolled as a verified student for:"
 msgstr "인증 학습자로 등록되었습니다."
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "A list of courses you have just enrolled in as a verified student"
 msgstr "인증 학습자로 등록한 강좌 목록"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Course"
 msgstr "강좌"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Starts: %(start)s"
 msgstr "개강일: %(start)s"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Explore your course!"
 msgstr "강좌를 살펴보세요!"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Go to your Dashboard"
 msgstr "대시보드로 가기"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Verified Status"
 msgstr "확인된 상태"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
 msgid ""
 "Thank you for submitting your photos. We will review them shortly. You can "
 "now sign up for any %(platformName)s course that offers verified "
@@ -8718,31 +9651,42 @@ msgstr ""
 "인증 사진의 유효 기간은 1년입니다. 1년 후, 사진 인증을 다시 받아야 합니다.    "
 
 #: lms/templates/verify_student/error.underscore
+#: test_root/staticfiles/templates/verify_student/error.underscore
 msgid "Error:"
 msgstr "오류:"
 
 #: lms/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 msgid "What You Need for Verification"
 msgstr "인증을 위해 필요한 것"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/intro_step.underscore
 #: lms/templates/verify_student/make_payment_step.underscore
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/intro_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Webcam"
 msgstr "웹캠"
 
 #: lms/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 msgid ""
 "You need a computer that has a webcam. When you receive a browser prompt, "
 "make sure that you allow access to the camera."
 msgstr "웹캠이 있는 컴퓨터가 필요합니다. 브라우저 프롬프트를 받을 때, 카메라 접근이 허용되어 있는지 확인해주세요."
 
 #: lms/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 msgid "Photo Identification"
 msgstr "사진 본인 확인"
 
 #: lms/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 msgid ""
 "You need a driver's license, passport, or other government-issued ID that "
 "has your name and photo."
@@ -8750,32 +9694,40 @@ msgstr "귀하의 이름과 사진이 있는 주민등록증, 운전면허증, �
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
 msgid "Take Your Photo"
 msgstr "자신의 사진 촬영하기"
 
 #: lms/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 msgid ""
 "When your face is in position, use the camera button %(icon)s below to take "
 "your photo."
 msgstr "적절한 위치에 얼굴이 나오도록 하고, 아래의 %(icon)s 카메라 버튼을 눌러 사진을 찍으세요."
 
 #: lms/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 msgid "To take a successful photo, make sure that:"
 msgstr "사진을 잘 찍기 위해서, 다음을 확인하세요:"
 
 #: lms/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 msgid "Your face is well-lit."
 msgstr "얼굴이 조명을 잘 받도록 하세요."
 
 #: lms/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 msgid "Your entire face fits inside the frame."
 msgstr "얼굴 전체가 프레임안에 들어오도록 하세요."
 
 #: lms/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 msgid "The photo of your face matches the photo on your ID."
 msgstr "신분증의 사진과 얼굴사진이 일치해야합니다."
 
 #: lms/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 msgid ""
 "To use the current photo, select the camera button %(icon)s. To take another"
 " photo, select the retake button %(icon)s."
@@ -8786,18 +9738,27 @@ msgstr ""
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
 msgid "Frequently Asked Questions"
 msgstr "자주 묻는 질문들"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
 msgid "Why does %(platformName)s need my photo?"
 msgstr "왜 %(platformName)s에서 내 사진이 필요한가요?"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
 msgid ""
 "As part of the verification process, you take a photo of both your face and "
 "a government-issued photo ID. Our authorization service confirms your "
@@ -8807,12 +9768,18 @@ msgstr "인증을 위해, 귀하의 얼굴이 나오는 사진과 신분증 사�
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
 msgid "What does %(platformName)s do with this photo?"
 msgstr "%(platformName)s은 이 사진으로 무엇을 하나요?"
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
 msgid ""
 "We use the highest levels of security available to encrypt your photo and "
 "send it to our authorization service for review. Your photo and information "
@@ -8826,20 +9793,27 @@ msgstr ""
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/intro_step.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/intro_step.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Next: %(nextStepTitle)s"
 msgstr "다음: %(nextStepTitle)s"
 
 #: lms/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
 msgid "Take a Photo of Your ID"
 msgstr "신분증을 사진촬영해 주세요."
 
 #: lms/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
 msgid ""
 "Use your webcam to take a photo of your ID. We will match this photo with "
 "the photo of your face and the name on your account."
 msgstr "신분증 사진을 촬영하기 위해 웹캠을 사용하십시오. 당신 계정에 있는 사진 및 이름과 비교할 것입니다."
 
 #: lms/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
 msgid ""
 "You need an ID with your name and photo. A driver's license, passport, or "
 "other government-issued IDs are all acceptable."
@@ -8847,62 +9821,79 @@ msgstr "이름과 사진이 있는 신분증이 필요합니다. 가능한 신�
 
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
 msgid "Tips on taking a successful photo"
 msgstr "좋은 사진 촬영법"
 
 #: lms/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
 msgid "Ensure that you can see your photo and read your name"
 msgstr "당신의 사진을 볼 수 있고, 이름을 읽을수 있도록 하십시요."
 
 #: lms/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
 msgid "Make sure your ID is well-lit"
 msgstr "아이디가 잘 조명이 되도록 하십시요."
 
 #: lms/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
 msgid "Once in position, use the camera button %(icon)s to capture your ID"
 msgstr "신분증을 적절한 위치에 고정하고 %(icon)s 카메라 버튼을 눌러 신분증을 캡춰 하세요. , "
 
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
 msgid "Use the retake photo button if you are not pleased with your photo"
 msgstr "당신 사진이 마음에 들지 않으면 재촬영 버튼을 사용하세요."
 
 #: lms/templates/verify_student/image_input.underscore
+#: test_root/staticfiles/templates/verify_student/image_input.underscore
 msgid "Preview of uploaded image"
 msgstr "업로드된 이미지 미리보기"
 
 #: lms/templates/verify_student/image_input.underscore
+#: test_root/staticfiles/templates/verify_student/image_input.underscore
 msgid "Upload an image or capture one with your web or phone camera."
 msgstr "이미지를 올리거나 웹 혹은 폰카메라로 캡춰 하세요."
 
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
 msgid ""
 "Use your webcam to take a photo of your face. We will match this photo with "
 "the photo on your ID."
 msgstr "얼굴을 촬영하기 위해 웹캠을 사용하세요. 신분증에 있는 사진과 비교할 것입니다."
 
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
 msgid "Make sure your face is well-lit"
 msgstr "얼굴이 잘 조명받도록 하세요"
 
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
 msgid "Be sure your entire face is inside the frame"
 msgstr "얼굴 전체가 프레임안에 들어오도록 하세요."
 
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
 msgid "Once in position, use the camera button %(icon)s to capture your photo"
 msgstr "신분증을 적절한 위치에 고정하고 %(icon)s 카메라 버튼을 눌러 사진을 캡춰 하세요. , "
 
 #: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
 msgid "Can we match the photo you took with the one on your ID?"
 msgstr "당신의 사진이 아이디에 있는 사진과 동일인물 입니까?"
 
 #: lms/templates/verify_student/intro_step.underscore
+#: test_root/staticfiles/templates/verify_student/intro_step.underscore
 msgid "Thanks for returning to verify your ID in: %(courseName)s"
 msgstr "본인 확인을 위해 %(courseName)s로 돌아와서 감사합니다."
 
 #: lms/templates/verify_student/intro_step.underscore
 #: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/intro_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
 msgid ""
 "You need to activate your account before you can enroll in courses. Check "
 "your inbox for an activation email. After you complete activation you can "
@@ -8914,39 +9905,53 @@ msgstr ""
 #: lms/templates/verify_student/intro_step.underscore
 #: lms/templates/verify_student/make_payment_step.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/intro_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Activate Your Account"
 msgstr "계좌를 활성화하세요."
 
 #: lms/templates/verify_student/intro_step.underscore
 #: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/intro_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
 msgid "Check Your Email"
 msgstr "이메일을 확인하세요."
 
 #: lms/templates/verify_student/intro_step.underscore
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/intro_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Photo ID"
 msgstr "사진있는 신분증"
 
 #: lms/templates/verify_student/intro_step.underscore
+#: test_root/staticfiles/templates/verify_student/intro_step.underscore
 msgid ""
 "A driver's license, passport, or other government-issued ID with your name "
 "and photo"
 msgstr "주민등록증, 운전면허증, 여권 등 이름과 사진이 있는 정부 발급 신분증"
 
 #: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
 msgid "You are enrolling in: %(courseName)s"
 msgstr "%(courseName)s 수강 신청합니다."
 
 #: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
 msgid "You are upgrading your enrollment for: %(courseName)s"
 msgstr "%(courseName)s로 등록을 업그레이드합니다."
 
 #: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
 msgid ""
 "You can now enter your payment information and complete your enrollment."
 msgstr "결제 정보 입력이 가능하며, 등록을 완료할 수 있습니다."
 
 #: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
 msgid ""
 "You can pay now even if you don't have the following items available, but "
 "you will need to have these by %(date)s to qualify to earn a Verified "
@@ -8956,67 +9961,148 @@ msgstr ""
 "필요합니다. "
 
 #: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
 msgid ""
 "You can pay now even if you don't have the following items available, but "
 "you will need to have these to qualify to earn a Verified Certificate."
 msgstr "다음 항목들을 이용할 수 없더라도 지금 결제할 수 있습니다. 그러나 인증 이수증을 받기 위해서는 이 항목들이 필요합니다. "
 
 #: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
 msgid "Government-Issued Photo ID"
 msgstr "정부가 발급한 Photo ID"
 
 #: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
 msgid ""
 "ID-Verification is not required for this Professional Education course."
 msgstr "전문 교육 과정에는 ID 신분확인이 필요하지 않습니다."
 
 #: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
 msgid ""
 "All professional education courses are fee-based, and require payment to "
 "complete the enrollment process."
 msgstr "모든 전문 과정 강좌는 유료이며, 수강신청 처리를 완료하기 위해 결제가 필요합니다. "
 
 #: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
 msgid "You have already verified your ID!"
 msgstr "벌써 당신의 신분증을 인증했습니다! "
 
 #: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
 msgid "Your verification status is good until %(verificationGoodUntil)s."
 msgstr "%(verificationGoodUntil)s.까지 인증에 성공했습니다. "
 
 #: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
 msgid "price"
 msgstr "값"
 
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "Account Not Activated"
+msgstr ""
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "You are enrolling in %(courseName)s"
+msgstr ""
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "Upgrade to a Verified Certificate for %(courseName)s"
+msgstr ""
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid ""
+"Before you upgrade to a certificate track, you must activate your account."
+msgstr ""
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "Check your email for an activation message."
+msgstr ""
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "Professional Certificate for %(courseName)s"
+msgstr ""
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "Verified Certificate for %(courseName)s"
+msgstr ""
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid ""
+"To receive a certificate, you must also verify your identity before "
+"%(date)s."
+msgstr ""
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "To receive a certificate, you must also verify your identity."
+msgstr ""
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid ""
+"To verify your identity, you need a webcam and a government-issued photo ID."
+msgstr ""
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid ""
+"Your ID must be a government-issued photo ID that clearly shows your face."
+msgstr ""
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid ""
+"You will use your webcam to take a picture of your face and of your "
+"government-issued photo ID."
+msgstr ""
+
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Thank you! We have received your payment for %(courseName)s."
 msgstr "감사합니다! %(courseName)s 수강료 납입이 완료되었습니다. "
 
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Next Step: Confirm your identity"
 msgstr "다음 단계: 귀하의 신분을 확인하세요."
 
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Check your email"
 msgstr "이메일을 확인하십시요."
 
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid ""
 "You need to activate your account before you can enroll in courses. Check "
 "your inbox for an activation email."
 msgstr "수강신청 전에 계정을 활성화해야 합니다. 발송된 메일을 확인해주세요."
 
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid ""
 "A driver's license, passport, or government-issued ID with your name and "
 "photo."
 msgstr "주민등록증, 운전면허증, 여권 등 이름과 사진이 있는 정부 발급 신분증"
 
 #: lms/templates/verify_student/reverify_success_step.underscore
+#: test_root/staticfiles/templates/verify_student/reverify_success_step.underscore
 msgid "Identity Verification In Progress"
 msgstr "본인 확인 중입니다."
 
 #: lms/templates/verify_student/reverify_success_step.underscore
+#: test_root/staticfiles/templates/verify_student/reverify_success_step.underscore
 msgid ""
 "We have received your information and are verifying your identity. You will "
 "see a message on your dashboard when the verification process is complete "
@@ -9027,85 +10113,154 @@ msgstr ""
 " 그동안 본인 확인이 필요 없는 콘텐츠를 이용하실 수 있습니다."
 
 #: lms/templates/verify_student/reverify_success_step.underscore
+#: test_root/staticfiles/templates/verify_student/reverify_success_step.underscore
 msgid "Return to Your Dashboard"
 msgstr "대시보드로 돌아 가기"
 
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid "Review Your Photos"
 msgstr "사진을 살펴보세요"
 
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid ""
 "Make sure we can verify your identity with the photos and information you "
 "have provided."
 msgstr "사진과 정보로 신원을 인증받을 수 있는지 확인하세요. "
 
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid "Photo of %(fullName)s"
 msgstr "%(fullName)s의 사진"
 
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid "Photo of %(fullName)s's ID"
 msgstr "%(fullName)s의 신분증 사진"
 
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid "Photo requirements:"
 msgstr "사진의 조건:"
 
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid "Does the photo of you show your whole face?"
 msgstr "귀하의 사진이 전체 얼굴을 보여주고 있습니까?"
 
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid "Does the photo of you match your ID photo?"
 msgstr "귀하의 사진과 신분증 사진이 일치합니까?"
 
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid "Is your name on your ID readable?"
 msgstr "신분증 상의 이름이 읽혀집니까?"
 
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid "Does the name on your ID match your account name: %(fullName)s?"
 msgstr "신분증의 이름이 계정의 이름과 일치합니까?:%(fullName)s"
 
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid "Edit Your Name"
 msgstr "이름 편집"
 
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid ""
 "Make sure that the full name on your account matches the name on your ID."
 msgstr "계정의 이름이 당신의 신분증 상의 이름과 일치하는지 확인하세요. "
 
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid "Photos don't meet the requirements?"
 msgstr "사진이 아래의 요청사항과 맞지 않습니까?"
 
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid "Retake Your Photos"
 msgstr "사진을 다시 찍습니다."
 
 #: lms/templates/verify_student/review_photos_step.underscore
+#: test_root/staticfiles/templates/verify_student/review_photos_step.underscore
 msgid "Before proceeding, please confirm that your details match"
 msgstr "진행하기 전에, 귀하의 정보가 일치하는지 확인하세요."
 
 #: lms/templates/verify_student/webcam_photo.underscore
+#: test_root/staticfiles/templates/verify_student/webcam_photo.underscore
 msgid ""
 "Don't see your picture? Make sure to allow your browser to use your camera "
 "when it asks for permission."
 msgstr "사진이 보이지 않습니까? 카메라 사용을 위한 브라우저를 확인바랍니다."
 
 #: lms/templates/verify_student/webcam_photo.underscore
+#: test_root/staticfiles/templates/verify_student/webcam_photo.underscore
 msgid "Live view of webcam"
 msgstr "웹캠으로 보기"
 
 #: lms/templates/verify_student/webcam_photo.underscore
+#: test_root/staticfiles/templates/verify_student/webcam_photo.underscore
 msgid "Retake Photo"
 msgstr "사진 재촬영"
 
 #: lms/templates/verify_student/webcam_photo.underscore
+#: test_root/staticfiles/templates/verify_student/webcam_photo.underscore
 msgid "Take Photo"
 msgstr "사진 촬영"
+
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+msgid "Add a New Allowance"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+msgid "Special Exam"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
+msgid "Allowance Type"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+msgid "Value"
+msgstr "값"
+
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+msgid "Username or Email"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
+msgid "Allowances"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
+msgid "Add Allowance"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
+#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Exam Name"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
+msgid "Allowance Value"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Time Limit"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Started At"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Completed At"
+msgstr ""
 
 #: cms/templates/js/active-video-upload-list.underscore
 msgid "Drag and drop or click here to upload video files."
@@ -9195,6 +10350,7 @@ msgid "ID"
 msgstr "아이디"
 
 #: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
 msgid "Certificate Details"
 msgstr "이수증 상세정보"
 
@@ -9277,18 +10433,6 @@ msgstr "활성화"
 #: cms/templates/js/certificate-web-preview.underscore
 msgid "Deactivate"
 msgstr "비활성화"
-
-#: cms/templates/js/checklist.underscore
-msgid "{number}{pct_sign} of checklists completed"
-msgstr "완료된 채크리스트의 {number}{pct_sign} "
-
-#: cms/templates/js/checklist.underscore
-msgid "%"
-msgstr "%"
-
-#: cms/templates/js/checklist.underscore
-msgid "Tasks Completed:"
-msgstr "완료된 작업:"
 
 #: cms/templates/js/container-message.underscore
 msgid ""
@@ -9385,11 +10529,6 @@ msgstr "공개일시:"
 #: cms/templates/js/publish-xblock.underscore
 msgid "Scheduled:"
 msgstr "예정됨:"
-
-#: cms/templates/js/course-outline.underscore
-#: cms/templates/js/publish-xblock.underscore
-msgid "Unscheduled"
-msgstr "지정되지 않음"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Graded as:"
@@ -10163,6 +11302,86 @@ msgstr "동영상의 URL을 변경했지만, 자막 파일은 변경되지 않�
 #: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
 msgid "Use Current Transcript"
 msgstr "지금 자막 쓰기"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid "Errors!"
+msgstr ""
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " records are not in correct format"
+msgstr ""
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " record is not in correct format"
+msgstr ""
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learners do not exist in LMS"
+msgstr ""
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learner does not exist in LMS"
+msgstr ""
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learners are already white listed"
+msgstr ""
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learner is already white listed"
+msgstr ""
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learners are not enrolled in course"
+msgstr ""
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learner is not enrolled in course"
+msgstr ""
+
+#: lms/templates/ccx/schedule.underscore
+msgid "toggle chapter"
+msgstr "챕터 전환"
+
+#: lms/templates/ccx/schedule.underscore
+msgid "toggle subsection"
+msgstr "소주제 전환"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
+msgid ""
+"You can upload a CSV file of usernames or email addresses to be added to the"
+" certificate exceptions white list."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
+msgid "Upload CSV"
+msgstr "CSV 업로드 "
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
+msgid ""
+"You can add a username or email address to be added to the certificate "
+"exceptions white list."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "User ID"
+msgstr "이용자 ID"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Date Exception Granted"
+msgstr ""
+
+#: cms/templates/js/checklist.underscore
+msgid "{number}{pct_sign} of checklists completed"
+msgstr "완료된 채크리스트의 {number}{pct_sign} "
+
+#: cms/templates/js/checklist.underscore
+msgid "%"
+msgstr "%"
+
+#: cms/templates/js/checklist.underscore
+msgid "Tasks Completed:"
+msgstr "완료된 작업:"
 
 #: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
 msgid "HD off"
