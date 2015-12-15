@@ -759,7 +759,7 @@ def get_copykiller_result(request, course_id):
     query = "select "
     query += "v.student_id, "
     query += "v.report_id assessment_no, "
-    query += "concat('http://203.235.44.154:8080/ckplus/copykiller.jsp?uri=', v.uri, '&property=100&lang=ko') internet_link, "
+    query += "concat('http://pjsearch.kmooc.kr:8080/ckplus/copykiller.jsp?uri=', v.uri, '&property=100&lang=ko') internet_link, "
     query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='class') class, "
     query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='internet') internet, "
     query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='report') report, "
