@@ -207,14 +207,22 @@ def check_assessment_ing(course_id):
 def check_assessment_done(course_id):
     con = mdb.connect(settings.DATABASES.get('default').get('HOST'), settings.DATABASES.get('default').get('USER'), settings.DATABASES.get('default').get('PASSWORD'), settings.DATABASES.get('default').get('NAME'));
     cur = con.cursor()
-    query = "select "
-    query += "    if(count(uri) = (select count(uri) from vw_copykiller where class_id ='"+course_id+"'), 'True', 'False') complete "
-    query += "from tb_copykiller_copyratio "
-    query += "where "
-    query += "    uri in (select uri from vw_copykiller where class_id ='"+course_id+"') "
-    query += "and "
-    query += "    complete_status = 'Y' and check_type='internet'"
+
+    query = "select count(uri) from vw_copykiller where class_id ='"+course_id+"'"
     cur.execute(query)
+    result = cur.fetchone()
+    cur.close()
+    if result[0] == 0:
+        return False
+
+    query2 = "select "
+    query2 += "    if(count(uri) = ("+query+"), 'True', 'False') complete "
+    query2 += "from tb_copykiller_copyratio "
+    query2 += "where "
+    query2 += "    uri in (select uri from vw_copykiller where class_id ='"+course_id+"') "
+    query2 += "and "
+    query2 += "    complete_status = 'Y' and check_type='internet'"
+    cur.execute(query2)
     result = cur.fetchone()
     cur.close()
     con.close()
