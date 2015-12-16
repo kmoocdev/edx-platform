@@ -23,13 +23,14 @@
                 {created_at: created_at},
                 true
             );
+            var thread_type_han = gettext(thread_type);
             %>
             <%=
             interpolate(
                 // Translators: post_type describes the kind of post this is (e.g. "question" or "discussion");
                 // time_ago is how much time has passed since the post was created (e.g. "4 hours ago")
                 _.escape(gettext('%(post_type)s posted %(time_ago)s by %(author)s')),
-                {post_type: thread_type, time_ago: timeAgoHtml, author: author_display},
+                {post_type: thread_type_han, time_ago: timeAgoHtml, author: author_display},
                 true
             )
             %>
