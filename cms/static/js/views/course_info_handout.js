@@ -54,7 +54,9 @@ define(["js/views/baseview", "codemirror", "js/views/feedback_notification", "js
             $('#handout_error').removeClass('is-shown');
             $('.save-button').removeClass('is-disabled').attr('aria-disabled', false);
             if ($('.CodeMirror-lines').find('.cm-error').length == 0){
-                this.model.set('data', this.$codeMirror.getValue());
+                var content = this.$codeMirror.getValue();
+                content = content.replace(/script/gi,"noscript");
+                this.model.set('data', content);
                 var saving = new NotificationView.Mini({
                     title: gettext('Saving')
                 });
@@ -97,3 +99,4 @@ define(["js/views/baseview", "codemirror", "js/views/feedback_notification", "js
 
     return CourseInfoHandoutsView;
 }); // end define()
+

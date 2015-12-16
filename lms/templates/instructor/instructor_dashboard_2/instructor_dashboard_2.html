@@ -107,9 +107,7 @@ from django.core.urlresolvers import reverse
         <a class="instructor-info-action" href="${ old_dashboard_url }"> ${_("Revert to Legacy Dashboard")} </a>
         %endif
       </div>
-
     <h1>${_("Instructor Dashboard")}</h1>
-
         <!--
       %if analytics_dashboard_message:
         <div class="wrapper-msg urgency-low is-shown">
@@ -117,7 +115,6 @@ from django.core.urlresolvers import reverse
         </div>
       %endif
       -->
-
     ## links which are tied to idash-sections below.
     ## the links are activated and handled in instructor_dashboard.coffee
     ## when the javascript loads, it clicks on the first section
@@ -129,10 +126,8 @@ from django.core.urlresolvers import reverse
       % endfor
       <li class="nav-item"><a href="" data-section="peer_asscessment">표절검사</a></li>
     </ul>
-
     ## each section corresponds to a section_data sub-dictionary provided by the view
     ## to keep this short, sections can be pulled out into their own files
-
 
     % for section_data in sections:
       <section id="${ section_data['section_key'] }" class="idash-section">
@@ -156,9 +151,9 @@ from django.core.urlresolvers import reverse
   1일 1회 자동 스케줄러에 의해 수행되므로, 수행 요청 후 최대 1일 이내에 결과가 산출됩니다.
   </label>
   <br>
-  %if is_assessment & is_assessment_ing != True:
+  %if (is_assessment & is_assessment_ing != True) | is_assessment_done:
   <input type="button" class="molly-guard" name="reset-attempts-all" value="표절검사 수행하기" onclick="run_copykiller();">
-  %else:
+  %elif is_assessment :
   <input type="button" class="molly-guard" name="reset-attempts-all" value="표절검사 수행하기" disabled>
   %endif
   <hr>
@@ -171,8 +166,8 @@ from django.core.urlresolvers import reverse
       url: "/courses/${course.id}/instructor/copykiller",
     }).done(function(data) {
       if (data.result == 'success') {
+        $(".molly-guard").prop('disabled', true);
         $("#copykiller_status").val('표절검사가 진행중입니다.');
-        console.log($("#copykiller_status").val());
       }
     });
   }
@@ -183,15 +178,16 @@ from django.core.urlresolvers import reverse
   <h2>검사 진행상태</h2>
   <div class="request-response-error"></div>
   <label>
-    %if is_assessment_ing:
+    %if is_assessment_ing & is_assessment_done != True:
   <input type="text" id="copykiller_status" name="problem-select-single" size="30" value="표절검사가 진행중입니다." disabled>
+    %elif is_assessment_done:
+  <input type="text" id="copykiller_status" name="problem-select-single" size="30" value="표절검사가 완료되었습니다." disabled>
     %else:
   <input type="text" id="copykiller_status" name="problem-select-single" size="30" value="현재 진행중인 작업이 없습니다." disabled>
     %endif
   </label>
   <hr>
 </div>
-
 
   <div class="course-specific-container action-type-container">
     <h2>표절 검사 결과</h2>
@@ -201,7 +197,7 @@ from django.core.urlresolvers import reverse
     </label>
     <br>
     <label>
-      %if is_assessment:
+      %if is_assessment_done:
       <input type="button" name="list-anon-ids" value="CSV 파일 다운로드" onclick="location.href='/courses/${course.id}/instructor/copykiller_csv'">
       %else:
       <input type="button" name="list-anon-ids" value="CSV 파일 다운로드" disabled>
