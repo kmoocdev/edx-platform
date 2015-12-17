@@ -26,6 +26,7 @@
 # Translators:
 # jeon <bluerespect@nate.com>, 2014-2015
 # Translators:
+# Translators:
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Chanseok <kcsgoodboy@gmail.com>, 2014
 # jeon <bluerespect@nate.com>, 2014
@@ -42,7 +43,7 @@ msgstr ""
 "Project-Id-Version: kmooc-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 "POT-Creation-Date: 2015-07-06 12:00+0000\n"
-"PO-Revision-Date: 2015-09-30 12:58+0000\n"
+"PO-Revision-Date: 2015-12-15 10:42+0000\n"
 "Last-Translator: Hongseob Lee <shevious@gmail.com>\n"
 "Language-Team: English (http://www.transifex.com/k-mooc/kmooc-platform/language/en/)\n"
 "MIME-Version: 1.0\n"
@@ -67,72 +68,72 @@ msgid "Cancel"
 msgstr "Cancel"
 
 msgid ""
-"We've sent a message to {email_address}. "
-"Click the link in the message to reset your password."
-msgstr ""
+"We've sent a message to {email_address}. Click the link in the message to "
+"reset your password."
+msgstr "We've sent a message to {email_address}. Click the link in the message to reset your password."
 
 #: lms/static/js/ajax-error.js
 msgid ""
-"You have been logged out of your edX account. "
-"Click Okay to log in again now. "
-"Click Cancel to stay on this page "
-"(you must log in again to save your work)."
-msgstr ""
+"You have been logged out of your edX account. Click Okay to log in again "
+"now. Click Cancel to stay on this page (you must log in again to save your "
+"work)."
+msgstr "You have been logged out of your edX account. Click Okay to log in again now. Click Cancel to stay on this page (you must log in again to save your work)."
 
 #: lms/djangoapps/instructor_analytics/distributions.py
 msgid "No Data"
-msgstr ""
+msgstr "No Data"
 
 #: cms/static/templates/signatory-editor.underscore
 msgid "Signatory"
-msgstr ""
+msgstr "Signatory"
 
 #: cms/static/templates/signatory-editor.underscore
 msgid "Signatory Name"
-msgstr ""
+msgstr "Signatory Name"
 
 #: cms/static/templates/signatory-editor.underscore
 msgid "Signatory Title"
-msgstr ""
+msgstr "Signatory Title"
 
 #: cms/static/templates/signatory-editor.underscore
 msgid "Signatory Organization"
-msgstr ""
+msgstr "Signatory Organization"
 
 #: cms/static/templates/certificate-editor.underscore
 msgid "Maximum logo width 220px, height 48px variable"
-msgstr ""
+msgstr "Maximum logo width 220px, height 48px variable"
 
 #: cms/static/templates/signatory-editor.underscore
 msgid "Image must be 193px X 49px transparent PNG"
-msgstr ""
+msgstr "Image must be 193px X 49px transparent PNG"
 
 #: cms/static/templates/signatory-editor.underscore
 msgid "Maximum 18 characters"
-msgstr ""
+msgstr "Maximum 18 characters"
 
 #: cms/static/templates/signatory-editor.underscore
 msgid "Upload Signature Image"
-msgstr ""
+msgstr "Upload Signature Image"
 
 #: cms/static/templates/signatory-editor.underscore
 msgid "Upload Organization Logo"
-msgstr ""
+msgstr "Upload Organization Logo"
 
 #: cms/static/templates/signatory-editor.underscore
 msgid "Add Signatory"
-msgstr ""
+msgstr "Add Signatory"
 
 #: cms/static/templates/certificate-editor.underscore
 msgid "Organization Logo"
-msgstr ""
+msgstr "Organization Logo"
 
 #: cms/static/templates/certificate-editor.underscore
 msgid "Path to organization logo"
-msgstr ""
+msgstr "Path to organization logo"
 
 #: cms/templates/js/certificate-editor.underscore:25
 msgid "Title of the course"
+<<<<<<< HEAD
 msgstr ""
 
 msgid "question"
@@ -141,3 +142,13 @@ msgstr ""
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Common Problems with Hints and Feedback"
 msgstr ""
+=======
+msgstr "Title of the course"
+
+msgid "question"
+msgstr "question"
+
+#: cms/templates/js/add-xblock-component-menu-problem.underscore
+msgid "Common Problems with Hints and Feedback"
+msgstr "Common Problems with Hints and Feedback"
+>>>>>>> modify_design3

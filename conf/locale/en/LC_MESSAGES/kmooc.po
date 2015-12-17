@@ -396,6 +396,7 @@ msgid ""
 "certificates might already have been issued to learners."
 msgstr ""
 
+<<<<<<< HEAD
 msgid "Drag and Drop"
 msgstr ""
 
@@ -432,3 +433,13 @@ msgstr ""
 
 msgid "Your peer's response to the question above:"
 msgstr ""
+=======
+#: lms/static/templates/navigation.html: 96
+msgid "Dashboard for user:"
+msgstr ""
+
+#: lms/static/templates/navigation.html: 103
+msgid "More options dropdown for user"
+msgstr ""
+
+>>>>>>> modify_design3
