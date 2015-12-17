@@ -81,11 +81,11 @@ define(["js/views/baseview", "codemirror", "js/models/course_update",
         onSave: function(event) {
             event.preventDefault();
             var targetModel = this.eventModel(event);
-            var content = this.$codeMirror.getValue();
-            content = content.replace(/script/gi,"noscript");
+            var value = this.$codeMirror.getValue();
+            value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
             targetModel.set({
                 date : this.dateEntry(event).val(),
-                content : content,
+                content : value,
                 push_notification_selected : this.push_notification_selected(event)
             });
             // push change to display, hide the editor, submit the change

@@ -33,9 +33,9 @@ function(ListItemEditorView, _) {
         },
 
         setValues: function() {
-            var name = this.$('input').val().trim()
-            name = name.replace(/script/gi,"noscript");
-            this.model.set({name: name});
+            var value = this.$('input').val().trim()
+            value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
+            this.model.set({name: value});
             return this;
         },
 

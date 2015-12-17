@@ -161,22 +161,14 @@ define(["jquery", "underscore", "gettext", "js/views/modals/base_modal", "js/vie
                 event.preventDefault();
                 if (data) {
 
-                    console.log("--------------------------------------");
-                    console.log(typeof data);
-                    console.log(data);
-                    console.log(data.data);
-                    console.log(data.metadata);
-                    console.log(data.metadata.display_name);
-                    console.log("--------------------------------------");
-
                     if(data.data){
                         var value = data.data;
-                        data.data = value.replace(/script/gi,"noscript");
+                        data.data = value.replace(/script|noscript/gi,"noscript");
                     }
 
                     if(data.metadata.display_name){
                         var value2 = data.metadata.display_name;
-                        data.metadata.display_name = value2.replace(/script/gi,"noscript");
+                        data.metadata.display_name = value2.replace(/script|noscript/gi,"noscript");
                     }
 
                     ViewUtils.runOperationShowingMessage(gettext('Saving'),
