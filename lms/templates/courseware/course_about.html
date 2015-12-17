@@ -186,14 +186,14 @@ from edxmako.shortcuts import marketing_link
       % if get_course_about_section(course, "video"):
       <a href="#video-modal" class="media" rel="leanModal">
         <div class="hero">
-          <img src="${course_image_url(course)}" alt="" />
+          <img src="${course_image_url(course)}" alt="${get_course_about_section(course, "title")} 강좌소개 영상" />
           <div class="play-intro"></div>
         </div>
       </a>
       %else:
       <div class="media">
         <div class="hero">
-          <img src="${course_image_url(course)}" alt="" />
+          <img src="${course_image_url(course)}" alt="${get_course_about_section(course, "title")} 강좌소개 이미지" />
         </div>
       </div>
       % endif
@@ -228,7 +228,7 @@ from edxmako.shortcuts import marketing_link
         <header>
           % if microsite.get_value('course_about_show_social_links', True):
           <div class="social-sharing">
-            <div class="sharing-message"></div>
+            <div class="sharing-message">${_("Share with friends and family!")}</div>
             ## TODO: this should probably be an overrideable block,
             ##       or something allowing themes to do whatever they
             ##       want here (and on this whole page, really).
@@ -276,15 +276,15 @@ from edxmako.shortcuts import marketing_link
                     )
                 ).replace(u" ", u"%20")
               %>
-              <a onmouseover="$('.sharing-message').text('트위터로 공유하기');" href="${tweet_action}" class="share">
+              <a href="${tweet_action}" class="share" title="${_("Tweet that you've registered for this course")}">
                 <i class="icon fa fa-twitter"></i><span class="sr">${_("Tweet that you've registered for this course")}</span>
               </a>
 
-              <a onmouseover="$('.sharing-message').text('페이스북으로 공유하기');" href="${facebook_link}" class="share">
+              <a href="${facebook_link}" class="share" title="${_("Post a Facebook message to say you've registered for this course")}">
                 <i class="icon fa fa-facebook-official"></i><span class="sr">${_("Post a Facebook message to say you've registered for this course")}</span>
               </a>
 
-              <a onmouseover="$('.sharing-message').text('이메일로 공유하기');" href="${email_subject}" class="share">
+              <a href="${email_subject}" class="share" title="${_("Email someone to say you've registered for this course")}">
                 <i class="icon fa fa-envelope"></i><span class="sr">${_("Email someone to say you've registered for this course")}</span>
               </a>
             % endif
