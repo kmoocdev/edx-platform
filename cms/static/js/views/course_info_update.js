@@ -82,7 +82,7 @@ define(["js/views/baseview", "codemirror", "js/models/course_update",
             event.preventDefault();
             var targetModel = this.eventModel(event);
             var value = this.$codeMirror.getValue();
-            value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
+            value = value.replace(/</gi,"&lt;").replace(/>/gi,"&gt;");
             targetModel.set({
                 date : this.dateEntry(event).val(),
                 content : value,

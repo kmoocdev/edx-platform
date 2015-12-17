@@ -84,7 +84,7 @@ function ($, _, Backbone, gettext,
             // Update the model with the provided data
             if (event && event.preventDefault) { event.preventDefault(); }
             var value = this.$('.signatory-name-input').val();
-            value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
+            value = value.replace(/</gi,"&lt;").replace(/>/gi,"&gt;");
             this.model.set(
                 'name',
                 value
@@ -96,7 +96,7 @@ function ($, _, Backbone, gettext,
             // Update the model with the provided data
             if (event && event.preventDefault) { event.preventDefault(); }
             var value = this.$('.signatory-title-input').val();
-            value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
+            value = value.replace(/</gi,"&lt;").replace(/>/gi,"&gt;");
             this.model.set(
                 'title',
                 value
@@ -108,7 +108,7 @@ function ($, _, Backbone, gettext,
             // Update the model with the provided data
             if (event && event.preventDefault) { event.preventDefault(); }
             var value = this.$('.signatory-organization-input').val();
-            value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
+            value = value.replace(/</gi,"&lt;").replace(/>/gi,"&gt;");
             this.model.set(
                 'organization',
                 value
@@ -119,7 +119,7 @@ function ($, _, Backbone, gettext,
         setSignatorySignatureImagePath: function(event) {
             if (event && event.preventDefault) { event.preventDefault(); }
             var value = this.$('.signatory-signature-input').val();
-            value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
+            value = value.replace(/</gi,"&lt;").replace(/>/gi,"&gt;");
             this.model.set(
                 'signature_image_path',
                 value,
