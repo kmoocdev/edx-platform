@@ -160,6 +160,17 @@ define(["jquery", "underscore", "gettext", "js/views/modals/base_modal", "js/vie
                     data = editorView.getXBlockFieldData();
                 event.preventDefault();
                 if (data) {
+
+                    if(data.data){
+                        var value = data.data;
+                        data.data = value.replace(/script|noscript/gi,"noscript");
+                    }
+
+                    if(data.metadata.display_name){
+                        var value2 = data.metadata.display_name;
+                        data.metadata.display_name = value2.replace(/script|noscript/gi,"noscript");
+                    }
+
                     ViewUtils.runOperationShowingMessage(gettext('Saving'),
                         function() {
                             return xblockInfo.save(data);

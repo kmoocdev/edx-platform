@@ -83,9 +83,11 @@ function ($, _, Backbone, gettext,
         setSignatoryName: function(event) {
             // Update the model with the provided data
             if (event && event.preventDefault) { event.preventDefault(); }
+            var value = this.$('.signatory-name-input').val();
+            value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
             this.model.set(
                 'name',
-                this.$('.signatory-name-input').val()
+                value
             );
             this.eventAgg.trigger("onSignatoryUpdated", this.model);
         },
@@ -93,9 +95,11 @@ function ($, _, Backbone, gettext,
         setSignatoryTitle: function(event) {
             // Update the model with the provided data
             if (event && event.preventDefault) { event.preventDefault(); }
+            var value = this.$('.signatory-title-input').val();
+            value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
             this.model.set(
                 'title',
-                this.$('.signatory-title-input').val()
+                value
             );
             this.eventAgg.trigger("onSignatoryUpdated", this.model);
         },
@@ -103,18 +107,22 @@ function ($, _, Backbone, gettext,
         setSignatoryOrganization: function(event) {
             // Update the model with the provided data
             if (event && event.preventDefault) { event.preventDefault(); }
+            var value = this.$('.signatory-organization-input').val();
+            value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
             this.model.set(
                 'organization',
-                this.$('.signatory-organization-input').val()
+                value
             );
             this.eventAgg.trigger("onSignatoryUpdated", this.model);
         },
 
         setSignatorySignatureImagePath: function(event) {
             if (event && event.preventDefault) { event.preventDefault(); }
+            var value = this.$('.signatory-signature-input').val();
+            value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
             this.model.set(
                 'signature_image_path',
-                this.$('.signatory-signature-input').val(),
+                value,
                 { silent: true }
             );
         },

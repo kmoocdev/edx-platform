@@ -19,7 +19,7 @@ from microsite_configuration import microsite
 
 <!--popup K-mooc -->
 <div id="popupWrap" class="popup-wrap popup-kmooc" style="position: absolute; left: 25px; top: 100px;
-    z-index: 10010; display: block; border: 5px solid #b2b2b2; opacity: 1; background: #f2f2f2; font-size: 15px;
+    z-index: 10010; display: none; border: 5px solid #b2b2b2; opacity: 1; background: #f2f2f2; font-size: 15px;
     line-height: 25px; padding:20px;">
          <b> 안녕하세요. K-MOOC진흥본부에서 안내드립니다. <br>
           내일(11.28(토)) K-MOOC 사이트가 일시 중단될 예정이오니 <br>
@@ -80,14 +80,14 @@ function popClose(id){
 
 <!--popup K-mooc(1)-->
 <div id="popupWrap_1" class="popup-wrap popup-kmooc2" style="position: absolute; left: 25px; top: 100px;
-    z-index: 10010; display: block; border: 5px solid #EB9D43; opacity: 1; background: #ffffff; font-size: 13px;
+    z-index: 10010; display: none; border: 5px solid #EB9D43; opacity: 1; background: #ffffff; font-size: 13px;
     line-height: 25px; padding: 5px; box-shadow: 0 2px 5px 3px #444444;">
         <p style="text-align: center; font-size: 15px;">
             <b>한국형 무크(K-MOOC)의 BI 및 표어(Slogan) 공모전을<br>
             개최하오니 관심 있는 분의 많은 참여를 바랍니다. </b></p>
         <p style="text-align: center">
             <a href="http://blog.naver.com/kmooc_kr/220550673535">
-                <img src="http://mme.kmoocs.kr/origin/K-mooc-pop.png" alt="공모전">
+                <img src="http://mme.kmoocs.kr/origin/K-mooc-pop.png" alt="한국형 무크(K-MOOC)의 BI 및 표어(Slogan) 공모전을 개최하오니 관심 있는 분의 많은 참여를 바랍니다.">
             </a>
         </p>
 
@@ -107,7 +107,6 @@ function popClose(id){
 </div>
 
 <script language="Javascript">
-<!--
 function setCookie1( name, value, expiredays ) {
     var todayDate = new Date();
     todayDate.setDate( todayDate.getDate() + expiredays );
@@ -134,8 +133,6 @@ if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
 } else {
     document.all['popupWrap_1'].style.display = "none";
 }
-
-//-->
 </script>
 
 
@@ -148,7 +145,7 @@ if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
     	$("body").prepend("<div id='mask' style='position: absolute; left: 0; top: 0; z-index: 10000; display: none; opacity: 0.4; background:#363636;'></div>");
 
         var videoHtml = "";
-        videoHtml += "  <video id='indexVideo' width='640' height='360' poster='' controls='controls' style='position: absolute; z-index:10001;top: 200px; display:none; left: calc(50% - 320px);'>";
+        videoHtml += "  <video id='indexVideo' width='640' height='360' poster='' controls style='position: absolute; z-index:10001;top: 200px; display:none; left: calc(50% - 320px);'>";
         videoHtml += "      <source src='http://vod.kmoocs.kr/vod/2015/09/30/6098c795-39a8-5ec5-9683-49f12ba48dfd.mp4' type='video/mp4' />";
         videoHtml += "  </video>";
 
@@ -221,7 +218,6 @@ if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
         $("#noticeLayer").hide();
     }
 
-
     function playVideo(){
         var video = document.getElementById("indexVideo");
         var maskHeight = $(document).height();
@@ -247,81 +243,22 @@ if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
 
 <section class="home" style="background: #fff8eb !important;">
   <header>
-      <!--
-    <div style="border: 1px solid #ffffff; height: 150px; left: 330px; position: absolute; top: 130px; width: 350px;">main logo</div>
-    <div style="border: 1px solid #ffffff; height: 35px; left: 330px; position: absolute; top: 300px; width: 350px;">
-        <input type="text" name="searchtext"/>
-        <input type="button" value="검색"/>
-    </div>
-    <div style="border: 1px solid #ffffff; height: 175px; left: 1173px; position: absolute; top: 140px; width: 350px; z-index: 9999;">
-        <a href="javascript:playVideo();" style="text-decoration: none;">
-            <div style="width:100%;height:100%;">
-                video here
-            </div>
-        </a>
-    </div>
-    -->
-
     <div class="outer-wrapper">
-        <!--
-        <div style="border: 1px solid #ffffff; height: 150px; position: absolute; top: 130px; width: 350px;">main logo</div>
-        <div style="border: 1px solid #ffffff; height: 35px; position: absolute; top: 300px; width: 350px;">
-            <input type="text" name="searchtext"/>
-            <input type="button" value="검색"/>
-        </div>
-        <div style="border: 1px solid #ffffff; height: 175px; right: 10px; position: absolute; top: 140px; width: 350px; z-index: 9999;">
-            <a href="javascript:playVideo();" style="text-decoration: none;">
-                <div style="width:100%;height:100%;">
-                    video here
-                </div>
-            </a>
-        </div>
-        -->
-
         <div class="title">
             <hgroup>
                 <h1><img src="/static/images/main_title.png" alt="최고의 대학, 최고의 강의! 한국형 온라인에서 시작하세요."></h1>
             </hgroup>
             <div class="course-search">
                 <form method="get" action="/courses">
-                    <label for="searchInput"></label>
-                    <input id="searchInput" class="search-input" name="search_query" type="text" placeholder="원하시는 강의를 검색해 보세요.">
-                    <button id="searchBtn" class="search-button" type="submit">검색</button>
+##                     <label for="searchInput">원하시는 강의를 검색해 보세요.</label>
+                    <input id="searchInput" class="search-input" name="search_query" type="text" placeholder="원하시는 강의를 검색해 보세요." title="원하시는 강의를 검색해 보세요.">
+                    <button id="searchBtn" class="search-button" type="submit" title="검색">검색</button>
                 </form>
             </div>
         </div>
         <div class="vod">
-            <a href="javascript:playVideo();"><img src="/static/images/main_more.png" alt="VOD보기"></a>
+            <a href="javascript:playVideo();"><img src="/static/images/main_more.png" alt="소개영상 보기"></a>
         </div>
-
-##       <div class="title">
-##         <hgroup>
-##           % if homepage_overlay_html:
-##             ${homepage_overlay_html}
-##           % else:
-##             % if self.stanford_theme_enabled():
-##               <h1>${_("Free courses from <strong>{university_name}</strong>").format(university_name="Stanford")}</h1>
-##               <h2>${_("For anyone, anywhere, anytime")}</h2>
-##             % else:
-##               ## Translators: 'Open edX' is a brand, please keep this untranslated. See http://openedx.org for more information.
-##               <h1>${_("Welcome to Open edX!")}</h1>
-##               ## Translators: 'Open edX' is a brand, please keep this untranslated. See http://openedx.org for more information.
-##               <h2>${_("It works! This is the default homepage for this Open edX instance.")}</h2>
-##             % endif
-##           % endif
-##         </hgroup>
-##         % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-##           <div class="course-search">
-##             <form method="get" action="/courses">
-##               <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}" />
-##               <button class="search-button" type="submit">
-##                 <i class="icon fa fa-search" aria-hidden="true"></i>
-##               </button>
-##             </form>
-##           </div>
-##         % endif
-##
-##       </div>
 
       % if show_homepage_promo_video:
         <a href="#video-modal" class="media" rel="leanModal">
@@ -337,19 +274,19 @@ if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
     <section class="school_list">	 <!-- school_list S -->
         <p class="title_type1">
             <img src="/static/images/title01.png" alt="참여대학">
-            <a href="/schools"><img src="/static/images/more.png" alt="더보기"></a>
+            <a href="/schools"><img src="/static/images/more.png" alt="참여대학 더보기"></a>
         </p>
         <div class="inner">
-            <a href="/school/KHUk"><img src="/static/images/logo02_01.png" alt="경희대학교"><span style="font-family:daumR;">경희대학교</span></a>
-            <a href="/school/KoreaUnivK"><img src="/static/images/logo02_02.png" alt="고려대학교"><span style="font-family:daumR;">고려대학교</span></a>
-            <a href="/school/PNUk"><img src="/static/images/logo02_03.png" alt="부산대학교"><span style="font-family:daumR;">부산대학교</span></a>
-            <a href="/school/SNUk"><img src="/static/images/logo02_04.png" alt="서울대학교"><span style="font-family:daumR;">서울대학교</span></a>
-            <a href="/school/SKKUk"><img src="/static/images/logo02_05.png" alt="성균관대학교"><span style="font-family:daumR;">성균관대학교</span></a>
-            <a href="/school/YSUk"><img src="/static/images/logo02_06.png" alt="연세대학교"><span style="font-family:daumR;">연세대학교</span></a>
-            <a href="/school/EwhaK"><img src="/static/images/logo02_07.png" alt="이화여자대학교"><span style="font-family:daumR;">이화여자대학교</span></a>
-            <a href="/school/POSTECHk"><img src="/static/images/logo02_08.png" alt="포항공과대학교"><span style="font-family:daumR;">포항공과대학교</span></a>
-            <a href="/school/KAISTk"><img src="/static/images/logo02_09.png" alt="한국과학기술원"><span style="font-family:daumR;">한국과학기술원</span></a>
-            <a href="/school/HYUk"><img src="/static/images/logo02_10.png" alt="한양대학교"><span style="font-family:daumR;">한양대학교</span></a>
+            <a href="/school/KHUk"><img src="/static/images/logo02_01.png" alt="경희대학교 대학소개 페이지로 가기"><span style="font-family:daumR;">경희대학교</span></a>
+            <a href="/school/KoreaUnivK"><img src="/static/images/logo02_02.png" alt="고려대학교 대학소개 페이지로 가기"><span style="font-family:daumR;">고려대학교</span></a>
+            <a href="/school/PNUk"><img src="/static/images/logo02_03.png" alt="부산대학교 대학소개 페이지로 가기"><span style="font-family:daumR;">부산대학교</span></a>
+            <a href="/school/SNUk"><img src="/static/images/logo02_04.png" alt="서울대학교 대학소개 페이지로 가기"><span style="font-family:daumR;">서울대학교</span></a>
+            <a href="/school/SKKUk"><img src="/static/images/logo02_05.png" alt="성균관대학교 대학소개 페이지로 가기"><span style="font-family:daumR;">성균관대학교</span></a>
+            <a href="/school/YSUk"><img src="/static/images/logo02_06.png" alt="연세대학교 대학소개 페이지로 가기"><span style="font-family:daumR;">연세대학교</span></a>
+            <a href="/school/EwhaK"><img src="/static/images/logo02_07.png" alt="이화여자대학교 대학소개 페이지로 가기"><span style="font-family:daumR;">이화여자대학교</span></a>
+            <a href="/school/POSTECHk"><img src="/static/images/logo02_08.png" alt="포항공과대학교 대학소개 페이지로 가기"><span style="font-family:daumR;">포항공과대학교</span></a>
+            <a href="/school/KAISTk"><img src="/static/images/logo02_09.png" alt="한국과학기술원 대학소개 페이지로 가기"><span style="font-family:daumR;">한국과학기술원</span></a>
+            <a href="/school/HYUk"><img src="/static/images/logo02_10.png" alt="한양대학교 대학소개 페이지로 가기"><span style="font-family:daumR;">한양대학교</span></a>
         </div>
     </section>	 <!-- school_list E -->
 
@@ -360,7 +297,7 @@ if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
         <section class="courses">
             <p class="title_type1">
                 <img src="/static/images/title02.png" alt="전체강좌">
-                <a href="/courses"><img src="/static/images/more.png" alt="더보기"></a>
+                <a href="/courses"><img src="/static/images/more.png" alt="전체강좌 더보기"></a>
             </p>
             <ul class="courses-listing">
             ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses

@@ -114,8 +114,10 @@ function($, _, Backbone, gettext,
         setName: function(event) {
             // Updates the indicated model field (still requires persistence on server)
             if (event && event.preventDefault) { event.preventDefault(); }
+            var value = this.$('.collection-name-input').val();
+                value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
             this.model.set(
-                'name', this.$('.collection-name-input').val(),
+                'name', value,
                 { silent: true }
             );
         },
@@ -123,9 +125,12 @@ function($, _, Backbone, gettext,
         setDescription: function(event) {
             // Updates the indicated model field (still requires persistence on server)
             if (event && event.preventDefault) { event.preventDefault(); }
+
+            var value = this.$('.certificate-description-input').val();
+            value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
             this.model.set(
                 'description',
-                this.$('.certificate-description-input').val(),
+                value,
                 { silent: true }
             );
         },
@@ -133,9 +138,11 @@ function($, _, Backbone, gettext,
         setCourseTitle: function(event) {
             // Updates the indicated model field (still requires persistence on server)
             if (event && event.preventDefault) { event.preventDefault(); }
+            var value = this.$('.certificate-course-title-input').val();
+            value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
             this.model.set(
                 'course_title',
-                this.$('.certificate-course-title-input').val(),
+                value,
                 { silent: true }
             );
         },

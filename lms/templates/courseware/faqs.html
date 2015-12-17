@@ -38,9 +38,6 @@
     logo_alt_text = _("{platform_name} Logo").format(platform_name=platform_name)
 %>
 
-
-
-
 <script>
     $(document).ready(function(){
         $('*[data-btn="gnb"]').bind('click', function(){
@@ -53,25 +50,24 @@
             }
         });
 
-
-				$(".faq_box dd").hide();
-				$(".faq_box dt").each(function() {
-						$(this).click(function() {
-								if($(this).hasClass("active")) {
-									$(this).removeClass("active");
-									$(this).next().slideUp("fast");
-									$(this).find("i").removeClass("fa-minus-square");
-								} else {
-									$(".faq_box dt").removeClass("active");
-									$(".faq_box dt i").removeClass("fa-minus-square");
-									$(".faq_box dd").slideUp("fast");
-									$(this).addClass("active");
-									$(this).find("i").addClass("fa-minus-square");
-									$(this).next().slideDown("fast");
-								}
-								return false;
-						});
-				});
+        $(".faq_box dd").hide();
+        $(".faq_box dt").each(function() {
+                $(this).click(function() {
+                        if($(this).hasClass("active")) {
+                            $(this).removeClass("active");
+                            $(this).next().slideUp("fast");
+                            $(this).find("i").removeClass("fa-minus-square");
+                        } else {
+                            $(".faq_box dt").removeClass("active");
+                            $(".faq_box dt i").removeClass("fa-minus-square");
+                            $(".faq_box dd").slideUp("fast");
+                            $(this).addClass("active");
+                            $(this).find("i").addClass("fa-minus-square");
+                            $(this).next().slideDown("fast");
+                        }
+                        return false;
+                });
+        });
 
     });
 
