@@ -118,11 +118,12 @@ define(["jquery", "underscore", "gettext", "js/views/modals/base_modal", "js/vie
             },
 
             getTitle: function() {
-                var displayName = this.xblockInfo.get('display_name');
-                if (!displayName) {
-                    displayName = gettext('Component');
+                var value = this.xblockInfo.get('display_name');
+                value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
+                if (!value) {
+                    value = gettext('Component');
                 }
-                return interpolate(this.options.titleFormat, { title: displayName }, true);
+                return interpolate(this.options.titleFormat, { title: value }, true);
             },
 
             addDefaultModes: function() {
@@ -163,12 +164,14 @@ define(["jquery", "underscore", "gettext", "js/views/modals/base_modal", "js/vie
 
                     if(data.data){
                         var value = data.data;
-                        data.data = value.replace(/script|noscript/gi,"noscript");
+                        value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
+                        data.data = value;
                     }
 
                     if(data.metadata.display_name){
-                        var value2 = data.metadata.display_name;
-                        data.metadata.display_name = value2.replace(/script|noscript/gi,"noscript");
+                        var value = data.metadata.display_name;
+                        value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
+                        data.metadata.display_name = value;
                     }
 
                     ViewUtils.runOperationShowingMessage(gettext('Saving'),

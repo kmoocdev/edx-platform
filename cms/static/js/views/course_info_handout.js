@@ -55,7 +55,7 @@ define(["js/views/baseview", "codemirror", "js/views/feedback_notification", "js
             $('.save-button').removeClass('is-disabled').attr('aria-disabled', false);
             if ($('.CodeMirror-lines').find('.cm-error').length == 0){
                 var value = this.$codeMirror.getValue();
-                value = value.replace(/</gi,"&lt;").replace(/>/gi,"&gt;");
+                value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
                 this.model.set('data', value);
                 var saving = new NotificationView.Mini({
                     title: gettext('Saving')

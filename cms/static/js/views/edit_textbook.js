@@ -41,7 +41,7 @@ define(["js/views/baseview", "underscore", "jquery", "js/views/edit_chapter", "j
         setName: function(e) {
             if(e && e.preventDefault) { e.preventDefault(); }
             var value = this.$("#textbook-name-input").val();
-                value = value.replace(/</gi,"&lt;").replace(/>/gi,"&gt;");
+                value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
             this.model.set("name", value, {silent: true});
         },
         setValues: function() {
@@ -51,7 +51,7 @@ define(["js/views/baseview", "underscore", "jquery", "js/views/edit_chapter", "j
                 var chapter = that.model.get('chapters').at(i);
                 if(!chapter) { return; }
                 var value = $(".chapter-name", li).val();
-                value = value.replace(/</gi,"&lt;").replace(/>/gi,"&gt;");
+                value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
                 chapter.set({
                     "name": value,
                     "asset_path": $(".chapter-asset-path", li).val()
