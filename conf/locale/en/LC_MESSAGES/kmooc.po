@@ -395,3 +395,12 @@ msgid ""
 " do not delete certificates after a course has started, because some "
 "certificates might already have been issued to learners."
 msgstr ""
+
+#: lms/static/templates/navigation.html: 96
+msgid "Dashboard for user:"
+msgstr ""
+
+#: lms/static/templates/navigation.html: 103
+msgid "More options dropdown for user"
+msgstr ""
+

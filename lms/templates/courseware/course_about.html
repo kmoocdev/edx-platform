@@ -186,14 +186,14 @@ from edxmako.shortcuts import marketing_link
       % if get_course_about_section(course, "video"):
       <a href="#video-modal" class="media" rel="leanModal">
         <div class="hero">
-          <img src="${course_image_url(course)}" alt="${get_course_about_section(course, "title")} 강좌소개 영상" />
+          <img src="${course_image_url(course)}" alt="${get_course_about_section(course, "title")} 소개 영상" />
           <div class="play-intro"></div>
         </div>
       </a>
       %else:
       <div class="media">
         <div class="hero">
-          <img src="${course_image_url(course)}" alt="${get_course_about_section(course, "title")} 강좌소개 이미지" />
+          <img src="${course_image_url(course)}" alt="${get_course_about_section(course, "title")} 소개 이미지" />
         </div>
       </div>
       % endif
