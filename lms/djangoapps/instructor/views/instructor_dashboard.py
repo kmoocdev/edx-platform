@@ -211,7 +211,6 @@ def check_assessment_done(course_id):
     query = "select count(uri) from vw_copykiller where class_id ='"+course_id+"'"
     cur.execute(query)
     result = cur.fetchone()
-    cur.close()
     if result[0] == 0:
         return False
 
