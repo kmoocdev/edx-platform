@@ -713,7 +713,7 @@ def copykiller(request, course_id):
     query += "( uri, year_id, year_name, term_id, term_name, class_id, class_name, report_id, report_name,"
     query += "student_id, student_name, student_number, start_date, end_date, submit_date, title, content ) "
     query += "select "
-    query += "student_id, "
+    query += "id, "
     query += "year(curdate()) year_id, concat(year(curdate()), '년') year_name, "
     query += "'" + str(course.id.run) + "' term_id, '" + str(course.id.run) + "' term_name, "
     query += "'" + str(course.id.course) + "' class_id, '"+ str(course.display_name) +"' class_name, "
@@ -729,7 +729,7 @@ def copykiller(request, course_id):
     query += "from "
     query += "assessment_peerworkflow "
     query += "where "
-    query += "completed_at is not null and item_id not like '%DEMOk%' and course_id = '"+str(course_id)+"';"
+    query += "completed_at is not null and item_id not like '%DEMOk%' and course_id = '"+str(course_id)+"'"
     query1 = "delete from tb_tmp_answer"
 
     with con:
