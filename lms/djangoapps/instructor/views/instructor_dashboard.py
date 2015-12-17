@@ -744,25 +744,9 @@ def copykiller(request, course_id):
     return HttpResponse(simplejson.dumps(response_data), mimetype='application/javascript')
 
 
-
-def copykiller_csv(request, course_id):
-    dict = get_copykiller_result(request, course_id)
-
-    response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="'+course_id+'.csv"'
-
-    writer = csv.writer(response)
-    writer.writerow(['student id', 'assessment no', 'internet link', 'class', 'internet', 'report', 'term', 'total', 'year'])
-    for value in dict.itervalues():
-        writer.writerow(value)
-
-    return response
-
-
 def get_copykiller_result(request, course_id):
     con = mdb.connect(settings.DATABASES.get('default').get('HOST'), settings.DATABASES.get('default').get('USER'), settings.DATABASES.get('default').get('PASSWORD'), settings.DATABASES.get('default').get('NAME'));
     cur = con.cursor()
-
     query = "select "
     query += "v.student_id, "
     query += "v.report_id assessment_no, "
@@ -777,13 +761,23 @@ def get_copykiller_result(request, course_id):
     query += "vw_copykiller v "
     query += "where "
     query += "v.uri in (select uri from tb_copykiller_copyratio) "
-
+    query += "order by assessment_no, student_id "
     cur.execute(query)
     rows = cur.fetchall()
     cur.close()
     con.close()
-
-    dict = {}
+    result_list = list()
     for row in rows:
-        dict[str(row[0])] = list(row[0:])
-    return dict
+        result_list.append(row[0:])
+    return result_list
+
+
+def copykiller_csv(request, course_id):
+    result_list = get_copykiller_result(request, course_id)
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="'+course_id+'.csv"'
+    writer = csv.writer(response)
+    writer.writerow(['student id', 'assessment no', 'internet link', 'class', 'internet', 'report', 'term', 'total', 'year'])
+    for value in result_list:
+        writer.writerow(value)
+    return response
