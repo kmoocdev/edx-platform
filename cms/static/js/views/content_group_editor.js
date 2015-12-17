@@ -33,7 +33,9 @@ function(ListItemEditorView, _) {
         },
 
         setValues: function() {
-            this.model.set({name: this.$('input').val().trim()});
+            var name = this.$('input').val().trim()
+            name = name.replace(/script/gi,"noscript");
+            this.model.set({name: name});
             return this;
         },
 
