@@ -119,7 +119,7 @@ define(["jquery", "underscore", "gettext", "js/views/modals/base_modal", "js/vie
 
             getTitle: function() {
                 var value = this.xblockInfo.get('display_name');
-                value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
+                //value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
                 if (!value) {
                     value = gettext('Component');
                 }
@@ -162,6 +162,7 @@ define(["jquery", "underscore", "gettext", "js/views/modals/base_modal", "js/vie
                 event.preventDefault();
                 if (data) {
 
+                    /*
                     if(data.data){
                         var value = data.data;
                         value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
@@ -173,6 +174,7 @@ define(["jquery", "underscore", "gettext", "js/views/modals/base_modal", "js/vie
                         value = value.replace(/<script/gi,"<noscript").replace(/\/script/gi,"\/noscript");
                         data.metadata.display_name = value;
                     }
+                    */
 
                     ViewUtils.runOperationShowingMessage(gettext('Saving'),
                         function() {
