@@ -178,7 +178,7 @@ from django.core.urlresolvers import reverse
   <h2>검사 진행상태</h2>
   <div class="request-response-error"></div>
   <label>
-    %if is_assessment_ing != False & is_assessment_done != True:
+    %if is_assessment_ing != False and is_assessment_done != True:
   <input type="text" id="copykiller_status" name="problem-select-single" size="30" value="표절검사가 진행중입니다." disabled>
     %elif is_assessment_done == True:
   <input type="text" id="copykiller_status" name="problem-select-single" size="30" value="표절검사가 완료되었습니다." disabled>
