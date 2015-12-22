@@ -34,6 +34,11 @@
         </ul>
         <ul data-facet="search_string" class="facet-list">
             <li data-facet="search_string">
+                <button data-value="미술조형" data-text="미술조형" class="facet-option discovery-button">미술·조형<span class="count">1</span></button>
+            </li>
+        </ul>
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
                 <button data-value="건축" data-text="건축" class="facet-option discovery-button">건축<span class="count">2</span></button>
             </li>
         </ul>

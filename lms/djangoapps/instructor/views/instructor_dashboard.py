@@ -161,7 +161,8 @@ def instructor_dashboard_2(request, course_id):
         'disable_buttons': disable_buttons,
         'analytics_dashboard_message': analytics_dashboard_message,
         'is_assessment': check_assessment(course.wiki_slug),
-        'is_assessment_ing' : check_assessment_ing(course_key.course)
+        'is_assessment_ing' : check_assessment_ing(course_key.course),
+        'is_assessment_done' : check_assessment_done(course_key.course)
     }
 
     return render_to_response('instructor/instructor_dashboard_2/instructor_dashboard_2.html', context)
@@ -180,7 +181,7 @@ def check_assessment(active_versions_key):
     for document in cursor:
         blocks = document.get('blocks')
     cursor.close()
-
+    client.close()
     is_assessment = False
     for block in blocks:
         if block.get('block_type') == 'openassessment':
@@ -194,11 +195,41 @@ def check_assessment_ing(course_id):
     cur = con.cursor()
     query = "select class_id from vw_copykiller where class_id = '"+course_id+"'"
     cur.execute(query)
-    if cur.rowcount > 0:
+    cur_rowcount = cur.rowcount
+    cur.close()
+    con.close()
+    if cur_rowcount > 0:
         return True
     else:
         return False
 
+
+def check_assessment_done(course_id):
+    con = mdb.connect(settings.DATABASES.get('default').get('HOST'), settings.DATABASES.get('default').get('USER'), settings.DATABASES.get('default').get('PASSWORD'), settings.DATABASES.get('default').get('NAME'));
+    cur = con.cursor()
+
+    query = "select count(uri) from vw_copykiller where class_id ='"+course_id+"'"
+    cur.execute(query)
+    result = cur.fetchone()
+    if result[0] == 0:
+        return False
+
+    query2 = "select "
+    query2 += "    if(count(uri) = ("+query+"), 'True', 'False') complete "
+    query2 += "from tb_copykiller_copyratio "
+    query2 += "where "
+    query2 += "    uri in (select uri from vw_copykiller where class_id ='"+course_id+"') "
+    query2 += "and "
+    query2 += "    complete_status = 'Y' and check_type='internet'"
+    cur.execute(query2)
+    result = cur.fetchone()
+    cur.close()
+    con.close()
+
+    if result[0] == 'True':
+        return True
+    else:
+        return False
 
 
 ## Section functions starting with _section return a dictionary of section data.
@@ -681,7 +712,7 @@ def copykiller(request, course_id):
     query += "( uri, year_id, year_name, term_id, term_name, class_id, class_name, report_id, report_name,"
     query += "student_id, student_name, student_number, start_date, end_date, submit_date, title, content ) "
     query += "select "
-    query += "student_id, "
+    query += "submission_uuid, "
     query += "year(curdate()) year_id, concat(year(curdate()), '년') year_name, "
     query += "'" + str(course.id.run) + "' term_id, '" + str(course.id.run) + "' term_name, "
     query += "'" + str(course.id.course) + "' class_id, '"+ str(course.display_name) +"' class_name, "
@@ -697,7 +728,7 @@ def copykiller(request, course_id):
     query += "from "
     query += "assessment_peerworkflow "
     query += "where "
-    query += "completed_at is not null and item_id not like '%DEMOk%' and course_id = '"+str(course_id)+"';"
+    query += "completed_at is not null and item_id not like '%DEMOk%' and course_id = '"+str(course_id)+"'"
     query1 = "delete from tb_tmp_answer"
 
     with con:
@@ -713,29 +744,13 @@ def copykiller(request, course_id):
     return HttpResponse(simplejson.dumps(response_data), mimetype='application/javascript')
 
 
-
-def copykiller_csv(request, course_id):
-    dict = get_copykiller_result(request, course_id)
-
-    response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="'+course_id+'.csv"'
-
-    writer = csv.writer(response)
-    writer.writerow(['student id', 'assessment no', 'internet link', 'c lass', 'internet', 'report', 'term', 'total', 'year'])
-    for value in dict.itervalues():
-        writer.writerow(value)
-
-    return response
-
-
 def get_copykiller_result(request, course_id):
     con = mdb.connect(settings.DATABASES.get('default').get('HOST'), settings.DATABASES.get('default').get('USER'), settings.DATABASES.get('default').get('PASSWORD'), settings.DATABASES.get('default').get('NAME'));
     cur = con.cursor()
-
     query = "select "
     query += "v.student_id, "
     query += "v.report_id assessment_no, "
-    query += "concat('http://203.235.44.154:8080/ckplus/copykiller.jsp?uri=', v.uri, '&property=100&lang=ko') internet_link, "
+    query += "concat('http://pjsearch.kmooc.kr:8080/ckplus/copykiller.jsp?uri=', v.uri, '&property=100&lang=ko') internet_link, "
     query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='class') class, "
     query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='internet') internet, "
     query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='report') report, "
@@ -746,10 +761,23 @@ def get_copykiller_result(request, course_id):
     query += "vw_copykiller v "
     query += "where "
     query += "v.uri in (select uri from tb_copykiller_copyratio) "
-
+    query += "order by assessment_no, student_id "
     cur.execute(query)
     rows = cur.fetchall()
-    dict = {}
+    cur.close()
+    con.close()
+    result_list = list()
     for row in rows:
-        dict[str(row[0])] = list(row[0:])
-    return dict
+        result_list.append(row[0:])
+    return result_list
+
+
+def copykiller_csv(request, course_id):
+    result_list = get_copykiller_result(request, course_id)
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="'+course_id+'.csv"'
+    writer = csv.writer(response)
+    writer.writerow(['student id', 'assessment no', 'internet link', 'class', 'internet', 'report', 'term', 'total', 'year'])
+    for value in result_list:
+        writer.writerow(value)
+    return response

@@ -396,6 +396,43 @@ msgid ""
 "certificates might already have been issued to learners."
 msgstr ""
 
+msgid "Drag and Drop"
+msgstr ""
+
+msgid "Problem with Adaptive Hint"
+msgstr ""
+
+msgid "Molecular Structure"
+msgstr ""
+
+msgid "Custom Javascript Display and Grading"
+msgstr ""
+
+msgid "Custom Python-Evaluated Input"
+msgstr ""
+
+msgid "Checkboxes with Hints and Feedback"
+msgstr ""
+
+msgid "Dropdown with Hints and Feedback"
+msgstr ""
+
+msgid "Multiple Choice with Hints and Feedback"
+msgstr ""
+
+msgid "Numerical Input with Hints and Feedback"
+msgstr ""
+
+msgid "Text Input with Hints and Feedback"
+msgstr ""
+                                 
+#: openassessment/templates/openassessmentblock/response/oa_response.html
+msgid "Your response to the question above:"
+msgstr ""
+
+msgid "Your peer's response to the question above:"
+msgstr ""
+
 #: lms/static/templates/navigation.html: 96
 msgid "Dashboard for user:"
 msgstr ""
