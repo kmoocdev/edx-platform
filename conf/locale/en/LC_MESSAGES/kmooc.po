@@ -404,3 +404,8 @@ msgstr ""
 msgid "More options dropdown for user"
 msgstr ""
 
+#: common/static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
+msgid "Enter your question or comment"
+msgstr ""

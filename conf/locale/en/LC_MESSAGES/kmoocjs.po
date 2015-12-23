@@ -141,3 +141,9 @@ msgstr "question"
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Common Problems with Hints and Feedback"
 msgstr "Common Problems with Hints and Feedback"
+
+#: common/static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
+msgid "Enter your question or comment"
+msgstr ""
