@@ -230,6 +230,10 @@ if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
         $("#indexVideo").fadeIn(300, function(){
             video.play();
             video.focus();
+
+            $("#indexVideo").blur(function(){
+                $("#mask").click();
+            });
         });
     }
 
