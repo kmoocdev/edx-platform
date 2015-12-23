@@ -750,13 +750,18 @@ def get_copykiller_result(request, course_id):
     query = "select "
     query += "v.student_id, "
     query += "v.report_id assessment_no, "
+    query += "concat('http://pjsearch.kmooc.kr:8080/ckplus/copykiller.jsp?uri=', v.uri, '&property=0&lang=ko') total_link, "
+    query += "concat('http://pjsearch.kmooc.kr:8080/ckplus/copykiller.jsp?uri=', v.uri, '&property=1&lang=ko') year_link, "
+    query += "concat('http://pjsearch.kmooc.kr:8080/ckplus/copykiller.jsp?uri=', v.uri, '&property=2&lang=ko') term_link, "
+    query += "concat('http://pjsearch.kmooc.kr:8080/ckplus/copykiller.jsp?uri=', v.uri, '&property=3&lang=ko') class_link, "
+    query += "concat('http://pjsearch.kmooc.kr:8080/ckplus/copykiller.jsp?uri=', v.uri, '&property=4&lang=ko') report_link, "
     query += "concat('http://pjsearch.kmooc.kr:8080/ckplus/copykiller.jsp?uri=', v.uri, '&property=100&lang=ko') internet_link, "
-    query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='class') class, "
-    query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='internet') internet, "
-    query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='report') report, "
-    query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='term') term, "
-    query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='total') total, "
-    query += "(select r.total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='year') year "
+    query += "(select r.disp_total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='total') total, "
+    query += "(select r.disp_total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='year') year, "
+    query += "(select r.disp_total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='term') term, "
+    query += "(select r.disp_total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='class') class, "
+    query += "(select r.disp_total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='report') report, "
+    query += "(select r.disp_total_copy_ratio from tb_copykiller_copyratio r where r.uri=v.uri and r.check_type='internet') internet "
     query += "from "
     query += "vw_copykiller v "
     query += "where "
@@ -777,7 +782,7 @@ def copykiller_csv(request, course_id):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="'+course_id+'.csv"'
     writer = csv.writer(response)
-    writer.writerow(['student id', 'assessment no', 'internet link', 'class', 'internet', 'report', 'term', 'total', 'year'])
+    writer.writerow(['student id', 'assessment no', 'total link', 'year link', 'term link', 'class link', 'report link', 'internet link', 'total', 'year', 'term', 'class', 'report', 'internet'])
     for value in result_list:
         writer.writerow(value)
     return response
