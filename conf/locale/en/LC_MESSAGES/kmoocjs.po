@@ -133,7 +133,6 @@ msgstr "Path to organization logo"
 
 #: cms/templates/js/certificate-editor.underscore:25
 msgid "Title of the course"
-<<<<<<< HEAD
 msgstr ""
 
 msgid "question"
@@ -142,7 +141,6 @@ msgstr ""
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Common Problems with Hints and Feedback"
 msgstr ""
-=======
 msgstr "Title of the course"
 
 msgid "question"
@@ -151,4 +149,3 @@ msgstr "question"
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Common Problems with Hints and Feedback"
 msgstr "Common Problems with Hints and Feedback"
->>>>>>> modify_design3
