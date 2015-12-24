@@ -145,18 +145,23 @@ if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
     	$("body").prepend("<div id='mask' style='position: absolute; left: 0; top: 0; z-index: 10000; display: none; opacity: 0.4; background:#363636;'></div>");
 
         var videoHtml = "";
-        videoHtml += "  <video id='indexVideo' width='640' height='360' poster='' controls style='position: absolute; z-index:10001;top: 200px; display:none; left: calc(50% - 320px);'>";
-        videoHtml += "      <source src='http://vod.kmoocs.kr/vod/2015/09/30/6098c795-39a8-5ec5-9683-49f12ba48dfd.mp4' type='video/mp4' />";
-        videoHtml += "  </video>";
+##         videoHtml += "  <video id='indexVideo' width='640' height='360' poster='' controls style='position: absolute; z-index:10001;top: 200px; display:none; left: calc(50% - 320px);'>";
+##         videoHtml += "      <source src='http://vod.kmoocs.kr/vod/2015/09/30/6098c795-39a8-5ec5-9683-49f12ba48dfd.mp4' type='video/mp4' />";
+##         videoHtml += "  </video>";
+
+            videoHtml += " <iframe id='indexVideo' width='640' height='360' src='https://www.youtube.com/embed/7BQ6TBWj_RY' frameborder='0' style='position: absolute; z-index:10001;top: 200px; display:none; left: calc(50% - 320px);' allowfullscreen></iframe>"
 
         $("body").prepend(videoHtml);
 
         $("#mask").click(function(){
             $("#indexVideo").hide();
-            $("#indexVideo").currentTime = 0;
+	    console.log("src..");
+	    var src = $("#indexVideo").attr("src");
+            $("#indexVideo").attr("src","");
+            $("#indexVideo").attr("src",src);
             $("#mask").fadeOut(200);
-            var video = document.getElementById("indexVideo");
-            video.pause();
+##             var video = document.getElementById("indexVideo");
+##             video.pause();
         });
 
         videoResize();
@@ -223,12 +228,12 @@ if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
         var maskHeight = $(document).height();
         var maskWidth = $(window).width();
 
-        video.currentTime = 0;
+##         video.currentTime = 0;
         $("#mask").css({"width":maskWidth+"px","height":maskHeight+"px", "text-align":"center", "vertical-align":"middle"});
         $("#innerMask").css({"width":(maskWidth/2)+"px","height":(maskHeight/2)+"px", "margin":(maskHeight/3)+"px", "display":"inline-block"});
         $("#mask").fadeIn(200);
         $("#indexVideo").fadeIn(300, function(){
-            video.play();
+##             video.play();
             video.focus();
 
             $("#indexVideo").blur(function(){
