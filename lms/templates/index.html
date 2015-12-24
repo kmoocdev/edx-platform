@@ -155,7 +155,10 @@ if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
 
         $("#mask").click(function(){
             $("#indexVideo").hide();
-##             $("#indexVideo").currentTime = 0;
+	    console.log("src..");
+	    var src = $("#indexVideo").attr("src");
+            $("#indexVideo").attr("src","");
+            $("#indexVideo").attr("src",src);
             $("#mask").fadeOut(200);
 ##             var video = document.getElementById("indexVideo");
 ##             video.pause();
