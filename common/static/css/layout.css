@@ -51,7 +51,7 @@ header.global .nav-global li.gnb1 a.active {background-position:left -30px;}
 header.global .nav-global li.gnb2 a:hover,
 header.global .nav-global li.gnb2 a.active {background-position:-254px -30px;}
 header.global .nav-global li.gnb3 a:hover, 
-header.global .nav-global li.gnb3 a.active {background-position:-465px -30px;}
+header.global .nav-global li.gnb3 a.active {background-position:-370px -30px;}
 
 header.global .nav-global li:nth-child(1){position:absolute;right:90px;top:40px;padding:0;width:80px;}
 header.global .nav-global li:nth-child(2){position:absolute;right:0px;top:40px;padding:0;width:80px;}
