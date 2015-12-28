@@ -1532,6 +1532,13 @@ def copyright(request):
 
 @ensure_csrf_cookie
 @cache_if_anonymous()
+def email_security(request):
+    return render_to_response(
+        "courseware/email_security.html"
+    )
+
+@ensure_csrf_cookie
+@cache_if_anonymous()
 def otherbrowser(request):
     return render_to_response(
         "otherBrowser.html"
