@@ -313,6 +313,9 @@ if settings.COURSEWARE_ENABLED:
 
         ## Copyright-Policy
         url(r'^Copyright-Policy/?$', 'courseware.views.copyright', name="copyright"),
+        ## Copyright-Policy
+        url(r'^email_security/?$', 'courseware.views.email_security', name="copyright"),
+
 
         ## browser info
         url(r'^otherbrowser/?$', 'courseware.views.otherbrowser', name="copyright"),
