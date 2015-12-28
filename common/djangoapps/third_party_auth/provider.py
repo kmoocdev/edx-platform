@@ -6,7 +6,7 @@ from .models import (
     _PSA_OAUTH2_BACKENDS, _PSA_SAML_BACKENDS
 )
 from social.backends import google, linkedin, facebook, twitter, username
-from . import lifelongedu
+from . import cnulms
 
 class Registry(object):
     """
