@@ -14,7 +14,7 @@
 <%block name="js_extra">
     <script>
         if(sessionStorage.getItem("step") != "1")
-            document.history.back();
+            document.href = "/";
 
         function agreeYN(value){
             var gubn = sessionStorage.getItem("reg_gubn")
