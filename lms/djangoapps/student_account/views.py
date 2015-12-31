@@ -49,6 +49,224 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
 
 AUDIT_LOG = logging.getLogger("audit")
 
+@require_http_methods(['GET'])
+@ensure_csrf_cookie
+def parent_agreement(request, initial_mode="login"):
+    """Render the combined login/registration form, defaulting to login
+
+    This relies on the JS to asynchronously load the actual form from
+    the user_api.
+
+    Keyword Args:
+        initial_mode (string): Either "login" or "register".
+
+    """
+    # Determine the URL to redirect to following login/registration/third_party_auth
+    redirect_to = get_next_url_for_login_page(request)
+
+    # If we're already logged in, redirect to the dashboard
+    if request.user.is_authenticated():
+        return redirect(redirect_to)
+
+    # Retrieve the form descriptions from the user API
+    form_descriptions = _get_form_descriptions(request)
+
+    # If this is a microsite, revert to the old login/registration pages.
+    # We need to do this for now to support existing themes.
+    if microsite.is_request_in_microsite():
+        if initial_mode == "login":
+            return old_login_view(request)
+        elif initial_mode == "register":
+            return old_register_view(request)
+
+    # Allow external auth to intercept and handle the request
+    ext_auth_response = _external_auth_intercept(request, initial_mode)
+    if ext_auth_response is not None:
+        return ext_auth_response
+
+    # Our ?next= URL may itself contain a parameter 'tpa_hint=x' that we need to check.
+    # If present, we display a login page focused on third-party auth with that provider.
+    third_party_auth_hint = None
+    if '?' in redirect_to:
+        try:
+            next_args = urlparse.parse_qs(urlparse.urlparse(redirect_to).query)
+            provider_id = next_args['tpa_hint'][0]
+            if third_party_auth.provider.Registry.get(provider_id=provider_id):
+                third_party_auth_hint = provider_id
+                initial_mode = "hinted_login"
+        except (KeyError, ValueError, IndexError):
+            pass
+
+    # Otherwise, render the combined login/registration page
+
+    third_party_auth_json = None
+    third_party_auth_json = json.dumps(_third_party_auth_context(request, redirect_to));
+
+    context = {
+        'login_redirect_url': redirect_to,  # This gets added to the query string of the "Sign In" button in the header
+        'disable_courseware_js': True,
+        'initial_mode': initial_mode,
+        'third_party_auth': third_party_auth_json,
+        'third_party_auth_hint': third_party_auth_hint or '',
+        'platform_name': settings.PLATFORM_NAME,
+        'responsive': True,
+
+        # Include form descriptions retrieved from the user API.
+        # We could have the JS client make these requests directly,
+        # but we include them in the initial page load to avoid
+        # the additional round-trip to the server.
+        'login_form_desc': form_descriptions['login'],
+        'registration_form_desc': form_descriptions['registration'],
+        'password_reset_form_desc': form_descriptions['password_reset'],
+    }
+
+    return render_to_response('student_account/parent_agreement.html', context)
+
+@require_http_methods(['GET'])
+@ensure_csrf_cookie
+def agree(request, initial_mode="login"):
+    """Render the combined login/registration form, defaulting to login
+
+    This relies on the JS to asynchronously load the actual form from
+    the user_api.
+
+    Keyword Args:
+        initial_mode (string): Either "login" or "register".
+
+    """
+    # Determine the URL to redirect to following login/registration/third_party_auth
+    redirect_to = get_next_url_for_login_page(request)
+
+    # If we're already logged in, redirect to the dashboard
+    if request.user.is_authenticated():
+        return redirect(redirect_to)
+
+    # Retrieve the form descriptions from the user API
+    form_descriptions = _get_form_descriptions(request)
+
+    # If this is a microsite, revert to the old login/registration pages.
+    # We need to do this for now to support existing themes.
+    if microsite.is_request_in_microsite():
+        if initial_mode == "login":
+            return old_login_view(request)
+        elif initial_mode == "register":
+            return old_register_view(request)
+
+    # Allow external auth to intercept and handle the request
+    ext_auth_response = _external_auth_intercept(request, initial_mode)
+    if ext_auth_response is not None:
+        return ext_auth_response
+
+    # Our ?next= URL may itself contain a parameter 'tpa_hint=x' that we need to check.
+    # If present, we display a login page focused on third-party auth with that provider.
+    third_party_auth_hint = None
+    if '?' in redirect_to:
+        try:
+            next_args = urlparse.parse_qs(urlparse.urlparse(redirect_to).query)
+            provider_id = next_args['tpa_hint'][0]
+            if third_party_auth.provider.Registry.get(provider_id=provider_id):
+                third_party_auth_hint = provider_id
+                initial_mode = "hinted_login"
+        except (KeyError, ValueError, IndexError):
+            pass
+
+    # Otherwise, render the combined login/registration page
+
+    third_party_auth_json = None
+    third_party_auth_json = json.dumps(_third_party_auth_context(request, redirect_to));
+
+    context = {
+        'login_redirect_url': redirect_to,  # This gets added to the query string of the "Sign In" button in the header
+        'disable_courseware_js': True,
+        'initial_mode': initial_mode,
+        'third_party_auth': third_party_auth_json,
+        'third_party_auth_hint': third_party_auth_hint or '',
+        'platform_name': settings.PLATFORM_NAME,
+        'responsive': True,
+
+        # Include form descriptions retrieved from the user API.
+        # We could have the JS client make these requests directly,
+        # but we include them in the initial page load to avoid
+        # the additional round-trip to the server.
+        'login_form_desc': form_descriptions['login'],
+        'registration_form_desc': form_descriptions['registration'],
+        'password_reset_form_desc': form_descriptions['password_reset'],
+    }
+
+    return render_to_response('student_account/agreement.html', context)
+
+@require_http_methods(['GET'])
+@ensure_csrf_cookie
+def registration_gubn(request, initial_mode="login"):
+    """Render the combined login/registration form, defaulting to login
+
+    This relies on the JS to asynchronously load the actual form from
+    the user_api.
+
+    Keyword Args:
+        initial_mode (string): Either "login" or "register".
+
+    """
+    # Determine the URL to redirect to following login/registration/third_party_auth
+    redirect_to = get_next_url_for_login_page(request)
+
+    # If we're already logged in, redirect to the dashboard
+    if request.user.is_authenticated():
+        return redirect(redirect_to)
+
+    # Retrieve the form descriptions from the user API
+    form_descriptions = _get_form_descriptions(request)
+
+    # If this is a microsite, revert to the old login/registration pages.
+    # We need to do this for now to support existing themes.
+    if microsite.is_request_in_microsite():
+        if initial_mode == "login":
+            return old_login_view(request)
+        elif initial_mode == "register":
+            return old_register_view(request)
+
+    # Allow external auth to intercept and handle the request
+    ext_auth_response = _external_auth_intercept(request, initial_mode)
+    if ext_auth_response is not None:
+        return ext_auth_response
+
+    # Our ?next= URL may itself contain a parameter 'tpa_hint=x' that we need to check.
+    # If present, we display a login page focused on third-party auth with that provider.
+    third_party_auth_hint = None
+    if '?' in redirect_to:
+        try:
+            next_args = urlparse.parse_qs(urlparse.urlparse(redirect_to).query)
+            provider_id = next_args['tpa_hint'][0]
+            if third_party_auth.provider.Registry.get(provider_id=provider_id):
+                third_party_auth_hint = provider_id
+                initial_mode = "hinted_login"
+        except (KeyError, ValueError, IndexError):
+            pass
+
+    # Otherwise, render the combined login/registration page
+
+    third_party_auth_json = None
+    third_party_auth_json = json.dumps(_third_party_auth_context(request, redirect_to));
+
+    context = {
+        'login_redirect_url': redirect_to,  # This gets added to the query string of the "Sign In" button in the header
+        'disable_courseware_js': True,
+        'initial_mode': initial_mode,
+        'third_party_auth': third_party_auth_json,
+        'third_party_auth_hint': third_party_auth_hint or '',
+        'platform_name': settings.PLATFORM_NAME,
+        'responsive': True,
+
+        # Include form descriptions retrieved from the user API.
+        # We could have the JS client make these requests directly,
+        # but we include them in the initial page load to avoid
+        # the additional round-trip to the server.
+        'login_form_desc': form_descriptions['login'],
+        'registration_form_desc': form_descriptions['registration'],
+        'password_reset_form_desc': form_descriptions['password_reset'],
+    }
+
+    return render_to_response('student_account/registration_gubn.html', context)
 
 @require_http_methods(['GET'])
 @ensure_csrf_cookie

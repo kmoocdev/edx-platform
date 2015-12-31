@@ -1,0 +1,58 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='/static_content.html'/>
+
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">
+    %if initial_mode == 'login':
+        로그인
+    %else:
+        회원가입
+    %endif
+</%block>
+
+<%block name="js_extra">
+    <script>
+        if(sessionStorage.getItem("step") != "1")
+            document.history.back();
+
+        function agreeYN(value){
+            var gubn = sessionStorage.getItem("reg_gubn")
+            alert(gubn + ":" + value);
+
+            if(value == 'Y'){
+                if(gubn == 'N') {
+                    sessionStorage.setItem("step", "2");
+                    document.location.href = "/parent_agreement";
+                }else{
+                    document.location.href = "/register";
+                }
+            }else{
+                document.location.href = "/registration_gubn";
+            }
+
+        }
+    </script>
+</%block>
+
+<%block name="header_extras"></%block>
+
+<div class="section-bkg-wrapper">
+    <input type="button" value="동의합니다" onclick="agreeYN('Y');"/>
+    <input type="button" value="동의하지 않습니다" onclick="agreeYN('N');"/>
+</div>
+
+
+<script type="text/javascript">
+    $(function(){
+        $("#register-country option:eq(1)").attr("selected", "selected");
+    });
+</script>
+
+
+% if settings.FEATURES.get('ENABLE_COMBINED_LOGIN_REGISTRATION'):
+    ## This overwrites the "footer" block declared in main.html
+    ## with an empty block, effectively hiding the footer
+    ## from logistration pages.
+    <%block name="footer"/>
+% endif

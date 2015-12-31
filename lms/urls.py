@@ -100,6 +100,9 @@ if settings.FEATURES["ENABLE_COMBINED_LOGIN_REGISTRATION"]:
             {'initial_mode': 'login'}, name="signin_user"),
         url(r'^register$', 'student_account.views.login_and_registration_form',
             {'initial_mode': 'register'}, name="register_user"),
+        url(r'^registration_gubn$', 'student_account.views.registration_gubn', name="registration_gubn"),
+        url(r'^agree', 'student_account.views.agree', name="agree"),
+        url(r'^parent_agreement', 'student_account.views.parent_agreement', name="parent_agree"),
         url(r'^accounts/login$', 'student_account.views.login_and_registration_form',
             {'initial_mode': 'login'}, name="accounts_login"),
     )
