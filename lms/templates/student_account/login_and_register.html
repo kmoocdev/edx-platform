@@ -19,15 +19,15 @@
     <script src="${static.url('js/vendor/history.js')}"></script>
     <script>
 
-        %if initial_mode != 'login':
-
-        console.log(sessionStorage.getItem("reg_gubn") + ":" + sessionStorage.getItem("step"))
-
-        if((sessionStorage.getItem("reg_gubn") == "Y" && sessionStorage.getItem("step") == "1") || (sessionStorage.getItem("reg_gubn") == "N" && sessionStorage.getItem("step") == "2"))
-            console.log("correct");
-        else
-            document.location.href = "/"
-        %endif
+##         %if initial_mode != 'login':
+## 
+##         console.log(sessionStorage.getItem("reg_gubn") + ":" + sessionStorage.getItem("step"))
+##
+##         if((sessionStorage.getItem("reg_gubn") == "Y" && sessionStorage.getItem("step") == "1") || (sessionStorage.getItem("reg_gubn") == "N" && sessionStorage.getItem("step") == "2"))
+##             console.log("correct");
+##         else
+##             document.location.href = "/"
+##         %endif
 
 
         function agreementPop(){
