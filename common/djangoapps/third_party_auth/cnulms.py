@@ -2,7 +2,7 @@ from social.backends.oauth import BaseOAuth2
 from django.utils.http import urlencode
 import json
 
-class LifelongeduOAuth2(BaseOAuth2):
+class cnuOAuth2(BaseOAuth2):
     """cnulms OAuth authentication backend"""
 
     name = 'cnulms'
