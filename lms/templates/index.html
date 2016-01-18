@@ -59,7 +59,11 @@ function closeWin() {
 }
 
 popupDate = new Date();
-if ( cookiedata.indexOf("popupdiv=done") < 0 ){
+if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
+     (popupDate.getFullYear() == 2016) &&
+     (popupDate.getMonth()== 1-1) &&
+     (popupDate.getDate() == 18 )
+   ){
     document.all['popupWrap'].style.display = "block";
 } else {
     document.all['popupWrap'].style.display = "none";
