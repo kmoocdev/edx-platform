@@ -1,0 +1,49 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='/static_content.html'/>
+
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">회원가입</%block>
+
+<%block name="js_extra">
+    <script>
+        function registrationForm(gubn){
+            /*gubn 'Y' is over 14, 'N' is under 14*/
+
+            if(window.sessionStorage) {
+                sessionStorage.setItem("reg_gubn", gubn);
+                sessionStorage.setItem("step", "1");
+            }else {
+                console.log("window.sessionStorage is Not Exists");
+            }
+
+            //sessionStorage.setItem('저장할 이름 - 문자열', '저장할 객체');
+            document.location.href = "/agree";
+        }
+
+        window.name ="Parent_window";
+
+        function fnPopup(){
+            window.open('', 'popupIPIN2', 'width=450, height=550, top=100, left=100, fullscreen=no, menubar=no, status=no, toolbar=no, titlebar=yes, location=no, scrollbar=no');
+            document.form_ipin.target = "popupIPIN2";
+            document.form_ipin.action = "https://cert.vno.co.kr/ipin.cb";
+            document.form_ipin.submit();
+        }
+
+
+    </script>
+</%block>
+
+<%block name="header_extras"></%block>
+
+<form name="form_ipin" method="post">
+##     ${csrf_token}
+    <input type="hidden" name="m" value="pubmain">
+    <input type="hidden" name="enc_data" value="${sEncData}">
+    <input type="hidden" name="csrfmiddlewaretoken" value="${csrf_token}" />
+
+    <a href="javascript:fnPopup();"><img src="http://image.creditbank.co.kr/static/img/vno/new_img/bt_26.gif" width=218 height=40 border=0></a>
+</form>
+
+<br/><br/><br/><br/><br/>
+

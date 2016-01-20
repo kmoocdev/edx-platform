@@ -20,18 +20,16 @@ from microsite_configuration import microsite
 <!--popup K-mooc -->
 <div id="popupWrap" class="popup-wrap popup-kmooc" style="position: absolute; left: 25px; top: 100px;
     z-index: 10010; display: none; border: 5px solid #b2b2b2; opacity: 1; background: #f2f2f2; font-size: 15px;
-    line-height: 25px; padding:20px;">
-         <b> 안녕하세요. K-MOOC진흥본부에서 안내드립니다. <br>
-          내일(11.28(토)) K-MOOC 사이트가 일시 중단될 예정이오니 <br>
-          방문자 여러분들께서는 이 점을 숙지하시고 <br>
-          사이트 이용에 차질이 없으시길 바랍니다. <br>
-         &nbsp; ○ 중단일정 : 11월 28일(토) 02:00 ~ 02:20 (예정) <br>
-         &nbsp; ○ 작업내용 : 시스템 패치 적용 및 정기 IPL작업 등 <br>
-         &nbsp; ○ 작업영향 : 홈페이지 및 네트워크 등 정보시스템 접속 부분적 차단 <br>
-         &nbsp; ○ 기       타 : 일정은 작업 진행에 따라 변경될 수 있습니다. <br>
-         이용에 불편을 드려 죄송합니다. 더 나은 서비스로 찾아뵙겠습니다. <br>
-         감사합니다.</b><br>
-         <p style="text-align:center;"><b> - K-MOOC 진흥본부 - </b></p>
+    line-height: 25px; padding:20px; width:560px;">
+         <b>
+        안녕하세요. K-MOOC입니다. <br/>
+        K-MOOC 서버문제로 인하여 홈페이지 접속에 불편을 드린 점 진심으로 죄송합니다.<br/>
+        현재 K-MOOC서비스는 복구하여 정상서비스 중입니다.<br/>
+        혹시 서비스 이용에 불편한 사항이나 건의사항은 help_mooc@nile.or.kr 로 의견주시기 바랍니다. <br/>
+        우리 운영진은 이용자께서 주신 의견을 적극검토하여 K-MOOC가 좀 더 나은 서비스가 될 수 있도록 최선을 다하도록 노력하겠습니다.<br/><br/>
+        K-MOOC를 이용해주셔서 감사드립니다.<br/>
+        </br>
+         </b>
         <br>
         <form class="today" id="checkForm" name="checkForm" style="text-align:right; font-style: normal;">
             <label onclick="closeWin();">
@@ -45,6 +43,8 @@ from microsite_configuration import microsite
 
 
 <script language="Javascript">
+cookiedata = document.cookie;
+
 function setCookie( name, value, expiredays ) {
     var todayDate = new Date();
     todayDate.setDate( todayDate.getDate() + expiredays );
@@ -58,15 +58,11 @@ function closeWin() {
     document.all['popupWrap'].style.display = "none";
 }
 
-cookiedata = document.cookie;
-
 popupDate = new Date();
 if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
-     (popupDate.getFullYear() == 2015) &&
-     (popupDate.getMonth()== 11-1) &&
-     (popupDate.getDate() == 27 ||
-        (popupDate.getDate() == 28 && popupDate.getHours() < 3)
-     )
+     (popupDate.getFullYear() == 2016) &&
+     (popupDate.getMonth()== 1-1) &&
+     (popupDate.getDate() == 18 )
    ){
     document.all['popupWrap'].style.display = "block";
 } else {

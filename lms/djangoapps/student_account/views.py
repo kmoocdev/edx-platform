@@ -1,3 +1,5 @@
+#-*- coding: utf-8 -*-
+
 """ Views for a student's account information. """
 
 import logging
@@ -46,231 +48,153 @@ from openedx.core.djangoapps.user_api.preferences.api import update_user_prefere
 from openedx.core.djangoapps.profile_images.images import remove_profile_images
 from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_names, set_has_profile_image
 
+import commands
+from django.views.decorators.csrf import csrf_exempt
+from datetime import date
+from student.views import register_user
+
 
 AUDIT_LOG = logging.getLogger("audit")
 
 @require_http_methods(['GET'])
 @ensure_csrf_cookie
-def parent_agreement(request, initial_mode="login"):
-    """Render the combined login/registration form, defaulting to login
+def registration_gubn(request):
+    return render_to_response('student_account/registration_gubn.html')
 
-    This relies on the JS to asynchronously load the actual form from
-    the user_api.
-
-    Keyword Args:
-        initial_mode (string): Either "login" or "register".
-
-    """
-    # Determine the URL to redirect to following login/registration/third_party_auth
-    redirect_to = get_next_url_for_login_page(request)
-
-    # If we're already logged in, redirect to the dashboard
-    if request.user.is_authenticated():
-        return redirect(redirect_to)
-
-    # Retrieve the form descriptions from the user API
-    form_descriptions = _get_form_descriptions(request)
-
-    # If this is a microsite, revert to the old login/registration pages.
-    # We need to do this for now to support existing themes.
-    if microsite.is_request_in_microsite():
-        if initial_mode == "login":
-            return old_login_view(request)
-        elif initial_mode == "register":
-            return old_register_view(request)
-
-    # Allow external auth to intercept and handle the request
-    ext_auth_response = _external_auth_intercept(request, initial_mode)
-    if ext_auth_response is not None:
-        return ext_auth_response
-
-    # Our ?next= URL may itself contain a parameter 'tpa_hint=x' that we need to check.
-    # If present, we display a login page focused on third-party auth with that provider.
-    third_party_auth_hint = None
-    if '?' in redirect_to:
-        try:
-            next_args = urlparse.parse_qs(urlparse.urlparse(redirect_to).query)
-            provider_id = next_args['tpa_hint'][0]
-            if third_party_auth.provider.Registry.get(provider_id=provider_id):
-                third_party_auth_hint = provider_id
-                initial_mode = "hinted_login"
-        except (KeyError, ValueError, IndexError):
-            pass
-
-    # Otherwise, render the combined login/registration page
-
-    third_party_auth_json = None
-    third_party_auth_json = json.dumps(_third_party_auth_context(request, redirect_to));
-
-    context = {
-        'login_redirect_url': redirect_to,  # This gets added to the query string of the "Sign In" button in the header
-        'disable_courseware_js': True,
-        'initial_mode': initial_mode,
-        'third_party_auth': third_party_auth_json,
-        'third_party_auth_hint': third_party_auth_hint or '',
-        'platform_name': settings.PLATFORM_NAME,
-        'responsive': True,
-
-        # Include form descriptions retrieved from the user API.
-        # We could have the JS client make these requests directly,
-        # but we include them in the initial page load to avoid
-        # the additional round-trip to the server.
-        'login_form_desc': form_descriptions['login'],
-        'registration_form_desc': form_descriptions['registration'],
-        'password_reset_form_desc': form_descriptions['password_reset'],
-    }
-
-    return render_to_response('student_account/parent_agreement.html', context)
-
-@require_http_methods(['GET'])
 @ensure_csrf_cookie
-def agree(request, initial_mode="login"):
-    """Render the combined login/registration form, defaulting to login
+def agree(request):
+    print 'request.method = ', request.method
+    print "request.POST['division'] = ", request.POST['division']
 
-    This relies on the JS to asynchronously load the actual form from
-    the user_api.
+    if request.method == 'POST' and request.POST['division']:
+        request.session['division'] = request.POST['division']
+        print "STEP1 : request.session['division'] = ", request.session['division']
 
-    Keyword Args:
-        initial_mode (string): Either "login" or "register".
+        context = {
+            'division': request.session['division'],
+        }
 
-    """
-    # Determine the URL to redirect to following login/registration/third_party_auth
-    redirect_to = get_next_url_for_login_page(request)
+        return render_to_response('student_account/agree.html', context)
+    else:
+        return render_to_response('student_account/registration_gubn.html')
 
-    # If we're already logged in, redirect to the dashboard
-    if request.user.is_authenticated():
-        return redirect(redirect_to)
 
-    # Retrieve the form descriptions from the user API
-    form_descriptions = _get_form_descriptions(request)
-
-    # If this is a microsite, revert to the old login/registration pages.
-    # We need to do this for now to support existing themes.
-    if microsite.is_request_in_microsite():
-        if initial_mode == "login":
-            return old_login_view(request)
-        elif initial_mode == "register":
-            return old_register_view(request)
-
-    # Allow external auth to intercept and handle the request
-    ext_auth_response = _external_auth_intercept(request, initial_mode)
-    if ext_auth_response is not None:
-        return ext_auth_response
-
-    # Our ?next= URL may itself contain a parameter 'tpa_hint=x' that we need to check.
-    # If present, we display a login page focused on third-party auth with that provider.
-    third_party_auth_hint = None
-    if '?' in redirect_to:
-        try:
-            next_args = urlparse.parse_qs(urlparse.urlparse(redirect_to).query)
-            provider_id = next_args['tpa_hint'][0]
-            if third_party_auth.provider.Registry.get(provider_id=provider_id):
-                third_party_auth_hint = provider_id
-                initial_mode = "hinted_login"
-        except (KeyError, ValueError, IndexError):
-            pass
-
-    # Otherwise, render the combined login/registration page
-
-    third_party_auth_json = None
-    third_party_auth_json = json.dumps(_third_party_auth_context(request, redirect_to));
-
-    context = {
-        'login_redirect_url': redirect_to,  # This gets added to the query string of the "Sign In" button in the header
-        'disable_courseware_js': True,
-        'initial_mode': initial_mode,
-        'third_party_auth': third_party_auth_json,
-        'third_party_auth_hint': third_party_auth_hint or '',
-        'platform_name': settings.PLATFORM_NAME,
-        'responsive': True,
-
-        # Include form descriptions retrieved from the user API.
-        # We could have the JS client make these requests directly,
-        # but we include them in the initial page load to avoid
-        # the additional round-trip to the server.
-        'login_form_desc': form_descriptions['login'],
-        'registration_form_desc': form_descriptions['registration'],
-        'password_reset_form_desc': form_descriptions['password_reset'],
-    }
-
-    return render_to_response('student_account/agreement.html', context)
-
-@require_http_methods(['GET'])
 @ensure_csrf_cookie
-def registration_gubn(request, initial_mode="login"):
-    """Render the combined login/registration form, defaulting to login
+def agree_done(request):
+    print 'request.is_ajax = ', request.is_ajax
+    print 'request.method = ', request.method
+    print "request.POST['division'] = ", request.POST['agreeYN']
 
-    This relies on the JS to asynchronously load the actual form from
-    the user_api.
+    data = {}
 
-    Keyword Args:
-        initial_mode (string): Either "login" or "register".
+    if request.method == 'POST' and request.POST['agreeYN'] and request.POST['agreeYN'] == 'Y':
+        # print "STEP2 :  request.session['division'] = ", request.session['division']
+        # print "STEP2 :  request.session['agreeYN'] = ", request.POST['agreeYN']
+        request.session['agreeYN'] = request.POST['agreeYN']
 
-    """
-    # Determine the URL to redirect to following login/registration/third_party_auth
-    redirect_to = get_next_url_for_login_page(request)
+        if request.POST['agreeYN'] == 'Y':
+            data['agreeYN'] = request.session['agreeYN']
+            data['division'] = request.session['division']
+    else:
+        data['agreeYN'] = request.POST['agreeYN']
 
-    # If we're already logged in, redirect to the dashboard
-    if request.user.is_authenticated():
-        return redirect(redirect_to)
+    print 'data = ', data
 
-    # Retrieve the form descriptions from the user API
-    form_descriptions = _get_form_descriptions(request)
+    return HttpResponse(json.dumps(data))
 
-    # If this is a microsite, revert to the old login/registration pages.
-    # We need to do this for now to support existing themes.
-    if microsite.is_request_in_microsite():
-        if initial_mode == "login":
-            return old_login_view(request)
-        elif initial_mode == "register":
-            return old_register_view(request)
+@csrf_exempt
+def parent_agree(request):
 
-    # Allow external auth to intercept and handle the request
-    ext_auth_response = _external_auth_intercept(request, initial_mode)
-    if ext_auth_response is not None:
-        return ext_auth_response
+    ## IPIN info
+    sSiteCode   = 'M231'
+    sSitePw     = '76421752'
+    sModulePath = '/edx/app/edxapp/IPINClient'
+    sCPRequest  = commands.getoutput(sModulePath + ' SEQ ' + sSiteCode)
+    sReturnURL  = 'http://192.168.44.10:8000/parent_agree_done'
+    sEncData = commands.getoutput(sModulePath + ' REQ ' + sSiteCode + ' ' + sSitePw + ' ' + sCPRequest + ' ' + sReturnURL)
 
-    # Our ?next= URL may itself contain a parameter 'tpa_hint=x' that we need to check.
-    # If present, we display a login page focused on third-party auth with that provider.
-    third_party_auth_hint = None
-    if '?' in redirect_to:
-        try:
-            next_args = urlparse.parse_qs(urlparse.urlparse(redirect_to).query)
-            provider_id = next_args['tpa_hint'][0]
-            if third_party_auth.provider.Registry.get(provider_id=provider_id):
-                third_party_auth_hint = provider_id
-                initial_mode = "hinted_login"
-        except (KeyError, ValueError, IndexError):
-            pass
+    '''
+    print '===================================================='
+    print '1 = ', sModulePath + ' SEQ ' + sSiteCode
+    print '===================================================='
+    print '3 = ', sCPRequest
+    print '===================================================='
+    print '4 = ', sModulePath + ' REQ ' + sSiteCode + ' ' + sSitePw + ' ' + sCPRequest + ' ' + sReturnURL
+    print '===================================================='
+    print '5 = ', sEncData
+    print '===================================================='
+    '''
 
-    # Otherwise, render the combined login/registration page
+    if sEncData == -9 :
+        sRtnMsg = '입력값 오류 : 암호화 처리시 필요한 파라미터값의 정보를 정확하게 입력해 주시기 바랍니다.'
+    else :
+        sRtnMsg = sEncData + ' 변수에 암호화 데이터가 확인되면 정상 정상이 아닌경우 리턴코드 확인 후 NICE평가정보 개발 담당자에게 문의해 주세요.'
 
-    third_party_auth_json = None
-    third_party_auth_json = json.dumps(_third_party_auth_context(request, redirect_to));
+    print 'sRtnMsg = ', sRtnMsg
 
     context = {
-        'login_redirect_url': redirect_to,  # This gets added to the query string of the "Sign In" button in the header
-        'disable_courseware_js': True,
-        'initial_mode': initial_mode,
-        'third_party_auth': third_party_auth_json,
-        'third_party_auth_hint': third_party_auth_hint or '',
-        'platform_name': settings.PLATFORM_NAME,
-        'responsive': True,
-
-        # Include form descriptions retrieved from the user API.
-        # We could have the JS client make these requests directly,
-        # but we include them in the initial page load to avoid
-        # the additional round-trip to the server.
-        'login_form_desc': form_descriptions['login'],
-        'registration_form_desc': form_descriptions['registration'],
-        'password_reset_form_desc': form_descriptions['password_reset'],
+        'sEncData' : sEncData,
     }
 
-    return render_to_response('student_account/registration_gubn.html', context)
+    return render_to_response('student_account/parent_agree.html', context)
 
-@require_http_methods(['GET'])
+@csrf_exempt
+def parent_agree_done(request):
+
+    sSiteCode   = 'M231'
+    sSitePw     = '76421752'
+    sModulePath = '/edx/app/edxapp/IPINClient'
+    sEncData = request.POST['enc_data']
+
+    sDecData = commands.getoutput(sModulePath + ' RES ' + sSiteCode + ' ' + sSitePw + ' ' + sEncData)
+
+    print 'sDecData', sDecData
+
+    if sDecData:
+        val = sDecData.split('^')
+        if val[6] and len(val[6]) == 8:
+
+            print '*****************************'
+            print int(date.today().year) - int(val[6][:4])
+            print '*****************************'
+
+            if int(date.today().year) - int(val[6][:4]) < 20:
+                context = {
+                    'isAuth': 'fail',
+                    'age': int(date.today().year) - int(val[6][:4]),
+                }
+            else:
+                request.session['auth'] = 'Y'
+                context = {
+                    'isAuth' : 'succ',
+                    'age': int(date.today().year) - int(val[6][:4]),
+                }
+
+    else:
+        context = {
+            'isAuth': 'fail',
+            'age': 0,
+        }
+
+    print 'context > ', context
+
+    return render_to_response('student_account/parent_agree_done.html', context)
+
 @ensure_csrf_cookie
 def login_and_registration_form(request, initial_mode="login"):
+
+    if initial_mode == "login":
+        pass
+    elif 'division' in request.session and 'agreeYN' in request.session and 'auth' in request.session:
+        del request.session['division']
+        del request.session['agreeYN']
+        del request.session['auth']
+    elif 'division' in request.session and 'agreeYN' in request.session:
+        del request.session['division']
+        del request.session['agreeYN']
+    else:
+        return render_to_response('student_account/registration_gubn.html')
+
     """Render the combined login/registration form, defaulting to login
 
     This relies on the JS to asynchronously load the actual form from
@@ -278,7 +202,6 @@ def login_and_registration_form(request, initial_mode="login"):
 
     Keyword Args:
         initial_mode (string): Either "login" or "register".
-
     """
     # Determine the URL to redirect to following login/registration/third_party_auth
     redirect_to = get_next_url_for_login_page(request)

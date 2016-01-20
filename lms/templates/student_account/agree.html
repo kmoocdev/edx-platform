@@ -1,0 +1,54 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='/static_content.html'/>
+
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">
+    %if initial_mode == 'login':
+        로그인
+    %else:
+        회원가입
+    %endif
+</%block>
+
+<%block name="js_extra">
+    <script>
+        function agree_gubn(gubn){
+
+            console.log('ajax start........');
+            $.post("/agree_done",
+                    {"agreeYN": gubn, "csrfmiddlewaretoken": $("#csrfmiddlewaretoken").val()},
+                    function(data){
+                        console.log(data.agreeYN + ":" + data.division);
+                        if(data.agreeYN == 'Y' && data.division == 'Y')
+                            document.location.href="/register"
+                        else if(data.agreeYN == 'Y' && data.division == 'N')
+                            document.location.href="/parent_agree"
+                        else
+                            document.location.href="/"
+            });
+
+            /*
+            if(gubn == 'Y') {
+                $("#agreeYN").val(gubn);
+            }else{
+                document.location.href = '/';
+            }
+            */
+        }
+    </script>
+</%block>
+
+<%block name="header_extras"></%block>
+
+<form id="form" name="form" method="post" action="/agree_done">
+<input type="hidden" id="agreeYN" name="agreeYN" />
+<input type="hidden" id="csrfmiddlewaretoken" name="csrfmiddlewaretoken" value="${csrf_token}" />
+    <div class="section-bkg-wrapper">
+        <input type="button" value="동의합니다" onclick="agree_gubn('Y');"/>
+        <input type="button" value="동의하지 않습니다" onclick="agree_gubn('N');"/>
+    </div>
+</form>
+
+<br/><br/><br/><br/><br/>
+

@@ -13,40 +13,23 @@
 
 <%block name="js_extra">
     <script>
-        function registrationForm(gubn){
-            /*gubn 'Y' is over 14, 'N' is under 14*/
-
-            if(window.sessionStorage) {
-                sessionStorage.setItem("reg_gubn", gubn);
-                sessionStorage.setItem("step", "1");
-            }else {
-                console.log("window.sessionStorage is Not Exists");
-            }
-
-            //sessionStorage.setItem('저장할 이름 - 문자열', '저장할 객체');
-            document.location.href = "/agree";
+        function member_division(gubn){
+            /*division 'Y' is over 14, 'N' is under 14*/
+            $("#division").val(gubn);
+            $("#form").submit();
         }
     </script>
 </%block>
 
 <%block name="header_extras"></%block>
 
-<div class="section-bkg-wrapper">
-    <input type="button" value="만 14세 이상" onclick="registrationForm('Y');"/>
-    <input type="button" value="만 14세 미만" onclick="registrationForm('N');"/>
-</div>
+<form id="form" name="form" method="post" action="/agree">
+<input type="hidden" id="division" name="division" />
+<input type="hidden" name="csrfmiddlewaretoken" value="${csrf_token}" />
+    <div class="section-bkg-wrapper">
+        <input type="button" value="만 14세 이상" onclick="member_division('Y');"/>
+        <input type="button" value="만 14세 미만" onclick="member_division('N');"/>
+    </div>
+</form>
 
-
-<script type="text/javascript">
-    $(function(){
-        $("#register-country option:eq(1)").attr("selected", "selected");
-    });
-</script>
-
-
-% if settings.FEATURES.get('ENABLE_COMBINED_LOGIN_REGISTRATION'):
-    ## This overwrites the "footer" block declared in main.html
-    ## with an empty block, effectively hiding the footer
-    ## from logistration pages.
-    <%block name="footer"/>
-% endif
+<br/><br/><br/><br/><br/>
