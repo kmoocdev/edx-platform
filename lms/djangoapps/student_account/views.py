@@ -183,17 +183,30 @@ def parent_agree_done(request):
 @ensure_csrf_cookie
 def login_and_registration_form(request, initial_mode="login"):
 
+
+    division = None
+
     if initial_mode == "login":
         pass
+
     elif 'division' in request.session and 'agreeYN' in request.session and 'auth' in request.session:
+        division = request.session['division']
         del request.session['division']
         del request.session['agreeYN']
         del request.session['auth']
+
     elif 'division' in request.session and 'agreeYN' in request.session:
+        division = request.session['division']
+
+        if request.session['division'] == 'N':
+            return render_to_response('student_account/registration_gubn.html')
+
         del request.session['division']
         del request.session['agreeYN']
     else:
         return render_to_response('student_account/registration_gubn.html')
+
+    print 'division = ', division
 
     """Render the combined login/registration form, defaulting to login
 
@@ -260,6 +273,7 @@ def login_and_registration_form(request, initial_mode="login"):
         'login_form_desc': form_descriptions['login'],
         'registration_form_desc': form_descriptions['registration'],
         'password_reset_form_desc': form_descriptions['password_reset'],
+        'division': division,
     }
 
     return render_to_response('student_account/login_and_register.html', context)

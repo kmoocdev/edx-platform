@@ -42,6 +42,25 @@
                 pop.focus();
         }
 
+        $(document).ready(function(){
+            var d = new Date();
+            var year = d.getFullYear();
+
+            %if division == 'Y':
+                $(this).find("option").each(function(){
+                    console.log($(this).val());
+                    if(eval(year - $(this).val()) < 14)
+                        $(this).remove();
+                });
+
+            %else:
+                $(this).find("option").each(function(){
+                    if(eval(year - $(this).val()) > 13)
+                        $(this).remove();
+                });
+            %endif
+        });
+
     </script>
     <%static:js group='student_account'/>
 </%block>
@@ -51,12 +70,13 @@
         <script type="text/template" id="${template_name}-tpl">
             <%static:include path="student_account/${template_name}.underscore" />
         </script>
-% endfor
+    % endfor
 </%block>
 
 <div class="section-bkg-wrapper">
     <div id="login-and-registration-container"
         class="login-register"
+        data-division="${division}"
         data-initial-mode="${initial_mode}"
         data-third-party-auth='${third_party_auth|h}'
         data-third-party-auth-hint='${third_party_auth_hint}'
