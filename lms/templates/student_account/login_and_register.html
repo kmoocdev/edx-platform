@@ -47,14 +47,13 @@
             var year = d.getFullYear();
 
             %if division == 'Y':
-                $(this).find("option").each(function(){
-                    console.log($(this).val());
+                $("#register-year_of_birth").find("option").each(function(){
                     if(eval(year - $(this).val()) < 14)
                         $(this).remove();
                 });
 
             %else:
-                $(this).find("option").each(function(){
+                $("#register-year_of_birth").find("option").each(function(){
                     if(eval(year - $(this).val()) > 13)
                         $(this).remove();
                 });
