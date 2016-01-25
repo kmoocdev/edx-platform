@@ -54,7 +54,7 @@ header.global .nav-global li.gnb2 a:focus,
 header.global .nav-global li.gnb2 a:hover,
 header.global .nav-global li.gnb2 a.active {background-position:-254px -30px;}
 header.global .nav-global li.gnb3 a:focus,
-header.global .nav-global li.gnb3 a:hover, 
+header.global .nav-global li.gnb3 a:hover,
 header.global .nav-global li.gnb3 a.active {background-position:-465px -30px;}
 
 header.global .nav-global li:nth-child(1){position:absolute;right:90px;top:40px;padding:0;width:80px;}
@@ -95,7 +95,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .home>header .title .course-search .search-button:focus,
 .home>header .title .course-search .search-button:hover{right:110px;text-indent:-999999px;width:100px;height:41px;border:1px dotted;background:url('/static/images/search.png') repeat top left;}
 .home>header .title .course-search .search-input{height:41px;line-height:41px;font-size:12px;border:solid 1px #555151;border-radius:5px;padding:0 10px;}
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
 	.home>header .title .course-search .search-input {padding:12px 10px;}
 }
 
@@ -373,4 +373,20 @@ ul.facet-list li:focus{
 	border: 1px dotted;
 }
 
+ul,ol {margin:0;padding:0;list-style:none;}
+li, dl, dd, dt{margin:0;padding:0;list-style:none;}
+img{ border:none}
 
+
+
+
+.icon {margin:0 0 10px 0;padding:0 0 0 10px;background:url(../images/dot.gif) no-repeat 0 8px;color:#505050;line-height:1.5em;}
+.join li{float:left; margin:10px 0 0 0}
+.pr15 {padding:0 15px 0 0 }
+.agree_box {width:100%;height:140px;padding:10px;margin-bottom:11px;border:1px solid #d9d9d9; font: 12px "Open Sans","Nanum Gothic";}
+.agree{overflow:hidden;width:100%;margin-bottom:15px;text-align:right;}
+.agree label{font: 15px "Open Sans","Nanum Gothic" !important;}
+.content h5 {margin:0 0 10px 0;padding:0 0 0 22px;background:url(../images/bl_tr.png) no-repeat 0 0px;color:#505050;line-height:1.5em; background-position: left center;}
+.btn{width:100%; text-align:center;}
+.btn_ipin{width:100%; text-align:center; margin:30px 0 0 0}
+.btn_back{width:100%; text-align:center; margin:50px 0 0 0}
