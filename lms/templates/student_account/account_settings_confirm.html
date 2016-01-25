@@ -20,6 +20,15 @@
             %endif
 
             $("#check").attr("href", "javascript:password_check();");
+
+
+
+            $("#password").focus();
+            $("#password").keydown(function(e){
+                if(e.which == 13)
+                    password_check();
+
+            });
         });
 
         function password_check(){
