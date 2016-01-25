@@ -112,7 +112,7 @@ def parent_agree(request):
     sSitePw     = '76421752'
     sModulePath = '/edx/app/edxapp/IPINClient'
     sCPRequest  = commands.getoutput(sModulePath + ' SEQ ' + sSiteCode)
-    sReturnURL  = 'http://192.168.44.10:8000/parent_agree_done'
+    sReturnURL  = 'http://kmooc.kr/parent_agree_done'
     sEncData = commands.getoutput(sModulePath + ' REQ ' + sSiteCode + ' ' + sSitePw + ' ' + sCPRequest + ' ' + sReturnURL)
 
     '''
