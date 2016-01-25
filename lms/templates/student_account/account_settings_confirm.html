@@ -13,6 +13,12 @@
 <%block name="js_extra">
     <script>
         $(document).ready(function(){
+            %if correct == None:
+                $("#enterpwd").show();
+            %else:
+                $("#incorrect").show();
+            %endif
+
             $("#check").attr("href", "javascript:password_check();");
         });
 
@@ -25,12 +31,12 @@
             }
 
             $.post("/account/settings_confirm_check",
-                    {password: passwd},
+                    {passwd: passwd},
                     function(data){
                         console.log("data = " + data);
-                        if(data == "succ"){
+                        if(data){
                             document.location.href = "/account/settings";
-                        }else if(data == "fail"){
+                        }else if(!data){
                             alert("비밀번호가 맞지 않습니다.");
                         }else{
                             alert("접근경로가 비정상적 입니다.\n메인페이지로 이동합니다.");
@@ -42,30 +48,35 @@
     </script>
 </%block>
 
-<%block name="pagetitle">본인확인</%block>
+<%block name="pagetitle">비밀번호확인</%block>
 <section class="container rule">
 
-    <h2>본인확인</h2>
+    <h2>비밀번호 확인</h2>
 
     <dl>
-        <dt>본인확인<br><br></dt>
+        <dt>홈페이지 회원을 탈퇴하시면 온라인학습은 물론 나의학습을 통한 학습이력, 상담/참여이력을 확인하실 수 없습니다.<br></dt>
+        <dt>홈페이지 회원 탈퇴 이후, 언제든 재가입하실수 있으나 기존과 동일한 ID는 사용하실 수 없습니다.<br></dt>
+
+
+        <br/><br/>
+
+
+##         <dd>본인확인<br>
+##             본인확인
+##         </dd>
+
+        <dt><input type="password" id="password" /></dt>
+
         <dd>
             <ol>
-                <li><img style="width:12px" src="/static/images/correct-icon.png">&nbsp;<b>본인확인</b></li>
-                    <ol>
-                        <li style="margin-left: 16px;">{{ request.session.passwdCheck }}</li>
-                        <li style="margin-left: 16px;">12345<br><br></li>
-                    </ol>
-
+                <li id="incorrect" style="display:none;"><img style="width:12px" src="/static/images/incorrect-icon.png">&nbsp;<b>비밀번호가 맞지 않습니다.</b></li>
+                <li id="enterpwd" style="display:none;"><img style="width:12px" src="/static/images/correct-icon.png">&nbsp;<b>비밀번호를 입력하세요.</b></li>
             </ol>
         </dd>
-
-        <dd>본인확인<br>
-            본인확인
-        </dd>
-
-        <dt><input type="text" id="password" /></dt>
-        <br>
-        <a href="#" id="check"><input type="button" id="button" value="본인확인"/></a>
+        <br/>
+        <a href="#" id="check"><input type="button" id="button" value="확인"/></a>
     </dl>
+
+    <br/><br/><br/><br/><br/><br/><br/>
+
 </section>

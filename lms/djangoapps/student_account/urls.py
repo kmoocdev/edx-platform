@@ -14,5 +14,7 @@ if settings.FEATURES.get('ENABLE_COMBINED_LOGIN_REGISTRATION'):
 urlpatterns += patterns(
     'student_account.views',
     url(r'^finish_auth$', 'finish_auth', name='finish_auth'),
+    url(r'^settings_confirm$', 'account_settings_confirm', name='account_settings_confirm'),
+    url(r'^settings_confirm_check$', 'account_settings_confirm_check', name='account_settings_confirm_check'),
     url(r'^settings$', 'account_settings', name='account_settings'),
 )

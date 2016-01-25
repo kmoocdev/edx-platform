@@ -34,7 +34,7 @@ from student.views import (
 )
 from student.helpers import get_next_url_for_login_page
 import third_party_auth
-from third_party_auth import pipeline
+from third_party_auth import pipeline, provider
 from util.bad_request_rate_limiter import BadRequestRateLimiter
 
 from openedx.core.djangoapps.user_api.accounts.api import request_password_change
@@ -52,6 +52,8 @@ import commands
 from django.views.decorators.csrf import csrf_exempt
 from datetime import date
 from student.views import register_user
+from django.contrib.auth import authenticate
+from util.json_request import JsonResponse
 
 
 AUDIT_LOG = logging.getLogger("audit")
@@ -110,8 +112,7 @@ def parent_agree(request):
     sSitePw     = '76421752'
     sModulePath = '/edx/app/edxapp/IPINClient'
     sCPRequest  = commands.getoutput(sModulePath + ' SEQ ' + sSiteCode)
-    #sReturnURL  = 'http://192.168.44.10:8000/parent_agree_done'
-    sReturnURL  = 'http://wwwdev.kmoocs.kr/parent_agree_done'
+    sReturnURL  = 'http://192.168.44.10:8000/parent_agree_done'
     sEncData = commands.getoutput(sModulePath + ' REQ ' + sSiteCode + ' ' + sSitePw + ' ' + sCPRequest + ' ' + sReturnURL)
 
     '''
@@ -457,7 +458,7 @@ def _external_auth_intercept(request, mode):
 
 @login_required
 @require_http_methods(['GET'])
-def account_settings(request):
+def account_settings_confirm(request):
     """Render the current user's account settings page.
 
     Args:
@@ -473,8 +474,82 @@ def account_settings(request):
         GET /account/settings
 
     """
-    return render_to_response('student_account/account_settings.html', account_settings_context(request))
 
+    context = {
+        'correct' : None
+    }
+
+    return render_to_response('student_account/account_settings_confirm.html', context)
+
+@login_required
+@require_http_methods(['POST'])
+def account_settings_confirm_check(request):
+    """Render the current user's account settings page.
+
+    Args:
+        request (HttpRequest)
+
+    Returns:
+        HttpResponse: 200 if the page was sent successfully
+        HttpResponse: 302 if not logged in (redirect to login page)
+        HttpResponse: 405 if using an unsupported HTTP method
+
+    Example usage:
+
+        GET /account/settings
+
+    """
+    print '********************'
+    print request.user.is_authenticated()
+    print '********************'
+    print request.user
+    print '********************'
+
+    user = authenticate(username=request.user, password=request.POST['passwd'], request=request)
+
+    if user is None:
+        request.session['passwdcheck'] = 'N'
+        return JsonResponse({
+            "success": False,
+        })
+    else:
+        request.session['passwdcheck'] = 'Y'
+        return JsonResponse({
+            "success": True,
+        })
+
+@login_required
+@require_http_methods(['GET'])
+def account_settings(request):
+
+    """Render the current user's account settings page.
+
+    Args:
+        request (HttpRequest)
+
+    Returns:
+        HttpResponse: 200 if the page was sent successfully
+        HttpResponse: 302 if not logged in (redirect to login page)
+        HttpResponse: 405 if using an unsupported HTTP method
+
+    Example usage:
+
+        GET /account/settings
+
+    """
+
+    if 'passwdcheck' in request.session and request.session['passwdcheck'] == 'Y':
+        return render_to_response('student_account/account_settings.html', account_settings_context(request))
+    elif 'passwdcheck' in request.session and request.session['passwdcheck'] == 'N':
+        context = {
+            'correct' : False
+        }
+        return render_to_response('student_account/account_settings_confirm.html', context)
+    else:
+        context = {
+            'correct' : None
+        }
+        return render_to_response('student_account/account_settings_confirm.html', context)
 
 @login_required
 @require_http_methods(['GET'])
