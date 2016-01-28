@@ -173,7 +173,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
         course5 = []
 
         for course in courses:
-            if course.display_name == 'K-MOOC 시작하기':
+            if course.display_name is 'K-MOOC 시작하기':
                 course5.append(course)
             elif course.start.date() >= datetime.datetime.now().date():
                 course1.append(course)
@@ -183,6 +183,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
                 course3.append(course)
             else:
                 course4.append(course)
+
         course1 = sort_by_start_date(course1)
         course2 = reverse_sort_by_start_date(course2)
         course3 = reverse_sort_by_start_date(course3)
