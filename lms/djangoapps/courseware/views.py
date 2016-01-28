@@ -158,6 +158,7 @@ def haewoondaex(request, univ_id):
 def openapi(request):
     return render_to_response("openapi.html")
 
+"""
 @ensure_csrf_cookie
 @cache_if_anonymous()
 def openapi2(request):
@@ -172,6 +173,7 @@ def openapi3(request):
 @cache_if_anonymous()
 def openapi4(request):
     return render_to_response("openapi4.html")
+"""
 
 @ensure_csrf_cookie
 @cache_if_anonymous()
