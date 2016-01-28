@@ -171,10 +171,8 @@ def index(request, extra_context=None, user=AnonymousUser()):
         course3 = []
 
         for course in courses:
-            if course.is_newish:
+            if not course.has_ended() and (course.enrollment_end is None or course.enrollment_end.date() >= datetime.datetime.now().date()):
                 course1.append(course)
-            # elif not course.has_ended() and course.enrollment_end.date() >= datetime.datetime.now().date():
-            #     course2.append(course)
             elif not course.has_ended():
                 course2.append(course)
             else:
@@ -217,7 +215,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
         print course.enrollment_end
         print '*************************************'
         """
-        print '1','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
+        #print '1','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
 
     for course in course2:
         """
@@ -239,7 +237,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
         print course.enrollment_end
         print '*************************************'
         """
-        print '2','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
+        #print '2','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
 
     for course in course3:
         """
@@ -261,7 +259,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
         print course.enrollment_end
         print '*************************************'
         """
-        print '3','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
+        #print '3','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
     print '--------------------------------------------------------------------------------------------------------------'
 
 

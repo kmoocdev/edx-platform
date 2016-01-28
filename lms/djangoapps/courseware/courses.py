@@ -423,6 +423,12 @@ def sort_by_start_date(courses):
     """
     courses = sorted(
         courses,
+        key=lambda course: (course.has_ended(), course.enrollment_end is None, course.enrollment_end),
+        reverse=False
+    )
+
+    courses = sorted(
+        courses,
         key=lambda course: (course.has_ended(), course.start is None, course.start),
         reverse=False
     )
