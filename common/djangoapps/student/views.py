@@ -173,7 +173,9 @@ def index(request, extra_context=None, user=AnonymousUser()):
         course5 = []
 
         for course in courses:
-            if course.display_name is 'K-MOOC 시작하기':
+
+            #print '>>>>> ', course.id, str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1', str(course.id) is 'course-v1:KMOOC+DEMOk+2015_1'
+            if str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1':
                 course5.append(course)
             elif course.start.date() >= datetime.datetime.now().date():
                 course1.append(course)
@@ -213,6 +215,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
     print course.enrollment_end
     print '*************************************'
     """
+    """
     print '--------------------------------------------------------------------------------------------------------------'
     for course in course1:
         print '1','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
@@ -226,7 +229,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
     for course in course4:
         print '4','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
     print '--------------------------------------------------------------------------------------------------------------'
-
+    """
 
     context = {'courses': courses}
 
