@@ -169,97 +169,61 @@ def index(request, extra_context=None, user=AnonymousUser()):
         course1 = []
         course2 = []
         course3 = []
+        course4 = []
+        course5 = []
 
         for course in courses:
-            if not course.has_ended() and (course.enrollment_end is None or course.enrollment_end.date() >= datetime.datetime.now().date()):
+            if course.display_name == 'K-MOOC 시작하기':
+                course5.append(course)
+            elif course.start.date() >= datetime.datetime.now().date():
                 course1.append(course)
-            elif not course.has_ended():
+            elif not course.has_ended() and (course.enrollment_end is None or course.enrollment_end.date() >= datetime.datetime.now().date()):
                 course2.append(course)
-            else:
+            elif not course.has_ended():
                 course3.append(course)
+            else:
+                course4.append(course)
         course1 = sort_by_start_date(course1)
         course2 = reverse_sort_by_start_date(course2)
-        course3 = reverse_sort_by_enrollment_end_date(course3)
+        course3 = reverse_sort_by_start_date(course3)
+        course4 = reverse_sort_by_enrollment_end_date(course4)
         courses = []
-        courses = course1 + course2 + course3
+        courses = course1 + course2 + course3 + course4 + course5
 
     else:
         courses = sort_by_announcement(courses)
 
-
-
-
-
-
-
-
-
+    """
+    print '*************************************'
+    print course
+    print '*************************************'
+    print course.is_newish
+    print '*************************************'
+    print course.start
+    print '*************************************'
+    print course.end
+    print '*************************************'
+    print course.has_ended()
+    print '*************************************'
+    print course.display_name
+    print '*************************************'
+    print course.enrollment_start
+    print '*************************************'
+    print course.enrollment_end
+    print '*************************************'
+    """
     print '--------------------------------------------------------------------------------------------------------------'
     for course in course1:
-        """
-        print '*************************************'
-        print course
-        print '*************************************'
-        print course.is_newish
-        print '*************************************'
-        print course.start
-        print '*************************************'
-        print course.end
-        print '*************************************'
-        print course.has_ended()
-        print '*************************************'
-        print course.display_name
-        print '*************************************'
-        print course.enrollment_start
-        print '*************************************'
-        print course.enrollment_end
-        print '*************************************'
-        """
-        #print '1','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
+        print '1','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
 
     for course in course2:
-        """
-        print '*************************************'
-        print course
-        print '*************************************'
-        print course.is_newish
-        print '*************************************'
-        print course.start
-        print '*************************************'
-        print course.end
-        print '*************************************'
-        print course.has_ended()
-        print '*************************************'
-        print course.display_name
-        print '*************************************'
-        print course.enrollment_start
-        print '*************************************'
-        print course.enrollment_end
-        print '*************************************'
-        """
-        #print '2','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
+        print '2','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
 
     for course in course3:
-        """
-        print '*************************************'
-        print course
-        print '*************************************'
-        print course.is_newish
-        print '*************************************'
-        print course.start
-        print '*************************************'
-        print course.end
-        print '*************************************'
-        print course.has_ended()
-        print '*************************************'
-        print course.display_name
-        print '*************************************'
-        print course.enrollment_start
-        print '*************************************'
-        print course.enrollment_end
-        print '*************************************'
-        """
-        #print '3','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
+        print '3','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
+
+    for course in course4:
+        print '4','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended()
     print '--------------------------------------------------------------------------------------------------------------'
 
 
