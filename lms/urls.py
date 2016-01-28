@@ -301,9 +301,9 @@ if settings.COURSEWARE_ENABLED:
         # url(r'^save_circuit/(?P<circuit>[^/]*)$', 'circuit.views.save_circuit'),
         url(r'^courses/?$', 'branding.views.courses', name="courses"),
         url(r'^openapi/?$', 'courseware.views.openapi', name="openapi"),
-        url(r'^openapi2/?$', 'courseware.views.openapi2', name="openapi2"),
-        url(r'^openapi3/?$', 'courseware.views.openapi3', name="openapi3"),
-        url(r'^openapi4/?$', 'courseware.views.openapi4', name="openapi4"),
+        # url(r'^openapi2/?$', 'courseware.views.openapi2', name="openapi2"),
+        # url(r'^openapi3/?$', 'courseware.views.openapi3', name="openapi3"),
+        # url(r'^openapi4/?$', 'courseware.views.openapi4', name="openapi4"),
         url(r'^schools/?$', 'courseware.views.schools', name="schools"),
 
         # url(r'^school/haewoondaex?$', 'courseware.views.haewoondaex', name="school"),
