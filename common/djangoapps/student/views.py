@@ -217,7 +217,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
         print course.enrollment_end
         print '*************************************'
         """
-        # print '1','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended(),'name:', course.display_name
+        print '1','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended(),'name:', course.display_name
 
     for course in course2:
         """
@@ -239,7 +239,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
         print course.enrollment_end
         print '*************************************'
         """
-        # print '2','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended(),'name:', course.display_name
+        print '2','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended(),'name:', course.display_name
 
     for course in course3:
         """
@@ -261,7 +261,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
         print course.enrollment_end
         print '*************************************'
         """
-        # print '3','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended(),'name:', course.display_name
+        print '3','start:',course.start.date(),'end:', course.end.date(),'enroll_end:', course.enrollment_end,'is_new:', course.is_newish,'is_end:', course.has_ended(),'name:', course.display_name
     print '--------------------------------------------------------------------------------------------------------------'
 
 
