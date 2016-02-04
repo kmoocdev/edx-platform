@@ -6,8 +6,8 @@ class cnuOAuth2(BaseOAuth2):
     """cnulms OAuth authentication backend"""
 
     name = 'cnulms'
-    AUTHORIZATION_URL = 'http://oauth.cnu.ac.kr/o/authorize'
-    ACCESS_TOKEN_URL = 'http://oauth.cnu.ac.kr/o/token/'
+    AUTHORIZATION_URL = 'http://oauth.cnumooc.kr/o/authorize'
+    ACCESS_TOKEN_URL = 'http://oauth.cnumooc.kr/o/token/'
     # AUTHORIZATION_URL = 'http://myserver:8002/o/authorize'
     # ACCESS_TOKEN_URL = 'http://myserver:8002/o/token/'
     SCOPE_SEPARATOR = ','
@@ -43,7 +43,7 @@ class cnuOAuth2(BaseOAuth2):
 
     def user_data(self, access_token, *args, **kwargs):
         """Loads user data from service"""
-        url = 'http://oauth.cnu.ac.kr/api/hello?' + urlencode({
+        url = 'http://oauth.cnumooc.kr/api/hello?' + urlencode({
             'access_token': access_token
         })
 
