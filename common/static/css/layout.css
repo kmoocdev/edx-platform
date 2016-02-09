@@ -29,7 +29,7 @@
 /*********************** Base Reset Style ***********************/
 
 /* redukyo modify test */
-.course-info header.course-profile {padding:20px 0; margin-top: 0px;height: auto;}
+.course-info header.course-profile {padding:20px 0; margin-top: 0px;height: auto; background: url("/static/themes/cnu/images/sunrise.jpg") repeat scroll 0 0}
 
 /* Font */
 
@@ -50,7 +50,7 @@ header.global .nav-global li.gnb1 a:hover,
 header.global .nav-global li.gnb1 a.active {background-position:left -30px;}
 header.global .nav-global li.gnb2 a:hover,
 header.global .nav-global li.gnb2 a.active {background-position:-254px -30px;}
-header.global .nav-global li.gnb3 a:hover, 
+header.global .nav-global li.gnb3 a:hover,
 header.global .nav-global li.gnb3 a.active {background-position:-370px -30px;}
 
 header.global .nav-global li:nth-child(1){position:absolute;right:90px;top:40px;padding:0;width:80px;}
@@ -87,7 +87,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .home>header .title .course-search .search-button,
 .home>header .title .course-search .search-button:hover{right:110px;text-indent:-999999px;width:100px;height:41px;border:none;background:url('/static/images/search.png') repeat top left;}
 .home>header .title .course-search .search-input{height:41px;line-height:41px;font-size:12px;border:solid 1px #555151;border-radius:5px;padding:0 10px;}
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
 	.home>header .title .course-search .search-input {padding:12px 10px;}
 }
 

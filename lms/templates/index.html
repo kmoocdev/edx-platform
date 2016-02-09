@@ -20,6 +20,8 @@ from microsite_configuration import microsite
 <script>
     $(document).ready(function(){
 
+        mainImgChg();
+
         //layer popup..
         showNotice();
 
@@ -53,6 +55,35 @@ from microsite_configuration import microsite
         });
 
     });
+
+    var idx = 1; 
+    function mainImgChg(){ 
+    //return;          //#e6e6e6 url("/static/images/main_img1.png") no-repeat scroll center top  
+    // console.log($("#mainImg").size()); 
+    var imgUrl = ""; 
+    if(idx == 0) 
+        imgUrl = "/static/images/main_img1.png"; 
+    else if(idx == 1) 
+        imgUrl = "/static/images/main_img2.png"; 
+    else if(idx == 2) 
+        imgUrl = "/static/images/main_img3.png";  
+    $("#mainImg").css("background-color","#e6e6e6"); 
+    $("#mainImg").animate({ 
+            opacity: 0 
+        }, 4000, "easeInExpo", function(){
+            console.log("imgUrl1 = " + imgUrl); 
+            $(this).css("background", "url("+imgUrl+") no-repeat scroll center top"); 
+            console.log("css change done.");  
+            $(this).animate({ 
+                opacity: 1 
+            },4000, "easeOutQuint", function(){ 
+                idx++; 
+                if(idx == 3) 
+                    idx = 0;  
+                mainImgChg(); 
+            }); 
+        }); 
+    }
 
     function showNotice(){
 
@@ -124,7 +155,7 @@ from microsite_configuration import microsite
 </script>
 
 <section class="home" style="background: #fff !important;">
-  <header></header>
+  <header id="mainImg"></header>
 
   <section class="courses-container" id="course_section">
     <section class="highlighted-courses">
