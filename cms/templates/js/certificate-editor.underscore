@@ -29,10 +29,10 @@
                 <div class="current-org-logo" <% if (org_logo_path == "") { print('style="display:none"'); } %>><span class="wrapper-org-logo"><img class="org-logo" src="<%= org_logo_path %>" alt="Organization Logo"></span></div>
                 <div class="org-logo-upload-wrapper">
                   <div class="org-logo-upload-input-wrapper">
-                    <input id="certificate-org-logo-<%= uniqueId %>" class="collection-name-input input-text org-logo-input" name="org-logo-path" type="text" placeholder="<%= gettext("Path to organization logo") %>" value="<%= org_logo_path %>" aria-describedby="certificate-org-logo-<%=uniqueId %>-tip" readonly />
-                    <span id="certificate-org-logo-<%=uniqueId %>-tip" class="tip tip-stacked"><%= gettext("Maximum logo height 125px, width variable") %></span>
+                    <input id="certificate-org-logo-<%= uniqueId %>" class="collection-name-input input-text org-logo-input" name="org-logo-path" type="text" placeholder="<%= gettext("Organization Logo") %>" value="<%= org_logo_path %>" aria-describedby="certificate-org-logo-<%=uniqueId %>-tip" readonly />
+                    <span id="certificate-org-logo-<%=uniqueId %>-tip" class="tip tip-stacked"><%= gettext("Maximum logo width 220px, height 48px variable") %></span>
                   </div>
-                  <button type="button" class="action action-upload-org-logo">Upload Organization Logo</button>
+                  <button type="button" class="action action-upload-org-logo"><%= gettext("Upload Organization Logo") %></button>
                 </div>
             </div>
         </fieldset>
