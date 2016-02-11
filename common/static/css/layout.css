@@ -249,7 +249,8 @@ header.global .nav-global li.deactive{display:none;}
 	.home>header .vod{text-align:center;padding:20px 0 30px 0;}
 	.home > header .title {float:none !important;margin:0 auto;padding:20px 0 30px 0;}
 
-	.container.about > nav a {width:33%;}
+	/*.container.about > nav a {width:33%;}*/
+	.container.about > nav a {width:20%;}
 
 
 }
@@ -292,7 +293,8 @@ header.global .nav-global li.deactive{display:none;}
 	.course-info header.course-profile .intro-inner-wrapper .media {display:none;}
 	.course-info header.course-profile .intro-inner-wrapper .intro {width:auto;display:block;}
 
-	.container.about > nav a {width:40%;}
+	/*.container.about > nav a {width:40%;}*/
+	.container.about > nav a {width:30%;}
 
 
 
@@ -325,7 +327,8 @@ header.global .nav-global li.deactive{display:none;}
 
 	.container.about .school_info  .inner p.title_type2{text-align:left;}
 	/*.container.about > nav {padding:0 5px;}*/
-	.container.about > nav a {width:50%;margin:0;}
+	/*.container.about > nav a {width:50%;margin:0;}*/
+	.container.about > nav a {width:30%;margin:0;}
 
 }
 
@@ -344,3 +347,5 @@ header.global .nav-global li.deactive{display:none;}
 
 	.school_list2 .inner > a{margin:0 0 10px 0! important;width:100%;}
 }
+
+.school_info .inner p.arrow {background: url('/static/images/arrow1_bullet.gif') no-repeat 1px 7px;  padding-left: 11px;  padding-bottom: 35px; margin-left: 11px; color: #f58026;}
