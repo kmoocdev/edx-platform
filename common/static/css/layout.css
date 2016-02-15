@@ -346,6 +346,7 @@ header.global .nav-global li.deactive{display:none;}
 	.school_list .inner > a:nth-child(10){border-top:none;}
 
 	.school_list2 .inner > a{margin:0 0 10px 0! important;width:100%;}
+
 }
 
 .school_info .inner p.arrow {background: url('/static/images/arrow1_bullet.gif') no-repeat 1px 7px;  padding-left: 11px;  padding-bottom: 35px; margin-left: 11px; color: #f58026;}
