@@ -61,18 +61,26 @@ from microsite_configuration import microsite
     //return;          //#e6e6e6 url("/static/images/main_img1.png") no-repeat scroll center top  
     // console.log($("#mainImg").size()); 
     var imgUrl = ""; 
-    if(idx == 0) 
-        imgUrl = "/static/images/main_img1.png"; 
-    else if(idx == 1) 
-        imgUrl = "/static/images/main_img2.png"; 
-    else if(idx == 2) 
-        imgUrl = "/static/images/main_img3.png";  
+    var textUrl = ""; 
+    if(idx == 0) {
+        imgUrl = "/static/images/main_img1.png";
+        textUrl = "/static/images/main_text1.png";
+    }else if(idx == 1) {
+        imgUrl = "/static/images/main_img2.png";
+        textUrl = "/static/images/main_text2.png";
+    }else if(idx == 2) {
+        imgUrl = "/static/images/main_img3.png";
+        textUrl = "/static/images/main_text3.png";
+    }
     $("#mainImg").css("background-color","#e6e6e6"); 
     $("#mainImg").animate({ 
             opacity: 0 
         }, 4000, "easeInExpo", function(){
-            console.log("imgUrl1 = " + imgUrl); 
-            $(this).css("background", "url("+imgUrl+") no-repeat scroll center top"); 
+            console.log("imgUrl = " + imgUrl); 
+            console.log("imgText = " + textUrl); 
+            $(this).css("background", "url("+imgUrl+") no-repeat scroll center top");
+            $("#mainText").attr("src", textUrl);
+            console.log("check >>>>>>>>>>>>>>>>>> " + $("#mainText").attr("src"));
             console.log("css change done.");  
             $(this).animate({ 
                 opacity: 1 
@@ -155,7 +163,13 @@ from microsite_configuration import microsite
 </script>
 
 <section class="home" style="background: #fff !important;">
-  <header id="mainImg"></header>
+  <header id="mainImg">
+      <div style="margin: 0 auto; max-width: 1200px;">
+          <div style="padding: 130px 10px 30px;">
+              <img id="mainText" src="/static/images/main_text1.png" alt="">
+          </div>
+      </div>
+  </header>
 
   <section class="courses-container" id="course_section">
     <section class="highlighted-courses">
