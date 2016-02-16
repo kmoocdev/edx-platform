@@ -66,6 +66,11 @@
             <% }
         }); %>
 
+        <br/>
+        <span style="font-size:11px">
+        MOOC 교과목으로 수강신청한 학생들은 충남대 통합정보시스템 ID(학번)/Password 를 같이 활용할 수 있습니다.
+        </span>
+
         <% if ( context.hasSecondaryProviders ) { %>
             <button type="button" class="button-secondary-login form-toggle" data-type="institution_login">
                 <%- gettext("Use my institution/campus credentials") %>
