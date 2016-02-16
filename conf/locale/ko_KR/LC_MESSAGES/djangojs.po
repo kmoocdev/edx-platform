@@ -4134,7 +4134,7 @@ msgstr "\"비밀번호 재설정\"을 선택하면, 이메일로 메세지가 �
 msgid ""
 "The language used throughout this site. This site is currently available in "
 "a limited number of languages."
-msgstr "K-MOOC에서 사용할 언어를 선택하세요. "
+msgstr "{platform_name}에서 사용할 언어를 선택하세요. "
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Country or Region"
