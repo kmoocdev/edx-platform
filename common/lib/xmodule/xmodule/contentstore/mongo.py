@@ -407,7 +407,7 @@ class MongoContentStore(ContentStore):
                 # thumbnail is not technically correct but will be functionally correct as the code
                 # only looks at the name which is not course relative.
                 thumbnail_location=asset['thumbnail_location'],
-                import_path=asset['import_path'],
+                import_path=asset['import_path'] if 'import_path' in asset else '',
                 # getattr b/c caching may mean some pickled instances don't have attr
                 locked=asset.get('locked', False)
             )

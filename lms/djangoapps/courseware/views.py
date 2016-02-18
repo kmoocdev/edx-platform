@@ -155,6 +155,28 @@ def haewoondaex(request, univ_id):
 
 @ensure_csrf_cookie
 @cache_if_anonymous()
+def openapi(request):
+    return render_to_response("openapi.html")
+
+"""
+@ensure_csrf_cookie
+@cache_if_anonymous()
+def openapi2(request):
+    return render_to_response("openapi2.html")
+
+@ensure_csrf_cookie
+@cache_if_anonymous()
+def openapi3(request):
+    return render_to_response("openapi3.html")
+
+@ensure_csrf_cookie
+@cache_if_anonymous()
+def openapi4(request):
+    return render_to_response("openapi4.html")
+"""
+
+@ensure_csrf_cookie
+@cache_if_anonymous()
 def schools(request):
     return render_to_response("courseware/schools.html")
 

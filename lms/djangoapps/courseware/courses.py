@@ -392,6 +392,17 @@ def get_courses_by_org(user, org_id, domain=None):
     return courses
 
 
+def sort_by_start_ended_enrolment(courses):
+    """
+    Sorts a list of courses by their announcement date. If the date is
+    not available, sort them by their start date.
+    """
+
+    # Sort courses by how far are they from they start day
+    key = lambda course: course.sorting_score
+    courses = sorted(courses, key=key)
+
+    return courses
 
 def sort_by_announcement(courses):
     """
@@ -412,6 +423,12 @@ def sort_by_start_date(courses):
     """
     courses = sorted(
         courses,
+        key=lambda course: (course.has_ended(), course.enrollment_end is None, course.enrollment_end),
+        reverse=False
+    )
+
+    courses = sorted(
+        courses,
         key=lambda course: (course.has_ended(), course.start is None, course.start),
         reverse=False
     )
@@ -425,7 +442,25 @@ def reverse_sort_by_start_date(courses):
     """
     courses = sorted(
         courses,
+        key=lambda course: (course.has_ended(), course.start is None, course.end),
+        reverse=False
+    )
+
+    courses = sorted(
+        courses,
         key=lambda course: (course.has_ended(), course.start is None, course.start),
+        reverse=True
+    )
+
+    return courses
+
+def reverse_sort_by_enrollment_end_date(courses):
+    """
+    Returns a list of courses sorted by their start date, latest first.
+    """
+    courses = sorted(
+        courses,
+        key=lambda course: (course.has_ended(), course.enrollment_end is None, course.enrollment_end),
         reverse=True
     )
 
