@@ -172,7 +172,17 @@ def index(request, extra_context=None, user=AnonymousUser()):
         course4 = []
         course5 = []
 
+        duplcourse = []
+
         for course in courses:
+
+            try:
+                if duplcourse.index(course.display_name) >= 0:
+                    print '>>> EXISTS'
+                    pass
+            except:
+                print '<<< APPEND'
+                duplcourse.append(course.display_name)
 
             #print '>>>>> ', course.id, str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1', str(course.id) is 'course-v1:KMOOC+DEMOk+2015_1'
             if str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1':
