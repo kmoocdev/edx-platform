@@ -179,7 +179,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
             try:
                 if duplcourse.index(course.display_name) >= 0:
                     # print '>>> EXISTS'
-                    pass
+                    continue
             except:
                 # print '<<< APPEND'
                 duplcourse.append(course.display_name)
