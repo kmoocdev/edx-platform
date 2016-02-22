@@ -369,10 +369,11 @@ def get_courses(user, domain=None):
 
     courses = [c for c in courses if has_access(user, permission_name, c)]
 
-    courses = sorted(courses, key=lambda course: course.number)
+    courses = sorted(courses, key=lambda course: course.start, reverse=True)
+    # for c in courses:
+    #     print c.start
 
     return courses
-
 
 def get_courses_by_org(user, org_id, domain=None):
     '''
