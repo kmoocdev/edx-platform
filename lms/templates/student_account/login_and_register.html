@@ -54,7 +54,7 @@
 
             %else:
                 $("#register-year_of_birth").find("option").each(function(){
-                    if($(this).val() != "" && eval(year - $(this).val()) > 13)
+                    if($(this).val() != "" && eval(year - $(this).val()) > 14)
                         $(this).remove();
                 });
             %endif
