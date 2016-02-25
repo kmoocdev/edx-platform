@@ -78,20 +78,21 @@ function popClose(id){
 <div id="popupWrap_1" class="popup-wrap popup-kmooc2" style="position: absolute; left: 25px; top: 100px;
     z-index: 10010; display: none; border: 5px solid #EB9D43; opacity: 1; background: #ffffff; font-size: 13px;
     line-height: 25px; padding: 5px; box-shadow: 0 2px 5px 3px #444444;">
-        <p style="text-align: center; font-size: 15px;">
-            <b>한국형 무크(K-MOOC)의 BI 및 표어(Slogan) 공모전을<br>
-            개최하오니 관심 있는 분의 많은 참여를 바랍니다. </b></p>
+##         <p style="text-align: center; font-size: 15px;">
+##             <b>한국형 무크(K-MOOC)의 BI 및 표어(Slogan) 공모전을<br>
+##             개최하오니 관심 있는 분의 많은 참여를 바랍니다. </b>
+##         </p>
         <p style="text-align: center">
-            <a href="http://blog.naver.com/kmooc_kr/220550673535">
-                <img src="http://mme.kmoocs.kr/origin/K-mooc-pop.png" alt="한국형 무크(K-MOOC)의 BI 및 표어(Slogan) 공모전을 개최하오니 관심 있는 분의 많은 참여를 바랍니다. 기간: 15.11.30 ~ 15.12.18">
+            <a target="_blank" href="http://blog.naver.com/kmooc_kr/220635796932">
+                <img src="/static/images/banner_course_2016.jpg" alt="2016년 강좌 운영 계획">
             </a>
         </p>
 
-        <br/>
+##         <br/>
 
-        <b>&nbsp;■ 공모내용 : </b>K-MOOC의 비전과 목표가 잘 드러나는 BI 및 표어(Slogan)<br>
-        <b>&nbsp;■ 응모자격 : </b>한국형 무크에 관심 있는 일반 국민 전체<br>
-        <b>&nbsp;■ 온라인 접수 : </b><font color="blue">kmooc@nile.or.kr</font><br>
+##         <b>&nbsp;■ 공모내용 : </b>K-MOOC의 비전과 목표가 잘 드러나는 BI 및 표어(Slogan)<br>
+##         <b>&nbsp;■ 응모자격 : </b>한국형 무크에 관심 있는 일반 국민 전체<br>
+##         <b>&nbsp;■ 온라인 접수 : </b><font color="blue">kmooc@nile.or.kr</font><br>
         <div style="text-align: right;">
             <label onclick="closeWin1();">
                 <input id="chkbox_1" name="chkbox_1" type="checkbox" style="vertical-align: middle;">
@@ -119,11 +120,16 @@ function closeWin1() {
 cookiedata = document.cookie;
 
 popupDate = new Date();
-if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
-     (popupDate.getFullYear() == 2015) &&
-     (popupDate.getMonth()== 11-1 ||
-         (popupDate.getMonth()== 12-1 && popupDate.getDate() <= 18)
-     )
+## if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
+##      (popupDate.getFullYear() == 2015) &&
+##      (popupDate.getMonth()== 11-1 ||
+##          (popupDate.getMonth()== 12-1 && popupDate.getDate() <= 18)
+##      )
+##    ){
+
+if (    (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
+        (popupDate.getFullYear() == 2016) &&
+        (popupDate.getMonth() < 3)
    ){
     document.all['popupWrap_1'].style.display = "block";
 } else {
