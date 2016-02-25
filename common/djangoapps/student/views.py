@@ -201,7 +201,8 @@ def index(request, extra_context=None, user=AnonymousUser()):
         course3 = reverse_sort_by_start_date(course3)
         course4 = reverse_sort_by_enrollment_end_date(course4)
         courses = []
-        courses = course1 + course2 + course3 + course4 + course5
+        # courses = course1 + course2 + course3 + course4 + course5
+        courses = course1 + course2 + course3 + course5
 
     else:
         courses = sort_by_announcement(courses)
