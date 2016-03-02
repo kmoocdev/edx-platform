@@ -238,8 +238,28 @@ def get_course_about_section(course, section_key):
     raise KeyError("Invalid about key " + str(section_key))
 
 def replace_hangul_org(eng_org):
-    dic_univ = {'KHUk':u'경희대학교', 'KoreaUnivK':u'고려대학교', 'PNUk':u'부산대학교', 'SNUk':u'서울대학교', 'SKKUk':u'성균관대학교',
-                'YSUk':u'연세대학교', 'EwhaK':u'이화여자대학교', 'POSTECHk':u'포항공과대학교', 'KAISTk':u'한국과학기술원', 'HYUk':u'한양대학교'}
+    dic_univ = {'KHUk':u'경희대학교',
+                'KoreaUnivK':u'고려대학교',
+                'PNUk':u'부산대학교',
+                'SNUk':u'서울대학교',
+                'SKKUk':u'성균관대학교',
+                'YSUk':u'연세대학교',
+                'EwhaK':u'이화여자대학교',
+                'POSTECHk':u'포항공과대학교',
+                'KAISTk':u'한국과학기술원',
+                'HYUk':u'한양대학교',
+                'INHAuniversityK':u'인하대학교',
+                'KUMOHk':u'금오공과대학교',
+                'CUKk':u'가톨릭대학교',
+                'BUFSk':u'부산외국어대학교',
+                'JEJUk':u'제주대학교',
+                'KNUk':u'경북대학교',
+                'YeungnamUnivK':u'영남대학교',
+                'KonYangK':u'건양대학교',
+                '':u''
+                }
+
+
     if eng_org in dic_univ:
         eng_org = dic_univ[eng_org]
 
