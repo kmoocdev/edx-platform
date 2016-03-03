@@ -2,15 +2,11 @@
 """
 Student Views
 """
-import datetime
 import logging
 import uuid
-import time
 import json
 import warnings
-from datetime import timedelta
 from collections import defaultdict
-from pytz import UTC
 from requests import HTTPError
 from ipware.ip import get_ip
 
@@ -28,7 +24,6 @@ from django.db import IntegrityError, transaction
 from django.http import (HttpResponse, HttpResponseBadRequest, HttpResponseForbidden,
                          HttpResponseServerError, Http404)
 from django.shortcuts import redirect
-from django.utils import timezone
 from django.utils.translation import ungettext
 from django.utils.http import cookie_date, base36_to_int
 from django.utils.translation import ugettext as _, get_language
@@ -40,6 +35,8 @@ from django.dispatch import receiver
 from django.template.response import TemplateResponse
 
 from ratelimitbackend.exceptions import RateLimitException
+from datetime import datetime
+from django.utils.timezone import UTC
 
 
 from social.apps.django_app import utils as social_utils
@@ -51,7 +48,7 @@ from edxmako.shortcuts import render_to_response, render_to_string
 from course_modes.models import CourseMode
 from shoppingcart.api import order_history
 from student.models import (
-    Registration, UserProfile, PendingNameChange,
+    Registration, UserProfile,
     PendingEmailChange, CourseEnrollment, CourseEnrollmentAttribute, unique_id_for_user,
     CourseEnrollmentAllowed, UserStanding, LoginFailures,
     create_comments_service_user, PasswordHistory, UserSignupSource,
@@ -61,7 +58,6 @@ from student.forms import AccountCreationForm, PasswordResetFormNoActive
 from verify_student.models import SoftwareSecurePhotoVerification  # pylint: disable=import-error
 from certificates.models import CertificateStatuses, certificate_status_for_student
 from certificates.api import get_certificate_url, get_active_web_certificate  # pylint: disable=import-error
-from dark_lang.models import DarkLangConfig
 
 from xmodule.modulestore.django import modulestore
 from opaque_keys import InvalidKeyError
@@ -84,7 +80,6 @@ from external_auth.login_and_register import (
 )
 
 from bulk_email.models import Optout, CourseAuthorization
-import shoppingcart
 from lang_pref import LANGUAGE_KEY
 
 import track.views
@@ -174,6 +169,10 @@ def index(request, extra_context=None, user=AnonymousUser()):
 
         duplcourse = []
 
+        # print '------------------------------------------------------------'
+        # print datetime.now(UTC())
+        # print '------------------------------------------------------------'
+
         for course in courses:
 
             try:
@@ -186,15 +185,15 @@ def index(request, extra_context=None, user=AnonymousUser()):
 
             #print '>>>>> ', course.id, str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1', str(course.id) is 'course-v1:KMOOC+DEMOk+2015_1'
             if str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1':
-                course5.append(course)
-            elif course.start.date() >= datetime.datetime.now().date():
-                course1.append(course)
-            elif not course.has_ended() and (course.enrollment_end is None or course.enrollment_end.date() >= datetime.datetime.now().date()):
-                course2.append(course)
+                course5.append(course) # last
+            elif course.enrollment_start is not None and course.enrollment_start >= datetime.now(UTC()):
+                course1.append(course) # 1st
+            elif not course.has_ended() and (course.enrollment_end is None or course.enrollment_end >= datetime.now(UTC())):
+                course2.append(course) # 2nd
             elif not course.has_ended():
-                course3.append(course)
+                course3.append(course) # 3rd
             else:
-                course4.append(course)
+                course4.append(course) # not use
 
         course1 = sort_by_start_date(course1)
         course2 = reverse_sort_by_start_date(course2)
@@ -526,7 +525,7 @@ def complete_course_mode_info(course_id, enrollment, modes=None):
         mode_info['show_upsell'] = True
         # if there is an expiration date, find out how long from now it is
         if modes['verified'].expiration_datetime:
-            today = datetime.datetime.now(UTC).date()
+            today = datetime.now(UTC).date()
             mode_info['days_for_upsell'] = (modes['verified'].expiration_datetime.date() - today).days
 
     return mode_info
@@ -788,7 +787,7 @@ def _get_recently_enrolled_courses(course_enrollment_pairs):
 
     """
     seconds = DashboardConfiguration.current().recent_enrollment_time_delta
-    time_delta = (datetime.datetime.now(UTC) - datetime.timedelta(seconds=seconds))
+    time_delta = (datetime.now(UTC) - datetime.timedelta(seconds=seconds))
     return [
         (course, enrollment) for course, enrollment in course_enrollment_pairs
         # If the enrollment has no created date, we are explicitly excluding the course
@@ -1409,7 +1408,7 @@ def disable_account_ajax(request):
             context['message'] = _("Unexpected account status")
             return JsonResponse(context, status=400)
         user_account.changed_by = request.user
-        user_account.standing_last_changed_at = datetime.datetime.now(UTC)
+        user_account.standing_last_changed_at = datetime.now(UTC)
         user_account.save()
 
     return JsonResponse(context)
@@ -1755,7 +1754,7 @@ def create_account_with_params(request, params):
 
     if do_external_auth:
         eamap.user = new_user
-        eamap.dtsignup = datetime.datetime.now(UTC)
+        eamap.dtsignup = datetime.now(UTC)
         eamap.save()
         AUDIT_LOG.info(u"User registered with external_auth %s", new_user.username)
         AUDIT_LOG.info(u'Updated ExternalAuthMap for %s to be %s', new_user.username, eamap)
@@ -2243,7 +2242,7 @@ def confirm_email_change(request, key):  # pylint: disable=unused-argument
         meta = u_prof.get_meta()
         if 'old_emails' not in meta:
             meta['old_emails'] = []
-        meta['old_emails'].append([user.email, datetime.datetime.now(UTC).isoformat()])
+        meta['old_emails'].append([user.email, datetime.now(UTC).isoformat()])
         u_prof.set_meta(meta)
         u_prof.save()
         # Send it to the old email...
