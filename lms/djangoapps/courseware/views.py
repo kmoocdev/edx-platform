@@ -38,6 +38,7 @@ from courseware.courses import (
     sort_by_announcement,
     sort_by_start_date,
     get_courses_by_org,
+    get_courses_by_kocw,
 )
 from courseware.masquerade import setup_masquerade
 from openedx.core.djangoapps.credit.api import (
@@ -144,7 +145,13 @@ def courses(request):
 @ensure_csrf_cookie
 @cache_if_anonymous()
 def haewoondaex(request, univ_id):
-    courses_list = get_courses_by_org(request.user, univ_id, request.META.get('HTTP_HOST'))
+
+    print '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> univ_id:',univ_id
+
+    if 'KOCWk' == univ_id:
+        courses_list = get_courses_by_kocw(request.user, request.META.get('HTTP_HOST'))
+    else:
+        courses_list = get_courses_by_org(request.user, univ_id, request.META.get('HTTP_HOST'))
     course_discovery_meanings = getattr(settings, 'COURSE_DISCOVERY_MEANINGS', False)
 
     return render_to_response(

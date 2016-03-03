@@ -26,6 +26,8 @@ from student.models import CourseEnrollment
 import branding
 
 from opaque_keys.edx.keys import UsageKey
+from datetime import datetime
+from django.utils.timezone import UTC
 
 log = logging.getLogger(__name__)
 
@@ -400,6 +402,49 @@ def get_courses_by_org(user, org_id, domain=None):
     Returns a list of courses available, sorted by course.number
     '''
     courses = branding.get_visible_courses_by_org(org_id)
+
+    courses1 = list()
+    courses2 = list()
+
+    for c in courses:
+        # print 'course.keys1:', c.__dict__.keys()
+        print 'c.has_ended()', c.has_ended()
+        print 'c.number', c.number
+        print 'c.start', c.start
+
+        if not c.has_ended():
+            courses1.append(c)
+        else:
+            courses2.append(c)
+
+    courses1 = sorted(courses1, key=lambda course: course.number)
+    courses2 = sorted(courses2, key=lambda course: course.number)
+
+    courses = courses1 + courses2
+
+    permission_name = microsite.get_value(
+        'COURSE_CATALOG_VISIBILITY_PERMISSION',
+        settings.COURSE_CATALOG_VISIBILITY_PERMISSION
+    )
+
+    courses = [c for c in courses if has_access(user, permission_name, c)]
+
+    # courses = sorted(courses, key=lambda course: course.number)
+
+    return courses
+
+def get_courses_by_kocw(user, domain=None):
+    '''
+    Returns a list of courses available, sorted by course.number
+    '''
+    courses_temp = branding.get_visible_courses()
+    courses = list()
+    for c in courses_temp:
+
+        print 'course.keys2:', c.__dict__.keys()
+
+        if datetime.now(UTC()) > c.enrollment_start and 'KOCWk' in c.course:
+            courses.append(c)
 
     permission_name = microsite.get_value(
         'COURSE_CATALOG_VISIBILITY_PERMISSION',

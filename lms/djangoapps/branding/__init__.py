@@ -4,7 +4,8 @@ from django.conf import settings
 
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
 from microsite_configuration import microsite
-
+from datetime import datetime
+from django.utils.timezone import UTC
 
 def get_visible_courses():
     """
@@ -45,7 +46,16 @@ def get_visible_courses_by_org(org_id):
     """
     filtered_by_org = microsite.get_value('course_org_filter')
 
-    _courses = modulestore().get_courses(org=org_id)
+    _courses2 = modulestore().get_courses(org=org_id)
+    _courses = list()
+    # print '================================='
+    # print type(_courses2)
+    # print type(_courses)
+    for c in _courses2:
+        print
+        if datetime.now(UTC()) > c.enrollment_start:
+            _courses.append(c)
+    # print '================================='
 
     courses = [c for c in _courses
                if isinstance(c, CourseDescriptor)]
@@ -69,8 +79,6 @@ def get_visible_courses_by_org(org_id):
         # in a Microsite
         org_filter_out_set = microsite.get_all_orgs()
         return [course for course in courses if course.location.org not in org_filter_out_set]
-
-
 
 def get_university_for_request():
     """

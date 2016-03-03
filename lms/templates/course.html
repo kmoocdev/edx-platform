@@ -5,7 +5,13 @@ from django.core.urlresolvers import reverse
 from courseware.courses import course_image_url, get_course_about_section
 %>
 <%page args="course" />
-<article class="course" id="${course.id | h}" role="region" aria-label="${get_course_about_section(course, 'title')}">
+
+%if not course.has_ended():
+    <article class="course" id="${course.id | h}" role="region" aria-label="${get_course_about_section(course, 'title')}">
+%else:
+    <article class="course" id="${course.id | h}" role="region" aria-label="${get_course_about_section(course, 'title')}" style="opacity: 0.5;">
+%endif
+
   <a href="${reverse('about_course', args=[course.id.to_deprecated_string()])}" title="${get_course_about_section(course, 'title')} 자세히 알아보기">
     <label style="display:none;">${get_course_about_section(course, 'university')} ${get_course_about_section(course, 'title')}</label>
     <header class="course-image">
