@@ -48,13 +48,9 @@ def get_visible_courses_by_org(org_id):
 
     _courses2 = modulestore().get_courses(org=org_id)
     _courses = list()
-    # print '================================='
-    # print type(_courses2)
-    # print type(_courses)
     for c in _courses2:
         if c.enrollment_start is not None and datetime.now(UTC()) > c.enrollment_start:
             _courses.append(c)
-    # print '================================='
 
     courses = [c for c in _courses
                if isinstance(c, CourseDescriptor)]
