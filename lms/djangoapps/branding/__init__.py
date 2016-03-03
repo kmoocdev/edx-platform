@@ -52,8 +52,7 @@ def get_visible_courses_by_org(org_id):
     # print type(_courses2)
     # print type(_courses)
     for c in _courses2:
-        print
-        if datetime.now(UTC()) > c.enrollment_start:
+        if c.enrollment_start is not None and datetime.now(UTC()) > c.enrollment_start:
             _courses.append(c)
     # print '================================='
 
