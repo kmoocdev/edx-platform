@@ -35,8 +35,9 @@ from django.dispatch import receiver
 from django.template.response import TemplateResponse
 
 from ratelimitbackend.exceptions import RateLimitException
-from datetime import datetime
-from django.utils.timezone import UTC
+from datetime import datetime, timedelta
+from django.utils.timezone import UTC as UTC2
+from pytz import UTC
 
 
 from social.apps.django_app import utils as social_utils
@@ -170,7 +171,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
         duplcourse = []
 
         # print '------------------------------------------------------------'
-        # print datetime.now(UTC())
+        # print datetime.now(UTC2())
         # print '------------------------------------------------------------'
 
         for course in courses:
@@ -186,9 +187,9 @@ def index(request, extra_context=None, user=AnonymousUser()):
             #print '>>>>> ', course.id, str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1', str(course.id) is 'course-v1:KMOOC+DEMOk+2015_1'
             if str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1':
                 course5.append(course) # last
-            elif course.enrollment_start is not None and course.enrollment_start >= datetime.now(UTC()):
+            elif course.enrollment_start is not None and course.enrollment_start >= datetime.now(UTC2()):
                 course1.append(course) # 1st
-            elif not course.has_ended() and (course.enrollment_end is None or course.enrollment_end >= datetime.now(UTC())):
+            elif not course.has_ended() and (course.enrollment_end is None or course.enrollment_end >= datetime.now(UTC2())):
                 course2.append(course) # 2nd
             elif not course.has_ended():
                 course3.append(course) # 3rd
@@ -787,7 +788,7 @@ def _get_recently_enrolled_courses(course_enrollment_pairs):
 
     """
     seconds = DashboardConfiguration.current().recent_enrollment_time_delta
-    time_delta = (datetime.now(UTC) - datetime.timedelta(seconds=seconds))
+    time_delta = (datetime.now(UTC) - timedelta(seconds=seconds))
     return [
         (course, enrollment) for course, enrollment in course_enrollment_pairs
         # If the enrollment has no created date, we are explicitly excluding the course
