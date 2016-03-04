@@ -146,8 +146,7 @@ def courses(request):
 @cache_if_anonymous()
 def haewoondaex(request, univ_id):
 
-    print '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> univ_id:',univ_id
-
+    # print '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> univ_id:',univ_id
     if 'KOCWk' == univ_id:
         courses_list = get_courses_by_kocw(request.user, request.META.get('HTTP_HOST'))
     else:
