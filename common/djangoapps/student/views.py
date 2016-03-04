@@ -187,7 +187,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
             #print '>>>>> ', course.id, str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1', str(course.id) is 'course-v1:KMOOC+DEMOk+2015_1'
             if str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1':
                 course5.append(course) # last
-            elif course.enrollment_start is not None and course.enrollment_start >= datetime.now(UTC2()):
+            elif course.enrollment_start is not None and datetime.now(UTC2()) >= course.enrollment_start:
                 course1.append(course) # 1st
             elif not course.has_ended() and (course.enrollment_end is None or course.enrollment_end >= datetime.now(UTC2())):
                 course2.append(course) # 2nd

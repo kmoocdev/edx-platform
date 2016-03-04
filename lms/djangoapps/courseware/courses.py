@@ -508,7 +508,7 @@ def reverse_sort_by_start_date(courses):
     """
     courses = sorted(
         courses,
-        key=lambda course: (course.has_ended(), course.start is None, course.end),
+        key=lambda course: (course.has_ended(), course.end is None, course.end),
         reverse=False
     )
 
