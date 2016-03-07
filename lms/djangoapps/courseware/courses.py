@@ -439,12 +439,33 @@ def get_courses_by_kocw(user, domain=None):
     '''
     courses_temp = branding.get_visible_courses()
     courses = list()
+    courses1 = list()
+    courses2 = list()
+    # for c in courses_temp:
+    #     print 'wiki_slug ##############################', c.wiki_slug
+    #     if c.enrollment_start is not None and datetime.now(UTC()) >= c.enrollment_start and c.wiki_slug is not None and 'KOCW' in c.wiki_slug:
+    #         courses.append(c)
+
     for c in courses_temp:
-
-        print 'course.keys2:', c.__dict__.keys()
-
-        if datetime.now(UTC()) > c.enrollment_start and 'KOCWk' in c.course:
+        # print 'id ##############################', c.id, type(c.id)
+        if c.enrollment_start is not None and datetime.now(UTC()) >= c.enrollment_start and c.id is not None and 'KOCW' in str(c.id):
             courses.append(c)
+
+    for c in courses:
+        # print 'course.keys1:', c.__dict__.keys()
+        print 'c.has_ended()', c.has_ended()
+        print 'c.number', c.number
+        print 'c.start', c.start
+
+        if not c.has_ended():
+            courses1.append(c)
+        else:
+            courses2.append(c)
+
+    courses1 = sorted(courses1, key=lambda course: course.number)
+    courses2 = sorted(courses2, key=lambda course: course.number)
+
+    courses = courses1 + courses2
 
     permission_name = microsite.get_value(
         'COURSE_CATALOG_VISIBILITY_PERMISSION',
