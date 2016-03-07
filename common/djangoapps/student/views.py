@@ -178,18 +178,18 @@ def index(request, extra_context=None, user=AnonymousUser()):
 
             try:
                 if duplcourse.index(course.display_name) >= 0:
-                    # print '>>> EXISTS'
                     continue
             except:
-                # print '<<< APPEND'
                 duplcourse.append(course.display_name)
 
             #print '>>>>> ', course.id, str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1', str(course.id) is 'course-v1:KMOOC+DEMOk+2015_1'
             if str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1':
                 course5.append(course) # last
-            elif course.enrollment_start is not None and datetime.now(UTC2()) >= course.enrollment_start:
+            elif course.enrollment_start is None or course.enrollment_start > datetime.now(UTC2()):
+                course4.append(course) # not use
+            elif course.enrollment_start is not None and course.enrollment_end is not None and course.enrollment_start <= datetime.now(UTC2()) <= course.enrollment_end and datetime.now(UTC2()) <= course.start:
                 course1.append(course) # 1st
-            elif not course.has_ended() and (course.enrollment_end is None or course.enrollment_end >= datetime.now(UTC2())):
+            elif course.enrollment_start is not None and course.enrollment_end is not None and course.enrollment_start <= datetime.now(UTC2()) <= course.enrollment_end:
                 course2.append(course) # 2nd
             elif not course.has_ended():
                 course3.append(course) # 3rd
@@ -200,7 +200,6 @@ def index(request, extra_context=None, user=AnonymousUser()):
         course2 = reverse_sort_by_start_date(course2)
         course3 = reverse_sort_by_start_date(course3)
         course4 = reverse_sort_by_enrollment_end_date(course4)
-        courses = []
         # courses = course1 + course2 + course3 + course4 + course5
         courses = course1 + course2 + course3 + course5
 
