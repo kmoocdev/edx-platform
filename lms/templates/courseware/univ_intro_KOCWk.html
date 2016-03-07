@@ -1,0 +1,93 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from microsite_configuration import microsite
+%>
+<%inherit file="../main.html" />
+
+<%namespace name='static' file='../static_content.html'/>
+
+<%block name="js_extra">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+  <%static:js group='discovery'/>
+  % endif
+</%block>
+
+<%block name="pagetitle">한양대학교</%block>
+<%
+  platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  if self.stanford_theme_enabled():
+    course_index_overlay_text = _("Explore free courses from {university_name}.").format(university_name="Stanford University")
+    logo_file = static.url('themes/stanford/images/seal.png')
+    logo_alt_text = "Stanford Seal Logo"
+
+  else:
+    course_index_overlay_text = microsite.get_value('course_index_overlay_text', _("Explore courses from {platform_name}.").format(platform_name=platform_name))
+
+    if settings.FEATURES.get('IS_EDX_DOMAIN', False):
+      # For some reason, `static.url('images/edx-theme/edx-logo-bw.png')` breaks template rendering.
+      default_image_url = settings.STATIC_URL + 'images/edx-theme/edx-logo-bw.png'
+    else:
+      default_image_url = settings.STATIC_URL + 'images/default-theme/logo-large.png'
+
+    logo_file = microsite.get_value(
+      'course_index_overlay_logo_file', default_image_url
+    )
+
+    logo_alt_text = _("{platform_name} Logo").format(platform_name=platform_name)
+%>
+
+<section class="home">
+
+<!-- home S -->
+			<header class="type1">
+				<img src="/static/images/univ_intro/univ_top_kocw.png" alt="">
+			</header>
+			<section class="school_info">	 <!-- school_info S -->
+				<div class="inner">
+					<p class="title_type2"><span>Korea Open CourseWare</span><img src="/static/images/univ_intro/univ_logo_kocw.png" alt="KOCW"></p>
+
+
+                    <p>KOCW (Korea Open CourseWare)는</p>
+                    <p>국내 대학 및 해외 교육자료 공개(OER: Open Educational Resources) 운동 협의체와 연계하여 강의자료 정보를 공유하는 국가 대표 고등교육 교수학습자료 공동활용 서비스 입니다.</p>
+                    <br>
+                    <p>KOCW 서비스는 다음과 같은 목표를 가지고 서비스를 제공하고 있습니다.
+                        <br/>
+                        &nbsp;  - 이러닝 콘텐츠 공동활용을 통한 대학교육의 질 제고
+                        <br/>
+                        &nbsp;  - 공유의 힘을 이용한 교육내용/방법의 수월성 확보
+                        <br/>
+                        &nbsp;  - 대학 강의의 일반 국민 접근성 제고를 통한 평생학습 기회 확대
+                    </p>
+
+
+
+## 					<p>KOCW (Korea Open CourseWare)는</p>
+##                     <p>국내 대학 및 해외 교육자료 공개(OER: Open Educational Resources) 운동 협의체와 연계하여 강의자료 정보를 공유하는 국가 대표 고등교육 교수학습자료 공동활용 서비스 입니다.</p>
+##                     <br/>
+##                     <p>KOCW 서비스는 다음과 같은 목표를 가지고 서비스를 제공하고 있습니다.</p>
+##                     <p>- 이러닝 콘텐츠 공동활용을 통한 대학교육의 질 제고</p>
+##                     <p>- 공유의 힘을 이용한 교육내용/방법의 수월성 확보</p>
+##                     <p>- 대학 강의의 일반 국민 접근성 제고를 통한 평생학습 기회 확대</p>
+##                     <br/>
+
+
+				</div>
+			</section>	 <!-- school_info E -->
+
+  <section class="courses-container">
+
+    <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
+      <ul class="courses-listing">
+        %for course in courses:
+        <li class="courses-listing-item">
+          <%include file="../course.html" args="course=course" />
+        </li>
+        %endfor
+      </ul>
+    </section>
+
+
+  </section>
+</section>

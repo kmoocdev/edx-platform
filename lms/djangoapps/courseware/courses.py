@@ -389,7 +389,9 @@ def get_courses(user, domain=None):
         settings.COURSE_CATALOG_VISIBILITY_PERMISSION
     )
 
+    # print 'courses.len1', len(courses)
     courses = [c for c in courses if has_access(user, permission_name, c)]
+    # print 'courses.len2', len(courses)
 
     courses = sorted(courses, key=lambda course: course.start, reverse=True)
     # for c in courses:
