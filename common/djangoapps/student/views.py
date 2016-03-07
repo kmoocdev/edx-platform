@@ -174,6 +174,12 @@ def index(request, extra_context=None, user=AnonymousUser()):
         # print datetime.now(UTC2())
         # print '------------------------------------------------------------'
 
+        print '###################################################'
+        print user.is_authenticated()
+        print user.is_staff
+        print user.is_superuser
+        print '###################################################'
+
         for course in courses:
 
             try:
@@ -185,7 +191,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
             #print '>>>>> ', course.id, str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1', str(course.id) is 'course-v1:KMOOC+DEMOk+2015_1'
             if str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1':
                 course5.append(course) # last
-            elif course.enrollment_start is None or course.enrollment_start > datetime.now(UTC2()):
+            elif course.enrollment_start is None or course.enrollment_start > datetime.now(UTC2()) and not user.is_staff:
                 course4.append(course) # not use
             elif course.enrollment_start is not None and course.enrollment_end is not None and course.enrollment_start <= datetime.now(UTC2()) <= course.enrollment_end and datetime.now(UTC2()) <= course.start:
                 course1.append(course) # 1st
