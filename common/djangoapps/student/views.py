@@ -194,7 +194,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
                 course4.append(course) # not use
             elif course.enrollment_start is not None and course.enrollment_end is not None and course.enrollment_start <= datetime.now(UTC2()) <= course.enrollment_end and datetime.now(UTC2()) <= course.start:
                 course1.append(course) # 1st
-            elif course.enrollment_start is not None and course.enrollment_start <= datetime.now(UTC2()):
+            elif not course.has_ended() and course.enrollment_start is not None and course.enrollment_start <= datetime.now(UTC2()):
                 course2.append(course) # 2nd
             elif not course.has_ended():
                 course3.append(course) # 3rd
