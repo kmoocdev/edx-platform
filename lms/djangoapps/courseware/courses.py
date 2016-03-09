@@ -258,6 +258,7 @@ def replace_hangul_org(eng_org):
                 'KNUk':u'경북대학교',
                 'YeungnamUnivK':u'영남대학교',
                 'KonYangK':u'건양대학교',
+                'DKUK':u'단국대학교',
                 '':u''
                 }
 
