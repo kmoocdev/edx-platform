@@ -173,14 +173,14 @@ def index(request, extra_context=None, user=AnonymousUser()):
         # print '------------------------------------------------------------'
         # print datetime.now(UTC2())
         # print '------------------------------------------------------------'
-
-        print '###################################################'
-        print user.is_authenticated()
-        print user.is_staff
-        print user.is_superuser
-        print '###################################################'
+        # print '###################################################'
+        # print user.is_authenticated()
+        # print user.is_staff
+        # print user.is_superuser
+        # print '###################################################'
 
         for course in courses:
+            # print course.display_name
 
             try:
                 if duplcourse.index(course.display_name) >= 0:
@@ -194,7 +194,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
                 course4.append(course) # not use
             elif course.enrollment_start is not None and course.enrollment_end is not None and course.enrollment_start <= datetime.now(UTC2()) <= course.enrollment_end and datetime.now(UTC2()) <= course.start:
                 course1.append(course) # 1st
-            elif not course.has_ended() and course.enrollment_start is not None and course.enrollment_start <= datetime.now(UTC2()):
+            elif not course.has_ended() and course.enrollment_start is not None and course.enrollment_start <= datetime.now(UTC2()) and (course.enrollment_end is None or datetime.now(UTC2()) <= course.enrollment_end):
                 course2.append(course) # 2nd
             elif not course.has_ended():
                 course3.append(course) # 3rd
@@ -204,10 +204,20 @@ def index(request, extra_context=None, user=AnonymousUser()):
         course1 = sort_by_start_date(course1)
         course2 = reverse_sort_by_start_date(course2)
         course3 = reverse_sort_by_start_date(course3)
-        course4 = reverse_sort_by_enrollment_end_date(course4)
+        # course4 = reverse_sort_by_enrollment_end_date(course4)
         # courses = course1 + course2 + course3 + course4 + course5
-        courses = course1 + course2 + course3 + course5
 
+        # print '1 ======================================='
+        # for c in course1:
+        #     print c.display_name
+        # print '2 ======================================='
+        # for c in course2:
+        #     print c.display_name
+        # print '3 ======================================='
+        # for c in course3:
+        #     print c.display_name
+
+        courses = course1 + course2 + course3 + course5
     else:
         courses = sort_by_announcement(courses)
 
