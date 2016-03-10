@@ -51,14 +51,23 @@ define([
                     break;
                 }
             }
+
             data.start = formatDateKOR(new Date(data.start));
             data.enrollment_start = formatDate(new Date(data.enrollment_start));
 
+            var d = new Date().toISOString().slice(0,16);
 
-            console.log("data == " + data);
-            console.log("keys == " + Object.keys(data));
-            console.log("end1 check == " + data.end);
-            console.log("end2 check == " + data.enrollment_end);
+            if(data.end != null && data.end.slice(0,16) < d && data.enrollment_end == null)
+                data.archive = true;
+            else
+                data.archive = false;
+
+            //console.log("org == " + data.org);
+            //console.log("data == " + data);
+            //console.log("keys == " + Object.keys(data));
+            //console.log("end1 check == " + data.end);
+            //console.log("end2 check == " + data.enrollment_end);
+            //console.log("data.archive == " + data.archive);
 
             this.$el.html(this.tpl(data));
             return this;

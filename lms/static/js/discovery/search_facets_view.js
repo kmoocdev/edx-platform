@@ -89,6 +89,9 @@ define([
                         var arrWords = [['KHUk', 'KoreaUnivK', 'PNUk', 'SNUk', 'SKKUk', 'YSUk', 'EwhaK', 'POSTECHk', 'KAISTk', 'HYUk', 'KMOOC', 'INHAuniversityK','KUMOHk','CUKk','BUFSk','JEJUk','KNUk','YeungnamUnivK','KonYangK','DKUK'],
                         ['경희대학교','고려대학교','부산대학교','서울대학교','성균관대학교','연세대학교','이화여자대학교','포항공과대학교','한국과학기술원','한양대학교', 'K-MOOC','인하대학교','금오공과대학교','가톨릭대학교','부산외국어대학교','제주대학교','경북대학교','영남대학교','건양대학교','단국대학교']];
 
+                        if(arrWords[0].indexOf(term) < 0)
+                            return term;
+
                         for (var i=0; i < arrWords[0].length; i++) {
                             if (term == arrWords[0][i]) {
                                 return arrWords[1][i];
@@ -133,6 +136,13 @@ define([
             });
             self.facetViews = [];
             // Render new facets
+
+            //console.log('facets ==> ' + facets);
+            //console.log('facets ==> ' + facets.length);
+            //$.each(facets, function(name, stats) {
+            //    console.log(name +":"+stats.count +":" + stats.terms.count);
+            //});
+
             $.each(facets, function(name, stats) {
                 if (name=="org") {
                     var facetsView = new FacetsView();

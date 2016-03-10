@@ -58,7 +58,7 @@ define([
                 var enrollment_start = latest[i].attributes.enrollment_start;
                 var enrollment_end = latest[i].attributes.enrollment_end;
 
-                console.log(display_name);
+                //console.log(display_name);
 
                 if(dupllist.indexOf(display_name) < 0)
                     dupllist.push(display_name);
