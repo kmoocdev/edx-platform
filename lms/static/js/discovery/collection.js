@@ -9,7 +9,7 @@ define([
     return Backbone.Collection.extend({
 
         model: Result,
-        pageSize: 20,
+        pageSize: 100,
         totalCount: 0,
         latestModelsCount: 0,
         searchTerm: '',
