@@ -14,7 +14,7 @@
             </h2>
             <div class="course-date" aria-hidden="true">
             <% if (archive) { %>
-                &nbsp;
+                <b>종강 강좌 (수강 가능)</b>
             <% }else{ %>
                 &nbsp;
             <% } %>
