@@ -60,10 +60,10 @@ define([
 
                 //console.log(display_name);
 
-                if(dupllist.indexOf(display_name) < 0)
-                    dupllist.push(display_name);
-                else
-                    continue;
+                //if(dupllist.indexOf(display_name) < 0)
+                //    dupllist.push(display_name);
+                //else
+                //    continue;
 
                 if(id == 'course-v1:KMOOC+DEMOk+2015_1') {
                     courses4.push(latest[i]);
