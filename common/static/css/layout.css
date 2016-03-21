@@ -373,8 +373,8 @@ ul.facet-list li:focus{
 	border: 1px dotted;
 }
 
-ul,ol {margin:0;padding:0;list-style:none;}
-li, dl, dd, dt{margin:0;padding:0;list-style:none;}
+/*ul,ol {margin:0;padding:0;list-style:none;}*/
+/*li, dl, dd, dt{margin:0;padding:0;list-style:none;}*/
 img{ border:none}
 
 
