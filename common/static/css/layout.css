@@ -373,8 +373,8 @@ ul.facet-list li:focus{
 	border: 1px dotted;
 }
 
-ul,ol {margin:0;padding:0;list-style:none;}
-li, dl, dd, dt{margin:0;padding:0;list-style:none;}
+/*ul,ol {margin:0;padding:0;list-style:none;}*/
+/*li, dl, dd, dt{margin:0;padding:0;list-style:none;}*/
 img{ border:none}
 
 
@@ -388,5 +388,6 @@ img{ border:none}
 .agree label{font: 15px "Open Sans","Nanum Gothic" !important;}
 .content h5 {margin:0 0 10px 0;padding:0 0 0 22px;background:url(../images/bl_tr.png) no-repeat 0 0px;color:#505050;line-height:1.5em; background-position: left center;}
 .btn{width:100%; text-align:center;}
+/*.btn{text-align:center;}*/
 .btn_ipin{width:100%; text-align:center; margin:30px 0 0 0}
 .btn_back{width:100%; text-align:center; margin:50px 0 0 0}

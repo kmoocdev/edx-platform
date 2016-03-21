@@ -65,6 +65,7 @@ define([
                 //else
                 //    continue;
 
+                console.log(display_name + " : " + start);
                 if(id == 'course-v1:KMOOC+DEMOk+2015_1') {
                     courses4.push(latest[i]);
                 }else if(enrollment_start == null || enrollment_start == "" || enrollment_start > d || start == null || start == ""){
