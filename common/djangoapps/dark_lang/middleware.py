@@ -83,6 +83,11 @@ class DarkLangMiddleware(object):
         """
         Prevent user from requesting un-released languages except by using the preview-lang query string.
         """
+        if 'LANG' not in request.session:
+            if 'HTTP_ACCEPT_LANGUAGE' in request.META:
+                del request.META['HTTP_ACCEPT_LANGUAGE']
+            return
+
         if not DarkLangConfig.current().enabled:
             return
 
@@ -113,6 +118,7 @@ class DarkLangMiddleware(object):
         a territory of one of those languages.
         """
         accept = request.META.get('HTTP_ACCEPT_LANGUAGE', None)
+
         if accept is None or accept == '*':
             return
 
@@ -124,7 +130,13 @@ class DarkLangMiddleware(object):
 
         new_accept = ", ".join(new_accept)
 
-        request.META['HTTP_ACCEPT_LANGUAGE'] = new_accept
+
+        if request.session['LANG'] == 'en':
+            request.META['HTTP_ACCEPT_LANGUAGE'] = 'en;q=1.0'
+        else:
+            request.META['HTTP_ACCEPT_LANGUAGE'] = new_accept
+
+        print '============>',request.META['HTTP_ACCEPT_LANGUAGE']
 
     def _activate_preview_language(self, request):
         """
