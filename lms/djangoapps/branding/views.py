@@ -96,13 +96,13 @@ def index_en(request):
     print 'index_en called'
     request.META['HTTP_ACCEPT_LANGUAGE'] = 'en;q=1.0'
     request.session['LANG'] = 'en'
-    return index(request)
+    return HttpResponse("<script>document.location.href='/';</script>")
 
 def index_ko(request):
     print 'index_ko called'
     request.META['HTTP_ACCEPT_LANGUAGE'] = 'ko-kr;q=1.0'
     request.session['LANG'] = 'ko'
-    return index(request)
+    return HttpResponse("<script>document.location.href='/';</script>")
 
 @ensure_csrf_cookie
 @cache_if_anonymous()

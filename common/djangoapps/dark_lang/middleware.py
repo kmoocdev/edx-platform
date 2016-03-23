@@ -130,13 +130,13 @@ class DarkLangMiddleware(object):
 
         new_accept = ", ".join(new_accept)
 
-
         if request.session['LANG'] == 'en':
             request.META['HTTP_ACCEPT_LANGUAGE'] = 'en;q=1.0'
+        elif request.session['LANG'] == 'ko':
+            request.META['HTTP_ACCEPT_LANGUAGE'] = 'ko-kr;q=1.0'
         else:
             request.META['HTTP_ACCEPT_LANGUAGE'] = new_accept
-
-        print '============>',request.META['HTTP_ACCEPT_LANGUAGE']
+        # print '============>',request.META['HTTP_ACCEPT_LANGUAGE']
 
     def _activate_preview_language(self, request):
         """
