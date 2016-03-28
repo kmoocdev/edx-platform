@@ -498,8 +498,8 @@ msgstr "Copyrights"
 msgid "About"
 msgstr "About"
 
-msgid "Schools and Partners"
-msgstr "Schools and Partners"
+msgid "Schools & Partners"
+msgstr "Schools & Partners"
 
 msgid "Courses"
 msgstr "Courses"

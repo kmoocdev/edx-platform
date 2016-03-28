@@ -43,20 +43,30 @@ header.global nav {margin:0 auto;padding:0 10px;max-width:1170px;height:auto;pos
 header.global .nav-global{float:none;margin:0 0 0 230px;font-size:0px;padding:40px 0 0 0;width:auto;display:block;}
 header.global .nav-global li{margin:0;padding:0;box-sizing:border-box;}
 header.global .nav-global li a{padding:0;}
-header.global .nav-global li[class^="gnb"]{width:21%;text-align: center;}
+/*header.global .nav-global li[class^="gnb"]{width:21%;text-align: center;}*/
+
 /*header.global .nav-global li[class^="gnb"] a{float:right;width:140px;height:26px;font-size:0px;text-transform:none;font-weight:bold;color:#fff;background:url('/static/images/gnb.png') no-repeat top left;}*/
-header.global .nav-global li[class^="gnb"] a{float:right;width:140px;height:26px;font-size:25px;text-transform:none;font-weight:bold;color:#383838;padding-top:5px;}
-header.global .nav-global li.gnb2 a{width:100px;background-position:-254px top;}
-header.global .nav-global li.gnb3 a{width:100px;background-position:-465px top;}
-header.global .nav-global li.gnb1 a:focus,
-header.global .nav-global li.gnb1 a:hover,
-header.global .nav-global li.gnb1 a.active {background-position:left -30px;}
-header.global .nav-global li.gnb2 a:focus,
-header.global .nav-global li.gnb2 a:hover,
-header.global .nav-global li.gnb2 a.active {background-position:-254px -30px;}
-header.global .nav-global li.gnb3 a:focus,
-header.global .nav-global li.gnb3 a:hover,
-header.global .nav-global li.gnb3 a.active {background-position:-465px -30px;}
+/*header.global .nav-global li[class^="gnb"] a{float:right;width:140px;height:26px;font-size:25px;text-transform:none;font-weight:bold;color:#383838;padding-top:5px;}*/
+header.global .nav-global li[class^="gnb"] a{height:26px;font-size:25px;text-transform:none;font-weight:bold;color:#383838;padding-top:5px; margin: 0 40px;}
+
+/*header.global .nav-global li.gnb2 a{width:100px;background-position:-254px top;}*/
+/*header.global .nav-global li.gnb3 a{width:100px;background-position:-465px top;}*/
+
+/*header.global .nav-global li.gnb1 a:focus,*/
+/*header.global .nav-global li.gnb1 a:hover,*/
+/*header.global .nav-global li.gnb1 a.active {background-position:left -30px;}*/
+/*header.global .nav-global li.gnb2 a:focus,*/
+/*header.global .nav-global li.gnb2 a:hover,*/
+/*header.global .nav-global li.gnb2 a.active {background-position:-254px -30px;}*/
+/*header.global .nav-global li.gnb3 a:focus,*/
+/*header.global .nav-global li.gnb3 a:hover,*/
+/*header.global .nav-global li.gnb3 a.active {background-position:-465px -30px;}*/
+
+header.global .nav-global li a:focus,
+header.global .nav-global li a:hover,
+header.global .nav-global li a.active {color: #f47422;}
+
+
 
 header.global .nav-global li:nth-child(1){position:absolute;right:90px;top:40px;padding:0;width:80px;}
 header.global .nav-global li:nth-child(2){position:absolute;right:0px;top:40px;padding:0;width:80px;}
