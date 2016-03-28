@@ -31,13 +31,15 @@ from django.utils.timezone import UTC as UTC2
         <div class="course-date" aria-hidden="true">
             <b>
         %if course.enrollment_start is not None and course.start is not None and course.enrollment_start <= datetime.now(UTC2()) and (course.enrollment_end is None or datetime.now(UTC2()) <= course.enrollment_end) and datetime.now(UTC2()) <= course.start:
-            개설 예정
+            개강 예정
         %elif course.enrollment_start is not None and course.start is not None and course.end is not None and course.enrollment_start <= datetime.now(UTC2()) and (course.enrollment_end is None or datetime.now(UTC2()) <= course.enrollment_end) and course.start <= datetime.now(UTC2()) <= course.end:
             진행 강좌 (수강 가능)
         %elif course.start is not None and course.end is not None and course.enrollment_end is not None and course.enrollment_end < datetime.now(UTC2()) and course.start <= datetime.now(UTC2()) <= course.end:
             진행 강좌
         %elif course.has_ended() and (course.enrollment_end is None or datetime.now(UTC2()) <= course.enrollment_end):
             종료 강좌 (수강 가능)
+        %elif course.has_ended():
+            종료 강좌
         %else:
             &nbsp;
         %endif

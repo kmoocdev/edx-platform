@@ -13,10 +13,10 @@
                 <span class="course-title"><%= content.display_name %></span>
             </h2>
             <div class="course-date" aria-hidden="true">
-            <% if (archive) { %>
-                <b>종강 강좌 (수강 가능)</b>
+            <% if (state) { %>
+                <b><%= state%></b>
             <% }else{ %>
-                &nbsp;
+                <b>&nbsp;</b>
             <% } %>
             </div>
             <div class="course-date" aria-hidden="true">

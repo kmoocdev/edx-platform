@@ -52,22 +52,45 @@ define([
                 }
             }
 
-            data.start = formatDateKOR(new Date(data.start));
-            data.enrollment_start = formatDate(new Date(data.enrollment_start));
+            //data.start = formatDateKOR(new Date(data.start));
+            //data.enrollment_start = formatDate(new Date(data.enrollment_start));
 
             var d = new Date().toISOString().slice(0,16);
 
-            if(data.end != null && data.end.slice(0,16) < d && data.enrollment_end == null)
-                data.archive = true;
-            else
-                data.archive = false;
+            //if(data.end != null && data.end.slice(0,16) < d && data.enrollment_end == null)
+            //    data.archive = true;
+            //else
+            //    data.archive = false;
 
-            //console.log("org == " + data.org);
-            //console.log("data == " + data);
-            //console.log("keys == " + Object.keys(data));
-            //console.log("end1 check == " + data.end);
-            //console.log("end2 check == " + data.enrollment_end);
-            //console.log("data.archive == " + data.archive);
+            var start = data.start ? data.start.slice(0,16) : null;
+            var end = data.end ? data.end.slice(0,16) : null;
+            var enrollment_start = data.enrollment_start ? data.enrollment_start.slice(0,16) : null;
+            var enrollment_end = data.enrollment_end ? data.enrollment_end.slice(0,16) : null;
+
+            //console.log(data.id + ": d = " + d + " : es =  " + enrollment_start + " : ee = " + enrollment_end + " : st =  " + start + " : en =  " + end);
+            //
+            //console.log("1: " + enrollment_start <= d);
+            //console.log("2: " + enrollment_end == null);
+            //console.log("3: " + d <= enrollment_end);
+            //console.log("4: " + start <= d);
+            //console.log("5: " + d < end);
+
+            if(enrollment_start <= d && (enrollment_end == null || d <= enrollment_end) && d < start){
+                data.state = '개강 예정';
+            }else if(enrollment_start <= d && (enrollment_end == null || d <= enrollment_end) && start <= d  && end != null && end != "" && d < end){
+                data.state = '진행 강좌 (수강 가능)';
+            }else if(start < d && d < end && enrollment_end < d){
+                data.state = '진행 강좌';
+            }else if(end < d && (enrollment_end == null || enrollment_end < d)){
+                data.state = '종료 강좌 (수강 가능)';
+            }else if(end < d){
+                data.state = '종료 강좌';
+            }else {
+                data.state = '';
+            }
+
+            data.start = formatDateKOR(new Date(data.start));
+            data.enrollment_start = formatDate(new Date(data.enrollment_start));
 
             this.$el.html(this.tpl(data));
             return this;
