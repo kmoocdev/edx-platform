@@ -276,8 +276,8 @@ if (    (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
             <div class="course-search">
                 <form method="get" action="/courses">
 ##                     <label for="searchInput">원하시는 강의를 검색해 보세요.</label>
-                    <input id="searchInput" class="search-input" name="search_query" type="text" placeholder="원하시는 강의를 검색해 보세요." title="원하시는 강의를 검색해 보세요.">
-                    <button id="searchBtn" class="search-button" type="submit" title="검색">검색</button>
+                    <input id="searchInput" class="search-input" name="search_query" type="text" placeholder="${_("I want to learn about...")}" title="원하시는 강의를 검색해 보세요.">
+                    <button id="searchBtn" class="search-button" type="submit" title="검색">${_("Search")}</button>
                 </form>
             </div>
         </div>
@@ -298,7 +298,16 @@ if (    (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
 
     <section class="school_list">	 <!-- school_list S -->
         <p class="title_type1">
-            <img src="/static/images/title01.png" alt="참여대학">
+##             % if LANG == 'en':
+##             <img src="/static/images/title01.png" alt="참여대학1">
+##             % else:
+##             <img src="/static/images/title01.png" alt="참여대학2">
+##             % endif
+
+            <img src="/static/images/${'title01' if LANG == 'en' else 'title01'}.png" alt="참여대학" />
+
+
+
             <a href="/schools"><img src="/static/images/more.png" alt="참여대학 더보기"></a>
         </p>
         <div class="inner">

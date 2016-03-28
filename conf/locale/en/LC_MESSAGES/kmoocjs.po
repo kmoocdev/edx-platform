@@ -27,6 +27,9 @@
 # jeon <bluerespect@nate.com>, 2014-2015
 # Translators:
 # Translators:
+# Translators:
+# Translators:
+# Translators:
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Chanseok <kcsgoodboy@gmail.com>, 2014
 # jeon <bluerespect@nate.com>, 2014
@@ -43,7 +46,7 @@ msgstr ""
 "Project-Id-Version: kmooc-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 "POT-Creation-Date: 2015-07-06 12:00+0000\n"
-"PO-Revision-Date: 2015-12-15 10:42+0000\n"
+"PO-Revision-Date: 2016-02-16 07:07+0000\n"
 "Last-Translator: Hongseob Lee <shevious@gmail.com>\n"
 "Language-Team: English (http://www.transifex.com/k-mooc/kmooc-platform/language/en/)\n"
 "MIME-Version: 1.0\n"
@@ -146,4 +149,4 @@ msgstr "Common Problems with Hints and Feedback"
 #: test_root/staticfiles/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid "Enter your question or comment"
-msgstr ""
+msgstr "Enter your question or comment"

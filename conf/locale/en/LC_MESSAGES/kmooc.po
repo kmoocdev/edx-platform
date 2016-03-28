@@ -39,12 +39,36 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Chul Park <parkchul@nate.com>, 2015
+# David10000 <gameness@naver.com>, 2014
+# Gil <gedwarp@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# JiyeonLee <leejiyeon00@gmail.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# KimKyudong <choemh@nate.com>, 2014
+# mariana1201 <gogo3135@naver.com>, 2014
+# Nicole <dlruddk1112@gmail.com>, 2014
+# Pope, 2014
+# Sarina Canelake <sarina@edx.org>, 2014
+# Seok Jun Yoon <fake2real@dctribe.com>, 2015
+# shin2012 <shin2013@gmail.com>, 2014
+# Sujin Lee <sujinlee.me@gmail.com>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# Young Kim <youngck.uw@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: kmooc-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 "POT-Creation-Date: 2015-07-06 12:02+0000\n"
-"PO-Revision-Date: 2015-09-30 05:25+0000\n"
+"PO-Revision-Date: 2016-02-16 06:19+0000\n"
 "Last-Translator: Hongseob Lee <shevious@gmail.com>\n"
 "Language-Team: English (http://www.transifex.com/k-mooc/kmooc-platform/language/en/)\n"
 "MIME-Version: 1.0\n"
@@ -92,59 +116,59 @@ msgstr "There are no articles in this level"
 #. in order to register a new account.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Terms of Service and Honor Code"
-msgstr ""
+msgstr "Terms of Service and Honor Code"
 
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Agreement"
-msgstr ""
+msgstr "Agreement"
 
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Privacy"
-msgstr ""
+msgstr "Privacy"
 
 #: lms/templates/dashboard.html
 msgid "Current Courses"
-msgstr ""
+msgstr "Current Courses"
 
 #: lms/templates/courseware/course_about.html
 msgid "Register for {course_name}"
-msgstr ""
+msgstr "Register for {course_name}"
 
 #: lms/templates/courseware/course_about.html
 msgid "You are registered for this course"
-msgstr ""
+msgstr "You are registered for this course"
 
 msgid "Blank Common Problem"
-msgstr ""
+msgstr "Blank Common Problem"
 
 #: lms/templates/courseware/course_about.html
 msgid "I just registered for {number} {title} through {account}: {url}"
-msgstr ""
+msgstr "I just registered for {number} {title} through {account}: {url}"
 
 #: common/lib/xmodule/xmodule/capa_base.py:1427
 msgid ""
 "Your answers have been saved but not graded. Click 'Check' to grade them."
-msgstr ""
+msgstr "Your answers have been saved but not graded. Click 'Check' to grade them."
 
 #: lms/templates/discussion/_underscore_templates.html:412
 msgid "Add a clear and descriptive title to encourage participation."
-msgstr ""
+msgstr "Add a clear and descriptive title to encourage participation."
 
 #: common/djangoapps/student/views.py
 msgid ""
 "This account has been temporarily locked due to excessive login failures. "
 "Try again later."
-msgstr ""
+msgstr "This account has been temporarily locked due to excessive login failures. Try again later."
 
 #: lms/templates/discussion/_underscore_templates.html:463
 msgid ""
 "Questions raise issues that need answers. Discussions share ideas and start "
 "conversations."
-msgstr ""
+msgstr "Questions raise issues that need answers. Discussions share ideas and start conversations."
 
 #: lms/templates/discussion/_underscore_templates.html:499
 msgid "Add your post to a relevant topic to help others find it."
-msgstr ""
+msgstr "Add your post to a relevant topic to help others find it."
 
 #. Translators: This label appears above a field on the login form
 #. meant to hold the user's email address.
@@ -158,20 +182,20 @@ msgstr ""
 #: lms/templates/courseware/legacy_instructor_dashboard.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #. Translators: This label appears above a field on the registration form
 #. meant to hold the user's full name.
 #: lms/djangoapps/instructor/views/legacy.py
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Full name"
-msgstr ""
+msgstr "Full name"
 
 #. Translators: This label appears above a field on the registration form
 #. meant to hold the user's public username.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Public username"
-msgstr ""
+msgstr "Public username"
 
 #. Translators: This label appears above a field on the login form
 #. meant to hold the user's password.
@@ -182,7 +206,7 @@ msgstr ""
 #: lms/templates/provider_login.html lms/templates/register.html
 #: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
 msgid "Password"
-msgstr ""
+msgstr "Password"
 
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the country in which the user lives.
@@ -191,7 +215,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 #: lms/templates/shoppingcart/receipt.html
 msgid "Country"
-msgstr ""
+msgstr "Country"
 
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the user's gender.
@@ -200,27 +224,27 @@ msgstr ""
 #: openedx/core/djangoapps/user_api/views.py lms/templates/register.html
 #: lms/templates/signup_modal.html
 msgid "Gender"
-msgstr ""
+msgstr "Gender"
 
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the user's highest completed level of education.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Highest level of education completed"
-msgstr ""
+msgstr "Highest level of education completed"
 
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Tell us why you're interested in {platform_name}"
-msgstr ""
+msgstr "Tell us why you're interested in {platform_name}"
 
 #: lms/djangoapps/instructor_task/tasks_helper.py lms/templates/register.html
 msgid "Year of Birth"
-msgstr ""
+msgstr "Year of Birth"
 
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the user's year of birth.
 #: openedx/core/djangoapps/user_api/views.py lms/templates/signup_modal.html
 msgid "Year of birth"
-msgstr ""
+msgstr "Year of birth"
 
 #. Translators: a table of URL links to report files appears after this
 #. sentence.
@@ -228,33 +252,33 @@ msgstr ""
 msgid ""
 "<b>Note</b>: To keep student data secure, you cannot save or email these "
 "links for direct access. Copies of links expire within 5 minutes."
-msgstr ""
+msgstr "<b>Note</b>: To keep student data secure, you cannot save or email these links for direct access. Copies of links expire within 5 minutes."
 
 #. Translators: 'track' refers to the enrollment type ('honor', 'verified', or
 #. 'audit')
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html:10
 msgid ""
 "Number of enrollees (instructors, staff members, and students) by track"
-msgstr ""
+msgstr "Number of enrollees (instructors, staff members, and students) by track"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html:117
 msgid ""
 "Note: Users must have an activated {platform_name} account before they can "
 "be enrolled as a beta tester."
-msgstr ""
+msgstr "Note: Users must have an activated {platform_name} account before they can be enrolled as a beta tester."
 
 #. Translators: an "Administration List" is a list, such as Course Staff, that
 #. users can be added to.
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Administration List Management"
-msgstr ""
+msgstr "Administration List Management"
 
 #. Translators: an "Administrator Group" is a group, such as Course Staff,
 #. that
 #. users can be added to.
 #: lms/templates/instructor/instructor_dashboard_2/membership.html:165
 msgid "Select an Administrator Group:"
-msgstr ""
+msgstr "Select an Administrator Group:"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html:186
 msgid ""
@@ -262,31 +286,30 @@ msgid ""
 "enroll and unenroll students, as well as modify their grades and see all "
 "course data. Course staff are not automatically given access to Studio and "
 "will not be able to edit your course."
-msgstr ""
+msgstr "Course staff can help you manage limited aspects of your course. Staff can enroll and unenroll students, as well as modify their grades and see all course data. Course staff are not automatically given access to Studio and will not be able to edit your course."
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html:197
 msgid "Instructors"
-msgstr ""
+msgstr "Instructors"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html:199
 msgid ""
 "Instructors are the core administration of your course. Instructors can add "
 "and remove course staff, as well as administer discussion access."
-msgstr ""
+msgstr "Instructors are the core administration of your course. Instructors can add and remove course staff, as well as administer discussion access."
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html:210
 msgid ""
 "Beta testers can see course content before the rest of the students. They "
 "can make sure that the content works, but have no additional privileges."
-msgstr ""
+msgstr "Beta testers can see course content before the rest of the students. They can make sure that the content works, but have no additional privileges."
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html:236
 msgid ""
-"Discussion admins can edit or delete any post, clear misuse flags, close"
-" and re-open threads, endorse responses, and see posts from all cohorts. "
-"They CAN add/delete other moderators and their posts are marked as "
-"'staff'."
-msgstr ""
+"Discussion admins can edit or delete any post, clear misuse flags, close and"
+" re-open threads, endorse responses, and see posts from all cohorts. They "
+"CAN add/delete other moderators and their posts are marked as 'staff'."
+msgstr "Discussion admins can edit or delete any post, clear misuse flags, close and re-open threads, endorse responses, and see posts from all cohorts. They CAN add/delete other moderators and their posts are marked as 'staff'."
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html:236
 msgid ""
@@ -294,7 +317,7 @@ msgid ""
 " and re-open threads, endorse responses, and see posts from all cohorts. "
 "They CANNOT add/delete other moderators and their posts are marked as "
 "'staff'."
-msgstr ""
+msgstr "Discussion moderators can edit or delete any post, clear misuse flags, close and re-open threads, endorse responses, and see posts from all cohorts. They CANNOT add/delete other moderators and their posts are marked as 'staff'."
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html:248
 msgid ""
@@ -302,7 +325,7 @@ msgid ""
 "helpful on the discussion boards. They can edit or delete any post, clear "
 "misuse flags, close and re-open threads, endorse responses, and see posts "
 "from all cohorts. Their posts are marked 'Community TA'."
-msgstr ""
+msgstr "Community TA's are members of the community whom you deem particularly helpful on the discussion boards. They can edit or delete any post, clear misuse flags, close and re-open threads, endorse responses, and see posts from all cohorts. Their posts are marked 'Community TA'."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html:81
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html:122
@@ -310,60 +333,61 @@ msgid ""
 "Rescoring runs in the background, and status for active tasks will appear in"
 " the 'Pending Instructor Tasks' table. To see status for all tasks submitted"
 " for this problem and student, click on this button:"
-msgstr ""
+msgstr "Rescoring runs in the background, and status for active tasks will appear in the 'Pending Instructor Tasks' table. To see status for all tasks submitted for this problem and student, click on this button:"
 
 #: lms/templates/instructor/instructor_dashboard_2/instructor_analytics.html:57
 msgid "Gender Distribution"
-msgstr ""
+msgstr "Gender Distribution"
 
-#: ./edxapp/src/django-wiki/wiki/templates/wiki/permission_denied.html:
+#: ./edxapp/src/django-wiki/wiki/templates/wiki/permission_denied.html
 msgid "Sorry, you don't have permission to view this page."
-msgstr ""
+msgstr "Sorry, you don't have permission to view this page."
 
-#: ./edxapp/src/django-wiki/wiki/templates/wiki/permission_denied.html:
-msgid "Permission Denied" 
-msgstr ""
+#: ./edxapp/src/django-wiki/wiki/templates/wiki/permission_denied.html
+msgid "Permission Denied"
+msgstr "Permission Denied"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html:13
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html:15
 msgid "Staff and instructors"
-msgstr ""
+msgstr "Staff and instructors"
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html:18
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html:20
 msgid "All (students, staff and instructors)"
-msgstr ""
+msgstr "All (students, staff and instructors)"
 
 #: lms/djangoapps/instructor_analytics/distributions.py
 msgid "No Data"
-msgstr ""
+msgstr "No Data"
 
 #: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html:25
-msgid "Specify the number of peer assessments that each student must complete."
-msgstr ""
+msgid ""
+"Specify the number of peer assessments that each student must complete."
+msgstr "Specify the number of peer assessments that each student must complete."
 
 #: openassessment/templates/openassessmentblock/edit/oa_edit.html:135
 msgid ""
 "Specify the number of top-scoring responses to display. If the number is 0, "
 "the Top Responses section won't appear to students."
-msgstr ""
+msgstr "Specify the number of top-scoring responses to display. If the number is 0, the Top Responses section won't appear to students."
 
 #: openassessment/templates/openassessmentblock/edit/oa_edit_peer_assessment.html:32
 msgid "Specify the number of students who must assess each response."
-msgstr ""
+msgstr "Specify the number of students who must assess each response."
 
 #. Translators: The &amp; characters represent an ampersand character and can
 #. be ignored
 #: lms/djangoapps/certificates/views/webview.py
 msgid "Terms of Service &amp; Honor Code"
-msgstr ""
+msgstr "Terms of Service &amp; Honor Code"
 
 #: cms/templates/certificates.html:68
 msgid ""
 "Upon successful completion of your course, learners receive a certificate to"
 " acknowledge their accomplishment. If you are a course team member with the "
 "Admin role in Studio, you can configure your course certificate."
-msgstr ""
+msgstr "Upon successful completion of your course, learners receive a certificate to acknowledge their accomplishment. If you are a course team member with the Admin role in Studio, you can configure your course certificate."
 
 #: cms/templates/certificates.html:69
 msgid ""
@@ -376,7 +400,7 @@ msgid ""
 "on your course certificate. You might want to use a different title if, for "
 "example, the official course name is too long to display well on a "
 "certificate."
-msgstr ""
+msgstr "Click {em_start}Add your first certificate{em_end} to add a certificate configuration. Upload the organization logo to be used on the certificate, and specify at least one signatory. You can include up to four signatories for a certificate. You can also upload a signature image file for each signatory. {em_start}Note:{em_end} Signature images are used only for verified certificates. Optionally, specify a different course title to use on your course certificate. You might want to use a different title if, for example, the official course name is too long to display well on a certificate."
 
 #: cms/templates/certificates.html:70
 msgid ""
@@ -385,7 +409,7 @@ msgid ""
 "would receive. When the certificate is ready for issuing, click "
 "{em_start}Activate.{em_end} To stop issuing an active certificate, click "
 "{em_start}Deactivate{em_end}."
-msgstr ""
+msgstr "Select a course mode and click {em_start}Preview Certificate{em_end} to preview the certificate that a learner in the selected enrollment track would receive. When the certificate is ready for issuing, click {em_start}Activate.{em_end} To stop issuing an active certificate, click {em_start}Deactivate{em_end}."
 
 #: cms/templates/certificates.html:71
 msgid ""
@@ -394,55 +418,110 @@ msgid ""
 "over the top right corner of the form and click the delete icon. In general,"
 " do not delete certificates after a course has started, because some "
 "certificates might already have been issued to learners."
-msgstr ""
+msgstr " To edit the certificate configuration, hover over the top right corner of the form and click {em_start}Edit{em_end}. To delete a certificate, hover over the top right corner of the form and click the delete icon. In general, do not delete certificates after a course has started, because some certificates might already have been issued to learners."
 
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Drag and Drop"
 
 msgid "Problem with Adaptive Hint"
-msgstr ""
+msgstr "Problem with Adaptive Hint"
 
 msgid "Molecular Structure"
-msgstr ""
+msgstr "Molecular Structure"
 
 msgid "Custom Javascript Display and Grading"
-msgstr ""
+msgstr "Custom Javascript Display and Grading"
 
 msgid "Custom Python-Evaluated Input"
-msgstr ""
+msgstr "Custom Python-Evaluated Input"
 
 msgid "Checkboxes with Hints and Feedback"
-msgstr ""
+msgstr "Checkboxes with Hints and Feedback"
 
 msgid "Dropdown with Hints and Feedback"
-msgstr ""
+msgstr "Dropdown with Hints and Feedback"
 
 msgid "Multiple Choice with Hints and Feedback"
-msgstr ""
+msgstr "Multiple Choice with Hints and Feedback"
 
 msgid "Numerical Input with Hints and Feedback"
-msgstr ""
+msgstr "Numerical Input with Hints and Feedback"
 
 msgid "Text Input with Hints and Feedback"
-msgstr ""
-                                 
+msgstr "Text Input with Hints and Feedback"
+
 #: openassessment/templates/openassessmentblock/response/oa_response.html
 msgid "Your response to the question above:"
-msgstr ""
+msgstr "Your response to the question above:"
 
 msgid "Your peer's response to the question above:"
-msgstr ""
+msgstr "Your peer's response to the question above:"
 
-#: lms/static/templates/navigation.html: 96
+#: lms/static/templates/navigation.html 96
 msgid "Dashboard for user:"
-msgstr ""
+msgstr "Dashboard for user:"
 
-#: lms/static/templates/navigation.html: 103
+#: lms/static/templates/navigation.html 103
 msgid "More options dropdown for user"
-msgstr ""
+msgstr "More options dropdown for user"
 
 #: common/static/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid "Enter your question or comment"
-msgstr ""
+msgstr "Enter your question or comment"
+
+#: cms/templates/widgets/header.html:133
+msgid "Checklists"
+msgstr "Checklists"
+
+#: themes/kmooc/templates/temem-footer.html
+msgid "FAQ"
+msgstr "FAQ"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Terms of Services"
+msgstr "Terms of Services"
+
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+msgid "Copyrights"
+msgstr "Copyrights"
+
+#: lms/templates/navigation.html
+msgid "About"
+msgstr "About"
+
+msgid "Schools and Partners"
+msgstr "Schools and Partners"
+
+msgid "Courses"
+msgstr "Courses"
+
+msgid "Sign In"
+msgstr "Sign In"
+
+msgid "Register"
+msgstr "Register"
+
+msgid "Search"
+msgstr "Search"
+
+msgid "Intro Video"
+msgstr "Intro Video"
+
+msgid "Courses Running"
+msgstr "Courses Running"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "I want to learn about..."
+msgstr "I want to learn about..."
+
