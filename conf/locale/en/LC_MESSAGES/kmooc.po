@@ -525,3 +525,64 @@ msgstr "Dashboard"
 msgid "I want to learn about..."
 msgstr "I want to learn about..."
 
+#: university
+msgid "KHUk"
+msgstr "KHUk"
+
+msgid "KoreaUnivK"
+msgstr "KoreaUnivK"
+
+msgid "PNUk"
+msgstr "PNUk"
+
+msgid "SNUk"
+msgstr "SNUk"
+
+msgid "SKKUk"
+msgstr "SKKUk"
+
+msgid "YSUk"
+msgstr "YSUk"
+
+msgid "EwhaK"
+msgstr "EwhaK"
+
+msgid "POSTECHk"
+msgstr "POSTECHk"
+
+msgid "KAISTk"
+msgstr "KAISTk"
+
+msgid "HYUk"
+msgstr "HYUk"
+
+msgid "KMOOC"
+msgstr "KMOOC"
+
+msgid "INHAuniversityK"
+msgstr "INHAuniversityK"
+
+msgid "KUMOHk"
+msgstr "KUMOHk"
+
+msgid "CUKk"
+msgstr "CUKk"
+
+msgid "BUFSk"
+msgstr "BUFSk"
+
+msgid "JEJUk"
+msgstr "JEJUk"
+
+msgid "KNUk"
+msgstr "KNUk"
+
+msgid "YeungnamUnivK"
+msgstr "YeungnamUnivK"
+
+msgid "KonYangK"
+msgstr "KonYangK"
+
+msgid "DKUK"
+msgstr "DKUK"
+

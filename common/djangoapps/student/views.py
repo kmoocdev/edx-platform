@@ -264,9 +264,9 @@ def index(request, extra_context=None, user=AnonymousUser()):
 
     context.update(extra_context)
 
-    print '**********************************'
-    print 'context =',context
-    print '**********************************'
+    # print '**********************************'
+    # print 'context =',context
+    # print '**********************************'
 
     return render_to_response('index.html', context)
 
