@@ -43,6 +43,178 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Chul Park <parkchul@nate.com>, 2015
+# David10000 <gameness@naver.com>, 2014
+# Gil <gedwarp@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015-2016
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# JiyeonLee <leejiyeon00@gmail.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# KimKyudong <choemh@nate.com>, 2014
+# mariana1201 <gogo3135@naver.com>, 2014
+# Nicole <dlruddk1112@gmail.com>, 2014
+# Pope, 2014
+# Sarina Canelake <sarina@edx.org>, 2014
+# Seok Jun Yoon <fake2real@dctribe.com>, 2015
+# shin2012 <shin2013@gmail.com>, 2014
+# Sujin Lee <sujinlee.me@gmail.com>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# Young Kim <youngck.uw@gmail.com>, 2015
+# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2016 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Jun-Gu Kang <chr0m3.kr@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Seok Jun Yoon <fake2real@dctribe.com>, 2015
+# Sujin Lee <sujinlee.me@gmail.com>, 2014
+# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2016 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# mariana1201 <gogo3135@naver.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Young Kim <youngck.uw@gmail.com>, 2015
+# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2016 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chul Park <parkchul@nate.com>, 2015
+# mariana1201 <gogo3135@naver.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015-2016
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# Sarina Canelake <sarina@edx.org>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2016 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Pope, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# KimKyudong <choemh@nate.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015-2016
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Kevin Min <gr326887@graded.br>, 2015
+# JiyeonLee <leejiyeon00@gmail.com>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2013 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2016 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# David10000 <gameness@naver.com>, 2014
+# Gil <gedwarp@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Kevin Min <gr326887@graded.br>, 2015
+# Nicole <dlruddk1112@gmail.com>, 2014
+# shin2012 <shin2013@gmail.com>, 2014
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2016 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015-2016
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2013 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Chanseok <kcsgoodboy@gmail.com>, 2014
 # Chul Park <parkchul@nate.com>, 2015
@@ -3483,6 +3655,14 @@ msgstr ""
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the registration form
 #. which allows the user to input the city in which they live.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the city in which they live.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the city in which they live.
 #: lms/djangoapps/instructor_task/tasks_helper.py
 #: openedx/core/djangoapps/user_api/views.py lms/templates/register.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
@@ -3579,6 +3759,21 @@ msgstr "질문하기는 답변이 필요할 경우에, 게시판은 아이디어
 msgid "Add your post to a relevant topic to help others find it."
 msgstr "검색하기 쉽도록 게시물에 주제를 추가합니다."
 
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the password reset
+#. form meant to hold the user's email address.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the password reset
+#. form meant to hold the user's email address.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the login form
 #. meant to hold the user's email address.
@@ -4031,6 +4226,17 @@ msgstr "아이디(Username)"
 #. Translators: This label appears above a field on the registration form
 #. meant to hold the user's password.
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's password.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's password.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's password.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's password.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the login form
 #. meant to hold the user's password.
@@ -4065,12 +4271,20 @@ msgstr "아이디(Username)"
 #: lms/templates/provider_login.html lms/templates/register.html
 #: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
 #: cms/templates/temp-course-landing.html lms/templates/register-form.html
+#: themes/red-theme/cms/templates/login.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: lms/templates/student_account/account.underscore
 #: test_root/staticfiles/templates/student_account/account.underscore
 msgid "Password"
 msgstr "비밀번호(Password)"
 
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the country in which the user lives.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the country in which the user lives.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the country in which the user lives.
@@ -4308,6 +4522,13 @@ msgstr "국가(Country)"
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the user's gender.
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's gender.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's gender.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the user's gender.
@@ -4400,6 +4621,10 @@ msgstr "최종 학력(Highest level of education completed)"
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This phrase appears above a field on the registration form
 #. meant to hold the user's reasons for registering with edX.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This phrase appears above a field on the registration form
+#. meant to hold the user's reasons for registering with edX.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Tell us why you're interested in {platform_name}"
 msgstr ""
@@ -4412,6 +4637,13 @@ msgstr ""
 msgid "Year of Birth"
 msgstr "출생연도(Year of Birth)"
 
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's year of birth.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's year of birth.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the user's year of birth.
@@ -4796,6 +5028,249 @@ msgstr "질문이나 토의글을 입력하세요.(주민등록번호, 전화번
 msgid "Checklists"
 msgstr "준비 점검"
 
+#: themes/kmooc/templates/temem-footer.html
+#: lms/templates/static_templates/faq.html
+#: themes/red-theme/lms/templates/footer.html
+msgid "FAQ"
+msgstr "자주하는 질문"
+
+#: lms/djangoapps/branding/api.py lms/templates/static_templates/contact.html
+#: themes/red-theme/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+msgid "Contact"
+msgstr "연락처"
+
+#: lms/djangoapps/branding/api.py lms/templates/static_templates/blog.html
+msgid "Blog"
+msgstr "블로그"
+
+msgid "Terms of Services"
+msgstr "이용약관"
+
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#: lms/djangoapps/branding/api.py lms/djangoapps/certificates/views/webview.py
+#: cms/templates/widgets/footer.html
+#: lms/templates/static_templates/privacy.html
+#: themes/red-theme/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/tos.html
+msgid "Privacy Policy"
+msgstr "개인정보처리방침"
+
+msgid "Copyrights"
+msgstr "저작권보호정책"
+
+#: lms/templates/navigation.html common/lib/xmodule/xmodule/course_module.py
+#: lms/djangoapps/branding/api.py lms/templates/footer.html
+#: lms/templates/static_templates/about.html
+#: themes/red-theme/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+msgid "About"
+msgstr "K-MOOC란?"
+
+#: lms/templates/navigation-edx.html themes/edx.org/lms/templates/header.html
+msgid "Schools & Partners"
+msgstr "대학목록"
+
+#: cms/templates/index.html lms/templates/navigation.html
+#: lms/templates/sysadmin_dashboard.html
+#: lms/templates/sysadmin_dashboard_gitlogs.html
+#: lms/templates/courseware/courses.html
+#: themes/red-theme/lms/templates/header.html
+msgid "Courses"
+msgstr "강좌목록"
+
+#: cms/templates/login.html cms/templates/widgets/header.html
+#: themes/red-theme/cms/templates/login.html
+msgid "Sign In"
+msgstr "로그인"
+
+#: lms/templates/navigation-edx.html lms/templates/navigation.html
+#: lms/templates/register-form.html themes/edx.org/lms/templates/header.html
+#: themes/stanford-style/lms/templates/register-form.html
+#: lms/templates/register.html
+msgid "Register"
+msgstr "회원가입"
+
+#: lms/templates/wiki/plugins/attachments/index.html
+#: lms/templates/dashboard.html lms/templates/index.html
+#: lms/templates/courseware/courses.html lms/templates/edxnotes/edxnotes.html
+#: themes/edx.org/lms/templates/dashboard.html
+#: themes/stanford-style/lms/templates/index.html
+#: common/static/common/templates/components/search-field.underscore
+#: lms/djangoapps/support/static/support/templates/certificates.underscore
+#: lms/djangoapps/support/static/support/templates/enrollment.underscore
+#: lms/templates/discussion/_thread_list_template.html
+#: test_root/staticfiles/common/templates/components/search-field.underscore
+#: test_root/staticfiles/support/templates/certificates.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/components/search-field.underscore
+msgid "Search"
+msgstr "검색"
+
+msgid "Intro Video"
+msgstr "소개영상"
+
+msgid "Courses Running"
+msgstr "전체 강좌"
+
+#: lms/templates/dashboard.html lms/templates/navigation-edx.html
+#: lms/templates/navigation.html themes/edx.org/lms/templates/dashboard.html
+#: themes/edx.org/lms/templates/header.html
+msgid "Dashboard"
+msgstr "대시보드"
+
+msgid "I want to learn about..."
+msgstr "원하시는 강의를 검색해보세요"
+
+#: university
+msgid "KHUk"
+msgstr "경희대학교"
+
+msgid "KoreaUnivK"
+msgstr "고려대학교"
+
+msgid "PNUk"
+msgstr "부산대학교"
+
+msgid "SNUk"
+msgstr "서울대학교"
+
+msgid "SKKUk"
+msgstr "성균관대학교"
+
+msgid "YSUk"
+msgstr "연세대학교"
+
+msgid "EwhaK"
+msgstr "이화여자대학교"
+
+msgid "POSTECHk"
+msgstr "포항공과대학교"
+
+msgid "KAISTk"
+msgstr "한국과학기술원"
+
+msgid "HYUk"
+msgstr "한양대학교"
+
+msgid "KMOOC"
+msgstr ""
+
+msgid "INHAuniversityK"
+msgstr "인하대학교"
+
+msgid "KUMOHk"
+msgstr "금오공과대학교"
+
+msgid "CUKk"
+msgstr "가톨릭대학교"
+
+msgid "BUFSk"
+msgstr "부산외국어대학교"
+
+msgid "JEJUk"
+msgstr "제주대학교"
+
+msgid "KNUk"
+msgstr "경북대학교"
+
+msgid "YeungnamUnivK"
+msgstr "영남대학교"
+
+msgid "KonYangK"
+msgstr "건양대학교"
+
+msgid "DKUK"
+msgstr "단국대학교"
+
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Discussion' refers to the tab in the courseware that leads to
+#. the discussion forums
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
 #. the discussion forums
@@ -4940,6 +5415,116 @@ msgstr "동영상 ID"
 #: lms/templates/open_ended_problems/open_ended_problems.html
 msgid "Status"
 msgstr "상태"
+
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
+#: cms/djangoapps/contentstore/views/videos.py
+#: openedx/core/djangoapps/api_admin/models.py cms/templates/index.html
+#: lms/templates/dashboard/_dashboard_status_verification.html
+msgid "Pending"
+msgstr "대기중"
 
 #: common/djangoapps/config_models/admin.py
 msgid "Revert to the selected configuration"
@@ -5455,6 +6040,10 @@ msgstr ""
 #: common/djangoapps/student/views.py
 msgid "The course you are looking for does not start until {date}."
 msgstr "이 강좌는 {date}일부터 개강됩니다."
+
+#: common/djangoapps/student/views.py
+msgid "The course you are looking for is closed for enrollment as of {date}."
+msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "Course id not specified"
@@ -6302,6 +6891,12 @@ msgstr "범위지정 문제에서는 복소수를 사용할 수 없습니다."
 #. boundary (end limit) for a variable that is a complex number (a + bi), this
 #. message displays.
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is an error message for a math problem. If the instructor
+#. provided a
+#. boundary (end limit) for a variable that is a complex number (a + bi), this
+#. message displays.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. Translators: This is an error message for a math problem. If the instructor
 #. provided a boundary
 #. (end limit) for a variable that is a complex number (a + bi), this message
@@ -6311,6 +6906,11 @@ msgid ""
 "There was a problem with the staff answer to this problem: complex boundary."
 msgstr "이 문제에 대해 관리자가 답변하는 데에 오류가 생겼습니다."
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is an error message for a math problem. If the instructor
+#. did not
+#. provide a boundary (end limit) for a variable, this message displays.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is an error message for a math problem. If the instructor
 #. did not
@@ -6333,6 +6933,14 @@ msgstr "텍스트 입력"
 msgid "error"
 msgstr "오류"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: Separator used in StringResponse to display multiple answers.
+#. Example: "Answer: Answer_1 or Answer_2 or Answer_3".
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this is the last choice of a number of choices of how to log
+#. in
+#. to the site.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: Separator used in StringResponse to display multiple answers.
 #. Example: "Answer: Answer_1 or Answer_2 or Answer_3".
@@ -6550,6 +7158,9 @@ msgid ""
 "try again later."
 msgstr "과제를 채점자에게 전달할 수 없습니다. (원인:  {error_msg}). 나중에 다시 시도해주십시오."
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'grader' refers to the edX automatic code grader.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'grader' refers to the edX automatic code grader.
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
@@ -7164,10 +7775,9 @@ msgstr "게시물 알파벳순으로 정렬"
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
 "Enter true or false. If true, discussion categories and subcategories are "
-"sorted alphabetically. If false, they are sorted chronologically."
+"sorted alphabetically. If false, they are sorted chronologically by creation"
+" date and time."
 msgstr ""
-"True 또는 False를 입력합니다. True를 입력할 경우, 토의 항목 및 하위 항목들이 알파벳 순으로 정렬됩니다. False를 "
-"입력할 경우, 입력 순으로 정렬됩니다."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Announcement Date"
@@ -7222,18 +7832,6 @@ msgid ""
 msgstr "강좌의 동영상 파일의 고유 식별자를 입력하십시오."
 
 #: common/lib/xmodule/xmodule/course_module.py
-msgid ""
-"Enter the URL for the official course Facebook group. If you provide a URL, "
-"the mobile app includes a button that students can tap to access the group."
-msgstr ""
-"강좌의 공식 Facebook 그룹에 연결하려면 URL을 입력해주십시오. URL을 입력하면, 학습자들이 Facebook 그룹에 접속할 수 "
-"있도록 모바일 앱에 버튼이 나타납니다."
-
-#: common/lib/xmodule/xmodule/course_module.py
-msgid "Facebook URL"
-msgstr "Facebook URL"
-
-#: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Not Graded"
 msgstr "학습자 평가 없는 강좌"
 
@@ -7263,12 +7861,10 @@ msgstr "HTML 교재"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
-"For HTML textbooks that appear as separate tabs in the courseware, enter the"
-" name of the tab (usually the name of the book) as well as the URLs and "
-"titles of all the chapters in the book."
+"For HTML textbooks that appear as separate tabs in the course, enter the "
+"name of the tab (usually the title of the book) as well as the URLs and "
+"titles of each chapter in the book."
 msgstr ""
-"HTML 교재가 별도의 탭으로 표시될 수 있도록, 교재 내 모든 챕터의 URL과 챕터 이름, 그리고 탭의 이름(보통 교재명 사용)을 "
-"입력하세요."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Remote Gradebook"
@@ -7289,6 +7885,13 @@ msgstr "원격 성적표 mapping을 입력합니다. REMOTE_GRADEBOOK_URL가 지
 msgid "Enable CCX"
 msgstr "CCX 활성화"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: Custom Courses for edX (CCX) is an edX feature for re-using
+#. course content. CCX Coach is
+#. a role created by a course Instructor to enable a person (the "Coach") to
+#. manage the custom course for
+#. his students.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: Custom Courses for edX (CCX) is an edX feature for re-using
 #. course content. CCX Coach is
@@ -7465,9 +8068,9 @@ msgstr "학습 자료"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
-"True if timezones should be shown on dates in the courseware. Deprecated in "
+"True if timezones should be shown on dates in the course. Deprecated in "
 "favor of due_date_display_format."
-msgstr "강좌 시간대를 표시할 경우에 True를 입력하세요."
+msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Due Date Display Format"
@@ -7637,13 +8240,11 @@ msgstr "강좌 제공 기관 설정하기"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
-"Enter the course organization that you want to appear in the courseware. "
-"This setting overrides the organization that you entered when you created "
-"the course. To use the organization that you entered when you created the "
+"Enter the course organization that you want to appear in the course. This "
+"setting overrides the organization that you entered when you created the "
+"course. To use the organization that you entered when you created the "
 "course, enter null."
 msgstr ""
-"학습실에서 보이도록 할 강좌 제공 기관을 입력하세요. 강좌를 생성할 때 입력했던 기관은 이 기관으로 바뀝니다. 강좌를 만들 때 입력했던 "
-"기관을 사용하려면, null을 입력하세요."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Number Display String"
@@ -7651,13 +8252,11 @@ msgstr "강좌 번호 설정하기"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
-"Enter the course number that you want to appear in the courseware. This "
-"setting overrides the course number that you entered when you created the "
-"course. To use the course number that you entered when you created the "
-"course, enter null."
+"Enter the course number that you want to appear in the course. This setting "
+"overrides the course number that you entered when you created the course. To"
+" use the course number that you entered when you created the course, enter "
+"null."
 msgstr ""
-"강좌에 표시할 강좌 번호를 입력하세요. 이로써 강좌를 생성할 때 입력한 강좌 번호는 없어집니다. 만약 강좌를 생성할 때 입력한 강좌 "
-"번호를 사용하려면 null을 입력하세요."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Maximum Student Enrollment"
@@ -7727,14 +8326,7 @@ msgstr ""
 msgid "Both"
 msgstr "both"
 
-#: common/lib/xmodule/xmodule/course_module.py lms/djangoapps/branding/api.py
-#: lms/templates/footer.html lms/templates/static_templates/about.html
-#: themes/red-theme/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/static_templates/about.html
-msgid "About"
-msgstr "소개"
-
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
@@ -7870,14 +8462,26 @@ msgstr ""
 "0.75를 입력합니다."
 
 #: common/lib/xmodule/xmodule/course_module.py
+#: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid "Self Paced"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
+#: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid ""
 "Set this to \"true\" to mark this course as self-paced. Self-paced courses "
 "do not have due dates for assignments, and students can progress through the"
 " course at any rate before the course ends."
+msgstr ""
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid "Bypass Course Home"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid ""
+"Bypass the course home tab when students arrive from the dashboard, sending "
+"them directly to course content."
 msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -8348,6 +8952,10 @@ msgstr "아이디를 요청합니다."
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is used to request the user's username for a third party
 #. service.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is used to request the user's username for a third party
+#. service.
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid "Select True to request the user's username."
 msgstr ""
@@ -8356,6 +8964,10 @@ msgstr ""
 msgid "Request user's email"
 msgstr "이용자 이메일을 요청합니다."
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is used to request the user's email for a third party
+#. service.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is used to request the user's email for a third party
 #. service.
@@ -8554,6 +9166,10 @@ msgstr "문제가 발생한 콘텐츠 그룹의 id를 입력하십시오. "
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: DO NOT translate the words in quotes here, they are
 #. specific words for the acceptable values.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: DO NOT translate the words in quotes here, they are
+#. specific words for the acceptable values.
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid ""
 "Specify when the Show Answer button appears for each problem. Valid values "
@@ -8564,6 +9180,10 @@ msgstr ""
 "\"attempted\", \"closed\", \"finished\", \"past_due\", "
 "\"correct_or_past_due\", 그리고 \"never\"입니다."
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: DO NOT translate the words in quotes here, they are
+#. specific words for the acceptable values.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: DO NOT translate the words in quotes here, they are
 #. specific words for the acceptable values.
@@ -9340,6 +9960,10 @@ msgstr "단어 구름에서 가장 많은 단어 num_top_words"
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
 #. Please do not translate any of these trademarks and company names.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
+#. Please do not translate any of these trademarks and company names.
 #: lms/djangoapps/branding/api.py
 msgid ""
 "© {org_name}.  All rights reserved except where noted.  EdX, Open edX and "
@@ -9488,14 +10112,17 @@ msgstr ""
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Open edX' is a brand, please keep this untranslated. See
 #. http://openedx.org for more information.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Open edX' is a brand, please keep this untranslated.
+#. See http://openedx.org for more information.
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Open edX' is a brand, please keep this untranslated. See
+#. http://openedx.org for more information.
 #: lms/djangoapps/branding/api.py cms/templates/widgets/footer.html
 #: themes/red-theme/lms/templates/footer.html
 msgid "Powered by Open edX"
 msgstr "Powered by Open edX"
-
-#: lms/djangoapps/branding/api.py lms/templates/static_templates/blog.html
-msgid "Blog"
-msgstr "블로그"
 
 #: lms/djangoapps/branding/api.py themes/red-theme/lms/templates/footer.html
 msgid "News"
@@ -9504,13 +10131,6 @@ msgstr "뉴스"
 #: lms/djangoapps/branding/api.py
 msgid "Help Center"
 msgstr ""
-
-#: lms/djangoapps/branding/api.py lms/templates/static_templates/contact.html
-#: themes/red-theme/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/static_templates/about.html
-msgid "Contact"
-msgstr "연락처"
 
 #: lms/djangoapps/branding/api.py
 #: themes/stanford-style/lms/templates/footer.html
@@ -9534,98 +10154,14 @@ msgstr "사이트맵"
 msgid "Terms of Service & Honor Code"
 msgstr "서비스 및 명예 과정 규정 "
 
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-#. Translators: A 'Privacy Policy' is a legal document/statement describing a
-#. website's use of personal information
-#: lms/djangoapps/branding/api.py lms/djangoapps/certificates/views/webview.py
-#: cms/templates/widgets/footer.html
-#: lms/templates/static_templates/privacy.html
-#: themes/red-theme/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/static_templates/tos.html
-msgid "Privacy Policy"
-msgstr "개인정보 보호 정책"
-
 #: lms/djangoapps/branding/api.py
 msgid "Accessibility Policy"
 msgstr "접근성 정책"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is a legal document users must agree to
+#. in order to register a new account.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is a legal document users must agree to
 #. in order to register a new account.
@@ -9724,6 +10260,12 @@ msgstr "Google 앱 스토어에서 {platform_name} 모바일 앱을 다운로드
 #: lms/djangoapps/ccx/plugins.py
 msgid "CCX Coach"
 msgstr "CCX 코치"
+
+#: lms/djangoapps/ccx/utils.py
+msgid ""
+"A CCX can only be created on this course through an external service. "
+"Contact a course admin to give you access."
+msgstr ""
 
 #: lms/djangoapps/ccx/utils.py
 msgid "The course is full: the limit is {max_student_enrollments_allowed}"
@@ -10483,11 +11025,26 @@ msgstr "진행 상황"
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Textbooks' refers to the tab in the course that leads to the
 #. course' textbooks
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Textbooks' refers to the tab in the course that leads to the
+#. course' textbooks
 #: lms/djangoapps/courseware/tabs.py cms/templates/textbooks.html
 #: cms/templates/widgets/header.html
 msgid "Textbooks"
 msgstr "교재"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This will look like '$50', where {currency_symbol} is a symbol
+#. such as '$' and {price} is a
+#. numerical amount in that currency. Adjust this display as needed for your
+#. language.
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: currency_symbol is a symbol indicating type of currency, ex
+#. "$".
+#. This string would look like this when all variables are in:
+#. "$500.00"
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This will look like '$50', where {currency_symbol} is a symbol
 #. such as '$' and {price} is a
@@ -10972,46 +11529,6 @@ msgstr "The git repo의 위치는 '.git'로 끝나야 하며,  유효한 URL이�
 msgid "Added Course"
 msgstr "추가된 강좌"
 
-#. Translators: "GIT_IMPORT_WITH_XMLMODULESTORE" is a variable name.
-#. "XMLModuleStore" and "MongoDB" are database systems. You should not
-#. translate these names.
-#: lms/djangoapps/dashboard/sysadmin.py
-msgid ""
-"Refusing to import. GIT_IMPORT_WITH_XMLMODULESTORE is not turned on, and it "
-"is generally not safe to import into an XMLModuleStore with multithreaded. "
-"We recommend you enable the MongoDB based module store instead, unless this "
-"is a development environment."
-msgstr ""
-"가져오기를 거부하려면 \"GIT_IMPORT_WITH_XMLMODULESTORE\"가 켜지면 안됩니다. 그리고 multithreaded를"
-" 가지고 XMLModuleStore로 가져오기를 하는 것이 일반적으로 안전하지는 않습니다. 개발 환경이 아니라면,  "
-"XMLModuleStore 대신 MongoDB 기반 모듈을 활성화하는 것을 권합니다."
-
-#: lms/djangoapps/dashboard/sysadmin.py
-msgid ""
-"The course {0} already exists in the data directory! (reloading anyway)"
-msgstr "강좌 {0}가 이미 데이터 디렉토리에 존재합니다!  (새로고침 중입니다.)"
-
-#. Translators: unable to download the course content from
-#. the source git repository. Clone occurs if this is brand
-#. new, and pull is when it is being updated from the
-#. source.
-#: lms/djangoapps/dashboard/sysadmin.py
-msgid ""
-"Unable to clone or pull repository. Please check your url. Output was: {0!r}"
-msgstr "Unable to clone or pull repository. URL을 확인하세요. Output was: {0!r}"
-
-#: lms/djangoapps/dashboard/sysadmin.py
-msgid "Failed to clone repository to {directory_name}"
-msgstr "저장소를 {directory_name}로 복제하는 데 실패했습니다. "
-
-#: lms/djangoapps/dashboard/sysadmin.py
-msgid "Successfully switched to branch: {branch_name}"
-msgstr " 성공적으로 {branch_name} branch로 전환되었습니다."
-
-#: lms/djangoapps/dashboard/sysadmin.py
-msgid "Loaded course {course_name}<br/>Errors:"
-msgstr "등록된 강좌 {course_name}<br/> 오류:"
-
 #: lms/djangoapps/dashboard/sysadmin.py cms/templates/course-create-rerun.html
 #: cms/templates/index.html lms/templates/shoppingcart/receipt.html
 msgid "Course Name"
@@ -11105,8 +11622,12 @@ msgid "EdxNotes Service is unavailable. Please try again in a few minutes."
 msgstr "EdxNotes Service를 이용할 수 없습니다. 잠시후 다시 시도해 주십시오."
 
 #: lms/djangoapps/edxnotes/helpers.py
-msgid "Server error. Please try again in a few minutes."
-msgstr "서버 오류. 잠시 후에 다시 시도하세요."
+msgid "Invalid JSON response received from notes api."
+msgstr ""
+
+#: lms/djangoapps/edxnotes/helpers.py
+msgid "Incorrect data received from notes api."
+msgstr ""
 
 #: lms/djangoapps/edxnotes/helpers.py
 msgid "No endpoint was provided for EdxNotes."
@@ -11307,28 +11828,22 @@ msgstr ""
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "The enrolled learner profile report is being created. To view the status of "
-"the report, see Pending Instructor Tasks below."
+"the report, see Pending Tasks below."
 msgstr ""
-"수강등록한 학습자의 프로필 보고서가 생성중입니다. 보고서 생성 상태를 확인하기 위해 아래의 Pending Instructor Tasks "
-"를 살펴 보세요."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "This enrollment report is currently being created. To view the status of the"
-" report, see Pending Instructor Tasks below. You will be able to download "
-"the report when it is complete."
+" report, see Pending Tasks below. You will be able to download the report "
+"when it is complete."
 msgstr ""
-"현재 수강 등록 보고서가 생성중입니다. 보고서의 현재 상태를 확인하기 위해 아래의 Pending Instructor Tasks를 살펴 "
-"보세요. 완료 상태가 되면 보고서를 다운 받을 수 있습니다. "
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "The enrollment report is being created. This report contains information "
 "about learners who can enroll in the course. To view the status of the "
-"report, see Pending Instructor Tasks below."
+"report, see Pending Tasks below."
 msgstr ""
-"수강 등록 보고서가 생성중입니다. 보고서에는 강좌를 수강할 수 있는 학습자에 대한 정보가 담겨 있습니다. 보고서의 현재 상태를 확인하기 "
-"위해 아래 Pending Instructor Tasks 를 살펴 보세요."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "The file must contain a 'cohort' column containing cohort names."
@@ -11393,61 +11908,54 @@ msgstr "할인된 금액 합계"
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "The detailed enrollment report is being created. To view the status of the "
-"report, see Pending Instructor Tasks below."
+"report, see Pending Tasks below."
 msgstr ""
-"상세한 수강신청 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다. "
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "The detailed enrollment report is being created. To view the status of the "
-"report, see Pending Instructor Tasks below. You will be able to download the"
-" report when it is complete."
+"report, see Pending Tasks below. You will be able to download the report "
+"when it is complete."
 msgstr ""
-"상세한 수강신청 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다. 보고서가 "
-"완성되면 다운로드할 수 있습니다."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "The executive summary report is being created. To view the status of the "
-"report, see Pending Instructor Tasks below."
-msgstr "경영 종합 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다."
+"report, see Pending Tasks below."
+msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "The executive summary report is currently being created. To view the status "
-"of the report, see Pending Instructor Tasks below. You will be able to "
-"download the report when it is complete."
+"of the report, see Pending Tasks below. You will be able to download the "
+"report when it is complete."
 msgstr ""
-"경영 종합 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다. 보고서가 완성되면"
-" 다운로드할 수 있습니다."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "The survey report is being created. To view the status of the report, see "
-"Pending Instructor Tasks below."
+"Pending Tasks below."
 msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "The survey report is currently being created. To view the status of the "
-"report, see Pending Instructor Tasks below. You will be able to download the"
-" report when it is complete."
+"report, see Pending Tasks below. You will be able to download the report "
+"when it is complete."
 msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "The proctored exam results report is being created. To view the status of "
-"the report, see Pending Instructor Tasks below."
-msgstr "감독이 있는 평가 결과 보고서가 만들어지고 있습니다. 보고서의 상태를 보려면, 아래의 대기중인 교수자 작업을 보세요."
+"the report, see Pending Tasks below."
+msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "The proctored exam results report is currently being created. To view the "
-"status of the report, see Pending Instructor Tasks below. You will be able "
-"to download the report when it is complete."
+"status of the report, see Pending Tasks below. You will be able to download "
+"the report when it is complete."
 msgstr ""
-"감독이 있는 평가 결과 보고서가 생성되었습니다. 보고서의 상태를 보려면, 아래의 대기중인 교수자 작업을 보세요. 생성 완료된 보고서는 "
-"다운로드할 수 있습니다."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Could not parse amount as a decimal"
@@ -11499,34 +12007,41 @@ msgid "Cannot rescore with all_students and unique_student_identifier."
 msgstr "all_students와 unique_student_identifier를 가져올 수 없습니다."
 
 #: lms/djangoapps/instructor/views/api.py
+msgid "The ORA data report is being generated."
+msgstr ""
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"An ORA data report generation task is already in progress. Check the "
+"'Pending Tasks' table for the status of the task. When completed, the report"
+" will be available for download in the table below."
+msgstr ""
+
+#: lms/djangoapps/instructor/views/api.py
 msgid ""
 "The grade report is being created. To view the status of the report, see "
-"Pending Instructor Tasks below."
-msgstr "성적 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다. "
+"Pending Tasks below."
+msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "The grade report is currently being created. To view the status of the "
-"report, see Pending Instructor Tasks below. You will be able to download the"
-" report when it is complete."
+"report, see Pending Tasks below. You will be able to download the report "
+"when it is complete."
 msgstr ""
-"성적 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다.  보고서가 완성되면 "
-"다운로드할 수 있습니다."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "The problem grade report is being created. To view the status of the report,"
-" see Pending Instructor Tasks below."
-msgstr "문제 성적 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다.  "
+" see Pending Tasks below."
+msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "A problem grade report is already being generated. To view the status of the"
-" report, see Pending Instructor Tasks below. You will be able to download "
-"the report when it is complete."
+" report, see Pending Tasks below. You will be able to download the report "
+"when it is complete."
 msgstr ""
-"문제 성적 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다.  보고서가 "
-"완성되면 다운로드할 수 있습니다."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Successfully changed due date for student {0} for {1} to {2}"
@@ -11780,10 +12295,6 @@ msgid "Data Download"
 msgstr "데이터"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
-msgid "For analytics about your course, go to {analytics_dashboard_name}."
-msgstr "강좌 분석 결과를 보기 위해,  {analytics_dashboard_name}로 가십시오."
-
-#: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Analytics"
 msgstr "분석"
 
@@ -11864,10 +12375,10 @@ msgstr "해당 학습자와 학습활동의 마감일은 연장되지 않았습�
 #: lms/djangoapps/instructor_task/tasks_helper.py cms/templates/register.html
 #: lms/templates/register-form.html lms/templates/register-shib.html
 #: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
-#: lms/templates/verify_student/face_upload.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
-#: lms/templates/register.html lms/djangoapps/instructor/views/legacy.py
+#: lms/templates/verify_student/face_upload.html lms/templates/register.html
+#: lms/djangoapps/instructor/views/legacy.py
 msgid "Full Name"
 msgstr "실명"
 
@@ -11899,6 +12410,10 @@ msgstr "재채점 되었습니다."
 msgid "reset"
 msgstr "초기화"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is a past-tense verb that is inserted into task progress
+#. messages as {action}.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
@@ -12241,6 +12756,10 @@ msgstr "이 모듈이 사용하는 형식 (어느 채점자에게 적용할 지�
 msgid "Course Chrome"
 msgstr ""
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: DO NOT translate the words in quotes here, they are
+#. specific words for the acceptable values.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: DO NOT translate the words in quotes here, they are
 #. specific words for the acceptable values.
@@ -13713,6 +14232,10 @@ msgstr "접수한 사진 인증"
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is the website name of www.facebook.com.  Please
 #. translate this the way that Facebook advertises in your language.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the website name of www.facebook.com.  Please
+#. translate this the way that Facebook advertises in your language.
 #: lms/envs/common.py lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Facebook"
 msgstr "Facebook"
@@ -13721,6 +14244,10 @@ msgstr "Facebook"
 msgid "Like {platform_name} on Facebook"
 msgstr "Facebook에서 {platform_name} 좋아요하기"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the website name of www.twitter.com.  Please
+#. translate this the way that Twitter advertises in your language.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is the website name of www.twitter.com.  Please
 #. translate this the way that Twitter advertises in your language.
@@ -13917,142 +14444,65 @@ msgid "Your Password Reset is Complete"
 msgstr "비밀번호 재설정이 완료되었습니다."
 
 #: lms/templates/registration/password_reset_complete.html
-msgid ""
-"\n"
-"      Your password has been set.  You may go ahead and %(link_start)slog in%(link_end)s now.\n"
-"      "
+msgid "Password Reset Complete"
 msgstr ""
-"\n"
-"비밀번호가 설정되었습니다. 지금 %(link_start)s 로그인 %(link_end)s 할 수 있습니다."
 
-#: lms/templates/registration/password_reset_confirm.html
+#: lms/templates/registration/password_reset_complete.html
 msgid ""
 "\n"
-"      Reset Your %(platform_name)s Password\n"
-"  "
-msgstr ""
-"\n"
-"%(platform_name)s 비밀번호를 재설정하세요."
-
-#: lms/templates/registration/password_reset_confirm.html
-msgid ""
-"\n"
-"          Reset Your %(platform_name)s Password\n"
-"          "
-msgstr ""
-"\n"
-"%(platform_name)s 비밀번호를 재설정하세요."
-
-#: lms/templates/registration/password_reset_confirm.html
-msgid "Password Reset Form"
-msgstr "비밀번호 재설정 양식"
-
-#: lms/templates/registration/password_reset_confirm.html
-msgid ""
-"\n"
-"                We're sorry, but this version of your browser is not supported. Try again using a different browser or a newer version of your browser.\n"
-"            "
+"                    Your password has been reset. %(link_start)sSign in to your account.%(link_end)s\n"
+"                "
 msgstr ""
 
 #: lms/templates/registration/password_reset_confirm.html
-msgid "The following errors occurred while processing your registration: "
-msgstr "등록 처리 중 다음 오류가 발생했습니다."
-
-#: lms/templates/registration/password_reset_confirm.html
-msgid "You must complete all fields."
-msgstr "모든 항목을 입력해야 합니다."
-
-#: lms/templates/registration/password_reset_confirm.html
-msgid "The two password fields didn't match."
-msgstr "두 비밀번호가 일치하지 않습니다."
-
-#: lms/templates/registration/password_reset_confirm.html
-msgid ""
-"We're sorry, our systems seem to be having trouble processing your password "
-"reset"
-msgstr "죄송합니다. 비밀번호 재설정 처리 중, 오류가 발생했습니다. "
-
-#: lms/templates/registration/password_reset_confirm.html
 msgid ""
 "\n"
-"                Someone has been made aware of this issue. Please try again shortly. Please %(start_link)scontact us%(end_link)s about any concerns you have.\n"
-"            "
+"    Reset Your %(platform_name)s Password\n"
 msgstr ""
-"\n"
-"누군가 이 문제를 알고 있습니다. 잠시 후에 다시 시도하십시오. 문제가 있으면 %(start_link)s  연락처%(end_link)s 로 연락주십시오."
 
 #: lms/templates/registration/password_reset_confirm.html
-msgid ""
-"Please enter your new password twice so we can verify you typed it in "
-"correctly."
-msgstr "새 비밀번호를 두 번 입력하세요."
-
-#: lms/templates/registration/password_reset_confirm.html
-msgid ""
-"\n"
-"        Required fields are noted by %(bold_start)sbold text and an asterisk (*)%(bold_end)s.\n"
-"        "
+msgid "Error Resetting Password"
 msgstr ""
-"\n"
-"%(bold_start)s굵게 표시된 입력란과 별표(*)%(bold_end)s 표시된 입력란은 필수 입력사항입니다."
 
 #: lms/templates/registration/password_reset_confirm.html
-#: lms/templates/forgot_password_modal.html lms/templates/login.html
-#: lms/templates/register-form.html lms/templates/register-shib.html
-#: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
-#: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
-#: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
-#: lms/templates/instructor/instructor_dashboard_2/invalidate_registration_code_modal.html
-#: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html
-#: themes/stanford-style/lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-shib.html
-#: lms/templates/register.html
-msgid "Required Information"
-msgstr "필수 정보"
+msgid "You must enter and confirm your new password."
+msgstr ""
 
 #: lms/templates/registration/password_reset_confirm.html
-msgid "Your New Password"
-msgstr "새 비밀번호"
+msgid "The text in both password fields must match."
+msgstr ""
 
 #: lms/templates/registration/password_reset_confirm.html
-msgid "Your New Password Again"
-msgstr "새 비밀번호 다시 입력"
+msgid "Reset Your Password"
+msgstr ""
 
 #: lms/templates/registration/password_reset_confirm.html
-msgid "Change My Password"
-msgstr "비밀번호 변경"
+msgid "Enter and confirm your new password."
+msgstr ""
 
 #: lms/templates/registration/password_reset_confirm.html
-msgid "Your Password Reset Was Unsuccessful"
-msgstr "비밀번호 재설정 실패"
+msgid "New Password"
+msgstr ""
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid "Confirm Password"
+msgstr ""
+
+#: lms/templates/registration/password_reset_confirm.html
+#: lms/templates/forgot_password_modal.html
+msgid "Reset My Password"
+msgstr "비밀번호 재설정"
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid "Invalid Password Reset Link"
+msgstr ""
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid ""
 "\n"
-"            The password reset link was invalid, possibly because the link has already been used.  Please return to the %(start_link)slogin page%(end_link)s and start the password reset process again.\n"
-"        "
+"                    This password reset link is invalid. It may have been used already. To reset your password, go to the %(start_link)ssign-in%(end_link)s page and select <strong>Forgot password</strong>.\n"
+"                "
 msgstr ""
-"\n"
-"해당 링크가 이전에 사용된 적이 있습니다.  %(start_link)s 로그인 페이지%(end_link)s로 돌아가서 비밀번호 재설정 과정을 다시 시작하세요."
-
-#: lms/templates/registration/password_reset_confirm.html
-msgid "Password Reset Help"
-msgstr "비밀번호 재설정 도움말"
-
-#: lms/templates/registration/password_reset_confirm.html
-#: lms/templates/login-sidebar.html lms/templates/register-sidebar.html
-#: themes/stanford-style/lms/templates/register-sidebar.html
-msgid "Need Help?"
-msgstr "도움이 필요하세요?"
-
-#: lms/templates/registration/password_reset_confirm.html
-msgid ""
-"\n"
-"              View our %(start_link)shelp section for contact information and answers to commonly asked questions%(end_link)s\n"
-"          "
-msgstr ""
-"\n"
-"%(start_link)s 연락처 정보 및 자주하는 질문에 대한 답변%(end_link)s 을 보십시오."
 
 #: lms/templates/registration/password_reset_email.html
 msgid ""
@@ -14303,6 +14753,10 @@ msgstr "미리보기"
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a control to allow users to exit out of this modal
 #. interface (a menu or piece of UI that takes the full focus of the screen)
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a control to allow users to exit out of this modal
+#. interface (a menu or piece of UI that takes the full focus of the screen)
 #: lms/templates/wiki/edit.html lms/templates/wiki/history.html
 #: lms/templates/wiki/includes/cheatsheet.html lms/templates/dashboard.html
 #: lms/templates/forgot_password_modal.html lms/templates/help_modal.html
@@ -14329,6 +14783,10 @@ msgstr "닫기"
 msgid "Wiki Preview"
 msgstr "위키 미리보기"
 
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this text gives status on if the modal interface (a menu or
+#. piece of UI that takes the full focus of the screen) is open or not
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this text gives status on if the modal interface (a menu or
 #. piece of UI that takes the full focus of the screen) is open or not
@@ -14645,21 +15103,6 @@ msgstr ""
 "있습니다."
 
 #: lms/templates/wiki/plugins/attachments/index.html
-#: lms/templates/dashboard.html lms/templates/index.html
-#: lms/templates/courseware/courses.html lms/templates/edxnotes/edxnotes.html
-#: themes/edx.org/lms/templates/dashboard.html
-#: themes/stanford-style/lms/templates/index.html
-#: common/static/common/templates/components/search-field.underscore
-#: lms/djangoapps/support/static/support/templates/certificates.underscore
-#: lms/djangoapps/support/static/support/templates/enrollment.underscore
-#: lms/templates/discussion/_thread_list_template.html
-#: test_root/staticfiles/common/templates/components/search-field.underscore
-#: test_root/staticfiles/support/templates/certificates.underscore
-#: test_root/staticfiles/xmodule_js/common_static/common/templates/components/search-field.underscore
-msgid "Search"
-msgstr "검색"
-
-#: lms/templates/wiki/plugins/attachments/index.html
 msgid ""
 "The following files are available for this article. Copy the markdown tag to"
 " directly refer to a file from the article text."
@@ -14725,6 +15168,26 @@ msgstr "이 버전은 삭제되었습니다."
 msgid "Restoring to this revision will mark the article as deleted."
 msgstr "이 버전으로 되돌리면 글이 삭제된 것으로 표시될 것입니다."
 
+#: openedx/core/djangoapps/api_admin/models.py cms/templates/index.html
+msgid "Denied"
+msgstr "거절됨"
+
+#: openedx/core/djangoapps/api_admin/models.py
+msgid "Approved"
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/models.py
+msgid "Status of this API access request"
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/models.py
+msgid "The URL of the website associated with this API user."
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/models.py
+msgid "The reason this user wants to access the API."
+msgstr ""
+
 #: openedx/core/djangoapps/bookmarks/views.py
 msgid "An error has occurred. Please try again."
 msgstr "오류가 발생했습니다. 다시 시도하세요."
@@ -14770,6 +15233,13 @@ msgstr "반드시  1개의 학습 집단은 학습자가 자동으로 할당될 
 msgid "A cohort with the same name already exists."
 msgstr "같은 이름의 학습 집단이 이미 존재합니다."
 
+#: openedx/core/djangoapps/coursetalk/models.py
+msgid ""
+"The platform key associates CourseTalk widgets with your platform. "
+"Generally, it is the domain name for your platform. For example, if your "
+"platform is http://edx.org, the platform key is \"edx\"."
+msgstr ""
+
 #: openedx/core/djangoapps/credentials/models.py
 #: openedx/core/djangoapps/programs/models.py
 msgid "Internal Service URL"
@@ -14797,11 +15267,13 @@ msgid "Enable authoring of Credential Service credentials in Studio."
 msgstr ""
 
 #: openedx/core/djangoapps/credentials/models.py
+#: openedx/core/djangoapps/credit/models.py
 #: openedx/core/djangoapps/programs/models.py
 msgid "Cache Time To Live"
 msgstr ""
 
 #: openedx/core/djangoapps/credentials/models.py
+#: openedx/core/djangoapps/credit/models.py
 #: openedx/core/djangoapps/programs/models.py
 msgid ""
 "Specified in seconds. Enable caching by setting this to a value greater than"
@@ -14811,6 +15283,22 @@ msgstr ""
 #: openedx/core/djangoapps/credit/email_utils.py
 msgid "Course Credit Eligibility"
 msgstr "강좌 신용 자격"
+
+#: openedx/core/djangoapps/credit/email_utils.py
+msgid "You are eligible for credit from {providers_string}"
+msgstr ""
+
+#. Translators: The join of two university names (e.g., Harvard and MIT).
+#: openedx/core/djangoapps/credit/email_utils.py
+msgid "{first_provider} and {second_provider}"
+msgstr ""
+
+#. Translators: The join of three or more university names. The first of these
+#. formatting strings
+#. represents a comma-separated list of names (e.g., MIT, Harvard, Dartmouth).
+#: openedx/core/djangoapps/credit/email_utils.py
+msgid "{first_providers}, and {last_provider}"
+msgstr ""
 
 #: openedx/core/djangoapps/credit/exceptions.py
 msgid "[{username}] is not eligible for credit for [{course_key}]."
@@ -15112,6 +15600,12 @@ msgstr "username@domain.com"
 #. below a field meant to hold the user's email address.
 #. Translators: These instructions appear on the password reset form,
 #. immediately below a field meant to hold the user's email address.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: These instructions appear on the login form, immediately
+#. below a field meant to hold the user's email address.
+#. Translators: These instructions appear on the password reset form,
+#. immediately below a field meant to hold the user's email address.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "The email address you used to register with {platform_name}"
 msgstr "{platform_name} 회원 가입 시 입력한 이메일 주소"
@@ -15179,12 +15673,20 @@ msgstr "로그인 상태 유지"
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This message is shown to users who attempt to create a new
 #. account using an email address associated with an existing account.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This message is shown to users who attempt to create a new
+#. account using an email address associated with an existing account.
 #: openedx/core/djangoapps/user_api/views.py
 msgid ""
 "It looks like {email_address} belongs to an existing account. Try again with"
 " a different email address."
 msgstr "{email_address} 이미 사용중인 이메일입니다.  다른 이메일을 입력해 주세요."
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This message is shown to users who attempt to create a new
+#. account using a username associated with an existing account.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This message is shown to users who attempt to create a new
 #. account using a username associated with an existing account.
@@ -15330,12 +15832,22 @@ msgstr "홍길동"
 #. Translators: These instructions appear on the registration form,
 #. immediately
 #. below a field meant to hold the user's full name.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: These instructions appear on the registration form,
+#. immediately
+#. below a field meant to hold the user's full name.
 #: openedx/core/djangoapps/user_api/views.py lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: lms/templates/register.html
 msgid "Your legal name, used for any certificates you earn."
 msgstr ""
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: These instructions appear on the registration form,
+#. immediately
+#. below a field meant to hold the user's public username.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: These instructions appear on the registration form,
 #. immediately
@@ -15501,9 +16013,20 @@ msgstr "HongGilDong"
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the registration form
 #. meant to hold the user's mailing address.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's mailing address.
 #: openedx/core/djangoapps/user_api/views.py lms/templates/signup_modal.html
 msgid "Mailing address"
 msgstr "우편주소"
+
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the State/Province/Region in which they
+#. live.
+#: openedx/core/djangoapps/user_api/views.py
+msgid "State/Province/Region"
+msgstr ""
 
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Please select your Country."
@@ -15598,10 +16121,22 @@ msgstr "국가를 선택하십시오"
 #. in order to register a new account.
 #. Translators: "Terms of service" is a legal document users must agree to
 #. in order to register a new account.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: "Terms of Service" is a legal document users must agree to
+#. in order to register a new account.
+#. Translators: "Terms of service" is a legal document users must agree to
+#. in order to register a new account.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "I agree to the {platform_name} {terms_of_service}."
 msgstr "{platform_name}의 {terms_of_service}에 동의합니다. "
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: "Terms of Service" is a legal document users must agree to
+#. in order to register a new account.
+#. Translators: "Terms of service" is a legal document users must agree to
+#. in order to register a new account.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: "Terms of Service" is a legal document users must agree to
 #. in order to register a new account.
@@ -16101,6 +16636,9 @@ msgstr "마지막 관리자를 제거할 수 없습니다. 다른 관리자를 �
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
 #. Translators: This is the status of an active video upload
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the status of an active video upload
 #: cms/djangoapps/contentstore/views/videos.py cms/templates/import.html
 msgid "Uploading"
 msgstr "업로딩"
@@ -16155,110 +16693,6 @@ msgstr "지속기간"
 msgid "Date Added"
 msgstr "추가된 날짜"
 
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
-#. Translators: This is listed as the duration for a video that has not
-#. yet reached the point in its processing by the servers where its
-#. duration is determined.
-#: cms/djangoapps/contentstore/views/videos.py cms/templates/index.html
-#: lms/templates/dashboard/_dashboard_status_verification.html
-msgid "Pending"
-msgstr "대기중"
-
 #. Translators: This is the suggested filename when downloading the URL
 #. listing for videos uploaded through Studio
 #: cms/djangoapps/contentstore/views/videos.py
@@ -16304,7 +16738,7 @@ msgid "Incorrect format for field '{name}'. {detailed_message}"
 msgstr "잘못된 '{name}' 영역의 포맷. {detailed_message} "
 
 #: cms/lib/xblock/tagging.py
-msgid "Learning outcomes"
+msgid "Difficulty"
 msgstr ""
 
 #: cms/lib/xblock/tagging.py
@@ -16347,7 +16781,6 @@ msgstr "설정"
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/manage_users.html cms/templates/manage_users_lib.html
 #: lms/templates/modal/accessible_confirm.html
-#: lms/templates/verify_student/face_upload.html
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 #: cms/templates/js/add-xblock-component-menu.underscore
 #: cms/templates/js/certificate-editor.underscore
@@ -16366,6 +16799,7 @@ msgstr "설정"
 #: lms/djangoapps/support/static/support/templates/enrollment-modal.underscore
 #: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: lms/templates/verify_student/face_upload.html
 #: test_root/staticfiles/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/common/templates/discussion/response-comment-edit.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-edit.underscore
@@ -16405,18 +16839,23 @@ msgstr "기관:"
 msgid "Course Number:"
 msgstr "강좌 번호:"
 
-#: cms/templates/index.html lms/templates/navigation.html
-#: lms/templates/sysadmin_dashboard.html
-#: lms/templates/sysadmin_dashboard_gitlogs.html
-#: lms/templates/courseware/courses.html
-#: themes/red-theme/lms/templates/header.html
-msgid "Courses"
-msgstr "강좌"
+#: cms/templates/login.html themes/red-theme/cms/templates/login.html
+msgid "Sign In to {studio_name}"
+msgstr "{studio_name} 로그인"
+
+#: cms/templates/login.html themes/red-theme/cms/templates/login.html
+msgid "Don't have a {studio_name} Account? Sign up!"
+msgstr "{studio_name}에 지금 가입하세요!"
+
+#: cms/templates/login.html themes/red-theme/cms/templates/login.html
+msgid "Required Information to Sign In to {studio_name}"
+msgstr "{studio_name}에 로그인하기 위한 필요 정보"
 
 #: cms/templates/login.html cms/templates/register.html
 #: lms/templates/help_modal.html lms/templates/login.html
 #: lms/templates/provider_login.html lms/templates/register-form.html
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
+#: themes/red-theme/cms/templates/login.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 #: lms/templates/register.html
@@ -16429,7 +16868,7 @@ msgstr "이메일"
 #: cms/templates/login.html cms/templates/manage_users.html
 #: cms/templates/manage_users_lib.html cms/templates/register.html
 #: lms/templates/login.html lms/templates/register-form.html
-#: lms/templates/register-shib.html
+#: lms/templates/register-shib.html themes/red-theme/cms/templates/login.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 #: lms/templates/register.html
@@ -16437,6 +16876,7 @@ msgid "example: username@domain.com"
 msgstr "예: username@domain.com"
 
 #: cms/templates/login.html lms/templates/login.html
+#: themes/red-theme/cms/templates/login.html
 #: lms/templates/student_account/form_field.underscore
 #: test_root/staticfiles/templates/student_account/form_field.underscore
 msgid "Forgot password?"
@@ -16445,9 +16885,8 @@ msgstr "비밀번호를 잊어버리셨나요?"
 #. Translators: This is the placeholder text for a field that requests the
 #. user's full name.
 #: cms/templates/register.html lms/templates/register-form.html
-#: lms/templates/verify_student/face_upload.html
 #: themes/stanford-style/lms/templates/register-form.html
-#: lms/templates/register.html
+#: lms/templates/verify_student/face_upload.html lms/templates/register.html
 msgid "example: Jane Doe"
 msgstr "예: 홍길동"
 
@@ -16469,11 +16908,6 @@ msgstr "아이디"
 msgid "example: JaneDoe"
 msgstr "예: HongGilDong"
 
-#: cms/templates/register.html
-#: lms/templates/dashboard/_dashboard_info_language.html
-msgid "Preferred Language"
-msgstr "선호하는 언어"
-
 #: cms/templates/settings.html
 #: lms/templates/instructor/instructor_dashboard_2/executive_summary.html
 msgid "Course End Date"
@@ -16488,6 +16922,9 @@ msgstr "학습 시간 및 선수 강좌"
 msgid "Details"
 msgstr "세부사항"
 
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a verb describing the action of viewing more details
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a verb describing the action of viewing more details
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
@@ -16716,12 +17153,6 @@ msgstr "개강일"
 msgid "View all Courses"
 msgstr "모든 강좌 보기"
 
-#: lms/templates/dashboard.html lms/templates/navigation-edx.html
-#: lms/templates/navigation.html themes/edx.org/lms/templates/dashboard.html
-#: themes/edx.org/lms/templates/header.html
-msgid "Dashboard"
-msgstr "대시보드"
-
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
 msgid "My Courses"
 msgstr "내 강좌"
@@ -16863,6 +17294,20 @@ msgid ""
 "setting a new password."
 msgstr "아래에 이메일 주소를 입력 해주십시오, 새로운 비밀번호를 설정하기 위한 안내를 이메일로 보내드립니다."
 
+#: lms/templates/forgot_password_modal.html lms/templates/login.html
+#: lms/templates/register-form.html lms/templates/register-shib.html
+#: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
+#: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
+#: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
+#: lms/templates/instructor/instructor_dashboard_2/invalidate_registration_code_modal.html
+#: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html
+#: themes/stanford-style/lms/templates/register-form.html
+#: themes/stanford-style/lms/templates/register-shib.html
+#: lms/templates/registration/password_reset_confirm.html
+#: lms/templates/register.html
+msgid "Required Information"
+msgstr "필수 정보"
+
 #: lms/templates/forgot_password_modal.html
 msgid "Your E-mail Address"
 msgstr "이메일 주소"
@@ -16870,10 +17315,6 @@ msgstr "이메일 주소"
 #: lms/templates/forgot_password_modal.html lms/templates/login.html
 msgid "This is the e-mail address you used to register with {platform}"
 msgstr "{platform} 계정을 만들 때 입력한 이메일입니다"
-
-#: lms/templates/forgot_password_modal.html
-msgid "Reset My Password"
-msgstr "비밀번호 재설정"
 
 #: lms/templates/forgot_password_modal.html
 msgid "Email is incorrect."
@@ -17110,6 +17551,12 @@ msgstr "계정이 없으신가요?"
 msgid "Sign up for {platform_name} today!"
 msgstr "{platform_name}에 가입하세요!"
 
+#: lms/templates/login-sidebar.html lms/templates/register-sidebar.html
+#: themes/stanford-style/lms/templates/register-sidebar.html
+#: lms/templates/registration/password_reset_confirm.html
+msgid "Need Help?"
+msgstr "도움이 필요하세요?"
+
 #: lms/templates/login-sidebar.html
 msgid "Looking for help in logging in or with your {platform_name} account?"
 msgstr "{platform_name}로 로그인하는데 도움이 필요하세요?"
@@ -17303,10 +17750,6 @@ msgstr "동작 원리"
 msgid "Find Courses"
 msgstr "강좌 찾기"
 
-#: lms/templates/navigation-edx.html themes/edx.org/lms/templates/header.html
-msgid "Schools & Partners"
-msgstr "대학교 및 협력기관"
-
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
 #: themes/edx.org/lms/templates/header.html
 #: themes/red-theme/lms/templates/header.html
@@ -17349,13 +17792,6 @@ msgid "Sign in"
 msgstr "로그인"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
-#: lms/templates/register-form.html themes/edx.org/lms/templates/header.html
-#: themes/stanford-style/lms/templates/register-form.html
-#: lms/templates/register.html
-msgid "Register"
-msgstr "가입하기 "
-
-#: lms/templates/navigation-edx.html lms/templates/navigation.html
 #: themes/edx.org/lms/templates/header.html
 #: themes/red-theme/lms/templates/header.html
 msgid ""
@@ -17396,7 +17832,6 @@ msgid "Reset"
 msgstr "초기화"
 
 #: lms/templates/problem.html lms/templates/word_cloud.html
-#: lms/templates/verify_student/face_upload.html
 #: cms/templates/js/certificate-editor.underscore
 #: cms/templates/js/content-group-editor.underscore
 #: cms/templates/js/course_info_handouts.underscore
@@ -17408,6 +17843,7 @@ msgstr "초기화"
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: lms/templates/verify_student/face_upload.html
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
@@ -18318,6 +18754,10 @@ msgid "Name your CCX"
 msgstr "CCX의 이름을 입력하세요."
 
 #: lms/templates/ccx/coach_dashboard.html
+msgid "Create a new Custom Course for edX"
+msgstr ""
+
+#: lms/templates/ccx/coach_dashboard.html
 msgid "Schedule"
 msgstr "일정"
 
@@ -18325,6 +18765,10 @@ msgstr "일정"
 #: lms/templates/ccx/grading_policy.html
 msgid "Grading Policy"
 msgstr "성적 규정"
+
+#: lms/templates/ccx/coach_dashboard.html
+msgid "Please enter a valid CCX name."
+msgstr ""
 
 #: lms/templates/ccx/enrollment.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
@@ -18844,14 +19288,6 @@ msgid "View About Page in studio"
 msgstr "스튜디오에서 About Page 보기"
 
 #: lms/templates/courseware/course_about.html
-msgid "Course About"
-msgstr "강좌 소개"
-
-#: lms/templates/courseware/course_about.html
-msgid "Overview"
-msgstr "개요"
-
-#: lms/templates/courseware/course_about.html
 msgid "Classes Start"
 msgstr "개강일"
 
@@ -18861,7 +19297,7 @@ msgstr "종강일"
 
 #: lms/templates/courseware/course_about.html
 msgid "Estimated Effort"
-msgstr "학습 권장 시간"
+msgstr "주간 학습 권장 시간"
 
 #: lms/templates/courseware/course_about.html
 msgid "Prerequisites"
@@ -18952,12 +19388,6 @@ msgstr "<i>{user_name}</i>로 강좌를 보고 있습니다. "
 #: lms/templates/courseware/course_navigation.html
 msgid "Course Material"
 msgstr "학습 자료"
-
-#. Translators: 'needs attention' is an alternative string for the
-#. notification image that indicates the tab "needs attention".
-#: lms/templates/courseware/course_navigation.html
-msgid "needs attention"
-msgstr "주의 필요"
 
 #: lms/templates/courseware/course_navigation.html
 msgid "Course is not yet visible to students."
@@ -19099,10 +19529,6 @@ msgstr "학습 자료 찾기"
 #: lms/templates/courseware/info.html
 msgid "Important Course Dates"
 msgstr ""
-
-#: lms/templates/courseware/info.html
-msgid "Course Updates &amp; News"
-msgstr "공지사항"
 
 #: lms/templates/courseware/news.html
 msgid "News - MITx 6.002x"
@@ -19252,6 +19678,13 @@ msgstr "점수가 없습니다."
 msgid "{course.display_number_with_default} Course Info"
 msgstr " {course.display_number_with_default} 강좌 정보"
 
+#. Translators: 'needs attention' is an alternative string for the
+#. notification image that indicates the tab "needs attention".
+#: lms/templates/courseware/tabs.html
+#: lms/templates/courseware/course_navigation.html
+msgid "needs attention"
+msgstr "주의 필요"
+
 #: lms/templates/courseware/welcome-back.html
 msgid ""
 "You were most recently in {section_link}.  If you're done with that, choose "
@@ -19266,6 +19699,13 @@ msgstr "안녕하세요 {name}님, "
 
 #: lms/templates/credit_notifications/credit_eligibility_email.html
 msgid "Hi,"
+msgstr ""
+
+#: lms/templates/credit_notifications/credit_eligibility_email.html
+msgid ""
+"Congratulations! You are eligible to receive course credit from {providers} "
+"for successfully completing your {platform_name} course! {link_start}Get "
+"your credit now.{link_end}"
 msgstr ""
 
 #: lms/templates/credit_notifications/credit_eligibility_email.html
@@ -19456,12 +19896,8 @@ msgid "I'm learning on {platform_name}:"
 msgstr "{platform_name}에서 학습하고 있습니다:"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-msgid "Course options dropdown"
-msgstr "강좌 선택사항 보기"
-
-#: lms/templates/dashboard/_dashboard_course_listing.html
-msgid "Additional Actions Menu"
-msgstr "추가 액션 메뉴"
+msgid "Course options for"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Available Actions"
@@ -19591,6 +20027,10 @@ msgid ""
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_credit_info.html
+msgid "You are now eligible for credit from {provider}. Congratulations!"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_credit_info.html
 #: lms/templates/commerce/provider.underscore
 #: test_root/staticfiles/templates/commerce/provider.underscore
 msgid "Get Credit"
@@ -19617,6 +20057,7 @@ msgstr ""
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. Translators: provider_name is the name of a credit provider or university
 #. (e.g. State University)
 #: lms/templates/dashboard/_dashboard_credit_info.html
@@ -19629,6 +20070,12 @@ msgstr ""
 msgid "View Details"
 msgstr ""
 
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: link_to_provider_site is a link to an external webpage. The
+#. text of the link will be the name of a credit provider, such as 'State
+#. University' or 'Happy Fun Company'. provider_name is the name of credit
+#. provider.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: link_to_provider_site is a link to an external webpage. The
 #. text of the link will be the name of a credit provider, such as 'State
@@ -19693,6 +20140,7 @@ msgstr ""
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. Translators: link_to_provider_site is a link to an external webpage. The
 #. text of the link will be the name of a
 #. credit provider, such as 'State University' or 'Happy Fun Company'.
@@ -19707,10 +20155,6 @@ msgstr ""
 msgid ""
 "An error occurred with this transaction. For help, contact {support_email}."
 msgstr "결제 처리과정에서 오류가 발생했습니다. {support_email}에게 문의하세요."
-
-#: lms/templates/dashboard/_dashboard_info_language.html
-msgid "edit"
-msgstr "편집"
 
 #: lms/templates/dashboard/_dashboard_status_verification.html
 msgid "ID Verification Status"
@@ -21025,6 +21469,10 @@ msgid "Generate Problem Grade Report"
 msgstr "문항 성적 보고서 생성"
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Generate ORA Data Report"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Reports Available for Download"
 msgstr "다운로드 가능한 보고서"
 
@@ -21603,6 +22051,12 @@ msgstr "고객의 구매 주문 혹은 다른 고객정보"
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 msgid "Send me a copy of the invoice"
 msgstr "청구서 사본을 보내주세요."
+
+#: lms/templates/instructor/instructor_dashboard_2/instructor_analytics.html
+msgid ""
+"For analytics about your course, go to "
+"{link_start}{analytics_dashboard_name}{link_end}."
+msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html
 msgid "Instructor Dashboard"
@@ -22909,11 +23363,6 @@ msgstr ""
 "시스템에 따르면, 귀하가 {platform_name} 강좌의 현재 이용 불가 지역 또는 국가에서 등록을 시도 중인 것으로 나타납니다. "
 "유감스럽지만, 이 경우  {platform_name}은 강좌 접근을 허용할 수 없습니다.  "
 
-#: lms/templates/static_templates/faq.html
-#: themes/red-theme/lms/templates/footer.html
-msgid "FAQ"
-msgstr "자주하는 질문"
-
 #: lms/templates/static_templates/jobs.html
 #: themes/red-theme/lms/templates/footer.html lms/djangoapps/branding/api.py
 msgid "Jobs"
@@ -23067,14 +23516,6 @@ msgid ""
 msgstr ""
 "이 강좌나 형식에 대해 질문이 있다면 <a href=\"{mail_to_link}\"\">{mail_to_link}</a>로 "
 "연락해주세요."
-
-#: lms/templates/verify_student/face_upload.html
-msgid "Edit Your Full Name"
-msgstr "실명 편집"
-
-#: lms/templates/verify_student/face_upload.html
-msgid "The following error occurred while editing your name:"
-msgstr "당신의 이름을 편집하는 동안 다음 오류가 발생했습니다 :"
 
 #: lms/templates/verify_student/incourse_reverify.html
 msgid "Re-Verify for {course_name}"
@@ -23309,8 +23750,8 @@ msgid "{studio_name} Server Error"
 msgstr "{studio_name} 서버 오류"
 
 #: cms/templates/500.html
-msgid "The {studio_name} servers encountered an error"
-msgstr "{studio_name}서버에서 오류가 발생했습니다."
+msgid "The {em_start}{studio_name}{em_end} servers encountered an error"
+msgstr ""
 
 #: cms/templates/500.html
 msgid ""
@@ -23377,9 +23818,9 @@ msgstr ""
 "그래도 문제가 있다면, {platform_name} 지원 센터에 문의하세요. {link_start}{studio_name} 홈페이지로 "
 "되돌아 올수 있습니다{link_end} "
 
-#: cms/templates/asset_index.html cms/templates/widgets/header.html
-msgid "Files &amp; Uploads"
-msgstr "파일 업로드"
+#: cms/templates/asset_index.html
+msgid "Files & Uploads"
+msgstr ""
 
 #: cms/templates/asset_index.html cms/templates/course_info.html
 #: cms/templates/course_outline.html cms/templates/edit-tabs.html
@@ -24922,36 +25363,26 @@ msgid ""
 msgstr "나중에 변경할 수 없습니다. "
 
 #: cms/templates/index.html
-msgid "The name of the organization sponsoring the course."
-msgstr "강좌 제공 기관 이름입니다."
-
-#: cms/templates/index.html
-msgid "Note: The organization name is part of the course URL"
+msgid ""
+"The name of the organization sponsoring the course. {strong_start}Note: The "
+"organization name is part of the course URL.{strong_end} This cannot be "
+"changed, but you can set a different display name in Advanced Settings "
+"later."
 msgstr ""
 
 #: cms/templates/index.html
 msgid ""
-"This cannot be changed, but you can set a different display name in Advanced"
-" Settings later."
-msgstr "고급 설정에서 학습자가 볼 명칭을 새롭게 설정할 수 있습니다."
+"The unique number that identifies your course within your organization. "
+"{strong_start}Note: This is part of your course URL, so no spaces or special"
+" characters are allowed and it cannot be changed.{strong_end}"
+msgstr ""
 
 #: cms/templates/index.html
 msgid ""
-"The unique number that identifies your course within your organization."
+"The term in which your course will run. {strong_start}Note: This is part of "
+"your course URL, so no spaces or special characters are allowed and it "
+"cannot be changed.{strong_end}"
 msgstr ""
-"이 강좌의 고유한 번호로 'KMOOC01'과 같이, 강좌 제공 기관의 영문 약자와 제공 기관의 몇 번째 강좌인지 번호의 조합으로 "
-"입력합니다. "
-
-#: cms/templates/index.html
-msgid ""
-"Note: This is part of your course URL, so no spaces or special characters "
-"are allowed and it cannot be changed."
-msgstr ""
-"주의: 강좌 URL의 일부로 영어 알파벳과 숫자로 작성되며, 공백이나 특수문자는 허용되지 않습니다. 초기 설정 후, 변경할 수 없습니다."
-
-#: cms/templates/index.html
-msgid "The term in which your course will run."
-msgstr "강좌 제공 기관별로 자유롭게 번호를 지정할 수 있습니다. "
 
 #: cms/templates/index.html
 msgid "Create"
@@ -25002,14 +25433,11 @@ msgid "e.g. CSPROB"
 msgstr "예: CSPROB"
 
 #: cms/templates/index.html
-msgid "The unique code that identifies this library."
-msgstr "이 콘텐츠 보관함을 식별하기 위한 고유 코드입니다."
-
-#: cms/templates/index.html
 msgid ""
-"Note: This is part of your library URL, so no spaces or special characters "
-"are allowed."
-msgstr "주의: 강좌 URL의 일부로 영어 알파벳과 숫자로 작성하며, 공백이나 특수문자는 허용되지 않습니다."
+"The unique code that identifies this library. {strong_start}Note: This is "
+"part of your library URL, so no spaces or special characters are "
+"allowed.{strong_end} This cannot be changed."
+msgstr ""
 
 #: cms/templates/index.html
 msgid "Courses Being Processed"
@@ -25136,10 +25564,6 @@ msgid "Your Course Creator request is:"
 msgstr "강좌 생성자 요청 :"
 
 #: cms/templates/index.html
-msgid "Denied"
-msgstr "거절됨"
-
-#: cms/templates/index.html
 msgid ""
 "Your request did not meet the criteria/guidelines specified by "
 "{platform_name} Staff."
@@ -25243,8 +25667,8 @@ msgstr ""
 "{platform_name} 관리자에게 연락하세요{link_end}."
 
 #: cms/templates/index.html
-msgid "Thanks for signing up, %(name)s!"
-msgstr "%(name)s님, 환영합니다!"
+msgid "Thanks for signing up, {name}!"
+msgstr ""
 
 #: cms/templates/index.html
 msgid "We need to verify your email address"
@@ -25253,10 +25677,9 @@ msgstr "이메일 확인이 필요합니다."
 #: cms/templates/index.html
 msgid ""
 "Almost there! In order to complete your sign up we need you to verify your "
-"email address (%(email)s). An activation message and next steps should be "
+"email address ({email}). An activation message and next steps should be "
 "waiting for you there."
 msgstr ""
-"등록 절차를 완료하려면 이메일 주소(%(email)s)를 인증받아야 합니다. 입력한 이메일 주소로 발신된 등록 이메일을 확인해주세요."
 
 #: cms/templates/index.html
 msgid "Need help?"
@@ -25317,22 +25740,6 @@ msgstr ""
 #: cms/templates/library.html
 msgid "Learn more about content libraries"
 msgstr "콘텐츠 보관함에 대해 자세히 알아보기"
-
-#: cms/templates/login.html cms/templates/widgets/header.html
-msgid "Sign In"
-msgstr "로그인"
-
-#: cms/templates/login.html
-msgid "Sign In to {studio_name}"
-msgstr "{studio_name} 로그인"
-
-#: cms/templates/login.html
-msgid "Don't have a {studio_name} Account? Sign up!"
-msgstr "{studio_name}에 지금 가입하세요!"
-
-#: cms/templates/login.html
-msgid "Required Information to Sign In to {studio_name}"
-msgstr "{studio_name}에 로그인하기 위한 필요 정보"
 
 #: cms/templates/manage_users.html
 msgid "Course Team Settings"
@@ -25511,6 +25918,11 @@ msgstr "edX101 지원 게시판이나, 강좌 게시판 등에서 나를 나타�
 #: cms/templates/register.html
 msgid "Your Location"
 msgstr "지역"
+
+#: cms/templates/register.html
+#: lms/templates/dashboard/_dashboard_info_language.html
+msgid "Preferred Language"
+msgstr "선호하는 언어"
 
 #: cms/templates/register.html
 msgid "I agree to the {a_start} Terms of Service {a_end}"
@@ -25832,7 +26244,7 @@ msgstr "효과적인 학습을 위해 학습 시간 및 선수 강좌를 입력�
 
 #: cms/templates/settings.html
 msgid "Hours of Effort per Week"
-msgstr "주별 학습 권장 시간"
+msgstr "주간 학습 권장 시간"
 
 #: cms/templates/settings.html
 msgid "Time spent on all course work"
@@ -26382,6 +26794,10 @@ msgstr "강좌 개요"
 #: cms/templates/widgets/header.html
 msgid "Updates"
 msgstr "공지사항"
+
+#: cms/templates/widgets/header.html cms/templates/asset_index.html
+msgid "Files &amp; Uploads"
+msgstr "파일 업로드"
 
 #: cms/templates/widgets/header.html
 msgid "Schedule &amp; Details"
@@ -28414,17 +28830,14 @@ msgid "Not selected"
 msgstr "선택되지 않았습니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
-#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid ""
-"%(screen_reader_start)sWarning:%(screen_reader_end)s The previously selected"
-" content group was deleted. Select another content group."
+"{screen_reader_start}Warning:{screen_reader_end} The previously selected "
+"content group was deleted. Select another content group."
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
-#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid ""
-"%(screen_reader_start)sWarning:%(screen_reader_end)s No content groups "
-"exist."
+"{screen_reader_start}Warning:{screen_reader_end} No content groups exist."
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
@@ -28489,14 +28902,11 @@ msgid "Assign students to cohorts by uploading a CSV file"
 msgstr "CSV 파일을 업로드하여 학습 집단에 학습자를 추가하세요."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
-#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid ""
 "To review student cohort assignments or see the results of uploading a CSV "
-"file, download course profile information or cohort results on "
-"%(link_start)s the Data Download page. %(link_end)s"
+"file, download course profile information or cohort results on {link_start} "
+"the Data Download page. {link_end}"
 msgstr ""
-"학습 집단의 과제를 검토하거나 CSV 파일 업로드의 결과를 보려면,  학습자 정보나 %(link_start)s 데이터 페이지  "
-"%(link_end)s 에 있는 학습 집단 결과를 다운로드하세요.  "
 
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
@@ -29363,6 +29773,460 @@ msgstr "사진 재촬영"
 #: test_root/staticfiles/templates/verify_student/webcam_photo.underscore
 msgid "Take Photo"
 msgstr "사진 촬영"
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid ""
+"Enter true or false. If true, discussion categories and subcategories are "
+"sorted alphabetically. If false, they are sorted chronologically."
+msgstr ""
+"True 또는 False를 입력합니다. True를 입력할 경우, 토의 항목 및 하위 항목들이 알파벳 순으로 정렬됩니다. False를 "
+"입력할 경우, 입력 순으로 정렬됩니다."
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid ""
+"Enter the URL for the official course Facebook group. If you provide a URL, "
+"the mobile app includes a button that students can tap to access the group."
+msgstr ""
+"강좌의 공식 Facebook 그룹에 연결하려면 URL을 입력해주십시오. URL을 입력하면, 학습자들이 Facebook 그룹에 접속할 수 "
+"있도록 모바일 앱에 버튼이 나타납니다."
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid "Facebook URL"
+msgstr "Facebook URL"
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid ""
+"For HTML textbooks that appear as separate tabs in the courseware, enter the"
+" name of the tab (usually the name of the book) as well as the URLs and "
+"titles of all the chapters in the book."
+msgstr ""
+"HTML 교재가 별도의 탭으로 표시될 수 있도록, 교재 내 모든 챕터의 URL과 챕터 이름, 그리고 탭의 이름(보통 교재명 사용)을 "
+"입력하세요."
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid ""
+"True if timezones should be shown on dates in the courseware. Deprecated in "
+"favor of due_date_display_format."
+msgstr "강좌 시간대를 표시할 경우에 True를 입력하세요."
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid ""
+"Enter the course organization that you want to appear in the courseware. "
+"This setting overrides the organization that you entered when you created "
+"the course. To use the organization that you entered when you created the "
+"course, enter null."
+msgstr ""
+"학습실에서 보이도록 할 강좌 제공 기관을 입력하세요. 강좌를 생성할 때 입력했던 기관은 이 기관으로 바뀝니다. 강좌를 만들 때 입력했던 "
+"기관을 사용하려면, null을 입력하세요."
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid ""
+"Enter the course number that you want to appear in the courseware. This "
+"setting overrides the course number that you entered when you created the "
+"course. To use the course number that you entered when you created the "
+"course, enter null."
+msgstr ""
+"강좌에 표시할 강좌 번호를 입력하세요. 이로써 강좌를 생성할 때 입력한 강좌 번호는 없어집니다. 만약 강좌를 생성할 때 입력한 강좌 "
+"번호를 사용하려면 null을 입력하세요."
+
+#. Translators: "GIT_IMPORT_WITH_XMLMODULESTORE" is a variable name.
+#. "XMLModuleStore" and "MongoDB" are database systems. You should not
+#. translate these names.
+#: lms/djangoapps/dashboard/sysadmin.py
+msgid ""
+"Refusing to import. GIT_IMPORT_WITH_XMLMODULESTORE is not turned on, and it "
+"is generally not safe to import into an XMLModuleStore with multithreaded. "
+"We recommend you enable the MongoDB based module store instead, unless this "
+"is a development environment."
+msgstr ""
+"가져오기를 거부하려면 \"GIT_IMPORT_WITH_XMLMODULESTORE\"가 켜지면 안됩니다. 그리고 multithreaded를"
+" 가지고 XMLModuleStore로 가져오기를 하는 것이 일반적으로 안전하지는 않습니다. 개발 환경이 아니라면,  "
+"XMLModuleStore 대신 MongoDB 기반 모듈을 활성화하는 것을 권합니다."
+
+#: lms/djangoapps/dashboard/sysadmin.py
+msgid ""
+"The course {0} already exists in the data directory! (reloading anyway)"
+msgstr "강좌 {0}가 이미 데이터 디렉토리에 존재합니다!  (새로고침 중입니다.)"
+
+#. Translators: unable to download the course content from
+#. the source git repository. Clone occurs if this is brand
+#. new, and pull is when it is being updated from the
+#. source.
+#: lms/djangoapps/dashboard/sysadmin.py
+msgid ""
+"Unable to clone or pull repository. Please check your url. Output was: {0!r}"
+msgstr "Unable to clone or pull repository. URL을 확인하세요. Output was: {0!r}"
+
+#: lms/djangoapps/dashboard/sysadmin.py
+msgid "Failed to clone repository to {directory_name}"
+msgstr "저장소를 {directory_name}로 복제하는 데 실패했습니다. "
+
+#: lms/djangoapps/dashboard/sysadmin.py
+msgid "Successfully switched to branch: {branch_name}"
+msgstr " 성공적으로 {branch_name} branch로 전환되었습니다."
+
+#: lms/djangoapps/dashboard/sysadmin.py
+msgid "Loaded course {course_name}<br/>Errors:"
+msgstr "등록된 강좌 {course_name}<br/> 오류:"
+
+#: lms/djangoapps/edxnotes/helpers.py
+msgid "Server error. Please try again in a few minutes."
+msgstr "서버 오류. 잠시 후에 다시 시도하세요."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"The enrolled learner profile report is being created. To view the status of "
+"the report, see Pending Instructor Tasks below."
+msgstr ""
+"수강등록한 학습자의 프로필 보고서가 생성중입니다. 보고서 생성 상태를 확인하기 위해 아래의 Pending Instructor Tasks "
+"를 살펴 보세요."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"This enrollment report is currently being created. To view the status of the"
+" report, see Pending Instructor Tasks below. You will be able to download "
+"the report when it is complete."
+msgstr ""
+"현재 수강 등록 보고서가 생성중입니다. 보고서의 현재 상태를 확인하기 위해 아래의 Pending Instructor Tasks를 살펴 "
+"보세요. 완료 상태가 되면 보고서를 다운 받을 수 있습니다. "
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"The enrollment report is being created. This report contains information "
+"about learners who can enroll in the course. To view the status of the "
+"report, see Pending Instructor Tasks below."
+msgstr ""
+"수강 등록 보고서가 생성중입니다. 보고서에는 강좌를 수강할 수 있는 학습자에 대한 정보가 담겨 있습니다. 보고서의 현재 상태를 확인하기 "
+"위해 아래 Pending Instructor Tasks 를 살펴 보세요."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"The detailed enrollment report is being created. To view the status of the "
+"report, see Pending Instructor Tasks below."
+msgstr ""
+"상세한 수강신청 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다. "
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"The detailed enrollment report is being created. To view the status of the "
+"report, see Pending Instructor Tasks below. You will be able to download the"
+" report when it is complete."
+msgstr ""
+"상세한 수강신청 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다. 보고서가 "
+"완성되면 다운로드할 수 있습니다."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"The executive summary report is being created. To view the status of the "
+"report, see Pending Instructor Tasks below."
+msgstr "경영 종합 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"The executive summary report is currently being created. To view the status "
+"of the report, see Pending Instructor Tasks below. You will be able to "
+"download the report when it is complete."
+msgstr ""
+"경영 종합 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다. 보고서가 완성되면"
+" 다운로드할 수 있습니다."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"The survey report is being created. To view the status of the report, see "
+"Pending Instructor Tasks below."
+msgstr ""
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"The survey report is currently being created. To view the status of the "
+"report, see Pending Instructor Tasks below. You will be able to download the"
+" report when it is complete."
+msgstr ""
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"The proctored exam results report is being created. To view the status of "
+"the report, see Pending Instructor Tasks below."
+msgstr "감독이 있는 평가 결과 보고서가 만들어지고 있습니다. 보고서의 상태를 보려면, 아래의 대기중인 교수자 작업을 보세요."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"The proctored exam results report is currently being created. To view the "
+"status of the report, see Pending Instructor Tasks below. You will be able "
+"to download the report when it is complete."
+msgstr ""
+"감독이 있는 평가 결과 보고서가 생성되었습니다. 보고서의 상태를 보려면, 아래의 대기중인 교수자 작업을 보세요. 생성 완료된 보고서는 "
+"다운로드할 수 있습니다."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"The grade report is being created. To view the status of the report, see "
+"Pending Instructor Tasks below."
+msgstr "성적 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다. "
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"The grade report is currently being created. To view the status of the "
+"report, see Pending Instructor Tasks below. You will be able to download the"
+" report when it is complete."
+msgstr ""
+"성적 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다.  보고서가 완성되면 "
+"다운로드할 수 있습니다."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"The problem grade report is being created. To view the status of the report,"
+" see Pending Instructor Tasks below."
+msgstr "문제 성적 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다.  "
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"A problem grade report is already being generated. To view the status of the"
+" report, see Pending Instructor Tasks below. You will be able to download "
+"the report when it is complete."
+msgstr ""
+"문제 성적 보고서가 작성되고 있는 중입니다. 아래의 '대기중인 교수자 과제'에서 보고서의 현재 상태를 볼 수 있습니다.  보고서가 "
+"완성되면 다운로드할 수 있습니다."
+
+#: lms/djangoapps/instructor/views/instructor_dashboard.py
+msgid "For analytics about your course, go to {analytics_dashboard_name}."
+msgstr "강좌 분석 결과를 보기 위해,  {analytics_dashboard_name}로 가십시오."
+
+#: lms/templates/registration/password_reset_complete.html
+msgid ""
+"\n"
+"      Your password has been set.  You may go ahead and %(link_start)slog in%(link_end)s now.\n"
+"      "
+msgstr ""
+"\n"
+"비밀번호가 설정되었습니다. 지금 %(link_start)s 로그인 %(link_end)s 할 수 있습니다."
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid ""
+"\n"
+"      Reset Your %(platform_name)s Password\n"
+"  "
+msgstr ""
+"\n"
+"%(platform_name)s 비밀번호를 재설정하세요."
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid ""
+"\n"
+"          Reset Your %(platform_name)s Password\n"
+"          "
+msgstr ""
+"\n"
+"%(platform_name)s 비밀번호를 재설정하세요."
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid "Password Reset Form"
+msgstr "비밀번호 재설정 양식"
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid ""
+"\n"
+"                We're sorry, but this version of your browser is not supported. Try again using a different browser or a newer version of your browser.\n"
+"            "
+msgstr ""
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid "The following errors occurred while processing your registration: "
+msgstr "등록 처리 중 다음 오류가 발생했습니다."
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid "You must complete all fields."
+msgstr "모든 항목을 입력해야 합니다."
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid "The two password fields didn't match."
+msgstr "두 비밀번호가 일치하지 않습니다."
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid ""
+"We're sorry, our systems seem to be having trouble processing your password "
+"reset"
+msgstr "죄송합니다. 비밀번호 재설정 처리 중, 오류가 발생했습니다. "
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid ""
+"\n"
+"                Someone has been made aware of this issue. Please try again shortly. Please %(start_link)scontact us%(end_link)s about any concerns you have.\n"
+"            "
+msgstr ""
+"\n"
+"누군가 이 문제를 알고 있습니다. 잠시 후에 다시 시도하십시오. 문제가 있으면 %(start_link)s  연락처%(end_link)s 로 연락주십시오."
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr "새 비밀번호를 두 번 입력하세요."
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid ""
+"\n"
+"        Required fields are noted by %(bold_start)sbold text and an asterisk (*)%(bold_end)s.\n"
+"        "
+msgstr ""
+"\n"
+"%(bold_start)s굵게 표시된 입력란과 별표(*)%(bold_end)s 표시된 입력란은 필수 입력사항입니다."
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid "Your New Password"
+msgstr "새 비밀번호"
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid "Your New Password Again"
+msgstr "새 비밀번호 다시 입력"
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid "Change My Password"
+msgstr "비밀번호 변경"
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid "Your Password Reset Was Unsuccessful"
+msgstr "비밀번호 재설정 실패"
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid ""
+"\n"
+"            The password reset link was invalid, possibly because the link has already been used.  Please return to the %(start_link)slogin page%(end_link)s and start the password reset process again.\n"
+"        "
+msgstr ""
+"\n"
+"해당 링크가 이전에 사용된 적이 있습니다.  %(start_link)s 로그인 페이지%(end_link)s로 돌아가서 비밀번호 재설정 과정을 다시 시작하세요."
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid "Password Reset Help"
+msgstr "비밀번호 재설정 도움말"
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid ""
+"\n"
+"              View our %(start_link)shelp section for contact information and answers to commonly asked questions%(end_link)s\n"
+"          "
+msgstr ""
+"\n"
+"%(start_link)s 연락처 정보 및 자주하는 질문에 대한 답변%(end_link)s 을 보십시오."
+
+#: cms/lib/xblock/tagging.py
+msgid "Learning outcomes"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "Course About"
+msgstr "강좌 소개"
+
+#: lms/templates/courseware/course_about.html
+msgid "Overview"
+msgstr "개요"
+
+#: lms/templates/courseware/info.html
+msgid "Course Updates &amp; News"
+msgstr "공지사항"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid "Course options dropdown"
+msgstr "강좌 선택사항 보기"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid "Additional Actions Menu"
+msgstr "추가 액션 메뉴"
+
+#: lms/templates/dashboard/_dashboard_info_language.html
+msgid "edit"
+msgstr "편집"
+
+#: lms/templates/verify_student/face_upload.html
+msgid "Edit Your Full Name"
+msgstr "실명 편집"
+
+#: lms/templates/verify_student/face_upload.html
+msgid "The following error occurred while editing your name:"
+msgstr "당신의 이름을 편집하는 동안 다음 오류가 발생했습니다 :"
+
+#: cms/templates/500.html
+msgid "The {studio_name} servers encountered an error"
+msgstr "{studio_name}서버에서 오류가 발생했습니다."
+
+#: cms/templates/index.html
+msgid "The name of the organization sponsoring the course."
+msgstr "강좌 제공 기관 이름입니다."
+
+#: cms/templates/index.html
+msgid "Note: The organization name is part of the course URL"
+msgstr ""
+
+#: cms/templates/index.html
+msgid ""
+"This cannot be changed, but you can set a different display name in Advanced"
+" Settings later."
+msgstr "고급 설정에서 학습자가 볼 명칭을 새롭게 설정할 수 있습니다."
+
+#: cms/templates/index.html
+msgid ""
+"The unique number that identifies your course within your organization."
+msgstr ""
+"이 강좌의 고유한 번호로 'KMOOC01'과 같이, 강좌 제공 기관의 영문 약자와 제공 기관의 몇 번째 강좌인지 번호의 조합으로 "
+"입력합니다. "
+
+#: cms/templates/index.html
+msgid ""
+"Note: This is part of your course URL, so no spaces or special characters "
+"are allowed and it cannot be changed."
+msgstr ""
+"주의: 강좌 URL의 일부로 영어 알파벳과 숫자로 작성되며, 공백이나 특수문자는 허용되지 않습니다. 초기 설정 후, 변경할 수 없습니다."
+
+#: cms/templates/index.html
+msgid "The term in which your course will run."
+msgstr "강좌 제공 기관별로 자유롭게 번호를 지정할 수 있습니다. "
+
+#: cms/templates/index.html
+msgid "The unique code that identifies this library."
+msgstr "이 콘텐츠 보관함을 식별하기 위한 고유 코드입니다."
+
+#: cms/templates/index.html
+msgid ""
+"Note: This is part of your library URL, so no spaces or special characters "
+"are allowed."
+msgstr "주의: 강좌 URL의 일부로 영어 알파벳과 숫자로 작성하며, 공백이나 특수문자는 허용되지 않습니다."
+
+#: cms/templates/index.html
+msgid "Thanks for signing up, %(name)s!"
+msgstr "%(name)s님, 환영합니다!"
+
+#: cms/templates/index.html
+msgid ""
+"Almost there! In order to complete your sign up we need you to verify your "
+"email address (%(email)s). An activation message and next steps should be "
+"waiting for you there."
+msgstr ""
+"등록 절차를 완료하려면 이메일 주소(%(email)s)를 인증받아야 합니다. 입력한 이메일 주소로 발신된 등록 이메일을 확인해주세요."
+
+#: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+msgid ""
+"%(screen_reader_start)sWarning:%(screen_reader_end)s The previously selected"
+" content group was deleted. Select another content group."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+msgid ""
+"%(screen_reader_start)sWarning:%(screen_reader_end)s No content groups "
+"exist."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohorts.underscore
+msgid ""
+"To review student cohort assignments or see the results of uploading a CSV "
+"file, download course profile information or cohort results on "
+"%(link_start)s the Data Download page. %(link_end)s"
+msgstr ""
+"학습 집단의 과제를 검토하거나 CSV 파일 업로드의 결과를 보려면,  학습자 정보나 %(link_start)s 데이터 페이지  "
+"%(link_end)s 에 있는 학습 집단 결과를 다운로드하세요.  "
 
 #. Translators: these are tooltips that indicate the state of an assessment
 #. question
