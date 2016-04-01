@@ -109,7 +109,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .school_info{padding:0 0 30px 0;}
 .school_info .inner {margin:0 auto;width:95%;max-width:1170px;}
 .school_info .inner p {line-height:1.7em;color:#2b2a2a;}
-.school_info  .inner p.title_type2{margin:0 0 30px 0;overflow:hidden;}
+.school_info  .inner p.title_type2{margin:0 0 5px 0;overflow:hidden;}
 .school_info  .inner p.title_type2 span{float:left;margin:0 0 20px 0;font-size:45px;font-weight:600;color:#2b2a2a;display:block;line-height:101px;}
 .school_info  .inner p.title_type2 img{float:right;margin:0;}
 
@@ -226,6 +226,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 
 .school_list .inner{padding:0 10px 30px 10px;}
 .noCourse{font-size: 15px; font-weight: bold; margin: 0px 0px 60px 15px; color: rgb(170, 170, 170);}
+.univSns{float:left !important; margin-left: 5px !important;}
 
 header.global .nav-global li.active1 {right:95px;}
 header.global .nav-global li.active2 {right:10px;}
