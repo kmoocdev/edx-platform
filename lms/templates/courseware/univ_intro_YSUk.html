@@ -60,19 +60,19 @@
 
   <section class="courses-container">
 
-
     <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
       <ul class="courses-listing">
+      %if courses and len(courses) > 0:
         %for course in courses:
         <li class="courses-listing-item">
           <%include file="../course.html" args="course=course" />
         </li>
         %endfor
+      %else:
+        <div class="noCourse">※ 현재 수강할 수 있는 강좌가 없습니다.</div>
+      %endif
       </ul>
     </section>
-
-
-    
 
   </section>
 </section>

@@ -225,6 +225,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .container.contact dd {padding-left:45px;padding-bottom:15px;font-size:14px;}
 
 .school_list .inner{padding:0 10px 30px 10px;}
+.noCourse{font-size: 15px; font-weight: bold; margin: 0px 0px 60px 15px; color: rgb(170, 170, 170);}
 
 header.global .nav-global li.active1 {right:95px;}
 header.global .nav-global li.active2 {right:10px;}
