@@ -415,6 +415,9 @@ def get_courses_by_org(user, org_id, domain=None):
         if c.start is not None and c.end is not None and c.start > c.end:
             continue
 
+        if c.enrollment_end is not None and c.has_ended() and c.enrollment_end < datetime.now(UTC()):
+            continue
+
         if not c.has_ended():
             courses1.append(c)
         else:

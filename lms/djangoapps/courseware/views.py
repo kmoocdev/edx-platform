@@ -151,6 +151,7 @@ def haewoondaex(request, univ_id):
         courses_list = get_courses_by_kocw(request.user, request.META.get('HTTP_HOST'))
     else:
         courses_list = get_courses_by_org(request.user, univ_id, request.META.get('HTTP_HOST'))
+
     course_discovery_meanings = getattr(settings, 'COURSE_DISCOVERY_MEANINGS', False)
 
     return render_to_response(
