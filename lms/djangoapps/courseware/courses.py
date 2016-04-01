@@ -423,8 +423,10 @@ def get_courses_by_org(user, org_id, domain=None):
         else:
             courses2.append(c)
 
-    courses1 = sorted(courses1, key=lambda course: course.number)
-    courses2 = sorted(courses2, key=lambda course: course.number)
+    # courses1 = sorted(courses1, key=lambda course: course.number)
+    # courses2 = sorted(courses2, key=lambda course: course.number)
+    courses1 = sorted(courses1, key=lambda course: course.start, reverse=True)
+    courses2 = sorted(courses2, key=lambda course: course.start, reverse=True)
 
     courses = courses1 + courses2
 
