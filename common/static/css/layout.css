@@ -124,7 +124,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .school_info{padding:0 0 30px 0;}
 .school_info .inner {margin:0 auto;width:95%;max-width:1170px;}
 .school_info .inner p {line-height:1.7em;color:#2b2a2a;}
-.school_info  .inner p.title_type2{margin:0 0 30px 0;overflow:hidden;}
+.school_info  .inner p.title_type2{margin:0 0 5px 0;overflow:hidden;}
 .school_info  .inner p.title_type2 span{float:left;margin:0 0 20px 0;font-size:45px;font-weight:600;color:#2b2a2a;display:block;line-height:101px;}
 .school_info  .inner p.title_type2 img{float:right;margin:0;}
 
@@ -240,6 +240,8 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .container.contact dd {padding-left:45px;padding-bottom:15px;font-size:14px;}
 
 .school_list .inner{padding:0 10px 30px 10px;}
+.noCourse{font-size: 15px; font-weight: bold; margin: 0px 0px 60px 15px; color: rgb(170, 170, 170);}
+.univSns{float:left !important; margin-left: 5px !important;}
 
 header.global .nav-global li.active1 {right:95px;}
 header.global .nav-global li.active2 {right:10px;}
@@ -332,6 +334,7 @@ header.global .nav-global li.deactive{display:none;}
 }
 
 @media only screen and (max-width:640px) {
+	/*body{border: 1px solid red;}*/
 	header.global .nav-global{padding:0;display:none;}
 	header.global h1.logo, header.global.slim h1.logo {padding:20px 0;}
 	header.global .user{padding:0;display:none;}
@@ -362,9 +365,12 @@ header.global .nav-global li.deactive{display:none;}
 	/*.container.about > nav {padding:0 5px;}*/
 	.container.about > nav a {width:50%;margin:0;}
 
+	.univSns{float:none !important; margin-left: 0px !important;}
+	.school_info  .inner p.title_type2 img{float:none;margin:auto;}
 }
 
 @media only screen and (max-width:580px) {
+	/*body{border: 1px solid blue;}*/
 	.school_list .inner > a{width:50%;}
 	.school_list .inner > a:nth-child(6){border-left:none;}
 	.school_list .inner > a:nth-child(2n + 1){border-left:solid 1px #d1d1d1;}
@@ -388,8 +394,8 @@ ul.facet-list li:focus{
 	border: 1px dotted;
 }
 
-ul,ol {margin:0;padding:0;list-style:none;}
-li, dl, dd, dt{margin:0;padding:0;list-style:none;}
+/*ul,ol {margin:0;padding:0;list-style:none;}*/
+/*li, dl, dd, dt{margin:0;padding:0;list-style:none;}*/
 img{ border:none}
 
 
@@ -402,7 +408,7 @@ img{ border:none}
 .agree{overflow:hidden;width:100%;margin-bottom:15px;text-align:right;}
 .agree label{font: 15px "Open Sans","Nanum Gothic" !important;}
 .content h5 {margin:0 0 10px 0;padding:0 0 0 22px;background:url(../images/bl_tr.png) no-repeat 0 0px;color:#505050;line-height:1.5em; background-position: left center;}
-.btn{width:100%; text-align:center;}
-/*.btn{text-align:center;}*/
+/*.btn{width:100%; text-align:center;}*/
+.btn{text-align:center;}
 .btn_ipin{width:100%; text-align:center; margin:30px 0 0 0}
 .btn_back{width:100%; text-align:center; margin:50px 0 0 0}

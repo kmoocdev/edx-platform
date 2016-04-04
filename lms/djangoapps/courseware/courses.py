@@ -409,17 +409,24 @@ def get_courses_by_org(user, org_id, domain=None):
 
     for c in courses:
         # print 'course.keys1:', c.__dict__.keys()
-        print 'c.has_ended()', c.has_ended()
-        print 'c.number', c.number
-        print 'c.start', c.start
+        # print 'c.has_ended()', c.has_ended()
+        # print 'c.number', c.number
+        # print 'c.start', c.start
+        if c.start is not None and c.end is not None and c.start > c.end:
+            continue
+
+        if c.enrollment_end is not None and c.has_ended() and c.enrollment_end < datetime.now(UTC()):
+            continue
 
         if not c.has_ended():
             courses1.append(c)
         else:
             courses2.append(c)
 
-    courses1 = sorted(courses1, key=lambda course: course.number)
-    courses2 = sorted(courses2, key=lambda course: course.number)
+    # courses1 = sorted(courses1, key=lambda course: course.number)
+    # courses2 = sorted(courses2, key=lambda course: course.number)
+    courses1 = sorted(courses1, key=lambda course: course.start, reverse=True)
+    courses2 = sorted(courses2, key=lambda course: course.start, reverse=True)
 
     courses = courses1 + courses2
 

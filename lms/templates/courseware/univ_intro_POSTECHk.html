@@ -46,7 +46,13 @@
 			</header>
 			<section class="school_info">	 <!-- school_info S -->
 				<div class="inner">
-					<p class="title_type2"><span>포항공과대학교</span><img src="/static/images/univ_intro/univ_logo_postech.png" alt="포항공과대학교"></p>
+					<p class="title_type2">
+                        <span>
+                            포항공과대학교
+##                              <br/>
+##                              <a href="#"><img src="/static/images/sns1.png" alt="youtube" class="univSns"/></a>
+##                              <a href="#"><img src="/static/images/sns2.png" alt="facebook" class="univSns"/></a>
+                        </span><img src="/static/images/univ_intro/univ_logo_postech.png" alt="포항공과대학교"></p>
 					<p>포항공과대학교는 우리나라와 인류사회 발전에 절실히 필요한 과학과 기술의 심오한 이론과 광범위한 응용방법을 깊이있게 연구하고, 소수의 영재를 모아 질 높은 교육을 실시함으로써 지식과 지성을 겸비한 국제적 수준의 고급인재를 양성함과 아울러, 산•학•연 협동의 구체적인 실현을 통하여 연구결과를 산업체에 전파함으로써 사회와 인류에 봉사할 목적으로 설립되었습니다.</p>
                     <p>이러한 목적에 따라 포항공과대학은 세계적인 대학들과 긴밀히 협력하여 기초과학과 공학 각 분야의 첨단연구에 중점을 두는 한편 소재산업 관련연구에서는 세계적인 중심지로 발전하고자 합니다.</p>
                     <p>또한 성실하고 창의적이며 진취적 기상을 지닌 지성인을 양성하기 위하여 전문교육뿐만 아니라 전인교육을 강조하며, 인류 복지향상을 위하여 산학협동의 폭을 세계의 전 산업체로 확대함으로써 세계 속의 대학으로 발전하고자 합니다.</p>
@@ -56,18 +62,19 @@
 
   <section class="courses-container">
 
-
     <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
       <ul class="courses-listing">
+      %if courses and len(courses) > 0:
         %for course in courses:
         <li class="courses-listing-item">
           <%include file="../course.html" args="course=course" />
         </li>
         %endfor
+      %else:
+        <div class="noCourse">※ 현재 수강할 수 있는 강좌가 없습니다.</div>
+      %endif
       </ul>
     </section>
-
-
 
   </section>
 </section>
