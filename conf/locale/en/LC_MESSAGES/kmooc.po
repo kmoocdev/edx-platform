@@ -42,10 +42,13 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
+# Antonio Trueba, 2016
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Chanseok <kcsgoodboy@gmail.com>, 2014
 # Chul Park <parkchul@nate.com>, 2015
 # David10000 <gameness@naver.com>, 2014
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013
 # Gil <gedwarp@gmail.com>, 2014
 # Hongseob Lee <shevious@gmail.com>, 2015
 # Hongseob Lee <shevreg@yahoo.com>, 2015
@@ -55,8 +58,10 @@
 # Kevin Min <gr326887@graded.br>, 2015
 # KimKyudong <choemh@nate.com>, 2014
 # mariana1201 <gogo3135@naver.com>, 2014
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
 # Nicole <dlruddk1112@gmail.com>, 2014
 # Pope, 2014
+# SaFi J. <safi2266@gmail.com>, 2015
 # Sarina Canelake <sarina@edx.org>, 2014
 # Seok Jun Yoon <fake2real@dctribe.com>, 2015
 # shin2012 <shin2013@gmail.com>, 2014
@@ -68,7 +73,7 @@ msgstr ""
 "Project-Id-Version: kmooc-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 "POT-Creation-Date: 2015-07-06 12:02+0000\n"
-"PO-Revision-Date: 2016-02-16 06:19+0000\n"
+"PO-Revision-Date: 2016-04-04 02:35+0000\n"
 "Last-Translator: Hongseob Lee <shevious@gmail.com>\n"
 "Language-Team: English (http://www.transifex.com/k-mooc/kmooc-platform/language/en/)\n"
 "MIME-Version: 1.0\n"
@@ -475,6 +480,66 @@ msgstr "Enter your question or comment"
 msgid "Checklists"
 msgstr "Checklists"
 
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "This assignment has not yet been graded."
+msgstr "This assignment has not yet been graded."
+
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Upload a different file"
+msgstr "Upload a different file"
+
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Upload your assignment"
+msgstr "Upload your assignment"
+
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Awaiting instructor approval"
+msgstr "Awaiting instructor approval"
+
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Approve grade"
+msgstr "Approve grade"
+
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Enter grade"
+msgstr "Enter grade"
+
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Grade Submissions"
+msgstr "Grade Submissions"
+
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Staff Graded Assignment"
+msgstr "Staff Graded Assignment"
+
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Staff Debug"
+msgstr "Staff Debug"
+
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Module Fields"
+msgstr "Module Fields"
+
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Remove grade"
+msgstr "Remove grade"
+
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "File uploaded"
+msgstr "File uploaded"
+
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "No file has been uploaded."
+msgstr "No file has been uploaded."
+
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Select a file"
+msgstr "Select a file"
+
+#: venvs/edxapp/src/edx-sga/edx_sga/templates/staff_graded_assignment/show.html
+msgid "Upload annotated file"
+msgstr "Upload annotated file"
+
 #: themes/kmooc/templates/temem-footer.html
 msgid "FAQ"
 msgstr "FAQ"
@@ -522,8 +587,8 @@ msgstr "Courses Running"
 msgid "Dashboard"
 msgstr "Dashboard"
 
-msgid "find a course"
-msgstr "find a course"
+msgid "I want to learn about…"
+msgstr "I want to learn about…"
 
 #: university
 msgid "KHUk"
@@ -585,4 +650,20 @@ msgstr "KonYangK"
 
 msgid "DKUK"
 msgstr "DKUK"
+
+#: lms/templates/course.html 
+msgid "Starting Soon"
+msgstr "Starting Soon"
+
+msgid "Current (Now enrolling)"
+msgstr "Current (Now enrolling)"
+
+msgid "Current"
+msgstr "Current"
+
+msgid "Archived (Now enrolling)"
+msgstr "Archived (Now enrolling)"
+
+msgid "Closed"
+msgstr "Closed"
 

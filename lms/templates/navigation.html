@@ -76,8 +76,8 @@ site_status_msg = get_site_status_msg(course_id)
         <li class="deactive"><a class="btn type1" href="/logout" title="로그아웃">${_("Sign Out")}</a></li>
         <li class="deactive"><a class="btn type2" href="/dashboard" title="대시보드">${_("Dashboard")}</a></li>
 
-        <li class="gnb1"><a href="/about" title="K-MOOC란?">${_("About")}</a></li>
-        <li class="gnb2"><a href="/schools" title="대학목록">${_("Schools")}</a></li>
+        <li class="gnb1"><a href="/about" title="K-MOOC란?">${_("About Us")}</a></li>
+        <li class="gnb2"><a href="/schools" title="대학목록">${_("Participating Institutions")}</a></li>
         <li class="gnb3"><a href="${marketing_link('COURSES')}" title="강좌목록">${_("Courses")}</a></li>
 
         % endif
@@ -134,7 +134,7 @@ site_status_msg = get_site_status_msg(course_id)
             </li>
           % endif
           <li class="nav-global-03">
-            <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
+            <a href="${marketing_link('SCHOOLS')}">${_("Participating Institutions")}</a>
           </li>
         % endif
       </%block>
@@ -145,15 +145,15 @@ site_status_msg = get_site_status_msg(course_id)
           </li>
           % else:
 
-          <li class="active1"><a class="btn type1" href="/login${login_query()}" title="로그인">${_("Sign In")}</a></li>
+          <li class="active1"><a class="btn type1" href="/login${login_query()}" title="로그인">${_("Log In")}</a></li>
           <li class="active2"><a class="btn type2" href="/registration_gubn" title="회원가입">${_("Register")}</a></li>
 ##           <li class="active2"><a class="btn type2" href="/register" title="회원가입">${_("Register")}</a></li>
           <!-- 필요에 따라 바꿔 쓰세요
           <li><a class="btn type1" href="#">개인정보수정</a></li>
           <li><a class="btn type2" href="#">로그아웃</a></li>
           -->
-          <li class="gnb1"><a href="/about" title="K-MOOC란?">${_("About")}</a></li>
-          <li class="gnb2"><a href="/schools" title="대학목록">${_("Schools & Partners")}</a></li>
+          <li class="gnb1"><a href="/about" title="K-MOOC란?">${_("About Us")}</a></li>
+          <li class="gnb2"><a href="/schools" title="대학목록">${_("Participating Institutions")}</a></li>
           <li class="gnb3"><a href="${marketing_link('COURSES')}" title="강좌목록">${_("Courses")}</a></li>
 
           % endif

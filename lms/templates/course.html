@@ -47,7 +47,7 @@ from django.utils.timezone import UTC as UTC2
         %endif
             </b>
         </div>
-      <div class="course-date" aria-hidden="true">${_("Starts")}: ${_("Self-Paced") if course.start_datetime_text() == u'자율 진도' else course.start_datetime_text()}</div>
+      <div class="course-date" aria-hidden="true">${_("Starts")}: ${_("Self-Paced") if course.start_datetime_text() == u'자율 진도' and LANG == 'en' else course.start_datetime_text()}</div>
     </section>
     <div class="sr">
       <ul>
