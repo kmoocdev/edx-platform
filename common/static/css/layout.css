@@ -319,6 +319,7 @@ header.global .nav-global li.deactive{display:none;}
 }
 
 @media only screen and (max-width:640px) {
+	/*body{border: 1px solid red;}*/
 	header.global .nav-global{padding:0;display:none;}
 	header.global h1.logo, header.global.slim h1.logo {padding:20px 0;}
 	header.global .user{padding:0;display:none;}
@@ -349,9 +350,12 @@ header.global .nav-global li.deactive{display:none;}
 	/*.container.about > nav {padding:0 5px;}*/
 	.container.about > nav a {width:50%;margin:0;}
 
+	.univSns{float:none !important; margin-left: 0px !important;}
+	.school_info  .inner p.title_type2 img{float:none;margin:auto;}
 }
 
 @media only screen and (max-width:580px) {
+	/*body{border: 1px solid blue;}*/
 	.school_list .inner > a{width:50%;}
 	.school_list .inner > a:nth-child(6){border-left:none;}
 	.school_list .inner > a:nth-child(2n + 1){border-left:solid 1px #d1d1d1;}
