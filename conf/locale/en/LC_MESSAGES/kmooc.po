@@ -479,33 +479,33 @@ msgstr "Checklists"
 msgid "FAQ"
 msgstr "FAQ"
 
-msgid "Contact"
-msgstr "Contact"
+msgid "Contact Us"
+msgstr "Contact Us"
 
 msgid "Blog"
 msgstr "Blog"
 
-msgid "Terms of Services"
-msgstr "Terms of Services"
+msgid "Terms of Use"
+msgstr "Terms of Use"
 
-msgid "Privacy Policy"
-msgstr "Privacy Policy"
+msgid "Privacy Statement"
+msgstr "Privacy Statement"
 
-msgid "Copyrights"
-msgstr "Copyrights"
+msgid "Copyright Policy"
+msgstr "Copyright Policy"
 
 #: lms/templates/navigation.html
-msgid "About"
-msgstr "About"
+msgid "About Us"
+msgstr "About Us"
 
-msgid "Schools & Partners"
-msgstr "Schools & Partners"
+msgid "Participating Institutions"
+msgstr "Participating Institutions"
 
 msgid "Courses"
 msgstr "Courses"
 
-msgid "Sign In"
-msgstr "Sign In"
+msgid "Log In"
+msgstr "Log In"
 
 msgid "Register"
 msgstr "Register"
@@ -513,8 +513,8 @@ msgstr "Register"
 msgid "Search"
 msgstr "Search"
 
-msgid "Intro Video"
-msgstr "Intro Video"
+msgid "Video"
+msgstr "Video"
 
 msgid "Courses Running"
 msgstr "Courses Running"
@@ -522,8 +522,8 @@ msgstr "Courses Running"
 msgid "Dashboard"
 msgstr "Dashboard"
 
-msgid "I want to learn about..."
-msgstr "I want to learn about..."
+msgid "find a course"
+msgstr "find a course"
 
 #: university
 msgid "KHUk"
