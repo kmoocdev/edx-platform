@@ -78,27 +78,18 @@ function popClose(id){
 <div id="popupWrap_1" class="popup-wrap popup-kmooc2" style="position: absolute; left: 25px; top: 100px;
     z-index: 10010; display: none; border: 5px solid #EB9D43; opacity: 1; background: #ffffff; font-size: 13px;
     line-height: 25px; padding: 5px; box-shadow: 0 2px 5px 3px #444444;">
-##         <p style="text-align: center; font-size: 15px;">
-##             <b>한국형 무크(K-MOOC)의 BI 및 표어(Slogan) 공모전을<br>
-##             개최하오니 관심 있는 분의 많은 참여를 바랍니다. </b>
-##         </p>
         <p style="text-align: center">
             <a target="_blank" href="http://blog.naver.com/kmooc_kr/220635796932">
                 <img src="/static/images/banner_course_2016.jpg" alt="2016년 강좌 운영 계획">
             </a>
         </p>
 
-        <p style="text-align: center; margin-top: 5px;">
+        <p id="u16" style="text-align: center; margin-top: 5px; display: none;">
             <a target="_blank" href="http://blog.naver.com/kmooc_kr/220639094053">
                 <img src="/static/images/banner_collusion_2016.jpg" alt="2016년 강좌 운영 계획">
             </a>
         </p>
 
-##         <br/>
-
-##         <b>&nbsp;■ 공모내용 : </b>K-MOOC의 비전과 목표가 잘 드러나는 BI 및 표어(Slogan)<br>
-##         <b>&nbsp;■ 응모자격 : </b>한국형 무크에 관심 있는 일반 국민 전체<br>
-##         <b>&nbsp;■ 온라인 접수 : </b><font color="blue">kmooc@nile.or.kr</font><br>
         <div style="text-align: right;">
             <label onclick="closeWin1();">
                 <input id="chkbox_1" name="chkbox_1" type="checkbox" style="vertical-align: middle;">
@@ -138,6 +129,13 @@ if (    (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
         (popupDate.getMonth() < 3)
    ){
     document.all['popupWrap_1'].style.display = "block";
+
+##     console.log(popupDate.getFullYear() + ":" + popupDate.getMonth() + ":" + popupDate.getDate());
+    if((popupDate.getFullYear() == 2016) &&
+        (popupDate.getMonth() < 3) && (popupDate.getDate() <= 16)){
+            $("#u16").show();
+    }
+
 } else {
     document.all['popupWrap_1'].style.display = "none";
 }
@@ -189,7 +187,7 @@ if (    (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
     function showNotice(){
 
         var d = new Date();
-        if((d.getDay() == 2 || d.getDay() == 5) && d.getHours() == 8 && ( d.getMinutes() >= 0 && d.getMinutes() <= 30)){
+        if((d.getDay() == 2 || d.getDay() == 5) && d.getHours() == 8 && ( d.getMinutes() >= 40 && d.getMinutes() <= 55)){
 
             setTimeout(showNotice, 10000);
 
@@ -236,12 +234,10 @@ if (    (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
         var maskHeight = $(document).height();
         var maskWidth = $(window).width();
 
-##         video.currentTime = 0;
         $("#mask").css({"width":maskWidth+"px","height":maskHeight+"px", "text-align":"center", "vertical-align":"middle"});
         $("#innerMask").css({"width":(maskWidth/2)+"px","height":(maskHeight/2)+"px", "margin":(maskHeight/3)+"px", "display":"inline-block"});
         $("#mask").fadeIn(200);
         $("#indexVideo").fadeIn(300, function(){
-##             video.play();
             video.focus();
 
             $("#indexVideo").blur(function(){

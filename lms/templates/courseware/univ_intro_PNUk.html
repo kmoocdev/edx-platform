@@ -46,7 +46,13 @@
 			</header>
 			<section class="school_info">	 <!-- school_info S -->
 				<div class="inner">
-					<p class="title_type2"><span>부산대학교</span><img src="/static/images/univ_intro/univ_logo_pusan.png" alt="부산대학교"></p>
+					<p class="title_type2">
+                        <span>
+                            부산대학교
+                             <br/>
+##                              <a href="#"><img src="/static/images/sns1.png" alt="youtube" class="univSns"/></a>
+                             <a target="_blank" href="https://www.facebook.com/PusanNationalUni"><img src="/static/images/sns2.png" alt="facebook" class="univSns"/></a>
+                        </span><img src="/static/images/univ_intro/univ_logo_pusan.png" alt="부산대학교"></p>
                     <p>부산대학교는 역사의 부침 속에서도 오직 진리와 자유를 추구하며 지역 사회와 국가에 봉사하는 대학으로 우뚝 선 ‘최고의 지식공동체’ 입니다.</p>
                     <p>그동안 우리는 미래사회를 창조하는 싱크탱크로서, 실천적 지식의 산실이었습니다. 사회와 유리된 고고한 상아탑이 아니라 열린 교육을 통해 국가와 사회가 필요로 하는 창의적 인재를 육성해왔습니다. K-MOOC으로 최고 수준의 명품 강의를 일반인에게 무료로 공개함으로써 ‘노블리스 오블리주’ 정신에 입각한 지식의 사회 환원을 실현하고자 합니다.</p>
                     <p>부산대학교는 자율과 창의, 대학의 사명에 대한 신념을 바탕으로 상상력과 창의성이 경쟁력의 원천이 되는 창조적 대학을 위해 끊임없이 노력하고 있습니다. 나아가, 구성원들과의 소통 속에 글로벌 명문을 향한 도전을 멈추지 않을 것입니다.</p>
@@ -60,18 +66,19 @@
 
   <section class="courses-container">
 
-
     <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
       <ul class="courses-listing">
+      %if courses and len(courses) > 0:
         %for course in courses:
         <li class="courses-listing-item">
           <%include file="../course.html" args="course=course" />
         </li>
         %endfor
+      %else:
+        <div class="noCourse">※ 현재 수강할 수 있는 강좌가 없습니다.</div>
+      %endif
       </ul>
     </section>
-
-
 
   </section>
 </section>

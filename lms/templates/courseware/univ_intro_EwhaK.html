@@ -47,7 +47,12 @@
 			</header>
 			<section class="school_info">	 <!-- school_info S -->
 				<div class="inner">
-					<p class="title_type2"><span>이화여자대학교</span><img src="/static/images/univ_intro/univ_logo_ewha.png" alt="이화여자대학교"></p>
+					<p class="title_type2">
+                        <span>이화여자대학교
+                             <br/>
+                             <a target="_blank" href="https://www.youtube.com/ewhauniv"><img src="/static/images/sns1.png" alt="youtube" class="univSns"/></a>
+                             <a target="_blank" href="https://www.facebook.com/EwhaWomansUniversity"><img src="/static/images/sns2.png" alt="facebook" class="univSns"/></a>
+                        </span><img src="/static/images/univ_intro/univ_logo_ewha.png" alt="이화여자대학교"></p>
 					<p>1886년, 메리 F. 스크랜튼 선교사에 의해 단 한명의 학생으로 시작한 이화는 신념과 도전으로 수많은 최초와 최고를 거듭하며 한국 여성 교육의 새로운 역사를 써오고 있습니다.</p>
                     <p>이화여대는 현재 12개 대학과 15개 대학원을 가진 세계 최대의 여자대학으로 25,000여명의 학생이 재학 중이며, 매년 3,500여명의 학사, 2,000여명의 석사, 200여명의 박사를 배출하고 있습니다.</p>
                     <p>한국 최초의 여성교육기관에서 세계 최대 여자대학으로 성장해 온 이화. 언제나 앞서 새로운 미래를 꿈꿔온 이화는 이제 ‘세계 최고를 향한 혁신 이화’를 비전으로 세계를 선도할 새로운 100년의 역사를 써내려가고자 합니다.</p>
@@ -58,11 +63,15 @@
 
     <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
       <ul class="courses-listing">
+      %if courses and len(courses) > 0:
         %for course in courses:
         <li class="courses-listing-item">
           <%include file="../course.html" args="course=course" />
         </li>
         %endfor
+      %else:
+        <div class="noCourse">※ 현재 수강할 수 있는 강좌가 없습니다.</div>
+      %endif
       </ul>
     </section>
 

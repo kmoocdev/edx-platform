@@ -13,6 +13,13 @@
                 <span class="course-title"><%= content.display_name %></span>
             </h2>
             <div class="course-date" aria-hidden="true">
+            <% if (state) { %>
+                <b><%= state%></b>
+            <% }else{ %>
+                <b>&nbsp;</b>
+            <% } %>
+            </div>
+            <div class="course-date" aria-hidden="true">
                 <%= interpolate(
                       gettext("Starts: %(start)s"),
                       { start: start }, true
