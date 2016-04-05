@@ -31,7 +31,6 @@
 # Translators:
 # Translators:
 # Translators:
-# Translators:
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Bruno JOLIVEAU, 2015
 # Chanseok <kcsgoodboy@gmail.com>, 2014
@@ -49,7 +48,6 @@
 # Seo. Junmin <sof.midnight@live.co.kr>, 2015
 # seungil <luck8778@gmail.com>, 2014
 # SEUNGWON <baeksw0620@gmail.com>, 2014
-# Yael Terrettaz, 2015
 # Yael Terrettaz, 2015
 msgid ""
 msgstr ""

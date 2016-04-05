@@ -24,34 +24,36 @@ from django.utils.timezone import UTC as UTC2
     </header>
     <section class="course-info" aria-hidden=true>
       <h2 class="course-name">
-        <span class="course-organization">${get_course_about_section(course, 'university')}</span>
+        %if LANG == 'en':
+            <span class="course-organization">${course.display_org_with_default}</span>
+        %else:
+            <span class="course-organization">${get_course_about_section(course, 'university')}</span>
+        %endif
         <span class="course-code">${course.display_number_with_default}</span>
         <span class="course-title">${get_course_about_section(course, 'title')}</span>
       </h2>
         <div class="course-date" aria-hidden="true">
             <b>
         %if course.enrollment_start is not None and course.start is not None and course.enrollment_start <= datetime.now(UTC2()) and (course.enrollment_end is None or datetime.now(UTC2()) <= course.enrollment_end) and datetime.now(UTC2()) <= course.start:
-            개강 예정
+            ${_("Starting Soon")}
         %elif course.enrollment_start is not None and course.start is not None and course.end is not None and course.enrollment_start <= datetime.now(UTC2()) and (course.enrollment_end is None or datetime.now(UTC2()) <= course.enrollment_end) and course.start <= datetime.now(UTC2()) <= course.end:
-            진행 강좌 (수강 가능)
+            ${_("Current (Now enrolling)")}
         %elif course.start is not None and course.end is not None and course.enrollment_end is not None and course.enrollment_end < datetime.now(UTC2()) and course.start <= datetime.now(UTC2()) <= course.end:
-            진행 강좌
+            ${_("Current")}
         %elif course.has_ended() and (course.enrollment_end is None or datetime.now(UTC2()) <= course.enrollment_end):
-            종료 강좌 (수강 가능)
-        %elif course.has_ended():
-            종료 강좌
+            ${_("Archived (Now enrolling)")}
         %else:
-            &nbsp;
+            ${_("Closed")}
         %endif
             </b>
         </div>
-      <div class="course-date" aria-hidden="true">${_("Starts")}: ${course.start_datetime_text()}</div>
+      <div class="course-date" aria-hidden="true">${_("Starts")}: ${_("Self-Paced") if course.start_datetime_text() == u'자율 진도' and LANG == 'en' else course.start_datetime_text()}</div>
     </section>
     <div class="sr">
       <ul>
       <li>${get_course_about_section(course, 'university')}</li>
       <li>${course.display_number_with_default}</li>
-      <li>${_("Starts")}: <time itemprop="startDate" datetime="${course.start_datetime_text()}">${course.start_datetime_text()}</time></li>
+      <li>${_("Starts")}: <time itemprop="startDate" datetime="${course.start_datetime_text()}">${_("Self-Paced") if course.start_datetime_text() == '자율 진도' else course.start_datetime_text()}</time></li>
     </ul>
     </div>
   </a>
