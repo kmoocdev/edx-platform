@@ -139,6 +139,11 @@ class DarkLangMiddleware(object):
         # print '============>',request.META['HTTP_ACCEPT_LANGUAGE']
 
     def _activate_preview_language(self, request):
+
+        if LANGUAGE_SESSION_KEY and LANGUAGE_SESSION_KEY in request.session:
+            del request.session[LANGUAGE_SESSION_KEY]
+            return
+
         """
         If the request has the get parameter ``preview-lang``,
         and that language doesn't appear in ``self.released_langs``,
