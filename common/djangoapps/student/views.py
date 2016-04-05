@@ -258,7 +258,16 @@ def index(request, extra_context=None, user=AnonymousUser()):
 
     context = {'courses': courses}
 
+    if 'LANG' in request.session:
+        if request.session['LANG'] == 'en':
+            context['LANG'] = 'en'
+
     context.update(extra_context)
+
+    # print '**********************************'
+    # print 'context =',context
+    # print '**********************************'
+
     return render_to_response('index.html', context)
 
 

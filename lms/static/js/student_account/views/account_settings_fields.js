@@ -27,6 +27,8 @@
                 };
 
                 var view = this;
+                //alert(111);
+
                 $.ajax({
                     type: 'POST',
                     url: '/i18n/setlang/',

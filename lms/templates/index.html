@@ -143,7 +143,18 @@ if (    (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
 
 
 <script>
+    function reloadIndex(){
+        var a = document.location.href;
+        var b = a.split('/');
+        var c = b[b.length-1];
+        console.log('c: ' + c);
+        if(c == 'en' || c == 'ko')
+            document.location.href = '/';
+    }
+
     $(document).ready(function(){
+        reloadIndex();
+
 
         //layer popup..
         showNotice();
@@ -260,18 +271,18 @@ if (    (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
     <div class="outer-wrapper">
         <div class="title">
             <hgroup>
-                <h1><img src="/static/images/main_title.png" alt="최고의 대학, 최고의 강의! 한국형 온라인에서 시작하세요."></h1>
+                <h1><img src="/static/images/main_title${'_en' if LANG == 'en' else ''}.png" alt="최고의 대학, 최고의 강의! 한국형 온라인에서 시작하세요."></h1>
             </hgroup>
             <div class="course-search">
                 <form method="get" action="/courses">
 ##                     <label for="searchInput">원하시는 강의를 검색해 보세요.</label>
-                    <input id="searchInput" class="search-input" name="search_query" type="text" placeholder="원하시는 강의를 검색해 보세요." title="원하시는 강의를 검색해 보세요.">
-                    <button id="searchBtn" class="search-button" type="submit" title="검색">검색</button>
+                    <input id="searchInput" class="search-input" name="search_query" type="text" placeholder="${_("I want to learn about...")}" title="원하시는 강의를 검색해 보세요.">
+                    <button id="searchBtn" class="search-button" type="submit" title="검색">${_("Search")}</button>
                 </form>
             </div>
         </div>
         <div class="vod">
-            <a href="javascript:playVideo();"><img src="/static/images/main_more.png" alt="소개영상 보기"></a>
+            <a href="javascript:playVideo();"><img src="/static/images/main_more${'_en' if LANG == 'en' else ''}.png" alt="소개영상 보기"></a>
         </div>
 
       % if show_homepage_promo_video:
@@ -287,20 +298,29 @@ if (    (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
 
     <section class="school_list">	 <!-- school_list S -->
         <p class="title_type1">
-            <img src="/static/images/title01.png" alt="참여대학">
+##             % if LANG == 'en':
+##             <img src="/static/images/title01.png" alt="참여대학1">
+##             % else:
+##             <img src="/static/images/title01.png" alt="참여대학2">
+##             % endif
+
+            <img src="/static/images/title01${'_en' if LANG == 'en' else ''}.png" alt="참여대학" />
+
+
+
             <a href="/schools"><img src="/static/images/more.png" alt="참여대학 더보기"></a>
         </p>
         <div class="inner">
-            <a href="/school/KHUk"><img src="/static/images/logo02_01.png" alt="경희대학교 대학소개 페이지"><span style="font-family:daumR;">경희대학교</span></a>
-            <a href="/school/KoreaUnivK"><img src="/static/images/logo02_02.png" alt="고려대학교 대학소개 페이지"><span style="font-family:daumR;">고려대학교</span></a>
-            <a href="/school/PNUk"><img src="/static/images/logo02_03.png" alt="부산대학교 대학소개 페이지"><span style="font-family:daumR;">부산대학교</span></a>
-            <a href="/school/SNUk"><img src="/static/images/logo02_04.png" alt="서울대학교 대학소개 페이지"><span style="font-family:daumR;">서울대학교</span></a>
-            <a href="/school/SKKUk"><img src="/static/images/logo02_05.png" alt="성균관대학교 대학소개 페이지"><span style="font-family:daumR;">성균관대학교</span></a>
-            <a href="/school/YSUk"><img src="/static/images/logo02_06.png" alt="연세대학교 대학소개 페이지"><span style="font-family:daumR;">연세대학교</span></a>
-            <a href="/school/EwhaK"><img src="/static/images/logo02_07.png" alt="이화여자대학교 대학소개 페이지"><span style="font-family:daumR;">이화여자대학교</span></a>
-            <a href="/school/POSTECHk"><img src="/static/images/logo02_08.png" alt="포항공과대학교 대학소개 페이지"><span style="font-family:daumR;">포항공과대학교</span></a>
-            <a href="/school/KAISTk"><img src="/static/images/logo02_09.png" alt="한국과학기술원 대학소개 페이지"><span style="font-family:daumR;">한국과학기술원</span></a>
-            <a href="/school/HYUk"><img src="/static/images/logo02_10.png" alt="한양대학교 대학소개 페이지"><span style="font-family:daumR;">한양대학교</span></a>
+            <a href="/school/KHUk"><img src="/static/images/logo02_01.png" alt="경희대학교 대학소개 페이지"><span style="font-family:daumR;">${_("KHUk")}</span></a>
+            <a href="/school/KoreaUnivK"><img src="/static/images/logo02_02.png" alt="고려대학교 대학소개 페이지"><span style="font-family:daumR;">${_("KoreaUnivK")}</span></a>
+            <a href="/school/PNUk"><img src="/static/images/logo02_03.png" alt="부산대학교 대학소개 페이지"><span style="font-family:daumR;">${_("PNUk")}</span></a>
+            <a href="/school/SNUk"><img src="/static/images/logo02_04.png" alt="서울대학교 대학소개 페이지"><span style="font-family:daumR;">${_("SNUk")}</span></a>
+            <a href="/school/SKKUk"><img src="/static/images/logo02_05.png" alt="성균관대학교 대학소개 페이지"><span style="font-family:daumR;">${_("SKKUk")}</span></a>
+            <a href="/school/YSUk"><img src="/static/images/logo02_06.png" alt="연세대학교 대학소개 페이지"><span style="font-family:daumR;">${_("YSUk")}</span></a>
+            <a href="/school/EwhaK"><img src="/static/images/logo02_07.png" alt="이화여자대학교 대학소개 페이지"><span style="font-family:daumR;">${_("EwhaK")}</span></a>
+            <a href="/school/POSTECHk"><img src="/static/images/logo02_08.png" alt="포항공과대학교 대학소개 페이지"><span style="font-family:daumR;">${_("POSTECHk")}</span></a>
+            <a href="/school/KAISTk"><img src="/static/images/logo02_09.png" alt="한국과학기술원 대학소개 페이지"><span style="font-family:daumR;">${_("KAISTk")}</span></a>
+            <a href="/school/HYUk"><img src="/static/images/logo02_10.png" alt="한양대학교 대학소개 페이지"><span style="font-family:daumR;">${_("HYUk")}</span></a>
         </div>
     </section>	 <!-- school_list E -->
 
@@ -310,7 +330,7 @@ if (    (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
       % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
         <section class="courses">
             <p class="title_type1">
-                <img src="/static/images/title02.png" alt="전체강좌">
+                <img src="/static/images/title02${'_en' if LANG == 'en' else ''}.png" alt="전체강좌">
                 <a href="/courses"><img src="/static/images/more.png" alt="전체강좌 더보기"></a>
             </p>
             <ul class="courses-listing">
