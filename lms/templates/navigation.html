@@ -40,6 +40,12 @@ site_status_msg = get_site_status_msg(course_id)
 
   <header id="global-navigation" class="global ${"slim" if course else ""}" >
     <nav class="nav-wrapper" aria-label="${_('Global')}">
+
+    <div style="position: absolute; text-align: right; font-size: 10px; top: 10px; width: 100%; right: 10px;">
+        <a href="/ko" style="color: #000;">Korean</a> |
+        <a href="/en" style="color: #000;">English</a>
+    </div>
+
     <h1 class="logo">
       <a href="/">
         <%block name="navigation_logo">
