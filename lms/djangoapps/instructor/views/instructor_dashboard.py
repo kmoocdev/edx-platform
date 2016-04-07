@@ -229,8 +229,8 @@ def check_assessment_done(course_id):
     query2 += "where "
     query2 += "    uri in (select uri from vw_copykiller where class_id ='"+course_id+"') "
     query2 += "and "
-    # query2 += "    complete_status = 'Y' and check_type='internet'"
-    query2 += "    complete_date is not null and check_type='internet'"
+    query2 += "    complete_status in ('Y','F') and check_type='internet'"
+    # query2 += "    complete_date is not null and check_type='internet'"
     cur.execute(query2)
     result = cur.fetchone()
     cur.close()
