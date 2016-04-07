@@ -37,17 +37,17 @@
 /**{font-family:daumR ! important;}*/
 
 header.global{height:auto;box-shadow:none;border-bottom:solid 1px #666;box-shadow:2px 2px 2px #666;}
-header.global h1.logo{margin:30px 0;}
+header.global h1.logo{margin:10px 0 20px;}
 header.global h1.logo img {height:44px !important;}
 header.global nav {margin:0 auto;padding:0 10px;max-width:1170px;height:auto;position:relative;}
-header.global .nav-global{float:none;margin:0 0 0 230px;font-size:0px;padding:40px 0 0 0;width:auto;display:block;}
+header.global .nav-global{float:none;margin:0 0 0 230px;font-size:0px;padding:20px 0 0 0;width:auto;display:block;}
 header.global .nav-global li{margin:0;padding:0;box-sizing:border-box;}
 header.global .nav-global li a{padding:0;}
 /*header.global .nav-global li[class^="gnb"]{width:21%;text-align: center;}*/
 
 /*header.global .nav-global li[class^="gnb"] a{float:right;width:140px;height:26px;font-size:0px;text-transform:none;font-weight:bold;color:#fff;background:url('/static/images/gnb.png') no-repeat top left;}*/
 /*header.global .nav-global li[class^="gnb"] a{float:right;width:140px;height:26px;font-size:25px;text-transform:none;font-weight:bold;color:#383838;padding-top:5px;}*/
-header.global .nav-global li[class^="gnb"] a{height:26px;font-size:25px;text-transform:none;font-weight:bold;color:#383838;padding-top:5px; margin: 0 30px;}
+header.global .nav-global li[class^="gnb"] a{height:26px;font-size:25px;text-transform:none;font-weight:bold;color:#383838;padding-top:5px; margin: 0 30px;	font-family: "Open Sans", daumR;}
 
 /*header.global .nav-global li.gnb2 a{width:100px;background-position:-254px top;}*/
 /*header.global .nav-global li.gnb3 a{width:100px;background-position:-465px top;}*/
@@ -452,3 +452,8 @@ img{ border:none}
 .btn{text-align:center;}
 .btn_ipin{width:100%; text-align:center; margin:30px 0 0 0}
 .btn_back{width:100%; text-align:center; margin:50px 0 0 0}
+
+
+/* trans button style*/
+.trans {text-align: right; font-size: 10px;	padding-top: 10px;}
+/*.trans.slim {font-size: 10px;text-align: right;}*/
