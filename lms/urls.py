@@ -22,8 +22,8 @@ urlpatterns = (
     url(r'^request_certificate$', 'certificates.views.request_certificate'),
 
     url(r'^$', 'branding.views.index', name="root"),   # Main marketing page, or redirect to courseware
-    url(r'^en$', 'branding.views.index_en', name="root"),   # en index
-    url(r'^ko$', 'branding.views.index_ko', name="root"),   # ko index
+    # url(r'^en$', 'branding.views.index_en', name="root"),   # en index
+    # url(r'^ko$', 'branding.views.index_ko', name="root"),   # ko index
     url(r'^dashboard$', 'student.views.dashboard', name="dashboard"),
     url(r'^login_ajax$', 'student.views.login_user', name="login"),
     url(r'^login_ajax/(?P<error>[^/]*)$', 'student.views.login_user'),
