@@ -78,8 +78,9 @@ function popClose(id){
 <div id="popupWrap_1" class="popup-wrap popup-kmooc2" style="position: absolute; left: 25px; top: 100px;
     z-index: 10010; display: none; border: 5px solid #EB9D43; opacity: 1; background: #ffffff; font-size: 13px;
     line-height: 25px; padding: 5px; box-shadow: 0 2px 5px 3px #444444;">
+    <!-- content area -->
 
-    <p style="text-align: left;font-size: 16px; font-weight: 600; font-family: daumR, "Nanum Gothic", "Open Sans";">
+    <p style="text-align: left;font-size: 16px; font-weight: 600; font-family: 'daumR', 'Nanum Gothic', 'Open Sans'; display: ${'block' if LANG == 'en' else 'none'};">
         Thank you for visiting <b>K-MOOC</b> site.<br/>
         We are a <b>K-MOOC</b> team.<br/>
         <br/>
@@ -89,19 +90,14 @@ function popClose(id){
         Thank you.<br/>
     </p>
 
-    <p style="text-align: center; display: none;">
-        <a target="_blank" href="http://blog.naver.com/kmooc_kr/220635796932">
-            <img src="/static/images/banner_course_2016.jpg" alt="2016년 강좌 운영 계획">
+    <p style="text-align: center; margin-top: 5px; display: ${'none' if LANG == 'en' else 'block'};">
+        <a target="_blank" href="http://blog.naver.com/kmooc_kr/220677950573">
+            <img src="/static/images/kocw_banner.jpg" alt="KOCW">
         </a>
     </p>
 
-    <p id="u16" style="text-align: center; margin-top: 5px; display: none;">
-        <a target="_blank" href="http://blog.naver.com/kmooc_kr/220639094053">
-            <img src="/static/images/banner_collusion_2016.jpg" alt="2016년 강좌 운영 계획">
-        </a>
-    </p>
-
-    <div style="text-align: right;">
+    <!-- close area -->
+    <div style="text-align: right; display: ${'"none"' if LANG == 'en' else '"block"'};">
         <label onclick="closeWin1();">
             <input id="chkbox_1" name="chkbox_1" type="checkbox" style="vertical-align: middle;">
             <span style="font-style:normal; font-size:13px;"><b>${'Close this window for next 24 hours' if LANG == 'en' else '오늘 하루 열지 않음'} &nbsp;&nbsp;</b></span>
@@ -128,23 +124,20 @@ function closeWin1() {
 cookiedata = document.cookie;
 
 popupDate = new Date();
-## if ( (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
-##      (popupDate.getFullYear() == 2015) &&
-##      (popupDate.getMonth()== 11-1 ||
-##          (popupDate.getMonth()== 12-1 && popupDate.getDate() <= 18)
-##      )
-##    ){
-
-if (    (cookiedata.indexOf("popupdiv2=done") < 0 )
+if (
+        (cookiedata.indexOf("popupdiv2=done") < 0 )
         && (popupDate.getFullYear() == 2016)
 ##         && (popupDate.getMonth() < 3)
-   ){
+   )
+    {
 
+    %if LANG == 'en':
+        document.all['popupWrap_1'].style.display = "block";
+    %else:
+        document.all['popupWrap_1'].style.display = "block";
+    %endif
 
-##     document.all['popupWrap_1'].style.display = "block";
-       document.all['popupWrap_1'].style.display = ${'"block"' if LANG == 'en' else '"none"'};
-
-##     console.log(popupDate.getFullYear() + ":" + popupDate.getMonth() + ":" + popupDate.getDate());
+    //console.log(popupDate.getFullYear() + ":" + popupDate.getMonth() + ":" + popupDate.getDate());
     if((popupDate.getFullYear() == 2016) &&
         (popupDate.getMonth() < 3) && (popupDate.getDate() <= 16)){
             $("#u16").show();
@@ -154,7 +147,6 @@ if (    (cookiedata.indexOf("popupdiv2=done") < 0 )
     document.all['popupWrap_1'].style.display = "none";
 }
 </script>
-
 
 <script>
     function reloadIndex(){
