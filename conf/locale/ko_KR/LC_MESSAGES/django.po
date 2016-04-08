@@ -7473,7 +7473,7 @@ msgstr "검색"
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "Video"
-msgstr "동영상1"
+msgstr "동영상"
 
 msgid "Courses Running"
 msgstr "전체 강좌"
