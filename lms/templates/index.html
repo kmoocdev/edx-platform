@@ -80,14 +80,16 @@ function popClose(id){
     line-height: 25px; padding: 5px; box-shadow: 0 2px 5px 3px #444444;">
     <!-- content area -->
 
-    <p style="text-align: left;font-size: 16px; font-weight: 600; font-family: 'daumR', 'Nanum Gothic', 'Open Sans'; display: ${'block' if LANG == 'en' else 'none'};">
-        Thank you for visiting <b>K-MOOC</b> site.<br/>
-        We are a <b>K-MOOC</b> team.<br/>
+    <p id="en_text" style="text-align: left;font-size: 16px; font-weight: 600; font-family: 'daumR', 'Nanum Gothic', 'Open Sans'; display: ${'block' if LANG == 'en' else 'none'};">
+        Experience the new way of learning, through <b>K-MOOC</b>. <br/>
         <br/>
-        Temporary services are currently only English to the main page of your visit.<br/>
-        Official English site will be available in the second half of 2016 year.<br/>
+        Welcome to K-MOOC website.<br/>
+        Currently, English service is provided in the main page only.<br/>
+        The official English website for K-MOOC will be in service later this year.<br/>
         <br/>
-        Thank you.<br/>
+        Thank you for your understanding.<br/>
+        <br/>
+        K-MOOC Team<br/>
     </p>
 
     <p style="text-align: center; margin-top: 5px; display: ${'none' if LANG == 'en' else 'block'};">
@@ -159,6 +161,9 @@ if (
     }
 
     $(document).ready(function(){
+
+        $("#en_text").css("padding", "5px");
+
         reloadIndex();
 
 

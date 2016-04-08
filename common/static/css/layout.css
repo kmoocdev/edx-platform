@@ -174,7 +174,8 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .school_list2 .inner > a:focus,
 .school_list2 .inner > a:hover {border:solid 1px #f58026;}
 .school_list2 .inner > a:nth-child(1),
-.school_list2 .inner > a:nth-child(6){margin-left:0;}
+.school_list2 .inner > a:nth-child(6),
+.school_list2 .inner > a:nth-child(11){margin-left:0;}
 .school_list2 .title_type1:after {content:"";clear:both;display:block;}
 
 .title_type1 a {float:right;}
