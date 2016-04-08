@@ -78,26 +78,37 @@ function popClose(id){
 <div id="popupWrap_1" class="popup-wrap popup-kmooc2" style="position: absolute; left: 25px; top: 100px;
     z-index: 10010; display: none; border: 5px solid #EB9D43; opacity: 1; background: #ffffff; font-size: 13px;
     line-height: 25px; padding: 5px; box-shadow: 0 2px 5px 3px #444444;">
-        <p style="text-align: center">
-            <a target="_blank" href="http://blog.naver.com/kmooc_kr/220635796932">
-                <img src="/static/images/banner_course_2016.jpg" alt="2016년 강좌 운영 계획">
-            </a>
-        </p>
 
-        <p id="u16" style="text-align: center; margin-top: 5px; display: none;">
-            <a target="_blank" href="http://blog.naver.com/kmooc_kr/220639094053">
-                <img src="/static/images/banner_collusion_2016.jpg" alt="2016년 강좌 운영 계획">
-            </a>
-        </p>
+    <p style="text-align: left;font-size: 16px; font-weight: 600; font-family: daumR, "Nanum Gothic", "Open Sans";">
+        Thank you for visiting <b>K-MOOC</b> site.<br/>
+        We are a <b>K-MOOC</b> team.<br/>
+        <br/>
+        Temporary services are currently only English to the main page of your visit.<br/>
+        Official English site will be available in the second half of 2016 year.<br/>
+        <br/>
+        Thank you.<br/>
+    </p>
 
-        <div style="text-align: right;">
-            <label onclick="closeWin1();">
-                <input id="chkbox_1" name="chkbox_1" type="checkbox" style="vertical-align: middle;">
-                <span style="font-style:normal; font-size:13px;"><b>오늘 하루 열지 않음 &nbsp;&nbsp;</b></span>
-            </label>
+    <p style="text-align: center; display: none;">
+        <a target="_blank" href="http://blog.naver.com/kmooc_kr/220635796932">
+            <img src="/static/images/banner_course_2016.jpg" alt="2016년 강좌 운영 계획">
+        </a>
+    </p>
 
-            <span><a href="javascript:popClose('popupWrap_1');" title="닫기">[ 닫기 ]</a></span>
-        </div>
+    <p id="u16" style="text-align: center; margin-top: 5px; display: none;">
+        <a target="_blank" href="http://blog.naver.com/kmooc_kr/220639094053">
+            <img src="/static/images/banner_collusion_2016.jpg" alt="2016년 강좌 운영 계획">
+        </a>
+    </p>
+
+    <div style="text-align: right;">
+        <label onclick="closeWin1();">
+            <input id="chkbox_1" name="chkbox_1" type="checkbox" style="vertical-align: middle;">
+            <span style="font-style:normal; font-size:13px;"><b>${'Close this window for next 24 hours' if LANG == 'en' else '오늘 하루 열지 않음'} &nbsp;&nbsp;</b></span>
+        </label>
+
+        <span><a href="javascript:popClose('popupWrap_1');" title="닫기">[ ${'close' if LANG == 'en' else '닫기'} ]</a></span>
+    </div>
 </div>
 
 <script language="Javascript">
@@ -124,11 +135,14 @@ popupDate = new Date();
 ##      )
 ##    ){
 
-if (    (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
-        (popupDate.getFullYear() == 2016) &&
-        (popupDate.getMonth() < 3)
+if (    (cookiedata.indexOf("popupdiv2=done") < 0 )
+        && (popupDate.getFullYear() == 2016)
+##         && (popupDate.getMonth() < 3)
    ){
-    document.all['popupWrap_1'].style.display = "block";
+
+
+##     document.all['popupWrap_1'].style.display = "block";
+       document.all['popupWrap_1'].style.display = ${'"block"' if LANG == 'en' else '"none"'};
 
 ##     console.log(popupDate.getFullYear() + ":" + popupDate.getMonth() + ":" + popupDate.getDate());
     if((popupDate.getFullYear() == 2016) &&
@@ -298,15 +312,7 @@ if (    (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
 
     <section class="school_list">	 <!-- school_list S -->
         <p class="title_type1">
-##             % if LANG == 'en':
-##             <img src="/static/images/title01.png" alt="참여대학1">
-##             % else:
-##             <img src="/static/images/title01.png" alt="참여대학2">
-##             % endif
-
             <img src="/static/images/title01${'_en' if LANG == 'en' else ''}.png" alt="참여대학" />
-
-
 
             <a href="/schools"><img src="/static/images/more.png" alt="참여대학 더보기"></a>
         </p>
@@ -321,6 +327,7 @@ if (    (cookiedata.indexOf("popupdiv2=done") < 0 ) &&
             <a href="/school/POSTECHk"><img src="/static/images/logo02_08.png" alt="포항공과대학교 대학소개 페이지"><span style="font-family:daumR;">${_("POSTECHk")}</span></a>
             <a href="/school/KAISTk"><img src="/static/images/logo02_09.png" alt="한국과학기술원 대학소개 페이지"><span style="font-family:daumR;">${_("KAISTk")}</span></a>
             <a href="/school/HYUk"><img src="/static/images/logo02_10.png" alt="한양대학교 대학소개 페이지"><span style="font-family:daumR;">${_("HYUk")}</span></a>
+            <a href="/school/KOCWk"><img src="/static/images/logo02_11.png" alt="KOCW 대학소개 페이지"><span style="font-family:daumR;">KOCW</span></a>
         </div>
     </section>	 <!-- school_list E -->
 
