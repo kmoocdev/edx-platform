@@ -19,7 +19,7 @@
 
         <ul data-facet="search_string" class="facet-list">
             <li data-facet="search_string">
-                <button data-value="인문과학" data-text="인문과학" class="facet-option discovery-button">인문·과학<span class="count">1</span></button>
+                <button data-value="인문과학" data-text="인문과학" class="facet-option discovery-button">인문과학<span class="count">1</span></button>
             </li>
         </ul>
 
@@ -37,13 +37,13 @@
 
         <ul data-facet="search_string" class="facet-list">
             <li data-facet="search_string">
-                <button data-value="사회과학" data-text="사회과학" class="facet-option discovery-button">사회·과학<span class="count">5</span></button>
+                <button data-value="사회과학" data-text="사회과학" class="facet-option discovery-button">사회과학<span class="count">5</span></button>
             </li>
         </ul>
 
         <ul data-facet="search_string" class="facet-list">
             <li data-facet="search_string">
-                <button data-value="교육일반" data-text="교육일반" class="facet-option discovery-button">교육·일반<span class="count">1</span></button>
+                <button data-value="교육일반" data-text="교육일반" class="facet-option discovery-button">교육일반<span class="count">1</span></button>
             </li>
         </ul>
 
@@ -73,7 +73,7 @@
 
         <ul data-facet="search_string" class="facet-list">
             <li data-facet="search_string">
-                <button data-value="생물과학" data-text="생물과학" class="facet-option discovery-button">생물·과학<span class="count">1</span></button>
+                <button data-value="생활과학" data-text="생활과학" class="facet-option discovery-button">생활과학<span class="count">1</span></button>
             </li>
         </ul>
 
