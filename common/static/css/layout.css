@@ -153,7 +153,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .school_list{padding:30px 0 0 0;background:url('/static/images/bg01.png') repeat  left top;}
 .school_list .inner{margin:auto;padding:0 0 30px 0;max-width:1200px;overflow:hidden;}
 .school_list .title_type1{margin:0 auto 10px auto;max-width:1200px;padding:0 10px;}
-.school_list .inner > a {float:left;padding:10px 0 10px 0;width: calc(100% / 11);border:solid 1px #d1d1d1;border-left:none;text-align:center;background:#fff;box-sizing:border-box;}
+.school_list .inner > a {float:left;padding:10px 0 10px 0;width: calc(100%/11 - 0.1px);border:solid 1px #d1d1d1;border-left:none;text-align:center;background:#fff;box-sizing:border-box;}
 .school_list .inner > a:first-child{border-left:solid 1px #d1d1d1;}
 .school_list .inner > a span{display:block;font-size:16px;letter-spacing:-1px;white-space:nowrap;padding-top:10px;}
 
@@ -249,7 +249,7 @@ header.global .nav-global li.deactive{display:none;}
 	/*body{border: 1px solid orange;}*/
 
 	header.global .nav-global li[class^="gnb"] a{height:26px;font-size:25px;text-transform:none;font-weight:bold;color:#383838;padding-top:5px; margin: 0 10px; min-width: 85px; text-align: center;}
-	.school_list .inner > a{width:calc(100%/6)}
+	.school_list .inner > a{width:calc(100%/6 - 0.1px)}
 	.school_list .inner > a:nth-child(7){border-left:solid 1px #d1d1d1;}
 	.school_list .inner > a:nth-child(7),
 	.school_list .inner > a:nth-child(8),
