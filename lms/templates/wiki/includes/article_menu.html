@@ -8,7 +8,7 @@
 <li class="${"active" if selected_tab == "view" else ""}">
   <a href="${reverse('wiki:get', kwargs={'article_id' : article.id, 'path' : urlpath.path})}">
     <i class="icon fa fa-eye"></i>
-    ${_("View")}
+    ${_("View Current")}
     ${_("{span_start}(active){span_end}").format(span_start="<span class='sr'>", span_end="</span>") if selected_tab == "view" else ""}
   </a>
 </li>

@@ -103,9 +103,10 @@ from django.core.urlresolvers import reverse
         %if studio_url:
         <a class="instructor-info-action" href="${studio_url}">${_("View Course in Studio")}</a>
         %endif
-        %if settings.FEATURES.get('ENABLE_INSTRUCTOR_LEGACY_DASHBOARD'):
-        <a class="instructor-info-action" href="${ old_dashboard_url }"> ${_("Revert to Legacy Dashboard")} </a>
-        %endif
+
+##         %if settings.FEATURES.get('ENABLE_INSTRUCTOR_LEGACY_DASHBOARD'):
+##         <a class="instructor-info-action" href="${ old_dashboard_url }"> ${_("Revert to Legacy Dashboard")} </a>
+##         %endif
       </div>
     <h1>${_("Instructor Dashboard")}</h1>
         <!--
@@ -162,6 +163,8 @@ from django.core.urlresolvers import reverse
 %if is_assessment:
 <script type="text/javascript">
   function run_copykiller() {
+      console.log("/courses/${course.id}/instructor/copykiller");
+
     $.ajax({
       url: "/courses/${course.id}/instructor/copykiller",
     }).done(function(data) {
