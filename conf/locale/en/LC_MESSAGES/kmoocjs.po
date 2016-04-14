@@ -158,3 +158,6 @@ msgstr "Common Problems with Hints and Feedback"
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 msgid "Enter your question or comment"
 msgstr "Enter your question or comment"
+
+msgid "View Current"
+msgstr "View Current"

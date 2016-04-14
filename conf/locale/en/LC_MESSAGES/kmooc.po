@@ -655,15 +655,37 @@ msgstr "DKUK"
 msgid "Starting Soon"
 msgstr "Starting Soon"
 
-msgid "Current (Now enrolling)"
-msgstr "Current (Now enrolling)"
+msgid "Current (Join Now)"
+msgstr "Current (Join Now)"
 
 msgid "Current"
 msgstr "Current"
 
-msgid "Archived (Now enrolling)"
-msgstr "Archived (Now enrolling)"
+msgid "Current (Registration closed)"
+msgstr "Current (Registration closed)"
+
+msgid "Archived (Join Now)"
+msgstr "Archived (Join Now)"
 
 msgid "Closed"
 msgstr "Closed"
 
+msgid "View Current"
+msgstr "View Current"
+
+#: lms/templates/courseware/legacy_instructor_dashboard.html
+msgid "Pending Instructor Tasks"
+msgstr "Pending Instructor Tasks"
+
+#: lms/templates/courseware/course_about.html
+msgid "View Courseware"
+msgstr "View Courseware"
+
+#: lms/templates/wiki/article.html
+msgid "Last modified" 
+msgstr "Last modified" 
+
+#: lms/templates/wiki/article.html
+msgid "Add article down" 
+msgstr "Add article down" 
+ 
