@@ -779,6 +779,7 @@ def get_copykiller_result(request, course_id):
     query += "vw_copykiller v "
     query += "where "
     query += "v.uri in (select uri from tb_copykiller_copyratio) "
+    query += "and concat(class_id, '+', term_id) = '"+course_id[course_id.index('+')+1:]+"'"
     query += "order by assessment_no, student_id "
     cur.execute(query)
     rows = cur.fetchall()
