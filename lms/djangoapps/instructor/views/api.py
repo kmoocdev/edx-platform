@@ -111,6 +111,7 @@ from opaque_keys.edx.keys import CourseKey
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
 from opaque_keys import InvalidKeyError
 from openedx.core.djangoapps.course_groups.cohorts import is_course_cohorted
+import MySQLdb as mdb
 
 log = logging.getLogger(__name__)
 
@@ -1706,8 +1707,21 @@ def get_student_progress_url(request, course_id):
         'progress_url': '/../...'
     }
     """
+
     course_id = SlashSeparatedCourseKey.from_deprecated_string(course_id)
     user = get_student_from_identifier(request.GET.get('unique_student_identifier'))
+    # print user.id, course_id
+
+    con = mdb.connect(settings.DATABASES.get('default').get('HOST'), settings.DATABASES.get('default').get('USER'), settings.DATABASES.get('default').get('PASSWORD'), settings.DATABASES.get('default').get('NAME'));
+    with con:
+        query = "select count(1) from student_courseenrollment where course_id = '"+str(course_id)+"' and user_id = '"+str(user.id)+"'"
+        # print 'query ============>', query
+
+        cur = con.cursor()
+        cur.execute(query)
+        for cnt in cur:
+            if cnt[0] == 0:
+                user = None
 
     progress_url = reverse('student_progress', kwargs={'course_id': course_id.to_deprecated_string(), 'student_id': user.id})
 

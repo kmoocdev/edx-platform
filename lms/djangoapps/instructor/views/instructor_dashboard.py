@@ -166,12 +166,12 @@ def instructor_dashboard_2(request, course_id):
     }
 
 
-    print 'copykiller check --------------------------'
-    print 'course.wiki_slug',course.wiki_slug
-    print 'course.id',course.id
-    print 'course_key.course', course_key.course
-    print 'instructor_dashboard.py context =', context
-    print '-------------------------------------------'
+    # print 'copykiller check --------------------------'
+    # print 'course.wiki_slug',course.wiki_slug
+    # print 'course.id',course.id
+    # print 'course_key.course', course_key.course
+    # print 'instructor_dashboard.py context =', context
+    # print '-------------------------------------------'
 
 
     return render_to_response('instructor/instructor_dashboard_2/instructor_dashboard_2.html', context)
@@ -741,8 +741,8 @@ def copykiller(request, course_id):
     query += "completed_at is not null and item_id not like '%DEMOk%' and course_id = '"+str(course_id)+"'"
     query1 = "delete from tb_tmp_answer"
 
-    print 'query =', query
-    print 'query1 = ', query1
+    # print 'query =', query
+    # print 'query1 = ', query1
 
     with con:
         cur = con.cursor()
