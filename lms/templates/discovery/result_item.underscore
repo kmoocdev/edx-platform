@@ -14,7 +14,7 @@
             </h2>
             <div class="course-date" aria-hidden="true">
             <% if (state) { %>
-                <b><%= state%></b>
+                <b><%= gettext(state)%></b>
             <% }else{ %>
                 <b>&nbsp;</b>
             <% } %>

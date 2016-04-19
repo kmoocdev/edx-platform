@@ -76,13 +76,13 @@ define([
             //console.log("5: " + d < end);
 
             if(enrollment_start <= d && (enrollment_end == null || d <= enrollment_end) && d < start){
-                data.state = '개강 예정';
+                data.state = 'Starting Soon';
             }else if(enrollment_start <= d && (enrollment_end == null || d <= enrollment_end) && start <= d  && end != null && end != "" && d < end){
-                data.state = '진행 강좌 (수강 가능)';
+                data.state = 'Current (Join Now)';
             }else if(start < d && d < end && enrollment_end < d){
-                data.state = '진행 강좌';
+                data.state = 'Current (Registration closed)';
             }else if(end < d && (enrollment_end == null || enrollment_end < d)){
-                data.state = '종료 강좌 (수강 가능)';
+                data.state = 'Archived (Join Now)';
             }else if(end < d){
                 data.state = '종료 강좌';
             }else {
