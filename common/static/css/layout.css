@@ -245,8 +245,23 @@ header.global .nav-global li.active1 {right:95px;}
 header.global .nav-global li.active2 {right:10px;}
 header.global .nav-global li.deactive{display:none;}
 
+
+/* notice css */
+#notice{min-height: 60px; background-color: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255);}
+#notice .inner{max-width: 1200px; height: 55px; margin: 3px auto;}
+#notice span{float: left; padding: 10px; font-family: daumR; font-size: 20px; border-radius: 3px; background-color: rgb(221, 221, 221); box-shadow: 0px 0px 0px 0px rgb(102, 102, 102);
+	margin: 10px 15px 10px 5px;}
+#notice ul{margin: 0px; padding: 19px 0px 0px; float: left; width: 88%; list-style-type: none;}
+#notice li{letter-spacing: 0px; line-height: 20px; float: left; overflow: hidden; width: 50%;}
+#notice a{text-decoration: none; color: rgb(85, 85, 85); float: left; width: 100%;}
+#notice .ldiv{float: left; font-size: 14px; font-weight: bold; height: 20px; max-width: 74%; overflow: hidden;}
+#notice .rdiv{font-size: 10px; text-align: right; margin-right: 0px; width: 118px; float: right; padding-right: 10px;}
+
+
 @media only screen and (max-width:1100px) {
 	/*body{border: 1px solid orange;}*/
+	#notice{border: 1px solid red;}
+	#notice ul{width:87%;}
 
 	header.global .nav-global li[class^="gnb"] a{height:26px;font-size:25px;text-transform:none;font-weight:bold;color:#383838;padding-top:5px; margin: 0 10px; min-width: 85px; text-align: center;}
 	.school_list .inner > a{width:calc(100%/6 - 0.1px)}
@@ -263,6 +278,8 @@ header.global .nav-global li.deactive{display:none;}
 
 @media only screen and (max-width:950px) {
 	/*body{border: 1px solid purple;}*/
+	#notice{border: 1px solid purple;}
+	#notice ul{width:calc(85% - 1px)}
 
 	.wrapper-footer footer#footer-openedx .copyright{margin:0 0 5px 190px;font-size:16px;color:#838282;width: 50%;border: 0px solid deeppink;}
 	header.global .nav-global li[class^="gnb"]{float:none;width:100%;border-top:solid 1px #ddd;}
@@ -318,6 +335,9 @@ header.global .nav-global li.deactive{display:none;}
 
 @media only screen and (max-width:813px) {
 	/*body{border: 1px solid green;}*/
+	#notice{border: 1px solid green;}
+	#notice li{float: none; width: 95%}
+	#notice ul{padding: 9px 0 0; width: 80%;}
 
 	.home>header.type1{padding-bottom:0;}
 	.school_info .inner{padding-top:15px;}
@@ -378,6 +398,7 @@ header.global .nav-global li.deactive{display:none;}
 
 @media only screen and (max-width:640px) {
 	/*body{border: 1px solid red;}*/
+	#notice{border: 1px solid blue;}
 
 	header.global .nav-global{padding:0;display:none;}
 	header.global .user{padding:0;display:none;}
