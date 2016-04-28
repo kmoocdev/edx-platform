@@ -5170,7 +5170,7 @@ msgstr "전체 강좌"
 msgid "Dashboard"
 msgstr "대시보드"
 
-msgid "I want to learn about…"
+msgid "I want to learn about..."
 msgstr "원하시는 강의를 검색해보세요"
 
 #: university
