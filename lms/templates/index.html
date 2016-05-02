@@ -161,6 +161,11 @@ if (
     }
 
     $(document).ready(function(){
+        //get notice list ajax
+        noticeList();
+
+
+
 
         $("#en_text").css("padding", "5px");
 
@@ -275,6 +280,63 @@ if (
             $("#indexVideo").prop("width", "640").css("left", "calc(50% - 320px)");
         }
     }
+
+    function noticeList(){
+        console.log("noticeList called");
+        $.post("/notice","",function(data){
+            console.log("notice data = " + data);
+            console.log("notice length = " + data.length);
+
+            for(var i=0; i<data.length; i++){
+
+                console.log(data[i].title);
+                console.log(data[i].link);
+                console.log(data[i].sdate);
+                console.log(data[i].edate);
+
+                if(i > 1)
+                    break;
+
+                var html = "";
+                html += "<li>";
+                html += "    <a href='"+data[i].link+"' target='_blank'>";
+                html += "       <div class='ldiv'>";
+                html += "           <span class='notice_title' title='"+data[i].title+"'>"+data[i].title+"</span>";
+                html += "       </div>";
+                html += "       <div class='more'>...</div>";
+                html += "       <div class='rdiv'>"+data[i].sdate+" ~ "+data[i].edate+"</div>";
+                html += "   </a>";
+                html += "</li> ";
+                $("#notice ul").append(html);
+            }
+            setTimeout(function(){
+                /*$("#notice").show(function(){
+                    console.log("11====> " + $("#notice .notice_title").size());
+                    $("#notice .notice_title").each(function(index){
+                        console.log("2nd. " + index + " : " + $(this).width());
+
+                        if($(this).width() > 380)
+                            $("#notice .more:eq("+index+")").show();
+                    });
+                });
+                */
+                $("#notice").slideDown(400, function(){
+                    $("#notice .notice_title").each(function(index){
+                        console.log("2nd. " + index + " : " + $(this).width());
+                        if($(this).width() > 380)
+                            $("#notice .more:eq("+index+")").show();
+                    });
+                });
+
+
+            }, 2000);
+
+
+
+        }, "json");
+        console.log("noticeList done");
+    }
+
 </script>
 
 <section class="home" style="background: #fff8eb !important;">
@@ -309,21 +371,8 @@ if (
 
     <div id="notice">
         <div class="inner">
-            <span>공지사항</span>
-            <ul>
-                <li>
-		            <a href="#">
-                        <div class="ldiv">22222414141414141414141</div>
-                        <div class="rdiv">2016/04/10 ~ 2016/04/31</div>
-                    </a>
-                </li>
-                <li>
-		            <a href="#">
-                        <div class="ldiv">22222414141414141414141</div>
-                        <div class="rdiv">2016/04/10 ~ 2016/04/31</div>
-                    </a>
-                </li>
-            </ul>
+            <span class="title">공지사항</span>
+            <ul></ul>
         </div>
     </div>
 
