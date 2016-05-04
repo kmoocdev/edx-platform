@@ -92,10 +92,24 @@ function popClose(id){
         K-MOOC Team<br/>
     </p>
 
-    <p style="text-align: center; margin-top: 5px; display: ${'none' if LANG == 'en' else 'block'};">
-        <a target="_blank" href="http://blog.naver.com/kmooc_kr/220677950573">
-            <img src="/static/images/kocw_banner.jpg" alt="KOCW">
-        </a>
+    <p style="text-align: left; font-weight: bold; margin-top: 5px; display: ${'none' if LANG == 'en' else 'block'};">
+##         <a target="_blank" href="http://blog.naver.com/kmooc_kr/220677950573">
+##             <img src="/static/images/kocw_banner.jpg" alt="KOCW">
+##         </a>
+
+        안녕하십니까. K-MOOC팀입니다.<br/>
+        <br/>
+        K-MOOC 시스템 점검 작업 등으로 인하여 다음과 같이 서비스가 일시 중단될 예정입니다.<br/>
+        <br/>
+        ○ 작업일시 : 2016년 5월 13일(금) 10:00 ~ 11:00<br/>
+        ○ 작업내용 : 서버 보안 강화 작업 등<br/>
+        ○ 작업영향 : 작업시간 중 K-MOOC 접속이 원활하지 않을 수 있음<br/>
+        <br/>
+        상기 사정으로 인해 서비스 이용에 불편을 드린 점, 양해를 부탁드리며<br/>
+        보다 질 높은 서비스 제공을 위해 항상 노력하겠습니다.<br/>
+        <br/>
+        감사합니다.
+
     </p>
 
     <!-- close area -->
@@ -155,7 +169,7 @@ if (
         var a = document.location.href;
         var b = a.split('/');
         var c = b[b.length-1];
-        console.log('c: ' + c);
+##         console.log('c: ' + c);
         if(c == 'en' || c == 'ko')
             document.location.href = '/';
     }
@@ -164,13 +178,9 @@ if (
         //get notice list ajax
         noticeList();
 
-
-
-
         $("#en_text").css("padding", "5px");
 
         reloadIndex();
-
 
         //layer popup..
         showNotice();
@@ -188,7 +198,7 @@ if (
 
         $("#mask").click(function(){
             $("#indexVideo").hide();
-	    console.log("src..");
+## 	    console.log("src..");
 	    var src = $("#indexVideo").attr("src");
             $("#indexVideo").attr("src","");
             $("#indexVideo").attr("src",src);
@@ -282,17 +292,9 @@ if (
     }
 
     function noticeList(){
-        console.log("noticeList called");
         $.post("/notice","",function(data){
-            console.log("notice data = " + data);
-            console.log("notice length = " + data.length);
 
             for(var i=0; i<data.length; i++){
-
-                console.log(data[i].title);
-                console.log(data[i].link);
-                console.log(data[i].sdate);
-                console.log(data[i].edate);
 
                 if(i > 1)
                     break;
@@ -301,40 +303,71 @@ if (
                 html += "<li>";
                 html += "    <a href='"+data[i].link+"' target='_blank'>";
                 html += "       <div class='ldiv'>";
-                html += "           <span class='notice_title' title='"+data[i].title+"'>"+data[i].title+"</span>";
+                html += "           <span class='notice_title'>"+data[i].title+"</span>";
                 html += "       </div>";
-                html += "       <div class='more'>...</div>";
+                //html += "       <div class='more'>...</div>";
                 html += "       <div class='rdiv'>"+data[i].sdate+" ~ "+data[i].edate+"</div>";
                 html += "   </a>";
                 html += "</li> ";
                 $("#notice ul").append(html);
             }
             setTimeout(function(){
-                /*$("#notice").show(function(){
-                    console.log("11====> " + $("#notice .notice_title").size());
-                    $("#notice .notice_title").each(function(index){
-                        console.log("2nd. " + index + " : " + $(this).width());
+                if(data.length == 1){
+                    var ulWidth = $("#notice ul").width();
+                    var liWidth = $("#notice li").width();
+                    var divHeight = $("#notice .ldiv").height();
+                    var spanHeight = $("#notice .notice_title").height();
 
-                        if($(this).width() > 380)
-                            $("#notice .more:eq("+index+")").show();
+                }else{
+                    $("#notice li").css("max-width", "50%");
+                }
+
+                var interval;
+                var timeout;
+
+                $("#notice li").each(function(index){
+
+                    $("#notice li:eq("+index+")").mouseenter(function(){
+                        if(interval)
+                            clearInterval(interval);
+                        if(timeout)
+                            clearTimeout(timeout);
+
+                        var z = 0;
+                        interval = setInterval(function(){
+
+                            if($("#notice .notice_title:eq("+index+")").height() > 20){
+                                //console.log($("#notice .notice_title:eq("+index+")").height() + ": minus");
+
+                                $("#notice .notice_title:eq("+index+")").css("margin-left", z-- + "px");
+                            }else{
+                                //console.log($("#notice .notice_title:eq("+index+")").height() + ": done");
+
+                                clearInterval(interval);
+                                timeout = setTimeout(function(){
+                                    $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+                                    $("#notice .notice_title:eq("+index+")").mouseover();
+                                }, 2000);
+                            }
+                        }, 30);
+                    }).mouseleave(function(){
+                        //console.log($("#notice .notice_title:eq("+index+")").height() + ": ldiv mouseleave2");
+                        clearInterval(interval);
+                        clearTimeout(timeout);
+                        $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
                     });
+
+
                 });
-                */
+
                 $("#notice").slideDown(400, function(){
                     $("#notice .notice_title").each(function(index){
-                        console.log("2nd. " + index + " : " + $(this).width());
                         if($(this).width() > 380)
                             $("#notice .more:eq("+index+")").show();
                     });
                 });
-
-
             }, 2000);
-
-
-
         }, "json");
-        console.log("noticeList done");
     }
 
 </script>
@@ -371,8 +404,14 @@ if (
 
     <div id="notice">
         <div class="inner">
-            <span class="title">공지사항</span>
-            <ul></ul>
+            <span class="title">
+                <img src="/static/images/tit_notice.png">
+            </span>
+            <div class="content">
+                <div class="innerContent">
+                <ul></ul>
+                </div>
+            </div>
         </div>
     </div>
 
