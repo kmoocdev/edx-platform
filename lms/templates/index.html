@@ -308,9 +308,9 @@ if (
                                 html += "       <div class='ldiv'>";
                                 html += "           <span class='notice_title'>"+data[i].title+"</span>";
                                 html += "       </div>";
-                                //html += "       <div class='more'>...</div>";
-                                html += "       <div class='rdiv'>"+data[i].sdate+" ~ "+data[i].edate+"</div>";
                                 html += "   </a>";
+                                html += "   <div class='more'>..</div>";
+                                html += "   <div class='rdiv'>"+data[i].sdate+" ~ "+data[i].edate+"</div>";
                                 html += "</li> ";
                                 $("#notice ul").append(html);
                             }
@@ -332,12 +332,8 @@ if (
                                     interval = setInterval(function(){
 
                                         if($("#notice .notice_title:eq("+index+")").height() > 20){
-                                            //console.log($("#notice .notice_title:eq("+index+")").height() + ": minus");
-
                                             $("#notice .notice_title:eq("+index+")").css("margin-left", z-- + "px");
                                         }else{
-                                            //console.log($("#notice .notice_title:eq("+index+")").height() + ": done");
-
                                             clearInterval(interval);
                                             timeout = setTimeout(function(){
                                                 $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
@@ -352,10 +348,37 @@ if (
                                     $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
                                 });
                             });
+
                             $("#notice .inner").hide().slideDown(1500,"easeInExpo");
+
+                            $("#notice .ldiv").each(function(index){
+
+                                console.log(index + ":" + $("#notice .ldiv").size());
+
+                                $(this).resize(function(){
+                                    alert("ldev resize ! " + index);
+                                });
+                            });
+
+
+                            $(window).resize(function(){
+                                showMore();
+                            });
                         }
+
+                        showMore();
                     },1200);
         }, "json");
+    }
+
+    function showMore(){
+        $("#notice li").each(function(index){
+            if($("#notice .notice_title:eq("+index+")").height() > 20){
+                $("#notice .more:eq("+index+")").show();
+            }else{
+                $("#notice .more:eq("+index+")").hide();
+            }
+        });
     }
 
 </script>
