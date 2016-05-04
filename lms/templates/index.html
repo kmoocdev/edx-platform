@@ -292,82 +292,69 @@ if (
     }
 
     function noticeList(){
-        $.post("/notice","",function(data){
-            if(data.length && data.length > 0){
-                for(var i=0; i<data.length; i++){
+        $.post("/notice"
+                ,""
+                ,function(data){
+                    setTimeout(function(){
+                        if(data.length && data.length > 0){
+                            for(var i=0; i<data.length; i++){
 
-                    if(i > 1)
-                        break;
+                                if(i > 1)
+                                    break;
 
-                    var html = "";
-                    html += "<li>";
-                    html += "    <a href='"+data[i].link+"' target='_blank'>";
-                    html += "       <div class='ldiv'>";
-                    html += "           <span class='notice_title'>"+data[i].title+"</span>";
-                    html += "       </div>";
-                    //html += "       <div class='more'>...</div>";
-                    html += "       <div class='rdiv'>"+data[i].sdate+" ~ "+data[i].edate+"</div>";
-                    html += "   </a>";
-                    html += "</li> ";
-                    $("#notice ul").append(html);
-                }
-                setTimeout(function(){
-                    if(data.length == 1){
-                        var ulWidth = $("#notice ul").width();
-                        var liWidth = $("#notice li").width();
-                        var divHeight = $("#notice .ldiv").height();
-                        var spanHeight = $("#notice .notice_title").height();
+                                var html = "";
+                                html += "<li>";
+                                html += "    <a href='"+data[i].link+"' target='_blank'>";
+                                html += "       <div class='ldiv'>";
+                                html += "           <span class='notice_title'>"+data[i].title+"</span>";
+                                html += "       </div>";
+                                //html += "       <div class='more'>...</div>";
+                                html += "       <div class='rdiv'>"+data[i].sdate+" ~ "+data[i].edate+"</div>";
+                                html += "   </a>";
+                                html += "</li> ";
+                                $("#notice ul").append(html);
+                            }
+                            if(data.length > 1)
+                                $("#notice li").css("max-width", "50%");
 
-                    }else{
-                        $("#notice li").css("max-width", "50%");
-                    }
+                            var interval;
+                            var timeout;
 
-                    var interval;
-                    var timeout;
+                            $("#notice li").each(function(index){
 
-                    $("#notice li").each(function(index){
+                                $("#notice li:eq("+index+")").mouseenter(function(){
+                                    if(interval)
+                                        clearInterval(interval);
+                                    if(timeout)
+                                        clearTimeout(timeout);
 
-                        $("#notice li:eq("+index+")").mouseenter(function(){
-                            if(interval)
-                                clearInterval(interval);
-                            if(timeout)
-                                clearTimeout(timeout);
+                                    var z = 0;
+                                    interval = setInterval(function(){
 
-                            var z = 0;
-                            interval = setInterval(function(){
+                                        if($("#notice .notice_title:eq("+index+")").height() > 20){
+                                            //console.log($("#notice .notice_title:eq("+index+")").height() + ": minus");
 
-                                if($("#notice .notice_title:eq("+index+")").height() > 20){
-                                    //console.log($("#notice .notice_title:eq("+index+")").height() + ": minus");
+                                            $("#notice .notice_title:eq("+index+")").css("margin-left", z-- + "px");
+                                        }else{
+                                            //console.log($("#notice .notice_title:eq("+index+")").height() + ": done");
 
-                                    $("#notice .notice_title:eq("+index+")").css("margin-left", z-- + "px");
-                                }else{
-                                    //console.log($("#notice .notice_title:eq("+index+")").height() + ": done");
-
+                                            clearInterval(interval);
+                                            timeout = setTimeout(function(){
+                                                $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+                                                $("#notice .notice_title:eq("+index+")").mouseover();
+                                            }, 2000);
+                                        }
+                                    }, 30);
+                                }).mouseleave(function(){
+                                    //console.log($("#notice .notice_title:eq("+index+")").height() + ": ldiv mouseleave2");
                                     clearInterval(interval);
-                                    timeout = setTimeout(function(){
-                                        $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
-                                        $("#notice .notice_title:eq("+index+")").mouseover();
-                                    }, 2000);
-                                }
-                            }, 30);
-                        }).mouseleave(function(){
-                            //console.log($("#notice .notice_title:eq("+index+")").height() + ": ldiv mouseleave2");
-                            clearInterval(interval);
-                            clearTimeout(timeout);
-                            $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
-                        });
-
-
-                    });
-
-                    $("#notice").slideDown(400, function(){
-                        $("#notice .notice_title").each(function(index){
-                            if($(this).width() > 380)
-                                $("#notice .more:eq("+index+")").show();
-                        });
-                    });
-                }, 2000);
-            }
+                                    clearTimeout(timeout);
+                                    $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+                                });
+                            });
+                            $("#notice .inner").hide().slideDown(1000,"easeInOutCubic");
+                        }
+                    },1500);
         }, "json");
     }
 
