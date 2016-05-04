@@ -110,7 +110,7 @@ function popClose(id){
         <br/>
         감사합니다.
 
-        </p>
+    </p>
 
     <!-- close area -->
     <div style="text-align: right; display: ${'"none"' if LANG == 'en' else '"block"'};">
@@ -169,17 +169,18 @@ if (
         var a = document.location.href;
         var b = a.split('/');
         var c = b[b.length-1];
-        console.log('c: ' + c);
+##         console.log('c: ' + c);
         if(c == 'en' || c == 'ko')
             document.location.href = '/';
     }
 
     $(document).ready(function(){
+        //get notice list ajax
+        noticeList();
 
         $("#en_text").css("padding", "5px");
 
         reloadIndex();
-
 
         //layer popup..
         showNotice();
@@ -197,7 +198,7 @@ if (
 
         $("#mask").click(function(){
             $("#indexVideo").hide();
-	    console.log("src..");
+## 	    console.log("src..");
 	    var src = $("#indexVideo").attr("src");
             $("#indexVideo").attr("src","");
             $("#indexVideo").attr("src",src);
@@ -289,6 +290,86 @@ if (
             $("#indexVideo").prop("width", "640").css("left", "calc(50% - 320px)");
         }
     }
+
+    function noticeList(){
+        $.post("/notice","",function(data){
+
+            for(var i=0; i<data.length; i++){
+
+                if(i > 1)
+                    break;
+
+                var html = "";
+                html += "<li>";
+                html += "    <a href='"+data[i].link+"' target='_blank'>";
+                html += "       <div class='ldiv'>";
+                html += "           <span class='notice_title'>"+data[i].title+"</span>";
+                html += "       </div>";
+                //html += "       <div class='more'>...</div>";
+                html += "       <div class='rdiv'>"+data[i].sdate+" ~ "+data[i].edate+"</div>";
+                html += "   </a>";
+                html += "</li> ";
+                $("#notice ul").append(html);
+            }
+            setTimeout(function(){
+                if(data.length == 1){
+                    var ulWidth = $("#notice ul").width();
+                    var liWidth = $("#notice li").width();
+                    var divHeight = $("#notice .ldiv").height();
+                    var spanHeight = $("#notice .notice_title").height();
+
+                }else{
+                    $("#notice li").css("max-width", "50%");
+                }
+
+                var interval;
+                var timeout;
+
+                $("#notice li").each(function(index){
+
+                    $("#notice li:eq("+index+")").mouseenter(function(){
+                        if(interval)
+                            clearInterval(interval);
+                        if(timeout)
+                            clearTimeout(timeout);
+
+                        var z = 0;
+                        interval = setInterval(function(){
+
+                            if($("#notice .notice_title:eq("+index+")").height() > 20){
+                                //console.log($("#notice .notice_title:eq("+index+")").height() + ": minus");
+
+                                $("#notice .notice_title:eq("+index+")").css("margin-left", z-- + "px");
+                            }else{
+                                //console.log($("#notice .notice_title:eq("+index+")").height() + ": done");
+
+                                clearInterval(interval);
+                                timeout = setTimeout(function(){
+                                    $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+                                    $("#notice .notice_title:eq("+index+")").mouseover();
+                                }, 2000);
+                            }
+                        }, 30);
+                    }).mouseleave(function(){
+                        //console.log($("#notice .notice_title:eq("+index+")").height() + ": ldiv mouseleave2");
+                        clearInterval(interval);
+                        clearTimeout(timeout);
+                        $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+                    });
+
+
+                });
+
+                $("#notice").slideDown(400, function(){
+                    $("#notice .notice_title").each(function(index){
+                        if($(this).width() > 380)
+                            $("#notice .more:eq("+index+")").show();
+                    });
+                });
+            }, 2000);
+        }, "json");
+    }
+
 </script>
 
 <section class="home" style="background: #fff8eb !important;">
@@ -320,6 +401,19 @@ if (
     </div>
 
   </header>
+
+    <div id="notice">
+        <div class="inner">
+            <span class="title">
+                <img src="/static/images/tit_notice.png">
+            </span>
+            <div class="content">
+                <div class="innerContent">
+                <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="school_list">	 <!-- school_list S -->
         <p class="title_type1">

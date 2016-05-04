@@ -4274,10 +4274,10 @@ msgstr "아이디(Username)"
 #: lms/templates/provider_login.html lms/templates/register.html
 #: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
 #: cms/templates/temp-course-landing.html lms/templates/register-form.html
-#: themes/red-theme/cms/templates/login.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: lms/templates/student_account/account.underscore
 #: test_root/staticfiles/templates/student_account/account.underscore
+#: themes/red-theme/cms/templates/login.html
 msgid "Password"
 msgstr "비밀번호(Password)"
 
@@ -5127,6 +5127,7 @@ msgstr "대학목록"
 #: lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
+#: themes/edx.org/lms/templates/header.html
 #: themes/red-theme/lms/templates/header.html
 msgid "Courses"
 msgstr "강좌목록"
@@ -5150,10 +5151,11 @@ msgstr "회원가입"
 #: common/static/common/templates/components/search-field.underscore
 #: lms/djangoapps/support/static/support/templates/certificates.underscore
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
-#: lms/templates/discussion/_thread_list_template.html
 #: test_root/staticfiles/common/templates/components/search-field.underscore
 #: test_root/staticfiles/support/templates/certificates.underscore
+#: test_root/staticfiles/support/templates/enrollment.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/components/search-field.underscore
+#: lms/templates/discussion/_thread_list_template.html
 msgid "Search"
 msgstr "검색"
 
@@ -5358,6 +5360,9 @@ msgstr "문제"
 
 #: cms/djangoapps/contentstore/views/component.py
 #: common/lib/xmodule/xmodule/video_module/video_module.py
+#: cms/templates/js/add-xblock-component-menu-problem.underscore
+#: test_root/staticfiles/coffee/fixtures/add-xblock-component-menu-problem.underscore
+#: test_root/staticfiles/templates/add-xblock-component-menu-problem.underscore
 msgid "Advanced"
 msgstr "고급"
 
@@ -5401,6 +5406,12 @@ msgstr "학습활동"
 #: cms/templates/js/previous-video-upload-list.underscore
 #: cms/templates/js/signatory-details.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-library.underscore
+#: test_root/staticfiles/coffee/fixtures/previous-video-upload-list.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-details.underscore
+#: test_root/staticfiles/templates/asset-library.underscore
+#: test_root/staticfiles/templates/previous-video-upload-list.underscore
+#: test_root/staticfiles/templates/signatory-details.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 #: lms/templates/open_ended_problems/open_ended_flagged_problems.html
 msgid "Name"
@@ -5408,6 +5419,9 @@ msgstr "이름"
 
 #: cms/djangoapps/contentstore/views/videos.py
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
+#: cms/templates/js/previous-video-upload-list.underscore
+#: test_root/staticfiles/coffee/fixtures/previous-video-upload-list.underscore
+#: test_root/staticfiles/templates/previous-video-upload-list.underscore
 msgid "Video ID"
 msgstr "동영상 ID"
 
@@ -5418,8 +5432,10 @@ msgstr "동영상 ID"
 #: cms/templates/js/previous-video-upload-list.underscore
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
+#: test_root/staticfiles/coffee/fixtures/previous-video-upload-list.underscore
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
 #: test_root/staticfiles/support/templates/certificates_results.underscore
+#: test_root/staticfiles/templates/previous-video-upload-list.underscore
 #: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
 #: lms/templates/open_ended_problems/open_ended_problems.html
 msgid "Status"
@@ -5588,6 +5604,7 @@ msgstr "모드"
 #: common/djangoapps/course_modes/admin.py
 #: lms/djangoapps/courseware/date_summary.py
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
+#: test_root/staticfiles/support/templates/enrollment.underscore
 msgid "Verification Deadline"
 msgstr "인증 유효기간"
 
@@ -5677,6 +5694,9 @@ msgstr "강좌"
 #: common/lib/xmodule/xmodule/videoannotation_module.py
 #: common/lib/xmodule/xmodule/word_cloud_module.py
 #: cms/templates/container.html cms/templates/library.html
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
 #: common/lib/xmodule/xmodule/combined_open_ended_module.py
 #: common/lib/xmodule/xmodule/peer_grading_module.py
 msgid "Display Name"
@@ -5689,6 +5709,7 @@ msgstr "가격"
 
 #: common/djangoapps/course_modes/models.py
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
+#: test_root/staticfiles/support/templates/enrollment.underscore
 msgid "Upgrade Deadline"
 msgstr "마감 기한 늘리기"
 
@@ -5726,6 +5747,10 @@ msgid ""
 "Professional education modes are not allowed to have expiration_datetime "
 "set."
 msgstr "전문 교육 과정 모드는 쿠폰 만기일 설정이 허용되지 않습니다."
+
+#: common/djangoapps/course_modes/models.py
+msgid "Verified modes cannot be free."
+msgstr ""
 
 #: common/djangoapps/course_modes/models.py
 msgid ""
@@ -5767,10 +5792,12 @@ msgstr "커뮤니티 조교"
 #: lms/djangoapps/instructor/paidcourse_enrollment_report.py
 #: lms/templates/courseware/course_navigation.html
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Student"
 msgstr "학습자"
 
 #: common/djangoapps/embargo/forms.py
+#: lms/djangoapps/verified_track_content/forms.py
 msgid "COURSE NOT FOUND.  Please check that the course ID is valid."
 msgstr "강좌를 찾을 수 없습니다. 강좌 ID를 다시 확인하세요."
 
@@ -6901,6 +6928,14 @@ msgstr "범위지정 문제에서는 복소수를 사용할 수 없습니다."
 #. message displays.
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+<<<<<<< HEAD
+#. Translators: This is an error message for a math problem. If the instructor
+#. provided a
+#. boundary (end limit) for a variable that is a complex number (a + bi), this
+#. message displays.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+=======
+>>>>>>> modify_design3
 #. Translators: This is an error message for a math problem. If the instructor
 #. provided a
 #. boundary (end limit) for a variable that is a complex number (a + bi), this
@@ -7116,10 +7151,10 @@ msgstr "오류"
 #: lms/templates/student_account/hinted_login.underscore
 #: lms/templates/student_account/institution_login.underscore
 #: lms/templates/student_account/institution_register.underscore
-#: common/templates/course_modes/choose.html lms/templates/register.html
 #: test_root/staticfiles/templates/student_account/hinted_login.underscore
 #: test_root/staticfiles/templates/student_account/institution_login.underscore
 #: test_root/staticfiles/templates/student_account/institution_register.underscore
+#: common/templates/course_modes/choose.html lms/templates/register.html
 msgid "or"
 msgstr "또는"
 
@@ -8065,6 +8100,9 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 #: lms/templates/courseware/info.html
+#: cms/templates/js/course_info_handouts.underscore
+#: test_root/staticfiles/coffee/fixtures/course_info_handouts.underscore
+#: test_root/staticfiles/templates/course_info_handouts.underscore
 msgid "Course Handouts"
 msgstr "학습 자료"
 
@@ -8363,6 +8401,9 @@ msgstr "소개"
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'None' refers to the student's level of education
 #: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
+#: cms/templates/js/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/templates/timed-examination-preference-editor.underscore
 #: common/djangoapps/student/models.py
 msgid "None"
 msgstr "없음"
@@ -9753,6 +9794,9 @@ msgid ""
 msgstr "동영상의 기본 자막입니다. 이는 영어이어야 하고, 이 설정을 변경할 필요가 없습니다."
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
+#: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/metadata-videolist-entry.underscore
+#: test_root/staticfiles/templates/video/transcripts/metadata-videolist-entry.underscore
 msgid "Default Timed Transcript"
 msgstr "기본 자막"
 
@@ -9911,6 +9955,83 @@ msgstr "전체 학습자의 모든 가능한 단어들"
 msgid "Top num_top_words words for word cloud."
 msgstr "단어 구름에서 가장 많은 단어 num_top_words"
 
+#: lms/djangoapps/badges/events/course_complete.py
+#: lms/djangoapps/certificates/badge_handler.py
+msgid ""
+"Completed the course \"{course_name}\" ({course_mode}, {start_date} - "
+"{end_date})"
+msgstr "\"{course_name}\" ({course_mode}, {start_date} - {end_date}) 강좌를 수료했습니다."
+
+#: lms/djangoapps/badges/events/course_complete.py
+#: lms/djangoapps/certificates/badge_handler.py
+msgid "Completed the course \"{course_name}\" ({course_mode})"
+msgstr "\"{course_name}\"({course_mode}) 강좌를 수료했습니다."
+
+#: lms/djangoapps/badges/models.py lms/djangoapps/certificates/models.py
+msgid "The badge image must be square."
+msgstr "뱃지 이미지는 사각형이어야 합니다."
+
+#: lms/djangoapps/badges/models.py lms/djangoapps/certificates/models.py
+msgid "The badge image file size must be less than 250KB."
+msgstr "뱃지 이미지 파일 크기는 250KB를 넘을 수 없습니다. "
+
+#: lms/djangoapps/badges/models.py
+msgid "This value must be all lowercase."
+msgstr ""
+
+#: lms/djangoapps/badges/models.py lms/djangoapps/certificates/models.py
+msgid "The course mode for this badge image. For example, \"verified\" or \"honor\"."
+msgstr "이 뱃지 이미지가 나타내는 강좌 모드를 입력합니다. \"인증\" 또는 \"명예\"중 하나를 입력하면 됩니다. "
+
+#: lms/djangoapps/badges/models.py lms/djangoapps/certificates/models.py
+msgid ""
+"Badge images must be square PNG files. The file size should be under 250KB."
+msgstr "뱃지 이미지는 사각형 PNG 파일이어야 합니다. 파일 크기는 250KB를 넘을 수 없습니다."
+
+#: lms/djangoapps/badges/models.py lms/djangoapps/certificates/models.py
+msgid ""
+"Set this value to True if you want this image to be the default image for "
+"any course modes that do not have a specified badge image. You can have only"
+" one default image."
+msgstr ""
+"지정된 뱃지 이미지가 없는 모든 강좌의 기본 이미지로 이 이미지를 설정하려면 True로 설정합니다. 기본 이미지 설정은 1개 파일만 "
+"가능합니다."
+
+#: lms/djangoapps/badges/models.py lms/djangoapps/certificates/models.py
+msgid "There can be only one default image."
+msgstr "단일 기본 이미지만 있을 수 있습니다. "
+
+#: lms/djangoapps/badges/models.py
+msgid ""
+"On each line, put the number of completed courses to award a badge for, a "
+"comma, and the slug of a badge class you have created that has the issuing "
+"component 'openedx__course'. For example: 3,enrolled_3_courses"
+msgstr ""
+
+#: lms/djangoapps/badges/models.py
+msgid ""
+"On each line, put the number of enrolled courses to award a badge for, a "
+"comma, and the slug of a badge class you have created that has the issuing "
+"component 'openedx__course'. For example: 3,enrolled_3_courses"
+msgstr ""
+
+#: lms/djangoapps/badges/models.py
+msgid ""
+"Each line is a comma-separated list. The first item in each line is the slug"
+" of a badge class you have created that has an issuing component of "
+"'openedx__course'. The remaining items in each line are the course keys the "
+"learner needs to complete to be awarded the badge. For example: "
+"slug_for_compsci_courses_group_badge,course-v1:CompSci+Course+First,course-v1:CompsSci+Course+Second"
+msgstr ""
+
+#: lms/djangoapps/badges/models.py
+msgid "Please check the syntax of your entry."
+msgstr ""
+
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
+#. Please do not translate any of these trademarks and company names.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
 #. Please do not translate any of these trademarks and company names.
@@ -10396,16 +10517,6 @@ msgstr ""
 "You cannot create a CCX from a course using a deprecated id. Please create a"
 " rerun of this course in the studio to allow this action."
 
-#: lms/djangoapps/certificates/badge_handler.py
-msgid ""
-"Completed the course \"{course_name}\" ({course_mode}, {start_date} - "
-"{end_date})"
-msgstr "\"{course_name}\" ({course_mode}, {start_date} - {end_date}) 강좌를 수료했습니다."
-
-#: lms/djangoapps/certificates/badge_handler.py
-msgid "Completed the course \"{course_name}\" ({course_mode})"
-msgstr "\"{course_name}\"({course_mode}) 강좌를 수료했습니다."
-
 #: lms/djangoapps/certificates/models.py wiki/admin.py wiki/models/article.py
 msgid "created"
 msgstr "생성되었습니다."
@@ -10476,36 +10587,6 @@ msgstr "이수증 생성 중 발생한 오류 원인"
 #: lms/djangoapps/certificates/models.py
 msgid "The download URL for the generated certificate."
 msgstr "생성된 이수증의 다운로드 URL"
-
-#: lms/djangoapps/certificates/models.py
-msgid "The badge image must be square."
-msgstr "뱃지 이미지는 사각형이어야 합니다."
-
-#: lms/djangoapps/certificates/models.py
-msgid "The badge image file size must be less than 250KB."
-msgstr "뱃지 이미지 파일 크기는 250KB를 넘을 수 없습니다. "
-
-#: lms/djangoapps/certificates/models.py
-msgid "The course mode for this badge image. For example, \"verified\" or \"honor\"."
-msgstr "이 뱃지 이미지가 나타내는 강좌 모드를 입력합니다. \"인증\" 또는 \"명예\"중 하나를 입력하면 됩니다. "
-
-#: lms/djangoapps/certificates/models.py
-msgid ""
-"Badge images must be square PNG files. The file size should be under 250KB."
-msgstr "뱃지 이미지는 사각형 PNG 파일이어야 합니다. 파일 크기는 250KB를 넘을 수 없습니다."
-
-#: lms/djangoapps/certificates/models.py
-msgid ""
-"Set this value to True if you want this image to be the default image for "
-"any course modes that do not have a specified badge image. You can have only"
-" one default image."
-msgstr ""
-"지정된 뱃지 이미지가 없는 모든 강좌의 기본 이미지로 이 이미지를 설정하려면 True로 설정합니다. 기본 이미지 설정은 1개 파일만 "
-"가능합니다."
-
-#: lms/djangoapps/certificates/models.py
-msgid "There can be only one default image."
-msgstr "단일 기본 이미지만 있을 수 있습니다. "
 
 #: lms/djangoapps/certificates/models.py
 msgid "Name of template."
@@ -10977,12 +11058,17 @@ msgstr ""
 
 #: lms/djangoapps/courseware/date_summary.py
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
+#: test_root/staticfiles/support/templates/enrollment.underscore
 msgid "Course End"
 msgstr ""
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid ""
 "To earn a certificate, you must complete all requirements before this date."
+msgstr ""
+
+#: lms/djangoapps/courseware/date_summary.py
+msgid "After this date, course content will be archived."
 msgstr ""
 
 #: lms/djangoapps/courseware/date_summary.py
@@ -11745,6 +11831,7 @@ msgstr "endpoint가 제공되지 않았습니다."
 #: lms/djangoapps/edxnotes/plugins.py lms/templates/edxnotes/edxnotes.html
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Notes"
 msgstr "안내"
@@ -11987,6 +12074,10 @@ msgstr "%할인"
 #: cms/templates/js/group-configuration-editor.underscore
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
 #: test_root/staticfiles/templates/commerce/receipt.underscore
 #: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Description"
@@ -12230,11 +12321,7 @@ msgid ""
 msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
-msgid "Invalid Json data, Please refresh the page and then try again."
-msgstr ""
-
-#: lms/djangoapps/instructor/views/api.py
-msgid "Invalid data, user_id must be present for all certificate exceptions."
+msgid "Invalid data, generate_for must be \"new\" or \"all\"."
 msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
@@ -12654,6 +12741,7 @@ msgid "Last Name"
 msgstr "성"
 
 #: lms/djangoapps/instructor_task/tasks_helper.py
+#: openedx/core/djangoapps/api_admin/forms.py
 #: lms/templates/shoppingcart/receipt.html
 msgid "Company Name"
 msgstr "회사명"
@@ -12662,8 +12750,10 @@ msgstr "회사명"
 #: cms/templates/js/signatory-details.underscore
 #: common/static/common/templates/discussion/new-post.underscore
 #: common/static/common/templates/discussion/thread-edit.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-details.underscore
 #: test_root/staticfiles/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-edit.underscore
+#: test_root/staticfiles/templates/signatory-details.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-edit.underscore
 msgid "Title"
@@ -12671,6 +12761,7 @@ msgstr "제목"
 
 #: lms/djangoapps/instructor_task/tasks_helper.py
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
+#: test_root/staticfiles/support/templates/enrollment.underscore
 msgid "Enrollment Date"
 msgstr "수강 등록일"
 
@@ -14057,6 +14148,7 @@ msgstr "이메일 주소"
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
+#: test_root/staticfiles/support/templates/enrollment.underscore
 msgid "Course ID"
 msgstr "강좌 ID"
 
@@ -14148,6 +14240,10 @@ msgstr "이용자 {username}은 이미 본 강좌의 운영팀원입니다. "
 msgid ""
 "The user {username} is not enrolled in the course associated with this team."
 msgstr "이용자 {username}는 이 팀에서 운영하는 강좌에 수강등록하지 않았습니다. "
+
+#: lms/djangoapps/verified_track_content/models.py
+msgid "The course key for the course we would like to be auto-cohorted."
+msgstr ""
 
 #: lms/djangoapps/verify_student/models.py
 msgid "Your {platform_name} verification has expired."
@@ -14723,7 +14819,31 @@ msgstr "글 삭제"
 #: cms/templates/js/signatory-editor.underscore
 #: cms/templates/js/xblock-outline.underscore
 #: common/static/common/templates/discussion/forum-action-delete.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-details.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-details.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course_grade_policy.underscore
+#: test_root/staticfiles/coffee/fixtures/course_info_update.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-details.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/show-textbook.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/xblock-outline.underscore
 #: test_root/staticfiles/common/templates/discussion/forum-action-delete.underscore
+#: test_root/staticfiles/templates/certificate-details.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+#: test_root/staticfiles/templates/content-group-details.underscore
+#: test_root/staticfiles/templates/content-group-editor.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+#: test_root/staticfiles/templates/course_grade_policy.underscore
+#: test_root/staticfiles/templates/course_info_update.underscore
+#: test_root/staticfiles/templates/group-configuration-details.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/show-textbook.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+#: test_root/staticfiles/templates/xblock-outline.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-delete.underscore
 msgid "Delete"
 msgstr "삭제"
@@ -14769,7 +14889,23 @@ msgstr "글을 삭제하려고 합니다. 확인해 주십시오."
 #: cms/templates/js/signatory-details.underscore
 #: cms/templates/js/xblock-string-field-editor.underscore
 #: common/static/common/templates/discussion/forum-action-edit.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-details.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-details.underscore
+#: test_root/staticfiles/coffee/fixtures/course_info_handouts.underscore
+#: test_root/staticfiles/coffee/fixtures/course_info_update.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-details.underscore
+#: test_root/staticfiles/coffee/fixtures/show-textbook.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-details.underscore
+#: test_root/staticfiles/coffee/fixtures/xblock-string-field-editor.underscore
 #: test_root/staticfiles/common/templates/discussion/forum-action-edit.underscore
+#: test_root/staticfiles/templates/certificate-details.underscore
+#: test_root/staticfiles/templates/content-group-details.underscore
+#: test_root/staticfiles/templates/course_info_handouts.underscore
+#: test_root/staticfiles/templates/course_info_update.underscore
+#: test_root/staticfiles/templates/group-configuration-details.underscore
+#: test_root/staticfiles/templates/show-textbook.underscore
+#: test_root/staticfiles/templates/signatory-details.underscore
+#: test_root/staticfiles/templates/xblock-string-field-editor.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-edit.underscore
 msgid "Edit"
 msgstr "편집"
@@ -14780,6 +14916,9 @@ msgid "Save changes"
 msgstr "변경사항 저장"
 
 #: lms/templates/wiki/edit.html cms/templates/container.html
+#: cms/templates/js/asset-library.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-library.underscore
+#: test_root/staticfiles/templates/asset-library.underscore
 msgid "Preview"
 msgstr "미리보기"
 
@@ -14881,8 +15020,10 @@ msgstr "미리보기"
 #: themes/edx.org/lms/templates/dashboard.html
 #: common/static/common/templates/image-modal.underscore
 #: common/static/common/templates/discussion/forum-action-close.underscore
+#: lms/templates/student_profile/share_modal.underscore
 #: test_root/staticfiles/common/templates/image-modal.underscore
 #: test_root/staticfiles/common/templates/discussion/forum-action-close.underscore
+#: test_root/staticfiles/templates/student_profile/share_modal.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/image-modal.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-close.underscore
 msgid "Close"
@@ -15238,6 +15379,12 @@ msgid "Detach"
 msgstr "분리"
 
 #: lms/templates/wiki/plugins/attachments/index.html
+#: cms/templates/js/metadata-file-uploader-item.underscore
+#: cms/templates/js/video/metadata-translations-item.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-file-uploader-item.underscore
+#: test_root/staticfiles/coffee/fixtures/video/metadata-translations-item.underscore
+#: test_root/staticfiles/templates/metadata-file-uploader-item.underscore
+#: test_root/staticfiles/templates/video/metadata-translations-item.underscore
 msgid "Replace"
 msgstr "바꾸기"
 
@@ -15277,6 +15424,26 @@ msgstr "이 버전은 삭제되었습니다."
 msgid "Restoring to this revision will mark the article as deleted."
 msgstr "이 버전으로 되돌리면 글이 삭제된 것으로 표시될 것입니다."
 
+#: openedx/core/djangoapps/api_admin/forms.py
+msgid "Company Address"
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/forms.py
+msgid "Describe what your application does."
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/forms.py
+msgid "The URL of your company's website."
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/forms.py
+msgid "The name of your company."
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/forms.py
+msgid "The contact address of your company."
+msgstr ""
+
 #: openedx/core/djangoapps/api_admin/models.py cms/templates/index.html
 msgid "Denied"
 msgstr "거절됨"
@@ -15295,6 +15462,27 @@ msgstr ""
 
 #: openedx/core/djangoapps/api_admin/models.py
 msgid "The reason this user wants to access the API."
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/models.py
+msgid "API access request from {company}"
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/models.py
+msgid "API access request"
+msgstr ""
+
+#: openedx/core/djangoapps/api_admin/views.py
+msgid "TODO"
+msgstr ""
+
+#. Translators: link_start and link_end are HTML tags for a link to the terms
+#. of service.
+#. platform_name is the name of this Open edX installation.
+#: openedx/core/djangoapps/api_admin/widgets.py
+msgid ""
+"I, and my company, accept the {link_start}{platform_name} API Terms of "
+"Service{link_end}."
 msgstr ""
 
 #: openedx/core/djangoapps/bookmarks/views.py
@@ -15325,6 +15513,10 @@ msgstr ""
 
 #: openedx/core/djangoapps/bookmarks/views.py
 msgid "Bookmark with usage_id: {usage_id} does not exist."
+msgstr ""
+
+#: openedx/core/djangoapps/course_groups/cohorts.py
+msgid "Default Group"
 msgstr ""
 
 #: openedx/core/djangoapps/course_groups/cohorts.py
@@ -15573,6 +15765,14 @@ msgstr ""
 msgid ""
 "When making requests to award certificates, make at most this many attempts "
 "to retry a failing request."
+msgstr ""
+
+#: openedx/core/djangoapps/programs/models.py
+msgid "Do we want to show xseries program advertising"
+msgstr ""
+
+#: openedx/core/djangoapps/programs/models.py
+msgid "Do we want to show program listing page"
 msgstr ""
 
 #: openedx/core/djangoapps/self_paced/models.py
@@ -16500,6 +16700,10 @@ msgstr "강좌가 성공적으로 재인댁스가 이루어졌습니다."
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/publish-xblock.underscore
 #: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
 #: test_root/staticfiles/templates/ccx/schedule.underscore
 msgid "Unscheduled"
 msgstr "지정되지 않음"
@@ -16791,10 +16995,19 @@ msgid "{profile_name} URL"
 msgstr "{profile_name} URL"
 
 #: cms/djangoapps/contentstore/views/videos.py
+#: cms/templates/js/previous-video-upload-list.underscore
+#: test_root/staticfiles/coffee/fixtures/previous-video-upload-list.underscore
+#: test_root/staticfiles/templates/previous-video-upload-list.underscore
 msgid "Duration"
 msgstr "지속기간"
 
 #: cms/djangoapps/contentstore/views/videos.py
+#: cms/templates/js/asset-library.underscore
+#: cms/templates/js/previous-video-upload-list.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-library.underscore
+#: test_root/staticfiles/coffee/fixtures/previous-video-upload-list.underscore
+#: test_root/staticfiles/templates/asset-library.underscore
+#: test_root/staticfiles/templates/previous-video-upload-list.underscore
 msgid "Date Added"
 msgstr "추가된 날짜"
 
@@ -16842,11 +17055,7 @@ msgstr "사용자에 대한 선택적인 노트(예, 왜 강좌 생성 접근이
 msgid "Incorrect format for field '{name}'. {detailed_message}"
 msgstr "잘못된 '{name}' 영역의 포맷. {detailed_message} "
 
-#: cms/lib/xblock/tagging.py
-msgid "Difficulty"
-msgstr ""
-
-#: cms/lib/xblock/tagging.py
+#: cms/lib/xblock/tagging/tagging.py cms/lib/xblock/tagging.py
 msgid "Dictionary with the available tags"
 msgstr ""
 
@@ -16904,22 +17113,48 @@ msgstr "설정"
 #: lms/djangoapps/support/static/support/templates/enrollment-modal.underscore
 #: lms/djangoapps/teams/static/teams/templates/edit-team.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
-#: lms/templates/verify_student/face_upload.html
+#: test_root/staticfiles/coffee/fixtures/add-xblock-component-menu-problem.underscore
+#: test_root/staticfiles/coffee/fixtures/add-xblock-component-menu.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/course_info_handouts.underscore
+#: test_root/staticfiles/coffee/fixtures/course_info_update.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-textbook.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/section-name-edit.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-actions.underscore
+#: test_root/staticfiles/coffee/fixtures/xblock-string-field-editor.underscore
 #: test_root/staticfiles/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/common/templates/discussion/response-comment-edit.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-edit.underscore
 #: test_root/staticfiles/common/templates/discussion/thread-response-edit.underscore
+#: test_root/staticfiles/support/templates/enrollment-modal.underscore
 #: test_root/staticfiles/teams/templates/edit-team.underscore
+#: test_root/staticfiles/templates/add-xblock-component-menu-problem.underscore
+#: test_root/staticfiles/templates/add-xblock-component-menu.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+#: test_root/staticfiles/templates/content-group-editor.underscore
+#: test_root/staticfiles/templates/course_info_handouts.underscore
+#: test_root/staticfiles/templates/course_info_update.underscore
+#: test_root/staticfiles/templates/edit-textbook.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/section-name-edit.underscore
+#: test_root/staticfiles/templates/signatory-actions.underscore
+#: test_root/staticfiles/templates/xblock-string-field-editor.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/response-comment-edit.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-edit.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-response-edit.underscore
+#: lms/templates/verify_student/face_upload.html
 msgid "Cancel"
 msgstr "취소"
 
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/settings.html lms/templates/courseware/course_about.html
+#: cms/templates/js/certificate-details.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-details.underscore
+#: test_root/staticfiles/templates/certificate-details.underscore
 msgid "Course Number"
 msgstr "강좌 번호"
 
@@ -16944,31 +17179,20 @@ msgstr "기관:"
 msgid "Course Number:"
 msgstr "강좌 번호:"
 
-#: cms/templates/login.html cms/templates/widgets/header.html
-#: themes/red-theme/cms/templates/login.html
-msgid "Sign In"
-msgstr "로그인"
-
-#: cms/templates/login.html themes/red-theme/cms/templates/login.html
-msgid "Sign In to {studio_name}"
-msgstr "{studio_name} 로그인"
-
-#: cms/templates/login.html themes/red-theme/cms/templates/login.html
-msgid "Don't have a {studio_name} Account? Sign up!"
-msgstr "{studio_name}에 지금 가입하세요!"
-
-#: cms/templates/login.html themes/red-theme/cms/templates/login.html
-msgid "Required Information to Sign In to {studio_name}"
-msgstr "{studio_name}에 로그인하기 위한 필요 정보"
+#: cms/templates/index.html cms/templates/widgets/header.html
+#: lms/templates/navigation.html lms/templates/learner_dashboard/programs.html
+#: themes/edx.org/lms/templates/header.html
+#: themes/red-theme/lms/templates/header.html
+msgid "Programs"
+msgstr ""
 
 #: cms/templates/login.html cms/templates/register.html
 #: lms/templates/help_modal.html lms/templates/login.html
 #: lms/templates/provider_login.html lms/templates/register-form.html
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
-#: themes/red-theme/cms/templates/login.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
-#: lms/templates/register.html
+#: themes/red-theme/cms/templates/login.html lms/templates/register.html
 msgid "E-mail"
 msgstr "이메일"
 
@@ -16978,17 +17202,17 @@ msgstr "이메일"
 #: cms/templates/login.html cms/templates/manage_users.html
 #: cms/templates/manage_users_lib.html cms/templates/register.html
 #: lms/templates/login.html lms/templates/register-form.html
-#: lms/templates/register-shib.html themes/red-theme/cms/templates/login.html
+#: lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
-#: lms/templates/register.html
+#: themes/red-theme/cms/templates/login.html lms/templates/register.html
 msgid "example: username@domain.com"
 msgstr "예: username@domain.com"
 
 #: cms/templates/login.html lms/templates/login.html
-#: themes/red-theme/cms/templates/login.html
 #: lms/templates/student_account/form_field.underscore
 #: test_root/staticfiles/templates/student_account/form_field.underscore
+#: themes/red-theme/cms/templates/login.html
 msgid "Forgot password?"
 msgstr "비밀번호를 잊어버리셨나요?"
 
@@ -17086,6 +17310,7 @@ msgstr "세부사항"
 #: lms/templates/bookmarks/bookmarks-list.underscore
 #: lms/templates/search/course_search_item.underscore
 #: lms/templates/search/dashboard_search_item.underscore
+#: test_root/staticfiles/templates/bookmarks/bookmarks-list.underscore
 #: test_root/staticfiles/templates/search/course_search_item.underscore
 #: test_root/staticfiles/templates/search/dashboard_search_item.underscore
 msgid "View"
@@ -17180,7 +17405,9 @@ msgstr ""
 msgid "{programming_language} editor"
 msgstr ""
 
-#: common/templates/license.html
+#: common/templates/license.html cms/templates/js/license-selector.underscore
+#: test_root/staticfiles/coffee/fixtures/license-selector.underscore
+#: test_root/staticfiles/templates/license-selector.underscore
 msgid "All Rights Reserved"
 msgstr "모든 저작권이 보호됩니다."
 
@@ -17200,11 +17427,15 @@ msgstr "원 저작물 변경 사용 금지"
 msgid "Share Alike"
 msgstr "동일 조건 번경 허락"
 
-#: common/templates/license.html
+#: common/templates/license.html cms/templates/js/license-selector.underscore
+#: test_root/staticfiles/coffee/fixtures/license-selector.underscore
+#: test_root/staticfiles/templates/license-selector.underscore
 msgid "Creative Commons licensed content, with terms as follow:"
 msgstr "Creative Commons 저작물인 콘텐츠로 다음의 조건을 따릅니다:"
 
-#: common/templates/license.html
+#: common/templates/license.html cms/templates/js/license-selector.underscore
+#: test_root/staticfiles/coffee/fixtures/license-selector.underscore
+#: test_root/staticfiles/templates/license-selector.underscore
 msgid "Some Rights Reserved"
 msgstr "일부 저작권 보호"
 
@@ -17262,12 +17493,13 @@ msgid "My Courses"
 msgstr "내 강좌"
 
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
-msgid "Looks like you haven't enrolled in any courses yet."
-msgstr "아직 수강하는 강좌가 없군요."
+msgid "You are not enrolled in any courses yet."
+msgstr ""
 
-#: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
-msgid "Find courses now!"
-msgstr "강좌를 살펴보세요!"
+#: lms/templates/dashboard.html lms/templates/navigation.html
+#: themes/edx.org/lms/templates/dashboard.html
+msgid "Explore courses"
+msgstr ""
 
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
 msgid "Course-loading errors"
@@ -17294,6 +17526,7 @@ msgid "Order History"
 msgstr "주문 내역"
 
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
+#: lms/templates/learner_dashboard/certificate.underscore
 msgid "XSeries Program Certificates"
 msgstr ""
 
@@ -17430,27 +17663,23 @@ msgstr "{platform_name} 도움말"
 
 #: lms/templates/help_modal.html
 msgid ""
-"For <strong>questions on course lectures, homework, tools, or materials for "
-"this course</strong>, post in the {link_start}course discussion "
-"forum{link_end}."
+"For {strong_start}questions on course lectures, homework, tools, or "
+"materials for this course{strong_end}, post in the {link_start}course "
+"discussion forum{link_end}."
 msgstr ""
-"<strong>이 강좌에서 강의, 과제, 도구 및 자료들에 대한 질문</strong>들은 {link_start}강좌 토론 포럼 "
-"{link_end}에 게시해 주세요."
 
 #: lms/templates/help_modal.html
 msgid ""
-"Have <strong>general questions about {platform_name}</strong>? You can find "
-"lots of helpful information in the {platform_name} "
+"Have {strong_start}general questions about {platform_name}{strong_end}? You "
+"can find lots of helpful information in the {platform_name} "
 "{link_start}FAQ{link_end}."
 msgstr ""
-"<strong>{platform_name}에 대한 일반적인 질문</strong>이 있으십니까?  {platform_name} "
-"{link_start}자주하는질문{link_end}에서 많은 유익한 정보를 찾을 수 있습니다."
 
 #: lms/templates/help_modal.html
 msgid ""
-"Have a <strong>question about something specific</strong>? You can contact "
-"the {platform_name} general support team directly:"
-msgstr "<strong>구체적인 질문</strong>이 있으십니까? {platform_name} 지원팀에 연락하세요."
+"Have a {strong_start}question about something specific{strong_end}? You can "
+"contact the {platform_name} general support team directly:"
+msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "Report a problem"
@@ -17532,12 +17761,10 @@ msgid "Brief description of the problem"
 msgstr "문제 기술"
 
 #: lms/templates/help_modal.html
-msgid "Details of the problem you are encountering"
-msgstr "당신이 겪는 문제의 내역"
-
-#: lms/templates/help_modal.html
-msgid "Include error messages, steps which lead to the issue, etc."
-msgstr "오류메세지, 이슈에  가는 단계 등을 포함하세요"
+msgid ""
+"Details of the problem you are encountering{asterisk}{begin_span}Include "
+"error messages, steps which lead to the issue, etc.{end_span}"
+msgstr ""
 
 #: lms/templates/help_modal.html
 msgid "suggestion"
@@ -17724,6 +17951,7 @@ msgstr ""
 msgid "Account Preferences"
 msgstr "계정 설정"
 
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. Translators: provider_name is the name of an external, third-party user
 #. authentication provider (like Google or LinkedIn).
 #: lms/templates/login.html
@@ -17848,9 +18076,8 @@ msgstr ""
 msgid "How it Works"
 msgstr "동작 원리"
 
-#: lms/templates/navigation-edx.html lms/templates/navigation.html
-#: themes/edx.org/lms/templates/header.html
-#: themes/red-theme/lms/templates/header.html
+#: lms/templates/navigation-edx.html themes/edx.org/lms/templates/header.html
+#: themes/red-theme/lms/templates/header.html lms/templates/navigation.html
 msgid "Find Courses"
 msgstr "강좌 찾기"
 
@@ -17899,14 +18126,10 @@ msgid "Sign in"
 msgstr "로그인"
 
 #: lms/templates/navigation-edx.html lms/templates/navigation.html
-#: themes/edx.org/lms/templates/header.html
-#: themes/red-theme/lms/templates/header.html
 msgid ""
-"<strong>Warning:</strong> Your browser is not fully supported. We strongly "
-"recommend using {chrome_link} or {ff_link}."
+"{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
+"strongly recommend using {chrome_link} or {ff_link}."
 msgstr ""
-"<strong>경고:</strong> 사용하고 있는 브라우저로는 제대로 작동하지 않을 수 있습니다.  {chrome_link} 이나 "
-"{ff_link} 사용을 권장합니다."
 
 #: lms/templates/navigation.html themes/red-theme/lms/templates/header.html
 msgid "Global"
@@ -17950,10 +18173,26 @@ msgstr "초기화"
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
-#: lms/templates/verify_student/face_upload.html
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/course_info_handouts.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-textbook.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/section-name-edit.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-actions.underscore
+#: test_root/staticfiles/coffee/fixtures/xblock-string-field-editor.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+#: test_root/staticfiles/templates/content-group-editor.underscore
+#: test_root/staticfiles/templates/course_info_handouts.underscore
+#: test_root/staticfiles/templates/edit-textbook.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/section-name-edit.underscore
+#: test_root/staticfiles/templates/signatory-actions.underscore
+#: test_root/staticfiles/templates/xblock-string-field-editor.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-discussions-inline.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: lms/templates/verify_student/face_upload.html
 #: lms/templates/combinedopenended/openended/open_ended.html
 #: lms/templates/combinedopenended/selfassessment/self_assessment_prompt.html
 msgid "Save"
@@ -17996,6 +18235,7 @@ msgstr ""
 msgid "The following errors occurred while processing your registration:"
 msgstr "가입 처리하는 동안 다음 오류가 발생하였습니다:"
 
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. Translators: provider_name is the name of an external, third-party user
 #. authentication service (like Google or LinkedIn).
 #: lms/templates/register-form.html
@@ -18242,8 +18482,10 @@ msgstr ""
 #: lms/templates/seq_module.html cms/templates/js/paging-header.underscore
 #: common/static/common/templates/components/paging-footer.underscore
 #: common/static/common/templates/discussion/pagination.underscore
+#: test_root/staticfiles/coffee/fixtures/paging-header.underscore
 #: test_root/staticfiles/common/templates/components/paging-footer.underscore
 #: test_root/staticfiles/common/templates/discussion/pagination.underscore
+#: test_root/staticfiles/templates/paging-header.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/components/paging-footer.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/pagination.underscore
 msgid "Previous"
@@ -18256,8 +18498,10 @@ msgstr ""
 #: lms/templates/seq_module.html cms/templates/js/paging-header.underscore
 #: common/static/common/templates/components/paging-footer.underscore
 #: common/static/common/templates/discussion/pagination.underscore
+#: test_root/staticfiles/coffee/fixtures/paging-header.underscore
 #: test_root/staticfiles/common/templates/components/paging-footer.underscore
 #: test_root/staticfiles/common/templates/discussion/pagination.underscore
+#: test_root/staticfiles/templates/paging-header.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/components/paging-footer.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/pagination.underscore
 msgid "Next"
@@ -18360,8 +18604,12 @@ msgstr "코멘트 추가"
 #: cms/templates/js/asset-library.underscore
 #: cms/templates/js/basic-modal.underscore
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-library.underscore
+#: test_root/staticfiles/coffee/fixtures/basic-modal.underscore
 #: test_root/staticfiles/proctoring/templates/course_allowances.underscore
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+#: test_root/staticfiles/templates/asset-library.underscore
+#: test_root/staticfiles/templates/basic-modal.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Actions"
 msgstr "행동들"
@@ -18540,6 +18788,8 @@ msgstr "오류"
 #: cms/templates/js/course_info_update.underscore
 #: lms/templates/commerce/receipt.underscore
 #: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/coffee/fixtures/course_info_update.underscore
+#: test_root/staticfiles/templates/course_info_update.underscore
 #: test_root/staticfiles/templates/commerce/receipt.underscore
 #: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
 msgid "Date"
@@ -18581,6 +18831,8 @@ msgid "source"
 msgstr "소스"
 
 #: lms/templates/tracking_log.html
+#: lms/templates/learner_dashboard/program_card.underscore
+#: test_root/staticfiles/templates/learner_dashboard/program_card.underscore
 msgid "type"
 msgstr "종류"
 
@@ -18629,10 +18881,6 @@ msgstr ""
 " 또는 ctrl - 를 동시에 누르면 됩니다."
 
 #: lms/templates/video.html
-msgid "Skip to a navigable version of this video's transcript."
-msgstr "동영상 자막의 조작이 가능한 버전으로 이동"
-
-#: lms/templates/video.html
 msgid "Loading video player"
 msgstr "동영상플레이어 로딩중"
 
@@ -18643,14 +18891,6 @@ msgstr "동영상 플레이"
 #: lms/templates/video.html
 msgid "No playable video sources found."
 msgstr "재생 가능한 동영상 소스가 없습니다."
-
-#: lms/templates/video.html
-msgid "Skip to end of transcript."
-msgstr "자막끝으로 이동"
-
-#: lms/templates/video.html
-msgid "Go back to start of transcript."
-msgstr "자막 처음으로 돌아 가세요."
 
 #: lms/templates/video.html
 msgid "Download video"
@@ -18671,6 +18911,472 @@ msgstr "당신의 단어들:"
 #: lms/templates/word_cloud.html
 msgid "Total number of words:"
 msgstr "전체 단어수:"
+
+#: lms/templates/api_admin/api_access_request_form.html
+msgid "API Access Request"
+msgstr ""
+
+#: lms/templates/api_admin/api_access_request_form.html
+#: lms/templates/api_admin/status.html
+msgid "{platform_name} API Access Request"
+msgstr ""
+
+#: lms/templates/api_admin/api_access_request_form.html
+msgid "Request API Access"
+msgstr ""
+
+#. Translators: "platform_name" is the name of this Open edX installation.
+#. "link_start" and "link_end" are the HTML for a link to the API
+#. documentation. "api_support_email_link" is HTML for a link to email the API
+#. support staff.
+#: lms/templates/api_admin/status.html
+msgid ""
+"Your request to access the {platform_name} Course Catalog API is being "
+"processed. You will receive a message at the email address in your profile "
+"when processing is complete. You can also return to this page to see the "
+"status of your API access request. To learn more about the {platform_name} "
+"Course Catalog API, visit {link_start}our API documentation page{link_end}. "
+"For questions about using this API, visit our FAQ page or contact "
+"{api_support_email_link}."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid "Terms of Service for {platform_name} APIs"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid "Effective Date: April 12th, 2016"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"Welcome to {platform_name}. Thank you for using {platform_name}'s Course "
+"Discovery API and any additional APIs that we may offer from time to time "
+"(collectively, the \"APIs\"). Please read these Terms of Service prior to "
+"accessing or using the APIs. These Terms of Service, any additional terms "
+"within accompanying API documentation, and any applicable policies and "
+"guidelines that {platform_name} makes available and/or updates from time to "
+"time are agreements (collectively, the \"Terms\") between you and "
+"{platform_name}. By accessing or using the APIs, you accept and agree to be "
+"legally bound by the Terms, whether or not you are a registered user. If you"
+" do not understand or do not wish to be bound by the Terms, you should not "
+"use the APIs."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid "API Access"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"To access the APIs, you will need to create an {platform_name} user account "
+"for your application (not for personal use). This account will provide you "
+"with access to our API request page at {request_url}. On that page, you must"
+" complete the API request form including a description of your proposed uses"
+" for the APIs. Any account and registration information that you provide to "
+"{platform_name} must be accurate and up to date, and you agree to inform us "
+"promptly of any changes. {platform_name} will review your API request form "
+"and, upon approval in {platform_name}'s sole discretion, will provide you "
+"with instructions for obtaining your API shared secret and client ID."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid "Permissible Use"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"You agree to use the APIs solely for the purpose of delivering content that "
+"is accessed through the APIs (the \"API Content\") to your own website, "
+"mobile site, app, blog, email distribution list, or social media property or"
+" for another commercial use that you described in your request for access "
+"and that {platform_name} has approved on a case-by-case basis. "
+"{platform_name} may monitor your use of the APIs for compliance with the "
+"Terms and may deny your access or shut down your integration if you try to "
+"go around or exceed the requirements and limitations set by {platform_name}."
+" Your Application or other approved use of the API or the API Content must "
+"not prompt your end users to provide their {platform_name} username, "
+"password or other {platform_name} user credentials anywhere other than the "
+"{platform_name} website at {platform_url}."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid "Prohibited Uses and Activities"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"{platform_name} shall have the sole right to determine whether or not any "
+"given use of the APIs is acceptable, and {platform_name} reserves the right "
+"to revoke API access for any use that {platform_name} determines at any "
+"time, in its sole discretion, does not benefit or serve the best interests "
+"of {platform_name}, its users and its partners."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"The following activities are not acceptable when using the APIs (this is not"
+" an exhaustive list):"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"collecting or storing the names, passwords, or other credentials of "
+"{platform_name} users;"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"scraping or similar techniques to aggregate or otherwise create permanent "
+"copies of API Content;"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"violating, misappropriating or infringing any copyright, trademark rights, "
+"rights of privacy or publicity, confidential information or any other right "
+"of any third party;"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"altering or removing any trademark, copyright or other proprietary or legal "
+"notices contained in, or appearing on, the APIs or any API Content;"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid "altering or editing any content or graphics in the API Content"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"sublicensing, re-distributing, renting, selling or leasing access to the "
+"APIs or your client secret to any third party;"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"distributing any virus, Trojan horse, spyware, adware, malware, bot, time "
+"bomb, worm, or other harmful or malicious component; or"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"using the APIs for any purpose which or might overburden, impair or disrupt "
+"the {platform_name} platform, servers or networks."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid "Usage and Quotas"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"{platform_name} reserves the right, in its discretion, to impose "
+"restrictions and limitations on the number and frequency of calls made by "
+"you or your Application to the APIs. You must not attempt to circumvent any "
+"restrictions or limitations that we impose."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid "Compliance"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"You agree to comply with all applicable law, regulation, and third party "
+"rights (including without limitation laws regarding the import or export of "
+"data or software, privacy, copyright, and local laws). You will not use the "
+"APIs to encourage or promote illegal activity or violation of third party "
+"rights. You will not violate any other terms of service with "
+"{platform_name}. You will only access (or attempt to access) an API by the "
+"means described in the documentation of that API. You will not misrepresent "
+"or mask either your identity or yourApplication's identity when using the "
+"APIs."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid "Ownership"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"You acknowledge and agree that the APIs and all API Content contain valuable"
+" intellectual property of {platform_name} and its partners. The APIs and all"
+" API Content are protected by United States and foreign copyright, "
+"trademark, and other laws. All rights in the APIs and the API Content, if "
+"not expressly granted, are reserved. By using the APIs or any API Content, "
+"you do not acquire ownership of any rights in the APIs or API Content. You "
+"must not claim or attempt to claim ownership in the APIs or any API Content "
+"or misrepresent yourself or your company or your Application as being the "
+"source of any API Content. You may not modify, create derivative works of, "
+"or attempt to use, license, or in any way exploit any API Content in whole "
+"or in part on your own behalf or on behalf of any third party. You may not "
+"distribute or modify the APIs or any API Content (including adaptation, "
+"editing, excerpting, or creating derivative works)."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"All names, logos and seals (\"Trademarks\") that appear in the APIs, API "
+"Content, or on or through the services made available on or through the "
+"APIs, if any, are the property of their respective owners. You may not "
+"remove, alter, or obscure any copyright, Trademark, or other proprietary "
+"rightrs notices incorporated in or accompanying the API Content. If any "
+"third party revokes access to API Content owned or controlled by that third "
+"party, including without limitation any Trademarks, you must ensure that all"
+" API Content pertaining to that third party is deleted from your app, "
+"networks, systems and servers as soon as reasonably possible. If you stop "
+"using the APIs altogether or if your API access is revoked, you must delete "
+"all API Content in the same way."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"To the extent that you submit any content to {platform_name} in connection "
+"with your use of the APIs or any API Content, you hereby grant to "
+"{platform_name} a worldwide, non-exclusive, transferable, assignable, sub "
+"licensable, fully paid-up, royalty-free, perpetual, irrevocable right and "
+"license to host, transfer, display, perform, reproduce, modify, distribute, "
+"re-distribute, relicense and otherwise use, make available and exploit such "
+"content, in whole or in part, in any form and in any media formats and "
+"through any media channels (now known or hereafter developed)."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"You agree to comply with all applicable privacy laws and regulations and to "
+"be transparent with respect to any collection and use of end user data. You "
+"will provide and adhere to a privacy policy for your Application that "
+"clearly and accurately describes to your end users what user information you"
+" collect and how you may use and share such information (including for "
+"advertising) with {platform_name} and other third parties."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid "Right to Charge"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"{platform_name} reserves the right to modify the Terms at any time without "
+"advance notice. Any changes to the Terms will be effective immediately upon "
+"posting on this page, with an updated effective date. By accessing or using "
+"the APIs after any changes have been made, you signify your agreement on a "
+"prospective basis to the modified Terms and all of the changes. Be sure to "
+"return to this page periodically to ensure familiarity with the most current"
+" version of the Terms."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"{platform_name} may also update or modify the APIs from time to time without"
+" advance notice. These changes may affect your use of the APIs or the way "
+"your integration interacts with the API. If we make a change that is "
+"unacceptable to you, you should stop using the APIs. Continued use of the "
+"APIs means you accept the change."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid "Confidentiality"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"Your credentials (such as client secret and IDs) are intended to be used "
+"solely by you. You will keep your credentials confidential and discourage "
+"others from using your credentials. Your credentials may not be embedded in "
+"open source projects."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"In the event that {platform_name} provides you with access to information "
+"specific to {platform_name} and/or the APIs that is either marked as "
+"\"Confidential\" or which a reasonable person would assume to be "
+"confidential or proprietary given the terms of its disclosure "
+"(\"Confidential Information\"), you agree to use this information only to "
+"use and build with the APIs. You may not disclose the Confidential "
+"Information to anyone without {platform_name}'s prior written consent, and "
+"you agree to protect the Confidential Information from unauthorized use and "
+"disclosure in the same way that you would protect your own confidential "
+"information. Confidential information does not include information that you "
+"independently developed, that was rightfully given to you by a third party "
+"without confidentiality obligation, or that becomes public through no fault "
+"of your own. You may disclose Confidential Information when compelled to do "
+"so by law if you provide {platform_name} with reasonable prior notice, "
+"unless a court orders that {platform_name} not receive notice."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid "Disclaimer of Warranty / Limitation of Liabilities"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"THE APIS AND ANY INFORMATION, API CONTENT OR SERVICES MADE AVAILABLE ON OR "
+"THROUGH THE APIS ARE PROVIDED \"AS IS\" AND \"AS AVAILABLE\" WITHOUT "
+"WARRANTY OF ANY KIND (EXPRESS, IMPLIED OR OTHERWISE), INCLUDING, WITHOUT "
+"LIMITATION, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A "
+"PARTICULAR PURPOSE AND NON-INFRINGEMENT, EXCEPT INSOFAR AS ANY SUCH IMPLIED "
+"WARRANTIES MAY NOT BE DISCLAIMED UNDER APPLICABLE LAW."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"{platform_name} AND THE {platform_name} PARTICIPANTS (AS HERINAFTER DEFINED)"
+" DO NOT WARRANT THAT THE APIS WILL OPERATE IN AN UNINTERRUPTED OR ERROR-FREE"
+" MANNER, THAT THE APIS ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS, OR "
+"THAT THE APIS OR API CONTENT PROVIDED WILL MEET YOUR NEEDS OR EXPECTATIONS. "
+"{platform_name} AND THE {platform_name} PARTICIPANTS ALSO MAKE NO WARRANTY "
+"ABOUT THE ACCURACY, COMPLETENESS, TIMELINESS, OR QUALITY OF THE APIS OR ANY "
+"API CONTENT, OR THAT ANY PARTICULAR API CONTENT WILL CONTINUE TO BE MADE "
+"AVAILABLE. \"{platform_name} PARTICIPANTS\" MEANS MIT, HARVARD, THE OTHER "
+"MEMBERS, THE ENTITIES PROVIDING INFORMATION, API CONTENT OR SERVICES FOR THE"
+" APIS, THE COURSE INSTRUCTORS AND THEIR STAFFS."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"USE OF THE APIS, AND THE API CONTENT AND ANY SERVICES OBTAINED FROM OR "
+"THROUGH THE APIS, IS AT YOUR OWN RISK. YOUR ACCESS TO OR DOWNLOAD OF "
+"INFORMATION, MATERIALS OR DATA THROUGH THE APIS IS AT YOUR OWN DISCRETION "
+"AND RISK, AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR PROPERTY"
+" (INCLUDING YOUR COMPUTER SYSTEM) OR LOSS OF DATA THAT RESULTS FROM THE "
+"DOWNLOAD OR USE OF SUCH MATERIAL OR DATA, UNLESS OTHERWISE EXPRESSLY "
+"PROVIDED FOR IN THE {platform_name} PRIVACY POLICY."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, YOU AGREE THAT NEITHER "
+"{platform_name} NOR ANY OF THE {platform_name} PARTICIPANTS WILL BE LIABLE "
+"TO YOU FOR ANY LOSS OR DAMAGES, EITHER ACTUAL OR CONSEQUENTIAL, ARISING OUT "
+"OF OR RELATING TO THESE TERMS, OR YOUR (OR ANY THIRD PARTY'S) USE OF OR "
+"INABILITY TO USE THE APIS OR ANY API CONTENT, OR YOUR RELIANCE UPON "
+"INFORMATION OBTAINED FROM OR THROUGH THE APIS, WHETHER YOUR CLAIM IS BASED "
+"IN CONTRACT, TORT, STATUTORY OR OTHER LAW."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"IN PARTICULAR, TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, NEITHER "
+"{platform_name} NOR ANY OF THE {platform_name} PARTICIPANTS WILL HAVE ANY "
+"LIABILITY FOR ANY CONSEQUENTIAL, INDIRECT, PUNITIVE, SPECIAL, EXEMPLARY OR "
+"INCIDENTAL DAMAGES, WHETHER FORESEEABLE OR UNFORESEEABLE AND WHETHER OR NOT "
+"{platform_name} OR ANY OF THE {platform_name} PARTICIPANTS HAS BEEN "
+"NEGLIGENT OR OTHERWISE AT FAULT (INCLUDING, BUT NOT LIMITED TO, CLAIMS FOR "
+"DEFAMATION, ERRORS, LOSS OF PROFITS, LOSS OF DATA OR INTERRUPTION IN "
+"AVAILABILITY OF DATA)."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"CERTAIN STATE LAWS DO NOT ALLOW LIMITATIONS ON IMPLIED WARRANTIES OR THE "
+"EXCLUSION OR LIMITATION OF CERTAIN DAMAGES. IF THESE LAWS APPLY TO YOU, SOME"
+" OR ALL OF THE ABOVE DISCLAIMERS, EXCLUSIONS, OR LIMITATIONS MAY NOT APPLY "
+"TO YOU, AND YOU MIGHT HAVE ADDITIONAL RIGHTS."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"The APIs and API Content may include hyperlinks to sites maintained or "
+"controlled by others. {platform_name} and the {platform_name} Participants "
+"are not responsible for and do not routinely screen, approve, review or "
+"endorse the contents of or use of any of the products or services that may "
+"be offered at these sites. If you decide to access linked third-party "
+"websites, you do so at your own risk."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"To the maximum extent permitted by applicable law, you agree to defend, hold"
+" harmless and indemnify {platform_name} and the {platform_name} "
+"Participants, and their respective subsidiaries, affiliates, officers, "
+"faculty, students, fellows, governing board members, agents and employees "
+"from and against any third-party claims, actions or demands arising out of, "
+"resulting from or in any way related to your use of the APIs and any API "
+"Content, including any liability or expense arising from any and all claims,"
+" losses, damages (actual and consequential), suits, judgments, litigation "
+"costs and attorneys' fees, of every kind and nature. In such a case, "
+"{platform_name} or one of the {platform_name} Participants will provide you "
+"with written notice of such claim, suit or action."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid "General Legal Terms"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"The Terms constitute the entire agreement between you and {platform_name} "
+"with respect to your use of the APIs and API Content, superseding any prior "
+"agreements between you and {platform_name} regarding your use of the APIs "
+"and API Content. The failure of {platform_name} to exercise or enforce any "
+"right or provision of the Terms shall not constitute a waiver of such right "
+"or provision. If any provision of the Terms is found by a court of competent"
+" jurisdiction to be invalid, the parties nevertheless agree that the court "
+"should endeavor to give effect to the parties' intentions as reflected in "
+"the provision and the other provisions of the Terms shall remain in full "
+"force and effect. The Terms do not create any third party beneficiary rights"
+" or any agency, partnership, or joint venture. For any notice provided to "
+"you by {platform_name} under these Terms, {platform_name} may notify you via"
+" the email address associated with your {platform_name} account."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"You agree that the Terms, the APIs, and any claim or dispute arising out of "
+"or relating to the Terms or the APIs will be governed by the laws of the "
+"Commonwealth of Massachusetts, excluding its conflicts of law provisions. "
+"You agree that all such claims and disputes will be heard and resolved "
+"exclusively in the federal or state courts located in and serving Cambridge,"
+" Massachusetts, U.S.A. You consent to the personal jurisdiction of those "
+"courts over you for this purpose, and you waive and agree not to assert any "
+"objection to such proceedings in those courts (including any defense or "
+"objection of lack of proper jurisdiction or venue or inconvenience of "
+"forum). Notwithstanding the foregoing, you agree that {platform_name} shall "
+"still be allowed to apply to injunctive remedies (or an equivalent type of "
+"urgent legal relief) in any jursdiction."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid "Termination"
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"You may stop using the APIs at any time. You agree that {platform_name}, in "
+"its sole discretion and at any time, may terminate your use of the APIs or "
+"any API Content for any reason or no reason, without prior notice or "
+"liabiliy."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"{platform_name} and the {platform_name} Participants reserve the right at "
+"any time in their sole discretion to cancel, delay, reschedule or alter the "
+"format of any API or API Content offered through {platform_name}, or to "
+"cease providing any part or all of the APIs or API Content or related "
+"services, and you agree that neither {platform_name} nor any of the "
+"{platform_name} Participants will have any liability to you for such an "
+"action."
+msgstr ""
+
+#: lms/templates/api_admin/terms_of_service.html
+msgid ""
+"Upon any termination of the Terms or discontinuation of your access to an "
+"API for any reason, your right to use any API and API Content will "
+"immediately cease. You will immediately stop using the APIs and delete any "
+"cached or stored API Content. All provisions of the Terms that by their "
+"nature should survive termination shall survive termination, including, "
+"without limitation, ownership provisions, warranty disclaimers, and "
+"limitation of liability. Termination of your access to and use of the APIs "
+"and API Content shall not relieve you of any obligations arising or "
+"accrusing prior to such termination or limit any liability that you "
+"otherwise may have to {platform_name}, including without limitation any "
+"indemnification obligations contained herein."
+msgstr ""
 
 #: lms/templates/calculator/toggle_calculator.html
 msgid "Open Calculator"
@@ -18739,8 +19445,10 @@ msgstr "사용하려면 "
 #: lms/templates/calculator/toggle_calculator.html
 #: cms/templates/js/asset-library.underscore
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-library.underscore
 #: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
 #: test_root/staticfiles/support/templates/certificates_results.underscore
+#: test_root/staticfiles/templates/asset-library.underscore
 msgid "Type"
 msgstr "접사들"
 
@@ -18894,22 +19602,17 @@ msgid "Auto Enroll"
 msgstr "자동 등록"
 
 #: lms/templates/ccx/enrollment.html
-#: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid ""
-"If this option is <em>checked</em>, users who have not yet registered for "
-"{platform_name} will be automatically enrolled."
+"If this option is {em_start}checked{em_end}, users who have not yet "
+"registered for {platform_name} will be automatically enrolled."
 msgstr ""
-"자동 등록이 <em>체크</em> 되어 있으면, {platform_name}에 등록되지 않은 학습자가 자동으로 등록될 것입니다."
 
 #: lms/templates/ccx/enrollment.html
-#: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid ""
-"If this option is left <em>unchecked</em>, users who have not yet registered"
-" for {platform_name} will not be enrolled, but will be allowed to enroll "
-"once they make an account."
+"If this option is left {em_start}unchecked{em_end}, users who have not yet "
+"registered for {platform_name} will not be enrolled, but will be allowed to "
+"enroll once they make an account."
 msgstr ""
-"자동 등록이 <em>체크되어 있지 않으면</em> ,  {platform_name}에 등록되지 않은 학습자는 등록되지 않지만, 등록이 "
-"허용될 것입니다."
 
 #: lms/templates/ccx/enrollment.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
@@ -18922,11 +19625,10 @@ msgid "Notify users by email"
 msgstr "이메일로 등록에 대해 알려줍니다."
 
 #: lms/templates/ccx/enrollment.html
-#: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid ""
-"If this option is <em>checked</em>, users will receive an email "
+"If this option is {em_start}checked{em_end}, users will receive an email "
 "notification."
-msgstr "이옵션이 <em>체크</em> 되어 있으면, 사용자들은 이메일 통지를 받을것입니다."
+msgstr ""
 
 #: lms/templates/ccx/enrollment.html
 #: lms/templates/courseware/course_about.html
@@ -19321,6 +20023,10 @@ msgstr ""
 
 #: lms/templates/courseware/accordion.html
 msgid "{chapter} current chapter"
+msgstr ""
+
+#: lms/templates/courseware/accordion.html
+msgid "{span_start}current section{span_end}"
 msgstr ""
 
 #: lms/templates/courseware/accordion.html
@@ -19738,8 +20444,8 @@ msgid "Verification Declined"
 msgstr ""
 
 #: lms/templates/courseware/progress.html
-msgid "Completed"
-msgstr "완료됨"
+msgid "Completed by"
+msgstr ""
 
 #: lms/templates/courseware/progress.html
 msgid "Upcoming"
@@ -20094,7 +20800,7 @@ msgstr ""
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "It's official. It's easily shareable. It's a proven motivator to complete "
-"the course. <br>{link_start}Learn more about the verified "
+"the course. {line_break}{link_start}Learn more about the verified "
 "{cert_name_long}{link_end}."
 msgstr ""
 
@@ -20376,11 +21082,15 @@ msgstr "게시물 검색"
 
 #: lms/templates/discussion/_thread_list_template.html
 #: common/static/common/templates/discussion/topic.underscore
+#: test_root/staticfiles/common/templates/discussion/topic.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/topic.underscore
 msgid "Discussion topics; currently listing: "
 msgstr ""
 
 #: lms/templates/discussion/_thread_list_template.html
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Search all posts"
 msgstr "모든 게시물 검색"
 
@@ -22196,8 +22906,34 @@ msgstr "그러므로 충분한 이유가 제시되어야 합니다. "
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
+#: test_root/staticfiles/support/templates/enrollment.underscore
 msgid "Reason"
 msgstr "이유"
+
+#: lms/templates/instructor/instructor_dashboard_2/membership.html
+#: lms/templates/ccx/enrollment.html
+msgid ""
+"If this option is <em>checked</em>, users who have not yet registered for "
+"{platform_name} will be automatically enrolled."
+msgstr ""
+"자동 등록이 <em>체크</em> 되어 있으면, {platform_name}에 등록되지 않은 학습자가 자동으로 등록될 것입니다."
+
+#: lms/templates/instructor/instructor_dashboard_2/membership.html
+#: lms/templates/ccx/enrollment.html
+msgid ""
+"If this option is left <em>unchecked</em>, users who have not yet registered"
+" for {platform_name} will not be enrolled, but will be allowed to enroll "
+"once they make an account."
+msgstr ""
+"자동 등록이 <em>체크되어 있지 않으면</em> ,  {platform_name}에 등록되지 않은 학습자는 등록되지 않지만, 등록이 "
+"허용될 것입니다."
+
+#: lms/templates/instructor/instructor_dashboard_2/membership.html
+#: lms/templates/ccx/enrollment.html
+msgid ""
+"If this option is <em>checked</em>, users will receive an email "
+"notification."
+msgstr "이옵션이 <em>체크</em> 되어 있으면, 사용자들은 이메일 통지를 받을것입니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Register/Enroll Students"
@@ -23169,6 +23905,7 @@ msgstr "결제 청구 정보"
 #: lms/templates/shoppingcart/receipt.html
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 #: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/support/templates/enrollment.underscore
 #: test_root/staticfiles/templates/ccx/schedule.underscore
 msgid "N/A"
 msgstr "N/A"
@@ -23356,7 +24093,9 @@ msgstr ""
 #: lms/templates/shoppingcart/shopping_cart.html
 #: cms/templates/js/video/metadata-translations-item.underscore
 #: lms/djangoapps/teams/static/teams/templates/edit-team-member.underscore
+#: test_root/staticfiles/coffee/fixtures/video/metadata-translations-item.underscore
 #: test_root/staticfiles/teams/templates/edit-team-member.underscore
+#: test_root/staticfiles/templates/video/metadata-translations-item.underscore
 msgid "Remove"
 msgstr "제거"
 
@@ -23668,14 +24407,11 @@ msgstr "기술적 요구사항"
 
 #: lms/templates/verify_student/pay_and_verify.html
 msgid ""
-"Please make sure your browser is updated to the {a_start}most recent version"
-" possible{a_end}. Also, please make sure your <strong>webcam is plugged in, "
-"turned on, and allowed to function in your web browser (commonly adjustable "
-"in your browser settings).</strong>"
+"Please make sure your browser is updated to the {strong_start}{a_start}most "
+"recent version possible{a_end}{strong_end}. Also, please make sure your "
+"{strong_start}webcam is plugged in, turned on, and allowed to function in "
+"your web browser (commonly adjustable in your browser settings).{strong_end}"
 msgstr ""
-"브라우저가 {a_start}가장 최신 버전{a_end}으로 업데이트 되었는지 확인하세요. 또한, <strong>웹캠이 연결되었으며 "
-"켜져있는지, 그리고 웹 브라우저에서 작동할 수 있도록 설정되어있는지(보통 브라우저의 설정에서 확인 가능) </strong>도 확인 "
-"부탁드립니다. "
 
 #: lms/templates/verify_student/reverify.html
 msgid "Re-Verification"
@@ -23753,6 +24489,16 @@ msgid ""
 "© edX Inc.  All rights reserved except where noted.  EdX, Open edX and the "
 "edX and Open EdX logos are registered trademarks or trademarks of edX Inc."
 msgstr ""
+
+#: themes/edx.org/lms/templates/header.html
+#: themes/red-theme/lms/templates/header.html
+#: lms/templates/navigation-edx.html lms/templates/navigation.html
+msgid ""
+"<strong>Warning:</strong> Your browser is not fully supported. We strongly "
+"recommend using {chrome_link} or {ff_link}."
+msgstr ""
+"<strong>경고:</strong> 사용하고 있는 브라우저로는 제대로 작동하지 않을 수 있습니다.  {chrome_link} 이나 "
+"{ff_link} 사용을 권장합니다."
 
 #: themes/edx.org/lms/templates/course_modes/choose.html
 #: common/templates/course_modes/choose.html
@@ -23937,6 +24683,9 @@ msgid "Page Actions"
 msgstr "페이지 액션"
 
 #: cms/templates/asset_index.html cms/templates/videos_index.html
+#: cms/templates/js/asset-upload-modal.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-upload-modal.underscore
+#: test_root/staticfiles/templates/asset-upload-modal.underscore
 msgid "Upload New File"
 msgstr "파일 업로드"
 
@@ -23997,6 +24746,9 @@ msgid "Learn more about managing files"
 msgstr "파일 관리 방법에 대해 자세히 알아보기"
 
 #: cms/templates/asset_index.html
+#: cms/templates/js/asset-upload-modal.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-upload-modal.underscore
+#: test_root/staticfiles/templates/asset-upload-modal.underscore
 msgid "close"
 msgstr "닫기"
 
@@ -24011,6 +24763,8 @@ msgstr ""
 #: cms/templates/asset_index.html
 #: cms/templates/js/asset-upload-modal.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-upload-modal.underscore
+#: test_root/staticfiles/templates/asset-upload-modal.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid "Choose File"
 msgstr "파일을 선택하세요"
@@ -24100,6 +24854,9 @@ msgstr "세부사항  &amp; 일정"
 #: cms/templates/certificates.html cms/templates/group_configurations.html
 #: cms/templates/settings.html cms/templates/settings_advanced.html
 #: cms/templates/settings_graders.html cms/templates/widgets/header.html
+#: cms/templates/js/grading-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/grading-editor.underscore
+#: test_root/staticfiles/templates/grading-editor.underscore
 msgid "Grading"
 msgstr "과제 평가"
 
@@ -24130,6 +24887,9 @@ msgstr " 콤포넌트 삭제"
 
 #: cms/templates/component.html cms/templates/edit-tabs.html
 #: cms/templates/studio_xblock_wrapper.html
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
 msgid "Drag to reorder"
 msgstr "재배열 위한 이동"
 
@@ -24256,7 +25016,10 @@ msgid ""
 msgstr "강좌 이름을 입력합니다. (화면에 표시될 이름입니다.)"
 
 #: cms/templates/course-create-rerun.html cms/templates/index.html
-#: cms/templates/settings.html lms/envs/devstack.py
+#: cms/templates/settings.html cms/templates/js/signatory-details.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-details.underscore
+#: test_root/staticfiles/templates/signatory-details.underscore
+#: lms/envs/devstack.py
 msgid "Organization"
 msgstr "기관"
 
@@ -24366,6 +25129,12 @@ msgid ""
 msgstr "공지사항을 입력하세요. HTML로 추가 또는 편집할 수 있습니다."
 
 #: cms/templates/course_outline.html
+#: cms/templates/js/content-group-details.underscore
+#: cms/templates/js/group-configuration-details.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-details.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-details.underscore
+#: test_root/staticfiles/templates/content-group-details.underscore
+#: test_root/staticfiles/templates/group-configuration-details.underscore
 msgid "Course Outline"
 msgstr "강좌 개요"
 
@@ -24451,7 +25220,9 @@ msgid "Click to open the courseware in the LMS in a new tab"
 msgstr "새 탭에서 학습자가 보는 화면을 보려면 클릭하세요."
 
 #: cms/templates/course_outline.html cms/templates/edit-tabs.html
-#: cms/templates/index.html
+#: cms/templates/index.html cms/templates/js/show-textbook.underscore
+#: test_root/staticfiles/coffee/fixtures/show-textbook.underscore
+#: test_root/staticfiles/templates/show-textbook.underscore
 msgid "View Live"
 msgstr "적용 결과 보기"
 
@@ -25479,7 +26250,15 @@ msgid ""
 "cannot be changed.{strong_end}"
 msgstr ""
 
-#: cms/templates/index.html
+#: cms/templates/index.html cms/templates/js/certificate-editor.underscore
+#: cms/templates/js/content-group-editor.underscore
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+#: test_root/staticfiles/templates/content-group-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
 msgid "Create"
 msgstr "만들기"
 
@@ -25588,10 +26367,6 @@ msgstr ""
 #: cms/templates/index.html
 msgid "Libraries"
 msgstr "콘텐츠 보관함"
-
-#: cms/templates/index.html cms/templates/widgets/header.html
-msgid "Programs"
-msgstr ""
 
 #: cms/templates/index.html
 msgid "Re-run Course"
@@ -25835,6 +26610,23 @@ msgstr ""
 #: cms/templates/library.html
 msgid "Learn more about content libraries"
 msgstr "콘텐츠 보관함에 대해 자세히 알아보기"
+
+#: cms/templates/login.html cms/templates/widgets/header.html
+#: themes/red-theme/cms/templates/login.html
+msgid "Sign In"
+msgstr "로그인"
+
+#: cms/templates/login.html themes/red-theme/cms/templates/login.html
+msgid "Sign In to {studio_name}"
+msgstr "{studio_name} 로그인"
+
+#: cms/templates/login.html themes/red-theme/cms/templates/login.html
+msgid "Don't have a {studio_name} Account? Sign up!"
+msgstr "{studio_name}에 지금 가입하세요!"
+
+#: cms/templates/login.html themes/red-theme/cms/templates/login.html
+msgid "Required Information to Sign In to {studio_name}"
+msgstr "{studio_name}에 로그인하기 위한 필요 정보"
 
 #: cms/templates/manage_users.html
 msgid "Course Team Settings"
@@ -26784,6 +27576,9 @@ msgid ""
 msgstr "해당 콘텐츠 그룹이 없습니다. 다른 것를 선택하거나 전체 학생 및 직원에 대한 접근을 허용하세요."
 
 #: cms/templates/visibility_editor.html
+#: cms/templates/js/verification-access-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/verification-access-editor.underscore
+#: test_root/staticfiles/templates/verification-access-editor.underscore
 msgid "Verification Checkpoint"
 msgstr "인증 기준 "
 
@@ -26984,7 +27779,9 @@ msgstr ""
 
 #: cms/templates/widgets/tabs-aggregator.html
 #: lms/templates/edxnotes/tab-item.underscore
+#: lms/templates/learner_dashboard/program_card.underscore
 #: test_root/staticfiles/templates/edxnotes/tab-item.underscore
+#: test_root/staticfiles/templates/learner_dashboard/program_card.underscore
 msgid "name"
 msgstr "이름"
 
@@ -27603,6 +28400,1715 @@ msgid ""
 "#%(r2)d"
 msgstr "새로운 수정본 생성: 수정본 #%(r1)d 과 수정본 #%(r2)d 의 병합"
 
+#: cms/templates/js/access-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/access-editor.underscore
+#: test_root/staticfiles/templates/access-editor.underscore
+msgid "Limit Access"
+msgstr ""
+
+#: cms/templates/js/access-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/access-editor.underscore
+#: test_root/staticfiles/templates/access-editor.underscore
+msgid ""
+"Select a prerequisite subsection and enter a minimum score percentage to "
+"limit access to this subsection."
+msgstr ""
+
+#: cms/templates/js/access-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/access-editor.underscore
+#: test_root/staticfiles/templates/access-editor.underscore
+msgid "Prerequisite:"
+msgstr ""
+
+#: cms/templates/js/access-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/access-editor.underscore
+#: test_root/staticfiles/templates/access-editor.underscore
+msgid "No prerequisite"
+msgstr ""
+
+#: cms/templates/js/access-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/access-editor.underscore
+#: test_root/staticfiles/templates/access-editor.underscore
+msgid "Minimum Score:"
+msgstr ""
+
+#: cms/templates/js/access-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/access-editor.underscore
+#: test_root/staticfiles/templates/access-editor.underscore
+msgid "The minimum score percentage must be a whole number between 0 and 100."
+msgstr ""
+
+#: cms/templates/js/access-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/access-editor.underscore
+#: test_root/staticfiles/templates/access-editor.underscore
+msgid "Use as a Prerequisite"
+msgstr ""
+
+#: cms/templates/js/access-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/access-editor.underscore
+#: test_root/staticfiles/templates/access-editor.underscore
+msgid "Make this subsection available as a prerequisite to other content"
+msgstr ""
+
+#: cms/templates/js/active-video-upload-list.underscore
+#: test_root/staticfiles/coffee/fixtures/active-video-upload-list.underscore
+#: test_root/staticfiles/templates/active-video-upload-list.underscore
+msgid "Drag and drop or click here to upload video files."
+msgstr "파일을 끌고 오거나 여기를 클릭하여 동영상을 업로드하세요."
+
+#: cms/templates/js/active-video-upload-list.underscore
+#: test_root/staticfiles/coffee/fixtures/active-video-upload-list.underscore
+#: test_root/staticfiles/templates/active-video-upload-list.underscore
+msgid "Active Uploads"
+msgstr ""
+
+#: cms/templates/js/active-video-upload.underscore
+#: test_root/staticfiles/coffee/fixtures/active-video-upload.underscore
+#: test_root/staticfiles/templates/active-video-upload.underscore
+msgid "status"
+msgstr "상태"
+
+#: cms/templates/js/add-xblock-component-button.underscore
+#: test_root/staticfiles/coffee/fixtures/add-xblock-component-button.underscore
+#: test_root/staticfiles/templates/add-xblock-component-button.underscore
+msgid "Add Component:"
+msgstr ""
+
+#: cms/templates/js/add-xblock-component-menu-problem.underscore
+#: cms/templates/js/add-xblock-component-menu.underscore
+#: test_root/staticfiles/coffee/fixtures/add-xblock-component-menu-problem.underscore
+#: test_root/staticfiles/coffee/fixtures/add-xblock-component-menu.underscore
+#: test_root/staticfiles/templates/add-xblock-component-menu-problem.underscore
+#: test_root/staticfiles/templates/add-xblock-component-menu.underscore
+msgid "%(type)s Component Template Menu"
+msgstr ""
+
+#: cms/templates/js/add-xblock-component-menu-problem.underscore
+#: test_root/staticfiles/coffee/fixtures/add-xblock-component-menu-problem.underscore
+#: test_root/staticfiles/templates/add-xblock-component-menu-problem.underscore
+msgid "Common Problem Types"
+msgstr "일반 문제 유형"
+
+#: cms/templates/js/add-xblock-component.underscore
+#: test_root/staticfiles/coffee/fixtures/add-xblock-component.underscore
+#: test_root/staticfiles/templates/add-xblock-component.underscore
+msgid "Add New Component"
+msgstr "신규 구성요소 추가"
+
+#: cms/templates/js/advanced_entry.underscore
+#: test_root/staticfiles/coffee/fixtures/advanced_entry.underscore
+#: test_root/staticfiles/templates/advanced_entry.underscore
+msgid "Deprecated"
+msgstr "추천하지 않습니다."
+
+#: cms/templates/js/asset-library.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-library.underscore
+#: test_root/staticfiles/templates/asset-library.underscore
+msgid "List of uploaded files and assets in this course"
+msgstr "업로드한 파일 및 자료 목록"
+
+#: cms/templates/js/asset-library.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-library.underscore
+#: test_root/staticfiles/templates/asset-library.underscore
+msgid "- Sortable"
+msgstr "- 정렬"
+
+#: cms/templates/js/asset-library.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-library.underscore
+#: test_root/staticfiles/templates/asset-library.underscore
+msgid "Show All"
+msgstr ""
+
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Other' refers to the student's gender
+#. Translators: 'Other' refers to the student's level of education
+#: cms/templates/js/asset-library.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-library.underscore
+#: test_root/staticfiles/templates/asset-library.underscore
+#: common/djangoapps/student/models.py
+msgid "Other"
+msgstr "기타"
+
+#: cms/templates/js/asset-library.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-library.underscore
+#: test_root/staticfiles/templates/asset-library.underscore
+msgid "URL"
+msgstr "URL"
+
+#: cms/templates/js/asset-library.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-library.underscore
+#: test_root/staticfiles/templates/asset-library.underscore
+msgid "You haven't added any assets to this course yet."
+msgstr "아직 콘텐츠를 추가하지 않았습니다."
+
+#: cms/templates/js/asset-library.underscore
+#: test_root/staticfiles/coffee/fixtures/asset-library.underscore
+#: test_root/staticfiles/templates/asset-library.underscore
+msgid "Upload your first asset"
+msgstr "첫 파일을 올려보세요"
+
+#: cms/templates/js/asset.underscore
+#: test_root/staticfiles/coffee/fixtures/asset.underscore
+#: test_root/staticfiles/templates/asset.underscore
+msgid "No description available"
+msgstr "사용 가능한 설명이 없습니다"
+
+#: cms/templates/js/asset.underscore
+#: test_root/staticfiles/coffee/fixtures/asset.underscore
+#: test_root/staticfiles/templates/asset.underscore
+msgid "Open/download this file"
+msgstr "파일 열기/다운로드 "
+
+#: cms/templates/js/asset.underscore
+#: test_root/staticfiles/coffee/fixtures/asset.underscore
+#: test_root/staticfiles/templates/asset.underscore
+msgid "Studio:"
+msgstr "스튜디오:"
+
+#: cms/templates/js/asset.underscore
+#: test_root/staticfiles/coffee/fixtures/asset.underscore
+#: test_root/staticfiles/templates/asset.underscore
+msgid "Web:"
+msgstr "Web:"
+
+#: cms/templates/js/asset.underscore
+#: test_root/staticfiles/coffee/fixtures/asset.underscore
+#: test_root/staticfiles/templates/asset.underscore
+msgid "Delete this asset"
+msgstr "삭제"
+
+#: cms/templates/js/asset.underscore
+#: test_root/staticfiles/coffee/fixtures/asset.underscore
+#: test_root/staticfiles/templates/asset.underscore
+msgid "Lock this asset"
+msgstr "asset 잠그기"
+
+#: cms/templates/js/asset.underscore
+#: test_root/staticfiles/coffee/fixtures/asset.underscore
+#: test_root/staticfiles/templates/asset.underscore
+msgid "Lock/unlock file"
+msgstr "파일 잠그기/잠금 해제"
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/content-group-details.underscore
+#: cms/templates/js/group-configuration-details.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-details.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-details.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-details.underscore
+#: test_root/staticfiles/templates/certificate-details.underscore
+#: test_root/staticfiles/templates/content-group-details.underscore
+#: test_root/staticfiles/templates/group-configuration-details.underscore
+#: lms/djangoapps/instructor/views/legacy.py
+msgid "ID"
+msgstr "아이디"
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-details.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/templates/certificate-details.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+msgid "Certificate Details"
+msgstr "이수증 상세정보"
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-details.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/templates/certificate-details.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+msgid "Course Title"
+msgstr ""
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-details.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/templates/certificate-details.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+msgid "Course Title Override"
+msgstr "강좌 제목 바꾸기"
+
+#: cms/templates/js/certificate-details.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-details.underscore
+#: test_root/staticfiles/templates/certificate-details.underscore
+msgid "Course Number Override"
+msgstr ""
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-details.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/templates/certificate-details.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+msgid "Certificate Signatories"
+msgstr "이수증의 서명인"
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-details.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/templates/certificate-details.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+msgid ""
+"It is strongly recommended that you include four or fewer signatories. If "
+"you include additional signatories, preview the certificate in Print View to"
+" ensure the certificate will print correctly on one page."
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore
+#: cms/templates/js/content-group-editor.underscore
+#: cms/templates/js/edit-textbook.underscore
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-textbook.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+#: test_root/staticfiles/templates/content-group-editor.underscore
+#: test_root/staticfiles/templates/edit-textbook.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+msgid "error.message"
+msgstr "오류 메시지"
+
+#: cms/templates/js/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+msgid "Certificate Information"
+msgstr "이수증 정보"
+
+#: cms/templates/js/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+msgid "Certificate Name"
+msgstr "이수증 이름"
+
+#: cms/templates/js/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+msgid "Name of the certificate"
+msgstr "이수증 이름"
+
+#: cms/templates/js/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+msgid "Description of the certificate"
+msgstr "이수증 내용"
+
+#: cms/templates/js/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+msgid "Course title"
+msgstr "강좌명"
+
+#: cms/templates/js/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+msgid ""
+"Specify an alternative to the official course title to display on "
+"certificates. Leave blank to use the official course title."
+msgstr "이수증에 표시될 공식적인 강좌명의 다른 명칭을 쓰세요. 다른 명칭이 필요 없으면 빈칸으로 두세요."
+
+#: cms/templates/js/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+msgid "Add Additional Signatory"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-editor.underscore
+#: test_root/staticfiles/templates/certificate-editor.underscore
+msgid "(Add signatories for a certificate)"
+msgstr ""
+
+#: cms/templates/js/certificate-web-preview.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-web-preview.underscore
+#: test_root/staticfiles/templates/certificate-web-preview.underscore
+msgid "Choose mode"
+msgstr "유형 선택하기"
+
+#: cms/templates/js/certificate-web-preview.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-web-preview.underscore
+#: test_root/staticfiles/templates/certificate-web-preview.underscore
+msgid "Preview Certificate"
+msgstr "이수증 미리보기"
+
+#: cms/templates/js/certificate-web-preview.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-web-preview.underscore
+#: test_root/staticfiles/templates/certificate-web-preview.underscore
+msgid "Activate"
+msgstr "활성화"
+
+#: cms/templates/js/certificate-web-preview.underscore
+#: test_root/staticfiles/coffee/fixtures/certificate-web-preview.underscore
+#: test_root/staticfiles/templates/certificate-web-preview.underscore
+msgid "Deactivate"
+msgstr "비활성화"
+
+#: cms/templates/js/container-message.underscore
+#: test_root/staticfiles/coffee/fixtures/container-message.underscore
+#: test_root/staticfiles/templates/container-message.underscore
+msgid ""
+"Caution: The last published version of this unit is live. By publishing "
+"changes you will change the student experience."
+msgstr "주의 : 가장 최근 버전으로 학습자가 보고 있는 내용입니다. "
+
+#: cms/templates/js/content-group-details.underscore
+#: cms/templates/js/content-group-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-details.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-editor.underscore
+#: test_root/staticfiles/templates/content-group-details.underscore
+#: test_root/staticfiles/templates/content-group-editor.underscore
+msgid "Cannot delete when in use by a unit"
+msgstr "학습활동에서 사용될 때 삭제할 수 없습니다."
+
+#: cms/templates/js/content-group-details.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-details.underscore
+#: test_root/staticfiles/templates/content-group-details.underscore
+msgid "This content group is used in:"
+msgstr "콘텐츠 그룹이 다음에서 사용중입니다:"
+
+#: cms/templates/js/content-group-details.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-details.underscore
+#: test_root/staticfiles/templates/content-group-details.underscore
+msgid ""
+"This content group is not in use. Add a content group to any unit from the "
+"{linkStart}Course Outline{linkEnd}."
+msgstr ""
+
+#: cms/templates/js/content-group-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-editor.underscore
+#: test_root/staticfiles/templates/content-group-editor.underscore
+msgid "Content Group Name"
+msgstr "콘텐츠 그룹 이름"
+
+#: cms/templates/js/content-group-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-editor.underscore
+#: test_root/staticfiles/templates/content-group-editor.underscore
+msgid "Content Group ID"
+msgstr "콘텐츠 그룹 ID:"
+
+#: cms/templates/js/content-group-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-editor.underscore
+#: test_root/staticfiles/templates/content-group-editor.underscore
+msgid "This is the name of the group"
+msgstr "그룹의 이름입니다."
+
+#: cms/templates/js/content-group-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/content-group-editor.underscore
+#: test_root/staticfiles/templates/content-group-editor.underscore
+msgid "This content group is used in one or more units."
+msgstr "콘텐츠 그룹은 하나 이상의 학습활동에서 사용됩니다."
+
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+msgid "Prerequisite: %(prereq_display_name)s"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+msgid "Contains staff only content"
+msgstr "운영팀만 볼 수 있습니다."
+
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+msgid "Unpublished changes to live content"
+msgstr "게시하지 않은 수정안"
+
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+msgid "Unpublished units will not be released"
+msgstr "게시하지 않은 학습활동으로, 공개되지 않을 것입니다."
+
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+msgid "Unpublished changes to content that will release in the future"
+msgstr "게시하지 않은 수정안"
+
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+msgid "Ungraded"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+msgid "Practice proctored Exam"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+msgid "Proctored Exam"
+msgstr "시험감독 평가"
+
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+msgid "Timed Exam"
+msgstr "제한된 시간의 시험"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/xblock-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/xblock-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+#: test_root/staticfiles/templates/xblock-outline.underscore
+msgid "Collapse/Expand this %(xblock_type)s"
+msgstr "%(xblock_type)s 접기/펼치기"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Publish"
+msgstr "게시"
+
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+msgid "Configure"
+msgstr "설정"
+
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+msgid "Release Status:"
+msgstr "공개 상태:"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/publish-xblock.underscore
+#: cms/templates/js/xblock-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/xblock-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+#: test_root/staticfiles/templates/xblock-outline.underscore
+msgid "Released:"
+msgstr "공개일시:"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Scheduled:"
+msgstr "예정됨:"
+
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+msgid "Graded as:"
+msgstr "과제 유형"
+
+#: cms/templates/js/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+#: lms/templates/folditbasic.html
+msgid "Due:"
+msgstr "마감:"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/xblock-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/xblock-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+#: test_root/staticfiles/templates/xblock-outline.underscore
+msgid "You haven't added any content to this course yet."
+msgstr "강좌 콘텐츠가 없습니다."
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/xblock-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/course-outline.underscore
+#: test_root/staticfiles/coffee/fixtures/xblock-outline.underscore
+#: test_root/staticfiles/templates/course-outline.underscore
+#: test_root/staticfiles/templates/xblock-outline.underscore
+msgid "Click to add a new %(xblock_type)s"
+msgstr "새로운 %(xblock_type)s 을 추가하기 위해 클릭하세요."
+
+#: cms/templates/js/course_grade_policy.underscore
+#: test_root/staticfiles/coffee/fixtures/course_grade_policy.underscore
+#: test_root/staticfiles/templates/course_grade_policy.underscore
+msgid "Assignment Type Name"
+msgstr "과제명"
+
+#: cms/templates/js/course_grade_policy.underscore
+#: test_root/staticfiles/coffee/fixtures/course_grade_policy.underscore
+#: test_root/staticfiles/templates/course_grade_policy.underscore
+msgid ""
+"The general category for this type of assignment, for example, Homework or "
+"Midterm Exam. This name is visible to learners."
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore
+#: test_root/staticfiles/coffee/fixtures/course_grade_policy.underscore
+#: test_root/staticfiles/templates/course_grade_policy.underscore
+msgid "Abbreviation"
+msgstr "성적 보고서 표시용 약자"
+
+#: cms/templates/js/course_grade_policy.underscore
+#: test_root/staticfiles/coffee/fixtures/course_grade_policy.underscore
+#: test_root/staticfiles/templates/course_grade_policy.underscore
+msgid ""
+"This short name for the assignment type (for example, HW or Midterm) appears"
+" next to assignments on a learner's Progress page."
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore
+#: test_root/staticfiles/coffee/fixtures/course_grade_policy.underscore
+#: test_root/staticfiles/templates/course_grade_policy.underscore
+msgid "Weight of Total Grade"
+msgstr "점수 가중치"
+
+#: cms/templates/js/course_grade_policy.underscore
+#: test_root/staticfiles/coffee/fixtures/course_grade_policy.underscore
+#: test_root/staticfiles/templates/course_grade_policy.underscore
+msgid ""
+"The weight of all assignments of this type as a percentage of the total "
+"grade, for example, 40. Do not include the percent symbol."
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore
+#: test_root/staticfiles/coffee/fixtures/course_grade_policy.underscore
+#: test_root/staticfiles/templates/course_grade_policy.underscore
+msgid "Total Number"
+msgstr "합계"
+
+#: cms/templates/js/course_grade_policy.underscore
+#: test_root/staticfiles/coffee/fixtures/course_grade_policy.underscore
+#: test_root/staticfiles/templates/course_grade_policy.underscore
+msgid ""
+"The number of subsections in the course that contain problems of this "
+"assignment type."
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore
+#: test_root/staticfiles/coffee/fixtures/course_grade_policy.underscore
+#: test_root/staticfiles/templates/course_grade_policy.underscore
+msgid "Number of Droppable"
+msgstr "삭제 횟수"
+
+#: cms/templates/js/course_grade_policy.underscore
+#: test_root/staticfiles/coffee/fixtures/course_grade_policy.underscore
+#: test_root/staticfiles/templates/course_grade_policy.underscore
+msgid ""
+"The number of assignments of this type that will be dropped. The lowest "
+"scoring assignments are dropped first."
+msgstr ""
+
+#: cms/templates/js/course_info_handouts.underscore
+#: test_root/staticfiles/coffee/fixtures/course_info_handouts.underscore
+#: test_root/staticfiles/templates/course_info_handouts.underscore
+msgid "You have no handouts defined"
+msgstr "정의된 학습 자료가 없습니다."
+
+#: cms/templates/js/course_info_handouts.underscore
+#: test_root/staticfiles/coffee/fixtures/course_info_handouts.underscore
+#: test_root/staticfiles/templates/course_info_handouts.underscore
+msgid ""
+"There is invalid code in your content. Please check to make sure it is valid"
+" HTML."
+msgstr "올바르지 않은 HTML 코드가 있습니다. 올바른 HTML 코드로만 작성되었는지 확인해주세요."
+
+#: cms/templates/js/course_info_update.underscore
+#: test_root/staticfiles/coffee/fixtures/course_info_update.underscore
+#: test_root/staticfiles/templates/course_info_update.underscore
+msgid "Send push notification to mobile apps"
+msgstr "모바일 앱으로 푸시공지를 보냅니다."
+
+#: cms/templates/js/course_info_update.underscore
+#: test_root/staticfiles/coffee/fixtures/course_info_update.underscore
+#: test_root/staticfiles/templates/course_info_update.underscore
+msgid "Send notification to mobile apps"
+msgstr "모바일 앱으로 공지를 보냅니다."
+
+#: cms/templates/js/course_info_update.underscore
+#: test_root/staticfiles/coffee/fixtures/course_info_update.underscore
+#: test_root/staticfiles/templates/course_info_update.underscore
+msgid "Post"
+msgstr "게시하기"
+
+#: cms/templates/js/due-date-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/due-date-editor.underscore
+#: test_root/staticfiles/templates/due-date-editor.underscore
+msgid "Due Date:"
+msgstr "제출 날짜:"
+
+#: cms/templates/js/due-date-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/due-date-editor.underscore
+#: test_root/staticfiles/templates/due-date-editor.underscore
+msgid "Due Time in UTC:"
+msgstr "마감 시간"
+
+#: cms/templates/js/due-date-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/due-date-editor.underscore
+#: test_root/staticfiles/templates/due-date-editor.underscore
+msgid "Clear Grading Due Date"
+msgstr "채점 기간 다시 설정하기"
+
+#: cms/templates/js/edit-chapter.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-chapter.underscore
+#: test_root/staticfiles/templates/edit-chapter.underscore
+msgid "Chapter Name"
+msgstr "챕터 이름"
+
+#: cms/templates/js/edit-chapter.underscore
+#: lms/templates/ccx/schedule.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-chapter.underscore
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+#: test_root/staticfiles/templates/edit-chapter.underscore
+#: test_root/staticfiles/templates/ccx/schedule.underscore
+msgid "gettext("
+msgstr "gettext("
+
+#: cms/templates/js/edit-chapter.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-chapter.underscore
+#: test_root/staticfiles/templates/edit-chapter.underscore
+msgid "provide the title/name of the chapter that will be used in navigating"
+msgstr "학습자가 검색할 수 있도록 챕터의 이름을 입력하세요."
+
+#: cms/templates/js/edit-chapter.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-chapter.underscore
+#: test_root/staticfiles/templates/edit-chapter.underscore
+msgid "Chapter Asset"
+msgstr "챕터 별 파일"
+
+#: cms/templates/js/edit-chapter.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-chapter.underscore
+#: test_root/staticfiles/templates/edit-chapter.underscore
+msgid "upload a PDF file or provide the path to a Studio asset file"
+msgstr "PDF 파일을 업로드하세요."
+
+#: cms/templates/js/edit-chapter.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-chapter.underscore
+#: test_root/staticfiles/templates/edit-chapter.underscore
+msgid "Upload PDF"
+msgstr "PDF 업로드"
+
+#: cms/templates/js/edit-chapter.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-chapter.underscore
+#: test_root/staticfiles/templates/edit-chapter.underscore
+msgid "delete chapter"
+msgstr "chapter 삭제하기"
+
+#: cms/templates/js/edit-textbook.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-textbook.underscore
+#: test_root/staticfiles/templates/edit-textbook.underscore
+msgid "Textbook information"
+msgstr "교재 정보"
+
+#: cms/templates/js/edit-textbook.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-textbook.underscore
+#: test_root/staticfiles/templates/edit-textbook.underscore
+msgid "Textbook Name"
+msgstr "교재명"
+
+#: cms/templates/js/edit-textbook.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-textbook.underscore
+#: test_root/staticfiles/templates/edit-textbook.underscore
+msgid "Introduction to Cookie Baking"
+msgstr "제과 개론"
+
+#: cms/templates/js/edit-textbook.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-textbook.underscore
+#: test_root/staticfiles/templates/edit-textbook.underscore
+msgid ""
+"provide the title/name of the text book as you would like your students to "
+"see it"
+msgstr "교재명을 입력하세요."
+
+#: cms/templates/js/edit-textbook.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-textbook.underscore
+#: test_root/staticfiles/templates/edit-textbook.underscore
+msgid "Chapter information"
+msgstr "Chapter 정보"
+
+#: cms/templates/js/edit-textbook.underscore
+#: test_root/staticfiles/coffee/fixtures/edit-textbook.underscore
+#: test_root/staticfiles/templates/edit-textbook.underscore
+msgid "Add a Chapter"
+msgstr "챕터 추가"
+
+#: cms/templates/js/grading-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/grading-editor.underscore
+#: test_root/staticfiles/templates/grading-editor.underscore
+msgid "Grade as:"
+msgstr "과제 유형"
+
+#: cms/templates/js/grading-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/grading-editor.underscore
+#: test_root/staticfiles/templates/grading-editor.underscore
+msgid "Not Graded"
+msgstr "성적 미반영"
+
+#: cms/templates/js/group-configuration-details.underscore
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-details.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-details.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+msgid "Cannot delete when in use by an experiment"
+msgstr "실험으로 사용될 때에는 지울 수 없습니다."
+
+#: cms/templates/js/group-configuration-details.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-details.underscore
+#: test_root/staticfiles/templates/group-configuration-details.underscore
+msgid "This Group Configuration is used in:"
+msgstr "이 그룹 설정은 이렇게 사용됩니다:"
+
+#: cms/templates/js/group-configuration-details.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-details.underscore
+#: test_root/staticfiles/templates/group-configuration-details.underscore
+msgid ""
+"This Group Configuration is not in use. Start by adding a content experiment"
+" to any Unit via the {linkStart}Course Outline{linkEnd}."
+msgstr ""
+
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+msgid "Group Configuration information"
+msgstr "그룹 설정 정보"
+
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+msgid "Group Configuration Name"
+msgstr "그룹 설정 이름"
+
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+msgid "Group Configuration ID"
+msgstr "그룹 설정 ID"
+
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+msgid "This is the Name of the Group Configuration"
+msgstr "그룹 설정에 대한 이름입니다."
+
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+msgid "Name or short description of the configuration"
+msgstr "설정에 대한 짧은 설명 또는 이름입니다."
+
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+msgid "This is the Description of the Group Configuration"
+msgstr "그룹 설정에 대한 설명입니다."
+
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+msgid "Optional long description"
+msgstr "부가적인 긴 설명"
+
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+msgid "Group information"
+msgstr "그룹 정보"
+
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+msgid "Groups"
+msgstr "그룹들"
+
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+msgid ""
+"Name of the groups that students will be assigned to, for example, Control, "
+"Video, Problems. You must have two or more groups."
+msgstr "학습자가 동영상, 문제 등에 속한 집단명.  둘 이상의 집단이 필요합니다."
+
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+msgid "Add another group"
+msgstr "다른 집단 추가하기"
+
+#: cms/templates/js/group-configuration-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/group-configuration-editor.underscore
+#: test_root/staticfiles/templates/group-configuration-editor.underscore
+msgid ""
+"This configuration is currently used in content experiments. If you make "
+"changes to the groups, you may need to edit those experiments."
+msgstr "이 구성은 현재 콘텐츠 실험에 사용됩니다. 당신이 그룹을 변경 한 경우 실험을 편집해야합니다."
+
+#: cms/templates/js/group-edit.underscore
+#: test_root/staticfiles/coffee/fixtures/group-edit.underscore
+#: test_root/staticfiles/templates/group-edit.underscore
+msgid "delete group"
+msgstr "집단 삭제"
+
+#: cms/templates/js/license-selector.underscore
+#: test_root/staticfiles/coffee/fixtures/license-selector.underscore
+#: test_root/staticfiles/templates/license-selector.underscore
+msgid "License Type"
+msgstr "라이센스 유형"
+
+#: cms/templates/js/license-selector.underscore
+#: test_root/staticfiles/coffee/fixtures/license-selector.underscore
+#: test_root/staticfiles/templates/license-selector.underscore
+msgid "Learn more about {license_name}"
+msgstr "{license_name} 더 알아보기"
+
+#: cms/templates/js/license-selector.underscore
+#: test_root/staticfiles/coffee/fixtures/license-selector.underscore
+#: test_root/staticfiles/templates/license-selector.underscore
+msgid "Options for {license_name}"
+msgstr "{license_name}을 위한 평가 기준"
+
+#: cms/templates/js/license-selector.underscore
+#: test_root/staticfiles/coffee/fixtures/license-selector.underscore
+#: test_root/staticfiles/templates/license-selector.underscore
+msgid "The following options are available for the {license_name} license."
+msgstr "{license_name} 라이센스에서 다음 선택사항이 가능합니다."
+
+#: cms/templates/js/license-selector.underscore
+#: test_root/staticfiles/coffee/fixtures/license-selector.underscore
+#: test_root/staticfiles/templates/license-selector.underscore
+msgid "License Display"
+msgstr "라이센스 표시"
+
+#: cms/templates/js/license-selector.underscore
+#: test_root/staticfiles/coffee/fixtures/license-selector.underscore
+#: test_root/staticfiles/templates/license-selector.underscore
+msgid ""
+"The following message will be displayed at the bottom of the courseware "
+"pages within your course:"
+msgstr "다음 메세지는 강좌 내용의 하단부에 나타납니다. "
+
+#: cms/templates/js/list.underscore
+#: test_root/staticfiles/coffee/fixtures/list.underscore
+#: test_root/staticfiles/templates/list.underscore
+msgid "%(new_item_message)s"
+msgstr ""
+
+#: cms/templates/js/list.underscore
+#: test_root/staticfiles/coffee/fixtures/list.underscore
+#: test_root/staticfiles/templates/list.underscore
+msgid "New %(item_type)s"
+msgstr "신규 %(item_type)s "
+
+#: cms/templates/js/metadata-dict-entry.underscore
+#: cms/templates/js/metadata-list-entry.underscore
+#: cms/templates/js/video/metadata-translations-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-dict-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-list-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/video/metadata-translations-entry.underscore
+#: test_root/staticfiles/templates/metadata-dict-entry.underscore
+#: test_root/staticfiles/templates/metadata-list-entry.underscore
+#: test_root/staticfiles/templates/video/metadata-translations-entry.underscore
+msgid "Add"
+msgstr "추가하기"
+
+#: cms/templates/js/metadata-dict-entry.underscore
+#: cms/templates/js/metadata-file-uploader-entry.underscore
+#: cms/templates/js/metadata-list-entry.underscore
+#: cms/templates/js/metadata-number-entry.underscore
+#: cms/templates/js/metadata-option-entry.underscore
+#: cms/templates/js/metadata-string-entry.underscore
+#: cms/templates/js/video/metadata-translations-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-dict-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-file-uploader-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-list-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-number-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-option-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-string-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/video/metadata-translations-entry.underscore
+#: test_root/staticfiles/templates/metadata-dict-entry.underscore
+#: test_root/staticfiles/templates/metadata-file-uploader-entry.underscore
+#: test_root/staticfiles/templates/metadata-list-entry.underscore
+#: test_root/staticfiles/templates/metadata-number-entry.underscore
+#: test_root/staticfiles/templates/metadata-option-entry.underscore
+#: test_root/staticfiles/templates/metadata-string-entry.underscore
+#: test_root/staticfiles/templates/video/metadata-translations-entry.underscore
+msgid "Clear"
+msgstr "지우기"
+
+#: cms/templates/js/metadata-dict-entry.underscore
+#: cms/templates/js/metadata-file-uploader-entry.underscore
+#: cms/templates/js/metadata-list-entry.underscore
+#: cms/templates/js/metadata-number-entry.underscore
+#: cms/templates/js/metadata-option-entry.underscore
+#: cms/templates/js/metadata-string-entry.underscore
+#: cms/templates/js/video/metadata-translations-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-dict-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-file-uploader-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-list-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-number-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-option-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-string-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/video/metadata-translations-entry.underscore
+#: test_root/staticfiles/templates/metadata-dict-entry.underscore
+#: test_root/staticfiles/templates/metadata-file-uploader-entry.underscore
+#: test_root/staticfiles/templates/metadata-list-entry.underscore
+#: test_root/staticfiles/templates/metadata-number-entry.underscore
+#: test_root/staticfiles/templates/metadata-option-entry.underscore
+#: test_root/staticfiles/templates/metadata-string-entry.underscore
+#: test_root/staticfiles/templates/video/metadata-translations-entry.underscore
+msgid "Clear Value"
+msgstr "값 초기화"
+
+#: cms/templates/js/metadata-file-uploader-item.underscore
+#: cms/templates/js/video/metadata-translations-item.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-file-uploader-item.underscore
+#: test_root/staticfiles/coffee/fixtures/video/metadata-translations-item.underscore
+#: test_root/staticfiles/templates/metadata-file-uploader-item.underscore
+#: test_root/staticfiles/templates/video/metadata-translations-item.underscore
+msgid "Upload"
+msgstr "업로드"
+
+#: cms/templates/js/metadata-file-uploader-item.underscore
+#: cms/templates/js/video/metadata-translations-item.underscore
+#: test_root/staticfiles/coffee/fixtures/metadata-file-uploader-item.underscore
+#: test_root/staticfiles/coffee/fixtures/video/metadata-translations-item.underscore
+#: test_root/staticfiles/templates/metadata-file-uploader-item.underscore
+#: test_root/staticfiles/templates/video/metadata-translations-item.underscore
+msgid "Download"
+msgstr "다운로드"
+
+#: cms/templates/js/no-textbooks.underscore
+#: test_root/staticfiles/coffee/fixtures/no-textbooks.underscore
+#: test_root/staticfiles/templates/no-textbooks.underscore
+msgid "You haven't added any textbooks to this course yet."
+msgstr "아직 교재를 추가하지 않으셨습니다."
+
+#: cms/templates/js/no-textbooks.underscore
+#: test_root/staticfiles/coffee/fixtures/no-textbooks.underscore
+#: test_root/staticfiles/templates/no-textbooks.underscore
+msgid "Add your first textbook"
+msgstr "첫 교재 추가하기"
+
+#: cms/templates/js/previous-video-upload-list.underscore
+#: test_root/staticfiles/coffee/fixtures/previous-video-upload-list.underscore
+#: test_root/staticfiles/templates/previous-video-upload-list.underscore
+msgid "Previous Uploads"
+msgstr "이전 업로드들"
+
+#: cms/templates/js/previous-video-upload-list.underscore
+#: test_root/staticfiles/coffee/fixtures/previous-video-upload-list.underscore
+#: test_root/staticfiles/templates/previous-video-upload-list.underscore
+msgid "Download available encodings (.csv)"
+msgstr "(.csv)으로 인코딩된 파일을 다운로드 가능합니다."
+
+#: cms/templates/js/publish-history.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-history.underscore
+#: test_root/staticfiles/templates/publish-history.underscore
+msgid "Never published"
+msgstr "게시되지 않았습니다."
+
+#: cms/templates/js/publish-history.underscore
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-history.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-history.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Last published %(last_published_date)s by %(publish_username)s"
+msgstr "%(publish_username)s가 마지막으로 게시한 날짜: %(last_published_date)s "
+
+#: cms/templates/js/publish-history.underscore
+#: cms/templates/js/staff-lock-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-history.underscore
+#: test_root/staticfiles/coffee/fixtures/staff-lock-editor.underscore
+#: test_root/staticfiles/templates/publish-history.underscore
+#: test_root/staticfiles/templates/staff-lock-editor.underscore
+msgid "message"
+msgstr "메세지"
+
+#: cms/templates/js/publish-history.underscore
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-history.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-history.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Previously published"
+msgstr "이전에 게시되었습니다."
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Draft (Never published)"
+msgstr "초안 (게시된 적 없음)"
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Visible to Staff Only"
+msgstr "운영팀에게만 공개"
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Published and Live"
+msgstr "공개됨"
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Published (not yet released)"
+msgstr "게시됨 (아직 공개되지 않음)"
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Draft (Unpublished changes)"
+msgstr "수정안 (아직 게시되지 않음)"
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Release:"
+msgstr "공개 날짜"
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Publishing Status"
+msgstr "게시 상태"
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Draft saved on %(last_saved_date)s by %(edit_username)s"
+msgstr "저장됨 : %(last_saved_date)s %(edit_username)s"
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "with %(release_date_from)s"
+msgstr "%(release_date_from)s와 "
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Is Visible To:"
+msgstr "공개 설정 :"
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Will Be Visible To:"
+msgstr "강좌 공개 대상:"
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Staff Only"
+msgstr "운영팀 전용"
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "with %(section_or_subsection)s"
+msgstr "%(section_or_subsection)s와"
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Staff and Students"
+msgstr "운영팀과 학습자"
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Some content in this unit is visible only to particular content groups"
+msgstr "이 학습활동의 일부 내용은 특정 콘텐츠 그룹만 볼 수 있습니다."
+
+#: cms/templates/js/publish-xblock.underscore
+#: cms/templates/js/staff-lock-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/staff-lock-editor.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+#: test_root/staticfiles/templates/staff-lock-editor.underscore
+msgid "Hide from students"
+msgstr "학습자에게 감추기"
+
+#: cms/templates/js/publish-xblock.underscore
+#: test_root/staticfiles/coffee/fixtures/publish-xblock.underscore
+#: test_root/staticfiles/templates/publish-xblock.underscore
+msgid "Discard Changes"
+msgstr "변경 취소하기"
+
+#: cms/templates/js/release-date-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/release-date-editor.underscore
+#: test_root/staticfiles/templates/release-date-editor.underscore
+msgid "Release Date and Time"
+msgstr "공개 날짜와 시간"
+
+#: cms/templates/js/release-date-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/release-date-editor.underscore
+#: test_root/staticfiles/templates/release-date-editor.underscore
+msgid "Release Date:"
+msgstr "공개 날짜"
+
+#: cms/templates/js/release-date-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/release-date-editor.underscore
+#: test_root/staticfiles/templates/release-date-editor.underscore
+msgid "Release Time in UTC:"
+msgstr "공개 시간"
+
+#: cms/templates/js/release-date-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/release-date-editor.underscore
+#: test_root/staticfiles/templates/release-date-editor.underscore
+msgid "Clear Release Date/Time"
+msgstr "공개 날짜와 시간 초기화"
+
+#: cms/templates/js/signatory-details.underscore
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-details.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-details.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid "Signatory"
+msgstr ""
+
+#: cms/templates/js/signatory-details.underscore
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-details.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-details.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid "Signature Image"
+msgstr "서명 이미지"
+
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid "Certificate Signatory Configuration"
+msgstr "강좌 이수증 서명인 설정"
+
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid "Name "
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid "Name of the signatory"
+msgstr "서명인 이름"
+
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid "The name of this signatory as it should appear on certificates."
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid "Title "
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid "Title of the signatory"
+msgstr "서명인의 지위"
+
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid ""
+"Titles more than 100 characters may prevent students from printing their "
+"certificate on a single page."
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid "Organization "
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid "Organization of the signatory"
+msgstr "서명인의 소속기관"
+
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid ""
+"The organization that this signatory belongs to, as it should appear on "
+"certificates."
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid "Path to Signature Image"
+msgstr "서명이미지 경로"
+
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid "Image must be in PNG format"
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/signatory-editor.underscore
+#: test_root/staticfiles/templates/signatory-editor.underscore
+msgid "Upload Signature Image"
+msgstr ""
+
+#: cms/templates/js/staff-lock-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/staff-lock-editor.underscore
+#: test_root/staticfiles/templates/staff-lock-editor.underscore
+msgid "Student Visibility"
+msgstr "학습자 공개 설정"
+
+#: cms/templates/js/staff-lock-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/staff-lock-editor.underscore
+#: test_root/staticfiles/templates/staff-lock-editor.underscore
+msgid ""
+"If the unit was previously published and released to students, any changes "
+"you made to the unit when it was hidden will now be visible to students."
+msgstr "비공개 상태에서 변경된 내용이 학습자에게 보일 것입니다."
+
+#: cms/templates/js/staff-lock-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/staff-lock-editor.underscore
+#: test_root/staticfiles/templates/staff-lock-editor.underscore
+msgid ""
+"If you make this %(xblockType)s visible to students, students will be able "
+"to see its content after the release date has passed and you have published "
+"the unit."
+msgstr "학습자에게 보이도록 %(xblockType)s 를 만들면, 학습자들은  개강 날짜가 풀린 후 콘텐츠를 볼 수 있습니다. "
+
+#: cms/templates/js/staff-lock-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/staff-lock-editor.underscore
+#: test_root/staticfiles/templates/staff-lock-editor.underscore
+msgid ""
+"Any subsections or units that are explicitly hidden from students will "
+"remain hidden after you clear this option for the section."
+msgstr "선택을 취소하면 학습자는 모든 소주제 또는 학습활동을 볼 수 없습니다. "
+
+#: cms/templates/js/staff-lock-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/staff-lock-editor.underscore
+#: test_root/staticfiles/templates/staff-lock-editor.underscore
+msgid ""
+"Any units that are explicitly hidden from students will remain hidden after "
+"you clear this option for the subsection."
+msgstr "소주제 관련 선택을 취소하면, 학습자에게 표시되는 모든 학습활동은 학습자가 볼 수 없습니다."
+
+#: cms/templates/js/team-member.underscore
+#: test_root/staticfiles/coffee/fixtures/team-member.underscore
+#: test_root/staticfiles/templates/team-member.underscore
+msgid "Current Role:"
+msgstr "현재 역할:"
+
+#: cms/templates/js/team-member.underscore
+#: test_root/staticfiles/coffee/fixtures/team-member.underscore
+#: test_root/staticfiles/templates/team-member.underscore
+msgid "You!"
+msgstr "귀하입니다."
+
+#: cms/templates/js/team-member.underscore
+#: test_root/staticfiles/coffee/fixtures/team-member.underscore
+#: test_root/staticfiles/templates/team-member.underscore
+msgid "send an email message to {email}"
+msgstr " {email}에게 이메일 메세지 보냄"
+
+#: cms/templates/js/team-member.underscore
+#: test_root/staticfiles/coffee/fixtures/team-member.underscore
+#: test_root/staticfiles/templates/team-member.underscore
+msgid "Promote another member to Admin to remove your admin rights"
+msgstr "교수자 권한을 삭제하려면 다른 팀원을 교수자로 승격시키세요."
+
+#: cms/templates/js/team-member.underscore
+#: test_root/staticfiles/coffee/fixtures/team-member.underscore
+#: test_root/staticfiles/templates/team-member.underscore
+msgid "Add {role} Access"
+msgstr "{role} 접근 추가"
+
+#: cms/templates/js/team-member.underscore
+#: test_root/staticfiles/coffee/fixtures/team-member.underscore
+#: test_root/staticfiles/templates/team-member.underscore
+msgid "Remove {role} Access"
+msgstr "{role} 권한 제거"
+
+#: cms/templates/js/team-member.underscore
+#: test_root/staticfiles/coffee/fixtures/team-member.underscore
+#: test_root/staticfiles/templates/team-member.underscore
+msgid "Delete the user, {username}"
+msgstr "{username} 학습자를 삭제합니다."
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/templates/timed-examination-preference-editor.underscore
+msgid "Set as a Special Exam"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/templates/timed-examination-preference-editor.underscore
+msgid "Timed"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/templates/timed-examination-preference-editor.underscore
+msgid ""
+"Use a timed exam to limit the time learners can spend on problems in this "
+"subsection. Learners must submit answers before the time expires. You can "
+"allow additional time for individual learners through the Instructor "
+"Dashboard."
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/templates/timed-examination-preference-editor.underscore
+msgid "Proctored"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/templates/timed-examination-preference-editor.underscore
+msgid ""
+"Proctored exams are timed and they record video of each learner taking the "
+"exam. The videos are then reviewed to ensure that learners follow all "
+"examination rules."
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/templates/timed-examination-preference-editor.underscore
+msgid "Practice Proctored"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/templates/timed-examination-preference-editor.underscore
+msgid ""
+"Use a practice proctored exam to introduce learners to the proctoring tools "
+"and processes. Results of a practice exam do not affect a learner's grade."
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/templates/timed-examination-preference-editor.underscore
+msgid "Time Allotted (HH:MM):"
+msgstr "할당된 시간 (HH:MM):"
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/templates/timed-examination-preference-editor.underscore
+msgid ""
+"Select a time allotment for the exam. If it is over 24 hours, type in the "
+"amount of time. You can grant individual learners extra time to complete the"
+" exam through the Instructor Dashboard."
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/templates/timed-examination-preference-editor.underscore
+msgid "Review Rules"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/timed-examination-preference-editor.underscore
+#: test_root/staticfiles/templates/timed-examination-preference-editor.underscore
+msgid ""
+"Specify any additional rules or rule exceptions that the proctoring review "
+"team should enforce when reviewing the videos. For example, you could "
+"specify that calculators are allowed."
+msgstr ""
+
+#: cms/templates/js/upload-dialog.underscore
+#: test_root/staticfiles/coffee/fixtures/upload-dialog.underscore
+#: test_root/staticfiles/templates/upload-dialog.underscore
+msgid "File upload succeeded"
+msgstr "파일 업로드 완료"
+
+#: cms/templates/js/validation-error-modal.underscore
+#: test_root/staticfiles/coffee/fixtures/validation-error-modal.underscore
+#: test_root/staticfiles/templates/validation-error-modal.underscore
+msgid ""
+"Please check the following validation feedbacks and reflect them in your "
+"course settings:"
+msgstr "다음 피드백을 확인하고 강좌 설정에 반영하세요:"
+
+#: cms/templates/js/verification-access-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/verification-access-editor.underscore
+#: test_root/staticfiles/templates/verification-access-editor.underscore
+msgid "Must complete verification checkpoint"
+msgstr "인증 기준을 완성해야 합니다."
+
+#: cms/templates/js/verification-access-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/verification-access-editor.underscore
+#: test_root/staticfiles/templates/verification-access-editor.underscore
+msgid "Verification checkpoint to be completed"
+msgstr "완성되어야 할 인증 기준"
+
+#: cms/templates/js/verification-access-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/verification-access-editor.underscore
+#: test_root/staticfiles/templates/verification-access-editor.underscore
+msgid ""
+"Learners who require verification must pass the selected checkpoint to see "
+"the content in this unit. Learners who do not require verification see this "
+"content by default."
+msgstr "인증을 신청한 학습자는 인증 기준에 해당하는 학습활동을 통과해야 합니다. "
+
+#: cms/templates/js/xblock-string-field-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/xblock-string-field-editor.underscore
+#: test_root/staticfiles/templates/xblock-string-field-editor.underscore
+msgid "Edit the name"
+msgstr "이름 수정"
+
+#: cms/templates/js/xblock-string-field-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/xblock-string-field-editor.underscore
+#: test_root/staticfiles/templates/xblock-string-field-editor.underscore
+msgid "Edit %(display_name)s (required)"
+msgstr "%(display_name)s (required)편집하기"
+
+#: cms/templates/js/xblock-string-field-editor.underscore
+#: test_root/staticfiles/coffee/fixtures/xblock-string-field-editor.underscore
+#: test_root/staticfiles/templates/xblock-string-field-editor.underscore
+msgid "formLabel"
+msgstr "formLabel"
+
+#: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/metadata-videolist-entry.underscore
+#: test_root/staticfiles/templates/video/transcripts/metadata-videolist-entry.underscore
+msgid "Add URLs for additional versions"
+msgstr "다른 버전 URL 추가하기"
+
+#: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/metadata-videolist-entry.underscore
+#: test_root/staticfiles/templates/video/transcripts/metadata-videolist-entry.underscore
+msgid ""
+"To be sure all students can access the video, we recommend providing both an"
+" .mp4 and a .webm version of your video. Click below to add a URL for "
+"another version. These URLs cannot be YouTube URLs. The first listed video "
+"that's compatible with the student's computer will play."
+msgstr ""
+"모든 학습자가 강좌 동영상에 접근할 수 있도록, 동영상을 .mp4와 .webm 파일로 제공하길 권합니다. 다른 버전으로 URL 을 "
+"추가하려면 아래를 클릭하세요. URL은 YouTube URL일 수 없습니다. 학습자의 컴퓨터와 호환되는 첫번째 동영상이 재생될 것입니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-choose.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-replace.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-choose.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-replace.underscore
+msgid "Timed Transcript Conflict"
+msgstr "자막 충돌"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-choose.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-choose.underscore
+msgid ""
+"The timed transcript for the first video file does not appear to be the same"
+" as the timed transcript for the second video file."
+msgstr "첫 번째 영상 파일의 자막이 두 번째 영상 파일의 자막과 다릅니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-choose.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-choose.underscore
+msgid "Which timed transcript would you like to use?"
+msgstr "어느 자막을 사용하시겠습니까?"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-choose.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-found.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-import.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-not-found.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-replace.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-uploaded.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-use-existing.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-choose.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-found.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-import.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-not-found.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-replace.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-uploaded.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-use-existing.underscore
+msgid "Error."
+msgstr "오류."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-choose.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-choose.underscore
+msgid "Timed Transcript from %(filename)s"
+msgstr "%(filename)s으로 부터 시간이 나타나 있는 자막 "
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-found.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-found.underscore
+msgid "Timed Transcript Found"
+msgstr "자막 있음"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-found.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-found.underscore
+msgid ""
+"EdX has a timed transcript for this video. If you want to edit this "
+"transcript, you can download, edit, and re-upload the existing transcript. "
+"If you want to replace this transcript, upload a new .srt transcript file."
+msgstr ""
+"동영상 자막이 있습니다. 자막을 수정하려면, 다운로드하여 수정하고 다시 업로드할 수 있습니다. 자막을 교체할 경우 새 .srt로 "
+"업로드합니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-found.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-import.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-not-found.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-uploaded.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-use-existing.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-found.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-import.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-not-found.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-uploaded.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-use-existing.underscore
+msgid "Upload New Transcript"
+msgstr "신규 자막 업로드"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-found.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-import.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-found.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-import.underscore
+msgid "Upload New .srt Transcript"
+msgstr "신규 .srt 자막 파일 업로드하기"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-found.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-not-found.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-uploaded.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-found.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-not-found.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-uploaded.underscore
+msgid "Download Transcript for Editing"
+msgstr "편집용 자막 다운로드"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-import.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-import.underscore
+msgid "No EdX Timed Transcript"
+msgstr "자막이 없습니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-import.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-import.underscore
+msgid ""
+"EdX doesn't have a timed transcript for this video in Studio, but we found a"
+" transcript on YouTube. You can import the YouTube transcript or upload your"
+" own .srt transcript file."
+msgstr ""
+"EdX는 스튜디오에서 동영상의 시간에 맞춰진 자막을 갖고 있지 않지만, 유튜브에서 자막을 발견했습니다.  YouTube 자막을 가져오거나"
+" .srt 자막파일로 업로드할 수 있습니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-import.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-import.underscore
+msgid "Import YouTube Transcript"
+msgstr "YouTube 자막 가져오기"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-not-found.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-not-found.underscore
+msgid "No Timed Transcript"
+msgstr "자막 없음"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-not-found.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-not-found.underscore
+msgid ""
+"EdX doesn\\'t have a timed transcript for this video. Please upload an .srt "
+"file."
+msgstr "동영상의 자막 파일이 없습니다. .srt 자막 파일을 업로드 하세요."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-replace.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-replace.underscore
+msgid ""
+"The timed transcript for this video on edX is out of date, but YouTube has a"
+" current timed transcript for this video."
+msgstr "K-MOOC에는 기간이 만료된 이 동영상의 자막이 있지만, YouTube에는 현재 사용되는 자막이 있습니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-replace.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-replace.underscore
+msgid "Do you want to replace the edX transcript with the YouTube transcript?"
+msgstr "YouTube 자막과 K-MOOC 자막을 바꾸시겠습니까?"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-replace.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-replace.underscore
+msgid "Yes, replace the edX transcript with the YouTube transcript"
+msgstr "네, K-MOOC 자막을 YouTube 자막으로 교체합니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-uploaded.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-uploaded.underscore
+msgid "Timed Transcript Uploaded Successfully"
+msgstr "자막 업로드가 완료되었습니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-uploaded.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-uploaded.underscore
+msgid ""
+"EdX has a timed transcript for this video. If you want to replace this "
+"transcript, upload a new .srt transcript file. If you want to edit this "
+"transcript, you can download, edit, and re-upload the existing transcript."
+msgstr ""
+"EdX는 자막을 가지고 있습니다. 자막을 교체 할 경우 새 .SRT 자막 파일을 업로드합니다. 자막 파일을 편집 할 경우,  다운로드 후"
+" 편집하고 변경한 자막 파일을 다시 업로드 할 수 있습니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-use-existing.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-use-existing.underscore
+msgid "Confirm Timed Transcript"
+msgstr "자막 승인"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-use-existing.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-use-existing.underscore
+msgid ""
+"You changed a video URL, but did not change the timed transcript file. Do "
+"you want to use the current timed transcript or upload a new .srt transcript"
+" file?"
+msgstr "동영상의 URL을 변경했지만, 자막 파일은 변경되지 않았습니다. 새 .srt 자막 파일을 업로드 할까요?"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
+#: test_root/staticfiles/coffee/fixtures/video/transcripts/messages/transcripts-use-existing.underscore
+#: test_root/staticfiles/templates/video/transcripts/messages/transcripts-use-existing.underscore
+msgid "Use Current Transcript"
+msgstr "지금 자막 쓰기"
+
 #: common/static/common/templates/image-modal.underscore
 #: test_root/staticfiles/common/templates/image-modal.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/image-modal.underscore
@@ -27630,8 +30136,8 @@ msgstr "축소"
 #: common/static/common/templates/components/paging-footer.underscore
 #: test_root/staticfiles/common/templates/components/paging-footer.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/components/paging-footer.underscore
-msgid "Page number"
-msgstr "페이지 숫자"
+msgid "Page number out of %(total_pages)s"
+msgstr ""
 
 #: common/static/common/templates/components/paging-footer.underscore
 #: test_root/staticfiles/common/templates/components/paging-footer.underscore
@@ -27664,10 +30170,14 @@ msgid "Find discussions"
 msgstr "토론 찿기"
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Use the Discussion Topics menu to find specific topics."
 msgstr ""
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Filter and sort topics"
 msgstr ""
 
@@ -27678,14 +30188,20 @@ msgid "Engage with posts"
 msgstr ""
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Vote for good posts and responses"
 msgstr ""
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Report abuse, topics, and responses"
 msgstr ""
 
 #: common/static/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/common/templates/discussion/discussion-home.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/discussion-home.underscore
 msgid "Follow or unfollow posts"
 msgstr ""
 
@@ -27776,6 +30292,8 @@ msgid "Report"
 msgstr "신고"
 
 #: common/static/common/templates/discussion/forum-action-report.underscore
+#: test_root/staticfiles/common/templates/discussion/forum-action-report.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-report.underscore
 msgid "Unreport"
 msgstr "신고취소"
 
@@ -28124,6 +30642,7 @@ msgid "username or email"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates.underscore
+#: test_root/staticfiles/support/templates/certificates.underscore
 msgid "course id"
 msgstr ""
 
@@ -28131,6 +30650,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 #: test_root/staticfiles/support/templates/certificates_results.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "No results"
 msgstr ""
@@ -28171,59 +30691,74 @@ msgid "Regenerate the user's certificate"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: test_root/staticfiles/support/templates/certificates_results.underscore
 msgid "Generate"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+#: test_root/staticfiles/support/templates/certificates_results.underscore
 msgid "Generate the user's certificate"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment-modal.underscore
+#: test_root/staticfiles/support/templates/enrollment-modal.underscore
 msgid "Current enrollment mode:"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment-modal.underscore
+#: test_root/staticfiles/support/templates/enrollment-modal.underscore
 msgid "New enrollment mode:"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment-modal.underscore
+#: test_root/staticfiles/support/templates/enrollment-modal.underscore
 msgid "Reason for change:"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment-modal.underscore
+#: test_root/staticfiles/support/templates/enrollment-modal.underscore
 msgid "Choose One"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment-modal.underscore
+#: test_root/staticfiles/support/templates/enrollment-modal.underscore
 msgid "Explain if other."
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment-modal.underscore
+#: test_root/staticfiles/support/templates/enrollment-modal.underscore
 msgid "Submit enrollment change"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
+#: test_root/staticfiles/support/templates/enrollment.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Username or email address"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
+#: test_root/staticfiles/support/templates/enrollment.underscore
 msgid "Course Start"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
+#: test_root/staticfiles/support/templates/enrollment.underscore
 msgid "Enrollment Mode"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
+#: test_root/staticfiles/support/templates/enrollment.underscore
 msgid "Verified mode price"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
+#: test_root/staticfiles/support/templates/enrollment.underscore
 msgid "Last modified by"
 msgstr ""
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
+#: test_root/staticfiles/support/templates/enrollment.underscore
 msgid "Change Enrollment"
 msgstr ""
 
@@ -28356,18 +30891,22 @@ msgid "Leave Team"
 msgstr ""
 
 #: lms/templates/bookmarks/bookmarks-list.underscore
+#: test_root/staticfiles/templates/bookmarks/bookmarks-list.underscore
 msgid "My Bookmarks"
 msgstr ""
 
 #: lms/templates/bookmarks/bookmarks-list.underscore
+#: test_root/staticfiles/templates/bookmarks/bookmarks-list.underscore
 msgid "Bookmarked on"
 msgstr ""
 
 #: lms/templates/bookmarks/bookmarks-list.underscore
+#: test_root/staticfiles/templates/bookmarks/bookmarks-list.underscore
 msgid "You have not bookmarked any courseware pages yet."
 msgstr ""
 
 #: lms/templates/bookmarks/bookmarks-list.underscore
+#: test_root/staticfiles/templates/bookmarks/bookmarks-list.underscore
 msgid ""
 "Use bookmarks to help you easily return to courseware pages. To bookmark a "
 "page, select Bookmark in the upper right corner of that page. To see a list "
@@ -28389,13 +30928,6 @@ msgstr "모두 접기"
 #: test_root/staticfiles/templates/ccx/schedule.underscore
 msgid "remove all"
 msgstr "모두 제거"
-
-#: lms/templates/ccx/schedule.underscore
-#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
-#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
-#: test_root/staticfiles/templates/ccx/schedule.underscore
-msgid "gettext("
-msgstr "gettext("
 
 #: lms/templates/ccx/schedule.underscore
 #: test_root/staticfiles/templates/ccx/schedule.underscore
@@ -28536,6 +31068,7 @@ msgid "timed"
 msgstr ""
 
 #: lms/templates/courseware/proctored-exam-status.underscore
+#: test_root/staticfiles/templates/courseware/proctored-exam-status.underscore
 msgid ""
 "To receive credit on a problem, you must click \"Check\" or \"Final Check\" "
 "on it before you select \"End My Exam\"."
@@ -28604,6 +31137,7 @@ msgid "title"
 msgstr "제목"
 
 #: lms/templates/financial-assistance/financial_assessment_form.underscore
+#: test_root/staticfiles/templates/financial-assistance/financial_assessment_form.underscore
 msgid "Unable to submit application"
 msgstr ""
 
@@ -28679,34 +31213,41 @@ msgid "Add to Exception List"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid ""
 "To invalidate a certificate for a particular learner, add the username or "
 "email address below."
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Add notes about this learner"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Invalidate Certificate"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Invalidated By"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Invalidated"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Action"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Remove from Invalidation Table"
 msgstr ""
 
@@ -28728,18 +31269,9 @@ msgid "Generate Exception Certificates"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "Generate a Certificate for all "
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "New"
-msgstr "새로운"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "additions to the Exception list"
+msgid ""
+"Generate certificates for all users on the Exception list who do not yet "
+"have a certificate"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
@@ -28925,12 +31457,14 @@ msgid "Not selected"
 msgstr "선택되지 않았습니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid ""
 "{screen_reader_start}Warning:{screen_reader_end} The previously selected "
 "content group was deleted. Select another content group."
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid ""
 "{screen_reader_start}Warning:{screen_reader_end} No content groups exist."
 msgstr ""
@@ -28947,6 +31481,7 @@ msgid_plural "(contains %(student_count)s students)"
 msgstr[0] "(%(student_count)s명) "
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid ""
 "Learners are added to this cohort only when you provide their email "
 "addresses or usernames on this page."
@@ -28958,6 +31493,7 @@ msgid "What does this mean?"
 msgstr "자세히 살펴보기"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid "Learners are added to this cohort automatically."
 msgstr ""
 
@@ -28997,6 +31533,7 @@ msgid "Assign students to cohorts by uploading a CSV file"
 msgstr "CSV 파일을 업로드하여 학습 집단에 학습자를 추가하세요."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohorts.underscore
 msgid ""
 "To review student cohort assignments or see the results of uploading a CSV "
 "file, download course profile information or cohort results on {link_start} "
@@ -29007,6 +31544,39 @@ msgstr ""
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 msgid "Valid"
 msgstr "유효함"
+
+#: lms/templates/learner_dashboard/certificate.underscore
+msgid "certificate.credential_url"
+msgstr ""
+
+#: lms/templates/learner_dashboard/certificate.underscore
+msgid "certificate.display_name"
+msgstr ""
+
+#: lms/templates/learner_dashboard/empty_programs_list.underscore
+msgid "You are not enrolled in any XSeries Programs yet."
+msgstr ""
+
+#: lms/templates/learner_dashboard/empty_programs_list.underscore
+msgid "Explore XSeries Programs"
+msgstr ""
+
+#: lms/templates/learner_dashboard/explore_new_programs.underscore
+#: test_root/staticfiles/templates/learner_dashboard/explore_new_programs.underscore
+msgid ""
+"Browse recently launched courses and see what\\'s new in your favorite "
+"subjects"
+msgstr ""
+
+#: lms/templates/learner_dashboard/explore_new_programs.underscore
+#: test_root/staticfiles/templates/learner_dashboard/explore_new_programs.underscore
+msgid "Explore New XSeries"
+msgstr ""
+
+#: lms/templates/learner_dashboard/program_card.underscore
+#: test_root/staticfiles/templates/learner_dashboard/program_card.underscore
+msgid "org.display_name"
+msgstr ""
 
 #: lms/templates/search/course_search_results.underscore
 #: lms/templates/search/dashboard_search_results.underscore
@@ -29070,8 +31640,8 @@ msgid "section.title"
 msgstr "section.title"
 
 #: lms/templates/student_account/account_settings.underscore
-#: lms/templates/student_profile/learner_profile.underscore
 #: test_root/staticfiles/templates/student_account/account_settings.underscore
+#: lms/templates/student_profile/learner_profile.underscore
 #: test_root/staticfiles/templates/student_profile/learner_profile.underscore
 msgid "An error occurred. Please reload the page."
 msgstr "오류가 발생했습니다. 페이지를 다시 열어주세요."
@@ -29266,15 +31836,80 @@ msgstr "가입하기"
 msgid "Required field"
 msgstr "필수 항목"
 
+#: lms/templates/student_profile/badge.underscore
+#: test_root/staticfiles/templates/student_profile/badge.underscore
+msgid "Share your \"%(display_name)s\" award"
+msgstr ""
+
+#: lms/templates/student_profile/badge.underscore
+#: test_root/staticfiles/templates/student_profile/badge.underscore
+msgid "Share"
+msgstr ""
+
+#: lms/templates/student_profile/badge.underscore
+#: test_root/staticfiles/templates/student_profile/badge.underscore
+msgid "Earned %(created)s."
+msgstr ""
+
+#: lms/templates/student_profile/badge_placeholder.underscore
+#: test_root/staticfiles/templates/student_profile/badge_placeholder.underscore
+msgid "What's Your Next Accomplishment?"
+msgstr ""
+
+#: lms/templates/student_profile/badge_placeholder.underscore
+#: test_root/staticfiles/templates/student_profile/badge_placeholder.underscore
+msgid "Start working toward your next learning goal."
+msgstr ""
+
+#: lms/templates/student_profile/badge_placeholder.underscore
+#: test_root/staticfiles/templates/student_profile/badge_placeholder.underscore
+msgid "Find a course"
+msgstr ""
+
+#: lms/templates/student_profile/learner_profile.underscore
+#: test_root/staticfiles/templates/student_profile/learner_profile.underscore
+msgid "An error occurred. Try loading the page again."
+msgstr ""
+
+#: lms/templates/student_profile/section_two.underscore
+#: test_root/staticfiles/templates/student_profile/section_two.underscore
 #: lms/templates/student_profile/learner_profile.underscore
 #: test_root/staticfiles/templates/student_profile/learner_profile.underscore
 msgid "You are currently sharing a limited profile."
 msgstr "현재 아이디만 공개하고 있습니다."
 
-#: lms/templates/student_profile/learner_profile.underscore
-#: test_root/staticfiles/templates/student_profile/learner_profile.underscore
-msgid "This edX learner is currently sharing a limited profile."
-msgstr "학습자가 현재 제한적 프로필을 공유하고 있습니다."
+#: lms/templates/student_profile/section_two.underscore
+#: test_root/staticfiles/templates/student_profile/section_two.underscore
+msgid "This learner is currently sharing a limited profile."
+msgstr ""
+
+#: lms/templates/student_profile/share_modal.underscore
+#: test_root/staticfiles/templates/student_profile/share_modal.underscore
+msgid "Share on Mozilla Backpack"
+msgstr ""
+
+#: lms/templates/student_profile/share_modal.underscore
+#: test_root/staticfiles/templates/student_profile/share_modal.underscore
+msgid ""
+"To share your certificate on Mozilla Backpack, you must first have a "
+"Backpack account. Complete the following steps to add your certificate to "
+"Backpack."
+msgstr ""
+
+#: lms/templates/student_profile/share_modal.underscore
+#: test_root/staticfiles/templates/student_profile/share_modal.underscore
+msgid ""
+"Create a %(link_start)sMozilla Backpack%(link_end)s account, or log in to "
+"your existing account"
+msgstr ""
+
+#: lms/templates/student_profile/share_modal.underscore
+#: test_root/staticfiles/templates/student_profile/share_modal.underscore
+msgid ""
+"%(download_link_start)sDownload this image (right-click or option-click, "
+"save as)%(link_end)s and then %(upload_link_start)supload%(link_end)s it to "
+"your backpack.</li>"
+msgstr ""
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 #: test_root/staticfiles/templates/verify_student/enrollment_confirmation_step.underscore
@@ -29369,9 +32004,9 @@ msgstr "자신의 사진 촬영하기"
 #: lms/templates/verify_student/face_photo_step.underscore
 #: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 msgid ""
-"When your face is in position, use the camera button %(icon)s below to take "
+"When your face is in position, use the camera button {icon} below to take "
 "your photo."
-msgstr "적절한 위치에 얼굴이 나오도록 하고, 아래의 %(icon)s 카메라 버튼을 눌러 사진을 찍으세요."
+msgstr ""
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
@@ -29396,11 +32031,9 @@ msgstr "신분증의 사진과 얼굴사진이 일치해야합니다."
 #: lms/templates/verify_student/face_photo_step.underscore
 #: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
 msgid ""
-"To use the current photo, select the camera button %(icon)s. To take another"
-" photo, select the retake button %(icon)s."
+"To use the current photo, select the camera button {icon}. To take another "
+"photo, select the retake button {icon}."
 msgstr ""
-"현재 사진을 사용하기 위해 %(icon)s 카메라 버튼을 선택하세요. 다른 사진을 찍기 위해,  %(icon)s 재촬영 버튼을 "
-"선택하세요."
 
 #: lms/templates/verify_student/face_photo_step.underscore
 #: lms/templates/verify_student/id_photo_step.underscore
@@ -29505,8 +32138,8 @@ msgstr "아이디가 잘 조명이 되도록 하십시요."
 
 #: lms/templates/verify_student/id_photo_step.underscore
 #: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
-msgid "Once in position, use the camera button %(icon)s to capture your ID"
-msgstr "신분증을 적절한 위치에 고정하고 %(icon)s 카메라 버튼을 눌러 신분증을 캡춰 하세요. , "
+msgid "Once in position, use the camera button {icon} to capture your ID"
+msgstr ""
 
 #: lms/templates/verify_student/id_photo_step.underscore
 #: lms/templates/verify_student/incourse_reverify.underscore
@@ -29544,8 +32177,8 @@ msgstr "얼굴 전체가 프레임안에 들어오도록 하세요."
 
 #: lms/templates/verify_student/incourse_reverify.underscore
 #: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
-msgid "Once in position, use the camera button %(icon)s to capture your photo"
-msgstr "신분증을 적절한 위치에 고정하고 %(icon)s 카메라 버튼을 눌러 사진을 캡춰 하세요. , "
+msgid "Once in position, use the camera button {icon} to capture your photo"
+msgstr ""
 
 #: lms/templates/verify_student/incourse_reverify.underscore
 #: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
@@ -29554,8 +32187,8 @@ msgstr "당신의 사진이 아이디에 있는 사진과 동일인물 입니까
 
 #: lms/templates/verify_student/intro_step.underscore
 #: test_root/staticfiles/templates/verify_student/intro_step.underscore
-msgid "Thanks for returning to verify your ID in: %(courseName)s"
-msgstr "본인 확인을 위해 %(courseName)s로 돌아와서 감사합니다."
+msgid "Thanks for returning to verify your ID in: {courseName}"
+msgstr ""
 
 #: lms/templates/verify_student/intro_step.underscore
 #: lms/templates/verify_student/make_payment_step.underscore
@@ -29602,14 +32235,16 @@ msgid ""
 msgstr "주민등록증, 운전면허증, 여권 등 이름과 사진이 있는 정부 발급 신분증"
 
 #: lms/templates/verify_student/make_payment_step.underscore
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 #: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
-msgid "You are enrolling in: %(courseName)s"
-msgstr "%(courseName)s 수강 신청합니다."
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "You are enrolling in: {courseName}"
+msgstr ""
 
 #: lms/templates/verify_student/make_payment_step.underscore
 #: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
-msgid "You are upgrading your enrollment for: %(courseName)s"
-msgstr "%(courseName)s로 등록을 업그레이드합니다."
+msgid "You are upgrading your enrollment for: {courseName}"
+msgstr ""
 
 #: lms/templates/verify_student/make_payment_step.underscore
 #: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
@@ -29654,8 +32289,8 @@ msgstr "모든 전문 과정 강좌는 유료이며, 수강신청 처리를 완�
 
 #: lms/templates/verify_student/make_payment_step.underscore
 #: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
-msgid "Your verification status is good until %(verificationGoodUntil)s."
-msgstr "%(verificationGoodUntil)s.까지 인증에 성공했습니다. "
+msgid "Your verification status is good until {verificationGoodUntil}."
+msgstr ""
 
 #: lms/templates/verify_student/make_payment_step.underscore
 #: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
@@ -29669,12 +32304,7 @@ msgstr ""
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 #: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
-msgid "You are enrolling in %(courseName)s"
-msgstr ""
-
-#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
-#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
-msgid "Upgrade to a Verified Certificate for %(courseName)s"
+msgid "Upgrade to a Verified Certificate for {courseName}"
 msgstr ""
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
@@ -29690,12 +32320,12 @@ msgstr ""
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 #: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
-msgid "Professional Certificate for %(courseName)s"
+msgid "Professional Certificate for {courseName}"
 msgstr ""
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 #: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
-msgid "Verified Certificate for %(courseName)s"
+msgid "Verified Certificate for {courseName}"
 msgstr ""
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
@@ -29731,8 +32361,8 @@ msgstr ""
 
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 #: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
-msgid "Thank you! We have received your payment for %(courseName)s."
-msgstr "감사합니다! %(courseName)s 수강료 납입이 완료되었습니다. "
+msgid "Thank you! We have received your payment for {courseName}."
+msgstr ""
 
 #: lms/templates/verify_student/payment_confirmation_step.underscore
 #: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
@@ -29868,6 +32498,256 @@ msgstr "사진 재촬영"
 #: test_root/staticfiles/templates/verify_student/webcam_photo.underscore
 msgid "Take Photo"
 msgstr "사진 촬영"
+
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+msgid "Add a New Allowance"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+msgid "Special Exam"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+msgid "Exam Type"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
+msgid "Allowance Type"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+msgid "Additional Time (minutes)"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+msgid "minutes"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
+msgid "Username or Email"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
+msgid "Allowances"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
+msgid "Add Allowance"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
+#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Exam Name"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
+msgid "Allowance Value"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Time Limit"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Started At"
+msgstr ""
+
+#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
+msgid "Completed At"
+msgstr ""
+
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid ""
+"Generate certificates for all users on the Exception list for whom "
+"certificates have not yet been run"
+msgstr ""
+
+msgid "I want to learn about..."
+msgstr "원하시는 강의를 검색해보세요"
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "Invalid Json data, Please refresh the page and then try again."
+msgstr ""
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "Invalid data, user_id must be present for all certificate exceptions."
+msgstr ""
+
+#: cms/lib/xblock/tagging.py
+msgid "Difficulty"
+msgstr ""
+
+#: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
+msgid "Looks like you haven't enrolled in any courses yet."
+msgstr "아직 수강하는 강좌가 없군요."
+
+#: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
+msgid "Find courses now!"
+msgstr "강좌를 살펴보세요!"
+
+#: lms/templates/help_modal.html
+msgid ""
+"For <strong>questions on course lectures, homework, tools, or materials for "
+"this course</strong>, post in the {link_start}course discussion "
+"forum{link_end}."
+msgstr ""
+"<strong>이 강좌에서 강의, 과제, 도구 및 자료들에 대한 질문</strong>들은 {link_start}강좌 토론 포럼 "
+"{link_end}에 게시해 주세요."
+
+#: lms/templates/help_modal.html
+msgid ""
+"Have <strong>general questions about {platform_name}</strong>? You can find "
+"lots of helpful information in the {platform_name} "
+"{link_start}FAQ{link_end}."
+msgstr ""
+"<strong>{platform_name}에 대한 일반적인 질문</strong>이 있으십니까?  {platform_name} "
+"{link_start}자주하는질문{link_end}에서 많은 유익한 정보를 찾을 수 있습니다."
+
+#: lms/templates/help_modal.html
+msgid ""
+"Have a <strong>question about something specific</strong>? You can contact "
+"the {platform_name} general support team directly:"
+msgstr "<strong>구체적인 질문</strong>이 있으십니까? {platform_name} 지원팀에 연락하세요."
+
+#: lms/templates/help_modal.html
+msgid "Details of the problem you are encountering"
+msgstr "당신이 겪는 문제의 내역"
+
+#: lms/templates/help_modal.html
+msgid "Include error messages, steps which lead to the issue, etc."
+msgstr "오류메세지, 이슈에  가는 단계 등을 포함하세요"
+
+#: lms/templates/video.html
+msgid "Skip to a navigable version of this video's transcript."
+msgstr "동영상 자막의 조작이 가능한 버전으로 이동"
+
+#: lms/templates/video.html
+msgid "Skip to end of transcript."
+msgstr "자막끝으로 이동"
+
+#: lms/templates/video.html
+msgid "Go back to start of transcript."
+msgstr "자막 처음으로 돌아 가세요."
+
+#: lms/templates/courseware/progress.html
+msgid "Completed"
+msgstr "완료됨"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid ""
+"It's official. It's easily shareable. It's a proven motivator to complete "
+"the course. <br>{link_start}Learn more about the verified "
+"{cert_name_long}{link_end}."
+msgstr ""
+
+#: lms/templates/verify_student/pay_and_verify.html
+msgid ""
+"Please make sure your browser is updated to the {a_start}most recent version"
+" possible{a_end}. Also, please make sure your <strong>webcam is plugged in, "
+"turned on, and allowed to function in your web browser (commonly adjustable "
+"in your browser settings).</strong>"
+msgstr ""
+"브라우저가 {a_start}가장 최신 버전{a_end}으로 업데이트 되었는지 확인하세요. 또한, <strong>웹캠이 연결되었으며 "
+"켜져있는지, 그리고 웹 브라우저에서 작동할 수 있도록 설정되어있는지(보통 브라우저의 설정에서 확인 가능) </strong>도 확인 "
+"부탁드립니다. "
+
+#: common/static/common/templates/components/paging-footer.underscore
+#: test_root/staticfiles/common/templates/components/paging-footer.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/components/paging-footer.underscore
+msgid "Page number"
+msgstr "페이지 숫자"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Generate a Certificate for all "
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "New"
+msgstr "새로운"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+#: test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "additions to the Exception list"
+msgstr ""
+
+#: lms/templates/student_profile/learner_profile.underscore
+#: test_root/staticfiles/templates/student_profile/learner_profile.underscore
+msgid "This edX learner is currently sharing a limited profile."
+msgstr "학습자가 현재 제한적 프로필을 공유하고 있습니다."
+
+#: lms/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
+msgid ""
+"When your face is in position, use the camera button %(icon)s below to take "
+"your photo."
+msgstr "적절한 위치에 얼굴이 나오도록 하고, 아래의 %(icon)s 카메라 버튼을 눌러 사진을 찍으세요."
+
+#: lms/templates/verify_student/face_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/face_photo_step.underscore
+msgid ""
+"To use the current photo, select the camera button %(icon)s. To take another"
+" photo, select the retake button %(icon)s."
+msgstr ""
+"현재 사진을 사용하기 위해 %(icon)s 카메라 버튼을 선택하세요. 다른 사진을 찍기 위해,  %(icon)s 재촬영 버튼을 "
+"선택하세요."
+
+#: lms/templates/verify_student/id_photo_step.underscore
+#: test_root/staticfiles/templates/verify_student/id_photo_step.underscore
+msgid "Once in position, use the camera button %(icon)s to capture your ID"
+msgstr "신분증을 적절한 위치에 고정하고 %(icon)s 카메라 버튼을 눌러 신분증을 캡춰 하세요. , "
+
+#: lms/templates/verify_student/incourse_reverify.underscore
+#: test_root/staticfiles/templates/verify_student/incourse_reverify.underscore
+msgid "Once in position, use the camera button %(icon)s to capture your photo"
+msgstr "신분증을 적절한 위치에 고정하고 %(icon)s 카메라 버튼을 눌러 사진을 캡춰 하세요. , "
+
+#: lms/templates/verify_student/intro_step.underscore
+#: test_root/staticfiles/templates/verify_student/intro_step.underscore
+msgid "Thanks for returning to verify your ID in: %(courseName)s"
+msgstr "본인 확인을 위해 %(courseName)s로 돌아와서 감사합니다."
+
+#: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
+msgid "You are enrolling in: %(courseName)s"
+msgstr "%(courseName)s 수강 신청합니다."
+
+#: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
+msgid "You are upgrading your enrollment for: %(courseName)s"
+msgstr "%(courseName)s로 등록을 업그레이드합니다."
+
+#: lms/templates/verify_student/make_payment_step.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step.underscore
+msgid "Your verification status is good until %(verificationGoodUntil)s."
+msgstr "%(verificationGoodUntil)s.까지 인증에 성공했습니다. "
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "You are enrolling in %(courseName)s"
+msgstr ""
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "Upgrade to a Verified Certificate for %(courseName)s"
+msgstr ""
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "Professional Certificate for %(courseName)s"
+msgstr ""
+
+#: lms/templates/verify_student/make_payment_step_ab_testing.underscore
+#: test_root/staticfiles/templates/verify_student/make_payment_step_ab_testing.underscore
+msgid "Verified Certificate for %(courseName)s"
+msgstr ""
+
+#: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/templates/verify_student/payment_confirmation_step.underscore
+msgid "Thank you! We have received your payment for %(courseName)s."
+msgstr "감사합니다! %(courseName)s 수강료 납입이 완료되었습니다. "
 
 #. Translators: these are tooltips that indicate the state of an assessment
 #. question
@@ -30751,52 +33631,6 @@ msgstr ""
 "학습 집단의 과제를 검토하거나 CSV 파일 업로드의 결과를 보려면,  학습자 정보나 %(link_start)s 데이터 페이지  "
 "%(link_end)s 에 있는 학습 집단 결과를 다운로드하세요.  "
 
-#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
-msgid "Add a New Allowance"
-msgstr ""
-
-#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
-msgid "Special Exam"
-msgstr ""
-
-#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
-#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
-msgid "Allowance Type"
-msgstr ""
-
-#: test_root/staticfiles/proctoring/templates/add-new-allowance.underscore
-msgid "Username or Email"
-msgstr ""
-
-#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
-msgid "Allowances"
-msgstr ""
-
-#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
-msgid "Add Allowance"
-msgstr ""
-
-#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
-#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
-msgid "Exam Name"
-msgstr ""
-
-#: test_root/staticfiles/proctoring/templates/course_allowances.underscore
-msgid "Allowance Value"
-msgstr ""
-
-#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
-msgid "Time Limit"
-msgstr ""
-
-#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
-msgid "Started At"
-msgstr ""
-
-#: test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore
-msgid "Completed At"
-msgstr ""
-
 #: test_root/staticfiles/templates/financial-assistance/financial_assessment_form.underscore
 #: lms/templates/financial-assistance/financial_assessment_form.underscore
 msgid "Application not submitted"
@@ -30866,10 +33700,6 @@ msgstr "{action}에 대한 원격 성적기록부 응답"
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "{title} in course {course_key}"
 msgstr "{title} 강좌 {course_key}"
-
-#: lms/djangoapps/instructor/views/legacy.py
-msgid "ID"
-msgstr "아이디"
 
 #: lms/djangoapps/instructor/views/legacy.py
 msgid "edX email"
@@ -31882,10 +34712,6 @@ msgid "{platform_name}-wide Summary"
 msgstr "{platform_name} 전반 요약"
 
 #: lms/templates/folditbasic.html
-msgid "Due:"
-msgstr "마감:"
-
-#: lms/templates/folditbasic.html
 msgid "You have successfully gotten to level {goal_level}."
 msgstr "성공적으로 {goal_level} 수준에 도달하였습니다."
 
@@ -32448,12 +35274,6 @@ msgstr ""
 #: wiki/views/article.py
 msgid "The article %s is now set to display revision #%d"
 msgstr "글 %s는  수정본 #%d 이라고 표시됩니다."
-
-#. Translators: 'Other' refers to the student's gender
-#. Translators: 'Other' refers to the student's level of education
-#: common/djangoapps/student/models.py
-msgid "Other"
-msgstr "기타"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Challenge Yourself!"

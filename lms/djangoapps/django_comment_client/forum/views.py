@@ -229,6 +229,9 @@ def inline_discussion(request, course_key, discussion_id):
 @login_required
 @use_bulk_ops
 def forum_form_discussion(request, course_key):
+    print '>>>>>>>>>>>>>>>>>> forum_form_discussion called'
+
+
     """
     Renders the main Discussion page, potentially filtered by a search query
     """
