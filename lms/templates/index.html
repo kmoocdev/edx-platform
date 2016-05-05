@@ -175,8 +175,11 @@ if (
     }
 
     $(document).ready(function(){
-        //get notice list ajax
-        noticeList();
+        % if LANG and LANG == 'en':
+            console.log("LANG IS EN");
+        % else:
+            noticeList();
+        % endif
 
         $("#en_text").css("padding", "5px");
 
@@ -345,7 +348,11 @@ if (
                                     //console.log($("#notice .notice_title:eq("+index+")").height() + ": ldiv mouseleave2");
                                     clearInterval(interval);
                                     clearTimeout(timeout);
-                                    $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+                                    //$("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+                                    $("#notice .notice_title:eq("+index+")").fadeOut(200, function(){
+                                        $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+                                        $(this).fadeIn(300);
+                                    });
                                 });
                             });
 
