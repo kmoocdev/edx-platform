@@ -172,8 +172,9 @@ popupDate = new Date();
 
 if (
         (cookiedata.indexOf("popupdiv1=done") < 0 )
-        && (popupDate.getFullYear() == 2016)
-##         && (popupDate.getMonth() < 3)
+         && (popupDate.getFullYear() == 2016)
+         && (popupDate.getMonth() < 6)
+         && !(popupDate.getDate() >= 13 && popupDate.getHours() >= 11)
    )
     {
 
@@ -386,7 +387,7 @@ if (
                                 });
                             });
 
-                            $("#notice .inner").hide().slideDown(1500,"easeInExpo");
+                            $("#notice .inner").hide().slideDown(1000,"easeInExpo");
 
                             $("#notice .ldiv").each(function(index){
 
@@ -404,7 +405,7 @@ if (
                         }
 
                         showMore();
-                    },1200);
+                    },300);
         }, "json");
     }
 
