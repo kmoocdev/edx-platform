@@ -40,8 +40,6 @@ from microsite_configuration import microsite
         </form>
 </div>
 
-
-
 <script language="Javascript">
 cookiedata = document.cookie;
 
@@ -74,54 +72,78 @@ function popClose(id){
 }
 </script>
 
-<!--popup K-mooc(1)-->
-<div id="popupWrap_1" class="popup-wrap popup-kmooc2" style="position: absolute; left: 25px; top: 100px;
-    z-index: 10010; display: none; border: 5px solid #EB9D43; opacity: 1; background: #ffffff; font-size: 13px;
-    line-height: 25px; padding: 5px; box-shadow: 0 2px 5px 3px #444444;">
-    <!-- content area -->
 
-    <p id="en_text" style="text-align: left;font-size: 16px; font-weight: 600; font-family: 'daumR', 'Nanum Gothic', 'Open Sans'; display: ${'block' if LANG == 'en' else 'none'};">
-        Experience the new way of learning, through <b>K-MOOC</b>. <br/>
-        <br/>
-        Welcome to K-MOOC website.<br/>
-        Currently, English service is provided in the main page only.<br/>
-        The official English website for K-MOOC will be in service later this year.<br/>
-        <br/>
-        Thank you for your understanding.<br/>
-        <br/>
-        K-MOOC Team<br/>
-    </p>
 
-    <p style="text-align: left; font-weight: bold; margin-top: 5px; display: ${'none' if LANG == 'en' else 'block'};">
-##         <a target="_blank" href="http://blog.naver.com/kmooc_kr/220677950573">
-##             <img src="/static/images/kocw_banner.jpg" alt="KOCW">
-##         </a>
+<div id="layerPopupArea" class="layerPopupArea" style="">
+    
+    <!--popup K-mooc(1)-->
+    <div id="popupWrap_1" class="layerPupup">
+        <!-- content area -->
 
-        안녕하십니까. K-MOOC팀입니다.<br/>
-        <br/>
-        K-MOOC 시스템 점검 작업 등으로 인하여 다음과 같이 서비스가 일시 중단될 예정입니다.<br/>
-        <br/>
-        ○ 작업일시 : 2016년 5월 13일(금) 10:00 ~ 11:00<br/>
-        ○ 작업내용 : 서버 보안 강화 작업 등<br/>
-        ○ 작업영향 : 작업시간 중 K-MOOC 접속이 원활하지 않을 수 있음<br/>
-        <br/>
-        상기 사정으로 인해 서비스 이용에 불편을 드린 점, 양해를 부탁드리며<br/>
-        보다 질 높은 서비스 제공을 위해 항상 노력하겠습니다.<br/>
-        <br/>
-        감사합니다.
+        <p id="en_text" style="text-align: left;font-size: 16px; font-weight: 600; font-family: 'daumR', 'Nanum Gothic', 'Open Sans'; display: ${'block' if LANG == 'en' else 'none'};">
+            Experience the new way of learning, through <b>K-MOOC</b>. <br/>
+            <br/>
+            Welcome to K-MOOC website.<br/>
+            Currently, English service is provided in the main page only.<br/>
+            The official English website for K-MOOC will be in service later this year.<br/>
+            <br/>
+            Thank you for your understanding.<br/>
+            <br/>
+            K-MOOC Team<br/>
+        </p>
 
-    </p>
+        <p style="text-align: left; font-weight: bold; margin-top: 5px; display: ${'none' if LANG == 'en' else 'block'};">
+    ##         <a target="_blank" href="http://blog.naver.com/kmooc_kr/220677950573">
+    ##             <img src="/static/images/kocw_banner.jpg" alt="KOCW">
+    ##         </a>
 
-    <!-- close area -->
-    <div style="text-align: right; display: ${'"none"' if LANG == 'en' else '"block"'};">
-        <label onclick="closeWin1();">
-            <input id="chkbox_1" name="chkbox_1" type="checkbox" style="vertical-align: middle;">
-            <span style="font-style:normal; font-size:13px;"><b>${'Close this window for next 24 hours' if LANG == 'en' else '오늘 하루 열지 않음'} &nbsp;&nbsp;</b></span>
-        </label>
+            안녕하십니까. K-MOOC팀입니다.<br/>
+            <br/>
+            K-MOOC 시스템 점검 작업 등으로 인하여 다음과 같이 서비스가 일시 중단될 예정입니다.<br/>
+            <br/>
+            ○ 작업일시 : 2016년 5월 13일(금) 10:00 ~ 11:00<br/>
+            ○ 작업내용 : 서버 보안 강화 작업 등<br/>
+            ○ 작업영향 : 작업시간 중 K-MOOC 접속이 원활하지 않을 수 있음<br/>
+            <br/>
+            상기 사정으로 인해 서비스 이용에 불편을 드린 점, 양해를 부탁드리며<br/>
+            보다 질 높은 서비스 제공을 위해 항상 노력하겠습니다.<br/>
+            <br/>
+            감사합니다.
 
-        <span><a href="javascript:popClose('popupWrap_1');" title="닫기">[ ${'close' if LANG == 'en' else '닫기'} ]</a></span>
+        </p>
+
+        <!-- close area -->
+        <div style="text-align: right; display: ${'"none"' if LANG == 'en' else '"block"'};">
+            <label onclick="closeWin1();">
+                <input id="chkbox_1" name="chkbox_1" type="checkbox" style="vertical-align: middle;">
+                <span style="font-style:normal; font-size:13px;"><b>${'Close this window for next 24 hours' if LANG == 'en' else '오늘 하루 열지 않음'} &nbsp;&nbsp;</b></span>
+            </label>
+
+            <span><a href="javascript:popClose('popupWrap_1');" title="닫기">[ ${'close' if LANG == 'en' else '닫기'} ]</a></span>
+        </div>
     </div>
-</div>
+
+    <!--popup K-mooc(2)-->
+    <div id="popupWrap_2" class="layerPupup">
+        <p style="text-align: left; font-weight: bold; margin-top: 5px; display: ${'none' if LANG == 'en' else 'block'};">
+             <a target="_blank" href="http://blog.naver.com/kmooc_kr/220700807418">
+                 <img src="/static/images/kmooc_banner_0504.jpg" alt="KOCW">
+             </a>
+
+        </p>
+
+        <div style="text-align: right; display: ${'"none"' if LANG == 'en' else '"block"'};">
+            <label onclick="closeWin2();">
+                <input id="chkbox_2" name="chkbox_2" type="checkbox" style="vertical-align: middle;">
+                <span style="font-style:normal; font-size:13px;"><b>${'Close this window for next 24 hours' if LANG == 'en' else '오늘 하루 열지 않음'} &nbsp;&nbsp;</b></span>
+            </label>
+
+            <span><a href="javascript:popClose('popupWrap_2');" title="닫기">[ ${'close' if LANG == 'en' else '닫기'} ]</a></span>
+        </div>
+    </div>
+    
+</div>    
+
 
 <script language="Javascript">
 function setCookie1( name, value, expiredays ) {
@@ -132,16 +154,24 @@ function setCookie1( name, value, expiredays ) {
 
 function closeWin1() {
     if ($("#chkbox_1").is(":checked")){
-        setCookie1( "popupdiv2", "done" , 1 );
+        setCookie1( "popupdiv1", "done" , 1 );
     }
     document.all['popupWrap_1'].style.display = "none";
+}
+
+function closeWin2() {
+    if ($("#chkbox_2").is(":checked")){
+        setCookie1( "popupdiv2", "done" , 1 );
+    }
+    document.all['popupWrap_2'].style.display = "none";
 }
 
 cookiedata = document.cookie;
 
 popupDate = new Date();
+
 if (
-        (cookiedata.indexOf("popupdiv2=done") < 0 )
+        (cookiedata.indexOf("popupdiv1=done") < 0 )
         && (popupDate.getFullYear() == 2016)
 ##         && (popupDate.getMonth() < 3)
    )
@@ -162,6 +192,25 @@ if (
 } else {
     document.all['popupWrap_1'].style.display = "none";
 }
+
+
+if (
+        (cookiedata.indexOf("popupdiv2=done") < 0 )
+        && (popupDate.getFullYear() == 2016)
+##         && (popupDate.getMonth() < 3)
+   )
+    {
+
+    %if LANG == 'en':
+        console.log("LANG == 'en'");
+    %else:
+        document.all['popupWrap_2'].style.display = "block";
+    %endif
+
+} else {
+    document.all['popupWrap_2'].style.display = "none";
+}
+
 </script>
 
 <script>
@@ -169,14 +218,16 @@ if (
         var a = document.location.href;
         var b = a.split('/');
         var c = b[b.length-1];
-##         console.log('c: ' + c);
         if(c == 'en' || c == 'ko')
             document.location.href = '/';
     }
 
     $(document).ready(function(){
-        //get notice list ajax
-        noticeList();
+        % if LANG and LANG == 'en':
+            console.log("LANG IS EN");
+        % else:
+            noticeList();
+        % endif
 
         $("#en_text").css("padding", "5px");
 
@@ -185,26 +236,19 @@ if (
         //layer popup..
         showNotice();
 
-    	$("body").prepend("<div id='mask' style='position: absolute; left: 0; top: 0; z-index: 10000; display: none; opacity: 0.4; background:#363636;'></div>");
+    	$("body").prepend("<div id='mask'></div>");
 
         var videoHtml = "";
-##         videoHtml += "  <video id='indexVideo' width='640' height='360' poster='' controls style='position: absolute; z-index:10001;top: 200px; display:none; left: calc(50% - 320px);'>";
-##         videoHtml += "      <source src='http://vod.kmoocs.kr/vod/2015/09/30/6098c795-39a8-5ec5-9683-49f12ba48dfd.mp4' type='video/mp4' />";
-##         videoHtml += "  </video>";
-
-            videoHtml += " <iframe id='indexVideo' width='640' height='360' src='https://www.youtube.com/embed/7BQ6TBWj_RY' frameborder='0' style='position: absolute; z-index:10001;top: 200px; display:none; left: calc(50% - 320px);' allowfullscreen></iframe>"
+            videoHtml += " <iframe id='indexVideo' width='640' height='360' src='https://www.youtube.com/embed/7BQ6TBWj_RY' frameborder='0' allowfullscreen></iframe>"
 
         $("body").prepend(videoHtml);
 
         $("#mask").click(function(){
             $("#indexVideo").hide();
-## 	    console.log("src..");
 	    var src = $("#indexVideo").attr("src");
             $("#indexVideo").attr("src","");
             $("#indexVideo").attr("src",src);
             $("#mask").fadeOut(200);
-##             var video = document.getElementById("indexVideo");
-##             video.pause();
         });
 
         videoResize();
@@ -233,23 +277,12 @@ if (
 
             //notice string
             var str = "금일 AM08:00 ~ AM08:30중 업데이트가 진행예정입니다.<br/> 일시적으로 화면이 틀어지거나 로그인이 안될 수 있습니다. <br/> 양해 부탁 드립니다. 감사합니다.";
-            var noticeHtml = "<div id='noticeLayer' " +
-                    "style='position: absolute; " +
-                    "       left: 25px; " +
-                    "       top: 20px; " +
-                    "       z-index: 10010; " +
-                    "       display: block; " +
-                    "       border:2px solid #b2b2b2; " +
-                    "       opacity: 1; " +
-                    "       background:#f2f2f2;" +
-                    "       font-size: 30px;" +
-                    "       line-height: 55px;" +
-                    "       padding:50px;'>" +
-                    "       <b>"+str+"</b>" +
-                    "       <div style='width:100%; text-align:right;font-size:22px;'>" +
-                    "       <a href='javascript:noticeLayerHide();'>[ 닫기 ]</a>" +
-                    "       </div>" +
-                    "</div>" ;
+            var noticeHtml = "<div id='noticeLayer'>" +
+                             "       <b>"+str+"</b>" +
+                             "       <div style='width:100%; text-align:right;font-size:22px;'>" +
+                             "       <a href='javascript:noticeLayerHide();'>[ 닫기 ]</a>" +
+                             "       </div>" +
+                             "</div>" ;
             $("body").prepend(noticeHtml);
 
             $("#noticeLayer").dblclick(function(){
@@ -345,7 +378,11 @@ if (
                                     //console.log($("#notice .notice_title:eq("+index+")").height() + ": ldiv mouseleave2");
                                     clearInterval(interval);
                                     clearTimeout(timeout);
-                                    $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+                                    //$("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+                                    $("#notice .notice_title:eq("+index+")").fadeOut(200, function(){
+                                        $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+                                        $(this).fadeIn(300);
+                                    });
                                 });
                             });
 
