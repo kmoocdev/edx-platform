@@ -172,8 +172,9 @@ popupDate = new Date();
 
 if (
         (cookiedata.indexOf("popupdiv1=done") < 0 )
-        && (popupDate.getFullYear() == 2016)
-##         && (popupDate.getMonth() < 3)
+         && (popupDate.getFullYear() == 2016)
+         && (popupDate.getMonth() < 6)
+         && !(popupDate.getDate() >= 13 && popupDate.getHours() >= 11)
    )
     {
 
