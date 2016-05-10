@@ -259,6 +259,16 @@ def login_and_registration_form(request, initial_mode="login"):
     third_party_auth_json = None
     third_party_auth_json = json.dumps(_third_party_auth_context(request, redirect_to));
 
+    print '=========================================================='
+    if "" == redirect_to or redirect_to is None or "/dashboard" == redirect_to or 'redirectTo' in redirect_to:
+        print 'redirect_to1:', redirect_to
+        print 'equal'
+    else:
+        print 'not equal'
+        redirect_to = "/redirectTo" + redirect_to
+        print "redirect_to2:", redirect_to
+    print '=========================================================='
+
     context = {
         'login_redirect_url': redirect_to,  # This gets added to the query string of the "Sign In" button in the header
         'disable_courseware_js': True,
@@ -279,6 +289,12 @@ def login_and_registration_form(request, initial_mode="login"):
     }
 
     return render_to_response('student_account/login_and_register.html', context)
+
+def redirectTo(request, redirectTo):
+    print 'redirect for https..'
+    return redirect("/" + redirectTo)
+
+
 
 
 @require_http_methods(['POST'])

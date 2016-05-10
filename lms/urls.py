@@ -101,6 +101,7 @@ if settings.FEATURES["ENABLE_COMBINED_LOGIN_REGISTRATION"]:
     urlpatterns += (
         url(r'^login$', 'student_account.views.login_and_registration_form',
             {'initial_mode': 'login'}, name="signin_user"),
+        url(r'^redirectTo/(?P<redirectTo>.*?)$', 'student_account.views.redirectTo', name="redirectTo"),
         url(r'^register$', 'student_account.views.login_and_registration_form',
             {'initial_mode': 'register'}, name="register_user"),
         url(r'^registration_gubn$', 'student_account.views.registration_gubn', name="registration_gubn"),
