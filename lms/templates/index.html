@@ -344,7 +344,7 @@ if (
                                 html += "       </div>";
                                 html += "   </a>";
                                 html += "   <div class='more'>..</div>";
-                                html += "   <div class='rdiv'>"+data[i].sdate+" ~ "+data[i].edate+"</div>";
+                                html += "   <div class='rdiv'>"+data[i].sdate+"~"+data[i].edate+"</div>";
                                 html += "</li> ";
                                 $("#notice ul").append(html);
                             }
@@ -380,24 +380,17 @@ if (
                                     clearInterval(interval);
                                     clearTimeout(timeout);
                                     //$("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
-                                    $("#notice .notice_title:eq("+index+")").fadeOut(200, function(){
-                                        $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
-                                        $(this).fadeIn(300);
-                                    });
+
+                                    if($("#notice .notice_title:eq("+index+")").css("margin-left") != "0px"){
+                                        $("#notice .notice_title:eq("+index+")").fadeOut(200, function(){
+                                            $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+                                            $(this).fadeIn(300);
+                                        });
+                                    }
                                 });
                             });
 
                             $("#notice .inner").hide().slideDown(1000,"easeInExpo");
-
-                            $("#notice .ldiv").each(function(index){
-
-                                console.log(index + ":" + $("#notice .ldiv").size());
-
-                                $(this).resize(function(){
-                                    alert("ldev resize ! " + index);
-                                });
-                            });
-
 
                             $(window).resize(function(){
                                 showMore();
