@@ -293,6 +293,7 @@ def login_and_registration_form(request, initial_mode="login"):
 def redirectTo(request, redirectTo):
     '''redirect for https..'''
     return redirect("/" + redirectTo)
+    # return redirect("http://www.kmooc.kr/" + redirectTo)
     # return HttpResponse("<script>document.location.href = '/"+redirectTo+"'</script>")
 
 
