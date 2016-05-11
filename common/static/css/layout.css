@@ -256,7 +256,7 @@ header.global .nav-global li.deactive{display:none;}
 #notice a{text-decoration: none; color: rgb(85, 85, 85); width: 100%;}
 #notice .ldiv{float: left; font-size: 14px; font-weight: bold; height: 20px; width: calc(100% - 122px); overflow: hidden;word-break: break-all;}
 #notice .notice_title{margin-right: 5px;}
-#notice .rdiv{font-size: 10px; text-align: right; margin: 1px 10px 0 0px; width: 112px; float: right; background-color: #fff;}
+#notice .rdiv{font-size: 10px; text-align: right; margin: 1px 7px 0 3px; width: 112px; float: right; background-color: #fff;}
 #notice .more{width:8px; float:left; opacity: 0; position: absolute; display: none;}
 #notice .content{height: 100%; width: calc(100% - 100px); margin-left: 10px; display: table; padding-top: 1px;}
 #notice .innerContent{height: 100%; width: 100%; vertical-align: middle; display: table-cell; }
