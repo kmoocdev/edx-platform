@@ -291,10 +291,9 @@ def login_and_registration_form(request, initial_mode="login"):
     return render_to_response('student_account/login_and_register.html', context)
 
 def redirectTo(request, redirectTo):
-    print 'redirect for https..'
+    '''redirect for https..'''
     return redirect("/" + redirectTo)
-
-
+    # return HttpResponse("<script>document.location.href = '/"+redirectTo+"'</script>")
 
 
 @require_http_methods(['POST'])
