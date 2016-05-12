@@ -181,14 +181,10 @@ if (
     %if LANG == 'en':
         document.all['popupWrap_1'].style.display = "block";
     %else:
-        //document.all['popupWrap_1'].style.display = "block";
+        document.all['popupWrap_1'].style.display = "none";
     %endif
 
     //console.log(popupDate.getFullYear() + ":" + popupDate.getMonth() + ":" + popupDate.getDate());
-    if((popupDate.getFullYear() == 2016) &&
-        (popupDate.getMonth() < 3) && (popupDate.getDate() <= 16)){
-            $("#u16").show();
-    }
 
 } else {
     document.all['popupWrap_1'].style.display = "none";
@@ -203,9 +199,9 @@ if (
     {
 
     %if LANG == 'en':
-        console.log("LANG == 'en'");
+        document.all['popupWrap_2'].style.display = "none";
     %else:
-        //document.all['popupWrap_2'].style.display = "block";
+        document.all['popupWrap_2'].style.display = "none";
     %endif
 
 } else {
