@@ -8374,14 +8374,11 @@ msgstr "범위지정 문제에서는 복소수를 사용할 수 없습니다."
 #. message displays.
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
-<<<<<<< HEAD
 #. Translators: This is an error message for a math problem. If the instructor
 #. provided a
 #. boundary (end limit) for a variable that is a complex number (a + bi), this
 #. message displays.
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
-=======
->>>>>>> modify_design3
 #. Translators: This is an error message for a math problem. If the instructor
 #. provided a
 #. boundary (end limit) for a variable that is a complex number (a + bi), this
@@ -11817,8 +11814,6 @@ msgstr ""
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
 #. Please do not translate any of these trademarks and company names.
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
@@ -11839,7 +11834,6 @@ msgstr ""
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
 #. Please do not translate any of these trademarks and company names.
->>>>>>> modify_design3
 #: lms/djangoapps/branding/api.py
 msgid ""
 "© {org_name}.  All rights reserved except where noted.  EdX, Open edX and "

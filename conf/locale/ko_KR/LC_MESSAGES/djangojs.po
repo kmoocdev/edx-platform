@@ -899,7 +899,6 @@
 # Translators:
 # Translators:
 # Translators:
->>>>>>> modify_design3
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Chanseok <kcsgoodboy@gmail.com>, 2014
 # Hongseob Lee <shevious@gmail.com>, 2015-2016
@@ -3858,8 +3857,6 @@ msgstr "업로드 중"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -3876,7 +3873,6 @@ msgstr "업로드 중"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
->>>>>>> modify_design3
 #: cms/static/js/views/assets.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/asset-library.underscore
@@ -4019,8 +4015,6 @@ msgstr "파일 업로드"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -4037,7 +4031,6 @@ msgstr "파일 업로드"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
->>>>>>> modify_design3
 #: cms/static/js/views/modals/base_modal.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/certificate-editor.underscore
@@ -4172,8 +4165,6 @@ msgstr "저장"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -4190,7 +4181,6 @@ msgstr "저장"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
->>>>>>> modify_design3
 #: cms/static/js/views/modals/course_outline_modals.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
@@ -4298,8 +4288,6 @@ msgstr "고급"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -4316,7 +4304,6 @@ msgstr "고급"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
->>>>>>> modify_design3
 #: cms/static/js/views/modals/edit_xblock.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: common/static/common/templates/image-modal.underscore
@@ -4730,8 +4717,6 @@ msgstr "코드 블럭"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -4748,7 +4733,6 @@ msgstr "코드 블럭"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
->>>>>>> modify_design3
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
 #: test_root/staticfiles/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore
@@ -4956,8 +4940,6 @@ msgstr " 테이블 삭제"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -4974,7 +4956,6 @@ msgstr " 테이블 삭제"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
->>>>>>> modify_design3
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/certificate-editor.underscore
 #: cms/templates/js/group-configuration-editor.underscore
@@ -5118,8 +5099,6 @@ msgstr " html 편집"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -5136,7 +5115,6 @@ msgstr " html 편집"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
->>>>>>> modify_design3
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: common/static/js/vendor/ova/catch/js/catch.js
 #: cms/templates/js/certificate-details.underscore
@@ -5787,8 +5765,6 @@ msgstr "새 창"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -5805,7 +5781,6 @@ msgstr "새 창"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
->>>>>>> modify_design3
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/paging-header.underscore
 #: common/static/common/templates/components/paging-footer.underscore
@@ -5907,8 +5882,6 @@ msgstr "단어 잘림 방지 공백"
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -5925,7 +5898,6 @@ msgstr "단어 잘림 방지 공백"
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
->>>>>>> modify_design3
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
@@ -6104,8 +6076,6 @@ msgstr "이전"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -6122,7 +6092,6 @@ msgstr "이전"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
->>>>>>> modify_design3
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: lms/static/coffee/src/customwmd.js
 #: cms/templates/js/asset-library.underscore
@@ -6260,8 +6229,6 @@ msgstr "바꾸기"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -6278,7 +6245,6 @@ msgstr "바꾸기"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
->>>>>>> modify_design3
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/metadata-file-uploader-item.underscore
 #: cms/templates/js/video/metadata-translations-item.underscore
@@ -6592,8 +6558,6 @@ msgstr "입력한 URL이 외부링크 같습니다. 필요한 접두어 http:// 
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -6610,7 +6574,6 @@ msgstr "입력한 URL이 외부링크 같습니다. 필요한 접두어 http:// 
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
->>>>>>> modify_design3
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/course-instructor-details.underscore
 #: cms/templates/js/signatory-details.underscore
@@ -6779,8 +6742,6 @@ msgstr "수직 공간"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
-<<<<<<< HEAD
-=======
 #. #-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -6797,7 +6758,6 @@ msgstr "수직 공간"
 #. #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
->>>>>>> modify_design3
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: lms/templates/bookmarks/bookmarks-list.underscore
 #: lms/templates/search/course_search_item.underscore
