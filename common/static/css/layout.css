@@ -360,7 +360,7 @@ header.global .nav-global li.deactive{display:none;}
 	/*body{border: 1px solid green;}*/
 	/*#notice{border: 1px solid green;}*/
 	#notice li{float: none; max-width: 100% !important;}
-	#notice .ldiv{width: calc(100% - 40px);}
+	#notice .ldiv{width: calc(100% - 25px);}
 	#notice .more{opacity: 1;position: relative;}
 	#notice .rdiv{display: none;}
 	/*#notice ul{padding: 9px 0 0;}*/
