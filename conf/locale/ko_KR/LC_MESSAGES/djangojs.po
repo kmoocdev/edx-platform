@@ -170,8 +170,6 @@
 # Translators:
 # Translators:
 # Translators:
-<<<<<<< HEAD
-=======
 # bossnm11 <bossnm11@gmail.com>, 2014
 # Chanseok <kcsgoodboy@gmail.com>, 2014
 # Hongseob Lee <shevious@gmail.com>, 2015-2016
