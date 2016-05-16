@@ -269,6 +269,179 @@
 # Jong-Dae Park <jdpark7@gmail.com>, 2013
 # jeon <bluerespect@nate.com>, 2014-2015
 # Kevin Min <gr326887@graded.br>, 2015
+# Young C. Kim, 2015
+# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2016 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chul Park <parkchul@nate.com>, 2015
+# mariana1201 <gogo3135@naver.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015-2016
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# Sarina Canelake <sarina@edx.org>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2016 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Pope, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# KimKyudong <choemh@nate.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015-2016
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Kevin Min <gr326887@graded.br>, 2015
+# JiyeonLee <leejiyeon00@gmail.com>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2013 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2016 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# David10000 <gameness@naver.com>, 2014
+# Gil <gedwarp@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Kevin Min <gr326887@graded.br>, 2015
+# Nicole <dlruddk1112@gmail.com>, 2014
+# shin2012 <shin2013@gmail.com>, 2014
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2016 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015-2016
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+# #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  mako-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  messages.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2013 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  wiki.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Chul Park <parkchul@nate.com>, 2015
+# David10000 <gameness@naver.com>, 2014
+# Gil <gedwarp@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015-2016
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014
+# JiyeonLee <leejiyeon00@gmail.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Kevin Min <gr326887@graded.br>, 2015
+# KimKyudong <choemh@nate.com>, 2014
+# mariana1201 <gogo3135@naver.com>, 2014
+# Nicole <dlruddk1112@gmail.com>, 2014
+# Pope, 2014
+# Sarina Canelake <sarina@edx.org>, 2014
+# Seok Jun Yoon <fake2real@dctribe.com>, 2015
+# shin2012 <shin2013@gmail.com>, 2014
+# Sujin Lee <sujinlee.me@gmail.com>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+# Young Kim <youngck.uw@gmail.com>, 2015
+# #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2016 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# Jun-Gu Kang <chr0m3.kr@gmail.com>, 2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Seok Jun Yoon <fake2real@dctribe.com>, 2015
+# Sujin Lee <sujinlee.me@gmail.com>, 2014
+# #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2016 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# mariana1201 <gogo3135@naver.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Hongseob Lee <shevreg@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
 # Young Kim <youngck.uw@gmail.com>, 2015
 # #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 # edX translation file
@@ -5625,6 +5798,14 @@ msgstr ""
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the registration form
 #. which allows the user to input the city in which they live.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the city in which they live.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. which allows the user to input the city in which they live.
 #: lms/djangoapps/instructor_task/tasks_helper.py
 #: openedx/core/djangoapps/user_api/views.py lms/templates/register.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
@@ -5722,6 +5903,69 @@ msgstr "질문하기는 답변이 필요할 경우에, 게시판은 아이디어
 msgid "Add your post to a relevant topic to help others find it."
 msgstr "검색하기 쉽도록 게시물에 주제를 추가합니다."
 
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the password reset
+#. form meant to hold the user's email address.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's email address.
+#. Translators: This label appears above a field on the password reset
+#. form meant to hold the user's email address.
+#: lms/djangoapps/instructor/views/api.py
+#: lms/djangoapps/instructor/views/instructor_dashboard.py
+#: openedx/core/djangoapps/user_api/views.py
+#: lms/templates/courseware/legacy_instructor_dashboard.html
+#: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
+#: cms/templates/temp-course-landing.html
+msgid "Email"
+msgstr "이메일(Email)"
+
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's full name.
+#: lms/djangoapps/instructor/views/legacy.py
+#: openedx/core/djangoapps/user_api/views.py
+msgid "Full name"
+msgstr "실명(Full name)"
+
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's public username.
+#: openedx/core/djangoapps/user_api/views.py
+msgid "Public username"
+msgstr "아이디(Username)"
+
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's password.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's password.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the login form
+#. meant to hold the user's password.
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's password.
+#: openedx/core/djangoapps/user_api/views.py cms/templates/login.html
+#: cms/templates/register.html lms/templates/login.html
+#: lms/templates/provider_login.html lms/templates/register.html
+#: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
+#: cms/templates/temp-course-landing.html lms/templates/register-form.html
+#: themes/stanford-style/lms/templates/register-form.html
+#: lms/templates/student_account/account.underscore
+msgid "Password"
+msgstr "비밀번호(Password)"
+
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the country in which the user lives.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the country in which the user lives.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the login form
 #. meant to hold the user's email address.
@@ -6101,6 +6345,30 @@ msgstr "국가(Country)"
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the user's gender.
+#: lms/djangoapps/instructor/views/api.py
+#: lms/djangoapps/instructor_task/tasks_helper.py
+#: openedx/core/djangoapps/user_api/views.py lms/templates/register.html
+#: lms/templates/signup_modal.html lms/templates/register-form.html
+#: themes/stanford-style/lms/templates/register-form.html
+msgid "Gender"
+msgstr "성별(Gender)"
+
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's highest completed level of education.
+#: openedx/core/djangoapps/user_api/views.py
+msgid "Highest level of education completed"
+msgstr "최종 학력(Highest level of education completed)"
+
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This phrase appears above a field on the registration form
+#. meant to hold the user's reasons for registering with edX.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's gender.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's gender.
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
 #. Translators: This label appears above a dropdown menu on the registration
@@ -6268,6 +6536,13 @@ msgstr ""
 msgid "Year of Birth"
 msgstr "출생연도(Year of Birth)"
 
+#. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's year of birth.
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a dropdown menu on the registration
+#. form used to select the user's year of birth.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
 #. Translators: This label appears above a dropdown menu on the registration
 #. form used to select the user's year of birth.
@@ -7050,6 +7325,10 @@ msgstr "하위 문서 만들기"
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
 #. the discussion forums
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Discussion' refers to the tab in the courseware that leads to
+#. the discussion forums
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
 #. the discussion forums
 #: cms/djangoapps/contentstore/views/component.py
@@ -7154,6 +7433,1378 @@ msgstr "상태"
 #. Translators: This is listed as the duration for a video that has not
 #. yet reached the point in its processing by the servers where its
 #. duration is determined.
+#: cms/djangoapps/contentstore/views/videos.py
+#: openedx/core/djangoapps/api_admin/models.py cms/templates/index.html
+msgid "Pending"
+msgstr "대기중"
+
+#: common/djangoapps/config_models/admin.py
+msgid "Revert to the selected configuration"
+msgstr "선택한 설정으로 복구합니다."
+
+#: common/djangoapps/config_models/admin.py
+msgid "Please select a single configuration to revert to."
+msgstr "복구할 설정을 선택하세요."
+
+#: common/djangoapps/config_models/admin.py
+msgid "Reverted configuration."
+msgstr "복구된 설정"
+
+#: common/djangoapps/config_models/admin.py
+msgid "Current Configuration"
+msgstr "현재 설정"
+
+#: common/djangoapps/config_models/admin.py
+msgid "All (Show History)"
+msgstr "전체 (이력 보기)"
+
+#: common/djangoapps/config_models/admin.py
+msgid "Update"
+msgstr "공지사항"
+
+#: common/djangoapps/config_models/models.py
+msgid "Change date"
+msgstr "날짜 바꾸기"
+
+#. Translators: this label indicates the name of the user who made this
+#. change:
+#: common/djangoapps/config_models/models.py
+msgid "Changed by"
+msgstr "수정한 사람은 "
+
+#: common/djangoapps/config_models/models.py
+msgid "Enabled"
+msgstr "유효화"
+
+#: common/djangoapps/cors_csrf/models.py
+msgid ""
+"List of domains that are allowed to make cross-domain requests to this site."
+"  Please list each domain on its own line."
+msgstr "이 사이트로 크로스 도메인 요청을 할 수 있는 도메인 목록. 각 도메인을 한 줄씩 기입하세요."
+
+#: common/djangoapps/course_modes/admin.py
+#: common/djangoapps/course_modes/models.py
+#: common/lib/xmodule/xmodule/library_content_module.py
+msgid "Mode"
+msgstr "모드"
+
+#: common/djangoapps/course_modes/admin.py
+#: lms/djangoapps/courseware/date_summary.py
+#: lms/djangoapps/support/static/support/templates/enrollment.underscore
+msgid "Verification Deadline"
+msgstr "인증 유효기간"
+
+#: common/djangoapps/course_modes/admin.py
+msgid ""
+"OPTIONAL: After this date/time, users will no longer be able to submit "
+"photos for verification.  This appies ONLY to modes that require "
+"verification."
+msgstr ""
+"해당 시간이 지나면 학습자는 인증용 사진을 제출할 수 없습니다. 인증 요청은 선택사항이며, 사진은 인증의 목적으로만 사용됩니다."
+
+#: common/djangoapps/course_modes/helpers.py
+msgid "Your verification is pending"
+msgstr "인증 대기 중입니다."
+
+#: common/djangoapps/course_modes/helpers.py
+msgid "Verified: Pending Verification"
+msgstr "인증 대기 상태"
+
+#: common/djangoapps/course_modes/helpers.py
+msgid "ID verification pending"
+msgstr "신분증 확인 대기 중"
+
+#: common/djangoapps/course_modes/helpers.py
+msgid "You're enrolled as a verified student"
+msgstr "인증된 학습자로 등록되었습니다."
+
+#: common/djangoapps/course_modes/helpers.py
+#: lms/templates/instructor/instructor_dashboard_2/course_info.html
+msgid "Verified"
+msgstr "인증"
+
+#: common/djangoapps/course_modes/helpers.py
+msgid "ID Verified Ribbon/Badge"
+msgstr "신분증 인증 리본/뱃지 "
+
+#: common/djangoapps/course_modes/helpers.py
+msgid "You're enrolled as an honor code student"
+msgstr "명예 과정의 학습자로 등록되었습니다."
+
+#: common/djangoapps/course_modes/helpers.py lms/djangoapps/branding/api.py
+#: openedx/core/djangoapps/user_api/views.py
+#: lms/templates/static_templates/honor.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/tos.html
+msgid "Honor Code"
+msgstr "학습자 서약"
+
+#: common/djangoapps/course_modes/helpers.py
+msgid "You're enrolled as a professional education student"
+msgstr "전문 과정 학습자로 등록되었습니다."
+
+#: common/djangoapps/course_modes/helpers.py
+msgid "Professional Ed"
+msgstr "전문 과정"
+
+#: common/djangoapps/course_modes/models.py common/lib/xmodule/xmodule/tabs.py
+#: lms/djangoapps/courseware/tabs.py lms/djangoapps/courseware/views/views.py
+#: lms/djangoapps/shoppingcart/reports.py cms/templates/widgets/header.html
+#: lms/templates/courseware/courseware.html
+#: lms/templates/verify_student/enrollment_confirmation_step.underscore
+msgid "Course"
+msgstr "강좌"
+
+#: common/djangoapps/course_modes/models.py
+#: common/lib/xmodule/xmodule/annotatable_module.py
+#: common/lib/xmodule/xmodule/capa_base.py
+#: common/lib/xmodule/xmodule/discussion_module.py
+#: common/lib/xmodule/xmodule/html_module.py
+#: common/lib/xmodule/xmodule/imageannotation_module.py
+#: common/lib/xmodule/xmodule/library_content_module.py
+#: common/lib/xmodule/xmodule/lti_module.py
+#: common/lib/xmodule/xmodule/split_test_module.py
+#: common/lib/xmodule/xmodule/textannotation_module.py
+#: common/lib/xmodule/xmodule/videoannotation_module.py
+#: common/lib/xmodule/xmodule/word_cloud_module.py
+#: cms/templates/container.html cms/templates/library.html
+msgid "Display Name"
+msgstr "표시될 이름"
+
+#: common/djangoapps/course_modes/models.py
+#: lms/templates/courseware/course_about.html
+msgid "Price"
+msgstr "가격"
+
+#: common/djangoapps/course_modes/models.py
+#: lms/djangoapps/support/static/support/templates/enrollment.underscore
+msgid "Upgrade Deadline"
+msgstr "마감 기한 늘리기"
+
+#: common/djangoapps/course_modes/models.py
+msgid ""
+"OPTIONAL: After this date/time, users will no longer be able to enroll in "
+"this mode. Leave this blank if users can enroll in this mode until "
+"enrollment closes for the course."
+msgstr ""
+"선택사항: 이 날짜/시간이 지나면 학습자가 해당 모드에 수강 신청할 수 없습니다. 학습자가 수강 신청할 수 있도록 수강 신청 마감 "
+"전까지는 이 칸을 빈 칸으로 두세요."
+
+#: common/djangoapps/course_modes/models.py
+msgid ""
+"OPTIONAL: This is the SKU (stock keeping unit) of this mode in the external "
+"ecommerce service.  Leave this blank if the course has not yet been migrated"
+" to the ecommerce service."
+msgstr ""
+"선택사항:  이것은 외부 전자상거래 서비스의 재고보관단위(Stock Keeping Unit)입니다. 강좌가 전자상거래 서비스로 아직 "
+"옮겨지지 않았다면 이 칸을 빈 칸으로 두시길 바랍니다."
+
+#: common/djangoapps/course_modes/models.py
+msgid ""
+"This is the bulk SKU (stock keeping unit) of this mode in the external "
+"ecommerce service."
+msgstr ""
+
+#: common/djangoapps/course_modes/models.py
+#: lms/templates/instructor/instructor_dashboard_2/course_info.html
+msgid "Audit"
+msgstr "청강"
+
+#: common/djangoapps/course_modes/models.py
+#: lms/templates/instructor/instructor_dashboard_2/course_info.html
+msgid "Honor"
+msgstr "명예"
+
+#: common/djangoapps/course_modes/models.py
+msgid ""
+"Professional education modes are not allowed to have expiration_datetime "
+"set."
+msgstr "전문 교육 과정 모드는 쿠폰 만기일 설정이 허용되지 않습니다."
+
+#: common/djangoapps/course_modes/models.py
+msgid "Verified modes cannot be free."
+msgstr ""
+
+#: common/djangoapps/course_modes/models.py
+msgid ""
+"The time period before a course ends in which a course mode will expire"
+msgstr ""
+
+#: common/djangoapps/course_modes/views.py
+msgid "Enrollment is closed"
+msgstr "수강신청이 마감되었습니다."
+
+#: common/djangoapps/course_modes/views.py
+msgid "Enrollment mode not supported"
+msgstr "수강신청 모드가 지원되지 않습니다."
+
+#: common/djangoapps/course_modes/views.py
+msgid "Invalid amount selected."
+msgstr "유효하지 않은 값이 지정되었습니다."
+
+#: common/djangoapps/course_modes/views.py
+msgid "No selected price or selected price is too low."
+msgstr "값이 지정되지 않거나, 지정된 값이 너무 작습니다."
+
+#: common/djangoapps/django_comment_common/models.py
+msgid "Administrator"
+msgstr "관리자"
+
+#: common/djangoapps/django_comment_common/models.py
+msgid "Moderator"
+msgstr "진행자"
+
+#: common/djangoapps/django_comment_common/models.py
+#: common/static/common/templates/discussion/post-user-display.underscore
+msgid "Community TA"
+msgstr "커뮤니티 조교"
+
+#: common/djangoapps/django_comment_common/models.py
+#: lms/djangoapps/instructor/paidcourse_enrollment_report.py
+#: lms/templates/courseware/course_navigation.html
+#: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
+msgid "Student"
+msgstr "학습자"
+
+#: common/djangoapps/embargo/forms.py
+#: lms/djangoapps/verified_track_content/forms.py
+msgid "COURSE NOT FOUND.  Please check that the course ID is valid."
+msgstr "강좌를 찾을 수 없습니다. 강좌 ID를 다시 확인하세요."
+
+#: common/djangoapps/embargo/models.py
+msgid "The course key for the restricted course."
+msgstr "접근이 제한된 강좌를 위한 강좌 키입니다."
+
+#: common/djangoapps/embargo/models.py
+msgid "The message to show when a user is blocked from enrollment."
+msgstr "이 메세지는 수강 신청이 제한된 이용자에게 보이는 것입니다."
+
+#: common/djangoapps/embargo/models.py
+msgid "The message to show when a user is blocked from accessing a course."
+msgstr "이 메세지는 강좌 접근이 제한된 이용자에게 보이는 것입니다."
+
+#: common/djangoapps/embargo/models.py
+msgid ""
+"Allow users who enrolled in an allowed country to access restricted courses "
+"from excluded countries."
+msgstr "허가된 국가에서 수강 신청한 이용자만 강좌에 접근할 수 있게 합니다. "
+
+#: common/djangoapps/embargo/models.py
+msgid "Two character ISO country code."
+msgstr "ISO 국가 코드 두 자 "
+
+#: common/djangoapps/embargo/models.py
+msgid ""
+"Whether to include or exclude the given course. If whitelist countries are "
+"specified, then ONLY users from whitelisted countries will be able to access"
+" the course.  If blacklist countries are specified, then users from "
+"blacklisted countries will NOT be able to access the course."
+msgstr ""
+"화이트리스트 국가를 지정하면, 화이트리스트 국가의 이용자들에 한해서만 이 강좌에 접근할 수 있습니다. 블랙리스트 국가를 지정하면, "
+"블랙리스트 국가의 이용자들은 이 강좌에 접근할 수 없습니다. "
+
+#: common/djangoapps/embargo/models.py
+msgid "The course to which this rule applies."
+msgstr "이 규정이 적용되는 강좌"
+
+#: common/djangoapps/embargo/models.py
+msgid "The country to which this rule applies."
+msgstr "이 규정이 적용되는 국가"
+
+#: common/djangoapps/embargo/models.py
+msgid "Whitelist {country} for {course}"
+msgstr "{course} 강좌의 화이트리스트 {country} "
+
+#: common/djangoapps/embargo/models.py
+msgid "Blacklist {country} for {course}"
+msgstr "{course} 강좌의 블랙리스트 {country} "
+
+#: common/djangoapps/external_auth/views.py
+msgid ""
+"You have already created an account using an external login like WebAuth or "
+"Shibboleth. Please contact {tech_support_email} for support."
+msgstr ""
+"WebAuth나 Shibboleth와 같은 외부 계정을 사용중입니다. 도움이 필요하시면  {tech_support_email}로 "
+"연락바랍니다. "
+
+#: common/djangoapps/student/forms.py
+msgid ""
+"That e-mail address doesn't have an associated user account. Are you sure "
+"you've registered?"
+msgstr ""
+
+#: common/djangoapps/student/forms.py
+msgid ""
+"The user account associated with this e-mail address cannot reset the "
+"password."
+msgstr ""
+
+#: common/djangoapps/student/forms.py
+msgid "Username must be minimum of two characters long"
+msgstr "아이디는 최소 두 글자 이상이어야 합니다."
+
+#: common/djangoapps/student/forms.py
+msgid "A properly formatted e-mail is required"
+msgstr "이메일 형식이 적절해야 합니다."
+
+#: common/djangoapps/student/forms.py
+msgid "A valid password is required"
+msgstr "유효한 패스워드가 필요합니다."
+
+#: common/djangoapps/student/forms.py
+msgid "Your legal name must be a minimum of two characters long"
+msgstr "실명은 최소 두 글자 이상이어야 합니다."
+
+#: common/djangoapps/student/forms.py
+msgid ""
+"Usernames must contain only letters, numbers, underscores (_), and hyphens "
+"(-)."
+msgstr "아이디는 오직 알파벳, 숫자, 밀줄 표시(_), 하이픈(-) 으로만 만들 수 있습니다. "
+
+#: common/djangoapps/student/forms.py
+msgid "Username cannot be more than %(limit_value)s characters long"
+msgstr "아이디는 %(limit_value)s자 이상을 초과할 수 없습니다."
+
+#: common/djangoapps/student/forms.py
+msgid "Email cannot be more than %(limit_value)s characters long"
+msgstr "이메일 주소는 %(limit_value)s자 이상이 될 수 없습니다."
+
+#: common/djangoapps/student/forms.py
+msgid "You must accept the terms of service."
+msgstr "서비스 약관에 동의해야 합니다."
+
+#: common/djangoapps/student/forms.py
+msgid "A level of education is required"
+msgstr "최종 학력을 입력하세요."
+
+#: common/djangoapps/student/forms.py
+msgid "Your gender is required"
+msgstr "성별을 입력하세요."
+
+#: common/djangoapps/student/forms.py
+msgid "Your year of birth is required"
+msgstr "생년월일을 입력하세요."
+
+#: common/djangoapps/student/forms.py
+msgid "Your mailing address is required"
+msgstr "메일링 서비스를 받을 이메일 주소를 입력하세요."
+
+#: common/djangoapps/student/forms.py
+msgid "A description of your goals is required"
+msgstr "목표를 입력하세요."
+
+#: common/djangoapps/student/forms.py
+msgid "A city is required"
+msgstr "도시를 입력하세요."
+
+#: common/djangoapps/student/forms.py
+msgid "A country is required"
+msgstr "국가를 입력하세요."
+
+#: common/djangoapps/student/forms.py
+msgid "To enroll, you must follow the honor code."
+msgstr "K-MOOC를 이용하려면, 학습자 서약을 준수해야 합니다."
+
+#: common/djangoapps/student/forms.py
+msgid "You are missing one or more required fields"
+msgstr "한 개 이상의 필수 항목을 입력하지 않았습니다. "
+
+#: common/djangoapps/student/forms.py
+msgid "Username and password fields cannot match"
+msgstr "아이디와 패스워드가 일치합니다. 다르게 입력해주세요."
+
+#: common/djangoapps/student/forms.py common/djangoapps/student/views.py
+msgid "Password: "
+msgstr "비밀번호"
+
+#: common/djangoapps/student/forms.py
+msgid "Unauthorized email address."
+msgstr ""
+
+#: common/djangoapps/student/forms.py
+msgid ""
+"It looks like {email} belongs to an existing account. Try again with a "
+"different email address."
+msgstr ""
+
+#: common/djangoapps/student/middleware.py
+msgid ""
+"Your account has been disabled. If you believe this was done in error, "
+"please contact us at {support_email}"
+msgstr "귀하의 계정이 비활성화 되었습니다. 이것이 오류로 보일 경우 {support_email}로 메일 보내주세요."
+
+#: common/djangoapps/student/middleware.py
+msgid "Disabled Account"
+msgstr "비활성화된 계정"
+
+#: common/djangoapps/student/models.py
+msgid "Male"
+msgstr "남자"
+
+#: common/djangoapps/student/models.py
+msgid "Female"
+msgstr "여성"
+
+#. Translators: 'Other' refers to the student's gender
+#: common/djangoapps/student/models.py
+msgid "Other/Prefer Not to Say"
+msgstr ""
+
+#: common/djangoapps/student/models.py
+msgid "Doctorate"
+msgstr "박사"
+
+#: common/djangoapps/student/models.py
+msgid "Master's or professional degree"
+msgstr "석사 또는 전문대학원 학위 소지"
+
+#: common/djangoapps/student/models.py
+msgid "Bachelor's degree"
+msgstr "학사"
+
+#: common/djangoapps/student/models.py
+msgid "Associate degree"
+msgstr "전문학사"
+
+#: common/djangoapps/student/models.py
+msgid "Secondary/high school"
+msgstr "고등학교"
+
+#: common/djangoapps/student/models.py
+msgid "Junior secondary/junior high/middle school"
+msgstr "중학교"
+
+#: common/djangoapps/student/models.py
+msgid "Elementary/primary school"
+msgstr "초등학교"
+
+#. Translators: 'None' refers to the student's level of education
+#: common/djangoapps/student/models.py
+msgid "No Formal Education"
+msgstr ""
+
+#. Translators: 'Other' refers to the student's level of education
+#: common/djangoapps/student/models.py
+msgid "Other Education"
+msgstr ""
+
+#: common/djangoapps/student/models.py
+msgid "{platform_name} Honor Code Certificate for {course_name}"
+msgstr " {platform_name} {course_name} 명예 과정 이수증"
+
+#: common/djangoapps/student/models.py
+msgid "{platform_name} Verified Certificate for {course_name}"
+msgstr "{platform_name}  {course_name} 이수증"
+
+#: common/djangoapps/student/models.py
+msgid "{platform_name} Professional Certificate for {course_name}"
+msgstr "{platform_name}{course_name} 전문 과정 이수증"
+
+#: common/djangoapps/student/models.py
+msgid ""
+"The company identifier for the LinkedIn Add-to-Profile button e.g "
+"0_0dPSPyS070e0HsE9HNz_13_d11_"
+msgstr ""
+"Linkedin Add-to-Profile 버튼의 기업 식별자. 0_0dPSPyS070e0HsE9HNz_13_d11_와 같은 것어야 "
+"합니다."
+
+#: common/djangoapps/student/models.py
+msgid ""
+"Short identifier for the LinkedIn partner used in the tracking code.  "
+"(Example: 'edx')  If no value is provided, tracking codes will not be sent "
+"to LinkedIn."
+msgstr ""
+"LinkedIn 파트너가 사용하는 추적 코드로 사용하는 짧은 식별자(예: edX) 값을 지정해주세요. 지정이 안 될 경우, 추적 코드가 "
+"LinkedIn에 전송되지 않습니다."
+
+#: common/djangoapps/student/models.py
+msgid "{platform_name} Certificate for {course_name}"
+msgstr "{platform_name}  {course_name} 강좌 이수증"
+
+#: common/djangoapps/student/models.py
+msgid "The ISO 639-1 language code for this language."
+msgstr "이 언어의 ISO 639-1 언어 코드"
+
+#: common/djangoapps/student/models.py
+msgid "Namespace of enrollment attribute"
+msgstr "수강 속성의 네임스페이스"
+
+#: common/djangoapps/student/models.py
+msgid "Name of the enrollment attribute"
+msgstr "수강 속성의 이름"
+
+#: common/djangoapps/student/models.py
+msgid "Value of the enrollment attribute"
+msgstr "수강 속성의 값"
+
+#: common/djangoapps/student/models.py
+msgid ""
+"The window of time after enrolling during which users can be granted a "
+"refund, represented in microseconds. The default is 14 days."
+msgstr ""
+
+#: common/djangoapps/student/views.py
+msgid "The course you are looking for does not start until {date}."
+msgstr "이 강좌는 {date}일부터 개강됩니다."
+
+#: common/djangoapps/student/views.py
+msgid "The course you are looking for is closed for enrollment as of {date}."
+msgstr ""
+
+#: common/djangoapps/student/views.py
+msgid "Course id not specified"
+msgstr "강좌 아이디가 명시되지 않았습니다."
+
+#: common/djangoapps/student/views.py lms/djangoapps/support/views/refund.py
+msgid "Invalid course id"
+msgstr "유효하지 않은 강좌 아이디입니다."
+
+#: common/djangoapps/student/views.py
+msgid "Course id is invalid"
+msgstr "강좌 아이디가 유효하지 않습니다."
+
+#: common/djangoapps/student/views.py
+msgid "Could not enroll"
+msgstr "등록할 수 없습니다."
+
+#: common/djangoapps/student/views.py
+msgid "You are not enrolled in this course"
+msgstr "이 강좌에 등록되지 않았습니다."
+
+#: common/djangoapps/student/views.py
+msgid "Your certificate prevents you from unenrolling from this course"
+msgstr ""
+
+#: common/djangoapps/student/views.py
+msgid "Enrollment action is invalid"
+msgstr "수강신청 작업이 무효입니다."
+
+#: common/djangoapps/student/views.py
+msgid ""
+"You've successfully logged into your {provider_name} account, but this "
+"account isn't linked with an {platform_name} account yet."
+msgstr ""
+"{provider_name} 계정에 로그인이 성공하였지만, 이 계정은 아직 {platform_name} 계정에 연동되지 않았습니다. "
+
+#: common/djangoapps/student/views.py
+msgid ""
+"Use your {platform_name} username and password to log into {platform_name} "
+"below, and then link your {platform_name} account with {provider_name} from "
+"your dashboard."
+msgstr ""
+" {platform_name}의 이용자명과 비밀번호를 이용해서 {platform_name}에 로그인해 주세요. 그런후에 "
+"{platform_name}의 계정과  {provider_name}의 계정을 대시보드에서 연동합니다."
+
+#: common/djangoapps/student/views.py
+msgid ""
+"If you don't have an {platform_name} account yet, click "
+"<strong>Register</strong> at the top of the page."
+msgstr "{platform_name} 계정이 아직 없으시다면,  페이지 상단의 <strong>가입</strong>을 클릭하세요.  "
+
+#: common/djangoapps/student/views.py
+msgid "There was an error receiving your login information. Please email us."
+msgstr "로그인 정보를 받는 중 오류가 발생했습니다. 저희에게 이메일 보내주십시오."
+
+#: common/djangoapps/student/views.py
+msgid ""
+"Your password has expired due to password policy on this account. You must "
+"reset your password before you can log in again. Please click the \"Forgot "
+"Password\" link on this page to reset your password before logging in again."
+msgstr ""
+"비밀번호가  만료되었습니다.  재로그인 하기 전에 비밀번호를 재설정해야 합니다.  비밀번호 재설정을 위해 현재 페이지의  \"비밀번호 "
+"찾기\" 링크를 클릭하세요."
+
+#: common/djangoapps/student/views.py
+msgid "Too many failed login attempts. Try again later."
+msgstr "로그인 실패 허용 횟수 초과. 잠시 후에 다시 시도하세요."
+
+#: common/djangoapps/student/views.py lms/templates/provider_login.html
+msgid "Email or password is incorrect."
+msgstr "이메일 또는 비밀번호가 일치하지 않습니다. 다시 한번 확인하시고 로그인해 주세요. "
+
+#: common/djangoapps/student/views.py
+msgid ""
+"This account has not been activated. We have sent another activation "
+"message. Please check your email for the activation instructions."
+msgstr "이 계정은 활성화되지 않았습니다. 활성화 안내 메세지를 새로 발송했으니, 이를 이메일에서 확인하실 수 있습니다."
+
+#: common/djangoapps/student/views.py
+msgid "Please enter a username"
+msgstr "아이디를 입력하세요"
+
+#: common/djangoapps/student/views.py
+msgid "Please choose an option"
+msgstr "평가 기준을 선택하세요."
+
+#: common/djangoapps/student/views.py
+msgid "User with username {} does not exist"
+msgstr "아이디 {} 는 존재하지 않습니다. "
+
+#: common/djangoapps/student/views.py
+msgid "Successfully disabled {}'s account"
+msgstr "{}'의 계정을 비활성화하였습니다."
+
+#: common/djangoapps/student/views.py
+msgid "Successfully reenabled {}'s account"
+msgstr "{}'의 계정을 다시 활성화하였습니다."
+
+#: common/djangoapps/student/views.py
+msgid "Unexpected account status"
+msgstr "예기치 않은 계정 상태"
+
+#: common/djangoapps/student/views.py
+msgid "An account with the Public Username '{username}' already exists."
+msgstr "해당 아이디가  '{username}'인 계정이 이미 존재합니다."
+
+#: common/djangoapps/student/views.py
+msgid "An account with the Email '{email}' already exists."
+msgstr "해당 이메일 '{email}'을 사용하는 계정이 이미 존재합니다. "
+
+#: common/djangoapps/student/views.py
+msgid "An access_token is required when passing value ({}) for provider."
+msgstr "access_token은 프로바이더에게 값 ({})를 전달하기 위해 필요합니다."
+
+#: common/djangoapps/student/views.py
+msgid "The provided access_token is already associated with another user."
+msgstr "주어진 access_token은 이미 다른 이용자와 연계되어 있습니다."
+
+#: common/djangoapps/student/views.py
+msgid "The provided access_token is not valid."
+msgstr " access_token이 유효하지 않습니다."
+
+#: common/djangoapps/student/views.py
+msgid "Unknown error. Please e-mail us to let us know how it happened."
+msgstr "알 수 없는 오류.  오류 신고를 위해 이메일 보내주십시오."
+
+#: common/djangoapps/student/views.py
+msgid ""
+"You are re-using a password that you have used recently. You must have {num}"
+" distinct password before reusing a previous password."
+msgid_plural ""
+"You are re-using a password that you have used recently. You must have {num}"
+" distinct passwords before reusing a previous password."
+msgstr[0] ""
+
+#: common/djangoapps/student/views.py
+msgid ""
+"You are resetting passwords too frequently. Due to security policies, {num} "
+"day must elapse between password resets."
+msgid_plural ""
+"You are resetting passwords too frequently. Due to security policies, {num} "
+"days must elapse between password resets."
+msgstr[0] ""
+
+#: common/djangoapps/student/views.py
+msgid "Password reset unsuccessful"
+msgstr "비밀번호 재설정에 실패하였습니다."
+
+#: common/djangoapps/student/views.py
+msgid "No inactive user with this e-mail exists"
+msgstr "비활성화 상태인 해당 이메일 사용자가 없습니다."
+
+#: common/djangoapps/student/views.py
+msgid "Unable to send reactivation email"
+msgstr "재활성화 이메일을 보낼 수 없습니다."
+
+#: common/djangoapps/student/views.py
+msgid "Valid e-mail address required."
+msgstr "유효한 이메일 주소를 입력하세요."
+
+#: common/djangoapps/student/views.py
+msgid "Old email is the same as the new email."
+msgstr "새로 입력한 이메일 주소가 이전과 같습니다."
+
+#: common/djangoapps/student/views.py
+msgid "An account with this e-mail already exists."
+msgstr "이 이메일 주소의 계정이 이미 존재합니다."
+
+#: common/djangoapps/student/views.py
+msgid "Unable to send email activation link. Please try again later."
+msgstr "이메일 활성화 링크를 보낼  수 없습니다. 잠시 후에 다시 시도하세요."
+
+#: common/djangoapps/third_party_auth/models.py
+msgid "Authentication with {} is currently unavailable."
+msgstr "{}의 인증은 현재 유효하지 않습니다."
+
+#: common/djangoapps/third_party_auth/models.py
+msgid ""
+"Secondary providers are displayed less prominently, in a separate list of "
+"\"Institution\" login providers."
+msgstr "\"기관\"으로 로그인할 수 있는 기관 목록에서, 부차적인 기관은 덜 두드러지게 보입니다. "
+
+#: common/djangoapps/third_party_auth/models.py
+msgid ""
+"If this option is enabled, users will not be asked to confirm their details "
+"(name, email, etc.) during the registration process. Only select this option"
+" for trusted providers that are known to provide accurate user information."
+msgstr ""
+"이 선택 사항이 활성화되면, 이용자는 가입 과정 중, 상세정보(이름, 이메일 등) 확인 요청을 받지 않을 것입니다. 정확한 정보를 제공할"
+" 만한 이용자에게만 이 선택 사항을 허용하세요. "
+
+#: common/djangoapps/third_party_auth/models.py
+msgid ""
+"If this option is selected, users will not be required to confirm their "
+"email, and their account will be activated immediately upon registration."
+msgstr "이 옵션을 선택하시면 이메일을 통한 확인 절차 없이, 이용자 계정이 즉시 활성화됩니다. "
+
+#: common/djangoapps/third_party_auth/templates/third_party_auth/post_custom_auth_entry.html
+#: lms/templates/student_account/finish_auth.html
+msgid "Please wait"
+msgstr "잠시 기다려 주십시오."
+
+#. Translators: the translation for "LONG_DATE_FORMAT" must be a format
+#. string for formatting dates in a long form.  For example, the
+#. American English form is "%A, %B %d %Y".
+#. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgid "LONG_DATE_FORMAT"
+msgstr "%Y년%B%d일 %A"
+
+#. Translators: the translation for "DATE_TIME_FORMAT" must be a format
+#. string for formatting dates with times.  For example, the American
+#. English form is "%b %d, %Y at %H:%M".
+#. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgid "DATE_TIME_FORMAT"
+msgstr "%Y년%B%d일 %A %H:%M"
+
+#. Translators: the translation for "SHORT_DATE_FORMAT" must be a
+#. format string for formatting dates in a brief form.  For example,
+#. the American English form is "%b %d %Y".
+#. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgid "SHORT_DATE_FORMAT"
+msgstr "%Y년%b%d일"
+
+#. Translators: the translation for "TIME_FORMAT" must be a format
+#. string for formatting times.  For example, the American English
+#. form is "%H:%M:%S". See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgid "TIME_FORMAT"
+msgstr "%H:%M:%S"
+
+#. Translators: This is an AM/PM indicator for displaying times.  It is
+#. used for the %p directive in date-time formats. See http://strftime.org
+#. for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "am/pm indicator"
+msgid "AM"
+msgstr "AM"
+
+#. Translators: This is an AM/PM indicator for displaying times.  It is
+#. used for the %p directive in date-time formats. See http://strftime.org
+#. for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "am/pm indicator"
+msgid "PM"
+msgstr "PM"
+
+#. Translators: this is a weekday name that will be used when displaying
+#. dates, as in "Monday Februrary 10, 2014". It is used for the %A
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "weekday name"
+msgid "Monday"
+msgstr "월요일"
+
+#. Translators: this is a weekday name that will be used when displaying
+#. dates, as in "Tuesday Februrary 11, 2014". It is used for the %A
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "weekday name"
+msgid "Tuesday"
+msgstr "화요일"
+
+#. Translators: this is a weekday name that will be used when displaying
+#. dates, as in "Wednesday Februrary 12, 2014". It is used for the %A
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "weekday name"
+msgid "Wednesday"
+msgstr "수요일"
+
+#. Translators: this is a weekday name that will be used when displaying
+#. dates, as in "Thursday Februrary 13, 2014". It is used for the %A
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "weekday name"
+msgid "Thursday"
+msgstr "목요일"
+
+#. Translators: this is a weekday name that will be used when displaying
+#. dates, as in "Friday Februrary 14, 2014". It is used for the %A
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "weekday name"
+msgid "Friday"
+msgstr "금요일"
+
+#. Translators: this is a weekday name that will be used when displaying
+#. dates, as in "Saturday Februrary 15, 2014". It is used for the %A
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "weekday name"
+msgid "Saturday"
+msgstr "토요일"
+
+#. Translators: this is a weekday name that will be used when displaying
+#. dates, as in "Sunday Februrary 16, 2014". It is used for the %A
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "weekday name"
+msgid "Sunday"
+msgstr "일요일"
+
+#. Translators: this is an abbreviated weekday name that will be used when
+#. displaying dates, as in "Mon Feb 10, 2014". It is used for the %a
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated weekday name"
+msgid "Mon"
+msgstr "월"
+
+#. Translators: this is an abbreviated weekday name that will be used when
+#. displaying dates, as in "Tue Feb 11, 2014". It is used for the %a
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated weekday name"
+msgid "Tue"
+msgstr "화"
+
+#. Translators: this is an abbreviated weekday name that will be used when
+#. displaying dates, as in "Wed Feb 12, 2014". It is used for the %a
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated weekday name"
+msgid "Wed"
+msgstr "수"
+
+#. Translators: this is an abbreviated weekday name that will be used when
+#. displaying dates, as in "Thu Feb 13, 2014". It is used for the %a
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated weekday name"
+msgid "Thu"
+msgstr "목"
+
+#. Translators: this is an abbreviated weekday name that will be used when
+#. displaying dates, as in "Fri Feb 14, 2014". It is used for the %a
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated weekday name"
+msgid "Fri"
+msgstr "금"
+
+#. Translators: this is an abbreviated weekday name that will be used when
+#. displaying dates, as in "Sat Feb 15, 2014". It is used for the %a
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated weekday name"
+msgid "Sat"
+msgstr "토"
+
+#. Translators: this is an abbreviated weekday name that will be used when
+#. displaying dates, as in "Sun Feb 16, 2014". It is used for the %a
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated weekday name"
+msgid "Sun"
+msgstr "일"
+
+#. Translators: this is an abbreviated month name that will be used when
+#. displaying dates, as in "Jan 10, 2014". It is used for the %b
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated month name"
+msgid "Jan"
+msgstr "1월"
+
+#. Translators: this is an abbreviated month name that will be used when
+#. displaying dates, as in "Feb 10, 2014". It is used for the %b
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated month name"
+msgid "Feb"
+msgstr "2월"
+
+#. Translators: this is an abbreviated month name that will be used when
+#. displaying dates, as in "Mar 10, 2014". It is used for the %b
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated month name"
+msgid "Mar"
+msgstr "3월"
+
+#. Translators: this is an abbreviated month name that will be used when
+#. displaying dates, as in "Apr 10, 2014". It is used for the %b
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated month name"
+msgid "Apr"
+msgstr "4월"
+
+#. Translators: this is an abbreviated month name that will be used when
+#. displaying dates, as in "May 10, 2014". It is used for the %b
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated month name"
+msgid "May"
+msgstr "5월"
+
+#. Translators: this is an abbreviated month name that will be used when
+#. displaying dates, as in "Jun 10, 2014". It is used for the %b
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated month name"
+msgid "Jun"
+msgstr "6월"
+
+#. Translators: this is an abbreviated month name that will be used when
+#. displaying dates, as in "Jul 10, 2014". It is used for the %b
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated month name"
+msgid "Jul"
+msgstr "7월"
+
+#. Translators: this is an abbreviated month name that will be used when
+#. displaying dates, as in "Aug 10, 2014". It is used for the %b
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated month name"
+msgid "Aug"
+msgstr "8월"
+
+#. Translators: this is an abbreviated month name that will be used when
+#. displaying dates, as in "Sep 10, 2014". It is used for the %b
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated month name"
+msgid "Sep"
+msgstr "9월"
+
+#. Translators: this is an abbreviated month name that will be used when
+#. displaying dates, as in "Oct 10, 2014". It is used for the %b
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated month name"
+msgid "Oct"
+msgstr "10월"
+
+#. Translators: this is an abbreviated month name that will be used when
+#. displaying dates, as in "Nov 10, 2014". It is used for the %b
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated month name"
+msgid "Nov"
+msgstr "11월"
+
+#. Translators: this is an abbreviated month name that will be used when
+#. displaying dates, as in "Dec 10, 2014". It is used for the %b
+#. directive in date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "abbreviated month name"
+msgid "Dec"
+msgstr "12월"
+
+#. Translators: this is a month name that will be used when displaying
+#. dates, as in "January 10, 2014". It is used for the %B directive in
+#. date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "month name"
+msgid "January"
+msgstr "1월"
+
+#. Translators: this is a month name that will be used when displaying
+#. dates, as in "February 10, 2014". It is used for the %B directive in
+#. date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "month name"
+msgid "February"
+msgstr "2월"
+
+#. Translators: this is a month name that will be used when displaying
+#. dates, as in "March 10, 2014". It is used for the %B directive in
+#. date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "month name"
+msgid "March"
+msgstr "3월"
+
+#. Translators: this is a month name that will be used when displaying
+#. dates, as in "April 10, 2014". It is used for the %B directive in
+#. date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "month name"
+msgid "April"
+msgstr "4월"
+
+#. Translators: this is a month name that will be used when displaying
+#. dates, as in "May 10, 2014". It is used for the %B directive in
+#. date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "month name"
+msgid "May"
+msgstr "5월"
+
+#. Translators: this is a month name that will be used when displaying
+#. dates, as in "June 10, 2014". It is used for the %B directive in
+#. date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "month name"
+msgid "June"
+msgstr "6월"
+
+#. Translators: this is a month name that will be used when displaying
+#. dates, as in "July 10, 2014". It is used for the %B directive in
+#. date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "month name"
+msgid "July"
+msgstr "7월"
+
+#. Translators: this is a month name that will be used when displaying
+#. dates, as in "August 10, 2014". It is used for the %B directive in
+#. date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "month name"
+msgid "August"
+msgstr "8월"
+
+#. Translators: this is a month name that will be used when displaying
+#. dates, as in "September 10, 2014". It is used for the %B directive in
+#. date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "month name"
+msgid "September"
+msgstr "9월"
+
+#. Translators: this is a month name that will be used when displaying
+#. dates, as in "October 10, 2014". It is used for the %B directive in
+#. date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "month name"
+msgid "October"
+msgstr "10월"
+
+#. Translators: this is a month name that will be used when displaying
+#. dates, as in "November 10, 2014". It is used for the %B directive in
+#. date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "month name"
+msgid "November"
+msgstr "11월"
+
+#. Translators: this is a month name that will be used when displaying
+#. dates, as in "December 10, 2014". It is used for the %B directive in
+#. date-time formats. See http://strftime.org for details.
+#: common/djangoapps/util/date_utils.py
+msgctxt "month name"
+msgid "December"
+msgstr "12월"
+
+#: common/djangoapps/util/file.py
+msgid "The file must end with the extension '{file_types}'."
+msgid_plural ""
+"The file must end with one of the following extensions: '{file_types}'."
+msgstr[0] ""
+
+#: common/djangoapps/util/file.py
+msgid "Maximum upload file size is {file_size} bytes."
+msgstr "최대 업로드 가능 파일 크기는 {file_size}바이트입니다."
+
+#: common/djangoapps/util/milestones_helpers.py
+msgid "Course {course_id} requires {prerequisite_course_id}"
+msgstr "{course_id} 강좌 수강을 위해 {prerequisite_course_id} 강좌를 선수과목으로 수강해야 합니다."
+
+#: common/djangoapps/util/milestones_helpers.py openedx/core/lib/gating/api.py
+msgid "System defined milestone"
+msgstr "시스템에 정의된 마일스톤"
+
+#: common/djangoapps/util/password_policy_validators.py
+msgid "Invalid Length ({0})"
+msgstr "의 길이가 유효하지 않습니다. ({0})"
+
+#: common/djangoapps/util/password_policy_validators.py
+msgid "must be {0} characters or more"
+msgstr "{0} 자 이상이어야 합니다."
+
+#: common/djangoapps/util/password_policy_validators.py
+msgid "must be {0} characters or less"
+msgstr "{0} 자 이하여야 합니다."
+
+#: common/djangoapps/util/password_policy_validators.py
+msgid "Must be more complex ({0})"
+msgstr "가 더 복잡해야 합니다.({0}) "
+
+#: common/djangoapps/util/password_policy_validators.py
+msgid "must contain {0} or more uppercase characters"
+msgstr "{0} 자 이상의 대문자를 포함해야 합니다."
+
+#: common/djangoapps/util/password_policy_validators.py
+msgid "must contain {0} or more lowercase characters"
+msgstr "{0} 자 이상의 소문자를 포함해야 합니다."
+
+#: common/djangoapps/util/password_policy_validators.py
+msgid "must contain {0} or more digits"
+msgstr "{0} 자 이상의 숫자를 포함해야 합니다."
+
+#: common/djangoapps/util/password_policy_validators.py
+msgid "must contain {0} or more punctuation characters"
+msgstr "{0} 자 이상의 특수기호를 포함해야 합니다."
+
+#: common/djangoapps/util/password_policy_validators.py
+msgid "must contain {0} or more non ascii characters"
+msgstr "{0} 자 이상의 non ascii characters를 포함해야 합니다."
+
+#: common/djangoapps/util/password_policy_validators.py
+msgid "must contain {0} or more unique words"
+msgstr "{0} 자 이상의 unique words를 포함해야 합니다."
+
+#: common/djangoapps/util/password_policy_validators.py
+msgid "Too similar to a restricted dictionary word."
+msgstr "제한어와 매우 유사합니다."
+
+#: common/djangoapps/xblock_django/models.py
+msgid "Space-separated list of XBlocks which should not render."
+msgstr "적용할 수 없는 공백으로 나열된 XBlock의 목록"
+
+#: common/djangoapps/xblock_django/models.py
+msgid ""
+"Space-separated list of XBlock types whose creation to disable in Studio."
+msgstr ""
+
+#: common/lib/capa/capa/capa_problem.py
+msgid "Cannot rescore problems with possible file submissions"
+msgstr "제출 파일로 문제를 채점할 수 없습니다."
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "correct"
+msgstr "정답"
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "incorrect"
+msgstr "오답"
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "partially correct"
+msgstr "부분적으로 맞습니다."
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "incomplete"
+msgstr "미완성"
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "unanswered"
+msgstr "미응답"
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "processing"
+msgstr "처리중"
+
+#. Translators: these are tooltips that indicate the state of an assessment
+#. question
+#: common/lib/capa/capa/inputtypes.py
+msgid "This answer is correct."
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "This answer is incorrect."
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "This answer is partially correct."
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "This answer is unanswered."
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "This answer is being processed."
+msgstr ""
+
+#. Translators: 'ChoiceGroup' is an input type and should not be translated.
+#: common/lib/capa/capa/inputtypes.py
+msgid "ChoiceGroup: unexpected tag {tag_name}"
+msgstr "선택지: 예상치 못한 태그 {tag_name}"
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Answer received."
+msgstr "제출된 답안"
+
+#. Translators: '<choice>' and '<compoundhint>' are tag names and should not
+#. be translated.
+#: common/lib/capa/capa/inputtypes.py
+msgid "Expected a <choice> or <compoundhint> tag; got {given_tag} instead"
+msgstr "{given_tag} 대신 <choice> 또는 <compoundhint> 태그를 입력하세요. "
+
+#: common/lib/capa/capa/inputtypes.py
+msgid ""
+"Your files have been submitted. As soon as your submission is graded, this "
+"message will be replaced with the grader's feedback."
+msgstr "파일이 제출되었습니다. 평가가 끝나자마자 이 메시지는 평가자의 피드백으로 대치될 것입니다."
+
+#: common/lib/capa/capa/inputtypes.py
+msgid ""
+"Your answer has been submitted. As soon as your submission is graded, this "
+"message will be replaced with the grader's feedback."
+msgstr "답변이 제출되었습니다. 평가가 끝나자마자 이 메시지는  평가자의 피드백으로 대치될 것입니다. "
+
+#: common/lib/capa/capa/inputtypes.py
+msgid ""
+"Submitted. As soon as a response is returned, this message will be replaced "
+"by that feedback."
+msgstr "제출되었습니다. 이 메시지는 평가가 완료되는 대로 피드백으로 대치될 것입니다."
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "No response from Xqueue within {xqueue_timeout} seconds. Aborted."
+msgstr "Xqueue로 부터  {xqueue_timeout} 초 이내 응답이 없어 취소되었습니다."
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Error running code."
+msgstr "running code 오류"
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Cannot connect to the queue"
+msgstr "큐에 접속할 수 없습니다."
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "No formula specified."
+msgstr "공식이 지정되지 않았습니다."
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Couldn't parse formula: {error_msg}"
+msgstr "공식 : {error_msg} 을 분석할 수 없습니다."
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Error while rendering preview"
+msgstr "미리보기 실행 중 오류 발생"
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Sorry, couldn't parse formula"
+msgstr "죄송합니다. 공식을 분석할 수 없습니다."
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "{input_type}: unexpected tag {tag_name}"
+msgstr "{input_type}: 적절하지 않은 태그 {tag_name}"
+
+#. Translators: a "tag" is an XML element, such as "<b>" in HTML
+#: common/lib/capa/capa/inputtypes.py
+msgid "Expected a {expected_tag} tag; got {given_tag} instead"
+msgstr "{given_tag} 대신  {expected_tag} 태그를 입력하세요."
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "Correct"
+msgstr "정답"
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "Incorrect"
+msgstr "오답"
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "Error {err} in evaluating hint function {hintfn}."
+msgstr "힌트  {hintfn} 기능 평가 중 오류 {err}"
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "(Source code line unavailable)"
+msgstr "(소스 코드 라인을 이용할 수 없습니다.)"
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "See XML source line {sourcenum}."
+msgstr "XML 소스 라인  {sourcenum} 보기"
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "JavaScript Input"
+msgstr "자바스크립트 입력"
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "Execution of unsafe Javascript code is not allowed."
+msgstr "안전하지 않은 자바스크립트 코드의 실행은 허용되지 않습니다."
+
+#: common/lib/capa/capa/responsetypes.py
+#: cms/templates/widgets/problem-edit.html
+msgid "Checkboxes"
+msgstr "체크박스"
+
+#: common/lib/capa/capa/responsetypes.py
+#: cms/templates/widgets/problem-edit.html
+msgid "Multiple Choice"
+msgstr "선다형 문항"
+
+#. Translators: 'shuffle' and 'answer-pool' are attribute names and should not
+#. be translated.
+#: common/lib/capa/capa/responsetypes.py
+msgid "Do not use shuffle and answer-pool at the same time"
+msgstr "셔플과 answer-pool을 동시에 이용하면 안 됩니다."
+
+#. Translators: 'answer-pool' is an attribute name and should not be
+#. translated.
+#: common/lib/capa/capa/responsetypes.py
+msgid "answer-pool value should be an integer"
+msgstr "answer-pool 값은 정수형이어야 합니다"
+
+#. Translators: 'Choicegroup' is an input type and should not be translated.
+#: common/lib/capa/capa/responsetypes.py
+msgid "Choicegroup must include at least 1 correct and 1 incorrect choice"
+msgstr "선택지는 최소 1개의 정답과 최소 1개의 오답을 포함해야 합니다."
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "True/False Choice"
+msgstr "True/False 선택형 문제"
+
+#: common/lib/capa/capa/responsetypes.py
+#: cms/templates/widgets/problem-edit.html
+msgid "Dropdown"
+msgstr "드롭다운"
+
+#: common/lib/capa/capa/responsetypes.py
+#: cms/templates/widgets/problem-edit.html
+msgid "Numerical Input"
+msgstr "수치 입력"
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "There was a problem with the staff answer to this problem."
+msgstr "이 문제에 대해 관리자가 답변하는 데에 오류가 생겼습니다."
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "Could not interpret '{student_answer}' as a number."
+msgstr "'{student_answer}' 를 숫자로 해석할 수 없습니다."
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "You may not use variables ({bad_variables}) in numerical problems."
+msgstr "변수 ({bad_variables})를  수식 문제에 사용할 수 없습니다."
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "factorial function evaluated outside its domain:'{student_answer}'"
+msgstr "계승함수가 영역외에서 계산되었습니다:'{student_answer}'"
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "Invalid math syntax: '{student_answer}'"
+msgstr "수식 입력문에 오류가 발생했습니다. '{student_answer}'"
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "You may not use complex numbers in range tolerance problems"
+msgstr "범위지정 문제에서는 복소수를 사용할 수 없습니다."
+
+#. Translators: This is an error message for a math problem. If the instructor
+#. provided a
+#. boundary (end limit) for a variable that is a complex number (a + bi), this
+#. message displays.
+#: common/lib/capa/capa/responsetypes.py
+msgid ""
+"There was a problem with the staff answer to this problem: complex boundary."
+msgstr "이 문제에 대해 관리자가 답변하는 데에 오류가 생겼습니다."
+
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is an error message for a math problem. If the instructor
+#. did not
+#. provide a boundary (end limit) for a variable, this message displays.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is listed as the duration for a video that has not
+#. yet reached the point in its processing by the servers where its
+#. duration is determined.
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is listed as the duration for a video that has not
@@ -7212,6 +8863,70 @@ msgstr "텍스트 입력"
 msgid "error"
 msgstr "오류"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: Separator used in StringResponse to display multiple answers.
+#. Example: "Answer: Answer_1 or Answer_2 or Answer_3".
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this is the last choice of a number of choices of how to log
+#. in
+#. to the site.
+#: common/lib/capa/capa/responsetypes.py lms/templates/login.html
+#: lms/templates/register-form.html lms/templates/course_modes/choose.html
+#: themes/edx.org/lms/templates/course_modes/choose.html
+#: themes/stanford-style/lms/templates/register-form.html
+#: lms/templates/student_account/hinted_login.underscore
+#: lms/templates/student_account/institution_login.underscore
+#: lms/templates/student_account/institution_register.underscore
+msgid "or"
+msgstr "또는"
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "Custom Evaluated Script"
+msgstr "커스텀 평가 스크립트"
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "error getting student answer from {student_answers}"
+msgstr "{student_answers} 학습자 답안을 가져오는 과정에서 오류가 발생했습니다."
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "No answer entered!"
+msgstr "답이 입력되지 않았습니다!"
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "CustomResponse: check function returned an invalid dictionary!"
+msgstr "CustomResponse: check function returned an invalid dictionary!"
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "Symbolic Math Input"
+msgstr "기호수식 입력"
+
+#. Translators: 'SymbolicResponse' is a problem type and should not be
+#. translated.
+#: common/lib/capa/capa/responsetypes.py
+msgid "An error occurred with SymbolicResponse. The error was: {error_msg}"
+msgstr "SymbolicResponse에서 오류가 발생했습니다. 오류: {error_msg} "
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "Code Input"
+msgstr "코드 입력"
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "No answer provided."
+msgstr "답이 입력되지 않았습니다."
+
+#: common/lib/capa/capa/responsetypes.py
+msgid "Error: No grader has been set up for this problem."
+msgstr "오류: 문제의 채점자가 설정되지 않았습니다. "
+
+#: common/lib/capa/capa/responsetypes.py
+msgid ""
+"Unable to deliver your submission to grader (Reason: {error_msg}). Please "
+"try again later."
+msgstr "과제를 채점자에게 전달할 수 없습니다. (원인:  {error_msg}). 나중에 다시 시도해주십시오."
+
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'grader' refers to the edX automatic code grader.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: Separator used in StringResponse to display multiple answers.
 #. Example: "Answer: Answer_1 or Answer_2 or Answer_3".
@@ -8292,6 +10007,13 @@ msgstr "CCX 활성화"
 #. a role created by a course Instructor to enable a person (the "Coach") to
 #. manage the custom course for
 #. his students.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: Custom Courses for edX (CCX) is an edX feature for re-using
+#. course content. CCX Coach is
+#. a role created by a course Instructor to enable a person (the "Coach") to
+#. manage the custom course for
+#. his students.
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
 "Allow course instructors to assign CCX Coach roles, and allow coaches to "
@@ -8653,6 +10375,7 @@ msgstr "both"
 msgid "About"
 msgstr "소개"
 
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
@@ -9349,6 +11072,10 @@ msgstr "아이디를 요청합니다."
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is used to request the user's username for a third party
 #. service.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is used to request the user's username for a third party
+#. service.
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid "Select True to request the user's username."
 msgstr ""
@@ -9357,6 +11084,10 @@ msgstr ""
 msgid "Request user's email"
 msgstr "이용자 이메일을 요청합니다."
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is used to request the user's email for a third party
+#. service.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is used to request the user's email for a third party
 #. service.
@@ -9635,6 +11366,10 @@ msgstr "문제가 발생한 콘텐츠 그룹의 id를 입력하십시오. "
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: DO NOT translate the words in quotes here, they are
 #. specific words for the acceptable values.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: DO NOT translate the words in quotes here, they are
+#. specific words for the acceptable values.
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid ""
 "Specify when the Show Answer button appears for each problem. Valid values "
@@ -9645,6 +11380,10 @@ msgstr ""
 "\"attempted\", \"closed\", \"finished\", \"past_due\", "
 "\"correct_or_past_due\", 그리고 \"never\"입니다."
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: DO NOT translate the words in quotes here, they are
+#. specific words for the acceptable values.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: DO NOT translate the words in quotes here, they are
 #. specific words for the acceptable values.
@@ -10571,6 +12310,10 @@ msgstr ""
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
 #. Please do not translate any of these trademarks and company names.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
+#. Please do not translate any of these trademarks and company names.
 #: lms/djangoapps/branding/api.py
 msgid ""
 "© {org_name}.  All rights reserved except where noted.  EdX, Open edX and "
@@ -10580,6 +12323,13 @@ msgstr ""
 "© {org_name}. All rights reserved except where noted. EdX, Open edX and the "
 "edX and Open EdX logos are registered trademarks or trademarks of edX Inc. "
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Open edX' is a brand, please keep this untranslated.
+#. See http://openedx.org for more information.
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Open edX' is a brand, please keep this untranslated. See
+#. http://openedx.org for more information.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Open edX' is a brand, please keep this untranslated.
 #. See http://openedx.org for more information.
@@ -10817,6 +12567,26 @@ msgstr "사이트맵"
 msgid "Terms of Service & Honor Code"
 msgstr "서비스 및 명예 과정 규정 "
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: A 'Privacy Policy' is a legal document/statement describing a
+#. website's use of personal information
+#: lms/djangoapps/branding/api.py lms/djangoapps/certificates/views/webview.py
+#: cms/templates/widgets/footer.html
+#: lms/templates/static_templates/privacy.html
+#: themes/red-theme/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/tos.html
+msgid "Privacy Policy"
+msgstr "개인정보 보호 정책"
+
+#: lms/djangoapps/branding/api.py
+msgid "Accessibility Policy"
+msgstr "접근성 정책"
+
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is a legal document users must agree to
+#. in order to register a new account.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: A 'Privacy Policy' is a legal document/statement describing a
 #. website's use of personal information
@@ -11710,6 +13480,10 @@ msgstr "진행 상황"
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Textbooks' refers to the tab in the course that leads to the
 #. course' textbooks
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Textbooks' refers to the tab in the course that leads to the
+#. course' textbooks
 #: lms/djangoapps/courseware/tabs.py cms/templates/textbooks.html
 #: cms/templates/widgets/header.html
 msgid "Textbooks"
@@ -12055,7 +13829,18 @@ msgstr "교재"
 #. "$".
 #. This string would look like this when all variables are in:
 #. "$500.00"
-#: lms/djangoapps/courseware/views.py
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This will look like '$50', where {currency_symbol} is a symbol
+#. such as '$' and {price} is a
+#. numerical amount in that currency. Adjust this display as needed for your
+#. language.
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: currency_symbol is a symbol indicating type of currency, ex
+#. "$".
+#. This string would look like this when all variables are in:
+#. "$500.00"
+#: lms/djangoapps/courseware/views/views.py
 #: lms/templates/shoppingcart/shopping_cart.html
 #: lms/djangoapps/courseware/views.py
 msgid "{currency_symbol}{price}"
@@ -13314,6 +15099,10 @@ msgstr "초기화"
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is a past-tense verb that is inserted into task progress
+#. messages as {action}.
 #: lms/djangoapps/instructor_task/tasks.py
 #: lms/templates/wiki/plugins/attachments/index.html wiki/models/article.py
 msgid "deleted"
@@ -13582,6 +15371,10 @@ msgstr "이 모듈이 사용하는 형식 (어느 채점자에게 적용할 지�
 msgid "Course Chrome"
 msgstr ""
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: DO NOT translate the words in quotes here, they are
+#. specific words for the acceptable values.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: DO NOT translate the words in quotes here, they are
 #. specific words for the acceptable values.
@@ -15124,6 +16917,10 @@ msgstr "접수한 사진 인증"
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is the website name of www.facebook.com.  Please
 #. translate this the way that Facebook advertises in your language.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the website name of www.facebook.com.  Please
+#. translate this the way that Facebook advertises in your language.
 #: lms/envs/common.py lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Facebook"
 msgstr "Facebook"
@@ -15132,6 +16929,10 @@ msgstr "Facebook"
 msgid "Like {platform_name} on Facebook"
 msgstr "Facebook에서 {platform_name} 좋아요하기"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the website name of www.twitter.com.  Please
+#. translate this the way that Twitter advertises in your language.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This is the website name of www.twitter.com.  Please
 #. translate this the way that Twitter advertises in your language.
@@ -15610,6 +17411,10 @@ msgstr "미리보기"
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a control to allow users to exit out of this modal
 #. interface (a menu or piece of UI that takes the full focus of the screen)
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a control to allow users to exit out of this modal
+#. interface (a menu or piece of UI that takes the full focus of the screen)
 #: lms/templates/wiki/edit.html lms/templates/wiki/history.html
 #: lms/templates/wiki/includes/cheatsheet.html lms/templates/dashboard.html
 #: lms/templates/forgot_password_modal.html lms/templates/help_modal.html
@@ -15638,6 +17443,10 @@ msgstr "닫기"
 msgid "Wiki Preview"
 msgstr "위키 미리보기"
 
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this text gives status on if the modal interface (a menu or
+#. piece of UI that takes the full focus of the screen) is open or not
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this text gives status on if the modal interface (a menu or
 #. piece of UI that takes the full focus of the screen) is open or not
@@ -16595,6 +18404,12 @@ msgstr "username@domain.com"
 #. below a field meant to hold the user's email address.
 #. Translators: These instructions appear on the password reset form,
 #. immediately below a field meant to hold the user's email address.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: These instructions appear on the login form, immediately
+#. below a field meant to hold the user's email address.
+#. Translators: These instructions appear on the password reset form,
+#. immediately below a field meant to hold the user's email address.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "The email address you used to register with {platform_name}"
 msgstr "{platform_name} 회원 가입 시 입력한 이메일 주소"
@@ -16603,6 +18418,10 @@ msgstr "{platform_name} 회원 가입 시 입력한 이메일 주소"
 msgid "Remember me"
 msgstr "로그인 상태 유지"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This message is shown to users who attempt to create a new
+#. account using an email address associated with an existing account.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This message is shown to users who attempt to create a new
 #. account using an email address associated with an existing account.
@@ -16791,6 +18610,10 @@ msgstr "{email_address} 이미 사용중인 이메일입니다.  다른 이메�
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This message is shown to users who attempt to create a new
 #. account using a username associated with an existing account.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This message is shown to users who attempt to create a new
+#. account using a username associated with an existing account.
 #: openedx/core/djangoapps/user_api/views.py
 msgid ""
 "It looks like {username} belongs to an existing account. Try again with a "
@@ -16803,6 +18626,11 @@ msgstr "{username} 은 이미 사용중인 아이디입니다. 다른 아이디�
 msgid "Jane Doe"
 msgstr "홍길동"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: These instructions appear on the registration form,
+#. immediately
+#. below a field meant to hold the user's full name.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: These instructions appear on the registration form,
 #. immediately
@@ -17037,6 +18865,11 @@ msgstr ""
 #. Translators: These instructions appear on the registration form,
 #. immediately
 #. below a field meant to hold the user's public username.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: These instructions appear on the registration form,
+#. immediately
+#. below a field meant to hold the user's public username.
 #: openedx/core/djangoapps/user_api/views.py
 msgid ""
 "The name that will identify you in your courses - {bold_start}(cannot be "
@@ -17049,6 +18882,10 @@ msgstr "영문/숫자로 이루어진 아이디 -  {bold_start}(변경 불가){b
 msgid "JaneDoe"
 msgstr "HongGilDong"
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This label appears above a field on the registration form
+#. meant to hold the user's mailing address.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: This label appears above a field on the registration form
 #. meant to hold the user's mailing address.
@@ -17312,10 +19149,22 @@ msgstr "국가를 선택하십시오"
 #. in order to register a new account.
 #. Translators: "Terms of service" is a legal document users must agree to
 #. in order to register a new account.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: "Terms of Service" is a legal document users must agree to
+#. in order to register a new account.
+#. Translators: "Terms of service" is a legal document users must agree to
+#. in order to register a new account.
 #: openedx/core/djangoapps/user_api/views.py
 msgid "I agree to the {platform_name} {terms_of_service}."
 msgstr "{platform_name}의 {terms_of_service}에 동의합니다. "
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: "Terms of Service" is a legal document users must agree to
+#. in order to register a new account.
+#. Translators: "Terms of service" is a legal document users must agree to
+#. in order to register a new account.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: "Terms of Service" is a legal document users must agree to
 #. in order to register a new account.
@@ -17887,6 +19736,9 @@ msgstr "마지막 관리자를 제거할 수 없습니다. 다른 관리자를 �
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
 #. Translators: This is the status of an active video upload
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
+#. Translators: This is the status of an active video upload
 #: cms/djangoapps/contentstore/views/videos.py cms/templates/import.html
 msgid "Uploading"
 msgstr "업로딩"
@@ -18195,6 +20047,9 @@ msgstr "학습 시간 및 선수 강좌"
 msgid "Details"
 msgstr "세부사항"
 
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: this is a verb describing the action of viewing more details
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: this is a verb describing the action of viewing more details
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
@@ -18783,6 +20638,10 @@ msgstr ""
 #. Translators: 'Open edX' is a registered trademark, please keep this
 #. untranslated. See http://open.edx.org for more information.
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: 'Open edX' is a registered trademark, please keep this
+#. untranslated. See http://open.edx.org for more information.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Open edX' is a brand, please keep this untranslated. See
 #. http://openedx.org for more information.
 #: lms/templates/index.html
@@ -18922,6 +20781,7 @@ msgstr ""
 msgid "Account Preferences"
 msgstr "계정 설정"
 
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
@@ -19188,6 +21048,7 @@ msgstr ""
 msgid "The following errors occurred while processing your registration:"
 msgstr "가입 처리하는 동안 다음 오류가 발생하였습니다:"
 
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
@@ -21946,6 +23807,7 @@ msgstr ""
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. Translators: provider_name is the name of a credit provider or university
 #. (e.g. State University)
 #: lms/templates/dashboard/_dashboard_credit_info.html
@@ -21958,6 +23820,12 @@ msgstr ""
 msgid "View Details"
 msgstr ""
 
+#. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+#. Translators: link_to_provider_site is a link to an external webpage. The
+#. text of the link will be the name of a credit provider, such as 'State
+#. University' or 'Happy Fun Company'. provider_name is the name of credit
+#. provider.
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
 #. Translators: link_to_provider_site is a link to an external webpage. The
 #. text of the link will be the name of a credit provider, such as 'State
@@ -22063,6 +23931,7 @@ msgstr ""
 msgid "View Credit"
 msgstr ""
 
+#. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
 #. #-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
@@ -29892,6 +31761,12 @@ msgstr "업데이트를 받으세요"
 msgid "Toggle Notifications Setting"
 msgstr "통지 설정 전환"
 
+#: common/static/common/templates/discussion/discussion-home.underscore
+msgid ""
+"Check this box to receive an email digest once a day notifying you about "
+"new, unread activity from posts you are following."
+msgstr "여기에 체크하시면 구독 게시물에 해당하는 읽지않은 글, 새로운 글에 대해서 하루에 한번 이메일로 알림을 받으실수 있습니다."
+
 #: common/static/common/templates/discussion/forum-action-answer.underscore
 #: test_root/staticfiles/common/templates/discussion/forum-action-answer.underscore
 #: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/forum-action-answer.underscore
@@ -37001,7 +38876,10 @@ msgid "Randomized Content Block"
 msgstr "무작위 콘텐츠 블럭"
 
 msgid "Google Calendar"
-msgstr "구글 달력"
+msgstr "Google 캘린더"
+
+msgid "Google Document"
+msgstr "Google 문서"
 
 msgid ""
 "The calendar view that students see by default. A student can change this "
