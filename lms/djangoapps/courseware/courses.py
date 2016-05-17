@@ -487,7 +487,7 @@ def get_courses_by_kocw(user, domain=None):
 
     courses = [c for c in courses if has_access(user, permission_name, c)]
 
-    courses = sorted(courses, key=lambda course: course.number)
+    # courses = sorted(courses, key=lambda course: course.number)
 
     return courses
 
