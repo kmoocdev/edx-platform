@@ -97,7 +97,7 @@
   .action-button {
     @include transition(border .5s linear 0s);
     @include box-sizing(border-box);
-    display: inline-block;
+    display: inline-block !important;
     border: 1px solid transparent;
     border-radius: ($baseline/4);
     color: $gray-l1;
