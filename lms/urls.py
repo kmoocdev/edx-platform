@@ -309,6 +309,8 @@ if settings.COURSEWARE_ENABLED:
         # url(r'^openapi3/?$', 'courseware.views.openapi3', name="openapi3"),
         # url(r'^openapi4/?$', 'courseware.views.openapi4', name="openapi4"),
         url(r'^schools/?$', 'courseware.views.schools', name="schools"),
+        url(r'^cert_check/?$', 'courseware.views.cert_check', name="cert_check"),
+        url(r'^cert_check_id/?$', 'courseware.views.cert_check_id', name="cert_check_id"),
 
         # url(r'^school/haewoondaex?$', 'courseware.views.haewoondaex', name="school"),
         url(r'^school/(?P<univ_id>.*?)$', 'courseware.views.haewoondaex', name="school"),
