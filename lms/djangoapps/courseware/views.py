@@ -89,6 +89,10 @@ from eventtracking import tracker
 import analytics
 from courseware.url_helpers import get_redirect_url
 
+import MySQLdb as mdb
+import sys
+import json
+
 log = logging.getLogger("edx.courseware")
 
 template_imports = {'urllib': urllib}
@@ -181,6 +185,39 @@ def openapi3(request):
 def openapi4(request):
     return render_to_response("openapi4.html")
 """
+
+@ensure_csrf_cookie
+@cache_if_anonymous()
+def cert_check(request):
+    return render_to_response("cert_check.html")
+
+def cert_check_id(request):
+    uuid = request.POST['uuid']
+
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
+    con = mdb.connect(settings.DATABASES.get('default').get('HOST'), settings.DATABASES.get('default').get('USER'), settings.DATABASES.get('default').get('PASSWORD'), settings.DATABASES.get('default').get('NAME'));
+    query = """
+         select concat('/certificates/user/',user_id,'/course/',course_id) certUrl from certificates_generatedcertificate where verify_uuid = '"""+uuid+"""';
+    """
+    print 'cert_check uuid, query', uuid, query
+
+    result = []
+    with con:
+        cur = con.cursor();
+        cur.execute("set names utf8")
+        cur.execute(query)
+        rows = cur.fetchall()
+        columns = [desc[0] for desc in cur.description]
+
+        for row in rows:
+            row = dict(zip(columns, row))
+            result.append(row)
+
+    cur.close()
+    con.close()
+
+    return HttpResponse(json.dumps(result))
 
 @ensure_csrf_cookie
 @cache_if_anonymous()
