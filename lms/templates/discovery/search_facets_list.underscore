@@ -49,12 +49,6 @@
 
         <ul data-facet="search_string" class="facet-list">
             <li data-facet="search_string">
-                <button data-value="전기전자" data-text="전기전자" class="facet-option discovery-button">전기·전자<span class="count">1</span></button>
-            </li>
-        </ul>
-
-        <ul data-facet="search_string" class="facet-list">
-            <li data-facet="search_string">
                 <button data-value="생물화학환경" data-text="생물화학환경" class="facet-option discovery-button">생물·화학·환경<span class="count">2</span></button>
             </li>
         </ul>
