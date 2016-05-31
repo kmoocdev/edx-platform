@@ -247,7 +247,7 @@ header.global .nav-global li.deactive{display:none;}
 
 
 /* notice css */
-#notice{background-color: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255);}
+#notice{background-color: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255); display: none;}
 #notice .inner{max-width: 1200px;margin: 3px auto; display: none; padding: 3px; display: flex; align-items: center;}
 
 #notice .title{float: left;}

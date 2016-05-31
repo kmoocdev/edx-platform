@@ -327,6 +327,9 @@ if (
                 ,function(data){
                     setTimeout(function(){
                         if(data.length && data.length > 0){
+                            console.log("notice exists");
+                            $("#notice").show();
+
                             for(var i=0; i<data.length; i++){
 
                                 if(i > 1)
@@ -392,7 +395,9 @@ if (
                                 showMore();
                             });
                         }
-
+                        else {
+                            console.log("notice not exists");
+                        }
                         showMore();
                     },300);
         }, "json");
@@ -440,7 +445,7 @@ if (
 
   </header>
 
-    <div id="notice" style="display: ${'none' if LANG == 'en' else 'block'};">
+    <div id="notice">
         <div class="inner">
             <span class="title">
                 <img src="/static/images/tit_notice.png">
