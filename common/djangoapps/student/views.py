@@ -1272,6 +1272,7 @@ def login_user(request, error=""):  # pylint: disable-msg=too-many-statements,un
             # to perform logging on successful logins.
             login(request, user)
             if request.POST.get('remember') == 'true':
+                request.session['ISREMEMBER'] = True
                 request.session.set_expiry(604800)
                 log.debug("Setting user session to never expire")
             else:

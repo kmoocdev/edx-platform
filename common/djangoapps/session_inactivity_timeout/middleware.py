@@ -30,6 +30,9 @@ class SessionInactivityTimeout(object):
         timeout_in_seconds = getattr(settings, "SESSION_INACTIVITY_TIMEOUT_IN_SECONDS", None)
 
         # Do we have this feature enabled?
+        if 'ISREMEMBER' in request.session and timeout_in_seconds:
+            timeout_in_seconds = 43200
+
         if timeout_in_seconds:
             # what time is it now?
             utc_now = datetime.utcnow()
