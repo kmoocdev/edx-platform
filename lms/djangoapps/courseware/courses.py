@@ -458,6 +458,13 @@ def get_courses_by_kocw(user, domain=None):
 
     for c in courses_temp:
         # print 'id ##############################', c.id, type(c.id)
+
+        if c.start is not None and c.end is not None and c.start > c.end:
+            continue
+
+        if c.enrollment_end is not None and c.has_ended() and c.enrollment_end < datetime.now(UTC()):
+            continue
+
         if c.enrollment_start is not None and datetime.now(UTC()) >= c.enrollment_start and c.id is not None and 'KOCW' in str(c.id):
             courses.append(c)
 
