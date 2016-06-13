@@ -1,0 +1,1254 @@
+# edX translation file
+# Copyright (C) 2016 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# jeon <bluerespect@nate.com>, 2014-2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# Sam Ryoo <samryoo@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: edx-platform\n"
+"Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+"POT-Creation-Date: 2016-04-15 11:04+0000\n"
+"PO-Revision-Date: 2016-04-15 11:07+0000\n"
+"Last-Translator: Ned Batchelder <ned@edx.org>\n"
+"Language-Team: Korean (Korea) (http://www.transifex.com/open-edx/edx-platform/language/ko_KR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+"Language: ko_KR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: cms/templates/js/access-editor.underscore
+msgid "Limit Access"
+msgstr ""
+
+#: cms/templates/js/access-editor.underscore
+msgid ""
+"Select a prerequisite subsection and enter a minimum score percentage to "
+"limit access to this subsection."
+msgstr ""
+
+#: cms/templates/js/access-editor.underscore
+msgid "Prerequisite:"
+msgstr ""
+
+#: cms/templates/js/access-editor.underscore
+msgid "No prerequisite"
+msgstr ""
+
+#: cms/templates/js/access-editor.underscore
+msgid "Minimum Score:"
+msgstr ""
+
+#: cms/templates/js/access-editor.underscore
+msgid "The minimum score percentage must be a whole number between 0 and 100."
+msgstr ""
+
+#: cms/templates/js/access-editor.underscore
+msgid "Use as a Prerequisite"
+msgstr ""
+
+#: cms/templates/js/access-editor.underscore
+msgid "Make this subsection available as a prerequisite to other content"
+msgstr ""
+
+#: cms/templates/js/active-video-upload-list.underscore
+msgid "Drag and drop or click here to upload video files."
+msgstr "파일을 끌고 오거나 여기를 클릭하여 동영상을 업로드하세요."
+
+#: cms/templates/js/active-video-upload-list.underscore
+msgid "Active Uploads"
+msgstr ""
+
+#: cms/templates/js/active-video-upload.underscore
+msgid "status"
+msgstr "상태"
+
+#: cms/templates/js/add-xblock-component-button.underscore
+msgid "Add Component:"
+msgstr ""
+
+#: cms/templates/js/add-xblock-component-menu-problem.underscore
+#: cms/templates/js/add-xblock-component-menu.underscore
+msgid "%(type)s Component Template Menu"
+msgstr ""
+
+#: cms/templates/js/add-xblock-component-menu-problem.underscore
+msgid "Common Problem Types"
+msgstr "일반 문제 유형"
+
+#: cms/templates/js/add-xblock-component-menu-problem.underscore
+msgid "Advanced"
+msgstr "고급"
+
+#: cms/templates/js/add-xblock-component.underscore
+msgid "Add New Component"
+msgstr "신규 구성요소 추가"
+
+#: cms/templates/js/advanced_entry.underscore
+msgid "Deprecated"
+msgstr "추천하지 않습니다."
+
+#: cms/templates/js/asset-library.underscore
+msgid "List of uploaded files and assets in this course"
+msgstr "업로드한 파일 및 자료 목록"
+
+#: cms/templates/js/asset-library.underscore
+msgid "Preview"
+msgstr "미리보기"
+
+#: cms/templates/js/asset-library.underscore
+#: cms/templates/js/asset-library.underscore
+msgid "- Sortable"
+msgstr "- 정렬"
+
+#: cms/templates/js/asset-library.underscore
+msgid "Show All"
+msgstr ""
+
+#: cms/templates/js/asset-library.underscore
+msgid "Other"
+msgstr "기타"
+
+#: cms/templates/js/asset-library.underscore
+#: cms/templates/js/previous-video-upload-list.underscore
+msgid "Date Added"
+msgstr "추가된 날짜"
+
+#: cms/templates/js/asset-library.underscore
+msgid "URL"
+msgstr "URL"
+
+#: cms/templates/js/asset-library.underscore
+msgid "You haven't added any assets to this course yet."
+msgstr "아직 콘텐츠를 추가하지 않았습니다."
+
+#: cms/templates/js/asset-library.underscore
+msgid "Upload your first asset"
+msgstr "첫 파일을 올려보세요"
+
+#: cms/templates/js/asset-upload-modal.underscore
+msgid "close"
+msgstr "닫기"
+
+#: cms/templates/js/asset-upload-modal.underscore
+msgid "Upload New File"
+msgstr "파일 업로드"
+
+#: cms/templates/js/asset.underscore
+msgid "No description available"
+msgstr "사용 가능한 설명이 없습니다"
+
+#: cms/templates/js/asset.underscore
+msgid "Open/download this file"
+msgstr "파일 열기/다운로드 "
+
+#: cms/templates/js/asset.underscore
+msgid "Studio:"
+msgstr "스튜디오:"
+
+#: cms/templates/js/asset.underscore
+msgid "Web:"
+msgstr "Web:"
+
+#: cms/templates/js/asset.underscore
+msgid "Delete this asset"
+msgstr "삭제"
+
+#: cms/templates/js/asset.underscore
+msgid "Lock this asset"
+msgstr "asset 잠그기"
+
+#: cms/templates/js/asset.underscore
+msgid "Lock/unlock file"
+msgstr "파일 잠그기/잠금 해제"
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/content-group-details.underscore
+#: cms/templates/js/group-configuration-details.underscore
+msgid "ID"
+msgstr "아이디"
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+msgid "Certificate Details"
+msgstr "이수증 상세정보"
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+msgid "Course Title"
+msgstr ""
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+msgid "Course Title Override"
+msgstr "강좌 제목 바꾸기"
+
+#: cms/templates/js/certificate-details.underscore
+msgid "Course Number"
+msgstr "강좌 번호"
+
+#: cms/templates/js/certificate-details.underscore
+msgid "Course Number Override"
+msgstr ""
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+msgid "Certificate Signatories"
+msgstr "이수증의 서명인"
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+msgid ""
+"It is strongly recommended that you include four or fewer signatories. If "
+"you include additional signatories, preview the certificate in Print View to"
+" ensure the certificate will print correctly on one page."
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore
+#: cms/templates/js/content-group-editor.underscore
+#: cms/templates/js/edit-textbook.underscore
+#: cms/templates/js/group-configuration-editor.underscore
+msgid "error.message"
+msgstr "오류 메시지"
+
+#: cms/templates/js/certificate-editor.underscore
+msgid "Certificate Information"
+msgstr "이수증 정보"
+
+#: cms/templates/js/certificate-editor.underscore
+msgid "Certificate Name"
+msgstr "이수증 이름"
+
+#: cms/templates/js/certificate-editor.underscore
+#: cms/templates/js/certificate-editor.underscore
+msgid "Name of the certificate"
+msgstr "이수증 이름"
+
+#: cms/templates/js/certificate-editor.underscore
+#: cms/templates/js/certificate-editor.underscore
+msgid "Description of the certificate"
+msgstr "이수증 내용"
+
+#: cms/templates/js/certificate-editor.underscore
+msgid "Course title"
+msgstr "강좌명"
+
+#: cms/templates/js/certificate-editor.underscore
+msgid ""
+"Specify an alternative to the official course title to display on "
+"certificates. Leave blank to use the official course title."
+msgstr "이수증에 표시될 공식적인 강좌명의 다른 명칭을 쓰세요. 다른 명칭이 필요 없으면 빈칸으로 두세요."
+
+#: cms/templates/js/certificate-editor.underscore
+msgid "Add Additional Signatory"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore
+msgid "(Add signatories for a certificate)"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore
+#: cms/templates/js/content-group-editor.underscore
+#: cms/templates/js/group-configuration-editor.underscore
+msgid "Create"
+msgstr "만들기"
+
+#: cms/templates/js/certificate-web-preview.underscore
+msgid "Choose mode"
+msgstr "유형 선택하기"
+
+#: cms/templates/js/certificate-web-preview.underscore
+msgid "Preview Certificate"
+msgstr "이수증 미리보기"
+
+#: cms/templates/js/certificate-web-preview.underscore
+msgid "Activate"
+msgstr "활성화"
+
+#: cms/templates/js/certificate-web-preview.underscore
+msgid "Deactivate"
+msgstr "비활성화"
+
+#: cms/templates/js/container-message.underscore
+msgid ""
+"Caution: The last published version of this unit is live. By publishing "
+"changes you will change the student experience."
+msgstr "주의 : 가장 최근 버전으로 학습자가 보고 있는 내용입니다. "
+
+#: cms/templates/js/content-group-details.underscore
+#: cms/templates/js/content-group-editor.underscore
+msgid "Cannot delete when in use by a unit"
+msgstr "학습활동에서 사용될 때 삭제할 수 없습니다."
+
+#: cms/templates/js/content-group-details.underscore
+msgid "This content group is used in:"
+msgstr "콘텐츠 그룹이 다음에서 사용중입니다:"
+
+#: cms/templates/js/content-group-details.underscore
+msgid ""
+"This content group is not in use. Add a content group to any unit from the "
+"{linkStart}Course Outline{linkEnd}."
+msgstr ""
+
+#: cms/templates/js/content-group-details.underscore
+#: cms/templates/js/group-configuration-details.underscore
+msgid "Course Outline"
+msgstr "강좌 개요"
+
+#: cms/templates/js/content-group-editor.underscore
+msgid "Content Group Name"
+msgstr "콘텐츠 그룹 이름"
+
+#: cms/templates/js/content-group-editor.underscore
+msgid "Content Group ID"
+msgstr "콘텐츠 그룹 ID:"
+
+#: cms/templates/js/content-group-editor.underscore
+msgid "This is the name of the group"
+msgstr "그룹의 이름입니다."
+
+#: cms/templates/js/content-group-editor.underscore
+msgid "This content group is used in one or more units."
+msgstr "콘텐츠 그룹은 하나 이상의 학습활동에서 사용됩니다."
+
+#: cms/templates/js/course-outline.underscore
+msgid "Prerequisite: %(prereq_display_name)s"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore
+msgid "Contains staff only content"
+msgstr "운영팀만 볼 수 있습니다."
+
+#: cms/templates/js/course-outline.underscore
+msgid "Unpublished changes to live content"
+msgstr "게시하지 않은 수정안"
+
+#: cms/templates/js/course-outline.underscore
+msgid "Unpublished units will not be released"
+msgstr "게시하지 않은 학습활동으로, 공개되지 않을 것입니다."
+
+#: cms/templates/js/course-outline.underscore
+msgid "Unpublished changes to content that will release in the future"
+msgstr "게시하지 않은 수정안"
+
+#: cms/templates/js/course-outline.underscore
+msgid "Ungraded"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore
+msgid "Practice proctored Exam"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore
+msgid "Proctored Exam"
+msgstr "시험감독 평가"
+
+#: cms/templates/js/course-outline.underscore
+msgid "Timed Exam"
+msgstr "제한된 시간의 시험"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/xblock-outline.underscore
+msgid "Collapse/Expand this %(xblock_type)s"
+msgstr "%(xblock_type)s 접기/펼치기"
+
+#: cms/templates/js/course-outline.underscore
+msgid "Display Name"
+msgstr "표시될 이름"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/publish-xblock.underscore
+msgid "Publish"
+msgstr "게시"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/course-outline.underscore
+msgid "Configure"
+msgstr "설정"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/course-outline.underscore
+msgid "Drag to reorder"
+msgstr "재배열 위한 이동"
+
+#: cms/templates/js/course-outline.underscore
+msgid "Release Status:"
+msgstr "공개 상태:"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/publish-xblock.underscore
+#: cms/templates/js/xblock-outline.underscore
+msgid "Released:"
+msgstr "공개일시:"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/publish-xblock.underscore
+msgid "Scheduled:"
+msgstr "예정됨:"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/course-outline.underscore
+msgid "Graded as:"
+msgstr "과제 유형"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/course-outline.underscore
+msgid "Due:"
+msgstr "마감:"
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/xblock-outline.underscore
+msgid "You haven't added any content to this course yet."
+msgstr "강좌 콘텐츠가 없습니다."
+
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/course-outline.underscore
+#: cms/templates/js/xblock-outline.underscore
+#: cms/templates/js/xblock-outline.underscore
+msgid "Click to add a new %(xblock_type)s"
+msgstr "새로운 %(xblock_type)s 을 추가하기 위해 클릭하세요."
+
+#: cms/templates/js/course_grade_policy.underscore
+msgid "Assignment Type Name"
+msgstr "과제명"
+
+#: cms/templates/js/course_grade_policy.underscore
+msgid ""
+"The general category for this type of assignment, for example, Homework or "
+"Midterm Exam. This name is visible to learners."
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore
+msgid "Abbreviation"
+msgstr "성적 보고서 표시용 약자"
+
+#: cms/templates/js/course_grade_policy.underscore
+msgid ""
+"This short name for the assignment type (for example, HW or Midterm) appears"
+" next to assignments on a learner's Progress page."
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore
+msgid "Weight of Total Grade"
+msgstr "점수 가중치"
+
+#: cms/templates/js/course_grade_policy.underscore
+msgid ""
+"The weight of all assignments of this type as a percentage of the total "
+"grade, for example, 40. Do not include the percent symbol."
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore
+msgid "Total Number"
+msgstr "합계"
+
+#: cms/templates/js/course_grade_policy.underscore
+msgid ""
+"The number of subsections in the course that contain problems of this "
+"assignment type."
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore
+msgid "Number of Droppable"
+msgstr "삭제 횟수"
+
+#: cms/templates/js/course_grade_policy.underscore
+msgid ""
+"The number of assignments of this type that will be dropped. The lowest "
+"scoring assignments are dropped first."
+msgstr ""
+
+#: cms/templates/js/course_info_handouts.underscore
+msgid "Course Handouts"
+msgstr "학습 자료"
+
+#: cms/templates/js/course_info_handouts.underscore
+msgid "You have no handouts defined"
+msgstr "정의된 학습 자료가 없습니다."
+
+#: cms/templates/js/course_info_handouts.underscore
+msgid ""
+"There is invalid code in your content. Please check to make sure it is valid"
+" HTML."
+msgstr "올바르지 않은 HTML 코드가 있습니다. 올바른 HTML 코드로만 작성되었는지 확인해주세요."
+
+#: cms/templates/js/course_info_update.underscore
+msgid "Send push notification to mobile apps"
+msgstr "모바일 앱으로 푸시공지를 보냅니다."
+
+#: cms/templates/js/course_info_update.underscore
+msgid "Send notification to mobile apps"
+msgstr "모바일 앱으로 공지를 보냅니다."
+
+#: cms/templates/js/course_info_update.underscore
+msgid "Post"
+msgstr "게시하기"
+
+#: cms/templates/js/due-date-editor.underscore
+msgid "Due Date:"
+msgstr "제출 날짜:"
+
+#: cms/templates/js/due-date-editor.underscore
+msgid "Due Time in UTC:"
+msgstr "마감 시간"
+
+#: cms/templates/js/due-date-editor.underscore
+#: cms/templates/js/due-date-editor.underscore
+msgid "Clear Grading Due Date"
+msgstr "채점 기간 다시 설정하기"
+
+#: cms/templates/js/edit-chapter.underscore
+msgid "Chapter Name"
+msgstr "챕터 이름"
+
+#: cms/templates/js/edit-chapter.underscore
+msgid "provide the title/name of the chapter that will be used in navigating"
+msgstr "학습자가 검색할 수 있도록 챕터의 이름을 입력하세요."
+
+#: cms/templates/js/edit-chapter.underscore
+msgid "Chapter Asset"
+msgstr "챕터 별 파일"
+
+#: cms/templates/js/edit-chapter.underscore
+msgid "upload a PDF file or provide the path to a Studio asset file"
+msgstr "PDF 파일을 업로드하세요."
+
+#: cms/templates/js/edit-chapter.underscore
+msgid "Upload PDF"
+msgstr "PDF 업로드"
+
+#: cms/templates/js/edit-chapter.underscore
+msgid "delete chapter"
+msgstr "chapter 삭제하기"
+
+#: cms/templates/js/edit-textbook.underscore
+msgid "Textbook information"
+msgstr "교재 정보"
+
+#: cms/templates/js/edit-textbook.underscore
+msgid "Textbook Name"
+msgstr "교재명"
+
+#: cms/templates/js/edit-textbook.underscore
+msgid "Introduction to Cookie Baking"
+msgstr "제과 개론"
+
+#: cms/templates/js/edit-textbook.underscore
+msgid ""
+"provide the title/name of the text book as you would like your students to "
+"see it"
+msgstr "교재명을 입력하세요."
+
+#: cms/templates/js/edit-textbook.underscore
+msgid "Chapter information"
+msgstr "Chapter 정보"
+
+#: cms/templates/js/edit-textbook.underscore
+msgid "Add a Chapter"
+msgstr "챕터 추가"
+
+#: cms/templates/js/grading-editor.underscore
+msgid "Grading"
+msgstr "과제 평가"
+
+#: cms/templates/js/grading-editor.underscore
+msgid "Grade as:"
+msgstr "과제 유형"
+
+#: cms/templates/js/grading-editor.underscore
+msgid "Not Graded"
+msgstr "성적 미반영"
+
+#: cms/templates/js/group-configuration-details.underscore
+#: cms/templates/js/group-configuration-editor.underscore
+msgid "Cannot delete when in use by an experiment"
+msgstr "실험으로 사용될 때에는 지울 수 없습니다."
+
+#: cms/templates/js/group-configuration-details.underscore
+msgid "This Group Configuration is used in:"
+msgstr "이 그룹 설정은 이렇게 사용됩니다:"
+
+#: cms/templates/js/group-configuration-details.underscore
+msgid ""
+"This Group Configuration is not in use. Start by adding a content experiment"
+" to any Unit via the {linkStart}Course Outline{linkEnd}."
+msgstr ""
+
+#: cms/templates/js/group-configuration-editor.underscore
+msgid "Group Configuration information"
+msgstr "그룹 설정 정보"
+
+#: cms/templates/js/group-configuration-editor.underscore
+msgid "Group Configuration Name"
+msgstr "그룹 설정 이름"
+
+#: cms/templates/js/group-configuration-editor.underscore
+msgid "Group Configuration ID"
+msgstr "그룹 설정 ID"
+
+#: cms/templates/js/group-configuration-editor.underscore
+msgid "This is the Name of the Group Configuration"
+msgstr "그룹 설정에 대한 이름입니다."
+
+#: cms/templates/js/group-configuration-editor.underscore
+msgid "Name or short description of the configuration"
+msgstr "설정에 대한 짧은 설명 또는 이름입니다."
+
+#: cms/templates/js/group-configuration-editor.underscore
+msgid "This is the Description of the Group Configuration"
+msgstr "그룹 설정에 대한 설명입니다."
+
+#: cms/templates/js/group-configuration-editor.underscore
+msgid "Optional long description"
+msgstr "부가적인 긴 설명"
+
+#: cms/templates/js/group-configuration-editor.underscore
+msgid "Group information"
+msgstr "그룹 정보"
+
+#: cms/templates/js/group-configuration-editor.underscore
+msgid "Groups"
+msgstr "그룹들"
+
+#: cms/templates/js/group-configuration-editor.underscore
+msgid ""
+"Name of the groups that students will be assigned to, for example, Control, "
+"Video, Problems. You must have two or more groups."
+msgstr "학습자가 동영상, 문제 등에 속한 집단명.  둘 이상의 집단이 필요합니다."
+
+#: cms/templates/js/group-configuration-editor.underscore
+msgid "Add another group"
+msgstr "다른 집단 추가하기"
+
+#: cms/templates/js/group-configuration-editor.underscore
+msgid ""
+"This configuration is currently used in content experiments. If you make "
+"changes to the groups, you may need to edit those experiments."
+msgstr "이 구성은 현재 콘텐츠 실험에 사용됩니다. 당신이 그룹을 변경 한 경우 실험을 편집해야합니다."
+
+#: cms/templates/js/group-edit.underscore
+msgid "delete group"
+msgstr "집단 삭제"
+
+#: cms/templates/js/license-selector.underscore
+msgid "License Type"
+msgstr "라이센스 유형"
+
+#: cms/templates/js/license-selector.underscore
+msgid "Learn more about {license_name}"
+msgstr "{license_name} 더 알아보기"
+
+#: cms/templates/js/license-selector.underscore
+msgid "Options for {license_name}"
+msgstr "{license_name}을 위한 평가 기준"
+
+#: cms/templates/js/license-selector.underscore
+msgid "The following options are available for the {license_name} license."
+msgstr "{license_name} 라이센스에서 다음 선택사항이 가능합니다."
+
+#: cms/templates/js/license-selector.underscore
+msgid "License Display"
+msgstr "라이센스 표시"
+
+#: cms/templates/js/license-selector.underscore
+msgid ""
+"The following message will be displayed at the bottom of the courseware "
+"pages within your course:"
+msgstr "다음 메세지는 강좌 내용의 하단부에 나타납니다. "
+
+#: cms/templates/js/license-selector.underscore
+#: cms/templates/js/license-selector.underscore
+msgid "All Rights Reserved"
+msgstr "모든 저작권이 보호됩니다."
+
+#: cms/templates/js/license-selector.underscore
+msgid "Creative Commons licensed content, with terms as follow:"
+msgstr "Creative Commons 저작물인 콘텐츠로 다음의 조건을 따릅니다:"
+
+#: cms/templates/js/license-selector.underscore
+msgid "Some Rights Reserved"
+msgstr "일부 저작권 보호"
+
+#: cms/templates/js/list.underscore
+msgid "%(new_item_message)s"
+msgstr ""
+
+#: cms/templates/js/list.underscore
+msgid "New %(item_type)s"
+msgstr "신규 %(item_type)s "
+
+#: cms/templates/js/metadata-dict-entry.underscore
+#: cms/templates/js/metadata-list-entry.underscore
+#: cms/templates/js/video/metadata-translations-entry.underscore
+msgid "Add"
+msgstr "추가하기"
+
+#: cms/templates/js/metadata-dict-entry.underscore
+#: cms/templates/js/metadata-file-uploader-entry.underscore
+#: cms/templates/js/metadata-list-entry.underscore
+#: cms/templates/js/metadata-number-entry.underscore
+#: cms/templates/js/metadata-option-entry.underscore
+#: cms/templates/js/metadata-string-entry.underscore
+#: cms/templates/js/video/metadata-translations-entry.underscore
+msgid "Clear"
+msgstr "지우기"
+
+#: cms/templates/js/metadata-dict-entry.underscore
+#: cms/templates/js/metadata-file-uploader-entry.underscore
+#: cms/templates/js/metadata-list-entry.underscore
+#: cms/templates/js/metadata-number-entry.underscore
+#: cms/templates/js/metadata-option-entry.underscore
+#: cms/templates/js/metadata-string-entry.underscore
+#: cms/templates/js/video/metadata-translations-entry.underscore
+msgid "Clear Value"
+msgstr "값 초기화"
+
+#: cms/templates/js/metadata-file-uploader-item.underscore
+#: cms/templates/js/video/metadata-translations-item.underscore
+msgid "Replace"
+msgstr "바꾸기"
+
+#: cms/templates/js/metadata-file-uploader-item.underscore
+#: cms/templates/js/video/metadata-translations-item.underscore
+msgid "Upload"
+msgstr "업로드"
+
+#: cms/templates/js/metadata-file-uploader-item.underscore
+#: cms/templates/js/video/metadata-translations-item.underscore
+msgid "Download"
+msgstr "다운로드"
+
+#: cms/templates/js/no-textbooks.underscore
+msgid "You haven't added any textbooks to this course yet."
+msgstr "아직 교재를 추가하지 않으셨습니다."
+
+#: cms/templates/js/no-textbooks.underscore
+msgid "Add your first textbook"
+msgstr "첫 교재 추가하기"
+
+#: cms/templates/js/previous-video-upload-list.underscore
+msgid "Previous Uploads"
+msgstr "이전 업로드들"
+
+#: cms/templates/js/previous-video-upload-list.underscore
+msgid "Download available encodings (.csv)"
+msgstr "(.csv)으로 인코딩된 파일을 다운로드 가능합니다."
+
+#: cms/templates/js/previous-video-upload-list.underscore
+msgid "Duration"
+msgstr "지속기간"
+
+#: cms/templates/js/previous-video-upload-list.underscore
+msgid "Video ID"
+msgstr "동영상 ID"
+
+#: cms/templates/js/publish-history.underscore
+msgid "Never published"
+msgstr "게시되지 않았습니다."
+
+#: cms/templates/js/publish-history.underscore
+#: cms/templates/js/publish-xblock.underscore
+msgid "Last published %(last_published_date)s by %(publish_username)s"
+msgstr "%(publish_username)s가 마지막으로 게시한 날짜: %(last_published_date)s "
+
+#: cms/templates/js/publish-history.underscore
+#: cms/templates/js/staff-lock-editor.underscore
+msgid "message"
+msgstr "메세지"
+
+#: cms/templates/js/publish-history.underscore
+#: cms/templates/js/publish-xblock.underscore
+msgid "Previously published"
+msgstr "이전에 게시되었습니다."
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "Draft (Never published)"
+msgstr "초안 (게시된 적 없음)"
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "Visible to Staff Only"
+msgstr "운영팀에게만 공개"
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "Published and Live"
+msgstr "공개됨"
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "Published (not yet released)"
+msgstr "게시됨 (아직 공개되지 않음)"
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "Draft (Unpublished changes)"
+msgstr "수정안 (아직 게시되지 않음)"
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "Release:"
+msgstr "공개 날짜"
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "Publishing Status"
+msgstr "게시 상태"
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "Draft saved on %(last_saved_date)s by %(edit_username)s"
+msgstr "저장됨 : %(last_saved_date)s %(edit_username)s"
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "with %(release_date_from)s"
+msgstr "%(release_date_from)s와 "
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "Is Visible To:"
+msgstr "공개 설정 :"
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "Will Be Visible To:"
+msgstr "강좌 공개 대상:"
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "Staff Only"
+msgstr "운영팀 전용"
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "with %(section_or_subsection)s"
+msgstr "%(section_or_subsection)s와"
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "Staff and Students"
+msgstr "운영팀과 학습자"
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "Some content in this unit is visible only to particular content groups"
+msgstr "이 학습활동의 일부 내용은 특정 콘텐츠 그룹만 볼 수 있습니다."
+
+#: cms/templates/js/publish-xblock.underscore
+#: cms/templates/js/staff-lock-editor.underscore
+msgid "Hide from students"
+msgstr "학습자에게 감추기"
+
+#: cms/templates/js/publish-xblock.underscore
+msgid "Discard Changes"
+msgstr "변경 취소하기"
+
+#: cms/templates/js/release-date-editor.underscore
+msgid "Release Date and Time"
+msgstr "공개 날짜와 시간"
+
+#: cms/templates/js/release-date-editor.underscore
+msgid "Release Date:"
+msgstr "공개 날짜"
+
+#: cms/templates/js/release-date-editor.underscore
+msgid "Release Time in UTC:"
+msgstr "공개 시간"
+
+#: cms/templates/js/release-date-editor.underscore
+#: cms/templates/js/release-date-editor.underscore
+msgid "Clear Release Date/Time"
+msgstr "공개 날짜와 시간 초기화"
+
+#: cms/templates/js/show-textbook.underscore
+msgid "View Live"
+msgstr "적용 결과 보기"
+
+#: cms/templates/js/signatory-details.underscore
+#: cms/templates/js/signatory-editor.underscore
+msgid "Signatory"
+msgstr ""
+
+#: cms/templates/js/signatory-details.underscore
+msgid "Organization"
+msgstr "기관"
+
+#: cms/templates/js/signatory-details.underscore
+#: cms/templates/js/signatory-editor.underscore
+msgid "Signature Image"
+msgstr "서명 이미지"
+
+#: cms/templates/js/signatory-editor.underscore
+msgid "Certificate Signatory Configuration"
+msgstr "강좌 이수증 서명인 설정"
+
+#: cms/templates/js/signatory-editor.underscore
+msgid "Name "
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore
+msgid "Name of the signatory"
+msgstr "서명인 이름"
+
+#: cms/templates/js/signatory-editor.underscore
+msgid "The name of this signatory as it should appear on certificates."
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore
+msgid "Title "
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore
+msgid "Title of the signatory"
+msgstr "서명인의 지위"
+
+#: cms/templates/js/signatory-editor.underscore
+msgid ""
+"Titles more than 100 characters may prevent students from printing their "
+"certificate on a single page."
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore
+msgid "Organization "
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore
+msgid "Organization of the signatory"
+msgstr "서명인의 소속기관"
+
+#: cms/templates/js/signatory-editor.underscore
+msgid ""
+"The organization that this signatory belongs to, as it should appear on "
+"certificates."
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore
+msgid "Path to Signature Image"
+msgstr "서명이미지 경로"
+
+#: cms/templates/js/signatory-editor.underscore
+msgid "Image must be in PNG format"
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore
+msgid "Upload Signature Image"
+msgstr ""
+
+#: cms/templates/js/staff-lock-editor.underscore
+msgid "Student Visibility"
+msgstr "학습자 공개 설정"
+
+#: cms/templates/js/staff-lock-editor.underscore
+msgid ""
+"If the unit was previously published and released to students, any changes "
+"you made to the unit when it was hidden will now be visible to students."
+msgstr "비공개 상태에서 변경된 내용이 학습자에게 보일 것입니다."
+
+#: cms/templates/js/staff-lock-editor.underscore
+msgid ""
+"If you make this %(xblockType)s visible to students, students will be able "
+"to see its content after the release date has passed and you have published "
+"the unit."
+msgstr "학습자에게 보이도록 %(xblockType)s 를 만들면, 학습자들은  개강 날짜가 풀린 후 콘텐츠를 볼 수 있습니다. "
+
+#: cms/templates/js/staff-lock-editor.underscore
+msgid ""
+"Any subsections or units that are explicitly hidden from students will "
+"remain hidden after you clear this option for the section."
+msgstr "선택을 취소하면 학습자는 모든 소주제 또는 학습활동을 볼 수 없습니다. "
+
+#: cms/templates/js/staff-lock-editor.underscore
+msgid ""
+"Any units that are explicitly hidden from students will remain hidden after "
+"you clear this option for the subsection."
+msgstr "소주제 관련 선택을 취소하면, 학습자에게 표시되는 모든 학습활동은 학습자가 볼 수 없습니다."
+
+#: cms/templates/js/team-member.underscore
+msgid "Current Role:"
+msgstr "현재 역할:"
+
+#: cms/templates/js/team-member.underscore
+msgid "You!"
+msgstr "귀하입니다."
+
+#: cms/templates/js/team-member.underscore
+msgid "send an email message to {email}"
+msgstr " {email}에게 이메일 메세지 보냄"
+
+#: cms/templates/js/team-member.underscore
+msgid "Promote another member to Admin to remove your admin rights"
+msgstr "교수자 권한을 삭제하려면 다른 팀원을 교수자로 승격시키세요."
+
+#: cms/templates/js/team-member.underscore
+msgid "Add {role} Access"
+msgstr "{role} 접근 추가"
+
+#: cms/templates/js/team-member.underscore
+msgid "Remove {role} Access"
+msgstr "{role} 권한 제거"
+
+#: cms/templates/js/team-member.underscore
+msgid "Delete the user, {username}"
+msgstr "{username} 학습자를 삭제합니다."
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+msgid "Set as a Special Exam"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+msgid "None"
+msgstr "없음"
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+msgid "Timed"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+msgid ""
+"Use a timed exam to limit the time learners can spend on problems in this "
+"subsection. Learners must submit answers before the time expires. You can "
+"allow additional time for individual learners through the Instructor "
+"Dashboard."
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+msgid "Proctored"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+msgid ""
+"Proctored exams are timed and they record video of each learner taking the "
+"exam. The videos are then reviewed to ensure that learners follow all "
+"examination rules."
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+msgid "Practice Proctored"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+msgid ""
+"Use a practice proctored exam to introduce learners to the proctoring tools "
+"and processes. Results of a practice exam do not affect a learner's grade."
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+msgid "Time Allotted (HH:MM):"
+msgstr "할당된 시간 (HH:MM):"
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+msgid ""
+"Select a time allotment for the exam. If it is over 24 hours, type in the "
+"amount of time. You can grant individual learners extra time to complete the"
+" exam through the Instructor Dashboard."
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+msgid "Review Rules"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore
+msgid ""
+"Specify any additional rules or rule exceptions that the proctoring review "
+"team should enforce when reviewing the videos. For example, you could "
+"specify that calculators are allowed."
+msgstr ""
+
+#: cms/templates/js/upload-dialog.underscore
+msgid "File upload succeeded"
+msgstr "파일 업로드 완료"
+
+#: cms/templates/js/validation-error-modal.underscore
+msgid ""
+"Please check the following validation feedbacks and reflect them in your "
+"course settings:"
+msgstr "다음 피드백을 확인하고 강좌 설정에 반영하세요:"
+
+#: cms/templates/js/verification-access-editor.underscore
+msgid "Verification Checkpoint"
+msgstr "인증 기준"
+
+#: cms/templates/js/verification-access-editor.underscore
+msgid "Must complete verification checkpoint"
+msgstr "인증 기준을 완성해야 합니다."
+
+#: cms/templates/js/verification-access-editor.underscore
+msgid "Verification checkpoint to be completed"
+msgstr "완성되어야 할 인증 기준"
+
+#: cms/templates/js/verification-access-editor.underscore
+msgid ""
+"Learners who require verification must pass the selected checkpoint to see "
+"the content in this unit. Learners who do not require verification see this "
+"content by default."
+msgstr "인증을 신청한 학습자는 인증 기준에 해당하는 학습활동을 통과해야 합니다. "
+
+#: cms/templates/js/xblock-string-field-editor.underscore
+#: cms/templates/js/xblock-string-field-editor.underscore
+msgid "Edit the name"
+msgstr "이름 수정"
+
+#: cms/templates/js/xblock-string-field-editor.underscore
+msgid "Edit %(display_name)s (required)"
+msgstr "%(display_name)s (required)편집하기"
+
+#: cms/templates/js/xblock-string-field-editor.underscore
+msgid "formLabel"
+msgstr "formLabel"
+
+#: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore
+msgid "Add URLs for additional versions"
+msgstr "다른 버전 URL 추가하기"
+
+#: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore
+msgid ""
+"To be sure all students can access the video, we recommend providing both an"
+" .mp4 and a .webm version of your video. Click below to add a URL for "
+"another version. These URLs cannot be YouTube URLs. The first listed video "
+"that's compatible with the student's computer will play."
+msgstr ""
+"모든 학습자가 강좌 동영상에 접근할 수 있도록, 동영상을 .mp4와 .webm 파일로 제공하길 권합니다. 다른 버전으로 URL 을 "
+"추가하려면 아래를 클릭하세요. URL은 YouTube URL일 수 없습니다. 학습자의 컴퓨터와 호환되는 첫번째 동영상이 재생될 것입니다."
+
+#: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore
+msgid "Default Timed Transcript"
+msgstr "기본 자막 "
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
+msgid "Timed Transcript Conflict"
+msgstr "자막 충돌"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
+msgid ""
+"The timed transcript for the first video file does not appear to be the same"
+" as the timed transcript for the second video file."
+msgstr "첫 번째 영상 파일의 자막이 두 번째 영상 파일의 자막과 다릅니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
+msgid "Which timed transcript would you like to use?"
+msgstr "어느 자막을 사용하시겠습니까?"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
+msgid "Error."
+msgstr "오류."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore
+msgid "Timed Transcript from %(filename)s"
+msgstr "%(filename)s으로 부터 시간이 나타나 있는 자막 "
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
+msgid "Timed Transcript Found"
+msgstr "자막 있음"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
+msgid ""
+"EdX has a timed transcript for this video. If you want to edit this "
+"transcript, you can download, edit, and re-upload the existing transcript. "
+"If you want to replace this transcript, upload a new .srt transcript file."
+msgstr ""
+"동영상 자막이 있습니다. 자막을 수정하려면, 다운로드하여 수정하고 다시 업로드할 수 있습니다. 자막을 교체할 경우 새 .srt로 "
+"업로드합니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
+msgid "Upload New Transcript"
+msgstr "신규 자막 업로드"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
+msgid "Upload New .srt Transcript"
+msgstr "신규 .srt 자막 파일 업로드하기"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore
+msgid "Download Transcript for Editing"
+msgstr "편집용 자막 다운로드"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
+msgid "No EdX Timed Transcript"
+msgstr "자막이 없습니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
+msgid ""
+"EdX doesn't have a timed transcript for this video in Studio, but we found a"
+" transcript on YouTube. You can import the YouTube transcript or upload your"
+" own .srt transcript file."
+msgstr ""
+"EdX는 스튜디오에서 동영상의 시간에 맞춰진 자막을 갖고 있지 않지만, 유튜브에서 자막을 발견했습니다.  YouTube 자막을 가져오거나"
+" .srt 자막파일로 업로드할 수 있습니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
+msgid "Import YouTube Transcript"
+msgstr "YouTube 자막 가져오기"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore
+msgid "No Timed Transcript"
+msgstr "자막 없음"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore
+msgid ""
+"EdX doesn\\'t have a timed transcript for this video. Please upload an .srt "
+"file."
+msgstr "동영상의 자막 파일이 없습니다. .srt 자막 파일을 업로드 하세요."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
+msgid ""
+"The timed transcript for this video on edX is out of date, but YouTube has a"
+" current timed transcript for this video."
+msgstr "K-MOOC에는 기간이 만료된 이 동영상의 자막이 있지만, YouTube에는 현재 사용되는 자막이 있습니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
+msgid "Do you want to replace the edX transcript with the YouTube transcript?"
+msgstr "YouTube 자막과 K-MOOC 자막을 바꾸시겠습니까?"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
+msgid "Yes, replace the edX transcript with the YouTube transcript"
+msgstr "네, K-MOOC 자막을 YouTube 자막으로 교체합니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore
+msgid "Timed Transcript Uploaded Successfully"
+msgstr "자막 업로드가 완료되었습니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore
+msgid ""
+"EdX has a timed transcript for this video. If you want to replace this "
+"transcript, upload a new .srt transcript file. If you want to edit this "
+"transcript, you can download, edit, and re-upload the existing transcript."
+msgstr ""
+"EdX는 자막을 가지고 있습니다. 자막을 교체 할 경우 새 .SRT 자막 파일을 업로드합니다. 자막 파일을 편집 할 경우,  다운로드 후"
+" 편집하고 변경한 자막 파일을 다시 업로드 할 수 있습니다."
+
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
+msgid "Confirm Timed Transcript"
+msgstr "자막 승인"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
+msgid ""
+"You changed a video URL, but did not change the timed transcript file. Do "
+"you want to use the current timed transcript or upload a new .srt transcript"
+" file?"
+msgstr "동영상의 URL을 변경했지만, 자막 파일은 변경되지 않았습니다. 새 .srt 자막 파일을 업로드 할까요?"
+
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore
+msgid "Use Current Transcript"
+msgstr "지금 자막 쓰기"

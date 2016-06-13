@@ -1,0 +1,394 @@
+html {
+  height: 100%;
+  max-height: 100%;
+}
+
+html.video-fullscreen{
+  overflow: hidden;
+
+  body{
+    overflow: hidden;
+  }
+}
+
+.wrap-instructor-info {
+  @extend %ui-print-excluded;
+
+  margin: ($baseline/2) ($baseline/4) 0 0;
+  overflow: hidden;
+
+  &.studio-view {
+    position: relative;
+    top: -($baseline/2);
+    margin: 0;
+  }
+
+  .instructor-info-action {
+    @extend %t-copy-sub2;
+    @include float(right);
+    margin-left: ($baseline/2);
+    padding: ($baseline/4) ($baseline/2);
+    border-radius: ($baseline/4);
+    background-color: $shadow-l2;
+    text-align: right;
+    text-transform: uppercase;
+    color: $lighter-base-font-color;
+
+    &:hover {
+      background-color: $link-hover;
+      color: $white;
+    }
+  }
+}
+
+.content-wrapper {
+
+  .container-footer {
+    margin: 0 auto;
+    max-width: grid-width(12);
+    min-width: 760px;
+    color: $gray;
+    text-align: $bi-app-right;
+  }
+}
+
+.content-wrapper {
+
+  .course-license, .xblock-license {
+    @include text-align(right);
+    @extend %t-title7;
+    display: block;
+    width: auto;
+    padding: ($baseline/4) 0;
+
+    span {
+      color: inherit;
+    }
+
+    a:link, a:visited {
+      color: $gray;
+    }
+    a:active, a:hover {
+      color: $link-hover;
+    }
+
+    .license-label,
+    .license-value,
+    .license-actions {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+    }
+
+    i {
+      font-style: normal;
+    }
+
+    img {
+      display: inline;
+    }
+  }
+}
+
+// TO-DO should this be content wrapper?
+div.course-wrapper {
+  position: relative;
+
+  section.course-content {
+    @extend .content;
+    padding: ($baseline*2);
+    line-height: 1.6;
+
+    h1 {
+      margin: 0 0 lh();
+    }
+
+    p {
+      margin-bottom: lh();
+
+      &:empty {
+        display: none;
+        margin-bottom: 0;
+      }
+    }
+
+    .sequential-status-message {
+      margin-bottom: $baseline;
+      background-color: $gray-l5;
+      padding: ($baseline * 0.75);
+      border-radius: 3px;
+      @include font-size(13);
+    }
+
+    ul {
+      li {
+        margin-bottom: lh(0.5);
+      }
+    }
+
+    div#seq_content {
+      h1 {
+        background: none;
+        margin-bottom: lh();
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+
+    .vert-mod {
+      padding: 0;
+      margin: 0;
+      line-height: 1.4;
+      list-style: none;
+
+      > div {
+        .collapsible {
+          header {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            font-size: 16px;
+          }
+        }
+
+        header {
+          @extend h1.top-header;
+          border-radius: 0 4px 0 0;
+          margin-bottom: -16px;
+          border-bottom: 0;
+
+          h1 {
+            margin: 0;
+            font-size: 1em;
+          }
+
+          h2 {
+            float: right;
+            margin: 12px 0 0;
+            text-align: right;
+            padding-right: 0;
+            border-right: 0;
+            font-size: em(14, 24);
+          }
+        }
+
+        &:last-child {
+          border-bottom: none;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+
+        .histogram {
+          width: 200px;
+          height: 150px;
+        }
+
+        ul {
+          list-style: disc outside none;
+          padding-left: 1em;
+
+          &.discussion-errors {
+            list-style: none;
+            padding-left: 2em;
+          }
+
+          &.admin-actions {
+            list-style: none;
+          }
+        }
+
+        nav.sequence-nav ul li.prev {
+          left: 4px;
+        }
+
+        nav.sequence-bottom {
+          ul {
+          list-style: none;
+          padding: 0;
+          }
+        }
+      }
+
+      .vert > .xblock-student_view {
+        @extend .clearfix;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: ($baseline*0.75);
+        padding: 0 0 15px;
+      }
+
+      .vert > .xblock-student_view.is-hidden {
+          display: none;
+          border-bottom: 0px;
+          margin-bottom: 0px;
+      }
+    }
+
+    section.xblock-student_view-wrapper div.vert-mod > div {
+      border-bottom: none;
+    }
+
+    section.tutorials {
+      h2 {
+        margin-bottom: lh();
+      }
+
+      ul {
+        margin: 0;
+        @include clearfix();
+        padding: 0;
+        list-style: none;
+
+        li {
+          width: flex-grid(3, 9);
+          float: left;
+          margin-right: flex-gutter(9);
+          margin-bottom: lh();
+          line-height: lh();
+
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+
+          &:nth-child(3n+1) {
+            clear: both;
+          }
+
+          a {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    div.staff_actions {
+      p.error {
+        color: $error-red
+      }
+      p.success {
+        color: $success-color;
+     }
+    }
+
+    div.staff_info {
+      display: none;
+      @include clearfix();
+      white-space: pre-wrap;
+      border-top: 1px solid $gray-l3;
+      padding-top: lh();
+      margin-top: lh();
+      line-height: lh();
+      font-family: Consolas, "Lucida Console", Monaco, "Courier New", Courier, monospace;
+
+      // Debugging content is always in English, therefore it's never RTL
+      direction: ltr;
+      text-align: left;
+    }
+
+    div.ui-tabs {
+      border: 0;
+      border-radius: 0;
+      margin: 0;
+      padding: 0;
+
+      .ui-tabs-nav {
+        background: none;
+        border: 0;
+        margin-bottom: lh(0.5);
+      }
+
+      .ui-tabs-panel {
+        border-radius: 0;
+        padding: 0;
+      }
+    }
+
+    @media print {
+      padding: 0 2mm;
+      background: transparent !important;
+    }
+  }
+
+  &.closed {
+    div.course-index {
+      width: flex-grid(.6);
+      overflow: hidden;
+
+      header#open_close_accordion {
+        a {
+          background-image: url('../images/slide-right-icon.png');
+        }
+      }
+
+      div#accordion {
+        visibility: hidden;
+        width: 10px;
+        padding: 0;
+
+       nav {
+         white-space: pre;
+         overflow: hidden;
+
+         ul {
+           overflow: hidden;
+           white-space: nowrap;
+         }
+        }
+      }
+    }
+
+    section.course-content {
+      width: flex-grid(11.5) + flex-gutter();
+    }
+  }
+
+  @media print {
+    border: 0;
+    background: transparent !important;
+  }
+}
+
+.xmodule_VideoModule {
+  margin-bottom: ($baseline*1.5);
+
+
+}
+
+textarea.short-form-response {
+    height: 200px;
+    padding: ($baseline/4);
+    margin-top: ($baseline/4);
+    margin-bottom: ($baseline/4);
+    width: 100%;
+}
+
+section.self-assessment {
+    textarea.hint {
+        height: 100px;
+        padding: ($baseline/4);
+        margin-top: ($baseline/4);
+        margin-bottom: ($baseline/4);
+    }
+
+    div {
+        margin-top: ($baseline/4);
+        margin-bottom: ($baseline/4);
+    }
+
+    .error {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+section.foldit {
+   table {
+       margin-top: ($baseline/2);
+   }
+   th {
+        text-align: center;
+   }
+   td {
+       padding-left: ($baseline/4);
+       padding-right: ($baseline/4);
+
+   }
+}

@@ -1,0 +1,142 @@
+var edx = edx || {};
+
+(function($, _, gettext) {
+    'use strict';
+
+    edx.student = edx.student || {};
+    edx.student.account = edx.student.account || {};
+
+    edx.student.account.LoginView = edx.student.account.FormView.extend({
+        el: '#login-form',
+
+        tpl: '#login-tpl',
+
+        events: {
+            'click .js-login': 'submitForm',
+            'click .forgot-password': 'forgotPassword',
+            'click .login-provider': 'thirdPartyAuth'
+        },
+
+        formType: 'login',
+
+        requiredStr: '',
+
+        submitButton: '.js-login',
+
+        preRender: function( data ) {
+            console.log("preRender");
+            this.providers = data.thirdPartyAuth.providers || [];
+            this.hasSecondaryProviders = (
+                data.thirdPartyAuth.secondaryProviders && data.thirdPartyAuth.secondaryProviders.length
+            );
+            this.currentProvider = data.thirdPartyAuth.currentProvider || '';
+            this.errorMessage = data.thirdPartyAuth.errorMessage || '';
+            this.platformName = data.platformName;
+            this.resetModel = data.resetModel;
+
+            this.listenTo( this.model, 'sync', this.saveSuccess );
+            this.listenTo( this.resetModel, 'sync', this.resetEmail );
+        },
+
+        render: function( html ) {
+            console.log("render");
+            var fields = html || '';
+
+            $(this.el).html( _.template( this.tpl, {
+                // We pass the context object to the template so that
+                // we can perform variable interpolation using sprintf
+                context: {
+                    fields: fields,
+                    currentProvider: this.currentProvider,
+                    errorMessage: this.errorMessage,
+                    providers: this.providers,
+                    hasSecondaryProviders: this.hasSecondaryProviders,
+                    platformName: this.platformName
+                }
+            }));
+
+            this.postRender();
+
+            return this;
+        },
+
+        postRender: function() {
+            console.log("postRender");
+            this.$container = $(this.el);
+
+            this.$form = this.$container.find('form');
+            this.$errors = this.$container.find('.submission-error');
+            this.$resetSuccess = this.$container.find('.js-reset-success');
+            this.$authError = this.$container.find('.already-authenticated-msg');
+            this.$submitButton = this.$container.find(this.submitButton);
+
+            /* If we're already authenticated with a third-party
+             * provider, try logging in.  The easiest way to do this
+             * is to simply submit the form.
+             */
+            if (this.currentProvider) {
+                this.model.save();
+            }
+        },
+
+        forgotPassword: function( event ) {
+            console.log("## forgotPassword clicked1");
+            event.preventDefault();
+            console.log("## forgotPassword clicked2");
+            this.trigger('password-help');
+            console.log("## forgotPassword clicked3");
+            this.element.hide( this.$resetSuccess );
+            console.log("## forgotPassword clicked4");
+        },
+
+        postFormSubmission: function() {
+            console.log("postFormSubmission");
+            this.element.hide( this.$resetSuccess );
+        },
+
+        resetEmail: function() {
+            console.log("resetEmail");
+            this.element.hide( this.$errors );
+            this.element.show( this.$resetSuccess );
+        },
+
+        thirdPartyAuth: function( event ) {
+            console.log("thirdPartyAuth");
+            var providerUrl = $(event.currentTarget).data('provider-url') || '';
+
+            if (providerUrl) {
+                window.location.href = providerUrl;
+            }
+        },
+
+        saveSuccess: function() {
+            console.log("saveSuccess");
+            this.trigger('auth-complete');
+            this.element.hide( this.$resetSuccess );
+        },
+
+        saveError: function( error ) {
+            console.log("saveError");
+            this.errors = ['<li>' + error.responseText + '</li>'];
+            this.setErrors();
+            this.element.hide( this.$resetSuccess );
+
+            /* If we've gotten a 403 error, it means that we've successfully
+             * authenticated with a third-party provider, but we haven't
+             * linked the account to an EdX account.  In this case,
+             * we need to prompt the user to enter a little more information
+             * to complete the registration process.
+             */
+            if ( error.status === 403 &&
+                 error.responseText === 'third-party-auth' &&
+                 this.currentProvider ) {
+                this.element.show( this.$authError );
+                this.element.hide( this.$errors );
+            } else {
+                this.element.hide( this.$authError );
+                this.element.show( this.$errors );
+            }
+            this.toggleDisableButton(false);
+        }
+    });
+})(jQuery, _, gettext);

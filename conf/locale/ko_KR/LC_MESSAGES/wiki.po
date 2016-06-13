@@ -1,0 +1,663 @@
+# edX translation file
+# Copyright (C) 2016 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# David10000 <gameness@naver.com>, 2014
+# Gil <gedwarp@gmail.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Kevin Min <gr326887@graded.br>, 2015
+# Nicole <dlruddk1112@gmail.com>, 2014
+# shin2012 <shin2013@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: edx-platform\n"
+"Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+"POT-Creation-Date: 2016-03-24 18:06+0000\n"
+"PO-Revision-Date: 2015-11-24 13:39+0000\n"
+"Last-Translator: Sarina Canelake <sarina@edx.org>\n"
+"Language-Team: Korean (Korea) (http://www.transifex.com/open-edx/edx-platform/language/ko_KR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+"Language: ko_KR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: wiki/admin.py wiki/models/article.py
+msgid "created"
+msgstr "생성되었습니다."
+
+#: wiki/forms.py
+msgid "Only localhost... muahahaha"
+msgstr "로컬호스트에서만 접근 가능합니다."
+
+#: wiki/forms.py wiki/forms.py wiki/forms.py
+msgid "Title"
+msgstr "제목"
+
+#: wiki/forms.py
+msgid "Initial title of the article. May be overridden with revision titles."
+msgstr "항목의 초기 제목입니다. 이는 수정된 제목으로 대체될 수 있습니다."
+
+#: wiki/forms.py
+msgid "Type in some contents"
+msgstr "내용을 입력하세요"
+
+#: wiki/forms.py
+msgid ""
+"This is just the initial contents of your article. After creating it, you "
+"can use more complex features like adding plugins, meta data, related "
+"articles etc..."
+msgstr ""
+"작성한 글의  처음 내용입니다.  글 등록 후,  플러그인, 메타데이타와 관련 글 추가 하는 등의 다양한 기능을 사용할 수 있습니다. "
+
+#: wiki/forms.py wiki/forms.py
+msgid "Contents"
+msgstr "본문"
+
+#: wiki/forms.py wiki/forms.py
+msgid "Summary"
+msgstr "수정 요약"
+
+#: wiki/forms.py
+msgid ""
+"Give a short reason for your edit, which will be stated in the revision log."
+msgstr "수정사항을 간략하게 입력하세요."
+
+#: wiki/forms.py
+msgid ""
+"While you were editing, someone else changed the revision. Your contents "
+"have been automatically merged with the new contents. Please review the text"
+" below."
+msgstr ""
+"글을 수정하는 동안 다른 사람에 의해 동시에 글을 수정되었습니다. 지금 수정하신 부분은 새로운 내용과 자동으로 병합되었습니다. 아래 "
+"내용을 확인해 주십시오."
+
+#: wiki/forms.py
+msgid "No changes made. Nothing to save."
+msgstr "변경사항이 없습니다. 저장할 내용이 없습니다."
+
+#: wiki/forms.py
+msgid "Select an option"
+msgstr "평가 기준을 선택하세요."
+
+#: wiki/forms.py
+msgid "Slug"
+msgstr "경로명"
+
+#: wiki/forms.py
+msgid ""
+"This will be the address where your article can be found. Use only "
+"alphanumeric characters and - or _. Note that you cannot change the slug "
+"after creating the article."
+msgstr ""
+"작성 후, 이 글을 찾을 수 있게 하는 주소입니다. 글의 제목과 연관지어 공백 없이 영어 알파벳과 ' - ' 혹은 ' _ '만 이용하여 "
+"만들 수 있습니다. 저장 후에는 변경할 수 없습니다. "
+
+#: wiki/forms.py
+msgid "Write a brief message for the article's history log."
+msgstr "글의 변경 내용을 기록하기 위해 간단하게 입력해 주십시오."
+
+#: wiki/forms.py
+msgid "A slug may not begin with an underscore."
+msgstr "글 주소는 언더스코어 ' _ '로 시작하지 않습니다."
+
+#: wiki/forms.py
+msgid "A deleted article with slug \"%s\" already exists."
+msgstr "글 주소 \"%s\"인데 삭제된 글이 있습니다."
+
+#: wiki/forms.py
+msgid "A slug named \"%s\" already exists."
+msgstr "글 주소 \"%s\" 가 이미 존재합니다."
+
+#: wiki/forms.py
+msgid "Yes, I am sure"
+msgstr "네, 삭제합니다."
+
+#: wiki/forms.py
+msgid "Purge"
+msgstr "삭제"
+
+#: wiki/forms.py
+msgid ""
+"Purge the article: Completely remove it (and all its contents) with no undo."
+" Purging is a good idea if you want to free the slug such that users can "
+"create new articles in its place."
+msgstr ""
+"글 삭제 : (해당되는 모든 컨텐츠를 포함하여) 완전히 삭제하므로 복구가 되지 않습니다. 삭제된 글 주소를 활용하여 새로운 글을 "
+"작성하고자 할 때 이용가능합니다."
+
+#: wiki/forms.py wiki/plugins/attachments/forms.py
+#: wiki/plugins/images/forms.py
+msgid "You are not sure enough!"
+msgstr "아직 확실하지 않음!"
+
+#: wiki/forms.py
+msgid "While you tried to delete this article, it was modified. TAKE CARE!"
+msgstr "이 글을 삭제하려고 하는 동안, 글이 수정되었습니다. 주의하세요."
+
+#: wiki/forms.py
+msgid "Lock article"
+msgstr "문서 편집 잠금"
+
+#: wiki/forms.py
+msgid "Deny all users access to edit this article."
+msgstr "다른 사람은 이 글을 수정할 수 없습니다."
+
+#: wiki/forms.py
+msgid "Permissions"
+msgstr "권한"
+
+#: wiki/forms.py
+msgid "Owner"
+msgstr "소유자"
+
+#: wiki/forms.py
+msgid "Enter the username of the owner."
+msgstr "글의 관리자 아이디를 입력하세요."
+
+#: wiki/forms.py
+msgid "(none)"
+msgstr "(없음)"
+
+#: wiki/forms.py
+msgid "Inherit permissions"
+msgstr "권한 물려받기"
+
+#: wiki/forms.py
+msgid ""
+"Check here to apply the above permissions recursively to articles under this"
+" one."
+msgstr "하위 글에도 동일한 권한을 적용하려면 체크하세요."
+
+#: wiki/forms.py
+msgid "Permission settings for the article were updated."
+msgstr "글에 대한 권한 설정이 변경되었습니다."
+
+#: wiki/forms.py
+msgid "Your permission settings were unchanged, so nothing saved."
+msgstr "귀하의 권한이 변경되지 않았기 때문에, 저장된 것이 없습니다."
+
+#: wiki/forms.py
+msgid "No user with that username"
+msgstr "사용되지 않은 아이디입니다."
+
+#: wiki/forms.py
+msgid "Article locked for editing"
+msgstr "수정 불가"
+
+#: wiki/forms.py
+msgid "Article unlocked for editing"
+msgstr "잠금 해제하여 수정하기"
+
+#: wiki/forms.py
+msgid "Filter..."
+msgstr "필터..."
+
+#: wiki/core/plugins/base.py
+msgid "Settings for plugin"
+msgstr "플러그인 설정"
+
+#: wiki/models/article.py wiki/models/pluginbase.py
+#: wiki/plugins/attachments/models.py
+msgid "current revision"
+msgstr "현재 수정"
+
+#: wiki/models/article.py
+msgid ""
+"The revision being displayed for this article. If you need to do a roll-"
+"back, simply change the value of this field."
+msgstr "문서의 수정 사항이 표시되었습니다. 되돌리기를 원하실 경우 값을 변경하십시오."
+
+#: wiki/models/article.py
+msgid "modified"
+msgstr "수정됨"
+
+#: wiki/models/article.py
+msgid "Article properties last modified"
+msgstr "글 속성 최근 수정"
+
+#: wiki/models/article.py
+msgid "owner"
+msgstr "소유자"
+
+#: wiki/models/article.py
+msgid ""
+"The owner of the article, usually the creator. The owner always has both "
+"read and write access."
+msgstr "글의 소유자는 대개 최초 작성자입니다. 글의 소유자는 읽기/쓰기 권한을 모두 가집니다."
+
+#: wiki/models/article.py
+msgid "group"
+msgstr "그룹"
+
+#: wiki/models/article.py
+msgid ""
+"Like in a UNIX file system, permissions can be given to a user according to "
+"group membership. Groups are handled through the Django auth system."
+msgstr "UNIX시스템에서과 같은 방식으로, 사용자의 권한은 그룹 권한을 따릅니다. 그룹은 Django 인증 시스템에서 관리됩니다."
+
+#: wiki/models/article.py
+msgid "group read access"
+msgstr "그룹 읽기 권한"
+
+#: wiki/models/article.py
+msgid "group write access"
+msgstr "그룹 편집 권한"
+
+#: wiki/models/article.py
+msgid "others read access"
+msgstr "다른 사람 읽기 권한"
+
+#: wiki/models/article.py
+msgid "others write access"
+msgstr "다른 사람 쓰기 권한"
+
+#: wiki/models/article.py
+msgid "Article without content (%(id)d)"
+msgstr "내용(%(id)d)없는 글"
+
+#: wiki/models/article.py
+msgid "content type"
+msgstr "콘텐츠 유형"
+
+#: wiki/models/article.py
+msgid "object ID"
+msgstr "객체 ID"
+
+#: wiki/models/article.py
+msgid "Article for object"
+msgstr "객체 아티클"
+
+#: wiki/models/article.py
+msgid "Articles for object"
+msgstr "객체 아티클"
+
+#: wiki/models/article.py
+msgid "revision number"
+msgstr "수정 넘버"
+
+#: wiki/models/article.py
+msgid "IP address"
+msgstr "IP 주소"
+
+#: wiki/models/article.py
+msgid "user"
+msgstr "사용자"
+
+#: wiki/models/article.py
+msgid "deleted"
+msgstr "삭제되었습니다."
+
+#: wiki/models/article.py
+msgid "locked"
+msgstr "잠겨있음"
+
+#: wiki/models/article.py wiki/models/pluginbase.py
+msgid "article"
+msgstr "글"
+
+#: wiki/models/article.py
+msgid "article contents"
+msgstr "글 내용"
+
+#: wiki/models/article.py
+msgid "article title"
+msgstr "글 제목"
+
+#: wiki/models/article.py
+msgid ""
+"Each revision contains a title field that must be filled out, even if the "
+"title has not changed"
+msgstr "모든 수정본의 제목은 변하지 않았어도 입력되어야 합니다. "
+
+#: wiki/models/pluginbase.py
+msgid "original article"
+msgstr "원본"
+
+#: wiki/models/pluginbase.py
+msgid "Permissions are inherited from this article"
+msgstr "권한은 이 글과 동일하게 설정하기"
+
+#: wiki/models/pluginbase.py
+msgid "A plugin was changed"
+msgstr "플러그인이 변경됨"
+
+#: wiki/models/pluginbase.py
+msgid ""
+"The revision being displayed for this plugin.If you need to do a roll-back, "
+"simply change the value of this field."
+msgstr "이 플러그인의 수정본이 표시되고 있습니다. 되돌리기를 원하실 경우 이 값을 변경하십시오."
+
+#: wiki/models/urlpath.py
+msgid "Cache lookup value for articles"
+msgstr "글들을 위한 캐시 조회 값"
+
+#: wiki/models/urlpath.py
+msgid "slug"
+msgstr "글 주소"
+
+#: wiki/models/urlpath.py
+msgid "(root)"
+msgstr "(루트)"
+
+#: wiki/models/urlpath.py
+msgid "URL path"
+msgstr "URL 경로"
+
+#: wiki/models/urlpath.py
+msgid "URL paths"
+msgstr "URL 경로"
+
+#: wiki/models/urlpath.py
+msgid "Sorry but you cannot have a root article with a slug."
+msgstr "글 주소가 있는 최상위 글을 작성할 수 없습니다."
+
+#: wiki/models/urlpath.py
+msgid "A non-root note must always have a slug."
+msgstr "하위 노트는 항상 글 주소를 가지고 있어야 합니다."
+
+#: wiki/models/urlpath.py
+msgid "There is already a root node on %s"
+msgstr "%s 상 root node가 이미 존재합니다"
+
+#: wiki/models/urlpath.py
+msgid ""
+"Articles who lost their parents\n"
+"===============================\n"
+"\n"
+"The children of this article have had their parents deleted. You should probably find a new home for them."
+msgstr ""
+"상위 글이 없는 하위 글\n"
+"===============================\n"
+"\n"
+"하위 글들은  상위 글이 삭제되었습니다. 새로운 상위 글을 찾아 주어야합니다."
+
+#: wiki/models/urlpath.py
+msgid "Lost and found"
+msgstr "분실물센터"
+
+#: wiki/plugins/attachments/forms.py
+msgid "Description"
+msgstr "설명"
+
+#: wiki/plugins/attachments/forms.py
+msgid "A short summary of what the file contains"
+msgstr "파일 내용 요약"
+
+#: wiki/plugins/attachments/forms.py
+msgid "Yes I am sure..."
+msgstr "네 확인하였습니다. "
+
+#: wiki/plugins/attachments/markdown_extensions.py
+msgid "Click to download file"
+msgstr "다운로드를 위해 클릭하세요"
+
+#: wiki/plugins/attachments/models.py
+msgid ""
+"The revision of this attachment currently in use (on all articles using the "
+"attachment)"
+msgstr "이 첨부의 수정 사항이 (이 첨부 사항이 들어가있는 전체 아티클에 대해) 반영되었습니다."
+
+#: wiki/plugins/attachments/models.py
+msgid "original filename"
+msgstr "원본 파일명"
+
+#: wiki/plugins/attachments/models.py
+msgid "attachment"
+msgstr "첨부"
+
+#: wiki/plugins/attachments/models.py
+msgid "attachments"
+msgstr "첨부"
+
+#: wiki/plugins/attachments/models.py
+msgid "file"
+msgstr "파일"
+
+#: wiki/plugins/attachments/models.py
+msgid "attachment revision"
+msgstr "첨부 수정본"
+
+#: wiki/plugins/attachments/models.py
+msgid "attachment revisions"
+msgstr "첨부 수정본"
+
+#: wiki/plugins/attachments/views.py
+msgid "%s was successfully added."
+msgstr "%s 가 성공적으로 추가되었습니다."
+
+#: wiki/plugins/attachments/views.py wiki/plugins/attachments/views.py
+msgid "Your file could not be saved: %s"
+msgstr "당신의 파일은 저장될 수 없습니다: %s"
+
+#: wiki/plugins/attachments/views.py wiki/plugins/attachments/views.py
+msgid ""
+"Your file could not be saved, probably because of a permission error on the "
+"web server."
+msgstr "파일이 저장되지 않았습니다. 웹서버 상에서 승인 오류 가능성이 있습니다. "
+
+#: wiki/plugins/attachments/views.py
+msgid "%s uploaded and replaces old attachment."
+msgstr " %s 업로드 되었고 구 첨부파일을 대치함."
+
+#: wiki/plugins/attachments/views.py
+msgid ""
+"Your new file will automatically be renamed to match the file already "
+"present. Files with different extensions are not allowed."
+msgstr ""
+"당신의 새 파일은 이미 존재하는 이름이므로 자동적으로 이름이 변경되었습니다. 확장자가 다르더라도 동일한 이름을 가진 파일은 허용되지 "
+"않습니다. "
+
+#: wiki/plugins/attachments/views.py
+msgid "Current revision changed for %s."
+msgstr "현재 수정본이 %s 변경됨."
+
+#: wiki/plugins/attachments/views.py
+msgid "Added a reference to \"%(att)s\" from \"%(art)s\"."
+msgstr "\"%(art)s\" 에서 \"%(att)s\" 로 참조 추가"
+
+#: wiki/plugins/attachments/views.py
+msgid "The file %s was deleted."
+msgstr "%s 파일이 삭제되었습니다."
+
+#: wiki/plugins/attachments/views.py
+msgid "This article is no longer related to the file %s."
+msgstr "파일 %s 와 더이상 관계가 없습니다. "
+
+#: wiki/plugins/attachments/wiki_plugin.py
+msgid "Attachments"
+msgstr "첨부파일"
+
+#: wiki/plugins/attachments/wiki_plugin.py
+msgid "A file was changed: %s"
+msgstr "파일 변경됨: %s"
+
+#: wiki/plugins/attachments/wiki_plugin.py
+msgid "A file was deleted: %s"
+msgstr "파일 삭제 : %s"
+
+#: wiki/plugins/help/wiki_plugin.py
+msgid "Help"
+msgstr "도움말"
+
+#: wiki/plugins/images/forms.py
+msgid ""
+"New image %s was successfully uploaded. You can use it by selecting it from "
+"the list of available images."
+msgstr "새로운 이미지 %s가 성공적으로 업로드 되었습니다. 이것을 가용한 이미지리스트에서 선택하여 이용할수 있습니다. "
+
+#: wiki/plugins/images/forms.py
+msgid "Are you sure?"
+msgstr "확실합니까?"
+
+#: wiki/plugins/images/models.py
+msgid "image"
+msgstr "이미지"
+
+#: wiki/plugins/images/models.py
+msgid "images"
+msgstr "이미지"
+
+#: wiki/plugins/images/models.py
+msgid "Image: %s"
+msgstr "이미지: %s"
+
+#: wiki/plugins/images/models.py
+msgid "Current revision not set!!"
+msgstr "현재 수정본 설정 안됨"
+
+#: wiki/plugins/images/models.py
+msgid "image revision"
+msgstr "이미지 수정본"
+
+#: wiki/plugins/images/models.py
+msgid "image revisions"
+msgstr "이미지 수정본"
+
+#: wiki/plugins/images/models.py
+msgid "Image Revsion: %d"
+msgstr "이미지 수정본: %d"
+
+#: wiki/plugins/images/views.py
+msgid "%s has been restored"
+msgstr "%s 가 복원되었습니다."
+
+#: wiki/plugins/images/views.py
+msgid "%s has been marked as deleted"
+msgstr "%s 가 삭제로 표시되었습니다"
+
+#: wiki/plugins/images/views.py
+msgid "%(file)s has been changed to revision #%(revision)d"
+msgstr "%(file)s 가 수정본 #%(revision)d 로 변경"
+
+#: wiki/plugins/images/views.py
+msgid "%(file)s has been saved."
+msgstr "%(file)s 가 저장되었습니다. "
+
+#: wiki/plugins/images/wiki_plugin.py
+msgid "Images"
+msgstr "이미지"
+
+#: wiki/plugins/images/wiki_plugin.py
+msgid "An image was added: %s"
+msgstr "이미지가 추가되었습니다: %s"
+
+#: wiki/plugins/links/wiki_plugin.py
+msgid "Links"
+msgstr "링크"
+
+#: wiki/plugins/notifications/forms.py
+msgid "Notifications"
+msgstr "알림"
+
+#: wiki/plugins/notifications/forms.py
+msgid "When this article is edited"
+msgstr "글이 편집될 때"
+
+#: wiki/plugins/notifications/forms.py
+msgid "Also receive emails about article edits"
+msgstr "글이 편집되면 이메일을 받겠습니다."
+
+#: wiki/plugins/notifications/forms.py
+msgid "Your notification settings were updated."
+msgstr "알림 설정이 업데이트 되었습니다. "
+
+#: wiki/plugins/notifications/forms.py
+msgid "Your notification settings were unchanged, so nothing saved."
+msgstr "알림 설정이 변경되지 안았습니다. 저장된 것이 없습니다."
+
+#: wiki/plugins/notifications/models.py
+msgid "%(user)s subscribing to %(article)s (%(type)s)"
+msgstr "%(article)s (%(type)s)에 등록하는 %(user)s"
+
+#: wiki/plugins/notifications/models.py
+msgid "Article deleted: %s"
+msgstr "%s 글이 삭제되었습니다."
+
+#: wiki/plugins/notifications/models.py
+msgid "Article modified: %s"
+msgstr "%s 글이 수정되었습니다."
+
+#: wiki/plugins/notifications/models.py
+msgid "New article created: %s"
+msgstr "새 글이  생성되었습니다: %s"
+
+#: wiki/views/accounts.py
+msgid "You are now sign up... and now you can sign in!"
+msgstr "가입이 완료되었습니다. 이제 로그인할 수 있습니다!"
+
+#: wiki/views/accounts.py
+msgid "You are no longer logged in. Bye bye!"
+msgstr "로그아웃 되었습니다. "
+
+#: wiki/views/accounts.py
+msgid "You are now logged in! Have fun!"
+msgstr "로그인되었습니다. "
+
+#: wiki/views/article.py
+msgid "New article '%s' created."
+msgstr "'%s'가 생성되었습니다."
+
+#: wiki/views/article.py
+msgid "There was an error creating this article: %s"
+msgstr "글을 작성하는데 문제가 생겼습니다: %s"
+
+#: wiki/views/article.py
+msgid "There was an error creating this article."
+msgstr "이 글을 작성하는데 문제가 생겼습니다."
+
+#: wiki/views/article.py
+msgid ""
+"This article cannot be deleted because it has children or is a root article."
+msgstr "이 글은 이글과 연관된 상위/하위 글이 있기 때문에 삭제할 수 없습니다."
+
+#: wiki/views/article.py
+msgid ""
+"This article together with all its contents are now completely gone! Thanks!"
+msgstr "글은 포함된 콘텐트와 함께 완전히 삭제되었습니다. 감사합니다!"
+
+#: wiki/views/article.py
+msgid ""
+"The article \"%s\" is now marked as deleted! Thanks for keeping the site "
+"free from unwanted material!"
+msgstr "글 \"%s\" 이 삭제로 표시되었습니다. 감사합니다."
+
+#: wiki/views/article.py
+msgid "Your changes were saved."
+msgstr "변경사항이 저장되었습니다."
+
+#: wiki/views/article.py
+msgid "A new revision of the article was succesfully added."
+msgstr "새로운 버전의 글이 성공적으로 추가되었습니다."
+
+#: wiki/views/article.py
+msgid "Restoring article"
+msgstr "글 복원"
+
+#: wiki/views/article.py
+msgid "The article \"%s\" and its children are now restored."
+msgstr "글 \"%s\"와 하위 글은 이제 복구되었습니다."
+
+#: wiki/views/article.py
+msgid ""
+"The article %(title)s is now set to display revision #%(revision_number)d"
+msgstr ""
+
+#: wiki/views/article.py
+msgid "New title"
+msgstr "새로운 제목"
+
+#: wiki/views/article.py
+msgid "Merge between Revision #%(r1)d and Revision #%(r2)d"
+msgstr "수정본 #%(r1)d 과 수정본 #%(r2)d 의 병합"
+
+#: wiki/views/article.py
+msgid ""
+"A new revision was created: Merge between Revision #%(r1)d and Revision "
+"#%(r2)d"
+msgstr "새로운 수정본 생성: 수정본 #%(r1)d 과 수정본 #%(r2)d 의 병합"

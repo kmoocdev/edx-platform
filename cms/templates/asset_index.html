@@ -1,0 +1,516 @@
+<%inherit file="base.html" />
+<%def name="online_help_token()"><% return "files" %></%def>
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+%>
+<%def name="upload_title()">
+<%
+    path_info = request.path_info
+    path_info_split = path_info.split('/')
+%>
+% if path_info_split[1] == 'assets':
+    ${_("Files &amp; Uploads")}
+% else:
+    CDN 업로드
+% endif
+</%def>
+<%block name="title">${upload_title()}</%block>
+<%def name="upload_body_class()">
+<%
+    path_info = request.path_info
+    path_info_split = path_info.split('/')
+%>
+% if path_info_split[1] == 'assets':
+    is-signedin course uploads view-uploads
+% else:
+    is-signedin course uploads_cdn view-uploads
+% endif
+</%def>
+<%block name="bodyclass">${upload_body_class()}</%block>
+<%namespace name='static' file='static_content.html'/>
+<%block name="header_extras">
+<%
+    path_info = request.path_info
+    path_info_split = path_info.split('/')
+%>
+% if path_info_split[1] == 'assets':
+% for template_name in ["asset-library", "asset"]:
+<script type="text/template" id="${template_name}-tpl">
+    <%static:include path="js/${template_name}.underscore" />
+</script>
+% endfor
+% else:
+% for template_name in ["asset-library", "asset"]:
+<script type="text/template" id="${template_name}-tpl">
+    <%static:include path="js/cdn.underscore" />
+</script>
+% endfor
+% endif
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+</%block>
+
+<%block name="requirejs">
+    require(["js/factories/asset_index"], function (AssetIndexFactory) {
+        AssetIndexFactory({
+          assetCallbackUrl: "${asset_callback_url}",
+          uploadChunkSizeInMBs: ${chunk_size_in_mbs},
+          maxFileSizeInMBs: ${max_file_size_in_mbs},
+          maxFileSizeRedirectUrl: "${max_file_size_redirect_url}"
+        });
+    });
+</%block>
+
+<%block name="content">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plupload/2.1.2/plupload.full.min.js"></script>
+
+<div class="wrapper-mast wrapper">
+    <header class="mast has-actions has-subtitle">
+        <h1 class="page-header">
+            <small class="subtitle">${_("Content")}</small>
+            <span class="sr">&gt; </span><span id='update_type'>${_("Files &amp; Uploads")}</span>
+        </h1>
+
+        <nav class="nav-actions" aria-label="${_('Page Actions')}">
+            <h3 class="sr">${_("Page Actions")}</h3>
+            <ul>
+                <li class="nav-item">
+                    <a href="#" class="button upload-button new-button"><i class="icon fa fa-plus"></i> ${_("Upload New File")}</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<script type="text/javascript">
+var pathname = $(location).attr('pathname');
+arrPathname = pathname.split('/');
+if (arrPathname[1] == 'cdn') $('#update_type').text('CDN 업로드');
+</script>
+<div class="wrapper-content wrapper">
+    <section class="content">
+        <article class="content-primary" role="main">
+            <div class="wrapper-assets" />
+            <div class="ui-loading">
+                <p><span class="spin"><i class="icon fa fa-refresh"></i></span> <span class="copy">${_("Loading")}</span></p>
+            </div>
+        </article>
+
+        <aside class="content-supplementary" role="complementary">
+            <div class="bit">
+                <h3 class="title-3">${_("Adding Files for Your Course")}</h3>
+
+                <p>${_("To add files to use in your course, click {em_start}Upload New File{em_end}. Then follow the prompts to upload a file from your computer.").format(em_start='<strong>', em_end="</strong>")}</p>
+
+                <p>${_("{em_start}Caution{em_end}: {platform_name} recommends that you limit the file size to {em_start}10 MB{em_end}. In addition, do not upload video or audio files. You should use a third party service to host multimedia files.").format(em_start='<strong>', em_end="</strong>", platform_name=settings.PLATFORM_NAME)}</p>
+
+            	<p>${_("The course image, textbook chapters, and files that appear on your Course Handouts sidebar also appear in this list.")}</p>
+            </div>
+            <div class="bit">
+                <h3 class="title-3">${_("Using File URLs")}</h3>
+
+                <p>${_("Use the {em_start}{studio_name} URL{em_end} value to link to the file or image from a component, a course update, or a course handout.").format(studio_name=settings.STUDIO_SHORT_NAME, em_start="<strong>", em_end="</strong>")}</p>
+
+                <p>${_("Use the {em_start}Web URL{em_end} value to reference the file or image only from outside of your course. {em_start}Note:{em_end} If you lock a file, the Web URL no longer works for external access to a file.").format(em_start='<strong>', em_end="</strong>")}</p>
+
+                <p>${_("To copy a URL, double click the value in the URL column, then copy the selected text.")}</p>
+            </div>
+            <div class="bit external-help">
+                <a href="${get_online_help_info(online_help_token())['doc_url']}" target="_blank" class="button external-help-button">${_("Learn more about managing files")}</a>
+            </div>
+
+        </aside>
+    </section>
+</div>
+<%
+    path_info = request.path_info
+    path_info_split = path_info.split('/')
+%>
+% if path_info_split[1] == 'assets':
+<div class="upload-modal modal">
+    <a href="#" class="close-button"><i class="icon fa fa-times-circle"></i> <span class="sr">${_('close')}</span></a>
+    <div class="modal-body">
+        <h1 class="title">${_("Upload New File")}</h1>
+        <h2>${_("Max per-file size: {max_filesize}MB").format(max_filesize=max_file_size_in_mbs)}</h2>
+        <p class="file-name">
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="embeddable">
+            <label>URL:</label>
+            <input type="text" class="embeddable-xml-input" value='' readonly>
+        </div>
+        <form class="file-chooser" action="${asset_callback_url}"
+              method="post" enctype="multipart/form-data">
+            <a href="#" class="choose-file-button">${_("Choose File")}</a>
+            <input type="file" class="file-input" name="file" multiple>
+        </form>
+    </div>
+</div>
+% else :
+<div class="upload-modal modal">
+    <a href="#" class="close-button"><i class="icon fa fa-times-circle"></i> <span class="sr">${_('close')}</span></a>
+    <div class="modal-body">
+        <h1 class="title">CDN 업로드</h1>
+        <div class="container">
+            <div class="input-group">
+                <input type="hidden" class="form-control" disabled="disabled" id="zfp-thumbnail-selected" value="" />
+                    <a href="#" id="zfp-thumbnail-selector" class="choose-file-button">${_("Choose File")}</a>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="embeddable" id="movie-info">
+                <label>URL:</label>
+                <input type="text" class="embeddable-xml-input" value=''>
+            </div>
+        </div>
+    </div>
+</div>
+% endif
+
+
+<script type="text/javascript">
+var file_name = "";
+var cdn_url = "";
+var content_type = "";
+var thumbnail_url = "";
+
+    if ($("#zfp-thumbnail-selector").length > 0) {
+        var thumbnail = new plupload.Uploader({
+            browse_button: 'zfp-thumbnail-selector',
+            //runtimes: 'flash,html4,html5,silverlight',
+            runtimes: 'html5,browserplus,silverlight,flash,gears,html4',
+            //chunk_size : '64kb',
+            chunk_size: '2048kb',
+            // MME General settings
+            url: "http://mme.kmoocs.kr/upload",
+            file_data_name: "uploadFile",
+            max_file_count: 1,
+            max_retries: 3,
+            filters: {
+                max_file_size: '0',
+                mime_types: [
+                    {title: "Image files", extensions: "mov,mp4,avi,mpeg,wmv,mkv"}
+                ]
+            },
+            flash_swf_url: 'js/Moxie.swf',
+            silverlight_xap_url: 'js/Moxie.xap',
+            init: {
+                PostInit: function () {
+                    console.log('PostInit');
+                },
+
+                FilesAdded: function (up, files) {
+                    $(".input-group").hide();
+                    $(".progress-bar").show();
+                    $(".progress-fill").width("0%");
+                    $(".progress-fill").text("uploading:0%");
+                    thumbnail.start();
+                },
+
+                UploadProgress: function (up, file) {
+                    $(".progress-fill").width(file.percent+"%");
+                    $(".progress-fill").text("uploading:"+file.percent+"%");
+                },
+
+                Error: function (up, err) {
+                    $(".progress-bar").hide();
+                    console.log('Error:', err);
+                },
+
+                StateChanged: function (up) {
+                    console.log('StateChanged:', up);
+                },
+
+                FileUploaded: function (up, file, info) {
+                    if (info.status == 200) {
+                        up.refresh();
+                        var result = $.parseJSON(info.response);
+//                        $(".embeddable").after($(".input-group"));
+//                        $(".embeddable-xml-input").val(cdn_url);
+
+                        //영상 엔코딩 요청 상태 체크
+                        $.ajax({
+                            url: 'http://mme.kmoocs.kr/mov_extract',
+                            dataType: 'json',
+                            data: 'uuid=' + result.data.up_path + '&is_re=y',
+                            type: 'get',
+                            success: function (res) {
+                                if (res.status == 200) {
+                                    var movie_status = 'http://mme.kmoocs.kr' + res.data.movie_status;
+                                    var thumb_status = 'http://mme.kmoocs.kr' + res.data.thumb_status;
+                                    cdn_url = 'http://vod.kmoocs.kr' + res.data.mov_url;
+                                    ajaxPutEdX();
+//                                    mov_st(movie_status);
+                                } else if (res.status == 700) {
+                                    console.log('중복엔코딩 요청입니다.');
+                                } else {
+                                    alert('엔코딩 요청이 완료되지 않았습니다.');
+                                }
+                            },
+                            error: function (e) {
+                                console.log(e);
+                            },
+                            complete: function () {
+                                //영상 상태체크
+                                //썸네일 체크
+                                //구간썸네일 체크
+                                $(".choose-file-button").text("Load Another File");
+                                $(".input-group").show();
+                            }
+                        });
+                    } else {
+                        up.refresh();
+                    }
+                    console.log('FileUploaded:', file, info);
+                    file_name = file.name;
+                    file_type = file.type;
+                    console.log('filname', file.name);
+                    console.log('filetype', file.type);
+                    $("#zfp-thumbnail-progress").hide();
+                }
+            }
+        });
+
+        //Pluploade Init
+        thumbnail.init();
+    };
+
+    var mov_st = function (url) {
+        $.ajax({
+            method: 'GET',
+            url: url,
+            dataType: 'jsonp',
+            async: false,
+            success: function (res) {
+//                console.log(res);
+                if (res.message == 'PENDING' && res.status == '200') {
+                    mov_st(url);
+                }
+                else if (res.message == 'SUCCESS' && res.status == '200' && 
+                     res.data.msg == 'Transcoding Finish') {
+                }
+                else if (res.message == 'PENDING' && res.status == '210') {
+                    mov_st(url);
+                }
+            },
+            error: function () {
+            }
+        });
+    };
+
+    var getThumb = function (text, url) {
+        var path = '';
+        $.ajax({
+            method: 'GET',
+            url: url,
+            dataType: 'jsonp',
+            success: function (res) {
+                if (res.message !== 'SUCCESS') {
+                    getThumb(text, url);
+                } else {
+                    console.log("res:", res);
+                    $.each(res.data.thumb, function (index, value) {
+                        path = value.path.replace('/data/convert/mme', 'http://vod.kmoocs.kr/doc')
+                        thumbnail_url = path;
+                        console.log("path:",path);
+                    });
+                }
+            },
+            error: function () {
+            }
+        });
+    };
+
+    var sleep = function (delay) {
+        var start = new Date().getTime();
+        while (new Date().getTime() < start + delay);
+    };
+
+
+var trCdnFile = ""
++ "<tr>"
++ "    <td class=\"thumb-col\">"
++ "    <div class=\"thumb\">"
++ "         <img src=\"{{thumbnail}}\" alt=\"No description available\">"
++ "    </div>"
++ "</td>"
++ "<td class=\"name-col\">"
++ "    <span class=\"title\"><a data-tooltip=\"Open/download this file\" href=\"{{url}}\" class=\"filename\">{{display_name}}</a></span>"
++ "    <div class=\"embeddable-xml\"></div>"
++ "</td>"
++ "<td class=\"type-col\">"
++ "    {{content_type}}"
++ "</td>"
++ "<td class=\"date-col\">"
++ "    {{date_added}}"
++ "</td>"
++ "<td class=\"embed-col\">"
++ "    <ul>"
++ "        <li class=\"embed-url\">"
++ "            <label>"
++ "                <span class=\"label\">Status:</span>"
++ "                <input type=\"text\" class=\"embeddable-xml-input\" value=\"{{encoding_status}}\" readonly=\"\">"
++ "            </label>"
++ "        </li>"
++ "        <li class=\"external-url\">"
++ "            <label>"
++ "                <span class=\"label\">Web:</span>"
++ "                <input type=\"text\" class=\"embeddable-xml-input\" value=\"{{url}}\" readonly=\"\">"
++ "            </label>"
++ "        </li>"
++ "    </ul>"
++ "</td>"
++ "<td class=\"actions-col\">"
++ "    <ul class=\"actions-list\">"
++ "        <li class=\"action-item action-delete\">"
++ "            <a href=\"javascript:ajaxDeleteEdX('{{id}}', '{{mme_path}}');\" style=\"display:inline\" data-tooltip=\"Delete this asset\" class=\"remove-asset-button action-button\" ><i class=\"icon fa fa-times-circle\" aria-hidden=\"true\"></i> <span class=\"sr\">Delete this asset</span></a>"
++ "        </li>"
++ "    </ul>"
++ "</td>"
++ "</tr>";
+
+    var ajaxPutEdX = function() {
+        $.ajaxSetup({
+            type: 'PUT'
+        });
+        $.ajax({
+            url: '${asset_callback_url}?file_name='+file_name+'&cdn_url='+cdn_url+'&file_type='+file_type+'&thumbnail_url='+thumbnail_url,
+            success: function (res) {
+                if (res.result == 'success') {
+                    ajaxGetEdX();
+                }
+            },
+            error: function () {
+                console.log('ajaxPutEdX error');
+            }
+        });
+    }
+
+    var ajaxDeleteEdX = function(id, mme_path) {
+        $.ajaxSetup({
+            type : 'DELETE'
+        });
+        $.ajax({
+            url: '${asset_callback_url}'+id,
+            error: function () {
+                console.log('ajaxDeleteEdX error');
+            }
+        }).done(function(data){
+            $.ajaxSetup({
+                type : 'GET'
+            });
+            $.ajax({
+                url: 'http://mme.kmoocs.kr/mov_delete?uuid='+mme_path+'&origin=1',
+                error: function () {
+                    console.log('mov_delete error');
+                }
+            });
+            console.log("ajaxDeleteEdX done");
+            ajaxGetEdX();
+        });
+    }
+
+    var ajaxGetEdX = function() {
+        $.ajaxSetup({
+            type: 'GET'
+        });
+        $.ajax({
+            url: '${asset_callback_url}',
+            error: function () {
+                console.log('ajaxGetEdX error');
+            }
+        }).done(function(data){
+            if (data.totalCount > 0) {
+                $('#asset-table-body').html('');
+                $(".assets-library").css("display", "block");
+                $(".no-asset-content").css("display", "none");
+                var arrAssets = data.assets;
+                var asset = null;
+                $.each(arrAssets, function( key, value ) {
+                    asset = value;
+                    var arrUrl = asset.external_url.split('/');
+                    var thumbnail = asset.thumbnail;
+                    var display_name = asset.display_name;
+                    var external_url = asset.external_url;
+                    var content_type = asset.content_type;
+                    var date_added = asset.date_added;
+                    var asset_id = encodeURIComponent(asset.id);
+                    sleep(1000);
+                    $.ajax({
+                        method: 'GET',
+                        url: 'http://mme.kmoocs.kr/movie_status?uuid='+arrUrl[arrUrl.length-1].replace('.mp4', ''),
+                        dataType: 'jsonp',
+                        async: false,
+                        success: function (res) {
+                            var encMsg = null;
+                           if (res.status == '200' && res.data.msg == 'Transcoding Processing') {
+                               encMsg = '동영상 인코딩 진행중 '+res.data.data.percent+'%';
+                               trCdnFile = trCdnFile.replace("display:inline", "display:none");
+                           }
+                           else if (res.status == '200' && res.data.msg == 'Transcoding Finish') {
+                               encMsg = '동영상 인코딩 완료';
+
+                           }
+                           else if (res.status == '210' && res.data.msg == 'Transcoding Processing') {
+                               encMsg = '동영상 인코딩 진행중 '+res.data.data.percent+'%';
+                           }
+                            $('#asset-table-body').append(trCdnFile
+                                    .replace('{{thumbnail}}', thumbnail)
+                                    .replace('{{display_name}}', display_name)
+                                    .replace(/{{url}}/g, external_url)
+                                    .replace('{{content_type}}', content_type)
+                                    .replace('{{date_added}}', date_added)
+                                    .replace('{{encoding_status}}', encMsg)
+                                    .replace('{{id}}', asset_id)
+                                    .replace('{{mme_path}}', external_url.replace('http://vod.kmoocs.kr/vod/', ''))
+
+                            );
+                        },
+                        error: function () {
+                            $('#asset-table-body').append(trCdnFile
+                                    .replace('{{thumbnail}}', thumbnail)
+                                    .replace('{{display_name}}', display_name)
+                                    .replace(/{{url}}/g, external_url)
+                                    .replace('{{content_type}}', content_type)
+                                    .replace('{{date_added}}', date_added)
+                                    .replace('{{encoding_status}}', "동영상 인코딩 에러")
+                                    .replace('{{id}}', asset_id)
+                                    .replace('{{mme_path}}', external_url.replace('http://vod.kmoocs.kr/vod/', ''))
+                            );
+                        }
+                    });
+
+                });
+            } else if (data.totalCount == 0) {
+                $(".assets-library").css("display", "none");
+                $(".no-asset-content").css("display", "block");
+            }
+            console.log("ajaxGetEdX done");
+        });
+    }
+
+    $(".close-button").click(function(){
+        $('#uploadProgress').text('');
+    });
+
+</script>
+</%block>
+
+<%block name="view_alerts">
+<!-- alert: save confirmed with close -->
+<div class="wrapper wrapper-alert wrapper-alert-confirmation" role="status">
+    <div class="alert confirmation">
+        <i class="icon fa fa-check"></i>
+
+        <div class="copy">
+            <h2 class="title title-3">${_('Your file has been deleted.')}</h2>
+        </div>
+
+        <a href="" rel="view" class="action action-alert-close">
+            <i class="icon fa fa-times-circle"></i>
+            <span class="label">${_('close alert')}</span>
+        </a>
+    </div>
+</div>
+</%block>

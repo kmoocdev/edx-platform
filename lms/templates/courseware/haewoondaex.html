@@ -1,0 +1,117 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from microsite_configuration import microsite
+%>
+<%inherit file="../main.html" />
+
+<%namespace name='static' file='../static_content.html'/>
+
+<%block name="header_extras">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+  % for template_name in ["result_item", "filter_bar", "filter", "search_facets_list", "search_facets_section", "search_facet", "more_less_links"]:
+  <script type="text/template" id="${template_name}-tpl">
+      <%static:include path="discovery/${template_name}.underscore" />
+  </script>
+  % endfor
+  <script type="text/javascript">;(function (define) {{
+      define('course_discovery_meanings', function() {{
+          'use strict';
+          return ${json.dumps(course_discovery_meanings)};
+        }});
+      }})(define || RequireJS.define);
+  </script>
+  % endif
+</%block>
+
+<%block name="js_extra">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+  <%static:js group='discovery'/>
+  % endif
+</%block>
+
+<%block name="pagetitle">해운대</%block>
+<%
+  platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  if self.stanford_theme_enabled():
+    course_index_overlay_text = _("Explore free courses from {university_name}.").format(university_name="Stanford University")
+    logo_file = static.url('themes/stanford/images/seal.png')
+    logo_alt_text = "Stanford Seal Logo"
+
+  else:
+    course_index_overlay_text = microsite.get_value('course_index_overlay_text', _("Explore courses from {platform_name}.").format(platform_name=platform_name))
+
+    if settings.FEATURES.get('IS_EDX_DOMAIN', False):
+      # For some reason, `static.url('images/edx-theme/edx-logo-bw.png')` breaks template rendering.
+      default_image_url = settings.STATIC_URL + 'images/edx-theme/edx-logo-bw.png'
+    else:
+      default_image_url = settings.STATIC_URL + 'images/default-theme/logo-large.png'
+
+    logo_file = microsite.get_value(
+      'course_index_overlay_logo_file', default_image_url
+    )
+
+    logo_alt_text = _("{platform_name} Logo").format(platform_name=platform_name)
+%>
+
+<section class="home">
+
+<!-- home S -->
+			<header class="type1">
+				<img src="/static/images/sub01.png" alt="최고의 대학, 최고의 강의! 한국형 온라인에서 시작하세요.">
+			</header>
+			<section class="school_info">	 <!-- school_info S -->
+				<div class="inner">
+					<p class="title_type2"><span>UC Berkeleyx</span><img src="/static/images/sub_logo01.png" alt="UC Berkeleyx"></p>
+					<p>버클리에서 무료 온라인 코스</p>
+					<p>캘리포니아 대학, 버클리는 1868 년에 창립되었으며, 주력 캠퍼스 - "교육의 도시"로 구상은 - 샌프란시스코 만에 버클리에 설립되었습니다. <br>버클리 교수는 1582 풀 타임 및 130 개 이상의학과와 80 개 이상의 학제 간 연구 단위들 사이에서 분산 500 파트 타임 교수진으로 구성되어 있습니다. <br>버클리 동문 28 노벨상을받은, 8 노벨상 수상자, 32 맥아더 펠로우, 현재 교수들 사이 네 퓰리처 상 수상자가 있습니다.</p>
+					<p>2012년 9월에서 교육과 학습의 혁신에 버클리의 의지를 표시하기 위해, 온라인 교육 버클리 리소스 센터 (BRCOE)이 형성되었다. <br>센터는 다음과 같은 온라인 학위 프로그램과 MOOC 프로젝트에 자원 허브, 조언 좌표, 신용 및 비 신용 과정에 이르기까지, 대학의 온라인 교육 사업을 촉진하기 위하여 모든 내부 캠퍼스 전체와 외부 자원에 대한 운영 촉매입니다 </p>
+					<p>BRCOE의 새로운 MOOCLab는 자금과 온라인 교육의 교육 학적 연구를위한 차량과 같은 대규모 오픈 온라인 코스 (MOOCs)를 개발하기 위해 3 년간의 연구 사업이다.</p>
+					<p>버클리는 또한 개발하고 전세계 캠퍼스에 작은 개인 온라인 과정 (SPOCs)의 채택을 촉진하기 위해 EDX와 함께 일하고있다. SPOCs 현지 교수에게 더 많은 상호 작용 활동과 "하이 터치"교육학에 더 많은 시간을위한 기회를 제공하는 한편, 보완 및 캠퍼스 학생들의 학습 경험을 향상시키기 위해 설계되었습니다.</p>
+				</div>
+			</section>	 <!-- school_info E -->
+
+  <section class="courses-container">
+
+    % if course_discovery_enabled:
+    <div id="discovery-form" role="search" aria-label="course">
+      <form>
+        <input class="discovery-input" placeholder="${_('Search for a course')}" type="text"/><!-- removes spacing
+        --><button type="submit" class="button postfix discovery-submit" aria-label="${_('Search')}">
+          <i class="icon fa fa-search" aria-hidden="true"></i>
+        </button>
+      </form>
+      <div id="discovery-message"></div>
+      <div aria-live="polite" aria-relevant="all">
+        <div id="loading-indicator" class="hidden">
+          <i class="icon fa fa-spinner fa-spin"></i> ${_('Loading')}
+        </div>
+      </div>
+    </div>
+
+    <div id="filter-bar" class="filters hide-phone">
+    </div>
+    % endif
+
+      <!--
+    <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
+      <ul class="courses-listing">
+        %for course in courses:
+        <li class="courses-listing-item">
+          <%include file="../course.html" args="course=course" />
+        </li>
+        %endfor
+      </ul>
+    </section>
+    -->
+
+<!--
+    % if course_discovery_enabled:
+    <aside aria-label="${_('Refine your search')}" class="search-facets phone-menu">
+    </aside>
+    % endif
+    -->
+
+  </section>
+</section>

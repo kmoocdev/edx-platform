@@ -1,0 +1,3314 @@
+# edX translation file
+# Copyright (C) 2016 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Pope, 2014
+# bossnm11 <bossnm11@gmail.com>, 2014
+# KimKyudong <choemh@nate.com>, 2014
+# Hongseob Lee <shevious@gmail.com>, 2015-2016
+# Hongseob Lee <shevious@yahoo.com>, 2015
+# Jong-Dae Park <jdpark7@gmail.com>, 2013
+# jeon <bluerespect@nate.com>, 2014-2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# Kevin Min <gr326887@graded.br>, 2015
+# JiyeonLee <leejiyeon00@gmail.com>, 2014
+# Sunah Lim <whitetree70@snu.ac.kr>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: edx-platform\n"
+"Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+"POT-Creation-Date: 2016-04-21 11:10+0000\n"
+"PO-Revision-Date: 2016-04-21 11:16+0000\n"
+"Last-Translator: Ned Batchelder <ned@edx.org>\n"
+"Language-Team: Korean (Korea) (http://www.transifex.com/open-edx/edx-platform/language/ko_KR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+"Language: ko_KR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: cms/templates/404.html
+msgid "The page that you were looking for was not found."
+msgstr "찾고 있는 페이지가 없습니다."
+
+#: cms/templates/404.html
+msgid ""
+"Go back to the {homepage} or let us know about any pages that may have been "
+"moved at {email}."
+msgstr " {homepage} 로 돌아가거나 이동된 페이지들을 {email} 로 우리에게 알려주세요."
+
+#: cms/templates/500.html
+msgid "{studio_name} Server Error"
+msgstr "{studio_name} 서버 오류"
+
+#: cms/templates/500.html
+msgid "The {em_start}{studio_name}{em_end} servers encountered an error"
+msgstr ""
+
+#: cms/templates/500.html
+msgid ""
+"An error occurred in {studio_name} and the page could not be loaded. Please "
+"try again in a few moments."
+msgstr "{studio_name} 에서 오류가 발생하여 페이지가 로드될 수 없었습니다. 잠시 후에 다시 시도하세요."
+
+#: cms/templates/500.html
+msgid ""
+"We've logged the error and our staff is currently working to resolve this "
+"error as soon as possible."
+msgstr "오류를 기록했습니다. 운영팀이 오류를 해결하기 위해 작업중입니다."
+
+#: cms/templates/500.html
+msgid "If the problem persists, please email us at {email_link}."
+msgstr "문제가 지속되면 {email_link}로 이메일 보내주세요."
+
+#: cms/templates/activation_active.html cms/templates/activation_complete.html
+#: cms/templates/activation_invalid.html
+msgid "{studio_name} Account Activation"
+msgstr "{studio_name} 계정 활성화"
+
+#: cms/templates/activation_active.html
+msgid "Your account is already active"
+msgstr "계정이 이미 활성화되어 있습니다."
+
+#: cms/templates/activation_active.html
+msgid ""
+"This account, set up using {email}, has already been activated. Please sign "
+"in to start working within {studio_name}."
+msgstr "{email}로 설정된 계정은 이미 활성화되어 있습니다. {studio_name}에서 작업하기 위해서는 로그인 하세요."
+
+#: cms/templates/activation_active.html cms/templates/activation_complete.html
+msgid "Sign into {studio_name}"
+msgstr "{studio_name} 로그인"
+
+#: cms/templates/activation_complete.html
+msgid "Your account activation is complete!"
+msgstr "계정 활성화가 완료되었습니다."
+
+#: cms/templates/activation_complete.html
+msgid ""
+"Thank you for activating your account. You may now sign in and start using "
+"{studio_name} to author courses."
+msgstr "계정을 활성화해주셔서 감사합니다. 로그인 후 {studio_name}를 사용해서 강좌를 만들어 보세요!"
+
+#: cms/templates/activation_invalid.html
+msgid "Your account activation is invalid"
+msgstr "계정 활성화가 무효화되었습니다."
+
+#: cms/templates/activation_invalid.html
+msgid ""
+"We're sorry. Something went wrong with your activation. Check to make sure "
+"the URL you went to was correct, as e-mail programs will sometimes split it "
+"into two lines."
+msgstr ""
+"죄송합니다. 활성화에 문제가 생겼습니다. 이메일 프로그램이 종종 두 줄로 나뉘기 때문에 URL이 정확한지 다시 확인해주세요. "
+
+#: cms/templates/activation_invalid.html
+msgid ""
+"If you still have issues, contact {platform_name} Support. In the meantime, "
+"you can also return to {link_start}the {studio_name} homepage.{link_end}"
+msgstr ""
+"그래도 문제가 있다면, {platform_name} 지원 센터에 문의하세요. {link_start}{studio_name} 홈페이지로 "
+"되돌아 올수 있습니다{link_end} "
+
+#: cms/templates/asset_index.html cms/templates/asset_index.html
+msgid "Files & Uploads"
+msgstr ""
+
+#: cms/templates/asset_index.html cms/templates/course_info.html
+#: cms/templates/course_outline.html cms/templates/edit-tabs.html
+#: cms/templates/textbooks.html cms/templates/videos_index.html
+#: cms/templates/widgets/header.html
+msgid "Content"
+msgstr "콘텐츠"
+
+#: cms/templates/asset_index.html cms/templates/asset_index.html
+#: cms/templates/container.html cms/templates/container.html
+#: cms/templates/course-create-rerun.html
+#: cms/templates/course-create-rerun.html cms/templates/course_info.html
+#: cms/templates/course_info.html cms/templates/course_outline.html
+#: cms/templates/course_outline.html cms/templates/edit-tabs.html
+#: cms/templates/edit-tabs.html cms/templates/index.html
+#: cms/templates/index.html cms/templates/library.html
+#: cms/templates/library.html cms/templates/manage_users.html
+#: cms/templates/manage_users.html cms/templates/manage_users_lib.html
+#: cms/templates/manage_users_lib.html cms/templates/textbooks.html
+#: cms/templates/textbooks.html cms/templates/videos_index.html
+#: cms/templates/videos_index.html cms/templates/ux/reference/container.html
+#: cms/templates/ux/reference/course-create-rerun.html
+#: cms/templates/ux/reference/outline.html
+msgid "Page Actions"
+msgstr "페이지 액션"
+
+#: cms/templates/asset_index.html cms/templates/asset_index.html
+#: cms/templates/videos_index.html
+msgid "Upload New File"
+msgstr "파일 업로드"
+
+#: cms/templates/asset_index.html
+msgid "Adding Files for Your Course"
+msgstr "강좌에 파일 추가하기"
+
+#: cms/templates/asset_index.html
+msgid ""
+"To add files to use in your course, click {em_start}Upload New File{em_end}."
+" Then follow the prompts to upload a file from your computer."
+msgstr ""
+"강좌에 사용할 파일을 추가하려면 {em_start} 파일 업로드{em_end}를 클릭하세요. 그후 컴퓨터에서 파일을 업로드하세요."
+
+#: cms/templates/asset_index.html
+msgid ""
+"{em_start}Caution{em_end}: {platform_name} recommends that you limit the "
+"file size to {em_start}10 MB{em_end}. In addition, do not upload video or "
+"audio files. You should use a third party service to host multimedia files."
+msgstr ""
+"{em_start}주의 {em_end} : {platform_name}는 {em_start} 10MB {em_end}로 파일 크기를 "
+"제한합니다. "
+
+#: cms/templates/asset_index.html
+msgid ""
+"The course image, textbook chapters, and files that appear on your Course "
+"Handouts sidebar also appear in this list."
+msgstr "화면 왼쪽의 학습 자료에 이미지, 교재 등의 파일 목록이 나타나게 됩니다."
+
+#: cms/templates/asset_index.html
+msgid "Using File URLs"
+msgstr "파일 URL 사용하기"
+
+#: cms/templates/asset_index.html
+msgid ""
+"Use the {em_start}{studio_name} URL{em_end} value to link to the file or "
+"image from a component, a course update, or a course handout."
+msgstr ""
+"구성요소 및 학습자료의 {em_start}{studio_name} URL{em_end}을 링크하면 강좌에서 활용할 수 있습니다."
+
+#: cms/templates/asset_index.html
+msgid ""
+"Use the {em_start}Web URL{em_end} value to reference the file or image only "
+"from outside of your course. {em_start}Note:{em_end} If you lock a file, the"
+" Web URL no longer works for external access to a file."
+msgstr ""
+"외부에서 파일이나 이미지를 가져올 경우 {em_start}웹 URL 값{em_end}을 사용하세요. "
+"{em_start}주의:{em_end} 파일 사용을 제한하면, 웹 URL이 있어도 파일에 접근할 수 없습니다."
+
+#: cms/templates/asset_index.html
+msgid ""
+"To copy a URL, double click the value in the URL column, then copy the "
+"selected text."
+msgstr "URL을 복사하려면 URL 값을 더블 클릭 후, 블록 처리된 텍스트를 복사하시면 됩니다."
+
+#: cms/templates/asset_index.html
+msgid "Learn more about managing files"
+msgstr "파일 관리 방법에 대해 자세히 알아보기"
+
+#: cms/templates/asset_index.html
+msgid "close"
+msgstr "닫기"
+
+#: cms/templates/asset_index.html
+msgid "Max per-file size: {max_filesize}MB"
+msgstr "최대 파일 크기: {max_filesize}MB"
+
+#: cms/templates/asset_index.html
+msgid "URL:"
+msgstr ""
+
+#: cms/templates/asset_index.html
+msgid "Choose File"
+msgstr "파일을 선택하세요"
+
+#: cms/templates/asset_index.html
+msgid "Your file has been deleted."
+msgstr "파일이 삭제되었습니다."
+
+#: cms/templates/asset_index.html
+msgid "close alert"
+msgstr "알림 닫기"
+
+#: cms/templates/certificates.html
+msgid "Course Certificates"
+msgstr "이수증"
+
+#: cms/templates/certificates.html cms/templates/certificates.html
+#: cms/templates/certificates.html cms/templates/export.html
+#: cms/templates/widgets/header.html
+msgid "Certificates"
+msgstr "이수증"
+
+#: cms/templates/certificates.html
+msgid "This module is not enabled."
+msgstr "모듈이 활성화되지 않았습니다."
+
+#: cms/templates/certificates.html
+msgid "This course does not use a mode that offers certificates."
+msgstr ""
+
+#: cms/templates/certificates.html
+msgid "Working with Certificates"
+msgstr ""
+
+#: cms/templates/certificates.html
+msgid ""
+"Specify a course title to use on the certificate if the course's official "
+"title is too long to be displayed well."
+msgstr ""
+
+#: cms/templates/certificates.html
+msgid ""
+"For verified certificates, specify between one and four signatories and "
+"upload the associated images."
+msgstr ""
+
+#: cms/templates/certificates.html
+msgid ""
+"To edit or delete a certificate before it is activated, hover over the top "
+"right corner of the form and select {em_start}Edit{em_end} or the delete "
+"icon."
+msgstr ""
+
+#: cms/templates/certificates.html
+msgid ""
+"To view a sample certificate, choose a course mode and select "
+"{em_start}Preview Certificate{em_end}."
+msgstr ""
+
+#: cms/templates/certificates.html
+msgid "Issuing Certificates to Learners"
+msgstr ""
+
+#: cms/templates/certificates.html
+msgid ""
+"To begin issuing certificates, a course team member with the Admin role "
+"selects {em_start}Activate{em_end}. Course team members without the Admin "
+"role cannot edit or delete an activated certificate."
+msgstr ""
+
+#: cms/templates/certificates.html
+msgid ""
+"{em_start}Do not{em_end} delete certificates after a course has started; "
+"learners who have already earned certificates will no longer be able to "
+"access them."
+msgstr ""
+
+#: cms/templates/certificates.html
+msgid "Learn more about certificates"
+msgstr "이수증에 대해 자세히 알아보기"
+
+#: cms/templates/certificates.html cms/templates/certificates.html
+#: cms/templates/group_configurations.html
+#: cms/templates/group_configurations.html cms/templates/settings.html
+#: cms/templates/settings.html cms/templates/settings_advanced.html
+#: cms/templates/settings_advanced.html cms/templates/settings_graders.html
+#: cms/templates/settings_graders.html
+msgid "Other Course Settings"
+msgstr "다른 설정"
+
+#: cms/templates/certificates.html cms/templates/group_configurations.html
+#: cms/templates/settings_advanced.html cms/templates/settings_graders.html
+msgid "Details &amp; Schedule"
+msgstr "세부사항  &amp; 일정"
+
+#: cms/templates/certificates.html cms/templates/group_configurations.html
+#: cms/templates/settings.html cms/templates/settings_advanced.html
+#: cms/templates/settings_graders.html cms/templates/widgets/header.html
+msgid "Grading"
+msgstr "과제 평가"
+
+#: cms/templates/certificates.html cms/templates/group_configurations.html
+#: cms/templates/manage_users.html cms/templates/settings.html
+#: cms/templates/settings_advanced.html cms/templates/settings_graders.html
+#: cms/templates/widgets/header.html
+msgid "Course Team"
+msgstr "강좌 운영팀"
+
+#: cms/templates/certificates.html cms/templates/group_configurations.html
+#: cms/templates/settings.html cms/templates/settings_advanced.html
+#: cms/templates/settings_advanced.html cms/templates/settings_graders.html
+#: cms/templates/widgets/header.html
+msgid "Advanced Settings"
+msgstr "고급 설정"
+
+#: cms/templates/certificates.html cms/templates/group_configurations.html
+#: cms/templates/group_configurations.html cms/templates/settings.html
+#: cms/templates/settings_advanced.html cms/templates/settings_graders.html
+#: cms/templates/widgets/header.html
+msgid "Group Configurations"
+msgstr "그룹 설정"
+
+#: cms/templates/component.html cms/templates/studio_xblock_wrapper.html
+#: cms/templates/studio_xblock_wrapper.html
+msgid "Duplicate"
+msgstr "복사"
+
+#: cms/templates/component.html
+msgid "Duplicate this component"
+msgstr "콤포넌트 복사"
+
+#: cms/templates/component.html cms/templates/studio_xblock_wrapper.html
+#: cms/templates/studio_xblock_wrapper.html
+msgid "Delete"
+msgstr "삭제"
+
+#: cms/templates/component.html
+msgid "Delete this component"
+msgstr " 콤포넌트 삭제"
+
+#: cms/templates/component.html cms/templates/edit-tabs.html
+#: cms/templates/edit-tabs.html cms/templates/studio_xblock_wrapper.html
+msgid "Drag to reorder"
+msgstr "재배열 위한 이동"
+
+#: cms/templates/container.html cms/templates/library.html
+msgid "Display Name"
+msgstr "표시될 이름"
+
+#: cms/templates/container.html
+msgid "Open the courseware in the LMS"
+msgstr "LMS에서 강좌내용 열기 "
+
+#: cms/templates/container.html
+msgid "View Live Version"
+msgstr "적용 결과 보기"
+
+#: cms/templates/container.html
+msgid "Preview the courseware in the LMS"
+msgstr " LMS에서 강좌 내용 미리보기"
+
+#: cms/templates/container.html
+msgid "Preview"
+msgstr "미리보기"
+
+#: cms/templates/container.html
+msgid "Adding components"
+msgstr "구성요소 추가하기"
+
+#: cms/templates/container.html
+msgid ""
+"Select a component type under {strong_start}Add New Component{strong_end}. "
+"Then select a template."
+msgstr ""
+
+#: cms/templates/container.html
+msgid ""
+"The new component is added at the bottom of the page or group. You can then "
+"edit and move the component."
+msgstr "새로운 구성 요소는 페이지 또는 그룹의 아래에 추가되며, 편집하고 구성 요소를 이동할 수 있습니다."
+
+#: cms/templates/container.html
+msgid "Editing components"
+msgstr "components 수정"
+
+#: cms/templates/container.html
+msgid ""
+"Click the {strong_start}Edit{strong_end} icon in a component to edit its "
+"content."
+msgstr ""
+
+#: cms/templates/container.html
+msgid "Reorganizing components"
+msgstr "구성요소 재배치하기"
+
+#: cms/templates/container.html
+msgid "Drag components to new locations within this component."
+msgstr "이 구성요소 안에서 새로운 위치로 구성요소를 마우스로 끌고 옵니다. "
+
+#: cms/templates/container.html
+msgid "For content experiments, you can drag components to other groups."
+msgstr "콘텐츠 실험을 위해, 다른 집단으로 구성요소를 드래그할 수 있습니다."
+
+#: cms/templates/container.html
+msgid "Working with content experiments"
+msgstr "콘텐츠 실험 활용하기"
+
+#: cms/templates/container.html
+msgid ""
+"Confirm that you have properly configured content in each of your experiment"
+" groups."
+msgstr "각 콘텐츠 실험 그룹에 콘텐츠를 적절하게 설정했는지 확인하세요."
+
+#: cms/templates/container.html
+msgid "Learn more about component containers"
+msgstr "구성 요소 컨테이너에 대해 자세히 알아보기"
+
+#: cms/templates/container.html
+msgid "Unit Location"
+msgstr "학습활동 위치"
+
+#: cms/templates/container.html
+msgid "Location ID"
+msgstr "위치 ID"
+
+#: cms/templates/container.html
+msgid ""
+"Use this ID when you create links to this unit from other course content. "
+"You enter the ID in the URL field."
+msgstr "다른 강좌 콘텐츠에서 이 학습활동으로 연결된 링크를 만들려면 이 ID를 사용하세요. ID를 URL 영역에 입력하면 됩니다."
+
+#: cms/templates/container.html
+msgid "Location in Course Outline"
+msgstr "강좌 개요에서의 위치"
+
+#: cms/templates/course-create-rerun.html
+msgid "Create a Course Rerun of:"
+msgstr "강좌 재운영을 시작합니다."
+
+#: cms/templates/course-create-rerun.html
+msgid "Create a re-run of a course"
+msgstr "강좌 재운영을 시작합니다."
+
+#: cms/templates/course-create-rerun.html
+msgid "You are creating a re-run from:"
+msgstr "강좌 재운영을 시작합니다."
+
+#: cms/templates/course-create-rerun.html
+msgid ""
+"Provide identifying information for this re-run of the course. The original "
+"course is not affected in any way by a re-run."
+msgstr "강좌 재운영을 위한 식별 정보를 제공합니다. 원래 강좌는 재운영에 어떤 식으로든 영향을 미치지 않습니다."
+
+#: cms/templates/course-create-rerun.html
+msgid ""
+"Note: Together, the organization, course number, and course run must "
+"uniquely identify this new course instance."
+msgstr "기관과 강좌 번호, 기관별 강좌 번호는 고유해야 합니다."
+
+#: cms/templates/course-create-rerun.html
+msgid "Required Information to Create a re-run of a course"
+msgstr "강좌 재운영을 만드는데 필요한 정보"
+
+#. Translators: This is an example name for a new course, seen when
+#. filling out the form to create a new course.
+#: cms/templates/course-create-rerun.html cms/templates/index.html
+msgid "e.g. Introduction to Computer Science"
+msgstr "예: 컴퓨터 공학 개론"
+
+#: cms/templates/course-create-rerun.html
+msgid ""
+"The public display name for the new course. (This name is often the same as "
+"the original course name.)"
+msgstr "강좌 이름을 입력합니다. (화면에 표시될 이름입니다.)"
+
+#: cms/templates/course-create-rerun.html cms/templates/index.html
+#: cms/templates/index.html cms/templates/settings.html
+msgid "Organization"
+msgstr "기관"
+
+#. Translators: This is an example for the name of the organization sponsoring
+#. a course, seen when filling out the form to create a new course. The
+#. organization name cannot contain spaces.
+#. Translators: "e.g. UniversityX or OrganizationX" is a placeholder displayed
+#. when user put no data into this field.
+#: cms/templates/course-create-rerun.html cms/templates/index.html
+#: cms/templates/index.html
+msgid "e.g. UniversityX or OrganizationX"
+msgstr "예. KoreaX  혹은 PusanX"
+
+#: cms/templates/course-create-rerun.html
+msgid ""
+"The name of the organization sponsoring the new course. (This name is often "
+"the same as the original organization name.)"
+msgstr "새 강좌를 지원하는 기관의 이름 (최초 기관과 대부분 동일)"
+
+#: cms/templates/course-create-rerun.html
+#: cms/templates/course-create-rerun.html
+#: cms/templates/course-create-rerun.html
+msgid "Note: No spaces or special characters are allowed."
+msgstr "주의 : 공백이나 특수 문자가 허용되지 않습니다."
+
+#. Translators: This is an example for the number used to identify a course,
+#. seen when filling out the form to create a new course. The number here is
+#. short for "Computer Science 101". It can contain letters but cannot contain
+#. spaces.
+#: cms/templates/course-create-rerun.html cms/templates/index.html
+msgid "e.g. CS101"
+msgstr "예: CS101"
+
+#: cms/templates/course-create-rerun.html
+msgid ""
+"The unique number that identifies the new course within the organization.  "
+"(This number is often the same as the original course number.)"
+msgstr "기관 안에서 새로운 강좌를 식별하는 고유 번호입니다. (이 숫자들은 강의 원래 번호와 동일합니다.)"
+
+#: cms/templates/course-create-rerun.html cms/templates/index.html
+#: cms/templates/settings.html
+msgid "Course Run"
+msgstr "기관별 강좌 번호"
+
+#. Translators: This is an example for the "run" used to identify different
+#. instances of a course, seen when filling out the form to create a new
+#. course.
+#: cms/templates/course-create-rerun.html cms/templates/index.html
+msgid "e.g. 2014_T1"
+msgstr "예: 2014_T1"
+
+#: cms/templates/course-create-rerun.html
+msgid ""
+"The term in which the new course will run. (This value is often different "
+"than the original course run value.)"
+msgstr "신규 강좌가 운영될 기간입니다. (보통 이 값은 원래의 강좌 운영 값과 다릅니다.)"
+
+#: cms/templates/course-create-rerun.html
+msgid "Create Re-run"
+msgstr "강좌 재개강하기"
+
+#: cms/templates/course-create-rerun.html
+msgid "When will my course re-run start?"
+msgstr "언제부터 제 강좌가 재운영되기 시작하나요?"
+
+#: cms/templates/course-create-rerun.html
+msgid "The new course is set to start on January 1, 2030 at midnight (UTC)."
+msgstr "새 강좌는January 1, 2030 at midnight (UTC)에 시작하는 것으로 설정되었습니다."
+
+#: cms/templates/course-create-rerun.html
+msgid "What transfers from the original course?"
+msgstr "원래의 강좌에서 무엇이 옮겨오나요?"
+
+#: cms/templates/course-create-rerun.html
+msgid ""
+"The new course has the same course outline and content as the original "
+"course. All problems, videos, announcements, and other files are duplicated "
+"to the new course."
+msgstr ""
+"새 강좌는 원래 강좌와 같은 개요와 콘텐츠를 가지고 있습니다. 모든 문제, 동영상, 공지 및 기타 파일은 새로운 강좌에 복사됩니다."
+
+#: cms/templates/course-create-rerun.html
+msgid "What does not transfer from the original course?"
+msgstr "원래의 강좌에서 무엇은 옮겨지지 않나요?"
+
+#: cms/templates/course-create-rerun.html
+msgid ""
+"You are the only member of the new course's staff. No students are enrolled "
+"in the course, and there is no student data. There is no content in the "
+"discussion topics or wiki."
+msgstr "귀하는 강좌 운영팀의 유일한 구성원입니다. 수강신청한 학습자와 게시판 주제 또는 위키에 내용이 없습니다.  "
+
+#: cms/templates/course-create-rerun.html
+msgid "Learn more about Course Re-runs"
+msgstr "강좌 재재강에 대해 자세히 알아보기"
+
+#: cms/templates/course_info.html cms/templates/course_info.html
+msgid "Course Updates"
+msgstr "강좌 공지사항"
+
+#: cms/templates/course_info.html
+msgid "New Update"
+msgstr "새 공지사항"
+
+#: cms/templates/course_info.html
+msgid ""
+"Use course updates to notify students of important dates or exams, highlight"
+" particular discussions in the forums, announce schedule changes, and "
+"respond to student questions. You add or edit updates in HTML."
+msgstr "공지사항을 입력하세요. HTML로 추가 또는 편집할 수 있습니다."
+
+#: cms/templates/course_outline.html cms/templates/course_outline.html
+#: cms/templates/course_outline.html
+msgid "Course Outline"
+msgstr "강좌 개요"
+
+#: cms/templates/course_outline.html
+msgid ""
+"This course was created as a re-run. Some manual configuration is needed."
+msgstr "재개강된 강좌입니다. 일부 사항은 다시 설정해야 합니다."
+
+#: cms/templates/course_outline.html
+msgid ""
+"No course content is currently visible, and no students are enrolled. Be "
+"sure to review and reset all dates, including the Course Start Date; set up "
+"the course team; review course updates and other assets for dated material; "
+"and seed the discussions and wiki."
+msgstr ""
+"현재 강좌 콘텐츠를 볼 수 없으며, 수강신청한 학습자가 없습니다. 이 경우, 다음과 같은 조치를 시도해보세요. 개강일을 포함해 모든 날짜"
+" 확인 및 재설정, 강좌 운영팀 설정, 강좌 업데이트 및 다른 자료 검토, 게시판과 위키 업데이트를 할 수 있습니다. "
+
+#: cms/templates/course_outline.html cms/templates/index.html
+msgid "Dismiss"
+msgstr "닫기"
+
+#: cms/templates/course_outline.html
+msgid "Warning"
+msgstr "주의"
+
+#: cms/templates/course_outline.html
+msgid "This course uses features that are no longer supported."
+msgstr "강좌가 더이상 지원하지 않는 기능을 사용하고 있습니다."
+
+#: cms/templates/course_outline.html
+msgid "You must delete or replace the following components."
+msgstr "다음 구성요소를 삭제하거나 교체해야합니다."
+
+#: cms/templates/course_outline.html
+msgid "Unsupported Components"
+msgstr "지원되지 않는 구성요소"
+
+#: cms/templates/course_outline.html
+msgid "Deprecated Component"
+msgstr "더 이상 사용하지 않는 구성요소"
+
+#: cms/templates/course_outline.html
+msgid ""
+"To avoid errors, {platform_name} strongly recommends that you remove "
+"unsupported features from the course advanced settings. To do this, go to "
+"the {link_start}Advanced Settings page{link_end}, locate the \"Advanced "
+"Module List\" setting, and then delete the following modules from the list."
+msgstr ""
+"오류를 피하기 위해, {platform_name} 는 지원하지 않는 설정 제거를 권합니다. 이를 위해, {link_start} 고급 설정"
+" {link_end}에서 \"고급 모듈 목록\" 설정으로 가셔서, 다음 모듈을 삭제해주세요."
+
+#: cms/templates/course_outline.html
+msgid "Unsupported Advance Modules"
+msgstr "지원되지 않는 고급 모듈"
+
+#: cms/templates/course_outline.html
+msgid "Click to add a new section"
+msgstr "신규 주제를 추가하기 위해 클릭하세요."
+
+#: cms/templates/course_outline.html
+msgid "New Section"
+msgstr "신규 주제 추가하기"
+
+#: cms/templates/course_outline.html
+msgid "Reindex current course"
+msgstr "현재 강좌 재인덱스하기"
+
+#: cms/templates/course_outline.html
+msgid "Reindex"
+msgstr "재인덱스"
+
+#: cms/templates/course_outline.html
+msgid "Collapse All Sections"
+msgstr "모든 주제 접기"
+
+#: cms/templates/course_outline.html
+msgid "Expand All Sections"
+msgstr "모든 주제 펼치기"
+
+#: cms/templates/course_outline.html
+msgid "Click to open the courseware in the LMS in a new tab"
+msgstr "새 탭에서 학습자가 보는 화면을 보려면 클릭하세요."
+
+#: cms/templates/course_outline.html cms/templates/edit-tabs.html
+#: cms/templates/index.html
+msgid "View Live"
+msgstr "적용 결과 보기"
+
+#: cms/templates/course_outline.html cms/templates/course_outline.html
+msgid "Edit Start Date"
+msgstr "시작일 변경"
+
+#: cms/templates/course_outline.html
+msgid "Course Pacing:"
+msgstr ""
+
+#: cms/templates/course_outline.html
+msgid "Self-Paced"
+msgstr ""
+
+#: cms/templates/course_outline.html
+msgid "Instructor-Paced"
+msgstr ""
+
+#: cms/templates/course_outline.html
+msgid "Creating your course organization"
+msgstr "강좌 만들기"
+
+#: cms/templates/course_outline.html
+msgid "You add sections, subsections, and units directly in the outline."
+msgstr "주제, 소주제, 학습활동을 추가하세요."
+
+#: cms/templates/course_outline.html
+msgid ""
+"Create a section, then add subsections and units. Open a unit to add course "
+"components."
+msgstr "먼저 주제를 만들고, 소주제와 학습활동을 추가하시면 됩니다. 학습활동에 구성요소를 넣어보세요."
+
+#: cms/templates/course_outline.html
+msgid "Reorganizing your course"
+msgstr "강좌 다시 구성하기"
+
+#: cms/templates/course_outline.html
+msgid "Drag sections, subsections, and units to new locations in the outline."
+msgstr "주제, 소주제 및 학습활동을 드래그 아이콘을 클릭한 채로 새 위치로 드래그 하세요."
+
+#: cms/templates/course_outline.html
+msgid "Setting release dates and grading policies"
+msgstr "공개일과 성적 규정 설정하기"
+
+#: cms/templates/course_outline.html
+msgid ""
+"Select the Configure icon for a section or subsection to set its release "
+"date. When you configure a subsection, you can also set the grading policy "
+"and due date."
+msgstr ""
+"공개일을 설정하려면, 주제 또는 소주제의 '설정' 아이콘을 클릭하면 됩니다. 소주제를 설정할 때, 성적 규정과 마감일도 설정할 수 "
+"있습니다."
+
+#: cms/templates/course_outline.html
+msgid "Changing the content students see"
+msgstr "콘텐츠 공개 설정"
+
+#: cms/templates/course_outline.html
+msgid ""
+"To publish draft content, select the Publish icon for a section, subsection,"
+" or unit."
+msgstr "콘텐츠를 게시하려면, 주제, 소주제, 학습활동에서 '게시' 버튼을 누르세요."
+
+#: cms/templates/course_outline.html
+msgid ""
+"To hide content from students, select the Configure icon for a section, "
+"subsection, or unit, then select {em_start}Hide from students{em_end}."
+msgstr ""
+"학습자에게 콘텐츠를 보이지 않게 하려면, 주제 및 소주제의 설정에서 {em_start}학습자에게 감추기{em_end}를 선택하세요."
+
+#: cms/templates/course_outline.html
+msgid "Learn more about the course outline"
+msgstr "강좌 개요에 대해 더 자세히 알아보기"
+
+#. Translators: Pages refer to the tabs that appear in the top navigation of
+#. each course.
+#: cms/templates/edit-tabs.html cms/templates/edit-tabs.html
+#: cms/templates/export.html cms/templates/widgets/header.html
+msgid "Pages"
+msgstr "강좌 메뉴"
+
+#: cms/templates/edit-tabs.html
+msgid "New Page"
+msgstr "신규 메뉴"
+
+#: cms/templates/edit-tabs.html
+msgid ""
+"Note: Pages are publicly visible. If users know the URL of a page, they can "
+"view the page even if they are not registered for or logged in to your "
+"course."
+msgstr "아래의 메뉴가 순서대로 나타날 것입니다. "
+
+#: cms/templates/edit-tabs.html
+msgid "Show this page"
+msgstr "이 페이지를 보여주세요"
+
+#: cms/templates/edit-tabs.html cms/templates/edit-tabs.html
+msgid "Show/hide page"
+msgstr "페이지 보임/숨기기"
+
+#: cms/templates/edit-tabs.html cms/templates/edit-tabs.html
+msgid "This page cannot be reordered"
+msgstr "이페이지는 저장될수 없습니다."
+
+#: cms/templates/edit-tabs.html
+msgid "You can add additional custom pages to your course."
+msgstr " 강좌에 사용자 정의 메뉴를 추가할 수 있습니다."
+
+#: cms/templates/edit-tabs.html
+msgid "Add a New Page"
+msgstr " 신규 메뉴 추가"
+
+#: cms/templates/edit-tabs.html
+msgid "What are pages?"
+msgstr "메뉴란?"
+
+#: cms/templates/edit-tabs.html
+msgid ""
+"Pages are listed horizontally at the top of your course. Default pages "
+"(Home, Course, Discussion, Wiki, and Progress) are followed by textbooks and"
+" custom pages that you create."
+msgstr ""
+
+#: cms/templates/edit-tabs.html
+msgid "Custom pages"
+msgstr "사용자 정의 메뉴란?"
+
+#: cms/templates/edit-tabs.html
+msgid ""
+"You can create and edit custom pages to provide students with additional "
+"course content. For example, you can create pages for the grading policy, "
+"course slides, and a course calendar. "
+msgstr ""
+"강좌 콘텐츠를 제공할 사용자 정의 메뉴를 생성하고 편집할 수 있습니다. 예를 들어, 성적 규정, 강좌 슬라이드, 강좌 일정 등의 메뉴를 "
+"만들 수 있습니다. "
+
+#: cms/templates/edit-tabs.html
+msgid "How do pages look to students in my course?"
+msgstr "강좌가 학습자에게 어떻게 보일까?"
+
+#: cms/templates/edit-tabs.html
+msgid ""
+"Students see the default and custom pages at the top of your course and use "
+"these links to navigate."
+msgstr "학습자는 여기서 귀하가 설정한 순서대로 메뉴를 보고, 학습하게 됩니다."
+
+#: cms/templates/edit-tabs.html
+msgid "See an example"
+msgstr "예 보기"
+
+#: cms/templates/edit-tabs.html
+msgid "Pages in Your Course"
+msgstr "내 강좌에 들어가는 페이지"
+
+#: cms/templates/edit-tabs.html
+msgid "Preview of Pages in your course"
+msgstr " 내 강좌 페이지 미리보기"
+
+#: cms/templates/edit-tabs.html
+msgid ""
+"Pages appear in your course's top navigation bar. The default pages (Home, "
+"Course, Discussion, Wiki, and Progress) are followed by textbooks and custom"
+" pages."
+msgstr ""
+
+#: cms/templates/edit-tabs.html cms/templates/howitworks.html
+#: cms/templates/howitworks.html cms/templates/howitworks.html
+msgid "close modal"
+msgstr "모달 닫기"
+
+#: cms/templates/error.html
+msgid "Internal Server Error"
+msgstr "내부 서버 오류"
+
+#: cms/templates/error.html
+msgid "The Page You Requested Page Cannot be Found"
+msgstr "요청한 페이지를 찾을 수 없습니다."
+
+#: cms/templates/error.html
+msgid ""
+"We're sorry. We couldn't find the {studio_name} page you're looking for. You"
+" may want to return to the {studio_name} Dashboard and try again. If you are"
+" still having problems accessing things, please feel free to "
+"{link_start}contact {studio_name} support{link_end} for further help."
+msgstr ""
+"죄송합니다.  {studio_name}페이지를 찾을 수 없습니다. {studio_name}대시보드로 돌아가서 다시 시도하세요. 도움이 "
+"필요하시면 {link_start}{studio_name}지원 연락처{link_end}로 연락하세요."
+
+#: cms/templates/error.html
+msgid "The Server Encountered an Error"
+msgstr "오류가 발생했습니다."
+
+#: cms/templates/error.html
+msgid ""
+"We're sorry. There was a problem with the server while trying to process "
+"your last request. You may want to return to the {studio_name} Dashboard or "
+"try this request again. If you are still having problems accessing things, "
+"please feel free to {link_start}contact {studio_name} support{link_end} for "
+"further help."
+msgstr ""
+"죄송합니다.  요청을 처리하는 동안 서버에 문제가 발생했습니다. {studio_name} 대시보드로 돌아가거나 다시 요청을 시도 할 수 "
+"있습니다. 문제가 계속 발생하면, {link_start}{studio_name} 지원 연락처 {link_end}로 연락하세요."
+
+#: cms/templates/error.html
+msgid "Back to dashboard"
+msgstr "대시보드로 돌아가기"
+
+#: cms/templates/export.html cms/templates/export.html
+msgid "Library Export"
+msgstr "콘텐츠 보관함 내보내기"
+
+#: cms/templates/export.html cms/templates/export.html
+msgid "Course Export"
+msgstr "강좌 내보내기"
+
+#: cms/templates/export.html cms/templates/export_git.html
+#: cms/templates/import.html cms/templates/widgets/header.html
+#: cms/templates/widgets/header.html
+msgid "Tools"
+msgstr "도구"
+
+#: cms/templates/export.html
+msgid "About Exporting Libraries"
+msgstr "콘텐츠 보관함 내보내기에 대한 소개"
+
+#. Translators: ".tar.gz" is a file extension, and should not be translated
+#: cms/templates/export.html
+msgid ""
+"You can export libraries and edit them outside of {studio_name}. The "
+"exported file is a .tar.gz file (that is, a .tar file compressed with GNU "
+"Zip) that contains the library structure and content. You can also re-import"
+" libraries that you've exported."
+msgstr ""
+"콘텐츠 보관함 내보내기 후, {studio_name} 외부에서 수정할 수 있습니다. 내보낸 파일은 .tar.gz 파일(즉, GNU "
+"Zip으로 압축된 파일인 .tar file)이며, 구조와 콘텐츠를 포함합니다. 이후 해당 파일을 다시 가져오기할 수 있습니다.    "
+
+#: cms/templates/export.html
+msgid "About Exporting Courses"
+msgstr "강좌 내보내기에 대해서"
+
+#. Translators: ".tar.gz" is a file extension, and should not be translated
+#: cms/templates/export.html
+msgid ""
+"You can export courses and edit them outside of {studio_name}. The exported "
+"file is a .tar.gz file (that is, a .tar file compressed with GNU Zip) that "
+"contains the course structure and content. You can also re-import courses "
+"that you've exported."
+msgstr ""
+"강좌를 내보내서 {studio_name} 외부에서 변경할 수 있습니다. 내보낸 파일은 강좌 구조및 콘텐츠를 포함하는 .tar.gz "
+"파일(GNU Zip으로 압축된 .tar 파일)이며, 내보낸 파일을 다시 가져올 수 있습니다."
+
+#: cms/templates/export.html
+msgid ""
+"{em_start}Caution:{em_end} When you export a course, information such as "
+"MATLAB API keys, LTI passports, annotation secret token strings, and "
+"annotation storage URLs are included in the exported data. If you share your"
+" exported files, you may also be sharing sensitive or license-specific "
+"information."
+msgstr ""
+"{em_start}주의:{em_end} : MATLAB의 API 키 LTI passports, 주석 비밀 토큰 문자열 및 주석 스토리지 "
+"URL은 강좌 정보를 내보내는 데이터에 포함되어 있습니다. 내보내기 파일을 공유하는 경우는 강의 내보내기에 관한 기밀 또는 라이센스 고유"
+" information.Learn 이상을 공유 할 수 있습니다."
+
+#: cms/templates/export.html
+msgid "Export My Library Content"
+msgstr "내 콘텐츠 보관함 내보내기"
+
+#: cms/templates/export.html
+msgid "Export My Course Content"
+msgstr "내 강좌 콘텐츠 내보내기 "
+
+#: cms/templates/export.html
+msgid "Export Library Content"
+msgstr "저장된 콘텐츠 내보내기"
+
+#: cms/templates/export.html
+msgid "Export Course Content"
+msgstr "강좌 콘텐츠 내보내기"
+
+#: cms/templates/export.html
+msgid "Data {em_start}exported with{em_end} your course:"
+msgstr " {em_start}내보내기{em_end} 가능 데이터"
+
+#: cms/templates/export.html
+msgid ""
+"Values from Advanced Settings, including MATLAB API keys and LTI passports"
+msgstr "MATLAB의 API 키와 LTI passports을 포함한 고급 설정 값"
+
+#: cms/templates/export.html
+msgid "Course Content (all Sections, Sub-sections, and Units)"
+msgstr "강좌 콘텐츠 (주제, 소주제, 학습활동 전체)"
+
+#: cms/templates/export.html
+msgid "Course Structure"
+msgstr "강좌 구조"
+
+#: cms/templates/export.html
+msgid "Individual Problems"
+msgstr "개별 문제"
+
+#: cms/templates/export.html
+msgid "Course Assets"
+msgstr "학습 자료"
+
+#: cms/templates/export.html
+msgid "Course Settings"
+msgstr "강좌 설정"
+
+#: cms/templates/export.html
+msgid "Data {em_start}not exported{em_end} with your course:"
+msgstr "{em_start} 내보내기{em_end} 불가 데이터"
+
+#: cms/templates/export.html
+msgid "User Data"
+msgstr "사용자 데이터"
+
+#: cms/templates/export.html
+msgid "Course Team Data"
+msgstr "강좌 운영팀 데이터"
+
+#: cms/templates/export.html
+msgid "Forum/discussion Data"
+msgstr "게시판 데이터"
+
+#: cms/templates/export.html
+msgid "Why export a library?"
+msgstr "콘텐츠 보관함을 왜 내보낼까요?"
+
+#: cms/templates/export.html
+msgid ""
+"You may want to edit the XML in your library directly, outside of "
+"{studio_name}. You may want to create a backup copy of your library. Or, you"
+" may want to create a copy of your library that you can later import into "
+"another library instance and customize."
+msgstr ""
+"콘텐츠 보관함의 XML을 {studio_name}밖에서 직접 수정하고 싶을 수도 있습니다. 또는 다른 콘텐츠 보관함으로 가져오기한 후 "
+"수정할 수 있도록 백업 카피를 만들고 싶을 수도 있습니다."
+
+#: cms/templates/export.html cms/templates/export.html
+msgid "Opening the downloaded file"
+msgstr "다운로드된 파일 열기"
+
+#. Translators: ".tar.gz" is a file extension, and should not be translated
+#: cms/templates/export.html
+msgid ""
+"Use an archive program to extract the data from the .tar.gz file. Extracted "
+"data includes the library.xml file, as well as subfolders that contain "
+"library content."
+msgstr ""
+"데이터를 추출할 아카이브 프로그램을 사용하세요. 추출된 데이터는 보관함의 콘텐츠를 포함하는 하위 폴더 뿐만 아니라 보관함의 .xml "
+"파일을 포함합니다."
+
+#: cms/templates/export.html
+msgid "Learn more about exporting a library"
+msgstr "콘텐츠 보관함 내보내기에 대해 자세히 알아보기"
+
+#: cms/templates/export.html
+msgid "Why export a course?"
+msgstr "강좌 내보내기를 하는 이유가 무엇인가요?"
+
+#: cms/templates/export.html
+msgid ""
+"You may want to edit the XML in your course directly, outside of "
+"{studio_name}. You may want to create a backup copy of your course. Or, you "
+"may want to create a copy of your course that you can later import into "
+"another course instance and customize."
+msgstr ""
+"콘텐츠 보관함의 XML을 {studio_name} 외부에서 직접 수정하고 싶을 수도 있습니다. 또는 다른 콘텐츠 보관함으로 가져오기한 후"
+" 수정할 수 있도록 백업 카피를 만들고 싶을 수도 있습니다."
+
+#: cms/templates/export.html
+msgid "What content is exported?"
+msgstr "어떤 콘텐츠가 내보내지는가?"
+
+#: cms/templates/export.html
+msgid ""
+"The course content and structure (including sections, subsections, and "
+"units) are exported. Values from Advanced Settings, including MATLAB API "
+"keys and LTI passports, are also exported. Other data, including student "
+"data, grading information, discussion forum data, course settings, and "
+"course team information, is not exported."
+msgstr ""
+"강좌 콘텐츠와 구조 (주제, 소주제, 학습활동 포함)가 내보내기 됩니다. MATLAB API 키와 LTI Passport 포함 고급 설정"
+" 값 또한 내보내집니다. 학습자 데이터, 채점 정보, 게시판 데이터 등의 다른 자료들은 내보내기 되지 않습니다. "
+
+#. Translators: ".tar.gz" is a file extension, and should not be translated
+#: cms/templates/export.html
+msgid ""
+"Use an archive program to extract the data from the .tar.gz file. Extracted "
+"data includes the course.xml file, as well as subfolders that contain course"
+" content."
+msgstr ""
+".tar.zip파일에서 데이터를 추출하는 아카이브 프로그램을 사용하세요. 추출된 데이터는 강좌콘텐츠를 포함하는 하위 폴더뿐 아니라  "
+"course.xml 파일도 포함합니다."
+
+#: cms/templates/export.html
+msgid "Learn more about exporting a course"
+msgstr "강좌 내보내기에 대해 자세히 알아보기"
+
+#: cms/templates/export_git.html
+msgid "Export Course to Git"
+msgstr " 강좌를 git에 내보내기"
+
+#: cms/templates/export_git.html cms/templates/export_git.html
+#: cms/templates/widgets/header.html
+msgid "Export to Git"
+msgstr " 지트에 내보내기"
+
+#: cms/templates/export_git.html
+msgid "About Export to Git"
+msgstr " 지트에 내보내기란?"
+
+#: cms/templates/export_git.html
+msgid "Use this to export your course to its git repository."
+msgstr " 강좌를 git 저장소에 내보내기 위해 이것을 사용하세요"
+
+#: cms/templates/export_git.html
+msgid ""
+"This will then trigger an automatic update of the main LMS site and update "
+"the contents of your course visible there to students if automatic git "
+"imports are configured."
+msgstr ""
+"이것으로 메인 학습 관리 시스템 사이트가 자동으로 업데이트됩니다. 자동 git 가져오기가 설정되면, 귀하의 강좌 콘텐츠도 보이도록 "
+"업데이트됩니다."
+
+#: cms/templates/export_git.html
+msgid "Export Course to Git:"
+msgstr " 강좌를 git에 내보내기"
+
+#: cms/templates/export_git.html
+msgid ""
+"giturl must be defined in your course settings before you can export to git."
+msgstr "git로 내보내기 전에 git URL이 강좌 설정에 정의되어야 합니다."
+
+#: cms/templates/export_git.html
+msgid "Export Failed"
+msgstr " 내보내기 실패"
+
+#: cms/templates/export_git.html
+msgid "Export Succeeded"
+msgstr " 내보내기 성공"
+
+#: cms/templates/export_git.html
+msgid "Your course:"
+msgstr " 당신의 강좌"
+
+#: cms/templates/export_git.html
+msgid "Course git url:"
+msgstr " 강좌 git URL"
+
+#: cms/templates/group_configurations.html
+#: cms/templates/group_configurations.html
+#: cms/templates/visibility_editor.html
+msgid "Content Groups"
+msgstr "콘텐츠 그룹"
+
+#: cms/templates/group_configurations.html
+#: cms/templates/group_configurations.html
+msgid "Experiment Group Configurations"
+msgstr "실험 그룹 설정"
+
+#: cms/templates/group_configurations.html
+msgid "This module is disabled at the moment."
+msgstr "이 모듈은 비활성화 되었습니다."
+
+#: cms/templates/group_configurations.html
+msgid ""
+"If you have cohorts enabled in your course, you can use content groups to "
+"create cohort-specific courseware. In other words, you can customize the "
+"content that particular cohorts see in your course."
+msgstr "귀하의 강좌에서 학습 집단을 활성화하면, 특정 학습 집단이 볼 수 있는 콘텐츠를 맞춤 설정할 수 있습니다."
+
+#: cms/templates/group_configurations.html
+msgid ""
+"Each content group that you create can be associated with one or more "
+"cohorts. In addition to course content that is intended for all students, "
+"you can designate some content as visible only to specified content groups. "
+"Only learners in the cohorts that are associated with the specified content "
+"groups see the additional content."
+msgstr ""
+"각 콘텐츠 그룹은 1개 이상의 학습 집단과 연결할 수 있습니다. 전체 학습자를 위한 강좌 콘텐츠 외에도, 지정한 콘텐츠 그룹만 특정 "
+"콘텐츠를 볼 수 있도록 할 수 있습니다. "
+
+#: cms/templates/group_configurations.html
+msgid ""
+"Click {em_start}New content group{em_end} to add a new content group. To "
+"edit the name of a content group, hover over its box and click "
+"{em_start}Edit{em_end}. You can delete a content group only if it is not in "
+"use by a unit. To delete a content group, hover over its box and click the "
+"delete icon."
+msgstr ""
+"신규 콘텐츠 그룹을 추가하려면 {em_start}첫 번째 콘텐츠 그룹을 추가하세요{em_end}를 클릭합니다. 콘텐츠 그룹의 이름을 "
+"변경하려면, 박스 상단의 {em_start}편집{em_end}을 클릭하세요. 추후 학습활동에서 활용하지 않는다면 콘텐츠 그룹을 삭제할 수"
+" 있습니다. 삭제는 박스 상단의 삭제 아이콘을 클릭하면 됩니다."
+
+#: cms/templates/group_configurations.html
+#: cms/templates/group_configurations.html
+msgid "Learn More"
+msgstr "자세히 알아보기"
+
+#: cms/templates/group_configurations.html
+msgid ""
+"Use experiment group configurations if you are conducting content "
+"experiments, also known as A/B testing, in your course. Experiment group "
+"configurations define how many groups of students are in a content "
+"experiment. When you create a content experiment for a course, you select "
+"the group configuration to use."
+msgstr ""
+"콘텐츠 실험을 위해, '실험 집단 설정'을 이용하세요. 실험 집단 설정은 콘텐츠 실험의 학습자 수를 정하는 것입니다. 실험을 할 때, "
+"집단 설정을 선택할 수 있습니다. "
+
+#: cms/templates/group_configurations.html
+msgid ""
+"Click {em_start}New Group Configuration{em_end} to add a new configuration. "
+"To edit a configuration, hover over its box and click "
+"{em_start}Edit{em_end}. You can delete a group configuration only if it is "
+"not in use in an experiment. To delete a configuration, hover over its box "
+"and click the delete icon."
+msgstr ""
+"새로운 설정을 추가하려면 {em_start}새 집단 설정{em_end}을 클릭합니다. 설정의 이름을 변경하려면, 박스 상단의 "
+"{em_start}수정{em_end}을 클릭하세요. 실험에 사용되지 않는 설정은 삭제할 수 있습니다. 설정 삭제는 박스 상단의 삭제 "
+"아이콘을 클릭하면 됩니다. "
+
+#: cms/templates/howitworks.html
+msgid "Welcome"
+msgstr "환영합니다"
+
+#: cms/templates/howitworks.html
+msgid "Welcome to {studio_name}"
+msgstr "{studio_name}에 오신 것을 환영합니다! "
+
+#: cms/templates/howitworks.html
+msgid ""
+"{studio_name} helps manage your online courses, so you can focus on teaching"
+" them"
+msgstr "{studio_name}가 효과적인 강좌 운영 및 관리를 도와드리겠습니다."
+
+#: cms/templates/howitworks.html
+msgid "{studio_name}'s Many Features"
+msgstr "{studio_name} 다양한 기능"
+
+#: cms/templates/howitworks.html cms/templates/howitworks.html
+msgid "{studio_name} Helps You Keep Your Courses Organized"
+msgstr "{studio_name}는 강좌가 잘 구성되도록 도와줍니다."
+
+#: cms/templates/howitworks.html
+msgid "Keeping Your Course Organized"
+msgstr "자유롭게 강좌를 구성할 수 있습니다."
+
+#: cms/templates/howitworks.html
+msgid ""
+"The backbone of your course is how it is organized. {studio_name} offers an "
+"<strong>Outline</strong> editor, providing a simple hierarchy and easy drag "
+"and drop to help you and your students stay organized."
+msgstr ""
+"{studio_name}에서는 마우스 조작만으로 쉽게 강좌를 구성할 수 있습니다. <strong>강좌 개요 편집기</strong>를 "
+"활용해보세요."
+
+#: cms/templates/howitworks.html
+msgid "Simple Organization For Content"
+msgstr "체계적인 강좌 구성"
+
+#: cms/templates/howitworks.html
+msgid ""
+"{studio_name} uses a simple hierarchy of <strong>sections</strong> and "
+"<strong>subsections</strong> to organize your content."
+msgstr ""
+"{studio_name}는 <strong>주제</strong> 와 <strong>소주제</strong>의 계층구조로 강좌를 구성합니다."
+
+#: cms/templates/howitworks.html
+msgid "Change Your Mind Anytime"
+msgstr "간편한 작성 및 수정"
+
+#: cms/templates/howitworks.html
+msgid ""
+"Draft your outline and build content anywhere. Simple drag and drop tools "
+"let you reorganize quickly."
+msgstr "마우스로 간단하게 강좌 개요를 작성 및 수정하고, 콘텐츠를 자유롭게 배열해 보세요."
+
+#: cms/templates/howitworks.html
+msgid "Go A Week Or A Semester At A Time"
+msgstr "순차적인 제작"
+
+#: cms/templates/howitworks.html
+msgid ""
+"Build and release <strong>sections</strong> to your students incrementally. "
+"You don't have to have it all done at once."
+msgstr "<strong>주제</strong>를 단계적으로 제작 후 공개하세요. 한 번에 강좌 전체를 제작하지 않으셔도 됩니다"
+
+#: cms/templates/howitworks.html cms/templates/howitworks.html
+#: cms/templates/howitworks.html
+msgid "Learning is More than Just Lectures"
+msgstr "다양한 학습 경험을 제공할 수 있습니다."
+
+#: cms/templates/howitworks.html
+msgid ""
+"{studio_name} lets you weave your content together in a way that reinforces "
+"learning. Insert videos, discussions, and a wide variety of exercises with "
+"just a few clicks."
+msgstr "{studio_name}에서는 학습 효과를 높이기 위해 여러 콘텐츠를 다채롭게 활용할 수 있습니다"
+
+#: cms/templates/howitworks.html
+msgid "Create Learning Pathways"
+msgstr "다양한 교수 학습 자료 지원"
+
+#: cms/templates/howitworks.html
+msgid ""
+"Help your students understand one concept at a time with multimedia, HTML, "
+"and exercises."
+msgstr "멀티미디어, HTML, 연습문제를 통해 학습자가 개념을 보다 쉽게 이해할 수 있도록 합니다. "
+
+#: cms/templates/howitworks.html
+msgid "Work Visually, Organize Quickly"
+msgstr "보면서 작업할 수 있는 방식"
+
+#: cms/templates/howitworks.html
+msgid ""
+"Work visually and see exactly what your students will see. Reorganize all "
+"your content with drag and drop."
+msgstr "학습자가 보게 될 화면을 보면서, 마우스로 끌고 오기만으로 편리하게 작업할 수 있습니다"
+
+#: cms/templates/howitworks.html
+msgid "A Broad Library of Problem Types"
+msgstr "다양한 문제 유형 제공"
+
+#: cms/templates/howitworks.html
+msgid ""
+"It's more than just multiple choice. {studio_name} supports more than a "
+"dozen types of problems to challenge your learners."
+msgstr "매번 똑 같은 문제 유형이 단조로운가요? {studio_name}는 12개 이상의 문제 유형을 지원합니다."
+
+#: cms/templates/howitworks.html cms/templates/howitworks.html
+msgid ""
+"{studio_name} Gives You Simple, Fast, and Incremental Publishing. With "
+"Friends."
+msgstr "{studio_name}는 실시간 반영 및 협업이 가능합니다."
+
+#: cms/templates/howitworks.html
+msgid "Simple, Fast, and Incremental Publishing. With Friends."
+msgstr "실시간 반영 및 협업이 가능합니다."
+
+#: cms/templates/howitworks.html
+msgid ""
+"{studio_name} works like web applications you already know, yet understands "
+"how you build curriculum. Instant publishing to the web when you want it, "
+"incremental release when it makes sense. And with co-authors, you can have a"
+" whole team building a course, together."
+msgstr "{studio_name}에서는 K-MOOC 강좌 제작 및 수정이 용이하며, 이를 동료 교수자와 함께 할 수도 있습니다."
+
+#: cms/templates/howitworks.html
+msgid "Instant Changes"
+msgstr "즉각적인 수정"
+
+#: cms/templates/howitworks.html
+msgid ""
+"Caught a bug? No problem. When you want, your changes go live when you click"
+" Save."
+msgstr "수정사항이 있으신지요? 복잡한 절차도, 기다릴 필요도 없이 수정 결과가 바로 적용됩니다."
+
+#: cms/templates/howitworks.html
+msgid "Release-On Date Publishing"
+msgstr "지정된 날짜에 공개"
+
+#: cms/templates/howitworks.html
+msgid ""
+"When you've finished a <strong>section</strong>, pick when you want it to go"
+" live and {studio_name} takes care of the rest. Build your course "
+"incrementally."
+msgstr ""
+"주제 마다 <strong> 공개일</strong>을 지정해두시면, 그날부터 {studio_name}에서 저절로 진행이 됩니다."
+
+#: cms/templates/howitworks.html
+msgid "Work in Teams"
+msgstr "강좌 운영 및 관리를 함께 "
+
+#: cms/templates/howitworks.html
+msgid ""
+"Co-authors have full access to all the same authoring tools. Make your "
+"course better through a team effort."
+msgstr ""
+"교수자 혼자 강좌를 관리하지 않아도 됩니다. 모든 저작 도구들에 대해 동일한 접근권한을 가질 수 있는 공동 관리자들과 함께 더 좋은 "
+"강좌를 만들어 보세요."
+
+#: cms/templates/howitworks.html
+msgid "Sign Up for {studio_name} Today!"
+msgstr "{studio_name}에 등록하세요!"
+
+#: cms/templates/howitworks.html
+msgid "Sign Up &amp; Start Making an {platform_name} Course"
+msgstr "로그인 & {platform_name} 강좌 만들기 시작"
+
+#: cms/templates/howitworks.html
+msgid "Already have a {studio_name} Account? Sign In"
+msgstr "{studio_name}계정이 있으신가요? "
+
+#: cms/templates/howitworks.html
+msgid "Outlining Your Course"
+msgstr "강좌 개요 입력하기"
+
+#: cms/templates/howitworks.html
+msgid ""
+"Simple two-level outline to organize your couse. Drag and drop, and see your"
+" course at a glance."
+msgstr "강좌를 구성하기 위한 2단계  강좌 개요입니다. 마우스로 끌고 와서, 귀하의 강좌 구성을 한 눈에 보세요. "
+
+#: cms/templates/howitworks.html
+msgid "More than Just Lectures"
+msgstr "강의 그 이상입니다."
+
+#: cms/templates/howitworks.html
+msgid ""
+"Quickly create videos, text snippets, inline discussions, and a variety of "
+"problem types."
+msgstr "빠르게 동영상, 텍스트 구절, 인라인 토의 및 여러 유형의 질문을 만드십시오."
+
+#: cms/templates/howitworks.html
+msgid "Publishing on Date"
+msgstr "다음 날짜에 공개"
+
+#: cms/templates/howitworks.html
+msgid ""
+"Simply set the date of a section or subsection, and {studio_name} will "
+"publish it to your students for you."
+msgstr "주제와 소주제의 날짜를 설정하면, {studio_name} 학습자에게 공개될 것입니다."
+
+#: cms/templates/html_error.html
+msgid "We're having trouble rendering your component"
+msgstr "당신의 콤포넌트를 렌더링하는데 장애가 생겼습니다."
+
+#: cms/templates/html_error.html
+msgid ""
+"Students will not be able to access this component. Re-edit your component "
+"to fix the error."
+msgstr "학습자들이 이 구성요소에 접근할 수 없을 것입니다. 오류를 고치기 위해 귀하의 구성요소를 다시 변경해주세요. "
+
+#: cms/templates/import.html cms/templates/import.html
+msgid "Library Import"
+msgstr "콘텐츠 보관함 가져오기"
+
+#: cms/templates/import.html cms/templates/import.html
+msgid "Course Import"
+msgstr "강좌 가져오기"
+
+#: cms/templates/import.html
+msgid ""
+"Be sure you want to import a library before continuing. The contents of the "
+"imported library will replace the contents of the existing library. "
+"{em_start}You cannot undo a library import{em_end}. Before you proceed, we "
+"recommend that you export the current library, so that you have a backup "
+"copy of it."
+msgstr ""
+"콘텐츠 보관함을 가져옵니다. 가져온 콘텐츠로 기존의 콘텐츠를 대체하게 됩니다. {em_start} 콘텐츠 보관함 가져오기의 실행취소는 "
+"불가능합니다.{em_end} 이를 실행하기 전에, 현재 콘텐츠 보관함을 먼저 내보낸 후, 백업 파일을 만드는 것을 권합니다."
+
+#: cms/templates/import.html
+msgid ""
+"The library that you import must be in a .tar.gz file (that is, a .tar file "
+"compressed with GNU Zip). This .tar.gz file must contain a library.xml file."
+" It may also contain other files."
+msgstr ""
+"가져온 콘텐츠 보관함은 .tar.gz 파일이어야 합니다 (즉, GNU Zip으로 압축한 .tar 파일이어야 합니다.) .tar.gz "
+"파일은 .xml 파일을 포함해야 합니다. 그 외 다른 파일 또한 포함할 가능성이 있습니다. "
+
+#: cms/templates/import.html
+msgid ""
+"The import process has five stages. During the first two stages, you must "
+"stay on this page. You can leave this page after the Unpacking stage has "
+"completed. We recommend, however, that you don't make important changes to "
+"your library until the import operation has completed."
+msgstr ""
+"가져오기는 총 5단계로 이루어집니다. 처음 두 단계에는, 이 페이지에 있어야 합니다. Unpacking 단계가 완료된 후 이 페이지를 "
+"나가도 됩니다. 그러나, 가져오기 작업이 완료되기 전까지는 콘텐츠 보관함 변경을 안 하시는 것이 좋습니다.  "
+
+#: cms/templates/import.html
+msgid ""
+"Be sure you want to import a course before continuing. The contents of the "
+"imported course will replace the contents of the existing course. "
+"{em_start}You cannot undo a course import{em_end}. Before you proceed, we "
+"recommend that you export the current course, so that you have a backup copy"
+" of it."
+msgstr ""
+"콘텐츠 보관함을 가져옵니다. 가져온 보관함의 콘텐츠는 기존의 콘텐츠를 대체합니다. {em_start} 콘텐츠 보관함 가져오기의 실행취소는"
+" 불가능합니다.{em_end} 이를 실행하기 전에, 현재 콘텐츠 보관함을 먼저 내보낸 후, 백업 파일을 만드는 것을 권합니다."
+
+#: cms/templates/import.html
+msgid ""
+"The course that you import must be in a .tar.gz file (that is, a .tar file "
+"compressed with GNU Zip). This .tar.gz file must contain a course.xml file. "
+"It may also contain other files."
+msgstr ""
+"가져온 강좌는 .tar.gz file (즉 GNU Zip으로 압축된 .tar file)이어야 합니다.\n"
+"이 .tar.gz file은 하나의 course.xml을 포함해야만 하며, 다른 파일들을 포함할 수도 있습니다."
+
+#: cms/templates/import.html
+msgid ""
+"The import process has five stages. During the first two stages, you must "
+"stay on this page. You can leave this page after the Unpacking stage has "
+"completed. We recommend, however, that you don't make important changes to "
+"your course until the import operation has completed."
+msgstr ""
+"가져오기는 총 5단계로 이루어집니다. 처음 두 단계에는, 이 페이지에 있어야 합니다. Unpacking 단계가 완료된 후 이 페이지를 "
+"나가도 됩니다. 그러나, 가져오기 작업이 완료되기 전까지는 콘텐츠 보관함 변경을 안 하시는 것이 좋습니다.  "
+
+#: cms/templates/import.html
+msgid "Select a .tar.gz File to Replace Your Library Content"
+msgstr "보관함의 콘텐츠를 대체할 .tar .gz파일을 선택하세요."
+
+#: cms/templates/import.html
+msgid "Select a .tar.gz File to Replace Your Course Content"
+msgstr "파일을 가져옵니다."
+
+#: cms/templates/import.html
+msgid "Choose a File to Import"
+msgstr "가져올 파일을 선택하세요."
+
+#: cms/templates/import.html
+msgid "File Chosen:"
+msgstr "선택된 파일:"
+
+#: cms/templates/import.html
+msgid "Replace my library with the selected file"
+msgstr "내 콘텐츠 보관함을 선택된 파일로 대체하기"
+
+#: cms/templates/import.html
+msgid "Replace my course with the selected file"
+msgstr "내 강좌를 선택된 파일로 대체하기"
+
+#: cms/templates/import.html
+msgid "Library Import Status"
+msgstr "콘텐츠 보관함 가져오기 상태"
+
+#: cms/templates/import.html
+msgid "Course Import Status"
+msgstr "강좌 가져오기 상태"
+
+#: cms/templates/import.html
+msgid "Uploading"
+msgstr "업로딩"
+
+#: cms/templates/import.html
+msgid "Transferring your file to our servers"
+msgstr "서버에 파일 전송"
+
+#: cms/templates/import.html
+msgid "Unpacking"
+msgstr "포장 해제"
+
+#: cms/templates/import.html
+msgid ""
+"Expanding and preparing folder/file structure (You can now leave this page "
+"safely, but avoid making drastic changes to content until this import is "
+"complete)"
+msgstr ""
+"파일 및 폴더구조 확장 및 준비 (이 페이지를 안전하게 벗어날 수 있지만 만일의 사고를 대비하여 작업이 완료될 때까지 기다리는게 "
+"좋습니다.) "
+
+#: cms/templates/import.html
+msgid "Verifying"
+msgstr "검토"
+
+#: cms/templates/import.html
+msgid "Reviewing semantics, syntax, and required data"
+msgstr "의미, 구문, 요청한 데이터 확인"
+
+#: cms/templates/import.html
+msgid "Updating Library"
+msgstr "콘텐츠 보관함 업데이트하기"
+
+#: cms/templates/import.html
+msgid "Updating Course"
+msgstr "강좌 정보"
+
+#: cms/templates/import.html
+msgid ""
+"Integrating your imported content into this library. This process might take"
+" longer with larger libraries."
+msgstr "가져온 콘텐츠를 이 강좌에 통합합니다. 크기가 큰 콘텐츠 보관함일 경우 작업 처리 시간이 오래 걸릴 수 있습니다. "
+
+#: cms/templates/import.html
+msgid ""
+"Integrating your imported content into this course. This process might take "
+"longer with larger courses."
+msgstr "가져온 콘텐츠를 이 강좌에 통합합니다.  대규모 강좌일 경우 작업 처리 시간이 오래 걸릴 수 있습니다. "
+
+#: cms/templates/import.html
+msgid "Success"
+msgstr "성공"
+
+#: cms/templates/import.html
+msgid "Your imported content has now been integrated into this library"
+msgstr "가져온 콘텐츠가 이 콘텐츠 보관함에 통합되었습니다."
+
+#: cms/templates/import.html
+msgid "Your imported content has now been integrated into this course"
+msgstr "강좌의 삽입된 컨텐츠들이 통합되었습니다."
+
+#: cms/templates/import.html
+msgid "View Updated Library"
+msgstr "업데이트된 콘텐츠 보관함 보기"
+
+#: cms/templates/import.html
+msgid "View Updated Outline"
+msgstr "업데이트된 개요 보기"
+
+#: cms/templates/import.html
+msgid "Why import a library?"
+msgstr "왜 콘텐츠 보관함을 가져오나요?"
+
+#: cms/templates/import.html
+msgid ""
+"You might want to update an existing library to a new version, or replace an"
+" existing library entirely. You might also have developed a library outside "
+"of {studio_name}."
+msgstr ""
+"현재 강좌를 새로운 버전으로 업데이트하거나, 현재 강좌를 전체적으로 바꾸고 싶을 수 있습니다. 또는 {studio_name} 외부에서 "
+"강좌를 개발했을 수도 있습니다."
+
+#: cms/templates/import.html
+msgid "Note: Library content is not automatically updated in courses"
+msgstr "주의: 보관함의 콘텐츠는 강좌에서 자동으로 업데이트 되지 않습니다."
+
+#: cms/templates/import.html
+msgid ""
+"If you change and import a library that is referenced by randomized content "
+"blocks in one or more courses, those courses do not automatically use the "
+"updated content. You must manually refresh the randomized content blocks to "
+"bring them up to date with the latest library content."
+msgstr ""
+"1개 이상의 강좌에서 무작위 콘텐츠 블록에 의해 참조된 콘텐츠 보관함을 변경하거나 가져오려면, 강좌가 '업데이트된 콘텐츠 자동 사용' "
+"기능을 사용하면 안 됩니다. 이에 무작위 콘텐츠 블록을 최신 콘텐츠로 수동으로 업데이트해야 합니다."
+
+#: cms/templates/import.html
+msgid "Learn more about importing a library"
+msgstr "콘텐츠 보관함 가져오기에 대해 자세히 알아보기"
+
+#: cms/templates/import.html
+msgid "Why import a course?"
+msgstr "강좌를 가져오기하는 이유가 무엇인가요?"
+
+#: cms/templates/import.html
+msgid ""
+"You may want to run a new version of an existing course, or replace an "
+"existing course altogether. Or, you may have developed a course outside "
+"{studio_name}."
+msgstr ""
+"때로는 현재 강좌를 새롭게 바꾸고 싶기도 합니다. {studio_name} 외부에서 강좌를 개발하고 싶을 수도 있는데, 그럴때 이 기능을"
+" 활용해보세요."
+
+#: cms/templates/import.html
+msgid "What content is imported?"
+msgstr "어떤 콘텐츠를 가져올 수 있을까요?"
+
+#: cms/templates/import.html
+msgid ""
+"Only the course content and structure (including sections, subsections, and "
+"units) are imported. Other data, including student data, grading "
+"information, discussion forum data, course settings, and course team "
+"information, remains the same as it was in the existing course."
+msgstr ""
+"강좌 콘텐츠와 구조 (주제, 소주제, 학습활동 포함)를 가져올 수 있습니다. 학습자 데이터, 채점 정보, 게시판 데이터는 기존 강의에 "
+"존재하던 것으로 유지됩니다."
+
+#: cms/templates/import.html
+msgid "Warning: Importing while a course is running"
+msgstr "강좌 운영 중에 가져오기"
+
+#: cms/templates/import.html
+msgid ""
+"If you perform an import while your course is running, and you change the "
+"URL names (or url_name nodes) of any Problem components, the student data "
+"associated with those Problem components may be lost. This data includes "
+"students' problem scores."
+msgstr ""
+"강좌 진행 중에 가져오기를 실행해 문제 구성요소의 URL(또는 url_name nodes)를 변경하면, 해당 문제 구성요소와 연관된 "
+"학습자의 데이터가 삭제됩니다. 이 데이터에는 학습자의 성적이 포함되어 있습니다.  "
+
+#: cms/templates/import.html
+msgid "Learn more about importing a course"
+msgstr "강좌 가져오기에 대해 자세히 알아보기"
+
+#: cms/templates/index.html cms/templates/index.html
+#: cms/templates/widgets/header.html
+msgid "{studio_name} Home"
+msgstr "{studio_name} Home"
+
+#: cms/templates/index.html
+msgid "New Course"
+msgstr "새 강좌"
+
+#: cms/templates/index.html
+msgid "Email staff to create course"
+msgstr "강좌를 만들기 위해 운영팀에게 이메일"
+
+#: cms/templates/index.html
+msgid "New Library"
+msgstr "새 콘텐츠 보관함"
+
+#: cms/templates/index.html
+msgid "New Program"
+msgstr ""
+
+#: cms/templates/index.html cms/templates/index.html
+msgid "Please correct the highlighted fields below."
+msgstr "아래에 강조한 필드를 수정하세요."
+
+#: cms/templates/index.html
+msgid "Create a New Course"
+msgstr "강좌 만들기"
+
+#: cms/templates/index.html
+msgid "Required Information to Create a New Course"
+msgstr "강좌 만들기에 필요한 정보"
+
+#: cms/templates/index.html
+msgid ""
+"The public display name for your course. This cannot be changed, but you can"
+" set a different display name in Advanced Settings later."
+msgstr "나중에 변경할 수 없습니다. "
+
+#: cms/templates/index.html
+msgid ""
+"The name of the organization sponsoring the course. {strong_start}Note: The "
+"organization name is part of the course URL.{strong_end} This cannot be "
+"changed, but you can set a different display name in Advanced Settings "
+"later."
+msgstr ""
+
+#: cms/templates/index.html
+msgid ""
+"The unique number that identifies your course within your organization. "
+"{strong_start}Note: This is part of your course URL, so no spaces or special"
+" characters are allowed and it cannot be changed.{strong_end}"
+msgstr ""
+
+#: cms/templates/index.html
+msgid ""
+"The term in which your course will run. {strong_start}Note: This is part of "
+"your course URL, so no spaces or special characters are allowed and it "
+"cannot be changed.{strong_end}"
+msgstr ""
+
+#: cms/templates/index.html cms/templates/index.html
+msgid "Create"
+msgstr "만들기"
+
+#: cms/templates/index.html
+msgid "Create a New Library"
+msgstr "새 콘텐츠 보관함 만들기"
+
+#: cms/templates/index.html
+msgid "Required Information to Create a New Library"
+msgstr "새 콘텐츠 보관함을 만들기 위해 필요한 정보"
+
+#: cms/templates/index.html
+msgid "Library Name"
+msgstr "콘텐츠 보관함명"
+
+#. Translators: This is an example name for a new content library, seen when
+#. filling out the form to create a new library.
+#. (A library is a collection of content or problems.)
+#: cms/templates/index.html
+msgid "e.g. Computer Science Problems"
+msgstr "ex 컴퓨터 개론 문제"
+
+#: cms/templates/index.html
+msgid "The public display name for your library."
+msgstr "콘텐츠 보관함 이름"
+
+#: cms/templates/index.html
+msgid "The public organization name for your library."
+msgstr "이 콘텐츠 보관함을 사용할 기관 이름입니다."
+
+#: cms/templates/index.html
+msgid "This cannot be changed."
+msgstr "변경할 수 없습니다."
+
+#: cms/templates/index.html
+msgid "Library Code"
+msgstr "콘텐츠 보관함 코드"
+
+#. Translators: This is an example for the "code" used to identify a library,
+#. seen when filling out the form to create a new library. This example is
+#. short
+#. for "Computer Science Problems". The example number may contain letters
+#. but must not contain spaces.
+#: cms/templates/index.html
+msgid "e.g. CSPROB"
+msgstr "예: CSPROB"
+
+#: cms/templates/index.html
+msgid ""
+"The unique code that identifies this library. {strong_start}Note: This is "
+"part of your library URL, so no spaces or special characters are "
+"allowed.{strong_end} This cannot be changed."
+msgstr ""
+
+#: cms/templates/index.html
+msgid "Courses Being Processed"
+msgstr "강좌가 처리중입니다."
+
+#: cms/templates/index.html cms/templates/index.html cms/templates/index.html
+msgid "Course Run:"
+msgstr "기관별 강좌 번호"
+
+#: cms/templates/index.html
+msgid "This course run is currently being created."
+msgstr "기관별 강좌 번호가 만들어지고 있습니다."
+
+#. Translators: This is a status message, used to inform the user of
+#. what the system is doing. This status means that the user has
+#. requested to re-run an existing course, and the system is currently
+#. in the process of duplicating and configuring the existing course
+#. so that it can be re-run.
+#: cms/templates/index.html
+msgid "Configuring as re-run"
+msgstr "다시 시작하기 위한 설정"
+
+#: cms/templates/index.html
+msgid ""
+"The new course will be added to your course list in 5-10 minutes. Return to "
+"this page or {link_start}refresh it{link_end} to update the course list. The"
+" new course will need some manual configuration."
+msgstr ""
+"5-10분 후, 새 강좌가 귀하의 강좌 목록에 추가될 것입니다. 강좌 목록을 업데이트하기 위해, 페이지로 돌아가거나 "
+"{link_start} 새로고침{link_end} 하세요. 새 강좌엔 약간의 수동 설정이 필요할 수 있습니다."
+
+#. Translators: This is a status message for the course re-runs feature.
+#. When a course admin indicates that a course should be re-run, the system
+#. needs to process the request and prepare the new course. The status of
+#. the process will follow this text.
+#: cms/templates/index.html
+msgid "This re-run processing status:"
+msgstr ""
+
+#: cms/templates/index.html
+msgid "Configuration Error"
+msgstr ""
+
+#: cms/templates/index.html
+msgid ""
+"A system error occurred while your course was being processed. Please go to "
+"the original course to try the re-run again, or contact your PM for "
+"assistance."
+msgstr ""
+"귀하의 강좌가 처리되는 동안, 시스템 오류가 발생했습니다. 재운영을 다시 시도하기 위해, 원래 강좌로 돌아가거나 Program "
+"Manager에게 연락바랍니다."
+
+#: cms/templates/index.html
+msgid "Libraries"
+msgstr "콘텐츠 보관함"
+
+#: cms/templates/index.html
+msgid "Re-run Course"
+msgstr "강좌 다시 시작하기"
+
+#: cms/templates/index.html
+msgid "Are you staff on an existing {studio_name} course?"
+msgstr "{studio_name} 강좌 운영팀인가요?"
+
+#: cms/templates/index.html
+msgid ""
+"The course creator must give you access to the course. Contact the course "
+"creator or administrator for the course you are helping to author."
+msgstr "강좌 개설자가 귀하에게 강좌 접근 권한을 줘야 합니다. 강좌 개설자 또는 강좌 제공 기관의 관리자에게  문의하세요."
+
+#: cms/templates/index.html cms/templates/index.html
+msgid "Create Your First Course"
+msgstr "첫 강좌를 만듭니다."
+
+#: cms/templates/index.html
+msgid "Your new course is just a click away!"
+msgstr "새 강좌를 클릭 한 번으로 만들 수 있습니다."
+
+#: cms/templates/index.html
+msgid "Becoming a Course Creator in {studio_name}"
+msgstr "{studio_name}에서 강좌 생성자가 되기"
+
+#: cms/templates/index.html
+msgid ""
+"{studio_name} is a hosted solution for our xConsortium partners and selected"
+" guests. Courses for which you are a team member appear above for you to "
+"edit, while course creator privileges are granted by {platform_name}. Our "
+"team will evaluate your request and provide you feedback within 24 hours "
+"during the work week."
+msgstr ""
+"{studio_name} 는 xConsortium 파트너와 선택된 손님을 위한 호스팅 솔루션입니다. 당신이 팀 멤버인 강좌들은 당신이 "
+"편집할 수 있도록 위에 나타납니다. 강좌 생성 권한은 {platform_name}에 의해 부여됩니다. 우리팀은 요청을 평가하고 근무하는 "
+"요일동안 24 시간 내에 답변을 드립니다."
+
+#: cms/templates/index.html cms/templates/index.html cms/templates/index.html
+msgid "Your Course Creator Request Status:"
+msgstr "강좌 생성자 요청 상태 :"
+
+#: cms/templates/index.html
+msgid "Request the Ability to Create Courses"
+msgstr "강좌를 만들 수 있는 능력을 요청하기"
+
+#: cms/templates/index.html cms/templates/index.html
+msgid "Your Course Creator Request Status"
+msgstr "강좌 생성자 요청 상태"
+
+#: cms/templates/index.html
+msgid ""
+"{studio_name} is a hosted solution for our xConsortium partners and selected"
+" guests. Courses for which you are a team member appear above for you to "
+"edit, while course creator privileges are granted by {platform_name}. Our "
+"team is has completed evaluating your request."
+msgstr ""
+"{studio_name} 는 xConsortium 파트너와 선택된 손님을 위한 호스팅 솔루션입니다. 당신이 팀 멤버인 강좌들은 당신이 "
+"편집할 수 있도록 위에 나타납니다. 강좌 생성 권한은 {platform_name} 에 의해 부여됩니다. 우리는  당신의 요청에 대한 "
+"평가를 완료하였습니다."
+
+#: cms/templates/index.html cms/templates/index.html
+msgid "Your Course Creator request is:"
+msgstr "강좌 생성자 요청 :"
+
+#: cms/templates/index.html
+msgid "Denied"
+msgstr "거절됨"
+
+#: cms/templates/index.html
+msgid ""
+"Your request did not meet the criteria/guidelines specified by "
+"{platform_name} Staff."
+msgstr "당신의 요청은 {platform_name} 운영팀에 의해 명시된 기준과 가이드라인을 충족하지 않았습니다."
+
+#: cms/templates/index.html
+msgid ""
+"{studio_name} is a hosted solution for our xConsortium partners and selected"
+" guests. Courses for which you are a team member appear above for you to "
+"edit, while course creator privileges are granted by {platform_name}. Our "
+"team is currently  evaluating your request."
+msgstr ""
+"{studio_name}는 xConsortium 파트너와 선택된 손님을 위한 호스팅 솔루션입니다. 당신이 팀 멤버인 강좌들은 당신이 "
+"편집할 수 있도록 위에 나타납니다. 강좌 생성 권한은 {platform_name}에 의해 부여됩니다. 당신의 요청을 평가하는 중 입니다."
+
+#: cms/templates/index.html
+msgid ""
+"Your request is currently being reviewed by {platform_name} staff and should"
+" be updated shortly."
+msgstr "요청은 현재 {platform_name} 관리자에 의해 검토되고 있으며 곧 업데이트 될 것입니다."
+
+#: cms/templates/index.html
+msgid "(Read-only)"
+msgstr "(읽기)"
+
+#: cms/templates/index.html
+msgid "Were you expecting to see a particular library here?"
+msgstr "특정 콘텐츠 보관함을 여기서 보고 싶으신가요?"
+
+#: cms/templates/index.html
+msgid ""
+"The library creator must give you access to the library. Contact the library"
+" creator or administrator for the library you are helping to author."
+msgstr "콘텐츠 보관함 생성자에게 접근 권한을 받아야 합니다. 생성자 또는 관리자에게 문의하세요."
+
+#: cms/templates/index.html cms/templates/index.html
+msgid "Create Your First Library"
+msgstr "첫 번째 콘텐츠 보관함 만들기"
+
+#: cms/templates/index.html
+msgid ""
+"Libraries hold a pool of components that can be re-used across multiple "
+"courses. Create your first library with the click of a button!"
+msgstr ""
+"콘텐츠 보관함은 다양한 강좌에서 다시 사용할 수 있는 구성요소를 가지고 있습니다. 버튼 클릭 한 번으로 첫 콘텐츠 보관함을 만들어보세요!"
+
+#: cms/templates/index.html
+msgid "You haven't created any programs yet."
+msgstr ""
+
+#: cms/templates/index.html
+msgid "Programs are groups of courses related to a common subject."
+msgstr ""
+
+#: cms/templates/index.html
+msgid "Create Your First Program"
+msgstr ""
+
+#: cms/templates/index.html
+msgid "New to {studio_name}?"
+msgstr "{studio_name}에 처음 오셨나요?"
+
+#: cms/templates/index.html
+msgid ""
+"Click Help in the upper-right corner to get more information about the "
+"{studio_name} page you are viewing. You can also use the links at the bottom"
+" of the page to access our continually updated documentation and other "
+"{studio_name} resources."
+msgstr ""
+" {studio_name}에 대해 더 알고 싶으시면 화면 오른쪽 상단이나 아래의 도움말을 클릭하세요. 하단의 링크를 통해 다른 "
+"{studio_name} 자료들도 이용하실 수 있습니다."
+
+#: cms/templates/index.html
+msgid "Getting Started with {studio_name}"
+msgstr "{studio_name} 도움말 보기"
+
+#: cms/templates/index.html cms/templates/index.html cms/templates/index.html
+msgid "Can I create courses in {studio_name}?"
+msgstr "{studio_name}에서 강좌를 개설할 수 있나요?"
+
+#: cms/templates/index.html
+msgid ""
+"In order to create courses in {studio_name}, you must {link_start}contact "
+"{platform_name} staff to help you create a course{link_end}."
+msgstr ""
+"{studio_name}에 강좌를 개설하기 위해서,  {link_start}강의를 만들때 도움이 필요하다면{platform_name} "
+"스태프에게 연락하세요{link_end}."
+
+#: cms/templates/index.html
+msgid ""
+"In order to create courses in {studio_name}, you must have course creator "
+"privileges to create your own course."
+msgstr "{studio_name},에서 강좌를 개설하기 위해서 강좌 개설자 권한을 가져야 합니다."
+
+#: cms/templates/index.html
+msgid ""
+"Your request to author courses in {studio_name} has been denied. Please "
+"{link_start}contact {platform_name} Staff with further questions{link_end}."
+msgstr ""
+" {studio_name}에서 강좌 개설 요청이 거절되었습니다. {link_start} 문의 사항이 있으시면  "
+"{platform_name} 관리자에게 연락하세요{link_end}."
+
+#: cms/templates/index.html
+msgid "Thanks for signing up, {name}!"
+msgstr ""
+
+#: cms/templates/index.html
+msgid "We need to verify your email address"
+msgstr "이메일 확인이 필요합니다."
+
+#: cms/templates/index.html
+msgid ""
+"Almost there! In order to complete your sign up we need you to verify your "
+"email address ({email}). An activation message and next steps should be "
+"waiting for you there."
+msgstr ""
+
+#: cms/templates/index.html
+msgid "Need help?"
+msgstr "도움이 필요합니까?"
+
+#: cms/templates/index.html
+msgid ""
+"Please check your Junk or Spam folders in case our email isn't in your "
+"INBOX. Still can't find the verification email? Request help via the link "
+"below."
+msgstr ""
+"이메일을 받지 못한 경우에는 스팸 메일함을 확인하시기 바랍니다. 그래도 인증 메일을 확인할 수 없다면 아래 링크를 통해 도움을 받으세요."
+
+#: cms/templates/library.html
+msgid "Content Library"
+msgstr "콘텐츠 보관함"
+
+#: cms/templates/library.html
+msgid "Add Component"
+msgstr "구성요소 추가하기"
+
+#: cms/templates/library.html
+msgid "Adding content to your library"
+msgstr "콘텐츠 추가하기"
+
+#: cms/templates/library.html
+msgid ""
+"Add components to your library for use in courses, using Add New Component "
+"at the bottom of this page."
+msgstr "강좌에서 사용하기 위해 귀하의 콘텐츠 보관함에 구성요소를 추가합니다. 상단의 새 구성요소 추가하기'를 클릭하세요."
+
+#: cms/templates/library.html
+msgid ""
+"Components are listed in the order in which they are added, with the most "
+"recently added at the bottom. Use the pagination arrows to navigate from "
+"page to page if you have more than one page of components in your library."
+msgstr ""
+"구성요소는 가장 최근에 추가된 것이 가장 위에 있는 방식으로 정렬됩니다. 1페이지 이상의 구성요소를 가지고 있다면, '페이지 번호 "
+"매기기' 기능을 사용하세요. "
+
+#: cms/templates/library.html
+msgid "Using library content in courses"
+msgstr "강좌에서 보관함의 콘텐츠 사용하기 "
+
+#: cms/templates/library.html
+msgid ""
+"Use library content in courses by adding the "
+"{em_start}library_content{em_end} policy key to the Advanced Module List in "
+"the course's Advanced Settings, then adding a Randomized Content Block to "
+"your courseware. In the settings for each Randomized Content Block, select "
+"this library as the source library, and specify the number of problems to be"
+" randomly selected and displayed to each student."
+msgstr ""
+"보관함의 콘텐츠를 강좌에서 활용할 수 있습니다. 이를 위해 {em_start}콘텐츠{em_end} 정책 키를, 강좌의 '고급 설정'에 "
+"있는 '고급 모듈 목록'에 추가합니다. 그후 '무작위 콘텐츠 블록'을 귀하의 강좌 내용에 추가하면 됩니다. 각 '무작위 콘텐츠 블록' 의"
+" 설정에서, 콘텐츠 보관함을 소스 보관함로 선택하고, 각 학습자에게 보일 문제의 갯수를 지정하세요. "
+
+#: cms/templates/library.html
+msgid "Learn more about content libraries"
+msgstr "콘텐츠 보관함에 대해 자세히 알아보기"
+
+#: cms/templates/login.html cms/templates/widgets/header.html
+msgid "Sign In"
+msgstr "로그인"
+
+#: cms/templates/login.html cms/templates/login.html
+msgid "Sign In to {studio_name}"
+msgstr "{studio_name} 로그인"
+
+#: cms/templates/login.html
+msgid "Don't have a {studio_name} Account? Sign up!"
+msgstr "{studio_name}에 지금 가입하세요!"
+
+#: cms/templates/login.html
+msgid "Required Information to Sign In to {studio_name}"
+msgstr "{studio_name}에 로그인하기 위한 필요 정보"
+
+#: cms/templates/manage_users.html
+msgid "Course Team Settings"
+msgstr "강좌 팀 설정"
+
+#: cms/templates/manage_users.html cms/templates/manage_users_lib.html
+msgid "New Team Member"
+msgstr "신규 구성원 추가"
+
+#: cms/templates/manage_users.html
+msgid "Add a User to Your Course's Team"
+msgstr "강좌 운영팀 구성원 추가하기"
+
+#: cms/templates/manage_users.html cms/templates/manage_users_lib.html
+msgid "New Team Member Information"
+msgstr "신규 구성원 정보"
+
+#: cms/templates/manage_users.html cms/templates/manage_users_lib.html
+msgid "User's Email Address"
+msgstr "새로 추가할 구성원 이메일 주소"
+
+#: cms/templates/manage_users.html
+msgid "Provide the email address of the user you want to add as Staff"
+msgstr "운영팀으로 추가하고 싶은 이용자의 이메일 주소를 입력합니다."
+
+#: cms/templates/manage_users.html cms/templates/manage_users_lib.html
+msgid "Add User"
+msgstr "구성원 추가"
+
+#: cms/templates/manage_users.html
+msgid "Add Team Members to This Course"
+msgstr "운영 팀원 추가"
+
+#: cms/templates/manage_users.html
+msgid ""
+"Adding team members makes course authoring collaborative. Users must be "
+"signed up for {studio_name} and have an active account."
+msgstr "운영팀 구성원을 추가해서 강좌 제작을 함께할 수 있습니다.  {studio_name}에 등록되어 있고 계정이 있어야 합니다."
+
+#: cms/templates/manage_users.html
+msgid "Add a New Team Member"
+msgstr "신규 구성원 추가"
+
+#: cms/templates/manage_users.html
+msgid "Course Team Roles"
+msgstr "강좌 운영팀 역할"
+
+#: cms/templates/manage_users.html
+msgid ""
+"Course team members with the Staff role are course co-authors. They have "
+"full writing and editing privileges on all course content."
+msgstr "관리자와 함께 강좌 운영팀 구성원들이 강좌의 공동 개설자입니다. 전 강좌 콘텐츠에 대해 작성 및 수정 권한을 가집니다."
+
+#: cms/templates/manage_users.html
+msgid ""
+"Admins are course team members who can add and remove other course team "
+"members."
+msgstr "교수자는 강좌 운영팀의 다른 구성원을 추가하거나 삭제할 수 있습니다."
+
+#: cms/templates/manage_users.html
+msgid ""
+"All course team members can access content in Studio, the LMS, and Insights,"
+" but are not automatically enrolled in the course."
+msgstr ""
+
+#: cms/templates/manage_users.html
+msgid "Transferring Ownership"
+msgstr "소유권 이전중"
+
+#: cms/templates/manage_users.html
+msgid ""
+"Every course must have an Admin. If you are the Admin and you want to "
+"transfer ownership of the course, click <strong>Add admin access</strong> to"
+" make another user the Admin, then ask that user to remove you from the "
+"Course Team list."
+msgstr ""
+"모든 강좌에는 관리자가 있어야 합니다. 귀하가 관리자이며 강좌의 소유권을 이전하고 싶으면, <strong> 관리자 접근 추가하기 "
+"</strong>를 클릭하여 다른 이용자가 관리자가 되게 하세요. 그 후 해당 이용자에게 강좌 운영팀 목록에서 귀하를 지우도록 요청하시길"
+" 바랍니다. "
+
+#: cms/templates/manage_users_lib.html
+msgid "Library User Access"
+msgstr "콘텐츠 보관함 이용자 접근"
+
+#: cms/templates/manage_users_lib.html cms/templates/widgets/header.html
+msgid "User Access"
+msgstr "사용자 접근"
+
+#: cms/templates/manage_users_lib.html
+msgid "Grant Access to This Library"
+msgstr "콘텐츠 보관함 접근 권한 부여"
+
+#: cms/templates/manage_users_lib.html
+msgid "Provide the email address of the user you want to add"
+msgstr "추가하고 싶은 강좌 운영팀의 이메일 주소를 입력하세요."
+
+#: cms/templates/manage_users_lib.html
+msgid "Add More Users to This Library"
+msgstr "이 콘텐츠 보관함에 이용자 추가하기"
+
+#: cms/templates/manage_users_lib.html
+msgid ""
+"Grant other members of your course team access to this library. New library "
+"users must have an active {studio_name} account."
+msgstr ""
+"강좌 운영팀의 다른 구성원에게 보관함 접근 권한을 부여합니다. 신규 보관함 이용자는 {studio_name} 계정을 활성화 해야 합니다."
+
+#: cms/templates/manage_users_lib.html
+msgid "Add a New User"
+msgstr "신규 사용자 추가하기"
+
+#: cms/templates/manage_users_lib.html
+msgid "Library Access Roles"
+msgstr "콘텐츠 보관함 접근 역할"
+
+#: cms/templates/manage_users_lib.html
+msgid "There are three access roles for libraries: User, Staff, and Admin."
+msgstr "콘텐츠 보관함에 이용자, 운영팀, 교수자가 접근할 수 있습니다."
+
+#: cms/templates/manage_users_lib.html
+msgid ""
+"Library Users can view library content and can reference or use library "
+"components in their courses, but they cannot edit the contents of a library."
+msgstr ""
+"콘텐츠 보관함 사용자는 콘텐츠를 볼 수 있고 참조할 수 있으며, 구성요소를 자신의 강좌에서 사용할 수도 있습니다. 하지만 콘텐츠를 수정할"
+" 수는 없습니다.  "
+
+#: cms/templates/manage_users_lib.html
+msgid ""
+"Library Staff are content co-authors. They have full editing privileges on "
+"the contents of a library."
+msgstr "콘텐츠 보관함 관리자는 공동 개설자입니다. 보관함의 전체 콘텐츠에 대해 수정 권한을 가집니다."
+
+#: cms/templates/manage_users_lib.html
+msgid ""
+"Library Admins have full editing privileges and can also add and remove "
+"other team members. There must be at least one user with the Admin role in a"
+" library."
+msgstr ""
+"교수자는 콘텐츠 보관함의 전체 수정 권한을 가지며, 다른 강좌 운영팀 구성원을 추가하고 삭제할 수 있습니다. 이를 위해 보관함에 교수자가"
+" 최소 1명 이상 있어야 합니다.  "
+
+#: cms/templates/program_authoring.html cms/templates/widgets/header.html
+msgid "Program Administration"
+msgstr ""
+
+#: cms/templates/register.html cms/templates/temp-course-landing.html
+#: cms/templates/widgets/header.html
+msgid "Sign Up"
+msgstr "가입"
+
+#: cms/templates/register.html
+msgid "Sign Up for {studio_name}"
+msgstr "{studio_name} 가입"
+
+#: cms/templates/register.html
+msgid "Already have a {studio_name} Account? Sign in"
+msgstr "{studio_name}계정이 있으신가요?"
+
+#: cms/templates/register.html
+msgid ""
+"Ready to start creating online courses? Sign up below and start creating "
+"your first {platform_name} course today."
+msgstr "아래 항목을 입력하고, {platform_name} 강좌를 만들어 보세요."
+
+#: cms/templates/register.html
+msgid "Required Information to Sign Up for {studio_name}"
+msgstr "{studio_name}에 로그인하기 위한 필요 정보"
+
+#: cms/templates/register.html
+msgid ""
+"This will be used in public discussions with your courses and in our edX101 "
+"support forums"
+msgstr "edX101 지원 게시판이나, 강좌 게시판 등에서 나를 나타내는 아이디입니다."
+
+#: cms/templates/register.html
+msgid "Your Location"
+msgstr "지역"
+
+#: cms/templates/register.html
+msgid "Preferred Language"
+msgstr "선호하는 언어"
+
+#: cms/templates/register.html
+msgid "I agree to the {a_start} Terms of Service {a_end}"
+msgstr "{a_start}서비스 조항{a_end}에 동의합니다."
+
+#: cms/templates/register.html
+msgid "Create My Account &amp; Start Authoring Courses"
+msgstr "강좌 만들기 시작"
+
+#: cms/templates/register.html
+msgid "Common {studio_name} Questions"
+msgstr "일반적인 {studio_name} 질문"
+
+#: cms/templates/register.html
+msgid "Who is {studio_name} for?"
+msgstr "{studio_name}는 누가 사용하나요?"
+
+#: cms/templates/register.html
+msgid ""
+"{studio_name} is for anyone that wants to create online courses that "
+"leverage the global {platform_name} platform. Our users are often faculty "
+"members, teaching assistants and course staff, and members of instructional "
+"technology groups."
+msgstr ""
+"{studio_name}는 {platform_name} 플랫폼을 활용하여 온라인 강좌를 만들고자 하는 사람들을 위한 것입니다. 교수자, "
+"조교, 강좌 운영팀 등이 사용하실 수 있습니다."
+
+#: cms/templates/register.html
+msgid ""
+"How technically savvy do I need to be to create courses in {studio_name}?"
+msgstr "{studio_name}에서 강좌 만들기는 복잡하지 않을까요?"
+
+#: cms/templates/register.html
+msgid ""
+"{studio_name} is designed to be easy to use by almost anyone familiar with "
+"common web-based authoring environments (Wordpress, Moodle, etc.). No "
+"programming knowledge is required, but for some of the more advanced "
+"features, a technical background would be helpful. As always, we are here to"
+" help, so don't hesitate to dive right in."
+msgstr ""
+"{studio_name}는 일반적인 웹 기반 저작 환경 (워드 프레스, 무들 등)에 익숙한 대부분의 사람이 쉽게 사용할 수 있도록 "
+"설계되어 있습니다. 어떤 프로그래밍 지식도 필요하지 않습니다. ​물론 기술적 지식이 도움이 되는 경우도 있기도 합니다. 도움이 필요하면 "
+"언제나 도와드릴 수 있으니, Studio 사용을 주저할 필요가 없습니다. "
+
+#: cms/templates/register.html
+msgid "I've never authored a course online before. Is there help?"
+msgstr "온라인 강좌를 제작해본 적이 없습니다. 사용법을 배울 수 있을까요?"
+
+#: cms/templates/register.html
+msgid ""
+"Absolutely. We have created an online course, edX101, that describes some "
+"best practices: from filming video, creating exercises, to the basics of "
+"running an online course. Additionally, we're always here to help, just drop"
+" us a note."
+msgstr ""
+"물론입니다. 동영상 촬영에서 연습문제 만들기, 온라인 강좌 운영 기초까지  몇 가지 모범 사례를 설명하기 위해 온라인 강좌 edX101을"
+" 만들었습니다. 또한, 항상 도와드릴 준비가 되어 있으니 메모를 남겨주세요."
+
+#: cms/templates/settings.html
+msgid "Schedule &amp; Details Settings"
+msgstr "일정 &amp; 세부 설정"
+
+#: cms/templates/settings.html
+msgid "Schedule & Details"
+msgstr "강좌 일정 및 기본 정보 설정"
+
+#: cms/templates/settings.html
+msgid "Basic Information"
+msgstr "강좌 기본 정보"
+
+#: cms/templates/settings.html
+msgid "The nuts and bolts of your course"
+msgstr "강좌 기본 구성요소"
+
+#: cms/templates/settings.html cms/templates/settings.html
+#: cms/templates/settings.html cms/templates/settings.html
+#: cms/templates/settings.html cms/templates/settings.html
+msgid "This field is disabled: this information cannot be changed."
+msgstr "이 필드는 비활성화 되어있습니다: 이 정보는 변경될 수 없습니다."
+
+#: cms/templates/settings.html
+msgid "Course Summary Page"
+msgstr "강좌 소개"
+
+#: cms/templates/settings.html
+msgid "(for student enrollment and access)"
+msgstr "(학습자 등록 및 접근)"
+
+#: cms/templates/settings.html
+msgid "Enroll in {course_display_name}"
+msgstr "{course_display_name}에 등록"
+
+#: cms/templates/settings.html
+msgid ""
+"The course \"{course_display_name}\", provided by {platform_name}, is open "
+"for enrollment. Please navigate to this course at {link_for_about_page} to "
+"enroll."
+msgstr ""
+"{platform_name}의 \"{course_display_name}\" 강좌 수강신청이 지금 가능합니다. 수강신청을 위해 "
+"{link_for_about_page}에서 이 강좌를 검색해보세요."
+
+#: cms/templates/settings.html
+msgid "Send a note to students via email"
+msgstr "이메일로 학습자에게 쪽지 보내기"
+
+#: cms/templates/settings.html
+msgid "Invite your students"
+msgstr "학습자 초대하기"
+
+#: cms/templates/settings.html
+msgid "Promoting Your Course with {platform_name}"
+msgstr "{platform_name} 강좌 프로모션"
+
+#: cms/templates/settings.html
+msgid ""
+"Your course summary page will not be viewable until your course has been "
+"announced. To provide content for the page and preview it, follow the "
+"instructions provided by your Program Manager."
+msgstr ""
+"귀하의 강좌가 공지되기 전까지는 강좌 개요가 보이게 될 것입니다. 개요 페이지에 내용을 넣고 미리보기 위해서, 플랫폼에서 제공하는 "
+"도움말을 참고하세요. "
+
+#: cms/templates/settings.html
+msgid "Course Credit Requirements"
+msgstr "강좌 학점 요구 조건"
+
+#: cms/templates/settings.html
+msgid "Steps required to earn course credit"
+msgstr "강좌 credit을 얻기 위해 필요한 단계"
+
+#: cms/templates/settings.html cms/templates/settings.html
+msgid "Minimum Grade"
+msgstr "최소 성적 "
+
+#: cms/templates/settings.html
+msgid "Successful Proctored Exam"
+msgstr "성공적 시험감독 평가"
+
+#: cms/templates/settings.html
+msgid "Proctored Exam {number}"
+msgstr "시험감독 평가 {number}"
+
+#: cms/templates/settings.html
+msgid "ID Verification"
+msgstr "아이디 검증"
+
+#: cms/templates/settings.html
+msgid "In-Course Reverification {number}"
+msgstr "과목내 재인증 {number}"
+
+#: cms/templates/settings.html
+msgid "Course Schedule"
+msgstr "강좌 일정"
+
+#: cms/templates/settings.html
+msgid "Dates that control when your course can be viewed"
+msgstr "학습자가 강좌를 보게 되는 날짜"
+
+#: cms/templates/settings.html
+msgid "First day the course begins"
+msgstr "강좌가 시작하는 첫째날"
+
+#: cms/templates/settings.html
+msgid "Course Start Time"
+msgstr "강좌 시작 시간"
+
+#: cms/templates/settings.html cms/templates/settings.html
+#: cms/templates/settings.html cms/templates/settings.html
+msgid "(UTC)"
+msgstr "(UTC)"
+
+#: cms/templates/settings.html
+msgid "Last day your course is active"
+msgstr "강좌가 활성화되어 있는 마지막 날"
+
+#: cms/templates/settings.html
+msgid "Course End Time"
+msgstr "강좌 종료 시간"
+
+#: cms/templates/settings.html
+msgid "Enrollment Start Date"
+msgstr "등록 시작일"
+
+#: cms/templates/settings.html
+msgid "First day students can enroll"
+msgstr "수강신청 시작일"
+
+#: cms/templates/settings.html
+msgid "Enrollment Start Time"
+msgstr "등록 시작 시간"
+
+#: cms/templates/settings.html
+msgid "Enrollment End Date"
+msgstr "등록 종료일"
+
+#: cms/templates/settings.html
+msgid "Last day students can enroll."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Contact your edX Partner Manager to update these settings."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Enrollment End Time"
+msgstr "등록 종료 시간"
+
+#: cms/templates/settings.html
+msgid "These Dates Are Not Used When Promoting Your Course"
+msgstr "이들 날짜는 강좌를 홍보할 때 사용되지 않습니다."
+
+#: cms/templates/settings.html
+msgid ""
+"These dates impact <strong>when your courseware can be viewed</strong>, but "
+"they are <strong>not the dates shown on your course summary page</strong>. "
+"To provide the course start and registration dates as shown on your course "
+"summary page, follow the instructions provided by your Program Manager."
+msgstr ""
+"이는 <strong>강좌 내용이 보일 기간</strong>을 뜻하지만, <strong> 강좌 개요</strong>에 나타나지 않습니다. "
+"강좌 시작일과 수강신청일을 강좌 개요에 나타나게 하려면, 플랫폼에서 제공하는 도움말을 참고하세요."
+
+#: cms/templates/settings.html
+msgid "Course Details"
+msgstr "강좌 세부정보"
+
+#: cms/templates/settings.html
+msgid "Provide useful information about your course"
+msgstr "강좌 관련 세부 정보"
+
+#: cms/templates/settings.html
+msgid "Course Language"
+msgstr "강좌 언어"
+
+#: cms/templates/settings.html
+msgid ""
+"Identify the course language here. This is used to assist users find courses"
+" that are taught in a specific language."
+msgstr "강좌 언어를 선택하세요. 특정 언어로 하는 강좌를 찾는 학습자에게 도움이 됩니다."
+
+#: cms/templates/settings.html
+msgid "Introducing Your Course"
+msgstr "강좌 소개"
+
+#: cms/templates/settings.html
+msgid "Information for prospective students"
+msgstr "수강 대상 학습자를 위한 정보"
+
+#: cms/templates/settings.html
+msgid "Course Short Description"
+msgstr "강좌에 대한 짧은 소개"
+
+#: cms/templates/settings.html
+msgid ""
+"Appears on the course catalog page when students roll over the course name. "
+"Limit to ~150 characters"
+msgstr "학습자가 강좌명을 눌러보면 강좌 목록에 나타납니다. 150자 이내로 작성해야 합니다."
+
+#: cms/templates/settings.html
+msgid "Course Overview"
+msgstr "강좌 개요"
+
+#: cms/templates/settings.html
+msgid "your course summary page"
+msgstr "강좌 소개"
+
+#: cms/templates/settings.html
+msgid ""
+"Introductions, prerequisites, FAQs that are used on %s (formatted in HTML)"
+msgstr "%s 에 들어가게 될 내용으로 강좌 개요, 선수 과목, 자주 하는 질문 등의 내용을 입력하면 됩니다.(HTML 형식)"
+
+#: cms/templates/settings.html cms/templates/settings.html
+#: cms/templates/settings.html
+msgid "Course Image"
+msgstr "강좌 대표 이미지"
+
+#: cms/templates/settings.html
+msgid ""
+"You can manage this image along with all of your other <a href='{}'>files "
+"&amp; uploads</a>"
+msgstr "<a href='{}'>파일 업로드</a>에서 이 이미지를 변경할 수 있습니다"
+
+#: cms/templates/settings.html
+msgid ""
+"Your course currently does not have an image. Please upload one (JPEG or PNG"
+" format, and minimum suggested dimensions are 375px wide by 200px tall)"
+msgstr ""
+"강좌 대표 이미지가 없습니다. 이미지를 업로드하세요 (JPEG 혹은 PNG 형식, 최소 이미지 크기: 가로 375px,  세로 "
+"200px)"
+
+#. Translators: This is the placeholder text for a field that requests the URL
+#. for a course image
+#: cms/templates/settings.html
+msgid "Your course image URL"
+msgstr "강좌 대표 이미지 URL"
+
+#: cms/templates/settings.html
+msgid ""
+"Please provide a valid path and name to your course image (Note: only JPEG "
+"or PNG format supported)"
+msgstr "강좌 대표 이미지에 대한 유효한 경로와 이름을 입력하세요. ( JPEG 혹은 PNG 형식만 지원)"
+
+#: cms/templates/settings.html
+msgid "Upload Course Image"
+msgstr "강좌 대표 이미지 업로드"
+
+#: cms/templates/settings.html cms/templates/settings.html
+msgid "Course Introduction Video"
+msgstr "강좌 소개 영상"
+
+#: cms/templates/settings.html
+msgid "Delete Current Video"
+msgstr "현재 동영상 삭제"
+
+#. Translators: This is the placeholder text for a field that requests a
+#. YouTube video ID for a course video
+#: cms/templates/settings.html
+msgid "your YouTube video's ID"
+msgstr "Youtube URL의 뒷 부분 코드만 복사해서 붙여넣습니다. "
+
+#: cms/templates/settings.html
+msgid "Enter your YouTube video's ID (along with any restriction parameters)"
+msgstr "Youtube 영상의 ID를 입력하세요. (URL의 뒷 부분 코드)"
+
+#: cms/templates/settings.html
+msgid "Expectations of the students taking this course"
+msgstr "효과적인 학습을 위해 학습 시간 및 선수 강좌를 입력합니다."
+
+#: cms/templates/settings.html
+msgid "Hours of Effort per Week"
+msgstr "주간 학습 권장 시간"
+
+#: cms/templates/settings.html
+msgid "Time spent on all course work"
+msgstr "주별 학습에 투자하길 권장하는 시간"
+
+#: cms/templates/settings.html
+msgid "Prerequisite Course"
+msgstr "선수 강좌"
+
+#: cms/templates/settings.html
+msgid "None"
+msgstr "없음"
+
+#: cms/templates/settings.html
+msgid "Course that students must complete before beginning this course"
+msgstr "본 강좌를 수강하기 전에 반드시 들어야 하는 강좌"
+
+#: cms/templates/settings.html
+msgid "set pre-requisite course"
+msgstr "선수 강좌 설정하기"
+
+#: cms/templates/settings.html
+msgid "Entrance Exam"
+msgstr "사전 평가"
+
+#: cms/templates/settings.html
+msgid "Require students to pass an exam before beginning the course."
+msgstr "수강 시작 전, 사전 평가를 통과해야 합니다."
+
+#: cms/templates/settings.html
+msgid ""
+"You can now view and author your course entrance exam from the "
+"{link_start}Course Outline{link_end}."
+msgstr "지금 볼 수 있고  {link_start} 강좌 개요{link_end}에서 사전 평가를 출제할 수 있습니다."
+
+#: cms/templates/settings.html
+msgid "Grade Requirements"
+msgstr "성적 요건"
+
+#: cms/templates/settings.html
+msgid " %"
+msgstr "%"
+
+#: cms/templates/settings.html
+msgid ""
+"The score student must meet in order to successfully complete the entrance "
+"exam. "
+msgstr "사전 시험을 통과하기 위해 학습자가 받아야 할 점수입니다."
+
+#: cms/templates/settings.html
+msgid "Course Pacing"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Set the pacing for this course"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Instructor-paced courses progress at the pace that the course author sets. "
+"You can configure release dates for course content and due dates for "
+"assignments."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Self-paced courses do not have release dates for course content or due dates"
+" for assignments. Learners can complete course material at any time before "
+"the course end date."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Content License"
+msgstr "강좌 콘텐츠 라이센스"
+
+#. Translators: At the course settings, the editor is able to select the
+#. default course content license.
+#. The course content will have this license set, some assets can override the
+#. license with their own.
+#. In the form, the license selector for course content is described using the
+#. following string:
+#: cms/templates/settings.html
+msgid "Select the default license for course content"
+msgstr "강좌 콘텐츠의 기본 라이센스를 선택하세요."
+
+#: cms/templates/settings.html
+msgid "How are these settings used?"
+msgstr "무엇을 설정하나요?"
+
+#: cms/templates/settings.html
+msgid ""
+"Your course's schedule determines when students can enroll in and begin a "
+"course."
+msgstr "수강 신청 일정 및 개강일을 여기서 설정할 수 있습니다."
+
+#: cms/templates/settings.html
+msgid ""
+"Other information from this page appears on the About page for your course. "
+"This information includes the course overview, course image, introduction "
+"video, and estimated time requirements. Students use About pages to choose "
+"new courses to take."
+msgstr ""
+"'강좌 소개'에 강좌 개관, 강좌 대표 이미지, 소개 영상, 예상 소요 시간이 안내될 것입니다. 이를 통해 학습자가 수강을 결정할 수 "
+"있도록 합니다."
+
+#: cms/templates/settings_advanced.html
+msgid "Your policy changes have been saved."
+msgstr "변경사항이 저장되었습니다."
+
+#: cms/templates/settings_advanced.html
+msgid "There was an error saving your information. Please see below."
+msgstr "정보 저장 중 오류가 발생했습니다. 아래를 참고하세요."
+
+#: cms/templates/settings_advanced.html
+msgid "Manual Policy Definition"
+msgstr "직접 설정하기"
+
+#: cms/templates/settings_advanced.html
+msgid ""
+"<strong>Warning</strong>: Do not modify these policies unless you are "
+"familiar with their purpose."
+msgstr "<strong>주의</strong>: 꼭 필요한 경우가 아니라면, 수정하지 않으시는 것이 좋습니다."
+
+#: cms/templates/settings_advanced.html
+msgid "Show Deprecated Settings"
+msgstr "부가기능 설정 보이기"
+
+#: cms/templates/settings_advanced.html
+msgid "What do advanced settings do?"
+msgstr "고급설정에서는 무엇을 합니까?"
+
+#: cms/templates/settings_advanced.html
+msgid ""
+"Advanced settings control specific course functionality. On this page, you "
+"can edit manual policies, which are JSON-based key and value pairs that "
+"control specific course settings."
+msgstr "고급설정은 개별 강좌의 기능을 조절합니다. JSON 키값 등으로 개별 강좌의 설정을 수정할 수 있습니다."
+
+#: cms/templates/settings_advanced.html
+msgid ""
+"Any policies you modify here override all other information you've defined "
+"elsewhere in {studio_name}. Do not edit policies unless you are familiar "
+"with both their purpose and syntax."
+msgstr ""
+"수정한 정책은 {studio_name}의 모든 설정보다 먼저 적용됩니다. 정책의 목적과 문법에 익숙하지 않으면 정책을 수정하지 마세요"
+
+#: cms/templates/settings_advanced.html
+msgid ""
+"{em_start}Note:{em_end} When you enter strings as policy values, ensure that"
+" you use double quotation marks (&quot;) around the string. Do not use "
+"single quotation marks (&apos;)."
+msgstr ""
+" {em_start}참고:{em_end} 설정값으로서 문자열을 입력할 때, 문자열 앞뒤로 큰따옴표(&quot;)를 사용하세요. 작은 "
+"따옴표(&apos;)를 사용하지 마세요."
+
+#: cms/templates/settings_graders.html
+msgid "Grading Settings"
+msgstr "채점 설정"
+
+#: cms/templates/settings_graders.html
+msgid "Overall Grade Range"
+msgstr "전반적인 성적 범위"
+
+#: cms/templates/settings_graders.html
+msgid "Your overall grading scale for student final grades"
+msgstr "전반적 성적 척도"
+
+#: cms/templates/settings_graders.html
+msgid "Credit Eligibility"
+msgstr "Credit 적격성"
+
+#: cms/templates/settings_graders.html
+msgid "Settings for course credit eligibility"
+msgstr "Credit 적격성 설정"
+
+#: cms/templates/settings_graders.html
+msgid "Minimum Credit-Eligible Grade:"
+msgstr "Credit에 부합하는 최소 성적"
+
+#: cms/templates/settings_graders.html
+msgid "Must be greater than or equal to the course passing grade"
+msgstr "통과 기준 점수 이상을 받아야 합니다."
+
+#: cms/templates/settings_graders.html
+msgid "Grading Rules &amp; Policies"
+msgstr "성적 규정"
+
+#: cms/templates/settings_graders.html
+msgid "Deadlines, requirements, and logistics around grading student work"
+msgstr "채점에 관한 마감일, 요구사항, 세부 절차 "
+
+#: cms/templates/settings_graders.html
+msgid "Grace Period on Deadline:"
+msgstr "추가 제출 기간"
+
+#: cms/templates/settings_graders.html
+msgid "Leeway on due dates"
+msgstr "마감일이 지난 이후에, 학습자가 제출할 수 있는 기간을 의미합니다."
+
+#: cms/templates/settings_graders.html
+msgid "Assignment Types"
+msgstr "과제 유형"
+
+#: cms/templates/settings_graders.html
+msgid "Categories and labels for any exercises that are gradable"
+msgstr "성적 산출을 위한 항목별 세부 정보"
+
+#: cms/templates/settings_graders.html
+msgid "New Assignment Type"
+msgstr "과제 추가하기"
+
+#: cms/templates/settings_graders.html
+msgid "What can I do on this page?"
+msgstr "이 페이지에서 무엇을 할 수 있나요?"
+
+#: cms/templates/settings_graders.html
+msgid ""
+"You can use the slider under Overall Grade Range to specify whether your "
+"course is pass/fail or graded by letter, and to establish the thresholds for"
+" each grade."
+msgstr "왼쪽의 슬라이더를 움직여서 강좌의 통과 또는 과락 범위를 지정하세요."
+
+#: cms/templates/settings_graders.html
+msgid ""
+"You can specify whether your course offers students a grace period for late "
+"assignments."
+msgstr "또한 과제의 추가 제출 허용 여부도 설정할 수 있습니다."
+
+#: cms/templates/settings_graders.html
+msgid ""
+"You can also create assignment types, such as homework, labs, quizzes, and "
+"exams, and specify how much of a student's grade each assignment type is "
+"worth."
+msgstr "그리고 숙제, 실험, 퀴즈, 시험 등으로 과제 유형을 분류할 수 있고, 각 항목의 성적 가중치를 정할 수 있습니다."
+
+#: cms/templates/studio_xblock_wrapper.html
+#: cms/templates/studio_xblock_wrapper.html
+msgid "Expand or Collapse"
+msgstr "확장/붕괴"
+
+#: cms/templates/studio_xblock_wrapper.html
+msgid "Visibility Settings"
+msgstr "공개 설정"
+
+#: cms/templates/studio_xblock_wrapper.html
+msgid "Visibility"
+msgstr "공개 설정 "
+
+#: cms/templates/studio_xblock_wrapper.html
+msgid "This block contains multiple components."
+msgstr "이 블럭은 다수의 콤포넌트를 포함합니다."
+
+#: cms/templates/temp-course-landing.html
+msgid "Circuits and Electronics"
+msgstr ""
+
+#: cms/templates/temp-course-landing.html
+msgid "Massachusetts Institute of Technology"
+msgstr ""
+
+#: cms/templates/temp-course-landing.html
+msgid "Forgot?"
+msgstr ""
+
+#: cms/templates/temp-course-landing.html
+msgid ""
+"Ut laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim veniam "
+"quis nostrud. Est usus legentis in iis qui, facit eorum claritatem "
+"Investigationes demonstraverunt lectores. Vel illum dolore eu feugiat nulla "
+"facilisis at vero eros, et accumsan et iusto? Te feugait nulla facilisi nam "
+"liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming!"
+" Et quinta decima eodem modo typi qui nunc nobis, videntur parum clari fiant"
+" sollemnes in? Diam nonummy nibh euismod tincidunt exerci tation "
+"ullamcorper, suscipit lobortis nisl ut aliquip ex? Nunc putamus parum, "
+"claram anteposuerit litterarum formas humanitatis per seacula quarta decima."
+msgstr ""
+
+#: cms/templates/temp-course-landing.html
+msgid ""
+"Gothica quam nunc putamus parum claram anteposuerit litterarum formas "
+"humanitatis per seacula. Facilisi nam liber tempor cum soluta nobis "
+"eleifend."
+msgstr ""
+
+#: cms/templates/temp-course-landing.html
+msgid "{platform_name} edge"
+msgstr "{platform_name} edge"
+
+#: cms/templates/textbooks.html cms/templates/textbooks.html
+#: cms/templates/widgets/header.html
+msgid "Textbooks"
+msgstr "교재"
+
+#: cms/templates/textbooks.html
+msgid "New Textbook"
+msgstr "신규 교재"
+
+#: cms/templates/textbooks.html
+msgid "Why should I break my textbook into chapters?"
+msgstr "교재를 챕터로 분할하면 좋은 이유는?"
+
+#: cms/templates/textbooks.html
+msgid ""
+"Breaking your textbook into multiple chapters reduces loading times for "
+"students, especially those with slow Internet connections. Breaking up "
+"textbooks into chapters can also help students more easily find topic-based "
+"information."
+msgstr ""
+"교재를 챕터별로 나누면 로딩 시간을 줄일 수 있습니다. 이는 특히 인터넷 연결 속도가 느린 학습자들에게 도움이 될 것이며, 학습자가 보다"
+" 쉽게 특정 주제에 관한 정보를 찾을 수 있을 것입니다. "
+
+#: cms/templates/textbooks.html
+msgid "What if my book isn't divided into chapters?"
+msgstr "내 교재가 챕터별로 나누어지지 않았다면?"
+
+#: cms/templates/textbooks.html
+msgid ""
+"If your textbook doesn't have individual chapters, you can upload the entire"
+" text as a single chapter and enter a name of your choice in the Chapter "
+"Name field."
+msgstr ""
+"교재가 챕터로 나눠져 있지 않으면, 교재 전체를 하나의 챕터로 업로드할 수 있고, 챕터 이름 영역에 챕터 이름을 임의로 입력할 수 "
+"있습니다."
+
+#: cms/templates/textbooks.html
+msgid "Learn more about textbooks"
+msgstr "자세히 알아보기"
+
+#: cms/templates/videos_index.html cms/templates/videos_index.html
+#: cms/templates/widgets/header.html
+msgid "Video Uploads"
+msgstr "동영상 업로드"
+
+#: cms/templates/videos_index.html
+msgid "Why upload video files?"
+msgstr "왜 동영상 파일을 업로드 하는가?"
+
+#: cms/templates/videos_index.html
+msgid ""
+"For a video to play on different devices, it needs to be available in "
+"multiple formats. After you upload an original video file in .mp4 or .mov "
+"format on this page, an automated process creates those additional formats "
+"and stores them for you."
+msgstr ""
+"동영상을 다른 장치에서 재생하려면, 파일이 다양한 파일 형식으로 재생될 수 있어야 합니다. 이 페이지에 원래의 동영상 파일을 .mp4 "
+"또는 .mov로 업로드하시면 됩니다. 그후 다른 형식의 파일들이 생성된 후 저장까지 자동으로 진행됩니다."
+
+#: cms/templates/videos_index.html
+msgid "Maximum Video File Size"
+msgstr ""
+
+#: cms/templates/videos_index.html
+msgid ""
+"The maximum size for each video file that you upload is 5 GB. The upload "
+"process fails for larger files."
+msgstr ""
+
+#: cms/templates/videos_index.html
+msgid "Monitoring files as they upload"
+msgstr "업로드된 파일 모니터링"
+
+#: cms/templates/videos_index.html
+msgid ""
+"Each video file that you upload needs to reach the video processing servers "
+"successfully before additional work can begin. You can monitor the progress "
+"of files as they upload, and try again if the upload fails."
+msgstr ""
+"추가 작업을 시작하기 전에, 각 동영상 파일의 업로드 작업이 마무리되어야 합니다. 파일의 업로드 상태를 모니터할 수 있으며, 업로드에 "
+"실패할 경우 다시 시도하세요."
+
+#: cms/templates/videos_index.html
+msgid "Managing uploaded files"
+msgstr "업로드 파일 관리"
+
+#: cms/templates/videos_index.html
+msgid ""
+"After a file uploads successfully, automated processing begins. The file is "
+"then listed under Previous Uploads as {em_start}In Progress{em_end}. You can"
+" add the video to your course as soon as it has a unique video ID and the "
+"status is {em_start}Ready{em_end}. Allow 24 hours for file processing at the"
+" external video hosting sites to complete."
+msgstr ""
+
+#: cms/templates/videos_index.html
+msgid ""
+"If something goes wrong, the {em_start}Failed{em_end} status message "
+"appears. Check for problems in your original file and upload a replacement."
+msgstr ""
+"문제가 생긴 경우, {em_start} 실패{em_end}  상태 메시지가 나타납니다. 원본 파일의 문제를 확인한 후 다른 파일을 "
+"업로드해보세요."
+
+#: cms/templates/videos_index.html
+msgid "How do I get the videos into my course?"
+msgstr "내 강좌에서 동영상을 얻으려면 어떻게 해야하나요?"
+
+#: cms/templates/videos_index.html
+msgid ""
+"When status for a file is {em_start}Ready{em_end}, you can add that video to"
+" a component in your course. Copy the unique video ID. In another browser "
+"window, on the Course Outline page, create or locate a video component to "
+"play this video. Edit the video component to paste the ID into the Advanced "
+"{em_start}Video ID{em_end} field. The video can play in the LMS as soon as "
+"its status is {em_start}Ready{em_end}, although processing may not be "
+"complete for all encodings and all video hosting sites."
+msgstr ""
+
+#: cms/templates/visibility_editor.html
+msgid "No content groups exist"
+msgstr "컨텐츠 그룹이 존재하지 않습니다."
+
+#: cms/templates/visibility_editor.html
+msgid ""
+"Use content groups to give groups of students access to a specific set of "
+"course content. Create one or more content groups, and make specific "
+"components visible to them."
+msgstr ""
+"학습 집단이 특정 콘텐츠에 접근할 수 있도록 콘텐츠 그룹을 사용합니다. 1개 이상의 콘텐츠 그룹을 만들고, 특정 구성요소를 해당 집단의 "
+"학습자들이 볼 수 있도록 하세요."
+
+#: cms/templates/visibility_editor.html
+msgid "Manage content groups"
+msgstr "컨텐츠 그룹 관리"
+
+#. Translators: Any text between {screen_reader_start} and {screen_reader_end}
+#. is only read by screen readers and never shown in the browser.
+#: cms/templates/visibility_editor.html
+msgid ""
+"{screen_reader_start}Warning:{screen_reader_end} The Unit this component is "
+"contained in is hidden from students. Visibility settings here will be "
+"trumped by this."
+msgstr ""
+"{screen_reader_start} 주의: {screen_reader_end} 이 구성요소가 포함된 학습활동이 학습자에게 감추어져 "
+"있습니다. 이로 인해 학습자에게 공개되지 않습니다."
+
+#: cms/templates/visibility_editor.html
+msgid "Make visible to:"
+msgstr "공개 대상:"
+
+#: cms/templates/visibility_editor.html
+msgid "All Students and Staff"
+msgstr "전체 학습자와 운영팀"
+
+#: cms/templates/visibility_editor.html
+msgid "Specific Content Groups"
+msgstr "특정 컨텐츠 그룹"
+
+#: cms/templates/visibility_editor.html
+msgid "Deleted Content Group"
+msgstr "컨텐츠 그룹 삭제"
+
+#: cms/templates/visibility_editor.html
+msgid ""
+"Content group no longer exists. Please choose another or allow access to All"
+" Students and staff"
+msgstr "해당 콘텐츠 그룹이 없습니다. 다른 것를 선택하거나 전체 학생 및 직원에 대한 접근을 허용하세요."
+
+#: cms/templates/visibility_editor.html cms/templates/visibility_editor.html
+msgid "Verification Checkpoint"
+msgstr "인증 기준 "
+
+#: cms/templates/visibility_editor.html
+msgid "Verification checkpoint to complete"
+msgstr "완료해야 할 인증 점검 사항"
+
+#: cms/templates/visibility_editor.html
+msgid ""
+"Learners who require verification must pass the selected checkpoint to see "
+"the content in this component. Learners who do not require verification see "
+"this content by default."
+msgstr "인증을 신청한 학습자는 인증 기준에 해당하는 학습활동을 통과해야 합니다"
+
+#: cms/templates/emails/activation_email.txt
+msgid ""
+"Thank you for signing up for {studio_name}! To activate your account, please"
+" copy and paste this address into your web browser's address bar:"
+msgstr ""
+"{studio_name} 가입을 환영합니다! 계정을 활성화하려면 웹 브라우저의 주소 표시줄에 이 주소를 복사해서 붙여넣으시길 바랍니다."
+
+#: cms/templates/emails/activation_email.txt
+msgid ""
+"If you didn't request this, you don't need to do anything; you won't receive"
+" any more email from us. Please do not reply to this e-mail; if you require "
+"assistance, check the help section of the {studio_name} web site."
+msgstr "이메일에 회신하지 마십시오. 도움이 필요한 경우에는 {studio_name} 웹 사이트의 도움말을 확인하세요."
+
+#: cms/templates/emails/activation_email_subject.txt
+msgid "Your account for {studio_name}"
+msgstr "{studio_name}에 계정"
+
+#: cms/templates/emails/course_creator_admin_subject.txt
+msgid "{email} has requested {studio_name} course creator privileges on edge"
+msgstr "{email}이 edge 에서  {studio_name} 강좌 생성자 권한을 요청하였습니다."
+
+#: cms/templates/emails/course_creator_admin_user_pending.txt
+msgid ""
+"User '{user}' with e-mail {email} has requested {studio_name} course creator"
+" privileges on edge."
+msgstr "이메일이 {email}인 사용자 '{user}'가 edge 에서 {studio_name} 강좌 생성자 권한을 요청하였습니다"
+
+#: cms/templates/emails/course_creator_admin_user_pending.txt
+msgid "To grant or deny this request, use the course creator admin table."
+msgstr "이 요청을 승인하거나 거부하기 위해서 강좌 생성자 관리 테이블을 이용하세요."
+
+#: cms/templates/emails/course_creator_denied.txt
+msgid ""
+"Your request for course creation rights to {studio_name} have been denied. "
+"If you believe this was in error, please contact {email}"
+msgstr ""
+" {studio_name} 에서의 강좌 개설 권한 요청이 거절 되었습니다. 이것이 오류로 보일 경우  {email}로 연락하세요."
+
+#: cms/templates/emails/course_creator_granted.txt
+msgid ""
+"Your request for course creation rights to {studio_name} have been granted. To create your first course, visit\n"
+"\n"
+"{url}"
+msgstr "{studio_name} 강좌 개설 권한 요청이 승인되었습니다. {url}에서 귀하의 첫 강좌를 개설해주세요.  "
+
+#: cms/templates/emails/course_creator_revoked.txt
+msgid ""
+"Your course creation rights to {studio_name} have been revoked. If you "
+"believe this was in error, please contact {email}"
+msgstr "{studio_name} 에서의 강좌 개설 권한이 폐지되었습니다. 이것이 오류로 보일 경우 {email}로 연락하세요. "
+
+#: cms/templates/emails/course_creator_subject.txt
+msgid "Your course creator status for {studio_name}"
+msgstr "{studio_name} 강좌 개설 준비 상태"
+
+#: cms/templates/registration/activation_complete.html
+msgid "You can now {link_start}login{link_end}."
+msgstr "이제 {link_start}로그인{link_end} 할 수 있습니다."
+
+#: cms/templates/registration/reg_complete.html
+msgid ""
+"An activation link has been sent to {email}, along with instructions for "
+"activating your account."
+msgstr "당신 계정을 활성화 시킬수 있는 링크를 설명과 함께 {email},로 보냈습니다. "
+
+#. Translators: 'EdX', 'edX', 'Studio', and 'Open edX' are trademarks of 'edX
+#. Inc.'. Please do not translate any of these trademarks and company names.
+#: cms/templates/widgets/footer.html
+msgid ""
+"EdX, Open edX, Studio, and the edX and Open edX logos are registered "
+"trademarks or trademarks of {link_start}edX Inc.{link_end}"
+msgstr ""
+"EdX, Open edX, Studio, and the edX and Open edX logos are registered "
+"trademarks or trademarks of {link_start}edX Inc.{link_end}"
+
+#: cms/templates/widgets/header.html
+msgid "Current Course:"
+msgstr "수강중인 강좌"
+
+#: cms/templates/widgets/header.html cms/templates/widgets/header.html
+msgid "Course Navigation"
+msgstr "강좌 찾아보기"
+
+#: cms/templates/widgets/header.html
+msgid "Outline"
+msgstr "강좌 개요"
+
+#: cms/templates/widgets/header.html
+msgid "Updates"
+msgstr "공지사항"
+
+#: cms/templates/widgets/header.html
+msgid "Files &amp; Uploads"
+msgstr "파일 업로드"
+
+#: cms/templates/widgets/header.html
+msgid "Schedule &amp; Details"
+msgstr "기본 설정"
+
+#: cms/templates/widgets/header.html cms/templates/widgets/header.html
+msgid "Import"
+msgstr "가져오기"
+
+#: cms/templates/widgets/header.html cms/templates/widgets/header.html
+msgid "Export"
+msgstr "내보내기"
+
+#: cms/templates/widgets/header.html
+msgid "Current Library:"
+msgstr "현재 콘텐츠 보관함:"
+
+#: cms/templates/widgets/header.html
+msgid "Library"
+msgstr "콘텐츠 보관함"
+
+#: cms/templates/widgets/header.html cms/templates/widgets/header.html
+msgid "Account Navigation"
+msgstr "계정 검색"
+
+#: cms/templates/widgets/header.html cms/templates/widgets/header.html
+msgid "Contextual Online Help"
+msgstr "문맥상 온라인도움 "
+
+#: cms/templates/widgets/header.html
+msgid "Currently signed in as:"
+msgstr "현재 로그인된 사용자이름:"
+
+#: cms/templates/widgets/metadata-edit.html
+msgid "Launch Latex Source Compiler"
+msgstr "LaTex  소스 컴파일러 실행"
+
+#: cms/templates/widgets/problem-edit.html
+#: cms/templates/widgets/problem-edit.html
+msgid "Heading"
+msgstr "제목"
+
+#: cms/templates/widgets/problem-edit.html
+#: cms/templates/widgets/problem-edit.html
+msgid "Insert a heading"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+#: cms/templates/widgets/problem-edit.html
+msgid "Multiple Choice"
+msgstr "선다형 문항"
+
+#: cms/templates/widgets/problem-edit.html
+#: cms/templates/widgets/problem-edit.html
+msgid "Add a multiple choice question"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+#: cms/templates/widgets/problem-edit.html
+msgid "Checkboxes"
+msgstr "체크박스"
+
+#: cms/templates/widgets/problem-edit.html
+#: cms/templates/widgets/problem-edit.html
+msgid "Add a question with checkboxes"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+#: cms/templates/widgets/problem-edit.html
+msgid "Text Input"
+msgstr "텍스트 입력"
+
+#: cms/templates/widgets/problem-edit.html
+#: cms/templates/widgets/problem-edit.html
+msgid "Insert a text response"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+#: cms/templates/widgets/problem-edit.html
+msgid "Numerical Input"
+msgstr "수치 입력"
+
+#: cms/templates/widgets/problem-edit.html
+#: cms/templates/widgets/problem-edit.html
+msgid "Insert a numerical response"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+#: cms/templates/widgets/problem-edit.html
+msgid "Dropdown"
+msgstr "드롭다운"
+
+#: cms/templates/widgets/problem-edit.html
+#: cms/templates/widgets/problem-edit.html
+msgid "Insert a dropdown response"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+#: cms/templates/widgets/problem-edit.html
+msgid "Explanation"
+msgstr "해설"
+
+#: cms/templates/widgets/problem-edit.html
+#: cms/templates/widgets/problem-edit.html
+msgid "Add an explanation for this question"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Advanced Editor"
+msgstr "고급 편집기"
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Toggle Cheatsheet"
+msgstr "컨닝페이퍼 전환"
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Label"
+msgstr "라벨"
+
+#: cms/templates/widgets/sock.html
+msgid "Access the Open edX Portal"
+msgstr ""
+
+#: cms/templates/widgets/sock.html
+msgid "Open edX Portal"
+msgstr ""
+
+#: cms/templates/widgets/tabs-aggregator.html
+msgid "name"
+msgstr "이름"

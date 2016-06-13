@@ -1,0 +1,25 @@
+/*
+ * This file is dynamically generated and ignored by Git.
+ * DO NOT MAKE CHANGES HERE. Instead, go edit its template:
+ * /edx/app/edxapp/edx-platform/lms/static/sass/lms-main.scss.mako
+ */
+// lms - css application architecture
+// ====================
+
+// libs and resets *do not edit*
+@import 'bourbon/bourbon'; // lib - bourbon
+@import 'vendor/bi-app/bi-app-ltr'; // set the layout for left to right languages
+@import 'base/variables-ltr';
+
+// BASE  *default edX offerings*
+// ====================
+
+// base - utilities
+@import 'base/reset';
+@import 'base/variables';
+@import 'base/mixins';
+
+  // import theme's Sass overrides
+  @import 'kmooc';
+
+@import 'build-lms'; // shared app style assets/rendering

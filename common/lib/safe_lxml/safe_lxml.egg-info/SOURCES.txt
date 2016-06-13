@@ -1,0 +1,7 @@
+safe_lxml/__init__.py
+safe_lxml/etree.py
+safe_lxml.egg-info/PKG-INFO
+safe_lxml.egg-info/SOURCES.txt
+safe_lxml.egg-info/dependency_links.txt
+safe_lxml.egg-info/requires.txt
+safe_lxml.egg-info/top_level.txt

@@ -1,0 +1,68 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='/static_content.html'/>
+
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">아이핀인증</%block>
+
+<%block name="js_extra">
+    <script>
+        function registrationForm(gubn){
+            /*gubn 'Y' is over 14, 'N' is under 14*/
+
+            if(window.sessionStorage) {
+                sessionStorage.setItem("reg_gubn", gubn);
+                sessionStorage.setItem("step", "1");
+            }else {
+                console.log("window.sessionStorage is Not Exists");
+            }
+
+            //sessionStorage.setItem('저장할 이름 - 문자열', '저장할 객체');
+            document.location.href = "/agree";
+        }
+
+        window.name ="Parent_window";
+
+        function fnPopup(){
+            window.open('', 'popupIPIN2', 'width=450, height=550, top=100, left=100, fullscreen=no, menubar=no, status=no, toolbar=no, titlebar=yes, location=no, scrollbar=no');
+            document.form_ipin.target = "popupIPIN2";
+            document.form_ipin.action = "https://cert.vno.co.kr/ipin.cb";
+            document.form_ipin.submit();
+        }
+
+        function nextStep(){
+            if($("#isAuth").val()=="Y")
+                document.location.href="/register";
+            else
+                alert("아이핀 인증이 완료되지 않았습니다.");
+        }
+
+
+    </script>
+</%block>
+
+<%block name="header_extras"></%block>
+
+<section class="container rule">
+    <form id="form_ipin" name="form_ipin" method="post">
+    <input type="hidden" id="isAuth" name="isAuth" value="N">
+    <input type="hidden" name="m" value="pubmain">
+    <input type="hidden" name="enc_data" value="${sEncData}">
+    <input type="hidden" name="csrfmiddlewaretoken" value="${csrf_token}" />
+
+        <h2>아이핀 인증</h2>
+
+        <dl>
+            <dt><p class="icon">어린이 회원(만 14세 미만) 은 부모님 또는 보호자(법정 대리인)의 동의가 있어야 가입이 가능합니다.</p></dt>
+            <dt><p class="icon">“아이핀 인증” 버튼을 클릭하여 보호자(법정 대리인)의 동의절차를 진행해주세요.</p></dt>
+            <br/><br/><br/>
+            <div>
+            <p class="btn_ipin"><a href="#" onclick="fnPopup();"><img src="/static/images/btn_ipin.gif" alt="아이핀 인증" /></a></p>
+            <p class="btn_back"><a href="#" onclick="nextStep();"><img src="/static/images/btn_back.gif" alt="다음 단계 이동 >" /></a></p>
+            </div>
+        </dl>
+    </form>
+</section>
+<br/><br/><br/><br/>
+
+

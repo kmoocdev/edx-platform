@@ -1,0 +1,94 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from microsite_configuration import microsite
+%>
+<%inherit file="main.html" />
+
+## <%namespace name='static' file='../static_content.html'/>
+
+<%block name="header_extras">
+</%block>
+
+<%block name="js_extra">
+    <script>
+        $(document).ready(function(){
+            $("#check").attr("href", "javascript:cert_check_id();");
+
+            $("#uuid").focus();
+            $("#uuid").keydown(function(e){
+                if(e.which == 13)
+                    cert_check_id();
+
+            });
+        });
+
+        function cert_check_id(){
+            $("#correct, #incorrect").hide();
+            console.log("cert_check_id called");
+
+            var uuid = $("#uuid").val();
+            if(uuid == "" || uuid == null){
+                alert("이수증 인증번호를 입력하세요.");
+                $("#uuid").focus();
+                return;
+            }
+
+            $.post("/cert_check_id",
+                    {uuid: uuid},
+                    function(data){
+                        if(data[0]){
+                            $("#correct").show();
+                            console.log(data[0].certUrl);
+                            $("#showCert").attr("href",data[0].certUrl);
+                        }else if(!data){
+                            console.log("cert_check :: !data");
+                        }else{
+                            $("#incorrect").show();
+                        }
+            },"json");
+        }
+
+    </script>
+</%block>
+
+<%block name="pagetitle">이수증 검증</%block>
+<section class="container rule">
+
+    <h2>이수증 검증</h2>
+
+    <dl>
+        <dt>
+            이수증 검증 페이지 입니다.<br>
+            K-MOOC에서 발급받은 이수증의 유효성을 확인하실 수 있습니다.<br><br>
+            이수증 상단의 인증번호를 입력하세요.<br>
+        </dt>
+
+        <img src="/static/images/cert_id_exam.png" alt="이수증 아이디 예시" style="width: 100%; max-width: 815px; border: 3px solid orange; box-shadow: 2px 2px 5px 2px gray"/>
+        <br/>
+
+        <dt><input type="text" id="uuid" style="width: 300px;" placeholder="이수증 상단의 인증번호를 입력하세요."/></dt>
+
+        <dd>
+            <ol>
+                <li id="correct" style="display:none; line-height: 20px;">
+                    <img style="width:12px" src="/static/images/correct-icon.png">&nbsp;<b>유효한 K-MOOC이수증 인증번호 입니다.</b>
+                    <a href="#" id="showCert" target="_blank" style="background: #f58026;
+                                                                    font-size: 12px;
+                                                                    font-weight: bold;
+                                                                    color: white;
+                                                                    border-radius: 3px;
+                                                                    padding: 1px 10px;
+                                                                    margin: 5px;
+                                                                    vertical-align: middle;">이수증 보기</a>
+                </li>
+                <li id="incorrect" style="display:none; line-height: 20px;"><img style="width:12px" src="/static/images/incorrect-icon.png">&nbsp;<b>유효한 K-MOOC이수증 인증번호가 아닙니다.</b></li>
+            </ol>
+        </dd>
+        <br/>
+        <a href="#" id="check" onclick="cert_check_id();"><input type="button" id="button" value="확인"/></a>
+    </dl>
+
+    <br/>
+
+</section>

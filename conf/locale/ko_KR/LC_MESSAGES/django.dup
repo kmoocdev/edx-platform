@@ -1,0 +1,434 @@
+Multiple translations found for single string.
+	String "City"
+	Present in files [u'lms/djangoapps/instructor_task/tasks_helper.py', u'openedx/core/djangoapps/user_api/views.py', u'lms/templates/register.html', u'lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html', u'lms/templates/shoppingcart/receipt.html', u'lms/templates/register-form.html', u'themes/stanford-style/lms/templates/register-form.html', u'lms/djangoapps/instructor/views/api.py']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+거주지(City)
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+도시
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+도시
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+거주지(City)
+
+Multiple translations found for single string.
+	String "Activate Your {platform_name} Account"
+	Present in files [u'lms/templates/emails/activation_email_subject.txt']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+한국형 무크 {platform_name} 신청하신 계정을 활성화 하세요.
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+{platform_name} 계정을 활성화 하세요.
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+한국형 무크 {platform_name} 신청하신 계정을 활성화 하세요.
+
+Multiple translations found for single string.
+	String "Change your life and start learning today by activating your {platform_name} account. Click on the link below or copy and paste it into your browser's address bar."
+	Present in files [u'lms/templates/emails/activation_email.txt']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+신청하신 {platform_name} 계정을 활성화하세요. 아래의 링크를 클릭하거나 주소 창에 복사하여 붙여넣기 하시면 됩니다. 
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+{platform_name} 계정을 활성화하세요. 배움이 시작되고, 삶을 바꿉니다.  아래의 링크를 클릭하거나, 주소 창에 복사하여 붙여넣기하세요. 
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+신청하신 {platform_name} 계정을 활성화하세요. 아래의 링크를 클릭하거나 주소 창에 복사하여 붙여넣기 하시면 됩니다.
+
+Multiple translations found for single string.
+	String "If you didn't request this, you don't need to do anything; you won't receive any more email from us. Please do not reply to this e-mail; if you require assistance, check the help section of the {platform_name} website."
+	Present in files [u'lms/templates/emails/activation_email.txt']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+만약, 본인이 계정을 신청하지 않았다면, 별도 답장을 보내지 않으셔도 됩니다. 이외 도움이 필요한 경우, {platform_name} 웹사이트의 도움말 확인하세요.
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+만약 귀하가 한 것이 아니라면, 이러한 이메일을 더 받지 않을 것입니다. 답장하지 않으셔도 됩니다. 도움이 필요하다면,  {platform_name}  웹사이트의 도움말 섹션을 확인하세요.
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+만약, 본인이 계정을 신청하지 않았다면, 별도 답장을 보내지 않으셔도 됩니다. 이외 도움이 필요한 경우, {platform_name} 웹사이트의 도움말 확인하세요.
+
+Multiple translations found for single string.
+	String "Terms of Service and Honor Code"
+	Present in files [u'openedx/core/djangoapps/user_api/views.py']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+약관 및 개인정보 보호 정책
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+서비스 조항 및 학습자 서약
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+약관 및 개인정보 보호 정책
+
+Multiple translations found for single string.
+	String "This account has been temporarily locked due to excessive login failures. Try again later."
+	Present in files [u'common/djangoapps/student/views.py']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+이 계정은 로그인 실패 허용 횟수 초과로 인하여 일시적으로 잠금 상태입니다. 15분 후에 다시 시도하세요.
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+이 계정은 로그인 실패 허용 횟수 초과로 인하여 일시적으로 잠금 상태입니다. 잠시 후에 다시 시도하세요.
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+이 계정은 로그인 실패 허용 횟수 초과로 인하여 일시적으로 잠금 상태입니다. 15분 후에 다시 시도하세요.
+
+Multiple translations found for single string.
+	String "Email"
+	Present in files [u'lms/djangoapps/instructor/views/api.py', u'lms/djangoapps/instructor/views/instructor_dashboard.py', u'openedx/core/djangoapps/user_api/views.py', u'lms/templates/courseware/legacy_instructor_dashboard.html', u'lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html', u'cms/templates/temp-course-landing.html', u'test_root/staticfiles/proctoring/templates/course_allowances.underscore']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+이메일(Email)
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+이메일
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+이메일
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+이메일
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+이메일(Email)
+
+Multiple translations found for single string.
+	String "Full name"
+	Present in files [u'lms/djangoapps/instructor/views/legacy.py', u'openedx/core/djangoapps/user_api/views.py']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+실명(Full name)
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+실명
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+실명(Full name)
+
+Multiple translations found for single string.
+	String "Public username"
+	Present in files [u'openedx/core/djangoapps/user_api/views.py']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+아이디(Username)
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+아이디
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+아이디(Username)
+
+Multiple translations found for single string.
+	String "Password"
+	Present in files [u'openedx/core/djangoapps/user_api/views.py', u'cms/templates/login.html', u'cms/templates/register.html', u'lms/templates/login.html', u'lms/templates/provider_login.html', u'lms/templates/register.html', u'lms/templates/signup_modal.html', u'lms/templates/sysadmin_dashboard.html', u'cms/templates/temp-course-landing.html', u'lms/templates/register-form.html', u'themes/stanford-style/lms/templates/register-form.html', u'lms/templates/student_account/account.underscore', u'test_root/staticfiles/templates/student_account/account.underscore']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+비밀번호(Password)
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+비밀번호
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+비밀번호
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+비밀번호
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+비밀번호(Password)
+
+Multiple translations found for single string.
+	String "Country"
+	Present in files [u'lms/djangoapps/instructor_task/tasks_helper.py', u'openedx/core/djangoapps/user_api/views.py', u'lms/templates/register.html', u'lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html', u'lms/templates/shoppingcart/receipt.html', u'lms/templates/register-form.html', u'themes/stanford-style/lms/templates/register-form.html', u'lms/djangoapps/instructor/views/api.py']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+국가(Country)
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+국가
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+국가
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+국가(Country)
+
+Multiple translations found for single string.
+	String "Gender"
+	Present in files [u'lms/djangoapps/instructor/views/api.py', u'lms/djangoapps/instructor_task/tasks_helper.py', u'openedx/core/djangoapps/user_api/views.py', u'lms/templates/register.html', u'lms/templates/signup_modal.html', u'lms/templates/register-form.html', u'themes/stanford-style/lms/templates/register-form.html']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+성별(Gender)
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+성별
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+성별
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+성별(Gender)
+
+Multiple translations found for single string.
+	String "Highest level of education completed"
+	Present in files [u'openedx/core/djangoapps/user_api/views.py']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+최종 학력(Highest level of education completed)
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+최종 학력
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+최종 학력(Highest level of education completed)
+
+Multiple translations found for single string.
+	String "Tell us why you're interested in {platform_name}"
+	Present in files [u'openedx/core/djangoapps/user_api/views.py']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+{platform_name}에 관심을 갖게 된 이유(Tell us why you're interested in {platform_name})
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+{platform_name}에 관심을 갖게 된 이유
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+{platform_name}에 관심을 갖게 된 이유(Tell us why you're interested in {platform_name})
+
+Multiple translations found for single string.
+	String "Year of Birth"
+	Present in files [u'lms/djangoapps/instructor_task/tasks_helper.py', u'lms/templates/register.html', u'lms/templates/register-form.html', u'themes/stanford-style/lms/templates/register-form.html']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+출생연도(Year of Birth)
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+출생연도
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+출생연도
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+출생연도(Year of Birth)
+
+Multiple translations found for single string.
+	String "Year of birth"
+	Present in files [u'openedx/core/djangoapps/user_api/views.py', u'lms/templates/signup_modal.html']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+출생연도(Year of birth)
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+출생연도
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+출생연도
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+출생연도(Year of birth)
+
+Multiple translations found for single string.
+	String "<b>Note</b>: To keep student data secure, you cannot save or email these links for direct access. Copies of links expire within 5 minutes."
+	Present in files [u'lms/templates/instructor/instructor_dashboard_2/data_download.html']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+<b>주의</b>: 학습자 데이터의 보안을 위해, 바로 접근할 수 있는 링크를 저장하거나 이메일로 보내지 말아 주세요.
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+<b>주의</b>: 학습자 데이터의 보안을 위해, 바로 접근할 수 있는 링크를 저장하거나 이메일로 보낼 수 없습니다. 링크의 복사본은 5분 후 소멸됩니다.
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+<b>주의</b>: 학습자 데이터의 보안을 위해, 바로 접근할 수 있는 링크를 저장하거나 이메일로 보내지 말아 주세요.
+
+Multiple translations found for single string.
+	String "Terms of Service &amp; Honor Code"
+	Present in files [u'lms/djangoapps/certificates/views/webview.py']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+서비스 이용 약관
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+서비스 및 명예 과정 약관
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+서비스 이용 약관
+
+Multiple translations found for single string.
+	String "Enter your question or comment"
+	Present in files [u'common/static/common/templates/discussion/new-post.underscore', u'test_root/staticfiles/common/templates/discussion/new-post.underscore', u'test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+질문이나 토의글을 입력하세요.(주민등록번호, 전화번호 등의 개인정보는 노출하지 않도록 해주세요.)
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+질문이나 토의글을 입력하세요.
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+질문이나 토의글을 입력하세요.(주민등록번호, 전화번호 등의 개인정보는 노출하지 않도록 해주세요.)
+
+Multiple translations found for single string.
+	String "Courses"
+	Present in files [u'cms/templates/index.html', u'lms/templates/navigation.html', u'lms/templates/sysadmin_dashboard.html', u'lms/templates/sysadmin_dashboard_gitlogs.html', u'lms/templates/courseware/courses.html', u'themes/edx.org/lms/templates/header.html', u'themes/red-theme/lms/templates/header.html']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+강좌목록
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+강좌
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+강좌목록
+
+Multiple translations found for single string.
+	String "Register"
+	Present in files [u'lms/templates/navigation-edx.html', u'lms/templates/navigation.html', u'lms/templates/register-form.html', u'themes/edx.org/lms/templates/header.html', u'themes/stanford-style/lms/templates/register-form.html', u'lms/templates/register.html']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+회원가입
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+가입하기 
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+회원가입
+
+Multiple translations found for single string.
+	String "Closed"
+	Present in files [u'common/lib/xmodule/xmodule/capa_base.py', u'common/static/common/templates/discussion/thread-show.underscore', u'test_root/staticfiles/common/templates/discussion/thread-show.underscore', u'test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/thread-show.underscore']
+Translations found were:
+	#-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+종료 강좌
+#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+닫힘
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+닫힘
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+종료 강좌
+
+Multiple translations found for single string.
+	String "or"
+	Present in files [u'common/lib/capa/capa/responsetypes.py', u'lms/templates/login.html', u'lms/templates/register-form.html', u'lms/templates/course_modes/choose.html', u'themes/edx.org/lms/templates/course_modes/choose.html', u'themes/stanford-style/lms/templates/register-form.html', u'lms/templates/student_account/hinted_login.underscore', u'lms/templates/student_account/institution_login.underscore', u'lms/templates/student_account/institution_register.underscore', u'test_root/staticfiles/templates/student_account/hinted_login.underscore', u'test_root/staticfiles/templates/student_account/institution_login.underscore', u'test_root/staticfiles/templates/student_account/institution_register.underscore']
+Translations found were:
+	#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+또는
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+혹은
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+또는
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+또는
+
+Multiple translations found for single string.
+	String "Determines whether a 'Reset' button is shown so the user may reset their answer. A default value can be set in Advanced Settings."
+	Present in files [u'common/lib/xmodule/xmodule/capa_base.py']
+Translations found were:
+	#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+학습자가 답을 다시 입력할 수 있도록, '초기화' 버튼을 보이게 할 것인지 정해주십시오. 기본값 설정은 고급 설정에서 가능합니다.  
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+학습자가 답을 다시 입력할 수 있도록, '초기화' 버튼을 보이게 할 것인지 정해주십시오. 기본값 설정은 고급 설정에서 가능합니다.
+
+Multiple translations found for single string.
+	String "Default Timed Transcript"
+	Present in files [u'common/lib/xmodule/xmodule/video_module/video_xfields.py', u'cms/templates/js/video/transcripts/metadata-videolist-entry.underscore', u'test_root/staticfiles/coffee/fixtures/video/transcripts/metadata-videolist-entry.underscore', u'test_root/staticfiles/templates/video/transcripts/metadata-videolist-entry.underscore']
+Translations found were:
+	#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+기본 자막 
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+기본 자막 
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+기본 자막
+
+Multiple translations found for single string.
+	String "{platform_name} acknowledges the following student accomplishment"
+	Present in files [u'lms/djangoapps/certificates/views/webview.py']
+Translations found were:
+	#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+{platform_name}은 다음과 같이 학습자의 강좌 이수 결과를 제공합니다..  
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+{platform_name}은 다음과 같이 학습자의 강좌 이수 결과를 제공합니다..
+
+Multiple translations found for single string.
+	String "Progress"
+	Present in files [u'lms/djangoapps/courseware/tabs.py', u'lms/templates/peer_grading/peer_grading.html']
+Translations found were:
+	#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+진행 상황
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+진도
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+진행 상황
+
+Multiple translations found for single string.
+	String "Notes"
+	Present in files [u'lms/djangoapps/edxnotes/plugins.py', u'lms/templates/edxnotes/edxnotes.html', u'lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore', u'lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore', u'test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore', u'test_root/staticfiles/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore']
+Translations found were:
+	#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+안내
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+노트
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+안내
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+안내
+
+Multiple translations found for single string.
+	String "Currency"
+	Present in files [u'lms/djangoapps/shoppingcart/reports.py', u'lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html']
+Translations found were:
+	#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+환율
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+통화
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+환율
+
+Multiple translations found for single string.
+	String "Skip to main content"
+	Present in files [u'lms/templates/main_django.html', u'cms/templates/base.html', u'lms/templates/main.html']
+Translations found were:
+	#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+본문 영역으로 바로가기
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+생략하고 메인으로 돌아가기
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+본문 영역으로 바로가기
+
+Multiple translations found for single string.
+	String "There must be one cohort to which students can automatically be assigned."
+	Present in files [u'openedx/core/djangoapps/course_groups/cohorts.py', u'lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore', u'test_root/staticfiles/templates/instructor/instructor_dashboard_2/cohort-form.underscore']
+Translations found were:
+	#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+반드시  1개의 학습 집단은 학습자가 자동으로 할당될 수 있어야 합니다.
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+반드시 한 학습 집단은 학습자가 자동으로 할당될 수 있어야 합니다.
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+반드시  1개의 학습 집단은 학습자가 자동으로 할당될 수 있어야 합니다.
+
+Multiple translations found for single string.
+	String "Loading"
+	Present in files [u'cms/templates/asset_index.html', u'cms/templates/certificates.html', u'cms/templates/container.html', u'cms/templates/course_outline.html', u'cms/templates/group_configurations.html', u'cms/templates/library.html', u'lms/templates/courseware/courses.html', u'lms/templates/edxnotes/edxnotes.html', u'lms/templates/instructor/instructor_dashboard_2/certificates.html', u'lms/templates/instructor/instructor_dashboard_2/metrics.html', u'lms/templates/student_profile/learner_profile.html', u'lms/templates/search/search_loading.underscore', u'lms/templates/student_account/account_settings.underscore', u'test_root/staticfiles/templates/search/search_loading.underscore', u'test_root/staticfiles/templates/student_account/account_settings.underscore']
+Translations found were:
+	#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+불러오는 중
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+로딩
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+불러오는 중
+
+Multiple translations found for single string.
+	String "Already have an account?"
+	Present in files [u'lms/templates/signup_modal.html', u'lms/templates/student_account/register.underscore', u'test_root/staticfiles/templates/student_account/register.underscore']
+Translations found were:
+	#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+계정이 있으십니까?
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+이미 계정이 있으십니까?
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+계정이 있으십니까?
+
+Multiple translations found for single string.
+	String "Actions"
+	Present in files [u'lms/templates/staff_problem_info.html', u'lms/templates/instructor/instructor_dashboard_2/e-commerce.html', u'cms/templates/js/asset-library.underscore', u'cms/templates/js/basic-modal.underscore', u'lms/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore', u'test_root/staticfiles/coffee/fixtures/asset-library.underscore', u'test_root/staticfiles/coffee/fixtures/basic-modal.underscore', u'test_root/staticfiles/proctoring/templates/course_allowances.underscore', u'test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore', u'test_root/staticfiles/templates/asset-library.underscore', u'test_root/staticfiles/templates/basic-modal.underscore', u'test_root/staticfiles/templates/instructor/instructor_dashboard_2/enrollment-code-lookup-links.underscore']
+Translations found were:
+	#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+행동들
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+액션
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+행동들
+
+Multiple translations found for single string.
+	String "Reset Student Attempts"
+	Present in files [u'lms/templates/staff_problem_info.html', u'lms/templates/instructor/instructor_dashboard_2/student_admin.html']
+Translations found were:
+	#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+문제 풀이 횟수 설정 초기화 
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+문제 풀이 횟수 설정 초기화
+
+Multiple translations found for single string.
+	String "Type"
+	Present in files [u'lms/templates/calculator/toggle_calculator.html', u'cms/templates/js/asset-library.underscore', u'lms/djangoapps/support/static/support/templates/certificates_results.underscore', u'test_root/staticfiles/coffee/fixtures/asset-library.underscore', u'test_root/staticfiles/proctoring/templates/student-proctored-exam-attempts.underscore', u'test_root/staticfiles/support/templates/certificates_results.underscore', u'test_root/staticfiles/templates/asset-library.underscore']
+Translations found were:
+	#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+접사들
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+종류
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+접사들
+
+Multiple translations found for single string.
+	String "Verify Now"
+	Present in files [u'lms/templates/dashboard/_dashboard_course_listing.html', u'lms/templates/commerce/receipt.underscore', u'test_root/staticfiles/templates/commerce/receipt.underscore']
+Translations found were:
+	#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+자신을 인증 하세요!
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+지금 인증하세요
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+자신을 인증 하세요!
+
+Multiple translations found for single string.
+	String "View Gradebook"
+	Present in files [u'lms/templates/instructor/instructor_dashboard_2/student_admin.html']
+Translations found were:
+	#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+성적 보고서 보기 
+#-#-#-#-#  django.po (edx-platform)  #-#-#-#-#
+성적 보고서 보기
+

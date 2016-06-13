@@ -1,0 +1,26 @@
+[openedx.course_tab]
+ccx = lms.djangoapps.ccx.plugins:CcxCourseTab
+course_info = lms.djangoapps.courseware.tabs:CourseInfoTab
+courseware = lms.djangoapps.courseware.tabs:CoursewareTab
+discussion = lms.djangoapps.django_comment_client.forum.views:DiscussionTab
+edxnotes = lms.djangoapps.edxnotes.plugins:EdxNotesTab
+external_discussion = lms.djangoapps.courseware.tabs:ExternalDiscussionCourseTab
+external_link = lms.djangoapps.courseware.tabs:ExternalLinkCourseTab
+html_textbooks = lms.djangoapps.courseware.tabs:HtmlTextbookTabs
+instructor = lms.djangoapps.instructor.views.instructor_dashboard:InstructorDashboardTab
+notes = lms.djangoapps.notes.views:NotesTab
+open_ended = lms.djangoapps.open_ended_grading.views:OpenEndedGradingTab
+pdf_textbooks = lms.djangoapps.courseware.tabs:PDFTextbookTabs
+peer_grading = lms.djangoapps.open_ended_grading.views:PeerGradingTab
+progress = lms.djangoapps.courseware.tabs:ProgressTab
+staff_grading = lms.djangoapps.open_ended_grading.views:StaffGradingTab
+static_tab = xmodule.tabs:StaticTab
+syllabus = lms.djangoapps.courseware.tabs:SyllabusTab
+teams = lms.djangoapps.teams.plugins:TeamsTab
+textbooks = lms.djangoapps.courseware.tabs:TextbookTabs
+wiki = lms.djangoapps.course_wiki.tab:WikiTab
+
+[openedx.user_partition_scheme]
+cohort = openedx.core.djangoapps.course_groups.partition_scheme:CohortPartitionScheme
+random = openedx.core.djangoapps.user_api.partition_schemes:RandomUserPartitionScheme
+

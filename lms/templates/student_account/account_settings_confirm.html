@@ -1,0 +1,91 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from microsite_configuration import microsite
+%>
+<%inherit file="../main.html" />
+
+<%namespace name='static' file='../static_content.html'/>
+
+<%block name="header_extras">
+</%block>
+
+<%block name="js_extra">
+    <script>
+        $(document).ready(function(){
+            %if correct == None:
+                $("#enterpwd").show();
+            %else:
+                $("#incorrect").show();
+            %endif
+
+            $("#check").attr("href", "javascript:password_check();");
+
+
+
+            $("#password").focus();
+            $("#password").keydown(function(e){
+                if(e.which == 13)
+                    password_check();
+
+            });
+        });
+
+        function password_check(){
+            var passwd = $("#password").val();
+            if(passwd == "" || passwd == null){
+                alert("비밀번호를 입력하세요.");
+                $("#password").focus();
+                return;
+            }
+
+            $.post("/account/settings_confirm_check",
+                    {passwd: passwd},
+                    function(data){
+                        console.log("data = " + data);
+                        if(data){
+                            document.location.href = "/account/settings";
+                        }else if(!data){
+                            alert("비밀번호가 맞지 않습니다.");
+                        }else{
+                            alert("접근경로가 비정상적 입니다.\n메인페이지로 이동합니다.");
+                            document.location.href = "/";
+                        }
+            },"text");
+        }
+
+    </script>
+</%block>
+
+<%block name="pagetitle">비밀번호확인</%block>
+<section class="container rule">
+
+    <h2>비밀번호 확인</h2>
+
+    <dl>
+        <dt>개인정보 보호를 위해 회원님의 비밀번호를 확인합니다.<br></dt>
+        <dt>항상 비밀번호는 타인에게 노출되지 않도록 주의해주세요.<br></dt>
+
+
+        <br/><br/>
+
+
+##         <dd>본인확인<br>
+##             본인확인
+##         </dd>
+
+        <dt><input type="password" id="password" /></dt>
+
+        <dd>
+            <ol>
+                <li id="incorrect" style="display:none;"><img style="width:12px" src="/static/images/incorrect-icon.png">&nbsp;<b>비밀번호가 맞지 않습니다.</b></li>
+                <li id="enterpwd" style="display:none;"><img style="width:12px" src="/static/images/correct-icon.png">&nbsp;<b>비밀번호를 입력하세요.</b></li>
+            </ol>
+        </dd>
+        <br/>
+        <a href="#" id="check"><input type="button" id="button" value="확인"/></a>
+    </dl>
+
+    <br/><br/><br/><br/><br/><br/><br/>
+
+</section>

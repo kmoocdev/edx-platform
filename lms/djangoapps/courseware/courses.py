@@ -1,0 +1,628 @@
+#-*- coding: utf-8 -*-
+from collections import defaultdict
+from fs.errors import ResourceNotFoundError
+import logging
+import inspect
+
+from path import path
+from django.http import Http404
+from django.conf import settings
+
+from edxmako.shortcuts import render_to_string
+from xmodule.modulestore import ModuleStoreEnum
+from opaque_keys.edx.keys import CourseKey
+from xmodule.modulestore.django import modulestore
+from xmodule.contentstore.content import StaticContent
+from xmodule.modulestore.exceptions import ItemNotFoundError
+from static_replace import replace_static_urls
+from xmodule.modulestore import ModuleStoreEnum
+from xmodule.x_module import STUDENT_VIEW
+from microsite_configuration import microsite
+
+from courseware.access import has_access
+from courseware.model_data import FieldDataCache
+from courseware.module_render import get_module
+from student.models import CourseEnrollment
+import branding
+
+from opaque_keys.edx.keys import UsageKey
+from datetime import datetime
+from django.utils.timezone import UTC
+
+log = logging.getLogger(__name__)
+
+
+def get_request_for_thread():
+    """Walk up the stack, return the nearest first argument named "request"."""
+    frame = None
+    try:
+        for f in inspect.stack()[1:]:
+            frame = f[0]
+            code = frame.f_code
+            if code.co_varnames[:1] == ("request",):
+                return frame.f_locals["request"]
+            elif code.co_varnames[:2] == ("self", "request",):
+                return frame.f_locals["request"]
+    finally:
+        del frame
+
+
+def get_course(course_id, depth=0):
+    """
+    Given a course id, return the corresponding course descriptor.
+
+    If the course does not exist, raises a ValueError.  This is appropriate
+    for internal use.
+
+    depth: The number of levels of children for the modulestore to cache.
+    None means infinite depth.  Default is to fetch no children.
+    """
+    course = modulestore().get_course(course_id, depth=depth)
+    if course is None:
+        raise ValueError(u"Course not found: {0}".format(course_id))
+    return course
+
+
+# TODO please rename this function to get_course_by_key at next opportunity!
+def get_course_by_id(course_key, depth=0):
+    """
+    Given a course id, return the corresponding course descriptor.
+
+    If such a course does not exist, raises a 404.
+
+    depth: The number of levels of children for the modulestore to cache. None means infinite depth
+    """
+    with modulestore().bulk_operations(course_key):
+        course = modulestore().get_course(course_key, depth=depth)
+    if course:
+        return course
+    else:
+        raise Http404("Course not found.")
+
+
+class UserNotEnrolled(Http404):
+    def __init__(self, course_key):
+        super(UserNotEnrolled, self).__init__()
+        self.course_key = course_key
+
+
+def get_course_with_access(user, action, course_key, depth=0, check_if_enrolled=False):
+    """
+    Given a course_key, look up the corresponding course descriptor,
+    check that the user has the access to perform the specified action
+    on the course, and return the descriptor.
+
+    Raises a 404 if the course_key is invalid, or the user doesn't have access.
+
+    depth: The number of levels of children for the modulestore to cache. None means infinite depth
+
+    check_if_enrolled: If true, additionally verifies that the user is either enrolled in the course
+      or has staff access.
+    """
+    assert isinstance(course_key, CourseKey)
+    course = get_course_by_id(course_key, depth=depth)
+
+    if not has_access(user, action, course, course_key):
+        # Deliberately return a non-specific error message to avoid
+        # leaking info about access control settings
+        raise Http404("Course not found.")
+
+    if check_if_enrolled:
+        # Verify that the user is either enrolled in the course or a staff member.
+        # If user is not enrolled, raise UserNotEnrolled exception that will be caught by middleware.
+        if not ((user.id and CourseEnrollment.is_enrolled(user, course_key)) or has_access(user, 'staff', course)):
+            raise UserNotEnrolled(course_key)
+
+    return course
+
+
+def course_image_url(course):
+    """Try to look up the image url for the course.  If it's not found,
+    log an error and return the dead link"""
+    if course.static_asset_path or modulestore().get_modulestore_type(course.id) == ModuleStoreEnum.Type.xml:
+        # If we are a static course with the course_image attribute
+        # set different than the default, return that path so that
+        # courses can use custom course image paths, otherwise just
+        # return the default static path.
+        url = '/static/' + (course.static_asset_path or getattr(course, 'data_dir', ''))
+        if hasattr(course, 'course_image') and course.course_image != course.fields['course_image'].default:
+            url += '/' + course.course_image
+        else:
+            url += '/images/course_image.jpg'
+    elif course.course_image == '':
+        # if course_image is empty the url will be blank as location
+        # of the course_image does not exist
+        url = ''
+    else:
+        loc = StaticContent.compute_location(course.id, course.course_image)
+        url = StaticContent.serialize_asset_key_with_slash(loc)
+    return url
+
+
+def find_file(filesystem, dirs, filename):
+    """
+    Looks for a filename in a list of dirs on a filesystem, in the specified order.
+
+    filesystem: an OSFS filesystem
+    dirs: a list of path objects
+    filename: a string
+
+    Returns d / filename if found in dir d, else raises ResourceNotFoundError.
+    """
+    for directory in dirs:
+        filepath = path(directory) / filename
+        if filesystem.exists(filepath):
+            return filepath
+    raise ResourceNotFoundError(u"Could not find {0}".format(filename))
+
+
+def get_course_about_section(course, section_key):
+    """
+    This returns the snippet of html to be rendered on the course about page,
+    given the key for the section.
+
+    Valid keys:
+    - overview
+    - title
+    - university
+    - number
+    - short_description
+    - description
+    - key_dates (includes start, end, exams, etc)
+    - video
+    - course_staff_short
+    - course_staff_extended
+    - requirements
+    - syllabus
+    - textbook
+    - faq
+    - more_info
+    - ocw_links
+    """
+
+    # Many of these are stored as html files instead of some semantic
+    # markup. This can change without effecting this interface when we find a
+    # good format for defining so many snippets of text/html.
+
+    # TODO: Remove number, instructors from this list
+    if section_key in ['short_description', 'description', 'key_dates', 'video',
+                       'course_staff_short', 'course_staff_extended',
+                       'requirements', 'syllabus', 'textbook', 'faq', 'more_info',
+                       'number', 'instructors', 'overview',
+                       'effort', 'end_date', 'prerequisites', 'ocw_links']:
+
+        try:
+
+            request = get_request_for_thread()
+
+            loc = course.location.replace(category='about', name=section_key)
+
+            # Use an empty cache
+            field_data_cache = FieldDataCache([], course.id, request.user)
+            about_module = get_module(
+                request.user,
+                request,
+                loc,
+                field_data_cache,
+                log_if_not_found=False,
+                wrap_xmodule_display=False,
+                static_asset_path=course.static_asset_path,
+                course=course
+            )
+
+            html = ''
+
+            if about_module is not None:
+                try:
+                    html = about_module.render(STUDENT_VIEW).content
+                except Exception:  # pylint: disable=broad-except
+                    html = render_to_string('courseware/error-message.html', None)
+                    log.exception(
+                        u"Error rendering course={course}, section_key={section_key}".format(
+                            course=course, section_key=section_key
+                        ))
+            return html
+
+        except ItemNotFoundError:
+            log.warning(
+                u"Missing about section {key} in course {url}".format(key=section_key, url=course.location.to_deprecated_string())
+            )
+            return None
+    elif section_key == "title":
+        return course.display_name_with_default
+    elif section_key == "university":
+
+
+        return replace_hangul_org(course.display_org_with_default)
+    elif section_key == "number":
+        return course.display_number_with_default
+
+    raise KeyError("Invalid about key " + str(section_key))
+
+def replace_hangul_org(eng_org):
+    dic_univ = {'KHUk':u'경희대학교',
+                'KoreaUnivK':u'고려대학교',
+                'PNUk':u'부산대학교',
+                'SNUk':u'서울대학교',
+                'SKKUk':u'성균관대학교',
+                'YSUk':u'연세대학교',
+                'EwhaK':u'이화여자대학교',
+                'POSTECHk':u'포항공과대학교',
+                'KAISTk':u'한국과학기술원',
+                'HYUk':u'한양대학교',
+                'INHAuniversityK':u'인하대학교',
+                'KUMOHk':u'금오공과대학교',
+                'CUKk':u'가톨릭대학교',
+                'BUFSk':u'부산외국어대학교',
+                'JEJUk':u'제주대학교',
+                'KNUk':u'경북대학교',
+                'YeungnamUnivK':u'영남대학교',
+                'KonYangK':u'건양대학교',
+                'DKUK':u'단국대학교',
+                '':u''
+                }
+
+
+    if eng_org in dic_univ:
+        eng_org = dic_univ[eng_org]
+
+    return eng_org
+
+
+
+def get_course_info_section_module(request, course, section_key):
+    """
+    This returns the course info module for a given section_key.
+
+    Valid keys:
+    - handouts
+    - guest_handouts
+    - updates
+    - guest_updates
+    """
+    usage_key = course.id.make_usage_key('course_info', section_key)
+
+    # Use an empty cache
+    field_data_cache = FieldDataCache([], course.id, request.user)
+
+    return get_module(
+        request.user,
+        request,
+        usage_key,
+        field_data_cache,
+        log_if_not_found=False,
+        wrap_xmodule_display=False,
+        static_asset_path=course.static_asset_path,
+        course=course
+    )
+
+
+def get_course_info_section(request, course, section_key):
+    """
+    This returns the snippet of html to be rendered on the course info page,
+    given the key for the section.
+
+    Valid keys:
+    - handouts
+    - guest_handouts
+    - updates
+    - guest_updates
+    """
+    info_module = get_course_info_section_module(request, course, section_key)
+
+    html = ''
+    if info_module is not None:
+        try:
+            html = info_module.render(STUDENT_VIEW).content
+        except Exception:  # pylint: disable=broad-except
+            html = render_to_string('courseware/error-message.html', None)
+            log.exception(
+                u"Error rendering course={course}, section_key={section_key}".format(
+                    course=course, section_key=section_key
+                ))
+
+    return html
+
+
+# TODO: Fix this such that these are pulled in as extra course-specific tabs.
+#       arjun will address this by the end of October if no one does so prior to
+#       then.
+def get_course_syllabus_section(course, section_key):
+    """
+    This returns the snippet of html to be rendered on the syllabus page,
+    given the key for the section.
+
+    Valid keys:
+    - syllabus
+    - guest_syllabus
+    """
+
+    # Many of these are stored as html files instead of some semantic
+    # markup. This can change without effecting this interface when we find a
+    # good format for defining so many snippets of text/html.
+
+    if section_key in ['syllabus', 'guest_syllabus']:
+        try:
+            filesys = course.system.resources_fs
+            # first look for a run-specific version
+            dirs = [path("syllabus") / course.url_name, path("syllabus")]
+            filepath = find_file(filesys, dirs, section_key + ".html")
+            with filesys.open(filepath) as html_file:
+                return replace_static_urls(
+                    html_file.read().decode('utf-8'),
+                    getattr(course, 'data_dir', None),
+                    course_id=course.id,
+                    static_asset_path=course.static_asset_path,
+                )
+        except ResourceNotFoundError:
+            log.exception(
+                u"Missing syllabus section {key} in course {url}".format(key=section_key, url=course.location.to_deprecated_string())
+            )
+            return "! Syllabus missing !"
+
+    raise KeyError("Invalid about key " + str(section_key))
+
+
+def get_courses_by_university(user, domain=None):
+    '''
+    Returns dict of lists of courses available, keyed by course.org (ie university).
+    Courses are sorted by course.number.
+    '''
+    # TODO: Clean up how 'error' is done.
+    # filter out any courses that errored.
+    visible_courses = get_courses(user, domain)
+
+    universities = defaultdict(list)
+    for course in visible_courses:
+        universities[course.org].append(course)
+
+    return universities
+
+
+def get_courses(user, domain=None):
+    '''
+    Returns a list of courses available, sorted by course.number
+    '''
+    courses = branding.get_visible_courses()
+
+    permission_name = microsite.get_value(
+        'COURSE_CATALOG_VISIBILITY_PERMISSION',
+        settings.COURSE_CATALOG_VISIBILITY_PERMISSION
+    )
+
+    # print 'courses.len1', len(courses)
+    courses = [c for c in courses if has_access(user, permission_name, c)]
+    # print 'courses.len2', len(courses)
+
+    courses = sorted(courses, key=lambda course: course.start, reverse=True)
+    # for c in courses:
+    #     print c.start
+
+    return courses
+
+def get_courses_by_org(user, org_id, domain=None):
+    '''
+    Returns a list of courses available, sorted by course.number
+    '''
+    courses = branding.get_visible_courses_by_org(org_id)
+
+    courses1 = list()
+    courses2 = list()
+
+    for c in courses:
+        # print 'course.keys1:', c.__dict__.keys()
+        # print 'c.has_ended()', c.has_ended()
+        # print 'c.number', c.number
+        # print 'c.start', c.start
+        if c.start is not None and c.end is not None and c.start > c.end:
+            continue
+
+        if c.enrollment_end is not None and c.has_ended() and c.enrollment_end < datetime.now(UTC()):
+            continue
+
+        if not c.has_ended():
+            courses1.append(c)
+        else:
+            courses2.append(c)
+
+    # courses1 = sorted(courses1, key=lambda course: course.number)
+    # courses2 = sorted(courses2, key=lambda course: course.number)
+    courses1 = sorted(courses1, key=lambda course: course.start, reverse=True)
+    courses2 = sorted(courses2, key=lambda course: course.start, reverse=True)
+
+    courses = courses1 + courses2
+
+    permission_name = microsite.get_value(
+        'COURSE_CATALOG_VISIBILITY_PERMISSION',
+        settings.COURSE_CATALOG_VISIBILITY_PERMISSION
+    )
+
+    courses = [c for c in courses if has_access(user, permission_name, c)]
+
+    # courses = sorted(courses, key=lambda course: course.number)
+
+    return courses
+
+def get_courses_by_kocw(user, domain=None):
+    '''
+    Returns a list of courses available, sorted by course.number
+    '''
+    courses_temp = branding.get_visible_courses()
+    courses = list()
+    courses1 = list()
+    courses2 = list()
+    # for c in courses_temp:
+    #     print 'wiki_slug ##############################', c.wiki_slug
+    #     if c.enrollment_start is not None and datetime.now(UTC()) >= c.enrollment_start and c.wiki_slug is not None and 'KOCW' in c.wiki_slug:
+    #         courses.append(c)
+
+    for c in courses_temp:
+        # print 'id ##############################', c.id, type(c.id)
+        if c.enrollment_start is not None and datetime.now(UTC()) >= c.enrollment_start and c.id is not None and 'KOCW' in str(c.id):
+            courses.append(c)
+
+    for c in courses:
+        # print 'course.keys1:', c.__dict__.keys()
+        print 'c.has_ended()', c.has_ended()
+        print 'c.number', c.number
+        print 'c.start', c.start
+
+        if not c.has_ended():
+            courses1.append(c)
+        else:
+            courses2.append(c)
+
+    # courses1 = sorted(courses1, key=lambda course: course.number)
+    # courses2 = sorted(courses2, key=lambda course: course.number)
+
+    courses1 = sorted(courses1, key=lambda course: course.start, reverse=True)
+    courses2 = sorted(courses2, key=lambda course: course.start, reverse=True)
+
+    courses = courses1 + courses2
+
+    permission_name = microsite.get_value(
+        'COURSE_CATALOG_VISIBILITY_PERMISSION',
+        settings.COURSE_CATALOG_VISIBILITY_PERMISSION
+    )
+
+    courses = [c for c in courses if has_access(user, permission_name, c)]
+
+    # courses = sorted(courses, key=lambda course: course.number)
+
+    return courses
+
+
+def sort_by_start_ended_enrolment(courses):
+    """
+    Sorts a list of courses by their announcement date. If the date is
+    not available, sort them by their start date.
+    """
+
+    # Sort courses by how far are they from they start day
+    key = lambda course: course.sorting_score
+    courses = sorted(courses, key=key)
+
+    return courses
+
+def sort_by_announcement(courses):
+    """
+    Sorts a list of courses by their announcement date. If the date is
+    not available, sort them by their start date.
+    """
+
+    # Sort courses by how far are they from they start day
+    key = lambda course: course.sorting_score
+    courses = sorted(courses, key=key)
+
+    return courses
+
+
+def sort_by_start_date(courses):
+    """
+    Returns a list of courses sorted by their start date, latest first.
+    """
+    courses = sorted(
+        courses,
+        key=lambda course: (course.has_ended(), course.enrollment_end is None, course.enrollment_end),
+        reverse=False
+    )
+
+    courses = sorted(
+        courses,
+        key=lambda course: (course.has_ended(), course.start is None, course.start),
+        reverse=False
+    )
+
+    return courses
+
+
+def reverse_sort_by_start_date(courses):
+    """
+    Returns a list of courses sorted by their start date, latest first.
+    """
+    courses = sorted(
+        courses,
+        key=lambda course: (course.has_ended(), course.end is None, course.end),
+        reverse=False
+    )
+
+    courses = sorted(
+        courses,
+        key=lambda course: (course.has_ended(), course.start is None, course.start),
+        reverse=True
+    )
+
+    return courses
+
+def reverse_sort_by_enrollment_end_date(courses):
+    """
+    Returns a list of courses sorted by their start date, latest first.
+    """
+    courses = sorted(
+        courses,
+        key=lambda course: (course.has_ended(), course.enrollment_end is None, course.enrollment_end),
+        reverse=True
+    )
+
+    return courses
+
+
+def get_cms_course_link(course, page='course'):
+    """
+    Returns a link to course_index for editing the course in cms,
+    assuming that the course is actually cms-backed.
+    """
+    # This is fragile, but unfortunately the problem is that within the LMS we
+    # can't use the reverse calls from the CMS
+    return u"//{}/{}/{}".format(settings.CMS_BASE, page, unicode(course.id))
+
+
+def get_cms_block_link(block, page):
+    """
+    Returns a link to block_index for editing the course in cms,
+    assuming that the block is actually cms-backed.
+    """
+    # This is fragile, but unfortunately the problem is that within the LMS we
+    # can't use the reverse calls from the CMS
+    return u"//{}/{}/{}".format(settings.CMS_BASE, page, block.location)
+
+
+def get_studio_url(course, page):
+    """
+    Get the Studio URL of the page that is passed in.
+
+    Args:
+        course (CourseDescriptor)
+    """
+    is_studio_course = course.course_edit_method == "Studio"
+    is_mongo_course = modulestore().get_modulestore_type(course.id) != ModuleStoreEnum.Type.xml
+    studio_link = None
+    if is_studio_course and is_mongo_course:
+        studio_link = get_cms_course_link(course, page)
+    return studio_link
+
+
+def get_problems_in_section(section):
+    """
+    This returns a dict having problems in a section.
+    Returning dict has problem location as keys and problem
+    descriptor as values.
+    """
+
+    problem_descriptors = defaultdict()
+    if not isinstance(section, UsageKey):
+        section_key = UsageKey.from_string(section)
+    else:
+        section_key = section
+    # it will be a Mongo performance boost, if you pass in a depth=3 argument here
+    # as it will optimize round trips to the database to fetch all children for the current node
+    section_descriptor = modulestore().get_item(section_key, depth=3)
+
+    # iterate over section, sub-section, vertical
+    for subsection in section_descriptor.get_children():
+        for vertical in subsection.get_children():
+            for component in vertical.get_children():
+                if component.location.category == 'problem' and getattr(component, 'has_score', False):
+                    problem_descriptors[unicode(component.location)] = component
+
+    return problem_descriptors

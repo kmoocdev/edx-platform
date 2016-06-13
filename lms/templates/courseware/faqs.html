@@ -1,0 +1,429 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from microsite_configuration import microsite
+%>
+<%inherit file="../main.html" />
+
+<%namespace name='static' file='../static_content.html'/>
+
+<%block name="header_extras">
+</%block>
+
+<%block name="js_extra">
+</%block>
+
+<%block name="pagetitle">자주하는질문</%block>
+<%
+  platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  if self.stanford_theme_enabled():
+    course_index_overlay_text = _("Explore free courses from {university_name}.").format(university_name="Stanford University")
+    logo_file = static.url('themes/stanford/images/seal.png')
+    logo_alt_text = "Stanford Seal Logo"
+
+  else:
+    course_index_overlay_text = microsite.get_value('course_index_overlay_text', _("Explore courses from {platform_name}.").format(platform_name=platform_name))
+
+    if settings.FEATURES.get('IS_EDX_DOMAIN', False):
+      # For some reason, `static.url('images/edx-theme/edx-logo-bw.png')` breaks template rendering.
+      default_image_url = settings.STATIC_URL + 'images/edx-theme/edx-logo-bw.png'
+    else:
+      default_image_url = settings.STATIC_URL + 'images/default-theme/logo-large.png'
+
+    logo_file = microsite.get_value(
+      'course_index_overlay_logo_file', default_image_url
+    )
+
+    logo_alt_text = _("{platform_name} Logo").format(platform_name=platform_name)
+%>
+
+<script>
+    $(document).ready(function(){
+        $('*[data-btn="gnb"]').bind('click', function(){
+            if($(this).attr('class') == 'open'){
+                $(this).attr('class','close');
+                $(this).html('닫기');
+            } else {
+                $(this).attr('class','open');
+                $(this).html('열기');
+            }
+        });
+
+        $(".faq_box dd").hide();
+        $(".faq_box dt").each(function() {
+                $(this).click(function() {
+                        if($(this).hasClass("active")) {
+                            $(this).removeClass("active");
+                            $(this).next().slideUp("fast");
+                            $(this).find("i").removeClass("fa-minus-square");
+                        } else {
+                            $(".faq_box dt").removeClass("active");
+                            $(".faq_box dt i").removeClass("fa-minus-square");
+                            $(".faq_box dd").slideUp("fast");
+                            $(this).addClass("active");
+                            $(this).find("i").addClass("fa-minus-square");
+                            $(this).next().slideDown("fast");
+                        }
+                        return false;
+                });
+        });
+
+    });
+
+</script>
+
+    <div class="content-wrapper" id="content">
+
+
+
+
+
+<section class="container rule faq">
+	<h2>자주하는 질문</h2>
+
+	<div class="faq_box">
+		<dl>
+			<dt>
+				<a href="" title="K-MOOC 사용법 안내 동영상 보기"><i class="fa fa-plus-square"></i> <span>K-MOOC 사용법 안내 동영상 보기</span></a>
+			</dt>
+			<dd>회원가입 및 강좌수강에 관한 안내는 <a target="_blank" href="https://www.youtube.com/watch?v=De7rs7EkIjw" title="K-MOOC 사용방법">K-MOOC 사용방법</a> 동영상으로 확인할 수 있습니다.<br/>
+                <a target="_blank" href="https://www.youtube.com/watch?v=De7rs7EkIjw">K-MOOC 사용방법</a> 동영상은 회원가입 및 강좌수강에 관한 주요사항에 대한 안내로 이외에 추가적으로 궁금한 사항이 있는 경우에는  help_kmooc@nile.or.kr 로 문의주시면 답변드리겠습니다.
+            </dd>
+            <dt>
+				<a href="" title="수강신청 후 강좌 수강하기"><i class="fa fa-plus-square"></i> <span>수강신청 후 강좌 수강하기</span></a>
+			</dt>
+			<dd>메인페이지에서 각 강좌의 개강일을 확인하실 수 있으며, 관심있는 강좌는 ‘자세히 알아보기’를 클릭하면 강좌 소개 영상 및 수강신청을 하실 수 있습니다.<br/>
+                강좌의 개강일과 종료일은 우측에서 확인하실 수 있으며, 강좌를 등록한 후 개강일부터 강좌를 수강하실 수 있으니 이점 유념하시기 바랍니다.<br/>
+##                 이번 K-MOOC에서 제공하는 강좌들은 10.26(월), 11.02(월)로 나누어져 개강합니다.<br/>
+                개강일별 강좌목록은 아래와 같습니다.<br/>
+
+                <table summary="1. 10.26(월) 09:00에 개강하는 강좌 ">
+                    <caption>
+                        개강하는 강좌
+                    </caption>
+                    <colgroup>
+                        <col width="7%"/>
+                        <col width="15%"/>
+                        <col width="*"/>
+                        <col width="10%"/>
+                        <col width="10%"/>
+                        <col width="10%"/>
+                        <col width="8%"/>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">연번</th>
+                            <th scope="col">대학명</th>
+                            <th scope="col">과목명</th>
+                            <th scope="col">교수명</th>
+                            <th scope="col">개강일</th>
+                            <th scope="col">종강일</th>
+                            <th scope="col">수업주차</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+##                     경희대학교
+                        <tr>
+                            <td rowspan="2" align="center">1</td>
+                            <td rowspan="2" align="center">경희대학교</td>
+                            <td>호모 폴리티쿠스 : 우리가 만든 세계</td>
+                            <td align="center">유정완</td>
+                            <td align="center">04-04</td>
+                            <td align="center">07-30</td>
+                            <td align="center">14</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">세계시민교육, 지구공동사회의 시민으로 살기</td>
+                            <td align="center">김현</td>
+                            <td align="center">04-04</td>
+                            <td align="center">07-30</td>
+                            <td align="center">14</td>
+                        </tr>
+
+##                     고려대학교
+                        <tr>
+                            <td rowspan="4" align="center">2</td>
+                            <td rowspan="4" align="center">고려대학교</td>
+                            <td>일반인을 위한 일반상대성이론</td>
+                            <td align="center">이종필</td>
+                            <td align="center">03-07</td>
+                            <td align="center">06-19</td>
+                            <td align="center">15</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">Quantum Mechanics for IT/NT/BT</td>
+                            <td align="center">김대만</td>
+                            <td align="center">03-14</td>
+                            <td align="center">05-22</td>
+                            <td align="center">10</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">민법학입문</td>
+                            <td align="center">명순구</td>
+                            <td align="center">03-07</td>
+                            <td align="center">06-12</td>
+                            <td align="center">14</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">고전문헌과 역사문화</td>
+                            <td align="center">심경호</td>
+                            <td align="center">03-07</td>
+                            <td align="center">05-15</td>
+                            <td align="center">10</td>
+                        </tr>
+
+##                     부산대학교
+                        <tr>
+                            <td rowspan="2" align="center">3</td>
+                            <td rowspan="2" align="center">부산대학교</td>
+                            <td>생명의 프린키피아</td>
+                            <td align="center">김희수</td>
+                            <td align="center">03-02</td>
+                            <td align="center">07-12</td>
+                            <td align="center">13</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">사회적기업 아름다운 경영이야기</td>
+                            <td align="center">조영복</td>
+                            <td align="center">03-02</td>
+                            <td align="center">07-12</td>
+                            <td align="center">13</td>
+                        </tr>
+
+##                     서울대학교
+                        <tr>
+                            <td rowspan="2" align="center">4</td>
+                            <td rowspan="2" align="center">서울대학교</td>
+                            <td>경제학 들어가기</td>
+                            <td align="center">이준구</td>
+                            <td align="center">03-02</td>
+                            <td align="center">07-12</td>
+                            <td align="center">13</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">우주와 생명</td>
+                            <td align="center">김희준</td>
+                            <td align="center">03-02</td>
+                            <td align="center">07-12</td>
+                            <td align="center">13</td>
+                        </tr>
+
+##                     성균관대학교
+                        <tr>
+                            <td rowspan="2" align="center">5</td>
+                            <td rowspan="2" align="center">성균관대학교</td>
+                            <td>논어</td>
+                            <td align="center">신정근</td>
+                            <td align="center">03-02</td>
+                            <td align="center">06-19</td>
+                            <td align="center">16</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">창의적 발상</td>
+                            <td align="center">박영택</td>
+                            <td align="center">03-02</td>
+                            <td align="center">06-19</td>
+                            <td align="center">16</td>
+                        </tr>
+
+##                     연세대학교
+                        <tr>
+                            <td rowspan="5" align="center">6</td>
+                            <td rowspan="5" align="center">연세대학교</td>
+                            <td>문학이란 무엇인가</td>
+                            <td align="center">정명교</td>
+                            <td align="center">07-01</td>
+                            <td align="center">10-31</td>
+                            <td align="center">13</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">서비스디자인</td>
+                            <td align="center">김진우</td>
+                            <td align="center">09-01</td>
+                            <td align="center">12-31</td>
+                            <td align="center">7</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">우주의 이해</td>
+                            <td align="center">손영종</td>
+                            <td align="center">03-21</td>
+                            <td align="center">07-31</td>
+                            <td align="center">13</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">경제학 첫걸음 Part 1: 미시경제학</td>
+                            <td align="center">정갑영</td>
+                            <td align="center">4월 중</td>
+                            <td align="center">4월 중</td>
+                            <td align="center">15</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">경험디자인</td>
+                            <td align="center">김진우</td>
+                            <td align="center">4월 중</td>
+                            <td align="center">4월 중</td>
+                            <td align="center">7</td>
+                        </tr>
+
+##                     이화여자대학교
+                        <tr>
+                            <td rowspan="4" align="center">7</td>
+                            <td rowspan="4" align="center">이화여자대학교</td>
+                            <td>현대물리학과 인간사고의 변혁</td>
+                            <td align="center">김찬주</td>
+                            <td align="center">03-02</td>
+                            <td align="center">06-17</td>
+                            <td align="center">16</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">영화 스토리텔링의 이해</td>
+                            <td align="center">류철균</td>
+                            <td align="center">03-02</td>
+                            <td align="center">06-17</td>
+                            <td align="center">16</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">인간행위와 사회구조</td>
+                            <td align="center">함인희</td>
+                            <td align="center">03-02</td>
+                            <td align="center">06-17</td>
+                            <td align="center">16</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">건축으로 읽는 사회문화사</td>
+                            <td align="center">임석재</td>
+                            <td align="center">03-02</td>
+                            <td align="center">06-17</td>
+                            <td align="center">16</td>
+                        </tr>
+
+##                     포항공과대학교
+                        <tr>
+                            <td rowspan="2" align="center">8</td>
+                            <td rowspan="2" align="center">포항공과대학교</td>
+                            <td>연속체 역학과 유한요소해석</td>
+                            <td align="center">박성진</td>
+                            <td align="center">02-29</td>
+                            <td align="center">05-28</td>
+                            <td align="center">13</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">디지털통신시스템: 변복조와 전력스펙트럼</td>
+                            <td align="center">조준호</td>
+                            <td align="center">03-02</td>
+                            <td align="center">06-17</td>
+                            <td align="center">13</td>
+                        </tr>
+
+##                     한국과학기술원
+                        <tr>
+                            <td rowspan="2" align="center">9</td>
+                            <td rowspan="2" align="center">한국과학기술원</td>
+                            <td>동역학</td>
+                            <td align="center">김양한</td>
+                            <td align="center">09-02</td>
+                            <td align="center">12-11</td>
+                            <td align="center">9</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">인공지능과 기계학습</td>
+                            <td align="center">김기응, 오혜연</td>
+                            <td align="center">10-03</td>
+                            <td align="center">12-25</td>
+                            <td align="center">15</td>
+                        </tr>
+
+##                     한양대학교
+                        <tr>
+                            <td rowspan="4" align="center">10</td>
+                            <td rowspan="4" align="center">한양대학교</td>
+                            <td>건축공간론</td>
+                            <td align="center">서현</td>
+                            <td align="center">04-04</td>
+                            <td align="center">05-29</td>
+                            <td align="center">14</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">정책학개론</td>
+                            <td align="center">김정수</td>
+                            <td align="center">04-04</td>
+                            <td align="center">05-29</td>
+                            <td align="center">14</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">경영데이터마이닝</td>
+                            <td align="center">김종우</td>
+                            <td align="center">04-04</td>
+                            <td align="center">05-29</td>
+                            <td align="center">14</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left:1px solid #c8c8c8;">정보사회학입문</td>
+                            <td align="center">윤영민</td>
+                            <td align="center">04-04</td>
+                            <td align="center">05-29</td>
+                            <td align="center">14</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br/>
+                <div style="text-align: right">
+                    ※ 강좌의 개강일과 종강일은 참여대학 사정에 따라 일부 변경될 수 있습니다.
+                </div>
+            </dd>
+            <dt>
+				<a href=""><i class="fa fa-plus-square" title="회원 가입 방법"></i> <span>회원 가입 방법</span></a>
+			</dt>
+			<dd>회원가입에는 이메일과 아이디가 필수입니다.<br/>
+                이메일은 인증메일을 받을 수 있도록 실제 이메일 주소를 사용하셔야 합니다. <br/>
+                아이디는 영문과 숫자로 이루어진 고유번호이며, 이미 다른 가입자가 사용하고 있다면 다른 아이디를 사용하시면 됩니다.<br/>
+                비밀번호는 8자리 이상으로 숫자와 특수기호가 포함된 것을 사용하시면 됩니다.
+            </dd>
+			<dt>
+				<a href="" title="인증메일을 받을 수 없습니다."><i class="fa fa-plus-square"></i> <span>인증메일을 받을 수 없습니다.</span></a>
+			</dt>
+			<dd>회원가입 시에 입력하였던 이메일 주소와 비밀번호를 이용해서 로그인 하시면, 인증메일이
+                자동으로 재전송됩니다.<br/>
+                만일 인증메일을 받지 못한상태에서 이메일 혹은 비밀번호가 다르다는 메시지가 출력될 경우, 해당 이메일 주소를 이용해서 다시 회원가입을 해 주십시오.<br/>
+                이 때 이메일 주소가 중복되었다고 나올 경우, 회원가입시의 비밀번호가 잘못 입력된 것이기 때문에, 다른 이메일 주소로 재가입하셔야 합니다.
+            </dd>
+			<dt>
+				<a href="" title="비밀번호를 잊어버렸습니다."><i class="fa fa-plus-square"></i> <span>비밀번호를 잊어버렸습니다.</span></a>
+			</dt>
+			<dd>로그인 화면에서 “비밀번호를 잊어버렸습니까?” 링크를 클릭하시고 회원가입하셨던
+            이메일 주소를 입력하면, 비밀번호 재설정 링크가 이메일 주소로 발송됩니다.
+            </dd>
+
+            <dt>
+				<a href="" title="카카오, 네이버 등 로그인 연계는 무엇인가요?"><i class="fa fa-plus-square"></i> <span>카카오, 네이버 등 로그인 연계는 무엇인가요?</span></a>
+			</dt>
+			<dd>로그인 화면에서 로그인 하기 전에 먼저 카카오, 네이버 등의 로그인 연계를 클릭하셔서
+            해당 SNS에 로그인 한 후에 K-MOOC에 다시한번 로그인 하면, SNS로그인과
+            K-MOOC로그인이 연계됩니다.<br/>
+                한번 연계된 후에는 카카오, 네이버 등 SNS로그인으로
+            간편하게 로그인 할 수 있습니다.
+            </dd>
+
+            <dt>
+				<a href="" title="이용가능한 브라우저"><i class="fa fa-plus-square"></i> <span>이용가능한 브라우저</span></a>
+			</dt>
+			<dd>K-MOOC는 인터넷익스플로러10이상, 최신버전의 크롬, 파이어폭스, 사파리 및
+            대부분의 스마트패드, 스마트폰을 지원합니다.<br/>
+                인터넷 익스플로러 9 이전 버전을 이용하고
+            계시다면 크롬 브라우저 등을 설치하여 이용하시기를 권장합니다.
+            </dd>
+
+            <dt>
+				<a href="" title="학습 방법 안내"><i class="fa fa-plus-square"></i> <span>학습 방법 안내</span></a>
+			</dt>
+			<dd>K-MOOC를 처음 이용하신다면, 강좌 목록 중에서 “K-MOOC 시작하기”를 등록해서
+            학습해보세요.<br/>
+                K-MOOC의 전반적인 학습방법에 대해 안내합니다.
+            </dd>
+		</dl>
+	</div>
+</section>
+
+

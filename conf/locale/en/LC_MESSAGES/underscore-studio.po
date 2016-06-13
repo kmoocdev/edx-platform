@@ -1,0 +1,1166 @@
+# edX translation file
+# Copyright (C) 2016 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# EdX Team <info@edx.org>, 2016.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1a\n"
+"Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+"POT-Creation-Date: 2016-05-20 05:10+0000\n"
+"PO-Revision-Date: 2016-05-20 05:11:18.506278\n"
+"Last-Translator: \n"
+"Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+"Language: en\n"
+
+#: cms/templates/js/active-video-upload-list.underscore:3
+msgid "Drag and drop or click here to upload video files."
+msgstr ""
+
+#: cms/templates/js/active-video-upload.underscore:3
+msgid "status"
+msgstr ""
+
+#: cms/templates/js/add-xblock-component-menu-problem.underscore:4
+msgid "Common Problem Types"
+msgstr ""
+
+#: cms/templates/js/add-xblock-component-menu-problem.underscore:7
+msgid "Common Problems with Hints and Feedback"
+msgstr ""
+
+#: cms/templates/js/add-xblock-component-menu-problem.underscore:10
+msgid "Advanced"
+msgstr ""
+
+#: cms/templates/js/add-xblock-component.underscore:2
+msgid "Add New Component"
+msgstr ""
+
+#: cms/templates/js/advanced_entry.underscore:12
+msgid "Deprecated"
+msgstr ""
+
+#: cms/templates/js/asset-library.underscore:5
+msgid "List of uploaded files and assets in this course"
+msgstr ""
+
+#: cms/templates/js/asset-library.underscore:16
+msgid "Preview"
+msgstr ""
+
+#: cms/templates/js/asset-library.underscore:19
+#: cms/templates/js/previous-video-upload-list.underscore:11
+#: cms/templates/js/signatory-details.underscore:10
+msgid "Name"
+msgstr ""
+
+#: cms/templates/js/asset-library.underscore:20
+#: cms/templates/js/asset-library.underscore:53
+msgid "- Sortable"
+msgstr ""
+
+#: cms/templates/js/asset-library.underscore:26
+msgid "Type"
+msgstr ""
+
+#: cms/templates/js/asset-library.underscore:52
+#: cms/templates/js/previous-video-upload-list.underscore:13
+msgid "Date Added"
+msgstr ""
+
+#: cms/templates/js/asset-library.underscore:56
+msgid "URL"
+msgstr ""
+
+#: cms/templates/js/asset-library.underscore:67
+msgid "You haven't added any assets to this course yet."
+msgstr ""
+
+#: cms/templates/js/asset-library.underscore:67
+msgid "Upload your first asset"
+msgstr ""
+
+#: cms/templates/js/asset-upload-modal.underscore:2
+msgid "close"
+msgstr ""
+
+#: cms/templates/js/asset-upload-modal.underscore:4
+msgid "Upload New File"
+msgstr ""
+
+#: cms/templates/js/asset-upload-modal.underscore:15
+msgid "Choose File"
+msgstr ""
+
+#: cms/templates/js/asset.underscore:4 cms/templates/js/cdn.underscore:4
+msgid "No description available"
+msgstr ""
+
+#: cms/templates/js/asset.underscore:9 cms/templates/js/cdn.underscore:9
+msgid "Open/download this file"
+msgstr ""
+
+#: cms/templates/js/asset.underscore:23
+msgid "Studio:"
+msgstr ""
+
+#: cms/templates/js/asset.underscore:29 cms/templates/js/cdn.underscore:29
+msgid "Web:"
+msgstr ""
+
+#: cms/templates/js/asset.underscore:39 cms/templates/js/cdn.underscore:39
+msgid "Delete this asset"
+msgstr ""
+
+#: cms/templates/js/asset.underscore:42
+msgid "Lock this asset"
+msgstr ""
+
+#: cms/templates/js/asset.underscore:43
+msgid "Lock/unlock file"
+msgstr ""
+
+#: cms/templates/js/certificate-details.underscore:11
+#: cms/templates/js/content-group-details.underscore:14
+#: cms/templates/js/group-configuration-details.underscore:14
+msgid "ID"
+msgstr ""
+
+#: cms/templates/js/certificate-details.underscore:17
+msgid "Certificate Details"
+msgstr ""
+
+#: cms/templates/js/certificate-details.underscore:21
+#: cms/templates/js/certificate-editor.underscore:23
+msgid "Course Title Override"
+msgstr ""
+
+#: cms/templates/js/certificate-details.underscore:26
+#: cms/templates/js/certificate-editor.underscore:40
+msgid "Certificate Signatories"
+msgstr ""
+
+#: cms/templates/js/certificate-details.underscore:34
+#: cms/templates/js/content-group-details.underscore:27
+#: cms/templates/js/course_info_handouts.underscore:1
+#: cms/templates/js/group-configuration-details.underscore:45
+#: cms/templates/js/show-textbook.underscore:40
+#: cms/templates/js/signatory-details.underscore:4
+#: cms/templates/js/xblock-string-field-editor.underscore:3
+msgid "Edit"
+msgstr ""
+
+#: cms/templates/js/certificate-details.underscore:36
+#: cms/templates/js/certificate-details.underscore:37
+#: cms/templates/js/certificate-editor.underscore:53
+#: cms/templates/js/content-group-details.underscore:30
+#: cms/templates/js/content-group-details.underscore:31
+#: cms/templates/js/content-group-details.underscore:35
+#: cms/templates/js/content-group-editor.underscore:36
+#: cms/templates/js/content-group-editor.underscore:37
+#: cms/templates/js/content-group-editor.underscore:41
+#: cms/templates/js/course-outline.underscore:86
+#: cms/templates/js/course-outline.underscore:88
+#: cms/templates/js/course_grade_policy.underscore:33
+#: cms/templates/js/group-configuration-details.underscore:49
+#: cms/templates/js/group-configuration-details.underscore:53
+#: cms/templates/js/group-configuration-editor.underscore:50
+#: cms/templates/js/group-configuration-editor.underscore:54
+#: cms/templates/js/show-textbook.underscore:43
+#: cms/templates/js/signatory-editor.underscore:15
+#: cms/templates/js/xblock-outline.underscore:31
+#: cms/templates/js/xblock-outline.underscore:33
+msgid "Delete"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore:5
+#: cms/templates/js/content-group-editor.underscore:4
+#: cms/templates/js/edit-textbook.underscore:5
+#: cms/templates/js/group-configuration-editor.underscore:4
+msgid "error.message"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore:11
+msgid "Certificate Information"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore:13
+msgid "Certificate Name"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore:14
+#: cms/templates/js/certificate-editor.underscore:15
+msgid "Name of the certificate"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore:19
+#: cms/templates/js/certificate-editor.underscore:20
+msgid "Description of the certificate"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore:24
+msgid "Course title"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore:25
+msgid "Title of the course"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore:28
+#: cms/templates/js/certificate-editor.underscore:32
+msgid "Organization Logo"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore:33
+msgid "Maximum logo width 220px, height 48px variable"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore:35
+msgid "Upload Organization Logo"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore:44
+msgid "Add Signatory"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore:45
+msgid "(Up to 4 signatories are allowed for a certificate)"
+msgstr ""
+
+#: cms/templates/js/certificate-editor.underscore:49
+#: cms/templates/js/content-group-editor.underscore:31
+#: cms/templates/js/group-configuration-editor.underscore:45
+msgid "Create"
+msgstr ""
+
+#: cms/templates/js/certificate-web-preview.underscore:1
+msgid "Choose mode"
+msgstr ""
+
+#: cms/templates/js/certificate-web-preview.underscore:8
+msgid "Preview Certificate"
+msgstr ""
+
+#: cms/templates/js/certificate-web-preview.underscore:13
+msgid "Activate"
+msgstr ""
+
+#: cms/templates/js/certificate-web-preview.underscore:15
+msgid "Deactivate"
+msgstr ""
+
+#: cms/templates/js/checklist.underscore:14
+msgid "{number}{pct_sign} of checklists completed"
+msgstr ""
+
+#: cms/templates/js/checklist.underscore:17
+msgid "%"
+msgstr ""
+
+#: cms/templates/js/checklist.underscore:27
+msgid "Tasks Completed:"
+msgstr ""
+
+#: cms/templates/js/checklist.underscore:60
+msgid "This link will open in a new browser window/tab"
+msgstr ""
+
+#: cms/templates/js/container-message.underscore:5
+msgid ""
+"Caution: The last published version of this unit is live. By publishing "
+"changes you will change the student experience."
+msgstr ""
+
+#: cms/templates/js/content-group-details.underscore:34
+#: cms/templates/js/content-group-editor.underscore:40
+msgid "Cannot delete when in use by a unit"
+msgstr ""
+
+#: cms/templates/js/content-group-details.underscore:44
+msgid "This content group is used in:"
+msgstr ""
+
+#: cms/templates/js/content-group-editor.underscore:10
+msgid "Content Group Name"
+msgstr ""
+
+#: cms/templates/js/content-group-editor.underscore:13
+msgid "Content Group ID"
+msgstr ""
+
+#: cms/templates/js/content-group-editor.underscore:18
+msgid "This is the name of the group"
+msgstr ""
+
+#: cms/templates/js/content-group-editor.underscore:25
+msgid "This content group is used in one or more units."
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:10
+msgid "Contains staff only content"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:15
+msgid "Unpublished changes to live content"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:17
+msgid "Unpublished units will not be released"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:19
+msgid "Unpublished changes to content that will release in the future"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:33
+#: cms/templates/js/grading-editor.underscore:7
+msgid "Not Graded"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:48
+#: cms/templates/js/xblock-outline.underscore:11
+#, python-format
+msgid "Collapse/Expand this %(xblock_type)s"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:60
+msgid "Display Name"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:70
+#: cms/templates/js/course-outline.underscore:72
+#: cms/templates/js/publish-xblock.underscore:108
+msgid "Publish"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:78
+#: cms/templates/js/course-outline.underscore:80
+msgid "Configure"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:94
+#: cms/templates/js/course-outline.underscore:96
+msgid "Drag to reorder"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:114
+msgid "Release Status:"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:118
+#: cms/templates/js/publish-xblock.underscore:15
+#: cms/templates/js/xblock-outline.underscore:43
+msgid "Released:"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:121
+#: cms/templates/js/publish-xblock.underscore:17
+msgid "Scheduled:"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:124
+#: cms/templates/js/publish-xblock.underscore:57
+msgid "Unscheduled"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:136
+msgid "Graded as:"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:140
+msgid "Due:"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:159
+#: cms/templates/js/xblock-outline.underscore:57
+msgid "You haven't added any content to this course yet."
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:163
+#: cms/templates/js/course-outline.underscore:184
+#: cms/templates/js/xblock-outline.underscore:61
+#: cms/templates/js/xblock-outline.underscore:77
+#, python-format
+msgid "Click to add a new %(xblock_type)s"
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore:3
+msgid "Assignment Type Name"
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore:5
+msgid "e.g. Homework, Midterm Exams"
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore:9
+msgid "Abbreviation"
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore:11
+msgid "e.g. HW, Midterm"
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore:15
+msgid "Weight of Total Grade"
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore:17
+msgid "as a percent, e.g. 40"
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore:21
+msgid "Total Number"
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore:23
+msgid "total exercises assigned"
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore:27
+msgid "Number of Droppable"
+msgstr ""
+
+#: cms/templates/js/course_grade_policy.underscore:29
+msgid "total exercises that won't be graded"
+msgstr ""
+
+#: cms/templates/js/course_info_handouts.underscore:3
+msgid "Course Handouts"
+msgstr ""
+
+#: cms/templates/js/course_info_handouts.underscore:9
+msgid "You have no handouts defined"
+msgstr ""
+
+#: cms/templates/js/course_info_handouts.underscore:13
+msgid ""
+"There is invalid code in your content. Please check to make sure it is valid"
+" HTML."
+msgstr ""
+
+#: cms/templates/js/course_info_update.underscore:14
+msgid "Send push notification to mobile apps"
+msgstr ""
+
+#: cms/templates/js/course_info_update.underscore:15
+msgid "Send notification to mobile apps"
+msgstr ""
+
+#: cms/templates/js/course_info_update.underscore:20
+msgid "Post"
+msgstr ""
+
+#: cms/templates/js/due-date-editor.underscore:3
+msgid "Due Date:"
+msgstr ""
+
+#: cms/templates/js/due-date-editor.underscore:9
+msgid "Due Time in UTC:"
+msgstr ""
+
+#: cms/templates/js/due-date-editor.underscore:17
+#: cms/templates/js/due-date-editor.underscore:19
+msgid "Clear Grading Due Date"
+msgstr ""
+
+#: cms/templates/js/edit-chapter.underscore:3
+msgid "Chapter Name"
+msgstr ""
+
+#: cms/templates/js/edit-chapter.underscore:4
+#, python-format
+msgid "Chapter %s"
+msgstr ""
+
+#: cms/templates/js/edit-chapter.underscore:5
+msgid "provide the title/name of the chapter that will be used in navigating"
+msgstr ""
+
+#: cms/templates/js/edit-chapter.underscore:9
+msgid "Chapter Asset"
+msgstr ""
+
+#: cms/templates/js/edit-chapter.underscore:10
+#, python-format
+msgid "path/to/introductionToCookieBaking-CH%d.pdf"
+msgstr ""
+
+#: cms/templates/js/edit-chapter.underscore:11
+msgid "upload a PDF file or provide the path to a Studio asset file"
+msgstr ""
+
+#: cms/templates/js/edit-chapter.underscore:12
+msgid "Upload PDF"
+msgstr ""
+
+#: cms/templates/js/edit-chapter.underscore:14
+msgid "delete chapter"
+msgstr ""
+
+#: cms/templates/js/edit-textbook.underscore:10
+msgid "Textbook information"
+msgstr ""
+
+#: cms/templates/js/edit-textbook.underscore:12
+msgid "Textbook Name"
+msgstr ""
+
+#: cms/templates/js/edit-textbook.underscore:13
+msgid "Introduction to Cookie Baking"
+msgstr ""
+
+#: cms/templates/js/edit-textbook.underscore:14
+msgid ""
+"provide the title/name of the text book as you would like your students to "
+"see it"
+msgstr ""
+
+#: cms/templates/js/edit-textbook.underscore:18
+msgid "Chapter information"
+msgstr ""
+
+#: cms/templates/js/edit-textbook.underscore:21
+msgid "Add a Chapter"
+msgstr ""
+
+#: cms/templates/js/grading-editor.underscore:1
+msgid "Grading"
+msgstr ""
+
+#: cms/templates/js/grading-editor.underscore:5
+msgid "Grade as:"
+msgstr ""
+
+#: cms/templates/js/group-configuration-details.underscore:52
+#: cms/templates/js/group-configuration-editor.underscore:53
+msgid "Cannot delete when in use by an experiment"
+msgstr ""
+
+#: cms/templates/js/group-configuration-details.underscore:61
+msgid "This Group Configuration is used in:"
+msgstr ""
+
+#: cms/templates/js/group-configuration-editor.underscore:9
+msgid "Group Configuration information"
+msgstr ""
+
+#: cms/templates/js/group-configuration-editor.underscore:11
+msgid "Group Configuration Name"
+msgstr ""
+
+#: cms/templates/js/group-configuration-editor.underscore:14
+msgid "Group Configuration ID"
+msgstr ""
+
+#: cms/templates/js/group-configuration-editor.underscore:19
+msgid "This is the Name of the Group Configuration"
+msgstr ""
+
+#: cms/templates/js/group-configuration-editor.underscore:20
+msgid "Name or short description of the configuration"
+msgstr ""
+
+#: cms/templates/js/group-configuration-editor.underscore:24
+msgid "This is the Description of the Group Configuration"
+msgstr ""
+
+#: cms/templates/js/group-configuration-editor.underscore:25
+msgid "Optional long description"
+msgstr ""
+
+#: cms/templates/js/group-configuration-editor.underscore:29
+msgid "Group information"
+msgstr ""
+
+#: cms/templates/js/group-configuration-editor.underscore:30
+msgid "Groups"
+msgstr ""
+
+#: cms/templates/js/group-configuration-editor.underscore:31
+msgid ""
+"Name of the groups that students will be assigned to, for example, Control, "
+"Video, Problems. You must have two or more groups."
+msgstr ""
+
+#: cms/templates/js/group-configuration-editor.underscore:33
+msgid "Add another group"
+msgstr ""
+
+#: cms/templates/js/group-configuration-editor.underscore:39
+msgid ""
+"This configuration is currently used in content experiments. If you make "
+"changes to the groups, you may need to edit those experiments."
+msgstr ""
+
+#: cms/templates/js/group-edit.underscore:4
+msgid "delete group"
+msgstr ""
+
+#: cms/templates/js/license-selector.underscore:3
+msgid "License Type"
+msgstr ""
+
+#: cms/templates/js/license-selector.underscore:18
+msgid "Learn more about {license_name}"
+msgstr ""
+
+#: cms/templates/js/license-selector.underscore:34
+msgid "Options for {license_name}"
+msgstr ""
+
+#: cms/templates/js/license-selector.underscore:37
+msgid "The following options are available for the {license_name} license."
+msgstr ""
+
+#: cms/templates/js/license-selector.underscore:74
+msgid "License Display"
+msgstr ""
+
+#: cms/templates/js/license-selector.underscore:77
+msgid ""
+"The following message will be displayed at the bottom of the courseware "
+"pages within your course:"
+msgstr ""
+
+#: cms/templates/js/license-selector.underscore:82
+#: cms/templates/js/license-selector.underscore:110
+msgid "All Rights Reserved"
+msgstr ""
+
+#: cms/templates/js/license-selector.underscore:101
+msgid "Creative Commons licensed content, with terms as follow:"
+msgstr ""
+
+#: cms/templates/js/license-selector.underscore:105
+msgid "Some Rights Reserved"
+msgstr ""
+
+#: cms/templates/js/list.underscore:7
+#, python-format
+msgid "Add your first %(item_type)s"
+msgstr ""
+
+#: cms/templates/js/list.underscore:17
+#, python-format
+msgid "New %(item_type)s"
+msgstr ""
+
+#: cms/templates/js/metadata-dict-entry.underscore:6
+#: cms/templates/js/metadata-list-entry.underscore:9
+#: cms/templates/js/video/metadata-translations-entry.underscore:6
+msgid "Add"
+msgstr ""
+
+#: cms/templates/js/metadata-dict-entry.underscore:9
+#: cms/templates/js/metadata-file-uploader-entry.underscore:5
+#: cms/templates/js/metadata-list-entry.underscore:12
+#: cms/templates/js/metadata-number-entry.underscore:4
+#: cms/templates/js/metadata-option-entry.underscore:12
+#: cms/templates/js/metadata-string-entry.underscore:4
+#: cms/templates/js/video/metadata-translations-entry.underscore:9
+msgid "Clear"
+msgstr ""
+
+#: cms/templates/js/metadata-dict-entry.underscore:11
+#: cms/templates/js/metadata-file-uploader-entry.underscore:6
+#: cms/templates/js/metadata-list-entry.underscore:14
+#: cms/templates/js/metadata-number-entry.underscore:5
+#: cms/templates/js/metadata-option-entry.underscore:13
+#: cms/templates/js/metadata-string-entry.underscore:5
+#: cms/templates/js/video/metadata-translations-entry.underscore:11
+msgid "Clear Value"
+msgstr ""
+
+#: cms/templates/js/metadata-file-uploader-item.underscore:1
+#: cms/templates/js/video/metadata-translations-item.underscore:5
+msgid "Replace"
+msgstr ""
+
+#: cms/templates/js/metadata-file-uploader-item.underscore:1
+#: cms/templates/js/video/metadata-translations-item.underscore:5
+msgid "Upload"
+msgstr ""
+
+#: cms/templates/js/metadata-file-uploader-item.underscore:2
+#: cms/templates/js/video/metadata-translations-item.underscore:8
+msgid "Download"
+msgstr ""
+
+#: cms/templates/js/no-textbooks.underscore:2
+msgid "You haven't added any textbooks to this course yet."
+msgstr ""
+
+#: cms/templates/js/no-textbooks.underscore:2
+msgid "Add your first textbook"
+msgstr ""
+
+#: cms/templates/js/paging-header.underscore:7
+msgid "Previous"
+msgstr ""
+
+#: cms/templates/js/paging-header.underscore:8
+msgid "Next"
+msgstr ""
+
+#: cms/templates/js/previous-video-upload-list.underscore:2
+msgid "Previous Uploads"
+msgstr ""
+
+#: cms/templates/js/previous-video-upload-list.underscore:5
+msgid "Download available encodings (.csv)"
+msgstr ""
+
+#: cms/templates/js/previous-video-upload-list.underscore:12
+msgid "Duration"
+msgstr ""
+
+#: cms/templates/js/previous-video-upload-list.underscore:14
+msgid "Video ID"
+msgstr ""
+
+#: cms/templates/js/publish-history.underscore:2
+msgid "Never published"
+msgstr ""
+
+#: cms/templates/js/publish-history.underscore:4
+#: cms/templates/js/publish-xblock.underscore:35
+#, python-format
+msgid "Last published %(last_published_date)s by %(publish_username)s"
+msgstr ""
+
+#: cms/templates/js/publish-history.underscore:5
+#: cms/templates/js/publish-xblock.underscore:31
+#: cms/templates/js/publish-xblock.underscore:36
+#: cms/templates/js/staff-lock-editor.underscore:19
+msgid "message"
+msgstr ""
+
+#: cms/templates/js/publish-history.underscore:10
+#: cms/templates/js/publish-xblock.underscore:40
+msgid "Previously published"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:2
+msgid "Draft (Never published)"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:4
+msgid "Visible to Staff Only"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:6
+msgid "Published and Live"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:8
+msgid "Published (not yet released)"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:10
+msgid "Draft (Unpublished changes)"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:13
+msgid "Release:"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:23
+msgid "Publishing Status"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:30
+#, python-format
+msgid "Draft saved on %(last_saved_date)s by %(edit_username)s"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:52
+#, python-format
+msgid "with %(release_date_from)s"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:65
+msgid "Is Visible To:"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:67
+msgid "Will Be Visible To:"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:72
+msgid "Staff Only"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:76
+#, python-format
+msgid "with %(section_or_subsection)s"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:82
+msgid "Staff and Students"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:87
+msgid "Some content in this unit is visible only to particular content groups"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:98
+#: cms/templates/js/staff-lock-editor.underscore:10
+msgid "Hide from students"
+msgstr ""
+
+#: cms/templates/js/publish-xblock.underscore:113
+msgid "Discard Changes"
+msgstr ""
+
+#: cms/templates/js/release-date-editor.underscore:1
+msgid "Release Date and Time"
+msgstr ""
+
+#: cms/templates/js/release-date-editor.underscore:5
+msgid "Release Date:"
+msgstr ""
+
+#: cms/templates/js/release-date-editor.underscore:11
+msgid "Release Time in UTC:"
+msgstr ""
+
+#: cms/templates/js/release-date-editor.underscore:21
+#: cms/templates/js/release-date-editor.underscore:23
+msgid "Clear Release Date/Time"
+msgstr ""
+
+#: cms/templates/js/show-textbook.underscore:37
+msgid "View Live"
+msgstr ""
+
+#: cms/templates/js/signatory-details.underscore:7
+#: cms/templates/js/signatory-editor.underscore:18
+msgid "Signatory"
+msgstr ""
+
+#: cms/templates/js/signatory-details.underscore:14
+msgid "Title"
+msgstr ""
+
+#: cms/templates/js/signatory-details.underscore:18
+msgid "Organization"
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore:6
+msgid "Close"
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore:21
+msgid "Certificate Signatory Configuration"
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore:23
+#: cms/templates/js/signatory-editor.underscore:24
+msgid "Signatory Name"
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore:25
+#: cms/templates/js/signatory-editor.underscore:33
+#: cms/templates/js/signatory-editor.underscore:41
+msgid "Maximum 18 characters"
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore:31
+#: cms/templates/js/signatory-editor.underscore:32
+msgid "Signatory Title"
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore:39
+#: cms/templates/js/signatory-editor.underscore:40
+msgid "Signatory Organization"
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore:47
+#: cms/templates/js/signatory-editor.underscore:53
+msgid "Signature Image"
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore:54
+msgid "Image must be 193px X 49px transparent PNG"
+msgstr ""
+
+#: cms/templates/js/signatory-editor.underscore:56
+msgid "Upload Signature Image"
+msgstr ""
+
+#: cms/templates/js/staff-lock-editor.underscore:2
+msgid "Student Visibility"
+msgstr ""
+
+#: cms/templates/js/staff-lock-editor.underscore:16
+msgid ""
+"If the unit was previously published and released to students, any changes "
+"you made to the unit when it was hidden will now be visible to students."
+msgstr ""
+
+#: cms/templates/js/staff-lock-editor.underscore:18
+#, python-format
+msgid ""
+"If you make this %(xblockType)s visible to students, students will be able "
+"to see its content after the release date has passed and you have published "
+"the unit."
+msgstr ""
+
+#: cms/templates/js/staff-lock-editor.underscore:25
+msgid ""
+"Any subsections or units that are explicitly hidden from students will "
+"remain hidden after you clear this option for the section."
+msgstr ""
+
+#: cms/templates/js/staff-lock-editor.underscore:28
+msgid ""
+"Any units that are explicitly hidden from students will remain hidden after "
+"you clear this option for the subsection."
+msgstr ""
+
+#: cms/templates/js/team-member.underscore:4
+msgid "Current Role:"
+msgstr ""
+
+#: cms/templates/js/team-member.underscore:8
+msgid "You!"
+msgstr ""
+
+#: cms/templates/js/team-member.underscore:19
+msgid "send an email message to {email}"
+msgstr ""
+
+#: cms/templates/js/team-member.underscore:32
+msgid "Promote another member to Admin to remove your admin rights"
+msgstr ""
+
+#: cms/templates/js/team-member.underscore:35
+msgid "Add {role} Access"
+msgstr ""
+
+#: cms/templates/js/team-member.underscore:35
+msgid "Remove {role} Access"
+msgstr ""
+
+#: cms/templates/js/team-member.underscore:44
+msgid "Delete the user, {username}"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore:2
+msgid "Timed Exam"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore:11
+msgid "This exam is timed"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore:19
+msgid "Time Allotted (HH:MM):"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore:24
+#, python-format
+msgid ""
+"Students see warnings when 20% and 5% of the allotted time remains. In "
+"certain cases, students can be granted allowances that give them extra time "
+"to complete the exam."
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore:33
+msgid "This exam is proctored"
+msgstr ""
+
+#: cms/templates/js/timed-examination-preference-editor.underscore:36
+msgid ""
+"Students can choose to take this exam with or without online proctoring, but"
+" only students who choose the proctored option are eligible for credit. "
+"Proctored exams must also be timed exams."
+msgstr ""
+
+#: cms/templates/js/upload-dialog.underscore:25
+msgid "File upload succeeded"
+msgstr ""
+
+#: cms/templates/js/validation-error-modal.underscore:16
+msgid ""
+"Please check the following validation feedbacks and reflect them in your "
+"course settings:"
+msgstr ""
+
+#: cms/templates/js/xblock-string-field-editor.underscore:2
+#: cms/templates/js/xblock-string-field-editor.underscore:11
+msgid "Edit the name"
+msgstr ""
+
+#: cms/templates/js/xblock-string-field-editor.underscore:9
+#, python-format
+msgid "Edit %(display_name)s (required)"
+msgstr ""
+
+#: cms/templates/js/xblock-string-field-editor.underscore:10
+msgid "formLabel"
+msgstr ""
+
+#: cms/templates/js/video/metadata-translations-item.underscore:2
+msgid "Remove"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore:8
+msgid "Add URLs for additional versions"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore:11
+msgid ""
+"To be sure all students can access the video, we recommend providing both an"
+" .mp4 and a .webm version of your video. Click below to add a URL for "
+"another version. These URLs cannot be YouTube URLs. The first listed video "
+"that's compatible with the student's computer will play."
+msgstr ""
+
+#: cms/templates/js/video/transcripts/metadata-videolist-entry.underscore:25
+msgid "Default Timed Transcript"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore:3
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore:3
+msgid "Timed Transcript Conflict"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore:7
+msgid ""
+"The timed transcript for the first video file does not appear to be the same"
+" as the timed transcript for the second video file."
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore:9
+msgid "Which timed transcript would you like to use?"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore:14
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore:7
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore:7
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore:7
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore:14
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore:7
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore:13
+msgid "Error."
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-choose.underscore:22
+#, python-format
+msgid "Timed Transcript from %(filename)s"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore:1
+msgid "Timed Transcript Found"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore:3
+msgid ""
+"EdX has a timed transcript for this video. If you want to edit this "
+"transcript, you can download, edit, and re-upload the existing transcript. "
+"If you want to replace this transcript, upload a new .srt transcript file."
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore:10
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore:11
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore:13
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore:14
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore:10
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore:11
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore:10
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore:11
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore:32
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore:33
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore:36
+msgid "Upload New Transcript"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore:10
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore:13
+msgid "Upload New .srt Transcript"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore:13
+#: cms/templates/js/video/transcripts/messages/transcripts-found.underscore:14
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore:13
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore:14
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore:13
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore:14
+msgid "Download Transcript for Editing"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore:1
+msgid "No EdX Timed Transcript"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore:3
+msgid ""
+"EdX doesn't have a timed transcript for this video in Studio, but we found a"
+" transcript on YouTube. You can import the YouTube transcript or upload your"
+" own .srt transcript file."
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore:10
+#: cms/templates/js/video/transcripts/messages/transcripts-import.underscore:11
+msgid "Import YouTube Transcript"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore:1
+msgid "No Timed Transcript"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-not-found.underscore:3
+msgid ""
+"EdX doesn\\'t have a timed transcript for this video. Please upload an .srt "
+"file."
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore:7
+msgid ""
+"The timed transcript for this video on edX is out of date, but YouTube has a"
+" current timed transcript for this video."
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore:9
+msgid "Do you want to replace the edX transcript with the YouTube transcript?"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore:22
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore:23
+#: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore:26
+msgid "Yes, replace the edX transcript with the YouTube transcript"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore:1
+msgid "Timed Transcript Uploaded Successfully"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore:3
+msgid ""
+"EdX has a timed transcript for this video. If you want to replace this "
+"transcript, upload a new .srt transcript file. If you want to edit this "
+"transcript, you can download, edit, and re-upload the existing transcript."
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore:3
+msgid "Confirm Timed Transcript"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore:7
+msgid ""
+"You changed a video URL, but did not change the timed transcript file. Do "
+"you want to use the current timed transcript or upload a new .srt transcript"
+" file?"
+msgstr ""
+
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore:21
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore:22
+#: cms/templates/js/video/transcripts/messages/transcripts-use-existing.underscore:25
+msgid "Use Current Transcript"
+msgstr ""

@@ -1,0 +1,55 @@
+Multiple translations found for single string.
+	String "Enter your question or comment"
+	Present in files [u'common/static/common/templates/discussion/new-post.underscore', u'test_root/staticfiles/common/templates/discussion/new-post.underscore', u'test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore']
+Translations found were:
+	#-#-#-#-#  kmoocjs.po (kmooc-platform)  #-#-#-#-#
+질문이나 토의글을 입력하세요.(주민등록번호, 전화번호 등의 개인정보는 노출하지 않도록 해주세요.)
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+질문이나 토의글을 입력하세요.
+#-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+질문이나 토의글을 입력하세요.(주민등록번호, 전화번호 등의 개인정보는 노출하지 않도록 해주세요.)
+
+Multiple translations found for single string.
+	String "Error resetting problem attempts for problem '<%= problem_id %>' and student '<%= student_id %>'. Make sure that the problem and student identifiers are complete and correct."
+	Present in files [u'lms/static/coffee/src/instructor_dashboard/student_admin.js']
+Translations found were:
+	#-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+ '<%= problem_id %>' 문제에서  '<%= student_id %>' 학습자의 상태 초기화 중 오류가 발생했습니다. 문제와 학습자의 ID가 정확한지 확인하세요.
+#-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+'<%= problem_id %>' 문제에서  '<%= student_id %>' 학습자의 상태 초기화 중 오류가 발생했습니다. 문제와 학습자의 ID가 정확한지 확인하세요.
+
+Multiple translations found for single string.
+	String "All Rights Reserved"
+	Present in files [u'cms/static/js/views/license.js', u'cms/templates/js/license-selector.underscore', u'test_root/staticfiles/coffee/fixtures/license-selector.underscore', u'test_root/staticfiles/templates/license-selector.underscore']
+Translations found were:
+	#-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+All Rights Reserved.
+#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+모든 저작권이 보호됩니다.
+#-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+모든 저작권이 보호됩니다.
+#-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+All Rights Reserved.
+
+Multiple translations found for single string.
+	String "New %(item_type)s"
+	Present in files [u'cms/templates/js/list.underscore', u'test_root/staticfiles/coffee/fixtures/list.underscore', u'test_root/staticfiles/templates/list.underscore']
+Translations found were:
+	#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+신규 %(item_type)s 
+#-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+신규 %(item_type)s 
+#-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+신규 %(item_type)s
+
+Multiple translations found for single string.
+	String "Verification Checkpoint"
+	Present in files [u'cms/templates/js/verification-access-editor.underscore', u'test_root/staticfiles/coffee/fixtures/verification-access-editor.underscore', u'test_root/staticfiles/templates/verification-access-editor.underscore']
+Translations found were:
+	#-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+인증 기준 
+#-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+인증 기준
+#-#-#-#-#  djangojs.po (edx-platform)  #-#-#-#-#
+인증 기준
+

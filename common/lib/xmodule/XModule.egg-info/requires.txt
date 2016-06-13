@@ -1,0 +1,6 @@
+setuptools
+docopt
+capa
+path.py
+webob
+opaque-keys

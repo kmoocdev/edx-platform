@@ -1,0 +1,541 @@
+<%inherit file="main.html" />
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
+from microsite_configuration import microsite
+%>
+
+<%
+  homepage_overlay_html = microsite.get_value('homepage_overlay_html')
+
+  ## To display a welcome video, change False to True, and add a YouTube ID (11 chars, eg "123456789xX") in the following line
+  show_homepage_promo_video = microsite.get_value('show_homepage_promo_video', False)
+  homepage_promo_video_youtube_id = microsite.get_value('homepage_promo_video_youtube_id', "your-youtube-id")
+
+  show_partners = microsite.get_value('show_partners', True)
+
+%>
+
+<!--popup K-mooc -->
+<div id="popupWrap" class="popup-wrap popup-kmooc" style="position: absolute; left: 25px; top: 100px;
+    z-index: 10010; display: none; border: 5px solid #b2b2b2; opacity: 1; background: #f2f2f2; font-size: 15px;
+    line-height: 25px; padding:20px; width:560px;">
+         <b>
+        안녕하세요. K-MOOC입니다. <br/>
+        K-MOOC 서버문제로 인하여 홈페이지 접속에 불편을 드린 점 진심으로 죄송합니다.<br/>
+        현재 K-MOOC서비스는 복구하여 정상서비스 중입니다.<br/>
+        혹시 서비스 이용에 불편한 사항이나 건의사항은 help_mooc@nile.or.kr 로 의견주시기 바랍니다. <br/>
+        우리 운영진은 이용자께서 주신 의견을 적극검토하여 K-MOOC가 좀 더 나은 서비스가 될 수 있도록 최선을 다하도록 노력하겠습니다.<br/><br/>
+        K-MOOC를 이용해주셔서 감사드립니다.<br/>
+        </br>
+         </b>
+        <br>
+        <form class="today" id="checkForm" name="checkForm" style="text-align:right; font-style: normal;">
+            <label onclick="closeWin();">
+                <input id="chkbox" name="chkbox" type="checkbox">
+                <span style="font-style:normal; font-size:15px;"><b>오늘 하루 열지 않음 &nbsp;&nbsp;&nbsp;</b></span>
+            </label>
+            <span><a onClick="document.getElementById('popupWrap').style.display='none'">[ 닫기 ]</a></span>
+        </form>
+</div>
+
+<script language="Javascript">
+cookiedata = document.cookie;
+
+function setCookie( name, value, expiredays ) {
+    var todayDate = new Date();
+    todayDate.setDate( todayDate.getDate() + expiredays );
+    document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+
+function closeWin() {
+    if ( document.getElementById('checkForm').chkbox.checked ){
+        setCookie( "popupdiv", "done" , 1 );
+    }
+    document.all['popupWrap'].style.display = "none";
+}
+
+popupDate = new Date();
+if ( (cookiedata.indexOf("popupdiv=done") < 0 ) &&
+     (popupDate.getFullYear() == 2016) &&
+     (popupDate.getMonth()== 1-1) &&
+     (popupDate.getDate() == 18 )
+   ){
+    document.all['popupWrap'].style.display = "block";
+} else {
+    document.all['popupWrap'].style.display = "none";
+}
+
+function popClose(id){
+    $("#" + id).hide();
+}
+</script>
+
+
+
+<div id="layerPopupArea" class="layerPopupArea" style="">
+    
+    <!--popup K-mooc(1)-->
+    <div id="popupWrap_1" class="layerPupup">
+        <!-- content area -->
+
+        <p id="en_text" style="text-align: left;font-size: 16px; font-weight: 600; font-family: 'daumR', 'Nanum Gothic', 'Open Sans'; display: ${'block' if LANG == 'en' else 'none'};">
+            Experience the new way of learning, through <b>K-MOOC</b>. <br/>
+            <br/>
+            Welcome to K-MOOC website.<br/>
+            Currently, English service is provided in the main page only.<br/>
+            The official English website for K-MOOC will be in service later this year.<br/>
+            <br/>
+            Thank you for your understanding.<br/>
+            <br/>
+            K-MOOC Team<br/>
+        </p>
+
+        <p style="text-align: left; font-weight: bold; margin-top: 5px; display: ${'none' if LANG == 'en' else 'block'};">
+    ##         <a target="_blank" href="http://blog.naver.com/kmooc_kr/220677950573">
+    ##             <img src="/static/images/kocw_banner.jpg" alt="KOCW">
+    ##         </a>
+
+            안녕하십니까. K-MOOC팀입니다.<br/>
+            <br/>
+            K-MOOC 시스템 점검 작업 등으로 인하여 다음과 같이 서비스가 일시 중단될 예정입니다.<br/>
+            <br/>
+            ○ 작업일시 : 2016년 5월 13일(금) 10:00 ~ 11:00<br/>
+            ○ 작업내용 : 서버 보안 강화 작업 등<br/>
+            ○ 작업영향 : 작업시간 중 K-MOOC 접속이 원활하지 않을 수 있음<br/>
+            <br/>
+            상기 사정으로 인해 서비스 이용에 불편을 드린 점, 양해를 부탁드리며<br/>
+            보다 질 높은 서비스 제공을 위해 항상 노력하겠습니다.<br/>
+            <br/>
+            감사합니다.
+
+        </p>
+
+        <!-- close area -->
+        <div style="text-align: right; display: ${'"none"' if LANG == 'en' else '"block"'};">
+            <label onclick="closeWin1();">
+                <input id="chkbox_1" name="chkbox_1" type="checkbox" style="vertical-align: middle;">
+                <span style="font-style:normal; font-size:13px;"><b>${'Close this window for next 24 hours' if LANG == 'en' else '오늘 하루 열지 않음'} &nbsp;&nbsp;</b></span>
+            </label>
+
+            <span><a href="javascript:popClose('popupWrap_1');" title="닫기">[ ${'close' if LANG == 'en' else '닫기'} ]</a></span>
+        </div>
+    </div>
+
+    <!--popup K-mooc(2)-->
+    <div id="popupWrap_2" class="layerPupup">
+        <p style="text-align: left; font-weight: bold; margin-top: 5px; display: ${'none' if LANG == 'en' else 'block'};">
+             <a target="_blank" href="http://blog.naver.com/kmooc_kr/220700807418">
+                 <img src="/static/images/kmooc_banner_0504.jpg" alt="KOCW">
+             </a>
+
+        </p>
+
+        <div style="text-align: right; display: ${'"none"' if LANG == 'en' else '"block"'};">
+            <label onclick="closeWin2();">
+                <input id="chkbox_2" name="chkbox_2" type="checkbox" style="vertical-align: middle;">
+                <span style="font-style:normal; font-size:13px;"><b>${'Close this window for next 24 hours' if LANG == 'en' else '오늘 하루 열지 않음'} &nbsp;&nbsp;</b></span>
+            </label>
+
+            <span><a href="javascript:popClose('popupWrap_2');" title="닫기">[ ${'close' if LANG == 'en' else '닫기'} ]</a></span>
+        </div>
+    </div>
+    
+</div>    
+
+
+<script language="Javascript">
+function setCookie1( name, value, expiredays ) {
+    var todayDate = new Date();
+    todayDate.setDate( todayDate.getDate() + expiredays );
+    document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+
+function closeWin1() {
+    if ($("#chkbox_1").is(":checked")){
+        setCookie1( "popupdiv1", "done" , 1 );
+    }
+    document.all['popupWrap_1'].style.display = "none";
+}
+
+function closeWin2() {
+    if ($("#chkbox_2").is(":checked")){
+        setCookie1( "popupdiv2", "done" , 1 );
+    }
+    document.all['popupWrap_2'].style.display = "none";
+}
+
+cookiedata = document.cookie;
+
+popupDate = new Date();
+
+if (
+        (cookiedata.indexOf("popupdiv1=done") < 0 )
+         && (popupDate.getFullYear() == 2016)
+         && (popupDate.getMonth() < 6)
+         && !(popupDate.getDate() >= 13 && popupDate.getHours() >= 11)
+   )
+    {
+
+    %if LANG == 'en':
+        document.all['popupWrap_1'].style.display = "block";
+    %else:
+        document.all['popupWrap_1'].style.display = "none";
+    %endif
+
+    //console.log(popupDate.getFullYear() + ":" + popupDate.getMonth() + ":" + popupDate.getDate());
+
+} else {
+    document.all['popupWrap_1'].style.display = "none";
+}
+
+
+if (
+        (cookiedata.indexOf("popupdiv2=done") < 0 )
+        && (popupDate.getFullYear() == 2016)
+##         && (popupDate.getMonth() < 3)
+   )
+    {
+
+    %if LANG == 'en':
+        document.all['popupWrap_2'].style.display = "none";
+    %else:
+        document.all['popupWrap_2'].style.display = "none";
+    %endif
+
+} else {
+    document.all['popupWrap_2'].style.display = "none";
+}
+
+</script>
+
+<script>
+    function reloadIndex(){
+        var a = document.location.href;
+        var b = a.split('/');
+        var c = b[b.length-1];
+        if(c == 'en' || c == 'ko')
+            document.location.href = '/';
+    }
+
+    $(document).ready(function(){
+        % if LANG and LANG == 'en':
+            console.log("LANG IS EN");
+        % else:
+            noticeList();
+        % endif
+
+        $("#en_text").css("padding", "5px");
+
+        reloadIndex();
+
+        //layer popup..
+        showNotice();
+
+    	$("body").prepend("<div id='mask'></div>");
+
+        var videoHtml = "";
+            videoHtml += " <iframe id='indexVideo' width='640' height='360' src='https://www.youtube.com/embed/7BQ6TBWj_RY' frameborder='0' allowfullscreen></iframe>"
+
+        $("body").prepend(videoHtml);
+
+        $("#mask").click(function(){
+            $("#indexVideo").hide();
+	    var src = $("#indexVideo").attr("src");
+            $("#indexVideo").attr("src","");
+            $("#indexVideo").attr("src",src);
+            $("#mask").fadeOut(200);
+        });
+
+        videoResize();
+
+        //position control
+        $(window).resize(function(){
+            ##모바일환경에서 동영상 크기 조절
+            videoResize();
+
+            var maskHeight = $(document).height();
+            var maskWidth = $(window).width();
+            $("#mask").css({"width":maskWidth,"height":maskHeight});
+        });
+
+    });
+
+    function showNotice(){
+
+        var d = new Date();
+        if((d.getDay() == 2 || d.getDay() == 5) && d.getHours() == 8 && ( d.getMinutes() >= 40 && d.getMinutes() <= 55)){
+
+            setTimeout(showNotice, 10000);
+
+            if($("#noticeLayer").length)
+                return;
+
+            //notice string
+            var str = "금일 AM08:00 ~ AM08:30중 업데이트가 진행예정입니다.<br/> 일시적으로 화면이 틀어지거나 로그인이 안될 수 있습니다. <br/> 양해 부탁 드립니다. 감사합니다.";
+            var noticeHtml = "<div id='noticeLayer'>" +
+                             "       <b>"+str+"</b>" +
+                             "       <div style='width:100%; text-align:right;font-size:22px;'>" +
+                             "       <a href='javascript:noticeLayerHide();'>[ 닫기 ]</a>" +
+                             "       </div>" +
+                             "</div>" ;
+            $("body").prepend(noticeHtml);
+
+            $("#noticeLayer").dblclick(function(){
+                $(this).hide();
+            });
+
+        } else {
+            $("#noticeLayer").remove();
+        }
+
+    }
+
+    function noticeLayerHide(){
+        $("#noticeLayer").hide();
+    }
+
+    function playVideo(){
+        var video = document.getElementById("indexVideo");
+        var maskHeight = $(document).height();
+        var maskWidth = $(window).width();
+
+        $("#mask").css({"width":maskWidth+"px","height":maskHeight+"px", "text-align":"center", "vertical-align":"middle"});
+        $("#innerMask").css({"width":(maskWidth/2)+"px","height":(maskHeight/2)+"px", "margin":(maskHeight/3)+"px", "display":"inline-block"});
+        $("#mask").fadeIn(200);
+        $("#indexVideo").fadeIn(300, function(){
+            video.focus();
+
+            $("#indexVideo").blur(function(){
+                $("#mask").click();
+            });
+        });
+    }
+
+    function videoResize(){
+        if($(window).width() < 640){
+            $("#indexVideo").prop("width", $(window).width() - 6).css("left", "3px");
+        }else{
+            $("#indexVideo").prop("width", "640").css("left", "calc(50% - 320px)");
+        }
+    }
+
+    function noticeList(){
+        $.post("/notice"
+                ,""
+                ,function(data){
+                    setTimeout(function(){
+                        if(data.length && data.length > 0){
+                            console.log("notice exists");
+                            $("#notice").show();
+
+                            for(var i=0; i<data.length; i++){
+
+                                if(i > 1)
+                                    break;
+
+                                var html = "";
+                                html += "<li>";
+                                html += "    <a href='"+data[i].link+"' target='_blank'>";
+                                html += "       <div class='ldiv'>";
+                                html += "           <span class='notice_title'>"+data[i].title+"</span>";
+                                html += "       </div>";
+                                html += "   </a>";
+                                html += "   <div class='more'>..</div>";
+                                html += "   <div class='rdiv'>"+data[i].sdate+"~"+data[i].edate+"</div>";
+                                html += "</li> ";
+                                $("#notice ul").append(html);
+                            }
+                            if(data.length > 1)
+                                $("#notice li").css("max-width", "50%");
+
+                            var interval;
+                            var timeout;
+
+                            $("#notice li").each(function(index){
+
+                                $("#notice li:eq("+index+")").mouseenter(function(){
+                                    if(interval)
+                                        clearInterval(interval);
+                                    if(timeout)
+                                        clearTimeout(timeout);
+
+                                    var z = 0;
+                                    interval = setInterval(function(){
+
+                                        if($("#notice .notice_title:eq("+index+")").height() > 20){
+                                            $("#notice .notice_title:eq("+index+")").css("margin-left", z-- + "px");
+                                        }else{
+                                            clearInterval(interval);
+                                            timeout = setTimeout(function(){
+                                                $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+                                                $("#notice .notice_title:eq("+index+")").mouseover();
+                                            }, 2000);
+                                        }
+                                    }, 30);
+                                }).mouseleave(function(){
+                                    //console.log($("#notice .notice_title:eq("+index+")").height() + ": ldiv mouseleave2");
+                                    clearInterval(interval);
+                                    clearTimeout(timeout);
+                                    //$("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+
+                                    if($("#notice .notice_title:eq("+index+")").css("margin-left") != "0px"){
+                                        $("#notice .notice_title:eq("+index+")").fadeOut(200, function(){
+                                            $("#notice .notice_title:eq("+index+")").css("margin-left", "0px");
+                                            $(this).fadeIn(300);
+                                        });
+                                    }
+                                });
+                            });
+
+                            $("#notice .inner").hide().slideDown(1000,"easeInExpo");
+
+                            $(window).resize(function(){
+                                showMore();
+                            });
+                        }
+                        else {
+                            console.log("notice not exists");
+                        }
+                        showMore();
+                    },300);
+        }, "json");
+    }
+
+    function showMore(){
+        $("#notice li").each(function(index){
+            if($("#notice .notice_title:eq("+index+")").height() > 20){
+                $("#notice .more:eq("+index+")").show();
+            }else{
+                $("#notice .more:eq("+index+")").hide();
+            }
+        });
+    }
+
+</script>
+
+<section class="home" style="background: #fff8eb !important;">
+  <header>
+    <div class="outer-wrapper">
+        <div class="title">
+            <hgroup>
+                <h1><img src="/static/images/main_title${'_en' if LANG == 'en' else ''}.png" alt="최고의 대학, 최고의 강의! 한국형 온라인에서 시작하세요."></h1>
+            </hgroup>
+            <div class="course-search">
+                <form method="get" action="/courses">
+##                     <label for="searchInput">원하시는 강의를 검색해 보세요.</label>
+                    <input id="searchInput" class="search-input" name="search_query" type="text" placeholder="${_("I want to learn about...")}" title="원하시는 강의를 검색해 보세요.">
+                    <button id="searchBtn" class="search-button" type="submit" title="검색">${_("Search")}</button>
+                </form>
+            </div>
+        </div>
+        <div class="vod">
+            <a href="javascript:playVideo();"><img src="/static/images/main_more${'_en' if LANG == 'en' else ''}.png" alt="소개영상 보기"></a>
+        </div>
+
+      % if show_homepage_promo_video:
+        <a href="#video-modal" class="media" rel="leanModal">
+          <div class="hero">
+            <div class="play-intro"></div>
+          </div>`
+        </a>
+      % endif
+    </div>
+
+  </header>
+
+    <div id="notice">
+        <div class="inner">
+            <span class="title">
+                <img src="/static/images/tit_notice.png">
+            </span>
+            <div class="content">
+                <div class="innerContent">
+                <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="school_list">	 <!-- school_list S -->
+        <p class="title_type1">
+            <img src="/static/images/title01${'_en' if LANG == 'en' else ''}.png" alt="참여대학" />
+
+            <a href="/schools"><img src="/static/images/more.png" alt="참여대학 더보기"></a>
+        </p>
+        <div class="inner">
+            <a href="/school/KHUk"><img src="/static/images/logo02_01.png" alt="경희대학교 대학소개 페이지"><span style="font-family:daumR;">${_("KHUk")}</span></a>
+            <a href="/school/KoreaUnivK"><img src="/static/images/logo02_02.png" alt="고려대학교 대학소개 페이지"><span style="font-family:daumR;">${_("KoreaUnivK")}</span></a>
+            <a href="/school/PNUk"><img src="/static/images/logo02_03.png" alt="부산대학교 대학소개 페이지"><span style="font-family:daumR;">${_("PNUk")}</span></a>
+            <a href="/school/SNUk"><img src="/static/images/logo02_04.png" alt="서울대학교 대학소개 페이지"><span style="font-family:daumR;">${_("SNUk")}</span></a>
+            <a href="/school/SKKUk"><img src="/static/images/logo02_05.png" alt="성균관대학교 대학소개 페이지"><span style="font-family:daumR;">${_("SKKUk")}</span></a>
+            <a href="/school/YSUk"><img src="/static/images/logo02_06.png" alt="연세대학교 대학소개 페이지"><span style="font-family:daumR;">${_("YSUk")}</span></a>
+            <a href="/school/EwhaK"><img src="/static/images/logo02_07.png" alt="이화여자대학교 대학소개 페이지"><span style="font-family:daumR;">${_("EwhaK")}</span></a>
+            <a href="/school/POSTECHk"><img src="/static/images/logo02_08.png" alt="포항공과대학교 대학소개 페이지"><span style="font-family:daumR;">${_("POSTECHk")}</span></a>
+            <a href="/school/KAISTk"><img src="/static/images/logo02_09.png" alt="한국과학기술원 대학소개 페이지"><span style="font-family:daumR;">${_("KAISTk")}</span></a>
+            <a href="/school/HYUk"><img src="/static/images/logo02_10.png" alt="한양대학교 대학소개 페이지"><span style="font-family:daumR;">${_("HYUk")}</span></a>
+            <a href="/school/KOCWk"><img src="/static/images/logo02_11.png" alt="KOCW 대학소개 페이지"><span style="font-family:daumR;">KOCW</span></a>
+        </div>
+    </section>	 <!-- school_list E -->
+
+  <section class="courses-container" id="course_section">
+    <section class="highlighted-courses">
+
+      % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+        <section class="courses">
+            <p class="title_type1">
+                <img src="/static/images/title02${'_en' if LANG == 'en' else ''}.png" alt="전체강좌">
+                <a href="/courses"><img src="/static/images/more.png" alt="전체강좌 더보기"></a>
+            </p>
+            <ul class="courses-listing">
+            ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+
+            %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
+              <li class="courses-listing-item">
+                <%include file="course.html" args="course=course" />
+              </li>
+            %endfor
+            </ul>
+        </section>
+        ## in case there are courses that are not shown on the homepage, a 'View all Courses' link should appear
+        % if settings.HOMEPAGE_COURSE_MAX and len(courses) > settings.HOMEPAGE_COURSE_MAX:
+          <div class="courses-more">
+            <a class="courses-more-cta" href="${marketing_link('COURSES')}" > ${_("View all Courses")} </a>
+          </div>
+        % endif
+      % endif
+
+    </section>
+  </section>
+</section>
+
+<section id="video-modal" class="modal home-page-video-modal video-modal">
+  <div class="inner-wrapper">
+##     <%
+##       youtube_video_id = homepage_promo_video_youtube_id
+##       if self.stanford_theme_enabled():
+##         youtube_video_id = "2gmreZObCY4"
+##     %>
+##     <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${youtube_video_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+<%block name="js_extra">
+   <script type="text/javascript">
+      $(window).load(function() {
+         if(getParameterByName('next')) {
+              $('#login').trigger("click");
+         }
+      })
+   </script>
+</%block>
+
+% if show_signup_immediately is not UNDEFINED:
+  ## NOTE: This won't work in production, because anonymous views are cached, so it will
+  ## show either with or without this extra js for 3 minutes at a time.
+<script type="text/javascript">
+  $(window).load(function() {$('#signup_action').trigger("click");});
+</script>
+% endif
+

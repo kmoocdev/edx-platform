@@ -1,0 +1,45 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='/static_content.html'/>
+
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">회원구분</%block>
+
+<%block name="js_extra">
+    <script>
+        function member_division(gubn){
+            /*division 'Y' is over 14, 'N' is under 14*/
+            $("#division").val(gubn);
+            $("#form").submit();
+        }
+    </script>
+</%block>
+
+<%block name="header_extras"></%block>
+
+
+<section class="container rule">
+    <form id="form" name="form" method="post" action="/agree">
+    <input type="hidden" id="division" name="division" />
+    <input type="hidden" name="csrfmiddlewaretoken" value="${csrf_token}" />
+			<h2>가입유형 선택</h2>
+
+			<dl>
+				<dt><p class="icon">회원구분에 따라 가입절차에 차이가 있으니 반드시 본인에 해당하는 경우를 선택해 주시기 바랍니다.</p></dt>
+                <br/>
+
+                <ul class="join">
+                    <li class="pr15">
+                        <a href="#" onclick="member_division('Y');"><img src="/static/images/join_img1.gif" alt="일반회원, 만 14세 이상사용자들 회원가입을 해주세요" style="width: 100%;"/></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="member_division('N');"><img src="/static/images/join_img2.gif" alt="어린이회원, 만 14세 미만이상사용자들 회원가입을 해주세요" style="width: 100%;"/></a>
+                    </li>
+                  </ul>
+                </dl>
+    </form>
+</section>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+

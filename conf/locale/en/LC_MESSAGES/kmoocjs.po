@@ -1,0 +1,163 @@
+# #-#-#-#-#  djangojs-partial.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  djangojs-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file.
+# Copyright (C) 2015 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# #-#-#-#-#  underscore.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# #-#-#-#-#  underscore-studio.po (edx-platform)  #-#-#-#-#
+# edX translation file
+# Copyright (C) 2015 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# jeon <bluerespect@nate.com>, 2014-2015
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# bossnm11 <bossnm11@gmail.com>, 2014
+# Bruno JOLIVEAU, 2015
+# Chanseok <kcsgoodboy@gmail.com>, 2014
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012
+# Guewen Baconnier <guewen.baconnier@camptocamp.com>, 2015
+# Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>, 2016
+# jeon <bluerespect@nate.com>, 2014
+# Jong-Dae Park <jdpark7@gmail.com>, 2013,2015
+# Kevin Min <gr326887@graded.br>, 2015
+# Kunwoo Kim <crazyabtmath@naver.com>, 2015
+# LEE SI HYEONG <super2451894@gmail.com>, 2014
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+# Pedro Castro Silva <pedrocs@sossia.pt>, 2015
+# Sam Ryoo <samryoo@gmail.com>, 2014
+# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# seungil <luck8778@gmail.com>, 2014
+# SEUNGWON <baeksw0620@gmail.com>, 2014
+# Yael Terrettaz, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: kmooc-platform\n"
+"Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+"POT-Creation-Date: 2015-07-06 12:00+0000\n"
+"PO-Revision-Date: 2016-02-16 07:07+0000\n"
+"Last-Translator: Hongseob Lee <shevious@gmail.com>\n"
+"Language-Team: English (http://www.transifex.com/k-mooc/kmooc-platform/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cms/templates/js/add-xblock-component-menu-problem.underscore
+#: cms/templates/js/add-xblock-component-menu.underscore
+#: cms/templates/js/certificate-editor.underscore
+#: cms/templates/js/content-group-editor.underscore
+#: cms/templates/js/course_info_handouts.underscore
+#: cms/templates/js/course_info_update.underscore
+#: cms/templates/js/edit-textbook.underscore
+#: cms/templates/js/group-configuration-editor.underscore
+#: cms/templates/js/section-name-edit.underscore
+#: cms/templates/js/xblock-string-field-editor.underscore
+#: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid ""
+"We've sent a message to {email_address}. Click the link in the message to "
+"reset your password."
+msgstr "We've sent a message to {email_address}. Click the link in the message to reset your password."
+
+#: lms/static/js/ajax-error.js
+msgid ""
+"You have been logged out of your edX account. Click Okay to log in again "
+"now. Click Cancel to stay on this page (you must log in again to save your "
+"work)."
+msgstr "You have been logged out of your edX account. Click Okay to log in again now. Click Cancel to stay on this page (you must log in again to save your work)."
+
+#: lms/djangoapps/instructor_analytics/distributions.py
+msgid "No Data"
+msgstr "No Data"
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Signatory"
+msgstr "Signatory"
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Signatory Name"
+msgstr "Signatory Name"
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Signatory Title"
+msgstr "Signatory Title"
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Signatory Organization"
+msgstr "Signatory Organization"
+
+#: cms/static/templates/certificate-editor.underscore
+msgid "Maximum logo width 220px, height 48px variable"
+msgstr "Maximum logo width 220px, height 48px variable"
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Image must be 193px X 49px transparent PNG"
+msgstr "Image must be 193px X 49px transparent PNG"
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Maximum 18 characters"
+msgstr "Maximum 18 characters"
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Upload Signature Image"
+msgstr "Upload Signature Image"
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Upload Organization Logo"
+msgstr "Upload Organization Logo"
+
+#: cms/static/templates/signatory-editor.underscore
+msgid "Add Signatory"
+msgstr "Add Signatory"
+
+#: cms/static/templates/certificate-editor.underscore
+msgid "Organization Logo"
+msgstr "Organization Logo"
+
+#: cms/static/templates/certificate-editor.underscore
+msgid "Path to organization logo"
+msgstr "Path to organization logo"
+
+#: cms/templates/js/certificate-editor.underscore:25
+msgid "Title of the course"
+msgstr "Title of the course"
+
+msgid "question"
+msgstr "question"
+
+#: cms/templates/js/add-xblock-component-menu-problem.underscore
+msgid "Common Problems with Hints and Feedback"
+msgstr "Common Problems with Hints and Feedback"
+
+#: common/static/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/common/templates/discussion/new-post.underscore
+#: test_root/staticfiles/xmodule_js/common_static/common/templates/discussion/new-post.underscore
+msgid "Enter your question or comment"
+msgstr "Enter your question or comment"
+
+msgid "View Current"
+msgstr "View Current"

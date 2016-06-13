@@ -1,0 +1,90 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from microsite_configuration import microsite
+%>
+<%inherit file="../main.html" />
+
+<%namespace name='static' file='../static_content.html'/>
+
+<%block name="js_extra">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+  <%static:js group='discovery'/>
+  % endif
+</%block>
+
+<%block name="pagetitle">경희대학교</%block>
+<%
+  platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  if self.stanford_theme_enabled():
+    course_index_overlay_text = _("Explore free courses from {university_name}.").format(university_name="Stanford University")
+    logo_file = static.url('themes/stanford/images/seal.png')
+    logo_alt_text = "Stanford Seal Logo"
+
+  else:
+    course_index_overlay_text = microsite.get_value('course_index_overlay_text', _("Explore courses from {platform_name}.").format(platform_name=platform_name))
+
+    if settings.FEATURES.get('IS_EDX_DOMAIN', False):
+      # For some reason, `static.url('images/edx-theme/edx-logo-bw.png')` breaks template rendering.
+      default_image_url = settings.STATIC_URL + 'images/edx-theme/edx-logo-bw.png'
+    else:
+      default_image_url = settings.STATIC_URL + 'images/default-theme/logo-large.png'
+
+    logo_file = microsite.get_value(
+      'course_index_overlay_logo_file', default_image_url
+    )
+
+    logo_alt_text = _("{platform_name} Logo").format(platform_name=platform_name)
+%>
+
+<section class="home">
+
+<!-- home S -->
+			<header class="type1">
+				<img src="/static/images/univ_intro/univ_top_khu.png" alt="">
+			</header>
+			<section class="school_info">	 <!-- school_info S -->
+				<div class="inner">
+					<p class="title_type2">
+                        <span>
+                            경희대학교
+                             <br/>
+                             <a target="_blank" href="https://www.youtube.com/user/KyungHeeUniv"><img src="/static/images/sns1.png" alt="youtube" class="univSns"/></a>
+                             <a target="_blank" href="https://www.facebook.com/kyungheeuniv"><img src="/static/images/sns2.png" alt="facebook" class="univSns"/></a>
+                        </span>
+                        <img src="/static/images/univ_intro/univ_logo_khu.png" alt="경희대학교">
+                    </p>
+                    <p>경희대학교는 창학 이래 ‘학술과 평화’의 학풍과 전통을 이어왔습니다. 학술의 권위를 세우고 창조적인 학문세계를 이뤘습니다. 학술과 실천의 결합으로 평화로운 인류사회에 기여하는 대학을 추구해왔습니다.</p>
+                    <p>경희대학교는 학술과 평화의 전통을 계승하며 21세기를 이끌어갈 ‘대학다운 미래대학’으로 거듭나고자 합니다.</p>
+                    <p>경희대학교의 '대학다운 미래대학'은 이론과 현실, 학술과 실천, 과거와 미래, 지역과 지구를 창조적으로 연계하고자 하며, 경계와 차별을 넘어 차이의 공존을 실현하며 ‘지구공동사회’를 건설하고자 합니다.</p>
+                    <p>대학다운 미래대학 건설의 핵심가치는 학문의 권위 재건, 소통의 학문세계, 화합과 창조의 미래사회입니다.</p>
+                    <p>경희 K-MOOC는 소통과 창조의 열린 고등교육을 선도하는 대학다운 미래대학을 추구하고 있으며 휴머니즘 기반의 보편적 고등교육을 실현하고자 합니다. </p>
+                    <p>경희 K-MOOC에서는 인류가 공존하고 공영하는 지구공동사회를 건설하기 위하여 세계시민으로서 보편적 지식과 가치를 공유하고 실천을 강조하는 다양한 콘텐츠를 만나실 수 있습니다.</p>
+
+                    <br/><br/>
+
+                    <p>Since its founding, Kyung Hee University has pursued the Kyung Hee Spirit of "Scholarship and Peace" as well as the founding principle of "creating a civilized world." For the past 62 years, the University has developed remarkably, contributing to the fulfillment of a "cultural world for humanity" as the leader of the future of academics and the creator of common values for humanity. In particular, the past five years have witnessed notable growth and a rise in the University's stature through forward-looking and adventurous endeavors in education, research, public service, and praxis.</p>
+                    <p>On its 60th anniversary in 2009, Kyung Hee University prepared for a second leap forward while seeking a new paradigm of future university development. It reflected on the fundamental mission of the University and established a new vision and goals for becoming a true university of the future. In this new vision for a university that transcends the traditional notion of the university as a mere physical location and the limitations of an exclusive academe, Kyung Hee University will rise to international prestige and develop into an international center of research, education, and praxis that brings together reality and imagination, the basics and applied sciences, and theory and practice. Pursuing "Global Eminence" on a foundation of academic excellence, Kyung Hee University will become an academic community that fulfills its social responsibility by cultivating world citizens with the capacity for communication and public service.</p>
+
+				</div>
+			</section>	 <!-- school_info E -->
+
+  <section class="courses-container">
+
+    <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
+      <ul class="courses-listing">
+      %if courses and len(courses) > 0:
+        %for course in courses:
+        <li class="courses-listing-item">
+          <%include file="../course.html" args="course=course" />
+        </li>
+        %endfor
+      %else:
+        <div class="noCourse">※ 현재 수강할 수 있는 강좌가 없습니다.</div>
+      %endif
+      </ul>
+    </section>
+
+  </section>
+</section>

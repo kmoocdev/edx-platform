@@ -1,0 +1,96 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
+<%
+accomplishment_course_title =  accomplishment_copy_course_name
+if certificate_data and certificate_data.get('course_title', ''):
+    accomplishment_course_title =  certificate_data.get('course_title', '')
+course_mode_class = course_mode if course_mode else ''
+%>
+
+<style>
+    * {text-decoration:none;outline:0;padding:0;margin:0;}
+    html, body{font-size:12px;padding:0;margin:0;}
+    body{color:#5f5f5f;font-family:daum,Verdana,dotum,Gulim,AppleGothic;}
+
+    div, p, ul, li, img, a, table, td, th, tr, h1, h2, h3, h4, h5, h6, form, input, span, iframe, dl, dt, dd {margin:0;padding:0;}
+    fieldset{border:none;}
+    ul,ol {margin:0;padding:0;list-style:none;}
+    li, dl, dd, dt{margin:0;padding:0;list-style:none;}
+    td *, div *, li *, span *, p *{vertical-align:middle;}
+    a, a:link, a:visited{text-decoration:none;color:#666;vertical-align:baseline;} a:hover, a:active{text-decoration:none;color:#339999;}
+    em{font-style:normal;font-weight:inherit;line-height:inherit;vertical-align:baseline;color:inherit;}
+    a{font-style:normal;font-weight:inherit;line-height:inherit;color:inherit;vertical-align:baseline;text-decoration:inherit;}
+    b{font-style:normal;line-height:inherit;vertical-align:baseline;color:inherit;}
+
+    .kmooc_a{position:absolute; display:inline; height: 800px;}
+    .kmooc_contents{width:1180px; height: 800px; position:absolute; margin: auto; }
+    .kmooc_b{margin:20px 0 0 20px; font-size:15px; font-weight:bold}
+    .kmooc_c{margin:60px 0 0 0; text-align:center}
+    .kmooc_d{margin:70px 0 0 0; text-align:center; }
+    .kmooc_d li{width:900px;}
+    .kmooc_d li.kmooc_font1{margin:0 0 0 140px; font-size:33px; font-weight:bold; color:#2b282e; text-align:center; height: 45px; overflow: hidden;}
+    .kmooc_d li.kmooc_font2{margin:10px 0 0 140px; font-size:15px; font-weight:bold; text-align:center;}
+    .kmooc_e{margin:20px 0 0 0; text-align:center;}
+    .kmooc_e li{width:900px;}
+    .kmooc_e li.kmooc_font3{margin:0 0 0 141px; font-size:29px; font-weight:bold; color:#2b282e; line-height:120%; height: 76px; overflow: hidden;}
+    .kmooc_e li.kmooc_font3 .kmooc_small{font-size:24px}
+    .kmooc_f .kmooc_font4{padding:22px 0 0 0; font-size:18px; font-weight:bold; text-align:center;}
+    .kmooc_f .kmooc_font5{padding:5px 0 0 0; font-size:16px; font-weight:bold; text-align:center;}
+    .kmooc_g{margin:88px 0 0 20px; font-size:15px; font-weight:bold}
+    .kmooc_g li.p10{ padding:10px 0 0 0}
+    .kmooc_h{float:right; position:relative; display:inline; top:-93px; right: 10px;}
+    .kmooc_h dl{float:right; text-align:right; padding:0 10px 0 0}
+    .kmooc_h dl.pr8{margin:0 8px 0 0}
+    .kmooc_h dd.kmooc_color{ font-size:12px; color:#151515; font-weight:bold;}
+    .brDiv{ height:30px; border: 0px solid darkred;}
+</style>
+
+
+## <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+
+</script>
+
+<main class="accomplishment accomplishment-main" style="height: 800px; padding: 0 0 0 calc((100% - 1178px) / 2);">
+    <!-- wrap Start -->
+    <div class="kmooc_a"><img src="/static/images/certificate_bg.gif" alt="certificate_bg" onloadeddata="imgloaded();" style="width:1180px; height:800px;" /></div>
+    <div class="kmooc_contents">
+    <p class="kmooc_b">인증번호 CERTIFICATE ID<br />
+    ${certificate_id_number}</p>
+    <div class="kmooc_c"><img src="/static/images/kmooc_title.png" alt="certificate_bg 이수증 입니다." /></div>
+    <ul class="kmooc_d">
+      <li class="kmooc_font1">${accomplishment_copy_name}</li>
+      <li class="kmooc_font2">has successfully completed.</li>
+    </ul>
+    <ul class="kmooc_e">
+      <li class="kmooc_font3">${accomplishment_course_title}<br /><span class="kmooc_small">(${accomplishment_copy_course_org}.${course_id2})</span></li>
+    </ul>
+    <ul class="kmooc_f">
+      <li class="kmooc_font4">위 과정을 성실히 이수하여 이 증서를 수여합니다.</li>
+      <li class="kmooc_font5">an online learning Initiative of ${accomplishment_copy_course_org} through K-MOOC.</li>
+    </ul>
+    <ul class="kmooc_g">
+      <li>이수일자 ISSUE DATE<br />${certificate_date_issued2} ${certificate_date_issued}</li>
+
+      <li class="p10">
+          % if certificate_data and certificate_data.get('org_logo_path', ''):
+            <img src="${static.url(certificate_data['org_logo_path'])}" alt="org_logo" style="max-width: 220px; max-height: 48px;" />
+          % endif
+      </li>
+    </ul>
+    <div class="kmooc_h">
+        % if certificate_data:
+            % for signatory in certificate_data.get('signatories', []):
+            <dl class="pr8">
+                <dt><img src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}" style="width: 193px; height: 49px;" /></dt>
+                <dd class="kmooc_color">${signatory['name']}</dd>
+                <dd>${signatory['title']}</dd>
+                <dd>${signatory['organization']}</dd>
+            </dl>
+            % endfor
+        % endif
+     </div>
+    </div>
+    <!-- wrap End -->
+</main>
+<div class="brDiv"></div>

@@ -1,0 +1,38 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='/static_content.html'/>
+
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">
+    %if initial_mode == 'login':
+        로그인
+    %else:
+        회원가입
+    %endif
+</%block>
+
+<%block name="js_extra">
+    <script>
+        %if isAuth == 'succ' and not age < 20:
+            alert('아이핀 인증에 성공 하였습니다.');
+##             opener.document.location.href='/register';
+##            opener.document.form.isAuth.value='Y';
+	    $("#isAuth",opener.document).val("Y");
+            self.close();
+        %elif isAuth == 'succ' and age < 20:
+            alert('미성년자는 법정대리인이 될 수 없습니다.');
+        %else:
+            alert('아이핀 인증에 실패 하였습니다.');
+            self.close();
+        %endif
+    </script>
+</%block>
+
+<%block name="header_extras"></%block>
+
+% if settings.FEATURES.get('ENABLE_COMBINED_LOGIN_REGISTRATION'):
+    ## This overwrites the "footer" block declared in main.html
+    ## with an empty block, effectively hiding the footer
+    ## from logistration pages.
+    <%block name="footer"/>
+% endif
