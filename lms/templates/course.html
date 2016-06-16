@@ -43,7 +43,7 @@ from django.utils.timezone import UTC as UTC2
         %elif course.has_ended() and (course.enrollment_end is None or datetime.now(UTC2()) <= course.enrollment_end):
             ${_("Archived (Join Now)")}
         %else:
-            &nbsp;
+            ${_("Closed")}
         %endif
             </b>
         </div>

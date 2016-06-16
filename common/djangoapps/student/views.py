@@ -167,6 +167,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
         course3 = []
         course4 = []
         course5 = []
+        course6 = []
 
         duplcourse = []
 
@@ -188,6 +189,9 @@ def index(request, extra_context=None, user=AnonymousUser()):
             except:
                 duplcourse.append(course.display_name)
 
+
+            print course.id, str(course.id).find('2015')
+
             if str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1':
                 course5.append(course) # last
             elif (course.enrollment_start is None or course.enrollment_start > datetime.now(UTC2())) and not user.is_staff:
@@ -198,6 +202,8 @@ def index(request, extra_context=None, user=AnonymousUser()):
                 course2.append(course) # 2nd
             elif not course.has_ended():
                 course3.append(course) # 3rd
+            elif course.has_ended() and str(course.id).find('2015') < 0:
+                course6.append(course)
             else:
                 course4.append(course) # not use
 
@@ -217,7 +223,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
         # for c in course3:
         #     print c.display_name
 
-        courses = course1 + course2 + course3 + course5
+        courses = course1 + course2 + course3 + course5 + course6
     else:
         courses = sort_by_announcement(courses)
 
