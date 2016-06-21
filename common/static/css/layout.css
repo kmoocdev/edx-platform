@@ -35,6 +35,9 @@
 /* Font */
 
 /**{font-family:daumR ! important;}*/
+.textL {text-align: left;}
+.textR {text-align: right;}
+.textC {text-align: center;}
 
 header.global{height:auto;box-shadow:none;border-bottom:solid 1px #666;box-shadow:2px 2px 2px #666;}
 header.global h1.logo{margin:10px 0 20px;}
