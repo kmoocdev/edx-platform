@@ -223,7 +223,8 @@ def index(request, extra_context=None, user=AnonymousUser()):
         # for c in course3:
         #     print c.display_name
 
-        courses = course1 + course2 + course3 + course5 + course6
+        courses = course1 + course2 + course3 + course5
+        # courses = course1 + course2 + course3 + course5 + course6
     else:
         courses = sort_by_announcement(courses)
 
