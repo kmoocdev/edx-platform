@@ -410,11 +410,11 @@ def get_courses_by_org(user, org_id, domain=None):
     courses2 = list()
 
     for c in courses:
-        print 'course.keys1:', c.__dict__.keys()
-        print 'c.has_ended()', c.has_ended()
-        print 'c.number', c.number
-        print 'c.start', c.start
-        print 'c.id', c.id
+        # print 'course.keys1:', c.__dict__.keys()
+        # print 'c.has_ended()', c.has_ended()
+        # print 'c.number', c.number
+        # print 'c.start', c.start
+        # print 'c.id', c.id
 
 
         if c.start is not None and c.end is not None and c.start > c.end:
@@ -479,9 +479,9 @@ def get_courses_by_kocw(user, domain=None):
 
     for c in courses:
         # print 'course.keys1:', c.__dict__.keys()
-        print 'c.has_ended()', c.has_ended()
-        print 'c.number', c.number
-        print 'c.start', c.start
+        # print 'c.has_ended()', c.has_ended()
+        # print 'c.number', c.number
+        # print 'c.start', c.start
 
         if not c.has_ended():
             courses1.append(c)
