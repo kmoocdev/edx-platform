@@ -214,6 +214,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
         course3 = reverse_sort_by_start_date(course3)
         # course4 = reverse_sort_by_enrollment_end_date(course4)
         # courses = course1 + course2 + course3 + course4 + course5
+        course6 = reverse_sort_by_enrollment_end_date(course6)
 
         # print '1 ======================================='
         # for c in course1:
@@ -225,8 +226,8 @@ def index(request, extra_context=None, user=AnonymousUser()):
         # for c in course3:
         #     print c.display_name
 
-        courses = course1 + course2 + course3 + course5
-        # courses = course1 + course2 + course3 + course5 + course6
+        # courses = course1 + course2 + course3 + course5
+        courses = course1 + course2 + course3 + course5 + course6
     else:
         courses = sort_by_announcement(courses)
 
