@@ -58,6 +58,8 @@ define([
                 var enrollment_start = latest[i].attributes.enrollment_start;
                 var enrollment_end = latest[i].attributes.enrollment_end;
 
+                //console.log('enrollment_start: ' + enrollment_start + " , enrollment_end: " + enrollment_end);
+
                 //console.log(display_name);
 
                 //if(dupllist.indexOf(display_name) < 0)
@@ -80,29 +82,40 @@ define([
             }
 
             courses1.sort(function(a,b){
-                return a.attributes.start.slice(0, 16) > b.attributes.start.slice(0, 16);
+                if(a.attributes.start.slice(0, 16) > b.attributes.start.slice(0, 16))
+                    return 1;
+                if(a.attributes.start.slice(0, 16) < b.attributes.start.slice(0, 16))
+                    return -1;
+                return 0;
             });
             courses2.sort(function(a,b){
-                return a.attributes.start.slice(0, 16) < b.attributes.start.slice(0, 16);
+                if(a.attributes.start.slice(0, 16) < b.attributes.start.slice(0, 16))
+                    return 1;
+                if(a.attributes.start.slice(0, 16) > b.attributes.start.slice(0, 16))
+                    return -1;
+                return 0;
             });
             courses3.sort(function(a,b){
-                return a.attributes.start.slice(0, 16) < b.attributes.start.slice(0, 16);
+                if(a.attributes.start.slice(0, 16) < b.attributes.start.slice(0, 16))
+                    return 1;
+                if(a.attributes.start.slice(0, 16) > b.attributes.start.slice(0, 16))
+                    return -1;
+                return 0;
+                //return a.attributes.start.slice(0, 16).replace(/-/gi,"").replace(/:/gi,"").replace(/T/gi,"") < b.attributes.start.slice(0, 16).replace(/-/gi,"").replace(/:/gi,"").replace(/T/gi,"");
             });
 
             //var i=0;
             //while(i<courses1.length){
-            //    console.log('1. ' + courses1[i++].attributes.content.display_name);
+            //    console.log('1. ' + courses1[i].attributes.content.display_name + " : " + courses1[i++].attributes.start.slice(0, 16));
             //}
             //i = 0;
             //while(i<courses2.length){
-            //    console.log('2. ' + courses2[i++].attributes.content.display_name);
+            //    console.log('2. ' + courses2[i].attributes.content.display_name + " : " + courses2[i++].attributes.start.slice(0, 16));
             //}
             //i = 0;
             //while(i<courses3.length){
-            //    console.log('3. ' + courses3[i++].attributes.content.display_name);
+            //    console.log('3. ' + courses3[i].attributes.content.display_name + " : " + courses3[i].attributes.start.slice(0, 16) + " : " + courses3[i++].attributes.start.slice(0, 16).replace(/-/gi,"").replace(/:/gi,"").replace(/T/gi,""));
             //}
-
-
 
             courses = courses.concat(courses1, courses2, courses3, courses4);
 
