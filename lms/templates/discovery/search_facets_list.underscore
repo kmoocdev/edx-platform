@@ -31,6 +31,12 @@
 
         <ul data-facet="search_string" class="facet-list">
             <li data-facet="search_string">
+                <button data-value="법률" data-text="법률" class="facet-option discovery-button">법률<span class="count">1</span></button>
+            </li>
+        </ul>
+
+        <ul data-facet="search_string" class="facet-list">
+            <li data-facet="search_string">
                 <button data-value="사회과학" data-text="사회과학" class="facet-option discovery-button">사회과학<span class="count">1</span></button>
             </li>
         </ul>
@@ -43,19 +49,7 @@
 
         <ul data-facet="search_string" class="facet-list">
             <li data-facet="search_string">
-                <button data-value="전기전자" data-text="전기전자" class="facet-option discovery-button">전기·전자<span class="count">1</span></button>
-            </li>
-        </ul>
-
-        <ul data-facet="search_string" class="facet-list">
-            <li data-facet="search_string">
                 <button data-value="생물화학환경" data-text="생물화학환경" class="facet-option discovery-button">생물·화학·환경<span class="count">1</span></button>
-            </li>
-        </ul>
-
-        <ul data-facet="search_string" class="facet-list">
-            <li data-facet="search_string">
-                <button data-value="생활과학" data-text="생활과학" class="facet-option discovery-button">생활과학<span class="count">1</span></button>
             </li>
         </ul>
 
