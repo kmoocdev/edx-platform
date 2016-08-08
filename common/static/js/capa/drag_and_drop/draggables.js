@@ -62,7 +62,7 @@ define(['js/capa/drag_and_drop/draggable_events', 'js/capa/drag_and_drop/draggab
                             'style=" ' +
                                 'position: absolute; ' +
                                 'color: black; ' +
-                                'font-size: 0.95em; ' +
+                                'font-size: 0.9em; ' +
                             '" ' +
                         'role="label">' +
                             draggableObj.originalConfigObj.label +
@@ -93,7 +93,7 @@ define(['js/capa/drag_and_drop/draggable_events', 'js/capa/drag_and_drop/draggab
                         'style=" ' +
                             'position: absolute; ' +
                             'color: black; ' +
-                            'font-size: 0.95em; ' +
+                            'font-size: 0.9em; ' +
                         '" ' +
                     '>' +
                         draggableObj.originalConfigObj.label +
@@ -238,7 +238,7 @@ define(['js/capa/drag_and_drop/draggable_events', 'js/capa/drag_and_drop/draggab
                             'style=" ' +
                                 'position: absolute; ' +
                                 'color: black; ' +
-                                'font-size: 0.95em; ' +
+                                'font-size: 0.9em; ' +
                                 'cursor: move; ' +
                             '" ' +
                         '>' +
@@ -278,7 +278,7 @@ define(['js/capa/drag_and_drop/draggable_events', 'js/capa/drag_and_drop/draggab
                         'style=" ' +
                             'position: absolute; ' +
                             'color: black; ' +
-                            'font-size: 0.95em; ' +
+                            'font-size: 0.9em; ' +
                             'cursor: move; ' +
                         '" ' +
                         'tabindex="0" aria-grabbed="false" role="listitem"' +
