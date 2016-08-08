@@ -112,7 +112,7 @@ define([], function () {
                         'text-align: center; ' +
                         'z-index: 500; ' +
                         'background-color: white; ' +
-                        'font-size: 0.95em; ' +
+                        'font-size: 0.9em; ' +
                         'color: #009fe2; ' +
                     '" ' +
                 '>0</div>'
