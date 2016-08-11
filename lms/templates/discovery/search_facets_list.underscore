@@ -73,7 +73,7 @@
 
         <ul data-facet="search_string" class="facet-list">
             <li data-facet="search_string">
-                <button data-value="미술조형" data-text="미술조형" class="facet-option discovery-button">미술·조형<span class="count">5</span></button>
+                <button data-value="미술조형" data-text="미술조형" class="facet-option discovery-button">미술·조형<span class="count">1</span></button>
             </li>
         </ul>
 
