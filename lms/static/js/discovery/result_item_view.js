@@ -81,7 +81,7 @@ define([
                 data.state = 'Current (Join Now)';
             }else if(start < d && d < end && enrollment_end < d){
                 data.state = 'Current (Registration closed)';
-            }else if(end < d && (enrollment_end == null || enrollment_end < d)){
+            }else if(end < d && (enrollment_end == null || d <= enrollment_end)){
                 data.state = 'Archived (Join Now)';
             }else if(end < d){
                 data.state = '종료 강좌';
