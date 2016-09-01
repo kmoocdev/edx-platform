@@ -185,12 +185,14 @@ def index(request, extra_context=None, user=AnonymousUser()):
 
             try:
                 if duplcourse.index(course.display_name) >= 0:
-                    continue
+                    # continue
+                    # print 'course.display_name:', course.display_name, 'it will pass'
+                    pass
             except:
                 duplcourse.append(course.display_name)
 
 
-            print course.id, str(course.id).find('2015')
+
 
             if str(course.id) == 'course-v1:KMOOC+DEMOk+2015_1':
                 course5.append(course) # last
@@ -205,6 +207,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
             elif not course.has_ended():
                 course3.append(course) # 3rd
             elif course.has_ended() and str(course.id).find('2015') < 0:
+                # print '2015 course ! ', course.id, str(course.id).find('2015')
                 course6.append(course)
             else:
                 course4.append(course) # not use
