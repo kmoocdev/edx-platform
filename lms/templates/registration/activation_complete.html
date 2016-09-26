@@ -26,6 +26,9 @@ from django.core.urlresolvers import reverse
         ${_("Visit your {link_start}dashboard{link_end} to see your courses.").format(link_start='<a href="{url}">'.format(url=reverse('dashboard')), link_end='</a>')}
       %else:
         ${_("You can now {link_start}log in{link_end}.").format(link_start='<a href="{url}">'.format(url=reverse('signin_user')), link_end='</a>')}
+        <br/>
+        로그인하시면 K-MOOC의 다양한 강좌를 수강 할 수 있습니다.
+
       %endif
     </p>
   </section>
