@@ -1,4 +1,4 @@
-# #-#-#-#-#  kmooc.po (kmooc-platform)  #-#-#-#-#
+# #-#-#-#-/  kmooc.po (kmooc-platform)  #-#-#-#-#
 # #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 # edX translation file.
 # Copyright (C) 2015 EdX
@@ -28872,7 +28872,7 @@ msgstr ""
 
 #: lms/templates/registration/activate_account_notice.html
 msgid "Thanks for Registering!"
-msgstr "등록해주셔서 감사합니다."
+msgstr "가입해주셔서 감사합니다."
 
 #: lms/templates/registration/activate_account_notice.html
 msgid ""
@@ -36343,11 +36343,17 @@ msgstr "인증된 강좌 이수증을 받기 위해서, 강좌가 끝나기 전�
 
 #: lms/templates/registration/activate_account_notice.html
 msgid ""
+"You've successfully created an account on {platform_name}."
+msgstr ""
+"{platform_name} 에 회원가입이 완료되었습니다."
+
+#: lms/templates/registration/activate_account_notice.html
+msgid ""
 "You've successfully created an account on {platform_name}. We've sent an "
 "account activation message to {email}. To activate your account and start "
 "enrolling in courses, click the link in the message."
 msgstr ""
-"{platform_name} 에 가입되었습니다. 강좌를 수강하기 위해서는 계정을 활성화해야 합니다. {email} 로 계정 활성화를 위한"
+"{platform_name} 에 회원가입이 완료되었습니다. 강좌를 수강하기 위해서는 계정을 활성화해야 합니다. {email} 로 계정 활성화를 위한"
 " 메일을 보냈으니 확인해 주시기 바랍니다. "
 
 #: lms/templates/registration/activation_invalid.html

@@ -54,6 +54,15 @@ from django.core.urlresolvers import reverse
         <section class="dashboard-banner">
             ${message}
         </section>
+
+        <script>
+            setTimeout(function(){
+                alert("${user.email}로 계정활성화를 위한 메일을 보냈으니, 계정활서오하 메일을 통해 사이트에 다시 접속하여 로그인해주십시오. \n\n'확인'버튼 클릭 후 자동으로 로그아웃 됩니다.");
+                document.location.href="/logout";
+            }, 500);
+        </script>
+
+
     %endif
 
     %if enrollment_message:
