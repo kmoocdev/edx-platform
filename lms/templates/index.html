@@ -126,8 +126,8 @@ function popClose(id){
     <!--popup K-mooc(2)-->
     <div id="popupWrap_2" class="layerPupup">
         <p style="text-align: left; font-weight: bold; margin-top: 5px; display: ${'none' if LANG == 'en' else 'block'};">
-             <a target="_blank" href="http://blog.naver.com/kmooc_kr/220700807418">
-                 <img src="/static/images/kmooc_banner_0504.jpg" alt="KOCW">
+             <a href="#">
+                 <img src="http://www.kmooc.kr/asset-v1:NILE+KMOOC1+2016+type@asset+block@161011_resize.jpg" alt="KOCW">
              </a>
 
         </p>
@@ -196,14 +196,15 @@ if (
 if (
         (cookiedata.indexOf("popupdiv2=done") < 0 )
         && (popupDate.getFullYear() == 2016)
-##         && (popupDate.getMonth() < 3)
+        && (popupDate.getMonth() == 10-1)
+        && (popupDate.getMonth() <= 22)
    )
     {
 
     %if LANG == 'en':
         document.all['popupWrap_2'].style.display = "none";
     %else:
-        document.all['popupWrap_2'].style.display = "none";
+        document.all['popupWrap_2'].style.display = "block";
     %endif
 
 } else {
