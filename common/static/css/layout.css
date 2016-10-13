@@ -157,7 +157,7 @@ header.global .nav-global li a.btn.type2:hover {border:solid 1px #939393;color:#
 .school_list .inner{margin:auto;padding:0 0 30px 0;max-width:1200px;overflow:hidden;}
 .school_list .title_type1{margin:0 auto 10px auto;max-width:1200px;padding:0 10px;}
 .school_list .inner > a {float:left;padding:10px 0 10px 0;width: calc(100%/11 - 0.1px);border:solid 1px #d1d1d1;border-left:none;text-align:center;background:#fff;box-sizing:border-box;}
-.school_list .inner > a:first-child{border-left:solid 1px #d1d1d1;}
+.school_list .inner > a:nth-child(1),.school_list .inner > a:nth-child(12){border-left:solid 1px #d1d1d1;}
 .school_list .inner > a span{display:block;font-size:16px;letter-spacing:-1px;white-space:nowrap;padding-top:10px;}
 
 .school_list .title_type1:after {content:"";clear:both;display:block;}
@@ -268,7 +268,7 @@ header.global .nav-global li.deactive{display:none;}
 .layerPupup{
     z-index: 10010;
 	display: none;
-	border: 5px solid #EB9D43;
+	border: 0px solid #fff;
 	opacity: 1;
 	background: #ffffff;
 	font-size: 13px;
@@ -285,7 +285,7 @@ header.global .nav-global li.deactive{display:none;}
 
 
 @media only screen and (max-width:1100px) {
-	/*body{border: 1px solid orange;}*/
+	body{border: 1px solid orange;}
 	/*#notice{border: 1px solid red;}*/
 	/*#notice ul{width:87%;}*/
 
@@ -303,7 +303,7 @@ header.global .nav-global li.deactive{display:none;}
 }
 
 @media only screen and (max-width:950px) {
-	/*body{border: 1px solid purple;}*/
+	body{border: 1px solid purple;}
 	/*#notice{border: 1px solid purple;}*/
 	/*#notice ul{width:calc(85% - 1px)}*/
 
@@ -360,7 +360,7 @@ header.global .nav-global li.deactive{display:none;}
 /*}*/
 
 @media only screen and (max-width:813px) {
-	/*body{border: 1px solid green;}*/
+	body{border: 1px solid green;}
 	/*#notice{border: 1px solid green;}*/
 	#notice li{float: none; max-width: 100% !important;}
 	#notice .ldiv{width: calc(100% - 25px);}
@@ -426,7 +426,7 @@ header.global .nav-global li.deactive{display:none;}
 }
 
 @media only screen and (max-width:640px) {
-	/*body{border: 1px solid red;}*/
+	body{border: 1px solid red;}
 	/*#notice{border: 1px solid blue;}*/
 
 	header.global .nav-global{padding:0;display:none;}
@@ -466,7 +466,9 @@ header.global .nav-global li.deactive{display:none;}
 
 	.school_list .inner > a{width:50%;}
 	.school_list .inner > a:nth-child(6){border-left:none;}
+
 	.school_list .inner > a:nth-child(2n + 1){border-left:solid 1px #d1d1d1;}
+
 	.school_list .inner > a:nth-child(3),
 	.school_list .inner > a:nth-child(4),
 	.school_list .inner > a:nth-child(5),
