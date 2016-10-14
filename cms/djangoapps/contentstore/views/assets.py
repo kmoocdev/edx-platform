@@ -167,6 +167,9 @@ def _assets_json(request, course_key):
         asset_locked = asset.get('locked', False)
         url_split = request.META.get('HTTP_REFERER').split("/")
         if ( url_split[3] == 'cdn' ) :
+            if 'cdn_url' not in asset or not asset['cdn_url']:
+                continue
+
             thumbnail_location = asset['cdn_url'][:asset['cdn_url'].rfind('.')]+"_0.png"
             thumbnail_location = thumbnail_location[:thumbnail_location.rfind('/')] +"/thumb" + thumbnail_location[thumbnail_location.rfind('/'):]
             asset_json.append(_get_cdn_json(
