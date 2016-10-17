@@ -104,12 +104,20 @@ class CourseDetails(object):
         """
         temploc = course_key.make_usage_key('about', about_key)
         store = modulestore()
+
         if data is None:
-            try:
+
+            if about_key == 'video':
+                try:
+                    about_item = store.get_item(temploc)
+                except ItemNotFoundError:
+                    about_item = store.create_xblock(course.runtime, course.id, 'about', about_key)
+
+                about_item.data = data
+                store.update_item(about_item, user.id, allow_not_found=True)
+            else:
                 store.delete_item(temploc, user.id)
-            # Ignore an attempt to delete an item that doesn't exist
-            except ValueError:
-                pass
+
         else:
             try:
                 about_item = store.get_item(temploc)
