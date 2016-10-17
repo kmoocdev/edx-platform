@@ -42,12 +42,51 @@ define([
 
         render: function () {
             var data = _.clone(this.model.attributes);
-            var arrUniv = [['KHUk', 'KoreaUnivK', 'PNUk', 'SNUk', 'SKKUk', 'YSUk', 'EwhaK', 'POSTECHk', 'KAISTk', 'HYUk', 'KMOOC', 'INHAuniversityK','KUMOHk','CUKk','BUFSk','JEJUk','KNUk','YeungnamUnivK','KonYangK','DKUK'],
-            ['경희대학교','고려대학교','부산대학교','서울대학교','성균관대학교','연세대학교','이화여자대학교','포항공과대학교','한국과학기술원','한양대학교', 'K-MOOC','인하대학교','금오공과대학교','가톨릭대학교','부산외국어대학교','제주대학교','경북대학교','영남대학교','건양대학교','단국대학교']];
+            var arrUniv = {
+                'KHUk':'경희대학교',
+                'KoreaUnivK':'고려대학교',
+                'PNUk':'부산대학교',
+                'SNUk':'서울대학교',
+                'SKKUk':'성균관대학교',
+                'YSUk':'연세대학교',
+                'EwhaK':'이화여자대학교',
+                'POSTECHk':'포항공과대학교',
+                'KAISTk':'한국과학기술원',
+                'HYUk':'한양대학교',
+                'KYUNGNAMUNIVk':'경남대학교',
+                'DGUk':'대구대학교',
+                'SMUCk':'상명대학교(천안)',
+                'SSUk':'성신여자대학교',
+                'SejonguniversityK':'세종대학교',
+                'SookmyungK':'숙명여자대학교',
+                'YeungnamUnivK':'영남대학교',
+                'UOUk':'울산대학교',
+                'INHAuniversityK':'인하대학교',
+                'CBNUk':'전북대학교',
+                'GachonUnivK':'가천대학교',
+                'KonYangK':'건양대학교',
+                'DonggukK':'동국대학교',
+                'DSUk':'동신대학교',
+                'MokwonK':'목원대학교',
+                'SMUk':'상명대학교(서울)',
+                'UOSk':'서울시립대',
+                'CAUk':'중앙대학교',
+                'CNUk':'충남대학교',
+                'HGUk':'한동대학교',
+                'HallymK':'한림대학교',
+                'KONGJUk':'공주대학교',
+                'KUMOHk':'금오공과대학교',
+                'DKUK':'단국대학교',
+                'BUFSk':'부산외국어대학교',
+                'SYUk':'삼육대학교',
+                'KNUk':'경북대학교',
+                'CUKk':'가톨릭대학교',
+                'JEJUk':'제주대학교'
+            };
 
-            for (var i=0; i <= arrUniv[0].length; i++) {
-                if (data.org == arrUniv[0][i]) {
-                    data.org = arrUniv[1][i];
+            for (var key in arrUniv) {
+                if (data.org == key) {
+                    data.org = arrUniv[key];
                     break;
                 }
             }
