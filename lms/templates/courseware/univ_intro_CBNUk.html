@@ -1,0 +1,92 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from microsite_configuration import microsite
+%>
+<%inherit file="../main.html" />
+
+<%namespace name='static' file='../static_content.html'/>
+
+
+<%block name="js_extra">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+  <%static:js group='discovery'/>
+  % endif
+</%block>
+
+<%block name="pagetitle">전북대학교</%block>
+<%
+  platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  if self.stanford_theme_enabled():
+    course_index_overlay_text = _("Explore free courses from {university_name}.").format(university_name="Stanford University")
+    logo_file = static.url('themes/stanford/images/seal.png')
+    logo_alt_text = "Stanford Seal Logo"
+
+  else:
+    course_index_overlay_text = microsite.get_value('course_index_overlay_text', _("Explore courses from {platform_name}.").format(platform_name=platform_name))
+
+    if settings.FEATURES.get('IS_EDX_DOMAIN', False):
+      # For some reason, `static.url('images/edx-theme/edx-logo-bw.png')` breaks template rendering.
+      default_image_url = settings.STATIC_URL + 'images/edx-theme/edx-logo-bw.png'
+    else:
+      default_image_url = settings.STATIC_URL + 'images/default-theme/logo-large.png'
+
+    logo_file = microsite.get_value(
+      'course_index_overlay_logo_file', default_image_url
+    )
+
+    logo_alt_text = _("{platform_name} Logo").format(platform_name=platform_name)
+%>
+
+<section class="home">
+
+<!-- home S -->
+			<header class="type1">
+				<img src="/static/images/univ_intro/univ_top_CBNUk.png" alt="">
+			</header>
+			<section class="school_info">	 <!-- school_info S -->
+				<div class="inner">
+					<p class="title_type2">
+                        <span>전북대학교
+                             <br/>
+##                              <a target="_blank" href="#"><img src="/static/images/sns1.png" alt="youtube" class="univSns"/></a>
+##                              <a target="_blank" href="#"><img src="/static/images/sns2.png" alt="facebook" class="univSns"/></a>
+                        </span><img src="/static/images/univ_intro/univ_logo_CBNUk.png" alt="대학교"></p>
+					<p>전북대학교는 호남‧충청 지역에서 최초로 설립된 국립대학으로 지역과 국가 발전을 이끌어온 글로벌 명문대학입니다. 전북대학교는 성장을 넘어 성숙함을 향해 나아가겠습니다.<br/>
+                    전북대학교 고유의 색깔 있는 인재를 양성하고 더불어 숲이 되는 연구 생태계를 조성하여 천년의 웅비를 준비하는 대학으로 나아가겠습니다.<br/>
+                    생각의 크기를 키우고, 새로운 자원을 발굴하여 전북대학교만의 창조적인 명품 브랜드로 키우겠습니다.<br/><br/>
+
+                    총장 이남호</p>
+
+                    <br/><br/>
+
+                    <p>Chonbuk National University(CBNU) was the first national university established in the Honam‧Chungchedong region and has led regional and national development as a global prestigious university
+                    Chonbuk National University will open an era of maturity moving beyond growth.<br/>
+                    By fostering talented individuals equipped with CBNU’s unique color, and building an ever-growing research ecosystem, we will prepare for a great leap of the new millennium.<br/>
+                    We will help our students enlarge their thinking, and discover new academic resources, thus they will be our priceless masterpiece proudly representing CBNU<br/><br/>
+
+                    President Lee Namho</p>
+
+				</div>
+			</section>	 <!-- school_info E -->
+
+  <section class="courses-container">
+
+    <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
+      <ul class="courses-listing">
+      %if courses and len(courses) > 0:
+        %for course in courses:
+        <li class="courses-listing-item">
+          <%include file="../course.html" args="course=course" />
+        </li>
+        %endfor
+      %else:
+        <div class="noCourse">※ 현재 수강할 수 있는 강좌가 없습니다.</div>
+      %endif
+      </ul>
+    </section>
+
+
+  </section>
+</section>

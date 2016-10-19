@@ -8343,14 +8343,26 @@ msgid "I want to learn about…"
 msgstr "원하시는 강의를 검색해보세요"
 
 #: university
+msgid "KMOOC"
+msgstr ""
+
+msgid "KYUNGNAMUNIVk"
+msgstr "경남대학교"
+
 msgid "KHUk"
 msgstr "경희대학교"
 
 msgid "KoreaUnivK"
 msgstr "고려대학교"
 
+msgid "DGUk"
+msgstr "대구대학교"
+
 msgid "PNUk"
 msgstr "부산대학교"
+
+msgid "SMUCk"
+msgstr "상명대학교"
 
 msgid "SNUk"
 msgstr "서울대학교"
@@ -8358,11 +8370,32 @@ msgstr "서울대학교"
 msgid "SKKUk"
 msgstr "성균관대학교"
 
+msgid "SSUk"
+msgstr "성신여자대학교"
+
+msgid "SejonguniversityK"
+msgstr "세종대학교"
+
+msgid "SookmyungK"
+msgstr "숙명여자대학교"
+
 msgid "YSUk"
 msgstr "연세대학교"
 
+msgid "YeungnamUnivK"
+msgstr "영남대학교"
+
+msgid "UOUk"
+msgstr "울산대학교"
+
 msgid "EwhaK"
 msgstr "이화여자대학교"
+
+msgid "INHAuniversityK"
+msgstr "인하대학교"
+
+msgid "CBNUk"
+msgstr "전북대학교"
 
 msgid "POSTECHk"
 msgstr "포항공과대학교"
@@ -8372,36 +8405,6 @@ msgstr "한국과학기술원"
 
 msgid "HYUk"
 msgstr "한양대학교"
-
-msgid "KMOOC"
-msgstr ""
-
-msgid "INHAuniversityK"
-msgstr "인하대학교"
-
-msgid "KUMOHk"
-msgstr "금오공과대학교"
-
-msgid "CUKk"
-msgstr "가톨릭대학교"
-
-msgid "BUFSk"
-msgstr "부산외국어대학교"
-
-msgid "JEJUk"
-msgstr "제주대학교"
-
-msgid "KNUk"
-msgstr "경북대학교"
-
-msgid "YeungnamUnivK"
-msgstr "영남대학교"
-
-msgid "KonYangK"
-msgstr "건양대학교"
-
-msgid "DKUK"
-msgstr "단국대학교"
 
 #: lms/templates/course.html
 msgid "Starting Soon"

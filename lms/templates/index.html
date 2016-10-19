@@ -265,6 +265,15 @@ if (
 
     });
 
+
+    var visibleNum = 0;
+
+    function showUniv(){
+        console.log('visibleNum = ' + (visibleNum + 1));
+
+        $(".school_list .inner a:nth-child(n + " + (visibleNum + 1) + ")").toggle();
+    }
+
     function showNotice(){
 
         var d = new Date();
@@ -465,20 +474,31 @@ if (
         <p class="title_type1">
             <img src="/static/images/title01${'_en' if LANG == 'en' else ''}.png" alt="참여대학" />
 
-            <a href="/schools"><img src="/static/images/more.png" alt="참여대학 더보기"></a>
+            <a href="javascript:showUniv();"><img src="/static/images/more.png" alt="참여대학 더보기"></a>
         </p>
         <div class="inner">
-            <a href="/school/KHUk"><img src="/static/images/logo02_01.png" alt="경희대학교 대학소개 페이지"><span style="font-family:daumR;">${_("KHUk")}</span></a>
-            <a href="/school/KoreaUnivK"><img src="/static/images/logo02_02.png" alt="고려대학교 대학소개 페이지"><span style="font-family:daumR;">${_("KoreaUnivK")}</span></a>
-            <a href="/school/PNUk"><img src="/static/images/logo02_03.png" alt="부산대학교 대학소개 페이지"><span style="font-family:daumR;">${_("PNUk")}</span></a>
-            <a href="/school/SNUk"><img src="/static/images/logo02_04.png" alt="서울대학교 대학소개 페이지"><span style="font-family:daumR;">${_("SNUk")}</span></a>
-            <a href="/school/SKKUk"><img src="/static/images/logo02_05.png" alt="성균관대학교 대학소개 페이지"><span style="font-family:daumR;">${_("SKKUk")}</span></a>
-            <a href="/school/YSUk"><img src="/static/images/logo02_06.png" alt="연세대학교 대학소개 페이지"><span style="font-family:daumR;">${_("YSUk")}</span></a>
-            <a href="/school/EwhaK"><img src="/static/images/logo02_07.png" alt="이화여자대학교 대학소개 페이지"><span style="font-family:daumR;">${_("EwhaK")}</span></a>
-            <a href="/school/POSTECHk"><img src="/static/images/logo02_08.png" alt="포항공과대학교 대학소개 페이지"><span style="font-family:daumR;">${_("POSTECHk")}</span></a>
-            <a href="/school/KAISTk"><img src="/static/images/logo02_09.png" alt="한국과학기술원 대학소개 페이지"><span style="font-family:daumR;">${_("KAISTk")}</span></a>
-            <a href="/school/HYUk"><img src="/static/images/logo02_10.png" alt="한양대학교 대학소개 페이지"><span style="font-family:daumR;">${_("HYUk")}</span></a>
-            <a href="/school/KOCWk"><img src="/static/images/logo02_11.png" alt="KOCW 대학소개 페이지"><span style="font-family:daumR;">KOCW</span></a>
+            <a href="/school/KYUNGNAMUNIVk"><img src="/static/images/logo02_KYUNGNAMUNIVk.png" alt="경남대학교 대학소개 페이지"><span style="font-family:daumR;">${_("KYUNGNAMUNIVk")}</span></a>
+            <a href="/school/KHUk"><img src="/static/images/logo02_KHUk.png" alt="경희대학교 대학소개 페이지"><span style="font-family:daumR;">${_("KHUk")}</span></a>
+            <a href="/school/KoreaUnivK"><img src="/static/images/logo02_KoreaUnivK.png" alt="고려대학교 대학소개 페이지"><span style="font-family:daumR;">${_("KoreaUnivK")}</span></a>
+            <a href="/school/DGUk"><img src="/static/images/logo02_DGUk.png" alt="대구대학교 대학소개 페이지"><span style="font-family:daumR;">${_("DGUk")}</span></a>
+            <a href="/school/PNUk"><img src="/static/images/logo02_PNUk.png" alt="부산대학교 대학소개 페이지"><span style="font-family:daumR;">${_("PNUk")}</span></a>
+            <a href="/school/SMUCk"><img src="/static/images/logo02_SMUCk.png" alt="상명대학교 대학소개 페이지"><span style="font-family:daumR;">${_("SMUCk")}</span></a>
+            <a href="/school/SNUk"><img src="/static/images/logo02_SNUk.png" alt="서울대학교 대학소개 페이지"><span style="font-family:daumR;">${_("SNUk")}</span></a>
+            <a href="/school/SKKUk"><img src="/static/images/logo02_SKKUk.png" alt="성균관대학교 대학소개 페이지"><span style="font-family:daumR;">${_("SKKUk")}</span></a>
+            <a href="/school/SSUk"><img src="/static/images/logo02_SSUk.png" alt="성신여자대학교 대학소개 페이지"><span style="font-family:daumR;">${_("SSUk")}</span></a>
+            <a href="/school/SejonguniversityK"><img src="/static/images/logo02_SejonguniversityK.png" alt="세종대학교 대학소개 페이지"><span style="font-family:daumR;">${_("SejonguniversityK")}</span></a>
+            <a href="/school/SookmyungK"><img src="/static/images/logo02_SookmyungK.png" alt="숙명여자대학교 대학소개 페이지"><span style="font-family:daumR;">${_("SookmyungK")}</span></a>
+            <a href="/school/YSUk"><img src="/static/images/logo02_YSUk.png" alt="연세대학교 대학소개 페이지"><span style="font-family:daumR;">${_("YSUk")}</span></a>
+            <a href="/school/YeungnamUnivK"><img src="/static/images/logo02_YeungnamUnivK.png" alt="영남대학교 대학소개 페이지"><span style="font-family:daumR;">${_("YeungnamUnivK")}</span></a>
+            <a href="/school/UOUk"><img src="/static/images/logo02_UOUk.png" alt="울산대학교 대학소개 페이지"><span style="font-family:daumR;">${_("UOUk")}</span></a>
+            <a href="/school/EwhaK"><img src="/static/images/logo02_EwhaK.png" alt="이화여자대학교 대학소개 페이지"><span style="font-family:daumR;">${_("EwhaK")}</span></a>
+            <a href="/school/INHAuniversityK"><img src="/static/images/logo02_INHAuniversityK.png" alt="인하대학교 대학소개 페이지"><span style="font-family:daumR;">${_("INHAuniversityK")}</span></a>
+            <a href="/school/CBNUk"><img src="/static/images/logo02_CBNUk.png" alt="전북대학교 대학소개 페이지"><span style="font-family:daumR;">${_("CBNUk")}</span></a>
+            <a href="/school/POSTECHk"><img src="/static/images/logo02_POSTECHk.png" alt="포항공과대학교 대학소개 페이지"><span style="font-family:daumR;">${_("POSTECHk")}</span></a>
+            <a href="/school/KAISTk"><img src="/static/images/logo02_KAISTk.png" alt="한국과학기술원 대학소개 페이지"><span style="font-family:daumR;">${_("KAISTk")}</span></a>
+            <a href="/school/HYUk"><img src="/static/images/logo02_HYUk.png" alt="한양대학교 대학소개 페이지"><span style="font-family:daumR;">${_("HYUk")}</span></a>
+            <a href="/school/KOCWk"><img src="/static/images/logo02_KOCWk.png" alt="KOCW 대학소개 페이지"><span style="font-family:daumR;">KOCW</span></a>
+
         </div>
     </section>	 <!-- school_list E -->
 
