@@ -9993,6 +9993,22 @@ msgid "The course must have an assigned start date."
 msgstr "강좌는 할당된 개강일이 있어야 합니다."
 
 #: cms/static/js/models/settings/course_details.js
+msgid "The course must have an assigned end date."
+msgstr "강좌는 할당된 종강일이 있어야 합니다."
+
+#: cms/static/js/models/settings/course_details.js
+msgid "The course must have an assigned enrollment start date."
+msgstr "강좌는 할당된 수강신청 시작일이 있어야 합니다."
+
+#: cms/static/js/models/settings/course_details.js
+msgid "The course must have an assigned enrollment end date."
+msgstr "강좌는 할당된 수강신청 종료일이 있어야 합니다."
+
+#: cms/static/js/models/settings/course_details.js
+msgid "The course must have an assigned effort time."
+msgstr "강좌는 할당된 주간학습권장시간이 있어야 합니다."
+
+#: cms/static/js/models/settings/course_details.js
 msgid "The course end date must be later than the course start date."
 msgstr "종강일은 개강일 보다 이후가 되어야 합니다."
 

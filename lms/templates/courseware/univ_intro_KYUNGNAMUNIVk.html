@@ -1,0 +1,96 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from microsite_configuration import microsite
+%>
+<%inherit file="../main.html" />
+
+<%namespace name='static' file='../static_content.html'/>
+
+
+<%block name="js_extra">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+  <%static:js group='discovery'/>
+  % endif
+</%block>
+
+<%block name="pagetitle">경남대학교</%block>
+<%
+  platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  if self.stanford_theme_enabled():
+    course_index_overlay_text = _("Explore free courses from {university_name}.").format(university_name="Stanford University")
+    logo_file = static.url('themes/stanford/images/seal.png')
+    logo_alt_text = "Stanford Seal Logo"
+
+  else:
+    course_index_overlay_text = microsite.get_value('course_index_overlay_text', _("Explore courses from {platform_name}.").format(platform_name=platform_name))
+
+    if settings.FEATURES.get('IS_EDX_DOMAIN', False):
+      # For some reason, `static.url('images/edx-theme/edx-logo-bw.png')` breaks template rendering.
+      default_image_url = settings.STATIC_URL + 'images/edx-theme/edx-logo-bw.png'
+    else:
+      default_image_url = settings.STATIC_URL + 'images/default-theme/logo-large.png'
+
+    logo_file = microsite.get_value(
+      'course_index_overlay_logo_file', default_image_url
+    )
+
+    logo_alt_text = _("{platform_name} Logo").format(platform_name=platform_name)
+%>
+
+<section class="home">
+
+<!-- home S -->
+			<header class="type1">
+				<img src="/static/images/univ_intro/univ_top_KYUNGNAMUNIVk.png" alt="">
+			</header>
+			<section class="school_info">	 <!-- school_info S -->
+				<div class="inner">
+					<p class="title_type2">
+                        <span>경남대학교
+                             <br/>
+                             <a target="_blank" href="https://www.youtube.com/channel/UCCTK876rgNAUE8PKRryZhhQ"><img src="/static/images/sns1.png" alt="youtube" class="univSns"/></a>
+                             <a target="_blank" href="https://www.facebook.com/SookmyungUniversity"><img src="/static/images/sns2.png" alt="facebook" class="univSns"/></a>
+                        </span><img src="/static/images/univ_intro/univ_logo_KYUNGNAMUNIVk.png" alt="경남대학교"></p>
+					<p>경남대학교는 1946년 민족 교육기관으로 개교하여 ‘교양 있는 전문인, 지역 발전의 창도자, 주체성 있는 세계인’의 양성을 교육목표로 그 동안 12만여 졸업생을 배출하여 지역사회와 국가, 인류 발전에 기여해 오고 있는 유서 깊은 대학입니다.<br/><br/>
+                        우리대학은 ‘극동문제연구소’를 중심으로 지난 40여 년 동안 한반도 평화와 통일 분야에서 국내 최고의 연구•교육기관으로 성장해 왔습니다.<br/><br/>
+                        이와 아울러 ‘지역과 대학이 공생하는 지역공동체 3.0구축’을 목표로 지역전략산업과 지역사화와 연계한 국방산업, 그린메카노, 해양웰빙, 도시힐링 분야를 우리대학 특성화 사업으로 집중 투자하고 있습니다.
+                        또한 오랜 역사와 전통을 ‘뿌리’로, 21세기가 요구하는 인재를 양성하기 위해 교육과정을 직업 지향으로 개편하고 학생들의 다양한 특성을 고려한 맞춤형 교육을 강화하기 위해 최선의 노력을 다하고 있습니다.<br/><br/>
+                        미래를 위한 도전과 투자로, 학생이 만족하고 학부모와 산업체가 감동하며 지역민과 동문과 교직원이 자랑하는 ‘미래를 열어가는 지역감동 대학’으로 만들어 향후 2030년까지 반드시 ‘최상의 지방 명문 사학’으로 성장시킬 것입니다.<br/><br/>
+                        새로운 도전과 혁신을 실현하는 힘이 있는 대학, 경남대학교는 바로 세계 속의 대학이며, 여러분의 대학입니다. 그 힘을 우리대학에서 제공하는 다양한 콘텐츠를 통해 만끽하시길 바랍니다.<br/><br/>
+                        경남대학교 총 장  박 재 규</p>
+
+                    <br/><br/><br/><br/>
+
+                    <p>Kyungnam University was founded to practice its educational philosophy in 1946. Its educational mission is to cultivate 'progressive experts, leaders of regional development, and global citizens with cultural identity.'<br/><br/>
+                        Today, more than 120,000 graduates are active for performing this mission in Korea and overseas.<br/><br/>
+                        Kyungnam University, as a career-oriented educational institute, is exerting all its strengths to train competent students for 21st century.
+                        As a prestigious private academic institute for the Korean Peninsula’s peace and reunification, it is now doing its best efforts for specializing the sectors of the nation's defense, environment, ocean, and urbanization industries.<br/><br/>
+                        Through incessant challenges and bold investments, Kyungnam University will stride for local supreme private institution and becoming global hub in the education and research.<br/><br/>
+                        Kyungnam University will also never stop challenging itself for innovation until it becomes the best educational institution in the world.<br/><br/>
+                        We invite you to experience these challenges and innovations. Enjoy our diverse programs in Kyungnam University!<br/><br/>
+                        President Park, Jae-Kyu </p>
+
+				</div>
+			</section>	 <!-- school_info E -->
+
+  <section class="courses-container">
+
+    <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
+      <ul class="courses-listing">
+      %if courses and len(courses) > 0:
+        %for course in courses:
+        <li class="courses-listing-item">
+          <%include file="../course.html" args="course=course" />
+        </li>
+        %endfor
+      %else:
+        <div class="noCourse">※ 현재 수강할 수 있는 강좌가 없습니다.</div>
+      %endif
+      </ul>
+    </section>
+
+
+  </section>
+</section>

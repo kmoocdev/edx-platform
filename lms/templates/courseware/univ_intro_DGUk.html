@@ -1,0 +1,91 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from microsite_configuration import microsite
+%>
+<%inherit file="../main.html" />
+
+<%namespace name='static' file='../static_content.html'/>
+
+
+<%block name="js_extra">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+  <%static:js group='discovery'/>
+  % endif
+</%block>
+
+<%block name="pagetitle">대구대학교</%block>
+<%
+  platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  if self.stanford_theme_enabled():
+    course_index_overlay_text = _("Explore free courses from {university_name}.").format(university_name="Stanford University")
+    logo_file = static.url('themes/stanford/images/seal.png')
+    logo_alt_text = "Stanford Seal Logo"
+
+  else:
+    course_index_overlay_text = microsite.get_value('course_index_overlay_text', _("Explore courses from {platform_name}.").format(platform_name=platform_name))
+
+    if settings.FEATURES.get('IS_EDX_DOMAIN', False):
+      # For some reason, `static.url('images/edx-theme/edx-logo-bw.png')` breaks template rendering.
+      default_image_url = settings.STATIC_URL + 'images/edx-theme/edx-logo-bw.png'
+    else:
+      default_image_url = settings.STATIC_URL + 'images/default-theme/logo-large.png'
+
+    logo_file = microsite.get_value(
+      'course_index_overlay_logo_file', default_image_url
+    )
+
+    logo_alt_text = _("{platform_name} Logo").format(platform_name=platform_name)
+%>
+
+<section class="home">
+
+<!-- home S -->
+			<header class="type1">
+				<img src="/static/images/univ_intro/univ_top_DGUk.jpg" alt="">
+			</header>
+			<section class="school_info">	 <!-- school_info S -->
+				<div class="inner">
+					<p class="title_type2">
+                        <span>대구대학교
+                             <br/>
+                             <a target="_blank" href="https://www.youtube.com/user/DaeguUniv"><img src="/static/images/sns1.png" alt="youtube" class="univSns"/></a>
+                             <a target="_blank" href="https://www.facebook.com/DaeguUniversity1956"><img src="/static/images/sns2.png" alt="facebook" class="univSns"/></a>
+                        </span><img src="/static/images/univ_intro/univ_logo_DGUk.png" alt="대구대학교"></p>
+					<p>대구대학교는 사랑·빛·자유의 건학정신을 바탕으로 눈부신 발전과 성취를 거듭해온 아름다운 대학입니다.<br/><br/>
+                        개교 후 60년 동안, 소외된 이웃을 배려하고 존중하는 만인복지의 인류애, 위기와 난관을 돌파하는 패기, 새 역사를 창조하는 진취적 기상으로 국가발전에 이바지하는 인재를 양성해 왔습니다. 앞으로도 대구대학교는 지역과 국가, 세계를 빛낼 21세기 선진인재들을 키워내는 명문사학으로서 헌신할 것입니다.<br/><br/>
+                        대구대학교는 학생을 사랑하고 존중하는 대학입니다. 앞서가는 교육·취업·연구지원 체제로 학생들의 미래 행복을 책임지고자 노력하는 대학입니다.&lt;학생이 행복한 대학&gt; - 대구대학교가 개척해 가고 있는 한국 대학교육의 새로운 비전이요 패러다임입니다.<br/><br/>
+                        그것은 학생에 대한 서비스 강화만을 의미하지 않습니다. 대학경영 패러다임의 근본적 혁신을 의미하며, 한국 대학교육의 패러다임 전환을 선도하겠다는 의지의 선언이기도 합니다. 학생들이 21세기 리더로서의 교양을 갖추는 것, 전공실력을 연마하는 것, 생활 및 학습편의를 제공받는 것, 그리고 취업을 준비하는 것 등 모든 면에서, 전국 최고수준의 지원과 서비스라고 사랑하는 학생들이 동의해 주는 그 날까지, 학생중심 대학경영의 패러다임을 계속 업그레이드시켜 갈 것입니다.<br/><br/>
+                        &lt;학생이 행복한 대학, 대구대학교&gt;가 학생들의 꿈과 이상을 실현해 줄 것입니다. </p>
+
+                    <br/><br/><br/><br/>
+
+                    <p>Daegu University is a beautiful university which has achieved remarkable development and achievements based on its founding principles of love, light, and freedom.<br/><br/>
+                        Daegu University, for the last 60 years since its foundation, has produced talented graduates who contribute to national development based on their humanity toward public welfare to consider and respect minority neighbors, their passion to break through crisis and hardship, and their enterprising spirit to create new history. In the future, Daegu University will devote itself as a renowned and prestigious private institute to produce the 21st century's advanced talents who will bring glory locally, nationally, and internationally.<br/><br/>
+                        Daegu University loves and respects its students. It also strives to be responsible for students' future happiness with its advancing education, career, and research supporting systems. &lt;A University where Students are Happy&gt; This is the new vision and paradigm that Daegu University is pioneering for Korea's university education.<br/><br/>
+                        This does not limit the meaning at strengthening its service for students. This means the fundamental innovation of university management paradigm and at the same time is a pledge of its willpower to lead the transition of paradigm in Korea's university education. We will continuously upgrade our paradigm of student-centered university management until our cherished students agree that we are providing the nation's best support service in all aspects including helping students to embrace cultures as 21st-century leaders, assisting students to train major-related skills, providing living and learning conveniences, and supporting students' preparations for employment.<br/><br/>
+                        &lt;A University where Students Are Happy&gt; Daegu University will make students' dreams and ideals come true. </p>
+
+				</div>
+			</section>	 <!-- school_info E -->
+
+  <section class="courses-container">
+
+    <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
+      <ul class="courses-listing">
+      %if courses and len(courses) > 0:
+        %for course in courses:
+        <li class="courses-listing-item">
+          <%include file="../course.html" args="course=course" />
+        </li>
+        %endfor
+      %else:
+        <div class="noCourse">※ 현재 수강할 수 있는 강좌가 없습니다.</div>
+      %endif
+      </ul>
+    </section>
+
+
+  </section>
+</section>

@@ -1,0 +1,85 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from microsite_configuration import microsite
+%>
+<%inherit file="../main.html" />
+
+<%namespace name='static' file='../static_content.html'/>
+
+
+<%block name="js_extra">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+  <%static:js group='discovery'/>
+  % endif
+</%block>
+
+<%block name="pagetitle">상명대학교(천안)</%block>
+<%
+  platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  if self.stanford_theme_enabled():
+    course_index_overlay_text = _("Explore free courses from {university_name}.").format(university_name="Stanford University")
+    logo_file = static.url('themes/stanford/images/seal.png')
+    logo_alt_text = "Stanford Seal Logo"
+
+  else:
+    course_index_overlay_text = microsite.get_value('course_index_overlay_text', _("Explore courses from {platform_name}.").format(platform_name=platform_name))
+
+    if settings.FEATURES.get('IS_EDX_DOMAIN', False):
+      # For some reason, `static.url('images/edx-theme/edx-logo-bw.png')` breaks template rendering.
+      default_image_url = settings.STATIC_URL + 'images/edx-theme/edx-logo-bw.png'
+    else:
+      default_image_url = settings.STATIC_URL + 'images/default-theme/logo-large.png'
+
+    logo_file = microsite.get_value(
+      'course_index_overlay_logo_file', default_image_url
+    )
+
+    logo_alt_text = _("{platform_name} Logo").format(platform_name=platform_name)
+%>
+
+<section class="home">
+
+<!-- home S -->
+			<header class="type1">
+				<img src="/static/images/univ_intro/univ_top_SMUCk.png" alt="">
+			</header>
+			<section class="school_info">	 <!-- school_info S -->
+				<div class="inner">
+					<p class="title_type2">
+                        <span>상명대학교(천안)
+                             <br/>
+##                              <a target="_blank" href="#"><img src="/static/images/sns1.png" alt="youtube" class="univSns"/></a>
+##                              <a target="_blank" href="#"><img src="/static/images/sns2.png" alt="facebook" class="univSns"/></a>
+                        </span><img src="/static/images/univ_intro/univ_logo_SMUCk.png" alt="상명대학교_천안"></p>
+					<p>1937년 민족교육에 대한 큰 뜻을 지닌 계당 배상명 박사의 투철한 교육이념과 철학을 바탕으로 설립된 상명대학교는 80년의 오랜 발전과 도약의 역사 속에서 진리, 정의, 사랑을 교육이념으로 하여 인재 양성과 학문 연구라는 대학의 사명 완수를 위해 매진하여 왔습니다.<br/><br/>
+                        21세기는 창의적지식정보화, 세계화가 주요 흐름이 되고 있습니다. 상명대학교는 이러한 시대적 흐름과 변화의 중심에 서서 변화에 능동적으로 대응하고, 미래사회를 주도해 갈 수 있는 창의적이고 국제화된 인재를 육성하기 위해 최선을 다하고 있습니다.</p>
+
+                    <br/><br/><br/><br/>
+
+                    <p>Sangmyung University was established in 1937, based on the philosophy of national education conceived by Dr. Bae Sangmyung. With the educational ideology of truth, justice, and love, in its 80 years of leaping upward in continuous development, Sangmyung University has strived to fulfill the university mission of talent cultivation and scientific research.<br/><br/>
+                        The main trends of the 21st century are the informatization of society and globalization. In this time of rapid development and progress, Sangmyung University is actively adapting to changes in society and is fostering creative and internationally-minded individuals who will move on to become the leaders of the future.</p>
+
+				</div>
+			</section>	 <!-- school_info E -->
+
+  <section class="courses-container">
+
+    <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
+      <ul class="courses-listing">
+      %if courses and len(courses) > 0:
+        %for course in courses:
+        <li class="courses-listing-item">
+          <%include file="../course.html" args="course=course" />
+        </li>
+        %endfor
+      %else:
+        <div class="noCourse">※ 현재 수강할 수 있는 강좌가 없습니다.</div>
+      %endif
+      </ul>
+    </section>
+
+
+  </section>
+</section>

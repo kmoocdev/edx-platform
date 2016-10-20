@@ -31,6 +31,21 @@ var CourseDetails = Backbone.Model.extend({
         if (newattrs.start_date === null) {
             errors.start_date = gettext("The course must have an assigned start date.");
         }
+        if (newattrs.end_date === null) {
+            errors.end_date = gettext("The course must have an assigned end date.");
+        }
+        if (newattrs.enrollment_start === null) {
+            errors.enrollment_start = gettext("The course must have an assigned enrollment start date.");
+        }
+        if (newattrs.enrollment_end === null) {
+            errors.enrollment_end = gettext("The course must have an assigned enrollment end date.");
+        }
+
+        if (newattrs.end_date && newattrs.enrollment_end && newattrs.end_date && newattrs.enrollment_end && (newattrs.effort === null || newattrs.effort == "")) {
+            errors.effort = gettext("The course must have an assigned effort time.");
+            $("#course-effort").focus();
+        }
+
         if (newattrs.start_date && newattrs.end_date && newattrs.start_date >= newattrs.end_date) {
             errors.end_date = gettext("The course end date cannot be before the course start date.");
         }

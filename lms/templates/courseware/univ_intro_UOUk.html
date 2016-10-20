@@ -1,0 +1,97 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from microsite_configuration import microsite
+%>
+<%inherit file="../main.html" />
+
+<%namespace name='static' file='../static_content.html'/>
+
+
+<%block name="js_extra">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+  <%static:js group='discovery'/>
+  % endif
+</%block>
+
+<%block name="pagetitle">울산대학교</%block>
+<%
+  platform_name = microsite.get_value('platform_name', settings.PLATFORM_NAME)
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  if self.stanford_theme_enabled():
+    course_index_overlay_text = _("Explore free courses from {university_name}.").format(university_name="Stanford University")
+    logo_file = static.url('themes/stanford/images/seal.png')
+    logo_alt_text = "Stanford Seal Logo"
+
+  else:
+    course_index_overlay_text = microsite.get_value('course_index_overlay_text', _("Explore courses from {platform_name}.").format(platform_name=platform_name))
+
+    if settings.FEATURES.get('IS_EDX_DOMAIN', False):
+      # For some reason, `static.url('images/edx-theme/edx-logo-bw.png')` breaks template rendering.
+      default_image_url = settings.STATIC_URL + 'images/edx-theme/edx-logo-bw.png'
+    else:
+      default_image_url = settings.STATIC_URL + 'images/default-theme/logo-large.png'
+
+    logo_file = microsite.get_value(
+      'course_index_overlay_logo_file', default_image_url
+    )
+
+    logo_alt_text = _("{platform_name} Logo").format(platform_name=platform_name)
+%>
+
+<section class="home">
+
+<!-- home S -->
+			<header class="type1">
+				<img src="/static/images/univ_intro/univ_top_UOUk.png" alt="">
+			</header>
+			<section class="school_info">	 <!-- school_info S -->
+				<div class="inner">
+					<p class="title_type2">
+                        <span>울산대학교
+                             <br/>
+##                              <a target="_blank" href="#"><img src="/static/images/sns1.png" alt="youtube" class="univSns"/></a>
+                             <a target="_blank" href="https://www.facebook.com/universityofulsan"><img src="/static/images/sns2.png" alt="facebook" class="univSns"/></a>
+                        </span><img src="/static/images/univ_intro/univ_logo_UOUk.png" alt="대학교"></p>
+					<p>울산대학교는 한국의 산업화에 기여할 인력 양성을 위해 지난 1970년 설립돼 역사가 짧지만, 교육과 연구에서 커다란 성과를 내면서 ‘21세기 떠오르는 대학(Rising Star)’이 되었습니다.<br/>
+                        대한민국 최대 산업도시인 울산에 위치해 있으며, ‘아시아의 영웅’으로 칭송받고 있는 정주영 현대그룹 창업자가 설립하였습니다.<br/>
+                        글로벌 스탠다드에 부합한 공학 분야와 한국 최고의 임상교육 시스템을 갖춘 의학 분야는 세계적 수준입니다.<br/><br/>
+
+                        울산대학교는 장·단기 인턴십과 산업현장 경험이 풍부한 기업 임직원을 교수로 활용하는 ‘산학협력’을 대학의 발전 전략으로 하여 신생대학의 존재가치를 높이고 있습니다.<br/>
+                        산학협력 파트너는 글로벌 기업인 현대중공업과 현대자동차, SK에너지, S-오일 등 200여 곳에 이릅니다.<br/>
+                        또 세계 40개국 180개 기관과의 교류 프로그램을 통해 글로벌 역량을 갖춘 인재를 배출하고 있습니다.<br/><br/>
+
+                        THE(Times Higher Education)는 2016년 아시아대학평가에서 울산대학교를 한국 대학 중 10위, 아시아 대학 중 52위로 평가하였습니다.<br/>
+                        앞으로도 울산대학교는 글로벌 대학의 위상에 걸맞게 고등교육 발전에 헌신할 것입니다.</p>
+
+                    <br/><br/><br/><br/>
+
+                    <p>Established in 1970, the University of Ulsan(UOU) has grown to be the epicenter of education, research, and industry-academia cooperation in Asia with a purpose of producing future leaders.<br/>
+                        Our globally accredited engineering program and state-of-the-art medical program are among the best in Korea.<br/><br/>
+
+                        Through strategic industry-academia cooperation with multi-national corporations such as Hyundai Heavy Industries, Hyundai Motors, SK Energy and S-oil and global exchange programs with 180 academic institutions in 40 different countries, the University is setting the standard in fostering future world-class leaders with global excellence in various disciplines.<br/><br/>
+
+                        The Times Higher Education has ranked the University of Ulsan 10th in Korea and 52nd in Asia. The University is committed to contributing to the development of world higher education in the 21st century having the local community as a vital partner.</p>
+
+				</div>
+			</section>	 <!-- school_info E -->
+
+  <section class="courses-container">
+
+    <section class="courses${'' if course_discovery_enabled else ' no-course-discovery'}">
+      <ul class="courses-listing">
+      %if courses and len(courses) > 0:
+        %for course in courses:
+        <li class="courses-listing-item">
+          <%include file="../course.html" args="course=course" />
+        </li>
+        %endfor
+      %else:
+        <div class="noCourse">※ 현재 수강할 수 있는 강좌가 없습니다.</div>
+      %endif
+      </ul>
+    </section>
+
+
+  </section>
+</section>
