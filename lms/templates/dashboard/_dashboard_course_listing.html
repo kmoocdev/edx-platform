@@ -163,10 +163,13 @@ from student.helpers import (
               % endif
             % endif
             <div class="wrapper-action-more">
+
+              % if not course.has_ended():
               <a href="#actions-dropdown-${dashboard_index}" class="action action-more" id="actions-dropdown-link-${dashboard_index}" aria-haspopup="true" aria-expanded="false" data-course-number="${course.number | h}" data-dashboard-index="${dashboard_index}">
                 <span class="sr">${_('Course options dropdown')}</span>
                 <i class="fa fa-cog" aria-hidden="true"></i>
               </a>
+              % endif
               <div class="actions-dropdown" id="actions-dropdown-${dashboard_index}" aria-label="${_('Additional Actions Menu')}">
                 <ul class="actions-dropdown-list" id="actions-dropdown-list-${dashboard_index}" aria-label="${_('Available Actions')}" role="menu">
                   <li class="actions-item" id="actions-item-unenroll-${dashboard_index}">

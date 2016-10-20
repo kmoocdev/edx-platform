@@ -476,7 +476,7 @@ header.global .nav-global li.deactive{display:none;}
 	body{border: 1px solid blue;}
 
 	.school_list .inner > a{width:50%;}
-	.school_list .inner > a:nth-child(6){border-left:none;}
+	.school_list .inner > a:nth-child(n){border-left:none;}
 
 	.school_list .inner > a:nth-child(2n + 1){border-left:solid 1px #d1d1d1;}
 
@@ -489,9 +489,8 @@ header.global .nav-global li.deactive{display:none;}
 	.school_list .inner > a:nth-child(9),
 	.school_list .inner > a:nth-child(10){border-top:none;}
 
-	.school_list .inner > a:nth-child(1n + 0){display:block;}
-	.school_list .inner > a:nth-child(1n + 5){display:none;border-top:0px;}
-
+	/*.school_list .inner > a:nth-child(1n + 0){display:block;}*/
+	/*.school_list .inner > a:nth-child(1n + 5){display:none;border-top:0px;}*/
 
 	.school_list2 .inner > a{margin:0 0 10px 0! important;width:100%;}
 
