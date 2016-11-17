@@ -469,7 +469,7 @@ def get_courses_by_org(user, org_id, domain=None):
 
     return courses
 
-def get_courses_by_kocw(user, domain=None):
+def get_courses_by_org2(user, org_id, domain=None):
     '''
     Returns a list of courses available, sorted by course.number
     '''
@@ -477,39 +477,31 @@ def get_courses_by_kocw(user, domain=None):
     courses = list()
     courses1 = list()
     courses2 = list()
-    # for c in courses_temp:
-    #     print 'wiki_slug ##############################', c.wiki_slug
-    #     if c.enrollment_start is not None and datetime.now(UTC()) >= c.enrollment_start and c.wiki_slug is not None and 'KOCW' in c.wiki_slug:
-    #         courses.append(c)
 
     for c in courses_temp:
-        # print 'id ##############################', c.id, type(c.id)
-
         if c.start is not None and c.end is not None and c.start > c.end:
             continue
 
         if str(c.id).find('2015') > 0:
             continue
 
-        # if c.enrollment_end is not None and c.has_ended() and c.enrollment_end < datetime.now(UTC()):
-        #     continue
-
-        if c.enrollment_start is not None and datetime.now(UTC()) >= c.enrollment_start and c.id is not None and 'KOCW' in str(c.id):
+        if org_id == 'KOCWk' and (c.enrollment_start is not None and datetime.now(UTC()) >= c.enrollment_start and c.id is not None and 'KOCW' in str(c.id)):
+            courses.append(c)
+        elif org_id == 'ACEk' and ('ACE' in str(c.id) or 'FA.HGU01' in str(c.id)):
+            courses.append(c)
+        elif org_id == 'CKk':
+            continue
+        elif org_id == 'COREk' and ('SKKU_COS2021.01K' in str(c.id) or 'SKKU_COS2022.01K' in str(c.id) or 'SKKU_NTST100.01K' in str(c.id) or 'HYUKMOOC2016-4k' in str(c.id) or 'HYUKMOOC2016-5k' in str(c.id)):
             courses.append(c)
 
     for c in courses:
-        # print 'course.keys1:', c.__dict__.keys()
-        # print 'c.has_ended()', c.has_ended()
-        # print 'c.number', c.number
-        # print 'c.start', c.start
+
+        print 'get_courses_by_org2 c.id:::::', c.id
 
         if not c.has_ended():
             courses1.append(c)
         else:
             courses2.append(c)
-
-    # courses1 = sorted(courses1, key=lambda course: course.number)
-    # courses2 = sorted(courses2, key=lambda course: course.number)
 
     courses1 = sorted(courses1, key=lambda course: course.start, reverse=True)
     courses2 = sorted(courses2, key=lambda course: course.start, reverse=True)
@@ -520,10 +512,7 @@ def get_courses_by_kocw(user, domain=None):
         'COURSE_CATALOG_VISIBILITY_PERMISSION',
         settings.COURSE_CATALOG_VISIBILITY_PERMISSION
     )
-
     courses = [c for c in courses if has_access(user, permission_name, c)]
-
-    # courses = sorted(courses, key=lambda course: course.number)
 
     return courses
 

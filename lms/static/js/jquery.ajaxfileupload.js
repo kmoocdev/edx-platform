@@ -55,7 +55,9 @@ jQuery.extend({
     },
 
     ajaxFileUpload: function(s) {
-        // TODO introduce global settings, allowing the client to modify them for all requests, not only timeout		
+        // TODO introduce global settings, allowing the client to modify them for all requests, not only timeout
+        console.log("ie upload error..");
+
         s = jQuery.extend({}, jQuery.ajaxSettings, s);
         var id = new Date().getTime()        
 		var form = jQuery.createUploadForm(id, s.fileElementId);
@@ -165,10 +167,10 @@ jQuery.extend({
 			$(form).attr('target', frameId);
             if(form.encoding)
 			{
-                form.encoding = 'multipart/form-data';				
+                form.encoding = 'multipart/form-data';
             }
             else
-			{				
+			{
                 form.enctype = 'multipart/form-data';
             }			
             $(form).submit();
