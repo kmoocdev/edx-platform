@@ -473,30 +473,39 @@ def get_courses_by_org2(user, org_id, domain=None):
     '''
     Returns a list of courses available, sorted by course.number
     '''
+
+    # print ':::::::::::::::::::::::::1', datetime.now()
     courses_temp = branding.get_visible_courses()
+    # print ':::::::::::::::::::::::::2', datetime.now()
     courses = list()
     courses1 = list()
     courses2 = list()
 
     for c in courses_temp:
+
+        cid = str(c.id)
+
+        print 'step1: ',cid
+
+
         if c.start is not None and c.end is not None and c.start > c.end:
             continue
 
-        if str(c.id).find('2015') > 0:
+        if cid.find('2015') > 0:
             continue
 
-        if org_id == 'KOCWk' and (c.enrollment_start is not None and datetime.now(UTC()) >= c.enrollment_start and c.id is not None and 'KOCW' in str(c.id)):
+        if org_id == 'KOCWk' and (c.enrollment_start is not None and datetime.now(UTC()) >= c.enrollment_start and c.id is not None and 'KOCW' in cid):
             courses.append(c)
-        elif org_id == 'ACEk' and ('ACE' in str(c.id) or 'FA.HGU01' in str(c.id)):
+        elif org_id == 'ACEk' and ('ACE' in cid or 'FA.HGU01' in cid):
             courses.append(c)
         elif org_id == 'CKk':
             continue
-        elif org_id == 'COREk' and ('SKKU_COS2021.01K' in str(c.id) or 'SKKU_COS2022.01K' in str(c.id) or 'SKKU_NTST100.01K' in str(c.id) or 'HYUKMOOC2016-4k' in str(c.id) or 'HYUKMOOC2016-5k' in str(c.id)):
+        elif org_id == 'COREk' and ('SKKU_COS2021.01K' in cid or 'SKKU_COS2022.01K' in cid or 'SKKU_NTST100.01K' in cid or 'HYUKMOOC2016-4k' in cid or 'HYUKMOOC2016-5k' in cid):
             courses.append(c)
 
     for c in courses:
 
-        print 'get_courses_by_org2 c.id:::::', c.id
+        print 'step2: ', c.id
 
         if not c.has_ended():
             courses1.append(c)
