@@ -280,7 +280,11 @@ def replace_hangul_org(eng_org):
         'SYUk':u'삼육대학교',
         'KNUk':u'경북대학교',
         'CUKk':u'가톨릭대학교',
-        'JEJUk':u'제주대학교'
+        'JEJUk':u'제주대학교',
+        'SKP.KAISTk':u'서울대, 한국과학기술원, 포항공대',
+        'SKP.SNUk':u'서울대, 한국과학기술원, 포항공대',
+        'SKP.POSTECHk':u'서울대, 한국과학기술원, 포항공대'
+
     }
 
     if eng_org in dic_univ:

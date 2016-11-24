@@ -125,7 +125,10 @@ define([
                             'SYUk':'삼육대학교',
                             'KNUk':'경북대학교',
                             'CUKk':'가톨릭대학교',
-                            'JEJUk':'제주대학교'
+                            'JEJUk':'제주대학교',
+                            'SKP.KAISTk':'서울대, 한국과학기술원, 포항공대',
+                            'SKP.SNUk':'서울대, 한국과학기술원, 포항공대',
+                            'SKP.POSTECHk':'서울대, 한국과학기술원, 포항공대'
                         };
 
                         if(!arrUniv.hasOwnProperty(term))
@@ -187,7 +190,10 @@ define([
                         'SYUk':'삼육대학교',
                         'KNUk':'경북대학교',
                         'CUKk':'가톨릭대학교',
-                        'JEJUk':'제주대학교'
+                        'JEJUk':'제주대학교',
+                        'SKP.KAISTk':'서울대, 한국과학기술원, 포항공대',
+                        'SKP.SNUk':'서울대, 한국과학기술원, 포항공대',
+                        'SKP.POSTECHk':'서울대, 한국과학기술원, 포항공대'
                     };
 
                     if(!arrUniv.hasOwnProperty(term))
