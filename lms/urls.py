@@ -327,6 +327,7 @@ if settings.COURSEWARE_ENABLED:
         ## Privacy Policy
         url(r'^Privacy-Policy/?$', 'courseware.views.privacy', name="privacy"),
         url(r'^Privacy-Policy_old1/?$', 'courseware.views.privacy_old1', name="privacy_old1"),
+        url(r'^Privacy-Policy_old2/?$', 'courseware.views.privacy_old2', name="privacy_old2"),
 
         ## Copyright-Policy
         url(r'^Copyright-Policy/?$', 'courseware.views.copyright', name="copyright"),
