@@ -7704,7 +7704,7 @@ msgstr "최종 학력(Highest level of education completed)"
 #: openedx/core/djangoapps/user_api/views.py
 msgid "Tell us why you're interested in {platform_name}"
 msgstr ""
-"{platform_name}에 관심을 갖게 된 이유(Tell us why you're interested in "
+"가입목적(Tell us why you're interested in "
 "{platform_name})"
 
 #: lms/djangoapps/instructor_task/tasks_helper.py lms/templates/register.html
