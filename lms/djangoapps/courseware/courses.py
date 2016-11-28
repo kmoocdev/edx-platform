@@ -217,6 +217,10 @@ def get_course_about_section(course, section_key):
                     html = about_module.render(STUDENT_VIEW).content
                 except Exception:  # pylint: disable=broad-except
                     html = render_to_string('courseware/error-message.html', None)
+
+                    if section_key == 'video':
+                        html = ''
+
                     log.exception(
                         u"Error rendering course={course}, section_key={section_key}".format(
                             course=course, section_key=section_key
