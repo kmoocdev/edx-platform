@@ -623,6 +623,8 @@ class RegistrationView(APIView):
         )
 
     def _add_honor_code_field(self, form_desc, required=True):
+        return
+
         """Add an honor code field to a form description.
 
         Arguments:
@@ -693,13 +695,16 @@ class RegistrationView(APIView):
             label=label,
             field_type="checkbox",
             default=False,
-            required=required,
+            required=False,
             error_messages={
                 "required": error_msg
             }
         )
 
     def _add_terms_of_service_field(self, form_desc, required=True):
+        return
+
+
         """Add a terms of service field to a form description.
 
         Arguments:
@@ -740,7 +745,7 @@ class RegistrationView(APIView):
             label=label,
             field_type="checkbox",
             default=False,
-            required=required,
+            required=False,
             error_messages={
                 "required": error_msg
             }

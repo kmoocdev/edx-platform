@@ -143,7 +143,7 @@ class AccountCreationForm(forms.Form):
             extended_profile_fields=None,
             enforce_username_neq_password=False,
             enforce_password_policy=False,
-            tos_required=True
+            tos_required=False
     ):
         super(AccountCreationForm, self).__init__(data)
 
@@ -151,10 +151,11 @@ class AccountCreationForm(forms.Form):
         self.extended_profile_fields = extended_profile_fields or {}
         self.enforce_username_neq_password = enforce_username_neq_password
         self.enforce_password_policy = enforce_password_policy
-        if tos_required:
-            self.fields["terms_of_service"] = TrueField(
-                error_messages={"required": _("You must accept the terms of service.")}
-            )
+
+        # if tos_required:
+        #     self.fields["terms_of_service"] = TrueField(
+        #         error_messages={"required": _("You must accept the terms of service.")}
+        #     )
 
         # TODO: These messages don't say anything about minimum length
         error_message_dict = {
@@ -170,11 +171,13 @@ class AccountCreationForm(forms.Form):
             if field_name not in self.fields:
                 if field_name == "honor_code":
                     if field_value == "required":
-                        self.fields[field_name] = TrueField(
-                            error_messages={
-                                "required": _("To enroll, you must follow the honor code.")
-                            }
-                        )
+                        continue
+
+                        # self.fields[field_name] = TrueField(
+                        #     error_messages={
+                        #         "required": _("To enroll, you must follow the honor code.")
+                        #     }
+                        # )
                 else:
                     required = field_value == "required"
                     min_length = 1 if field_name in ("gender", "level_of_education") else 2
