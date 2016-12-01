@@ -506,8 +506,8 @@ def get_courses_by_org2(user, org_id, domain=None):
             courses.append(c)
         elif org_id == 'ACEk' and ('ACE' in cid or 'FA.HGU01' in cid):
             courses.append(c)
-        elif org_id == 'CKk':
-            continue
+        elif org_id == 'CKk' and 'CK' in cid:
+            courses.append(c)
         elif org_id == 'COREk' and ('SKKU_COS2021.01K' in cid or 'SKKU_COS2022.01K' in cid or 'SKKU_NTST100.01K' in cid or 'HYUKMOOC2016-4k' in cid or 'HYUKMOOC2016-5k' in cid):
             courses.append(c)
 
