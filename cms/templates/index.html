@@ -12,6 +12,90 @@
 </%block>
 
 <%block name="content">
+
+<div id="layerPopupArea" class="layerPopupArea" style="position: absolute; z-index: 999; top: 100px; left: 10%;">
+
+    <!--popup K-mooc(1)-->
+    <div id="popupWrap_1" class="layerPupup" style="z-index: 10010; display: none;	border: 0px solid #fff;	opacity: 1;	background: #ffffff; font-size: 13px; line-height: 25px;
+	padding: 5px;
+	box-shadow: 0 2px 5px 3px #444444;
+	margin: 3px;
+	float: left;">
+        <!-- content area -->
+
+        <p id="en_text" style="text-align: left; font-weight: bold; margin-top: 5px; display: block;">
+            <br/><b>CDN 업데이트 및 업로드 기능 일시적 이용불가 안내</b><br/><br/>
+
+            안녕하세요. K-MOOC 구축운영실입니다.<br/>
+            CDN(동영상 파일 업로드) 및  변환 기능의 안정화를 위한 패치 작업이 아래와 같이 시행될 예정입니다.<br/>
+            작업 시간동안 일시적으로 강좌 동영상 파일 업로드가 불가하오니,<br/>
+            업무하시는데 참고하시기 바랍니다.<br/><br/>
+
+            ○ 작업 일시 : 12월 7일 오후 2시 ~ 5시<br/>
+            ○ 작업내용 : 콘텐츠 CDN 업로드 및 변환 안정화를 위한 기능 고도화<br/><br/>
+
+            불편을 끼쳐 드려 죄송합니다.<br/>
+            최대한 빠른 시간 내로 작업을 완료하도록 하겠습니다.<br/><br/>
+            감사합니다.
+        </p>
+        <!-- close area -->
+        <div style="text-align: right; display: ${'"none"' if LANG == 'en' else '"block"'};">
+            <label onclick="closeWin1();">
+                <input id="chkbox_1" name="chkbox_1" type="checkbox" style="vertical-align: middle;">
+                <span style="font-style:normal; font-size:13px;"><b>${'Close this window for next 24 hours' if LANG == 'en' else '오늘 하루 열지 않음'} &nbsp;&nbsp;</b></span>
+            </label>
+
+            <span><a href="javascript:popClose('popupWrap_1');" title="닫기">[ ${'close' if LANG == 'en' else '닫기'} ]</a></span>
+        </div>
+    </div>
+</div>
+<script language="Javascript">
+function popClose(id){
+    $("#" + id).hide();
+}
+
+function setCookie1( name, value, expiredays ) {
+    var todayDate = new Date();
+    todayDate.setDate( todayDate.getDate() + expiredays );
+    document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+
+function closeWin1() {
+    if ($("#chkbox_1").is(":checked")){
+        setCookie1( "popupdiv1", "done" , 1 );
+    }
+    document.all['popupWrap_1'].style.display = "none";
+}
+
+cookiedata = document.cookie;
+
+popupDate = new Date();
+
+console.log('>>>>>>>>>>>> ' + cookiedata.indexOf("popupdiv1=done") + ":" + popupDate.getFullYear() + ":" + popupDate.getMonth() + ":" + popupDate.getDate() + ":" + popupDate.getHours());
+
+if (
+        (cookiedata.indexOf("popupdiv1=done") < 0 ) && (
+        (popupDate.getFullYear() == 2016 && popupDate.getMonth() <= 12 - 1 && popupDate.getDate() <= 7 && popupDate.getHours() < 18)
+        )
+   )
+    {
+
+    %if LANG == 'en':
+        document.all['popupWrap_1'].style.display = "none";
+    %else:
+        document.all['popupWrap_1'].style.display = "block";
+    %endif
+
+    //console.log(popupDate.getFullYear() + ":" + popupDate.getMonth() + ":" + popupDate.getDate());
+
+} else {
+    document.all['popupWrap_1'].style.display = "none";
+}
+
+</script>
+
+
+
 <div class="wrapper-mast wrapper">
   <header class="mast has-actions">
     <h1 class="page-header">${_("{studio_name} Home").format(studio_name=settings.STUDIO_SHORT_NAME)}</h1>
