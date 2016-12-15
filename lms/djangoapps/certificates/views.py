@@ -486,6 +486,8 @@ def render_html_view(request, user_id, course_id):
     If a certificate is not available, we display a "Sorry!" screen instead
     """
 
+    # 강좌에 poll 이 있는지 확인 하고 status 가 done 인지 체크 하여 완료 하지 않았다면 경고창을 출력한다
+
     # Create the initial view context, bootstrapping with Django settings and passed-in values
     context = {}
     context['platform_name'] = microsite.get_value("platform_name", settings.PLATFORM_NAME)
@@ -626,6 +628,10 @@ def render_html_view(request, user_id, course_id):
 
     # Append/Override the existing view context values with any course-specific static values from Advanced Settings
     context.update(course.cert_html_view_overrides)
+
+    print '-----------------------------------'
+    print context
+    print '-----------------------------------'
 
     # FINALLY, generate and send the output the client
     return render_to_response("certificates/valid.html", context)

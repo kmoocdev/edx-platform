@@ -52,25 +52,34 @@ else:
   <div class="wrapper-message-primary">
     <ul class="actions actions-primary">
       % if cert_status['show_disabled_download_button']:
-        <li class="action"><span class="disabled">
+        <li class="action case1"><span class="disabled">
             ${_("Your {cert_name_short} is Generating").format(cert_name_short=cert_name_short)}</span></li>
       % elif cert_status['show_download_url'] and cert_status.get('show_cert_web_view', False):
-        <li class="action action-certificate">
+        <li class="action case2 action-certificate">
+
+        % if cert_status.get('survey', 'complete') == 'complete':
         <a class="btn" href="${cert_status['cert_web_view_url']}" target="_blank"
            title="${_('This link will open the certificate web view')}">
-           ${_("View {cert_name_short}").format(cert_name_short=cert_name_short,)}</a></li>
+           ${_("View {cert_name_short}").format(cert_name_short=cert_name_short,)}</a>
+        % else:
+        <a class="btn" href="/courses/${course.id}/courseware"
+           title="${_('courseware')}" onclick="alert('강좌 설문조사에 참여하지 않아 이수증 발급이 불가합니다.\n이수증을 발급받기 위해서는 상단의 [강좌 내용]에서\n설문에 참여해주시기 바랍니다.\n\n[확인]버튼을 클릭하면 [강좌 내용]으로 이동합니다.');">
+           이수증 보기(설문 미완료)</a>
+        % endif
+
+        </li>
       % elif cert_status['show_download_url'] and (enrollment.mode == 'honor' or enrollment.mode == 'audit'):
-        <li class="action action-certificate">
+        <li class="action case3 action-certificate">
         <a class="btn" href="${cert_status['download_url']}"
            title="${_('This link will open/download a PDF document')}">
            ${_("Download {cert_name_short} (PDF)").format(cert_name_short=cert_name_short,)}</a></li>
       % elif cert_status['show_download_url'] and enrollment.mode == 'verified' and cert_status['mode'] == 'honor':
-        <li class="action">
+        <li class="action case4">
         <a class="btn" href="${cert_status['download_url']}"
            title="${_('This link will open/download a PDF document')}">
            ${_("Download Your {cert_name_short} (PDF)").format(cert_name_short=cert_name_short)}</a></li>
       % elif cert_status['show_download_url'] and enrollment.mode in CourseMode.VERIFIED_MODES:
-        <li class="action">
+        <li class="action case5">
         <a class="btn" href="${cert_status['download_url']}"
            title="${_('This link will open/download a PDF document of your verified {cert_name_long}.').format(cert_name_long=cert_name_long)}">
            ${_("Download Your ID Verified {cert_name_short} (PDF)").format(cert_name_short=cert_name_short)}</a></li>
