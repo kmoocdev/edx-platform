@@ -121,6 +121,8 @@ from notification_prefs.views import enable_notifications
 
 # Note that this lives in openedx, so this dependency should be refactored.
 from openedx.core.djangoapps.user_api.preferences import api as preferences_api
+from pymongo import MongoClient
+import MySQLdb as mdb
 
 
 log = logging.getLogger("edx.student")
@@ -367,6 +369,7 @@ def get_course_enrollment_pairs(user, course_org_filter, org_filter_out_set):
 
 
 def _cert_info(user, course, cert_status, course_mode):
+
     """
     Implements the logic for cert_info -- split out for testing.
     """
@@ -396,6 +399,10 @@ def _cert_info(user, course, cert_status, course_mode):
         return None
 
     status = template_state.get(cert_status['status'], default_status)
+
+    # print 'course.id, user.id-------'
+    # print course.id, user.id, status
+    # print '-------------------------'
 
     status_dict = {
         'status': status,
@@ -460,6 +467,85 @@ def _cert_info(user, course, cert_status, course_mode):
         else:
             status_dict['grade'] = cert_status['grade']
 
+
+
+
+    # 이수강좌의 경우 강좌에 poll 이 있는지와 완료 했는지 여부를 확인한다
+    if status == 'ready':
+
+        course_id = course.id
+
+        arr = str(course.id)[10:].split('+')
+
+        org = arr[0]
+        course = arr[1]
+        run = arr[2]
+
+        # print 'org, course, run :::', org, course, run
+
+        client = MongoClient(settings.CONTENTSTORE.get('DOC_STORE_CONFIG').get('host'), settings.CONTENTSTORE.get('DOC_STORE_CONFIG').get('port'))
+        db = client.edxapp
+
+        cursor = db.modulestore.active_versions.find({'org':org, 'course':course, 'run':run})
+
+        pb = ''
+        for document in cursor:
+            pb = document.get('versions').get('published-branch')
+        cursor.close()
+
+        if pb:
+            cursor = db.modulestore.structures.find({'_id':pb})
+            for document in cursor:
+                blocks = document.get('blocks')
+            cursor.close()
+            client.close()
+
+            check_cnt = 0
+            for block in blocks:
+                if block.get('block_type') == 'poll' or block.get('block_type') == 'survey':
+                    check_cnt += 1
+
+            if check_cnt > 0:
+                con = mdb.connect(settings.DATABASES.get('default').get('HOST'), settings.DATABASES.get('default').get('USER'), settings.DATABASES.get('default').get('PASSWORD'), settings.DATABASES.get('default').get('NAME'))
+                cur = con.cursor()
+
+                print '111122223333------------------------------------------'
+                print course_id
+                print '111122223333------------------------------------------'
+
+                query = """
+                        SELECT sum(if(instr(state, 'submissions_count') > 0, 1, 0)) cnt
+                          FROM courseware_studentmodule
+                         WHERE student_id = '{0}' and course_id = '{1}' AND module_type IN ('survey', 'poll');
+                    """.format(str(user.id), str(course_id))
+
+                print 'query :', query
+
+
+                cur.execute(query)
+                # cur_rowcount = cur.rowcount
+                row = cur.fetchone()
+                cur.close()
+                con.close()
+
+                print 'check_cnt', check_cnt
+                print 'row', row
+                print 'row[\'cnt\']', row[0]
+
+                if row is None or row[0] is None:
+                    print 'row is None'
+                    status_dict['survey'] = 'incomplete'
+                else:
+                    print 'row to checking'
+                    if int(check_cnt) == int(row[0]):
+                        # status_dict['survey'] = 'complete'
+                        status_dict['survey'] = 'complete'
+                    else:
+                        status_dict['survey'] = 'incomplete'
+
+        # print 'status_dict ---------------'
+        # print status_dict
+        # print '---------------------------'
     return status_dict
 
 
@@ -698,6 +784,10 @@ def dashboard(request):
         course.id: cert_info(request.user, course, _enrollment.mode)
         for course, _enrollment in course_enrollment_pairs
     }
+
+    print 'cert_statuses --------------------------------------------'
+    print cert_statuses
+    print '----------------------------------------------------------'
 
     # only show email settings for Mongo course and when bulk email is turned on
     show_email_settings_for = frozenset(
