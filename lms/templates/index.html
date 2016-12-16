@@ -95,23 +95,15 @@ function popClose(id){
         -->
 
         <p style="text-align: left; font-weight: bold; margin-top: 5px; display: ${'none' if LANG == 'en' else 'block'};">
-            <!--<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeaU7Fmb2vV1B2QC30G7gqXqZfCQcJcgKH7f5QkzqWgGVduBA/viewform">
-                <img src="http://www.kmooc.kr/asset-v1:KMOOC+DEMOk+2015_1+type@asset+block@kmooc_research_banner_end.jpg" alt="KOCW">
-            </a>-->
-            <img src="http://www.kmooc.kr/asset-v1:KMOOC+DEMOk+2015_1+type@asset+block@kmooc_research_banner_end.jpg" alt="KOCW">
-##             안녕하십니까. K-MOOC팀입니다.<br/>
-##             <br/>
-##             K-MOOC 시스템 점검 작업 등으로 인하여 다음과 같이 서비스가 일시 중단될 예정입니다.<br/>
-##             <br/>
-##             ○ 작업일시 : 2016년 5월 13일(금) 10:00 ~ 11:00<br/>
-##             ○ 작업내용 : 서버 보안 강화 작업 등<br/>
-##             ○ 작업영향 : 작업시간 중 K-MOOC 접속이 원활하지 않을 수 있음<br/>
-##             <br/>
-##             상기 사정으로 인해 서비스 이용에 불편을 드린 점, 양해를 부탁드리며<br/>
-##             보다 질 높은 서비스 제공을 위해 항상 노력하겠습니다.<br/>
-##             <br/>
-##             감사합니다.
+            &lt;플랫폼 업그레이드를 위한 K-MOOC사이트 운영 일시 중단 안내&gt;<br/><br/>
+            안녕하세요. K-MOOC입니다.<br/>
+            K-MOOC 플랫폼 업그레이드 및 기능 개편을 위해<br/>
+            아래 기간동안 사이트 접속이 일시적으로 중단될 예정입니다.<br/>
+            ○ 작업 일시 : 12월 21일(수) 18:00 ~ 12월 22일(목) 9:00<br/><br/>
 
+            이번 작업을 통해<br/>
+            더 좋은 서비스로 찾아뵙겠습니다.<br/>
+            감사합니다.
         </p>
 
         <!-- close area -->
@@ -128,10 +120,7 @@ function popClose(id){
     <!--popup K-mooc(2)-->
     <div id="popupWrap_2" class="layerPupup">
         <p style="text-align: left; font-weight: bold; margin-top: 5px; display: ${'none' if LANG == 'en' else 'block'};">
-             <a href="http://blog.naver.com/kmooc_kr/220867054923" target="_blank">
-                 <img src="http://www.kmooc.kr/asset-v1:edX+DemoX+Demo_Course+type@asset+block@kmooc_161121.jpg" alt="KOCW">
-             </a>
-
+             <img src="http://www.kmooc.kr/asset-v1:KMOOC+DEMOk+2015_1+type@asset+block@kmooc_update_banner.jpg" alt="">
         </p>
 
         <div style="text-align: right; display: ${'"none"' if LANG == 'en' else '"block"'};">
@@ -143,8 +132,7 @@ function popClose(id){
             <span><a href="javascript:popClose('popupWrap_2');" title="닫기">[ ${'close' if LANG == 'en' else '닫기'} ]</a></span>
         </div>
     </div>
-    
-</div>    
+</div>
 
 
 <script language="Javascript">
@@ -176,8 +164,7 @@ console.log('>>>>>>>>>>>> ' + cookiedata.indexOf("popupdiv1=done") + ":" + popup
 
 if (
         (cookiedata.indexOf("popupdiv1=done") < 0 ) && (
-        (popupDate.getFullYear() == 2016 && popupDate.getMonth() <= 11 - 1) ||
-        (popupDate.getFullYear() == 2016 && popupDate.getMonth() <= 12 - 1 && popupDate.getDate() <= 7)
+        (popupDate.getFullYear() == 2016 && popupDate.getMonth() <= 12 - 1 && popupDate.getDate() <= 21)
         )
    )
     {
@@ -194,12 +181,10 @@ if (
     document.all['popupWrap_1'].style.display = "none";
 }
 
-
 if (
-        (cookiedata.indexOf("popupdiv2=done") < 0 )
-        && (popupDate.getFullYear() == 2016)
-        && (popupDate.getMonth() == 11-1)
-        && (popupDate.getDate() <= 27)
+        (cookiedata.indexOf("popupdiv2=done") < 0 ) && (
+        (popupDate.getFullYear() == 2016 && popupDate.getMonth() <= 12 - 1 && popupDate.getDate() <= 21)
+        )
    )
     {
 
