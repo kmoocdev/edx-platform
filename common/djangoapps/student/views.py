@@ -504,9 +504,13 @@ def _cert_info(user, course, cert_status, course_mode):
                 if block.get('block_type') == 'vertical':
                     childrens = block.get('fields')['children']
                     for children in childrens:
-                        if children[0] == 'poll' or children[0] == 'survey':
+                        if children[0] == 'survey':
                             check_cnt += 1
                             checklist.append("'"+children[1]+"'")
+
+                if check_cnt > 0:
+                    break
+
             if check_cnt > 0:
                 con = mdb.connect(settings.DATABASES.get('default').get('HOST'), settings.DATABASES.get('default').get('USER'), settings.DATABASES.get('default').get('PASSWORD'), settings.DATABASES.get('default').get('NAME'))
                 cur = con.cursor()
@@ -515,7 +519,7 @@ def _cert_info(user, course, cert_status, course_mode):
                           FROM courseware_studentmodule
                          WHERE student_id = '{0}'
                            AND course_id = '{1}'
-                           AND module_type IN ('survey', 'poll')
+                           AND module_type = 'survey'
                            AND SUBSTRING_INDEX(module_id, '@', -1) in ({2});
                     """.format(str(user.id), str(course_id), ','.join(checklist))
 
