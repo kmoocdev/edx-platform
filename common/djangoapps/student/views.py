@@ -502,9 +502,21 @@ def _cert_info(user, course, cert_status, course_mode):
             check_cnt = 0
             for block in blocks:
                 if block.get('block_type') == 'vertical':
+                    global visible_to_staff_only
+
+                    if 'visible_to_staff_only' in block.get('fields'):
+                        visible_to_staff_only = block.get('fields')['visible_to_staff_only']
+                    else:
+                        visible_to_staff_only = False
+
+                    # print 'visible_to_staff_only', visible_to_staff_only
+
+                    if visible_to_staff_only is True:
+                        continue
+
                     childrens = block.get('fields')['children']
                     for children in childrens:
-                        if children[0] == 'survey':
+                        if children[0] == 'survey' or children[0] == 'poll':
                             check_cnt += 1
                             checklist.append("'"+children[1]+"'")
 
@@ -519,11 +531,11 @@ def _cert_info(user, course, cert_status, course_mode):
                           FROM courseware_studentmodule
                          WHERE student_id = '{0}'
                            AND course_id = '{1}'
-                           AND module_type = 'survey'
+                           AND module_type in ('survey','poll')
                            AND SUBSTRING_INDEX(module_id, '@', -1) in ({2});
                     """.format(str(user.id), str(course_id), ','.join(checklist))
 
-                print 'query :', query
+                # print 'query :', query
 
                 cur.execute(query)
                 # cur_rowcount = cur.rowcount
@@ -777,9 +789,9 @@ def dashboard(request):
         for course, _enrollment in course_enrollment_pairs
     }
 
-    print 'cert_statuses --------------------------------------------'
-    print cert_statuses
-    print '----------------------------------------------------------'
+    # print 'cert_statuses --------------------------------------------'
+    # print cert_statuses
+    # print '----------------------------------------------------------'
 
     # only show email settings for Mongo course and when bulk email is turned on
     show_email_settings_for = frozenset(
