@@ -115,6 +115,8 @@ urlpatterns = (
 
     # URLs for API access management
     url(r'^api-admin/', include('openedx.core.djangoapps.api_admin.urls', namespace='api_admin')),
+
+    url(r'^comm_faq$', 'community.views.comm_faq', name='comm_faq'),
 )
 
 urlpatterns += (
@@ -178,14 +180,14 @@ urlpatterns += (url(
 # Semi-static views only used by edX, not by themes
 if not settings.FEATURES["USE_CUSTOM_THEME"]:
     urlpatterns += (
-        url(r'^blog$', 'static_template_view.views.render',
-            {'template': 'blog.html'}, name="blog"),
-        url(r'^contact$', 'static_template_view.views.render',
-            {'template': 'contact.html'}, name="contact"),
+        url(r'^agreement$', 'static_template_view.views.render',
+            {'template': 'agreement.html'}, name="agreement"),
+        url(r'^email_security', 'static_template_view.views.render',
+            {'template': 'email_security.html'}, name="email_security"),
         url(r'^donate$', 'static_template_view.views.render',
             {'template': 'donate.html'}, name="donate"),
-        url(r'^faq$', 'static_template_view.views.render',
-            {'template': 'faq.html'}, name="faq"),
+        url(r'^privacy', 'static_template_view.views.render',
+            {'template': 'privacy.html'}, name="privacy"),
         url(r'^help$', 'static_template_view.views.render',
             {'template': 'help.html'}, name="help_edx"),
         url(r'^jobs$', 'static_template_view.views.render',

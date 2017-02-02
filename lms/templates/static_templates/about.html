@@ -4,9 +4,123 @@
 
 <%block name="pagetitle">${_("About")}</%block>
 
-<main id="main" aria-label="Content" tabindex="-1">
-    <section class="container about">
-        <h1>${_("About")}</h1>
-        <p>${_("This page left intentionally blank. Feel free to add your own content.")}</p>
+<%block name="js_extra">
+  <script type="text/javascript">
+    $(function() {
+      $('section.message').hide();
+      $('#about-menu a').removeClass('active');
+      window.scrollTo(0,0);
+      var hash = window.location.hash
+      if (hash) {
+        $('section' + hash).show();
+        $('#about-menu a.' + hash.substring(1)).addClass('active');
+      } else {
+        $('section#about').show();
+        $('#about-menu a.about').addClass('active');
+      }
+      $('#about-menu a').click(function(event) {
+        event.preventDefault();
+        $('#about-menu a').removeClass('active');
+        $(this).addClass('active');
+        var clickId = "section" + $(this).attr('href');
+        $('section.message').hide();
+        $(clickId).show();
+      });
+    });
+  </script>
+</%block>
+
+<!-- 2016-01-07 작업 오동호 S -->
+<section class="container about" style="width: auto;">
+  <nav id="about-menu">
+    <a href="#about" class="about active">인사말</a>
+    <a href="#careers" class="careers" style="text-transform:uppercase;">CNU-MOOC소개</a>
+    <a href="#careers1" class="careers">주요기능</a>
+  </nav>
+<!-- 인사말 S -->
+   <section id="about" class="message">
+    <section class="rule-box">
+        <div class="inner">
+            <h3 class=""><span>충남대 MOOC 에 오신 여러분, 환영합니다.</span></h3>
+            <p>최근 들어 전세계적으로 온라인 공개 수업(Massive Open Online Course)이 관심을 끌면서 우리나라에서도 K-MOOC 이 생기고 영향력도 확장되고 있습니다. <br>
+			우리 충남대도 사회적 트랜드 변화에 발맞춰 MOOC 시스템을 오픈하고 MOOC 전용 강좌를 서비스하게 되었습니다. <br></p>
+			<p>MOOC 는 학습자의 제한없이 누구나(Massive), 무료로(Open), 인터넷(Online)을 통해 우수한 대학 강의(Course)를 수강할 수 있는 온라인 공개 강좌입니다.<br>
+			기존에 듣기만 하는 학습동영상과 달리 질의 응답, 토론, 과제 등을 통해 교수와 수강생, 수강생간 양방향 학습이 가능하다는 점이 큰 특징입니다.<br>
+			학습자 여러분들은 원하는 강좌를 동영상을 통해 수강하는 것 뿐 아니라 교수에게 질문하고 시험도 볼 수 있습니다. <br>
+			또한 다른 학습자들과 커뮤니티를 통해 토론도 하고 과제를 수행하기도 할 것입니다.<br></p>
+			<p>CNU-MOOC 는 충남대의 훌륭한 교수들의 강의를 누구나 언제 어디서나 학습할 수 있는 시스템으로, 학습자 중심의 창의적, 능동적 학습이 되게 하여 국가 인적자원개발에 기여하도록 하겠습니다.<br></p>
+			<p>CNU-MOOC 에서 제공되는 여러 강좌를 통해 학습자 여러분의 경쟁력을 키워 나가시길 기원합니다.<br><br><br></p>
+		</div>
     </section>
-</main>
+   </section>
+<!-- 인사말 E -->
+
+<!-- CNU-MOOC소개 S -->
+   <section id="careers" class="message">
+    <section class="rule-box">
+        <div class="inner">
+            <h3><span>MOOC는 온라인을 통해서 누구나,어디서나,원하는 강의를 무료로 들을 수 있는 공개강좌입니다. </span></h3>
+				<div class="img_box">
+					<img src="/static/images/MOOC_ok2-1.png" alt="Massive=수강인원 무제한, Open=수업료 무료, Online=인터넷 수강, Course=학습 목표 달성을 위해 구성된 교육 코스">
+				</div>
+			<p>무크(MOOC)는 학습자가 수동적으로 듣기만 하던 기존의 온라인 학습동영상과 달리 교수자와 학습자, 학습자와 학습자간 질의응답, 토론, 퀴즈, 과제 제출 등 양방향 학습이 가능한 새로운 교육 환경을 제공합니다.</p>
+			<p>수강인원의 제한 없이 누구나 수강이 가능하여, 학습자는 배경지식이 다른 학습자간 지식 공유를 통해 대학의 울타리를 넘어 새로운 학습경험을 하게 될 것입니다.</p>
+        </div>
+        <div class="inner">
+            <h3><span>CNU-MOOC는 MOOC 강좌를 가장 효과적으로 서비스할 수 Open edX 플랫폼을 채택하였습니다. </span></h3>
+			<p>CNU-MOOC 학습자가 접속해서 이용하게 되는 플랫폼은 ‘공개, 공유’라는 무크(MOOC)의 기본정신과 향후 강의 콘텐츠의 국제적 호환성 등을 종합적으로 고려하여 (美)MIT와 Harvard대에서 개발하여 공개하고 있는 ‘Open edX 플랫폼’을 활용하여 구축하였습니다.</p>
+			<p>Open edX는 오픈 소스 코드로 제공되며 대학, 연구소, 기업 등 전세계 여러 기관에서 업그레이드에 참여하여 빠른 속도로 고도화가 이루어지고 있는  코스 관리 시스템 (CMS) 입니다. </p>
+        </div>
+        <div class="inner">
+            <h3><span>CNU-MOOC는 재학생 뿐 아니라 여러 분야의 사람들이 참여할 수 있습니다.</span></h3>
+				<div class="img_box">
+					<img src="/static/images/MOOC_ok2-2.png" alt="CNU-MOOC">
+				</div>
+            <br><br>
+        </div>
+		</section>
+	</section>
+<!-- CNU-MOOC소개 E -->
+
+<!-- 주요기능 S -->
+   <section id="careers1" class="message">
+    <section class="rule-box">
+        <div class="inner">
+            <h3><span>직관적이고 심플한 사용자 UI</span></h3>
+            <p>강의선택을 중점으로 나열하여 학습자가 강의 선택 및 수강신청을 직관적으로 할 수 있도록 단순한 인터페이스로 구성되었습니다.</p>
+        </div>
+        <div class="inner">
+            <h3><span>양방향 학습 시스템</span></h3>
+            <p>기존에 듣기만 하는 학습동영상을 넘어 질의･응답, 토론, 과제 등을 통해 교수와 수강생, 수강생간 양방향 학습이 가능합니다.</p>
+        </div>
+		<div class="inner">
+            <h3><span>다양한 문제유형 </span></h3>
+            <p>MOOC 플랫폼은 기본 유형부터 수식 및 회로에 이르기까지 12개 이상의 문제유형을 지원합니다. </p>
+						<div class="img_box">
+								<img src="/static/images/MOOC_ok2-3.png" alt="드롭다운, 수식입력,회로도 그리기,  체크박스">
+						</div>
+        </div>
+        <div class="inner">
+            <h3><span>논술형 / 서술형의 상호채점</span></h3>
+            <p>MOOC 플랫폼은 논술형, 서술형 문제에 대해 상호채점(ORA)이 가능합니다.</p>
+            <p class="arrow">상호채점 (ORA : Open Response Assessment) : 논술형 / 서술형 답안을 학습자들이 서로 채점하여 그 평균값을 점수로 확정하는 방식</p>
+		</div>
+        <div class="inner">
+            <h3><span>위키* 기반의 협동학습</span></h3>
+            <p>학습자간의 효과적인 협력적 지식을 구축하도록 설계된 학습 환경인 위키를 플랫폼에 적용하여 기존 일방향으로 제공되었던 FAQ(자주 묻는 질문)나, 강좌 오류, 학습자료, 강좌의 필요 소프트웨어 다운로드 및 설명 등을 학습자간에 공유하고 활용할 수 있도록 제공합니다.</p>
+            <p class="arrow">위키는 웹브라우저를 통해 여러 사람이 공동 문서를 작성하거나 사용자들이 내용을 추가할 수 있는 협업 웹시스템  </p>
+		</div>
+		<div class="inner">
+            <h3><span>SNS 로그인 연계</span></h3>
+            <p>최소한의 정보로 가입할 수 있도록 지원하고, SNS계정연동 하여 로그인 인증 기능을 구현합니다. 학습자는 자주 이용하는 SNS 계정의 로그인 인증 만으로 이용 가능합니다.</p>
+						<div class="img_box">
+								<img src="/static/images/sns0.png" alt="google,facebook,twitter,naver,kakao">
+						</div>
+            <p class="arrow">로그인 연계 부분은 플랫폼 확장 기능으로 커스터마이징이 필요합니다. </p>
+            <br><br>
+		</div>
+		</section>
+	</section>
+<!-- 주요기능 E -->
+</section>
+<!-- 2016-01-07 작업 오동호 E -->

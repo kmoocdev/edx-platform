@@ -7,45 +7,59 @@ from django.core.urlresolvers import reverse
 
 from openedx.core.djangolib.markup import HTML, Text
 %>
+<script>
+    var idx = 1; 
+    $(document).ready(function(){
+        mainImgChg();
+
+        function mainImgChg(){ 
+        //return;          //#e6e6e6 url("/static/images/main_img1.png") no-repeat scroll center top  
+        // console.log($("#mainImg").size()); 
+            var imgUrl = ""; 
+            var textUrl = ""; 
+            console.log(idx);
+            if(idx == 0) {
+                imgUrl = "/static/images/roll1.jpg";
+            }else if(idx == 1) {
+                imgUrl = "/static/images/roll2.jpg";
+            }
+
+            $("#mainImg").css("background-color","#e6e6e6"); 
+            $("#mainImg").animate({ 
+                    opacity: 0 
+            }, 4000, "easeInExpo", function(){
+                $(this).css("background", "url("+imgUrl+") no-repeat scroll center top");
+                $(this).css("width", "100%");
+                $(this).css("height", "100%");
+                $(this).css("background-size", "cover");
+                $(this).animate({ 
+                    opacity: 1 
+                },4000, "easeOutQuint", function(){ 
+                    idx++; 
+                    if(idx == 2) 
+                        idx = 0;  
+                    mainImgChg(); 
+                }); 
+            }); 
+        }
+    });
+</script>
+
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
-      <header>
-        <div class="outer-wrapper">
-          <div class="title">
+      <header style="">
+##         <div class="outer-wrapper" id="mainImg">
+
+ <!--         <div class="outer-wrapper" id="mainImg" style="background: url(/static/images/roll1.jpg) center center no-repeat;background-size:cover;width:100%;height:100%;">
+          <div class="title" style="padding: 130px 10px 30px;">
             <div class="heading-group">
-              % if homepage_overlay_html:
-                ${homepage_overlay_html | n, decode.utf8}
-              % else:
-                  ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <h1>${Text(_(u"Welcome to the Open edX{registered_trademark} platform!")).format(registered_trademark=HTML("<sup style='font-size: 65%'>&reg;</sup>"))}</h1>
-                  ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <p>${_("It works! This is the default homepage for this Open edX instance.")}</p>
-              % endif
+
             </div>
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <div class="course-search">
-                <form method="get" action="/courses">
-                  <label><span class="sr">${_("Search for a course")}</span>
-                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
-                  </label>
-                  <button class="search-button" type="submit">
-                    <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-                  </button>
-                </form>
-              </div>
-            % endif
-
           </div>
-
-          % if show_homepage_promo_video:
-            <a href="#video-modal" class="media" rel="leanModal">
-              <div class="hero">
-                <div class="play-intro"></div>
-              </div>
-            </a>
-          % endif
         </div>
+        -->
+          <img src="/static/images/roll1.jpg" alt="roll"/>
 
       </header>
       <%include file="${courses_list}" />
