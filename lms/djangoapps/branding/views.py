@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 """Views for the branding app. """
 import logging
 import urllib
@@ -23,17 +25,24 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 from util.cache import cache_if_anonymous
 from util.json_request import JsonResponse
 
+import os
+import common.kotechseed128 as kotechseed128
+import requests
+from django.contrib.auth import login as django_login
+from django.contrib.auth.models import User
+
 log = logging.getLogger(__name__)
 
 
+#cache_if_anonymous()
 @ensure_csrf_cookie
 @transaction.non_atomic_requests
-@cache_if_anonymous()
 def index(request):
     """
     Redirects to main page -- info page if user authenticated, or marketing if not
     """
     if request.user.is_authenticated:
+        rt = getCrypto(request)
         # Only redirect to dashboard if user has
         # courses in his/her dashboard. Otherwise UX is a bit cryptic.
         # In this case, we want to have the user stay on a course catalog
@@ -76,6 +85,308 @@ def index(request):
     #  marketing and edge are enabled
     return student.views.index(request, user=request.user)
 
+def getCrypto(request):
+    temp_user = "%s" % (request.user)
+    #cms_user_val=request.user
+    #cms_pubk_val='MTk0NTA4MTUxNTA0AAAAAA=='
+    #print('user:', cms_user_val, 'key:', cms_pubk_val)
+    logging.info('index user: %s', temp_user)
+    logging.info('index user type check: %s', type(temp_user))
+    try:
+        se = kotechseed128.SEED()
+        encdata=se.make_usekey_encryption(1, temp_user, '194508151504')
+        #encdata=se.make_usekey_encryption(1, '1628020', '194508151504')
+    except:
+        logging.info('index seed128 user error : %s', temp_user)
+        return False
+
+    cms_pubk_val = encdata[0]
+    cms_user_val = encdata[1]
+    logging.info('encryption user : %s', cms_user_val)
+    logging.info('encryption  key : %s', cms_pubk_val)
+    try:
+        decdata = se.make_usekey_decryption(1, cms_pubk_val, cms_user_val)
+    except:
+        logging.info('index seed128 user error : %s', temp_user)
+        return False
+
+    logging.info('decryption user : %s', decdata[1])
+    logging.info('decryption  key : %s', decdata[0])
+
+    request.session['cms_user_val'] = cms_user_val
+    request.session['cms_pubk_val'] = cms_pubk_val
+    return True
+
+def getSession(request):
+    #using id check session
+    json_return = {}
+    json_return['status'] = 'false'
+    if request.user.is_authenticated:
+        json_return['status'] = 'true'
+    return JsonResponse(json_return)
+
+def getAuthCheck(request):
+    json_return = {}
+    json_return['status'] = 'false'
+
+    cmsstr = request.GET.get('cmsstr')
+
+    try:
+        if cmsstr == None:
+            logging.info('cmsstr None error %s', 'views.py getAuthCheck method')
+            json_return['status'] = 'false'
+        else:
+            #check
+            #o1 = User.objects.filter(username=cmsstr)
+            o1 = User.objects.filter(email=cmsstr)
+            if o1 == None:
+                json_return['status'] = 'false'
+            else:
+                if len(o1) == 0:
+                    json_return['status'] = 'false'
+	        else:
+	            json_return['status'] = 'true'
+        return JsonResponse(json_return)
+    except:
+        json_return['status'] = 'false'
+        return JsonResponse(json_return)
+
+def getAuthUserCheck(request):
+    json_return = {}
+    json_return['status'] = 'false'
+
+    cmsstr = request.GET.get('cmsstr')
+
+    try:
+        if cmsstr == None:
+            logging.info('cmsstr None error %s', 'views.py getAuthUserCheck method')
+            json_return['status'] = 'false'
+        else:
+            #check
+            o1 = User.objects.filter(username=cmsstr)
+            if o1 == None:
+                json_return['status'] = 'false'
+            else:
+                if len(o1) == 0:
+                    json_return['status'] = 'false'
+                else:
+                    json_return['status'] = 'true'
+
+        return JsonResponse(json_return)
+
+    except:
+        json_return['status'] = 'false'
+        return JsonResponse(json_return)
+
+def getAuthEmailCheck(request):
+    json_return = {}
+    json_return['status'] = 'false'
+
+    cmsstr = request.GET.get('cmsstr')
+
+    try:
+        if cmsstr == None:
+            logging.info('cmsstr None error %s', 'views.py getAuthEmailCheck method')
+            json_return['status'] = 'false'
+        else:
+            #check
+            o1 = User.objects.filter(email=cmsstr)
+            if o1 == None:
+                json_return['status'] = 'false'
+            else:
+                if len(o1) == 0:
+                    json_return['status'] = 'false'
+                else:
+                    json_return['status'] = 'true'
+
+        return JsonResponse(json_return)
+
+    except:
+        json_return['status'] = 'false'
+        return JsonResponse(json_return)
+
+def getSeed128(request):
+    # -----------------------------------------------------------------------
+    #using id check session
+    json_return = {}
+    json_return['status'] = 'false'
+    json_return['decstr'] = ''
+    json_return['error'] = 'fail'
+
+    usekey = request.GET.get('usekey')
+    memid = request.GET.get('memid')
+
+    try:
+        if usekey == None or memid == None:
+            logging.info('usekey None error %s', 'views.py getSeed128 method')
+            json_return['status'] = 'false'
+            json_return['decstr'] = 'parameter'
+            json_return['error'] = 'fail'
+        else:
+            usekey = usekey.replace(' ', '+')
+            memid = memid.replace(' ', '+')
+
+            if usekey != None and memid != None:
+                if len(usekey) == 24 and len(memid) == 24:
+                    try:
+                        seed128 = kotechseed128.SEED()
+                        decdata = seed128.make_usekey_decryption(1, usekey, memid)
+                    except:
+                        logging.info('except error %s', 'views.py getSeed128 method - make_usekey_decryption')
+                        return JsonResponse(json_return)
+
+                    if decdata == None:
+                        json_return['status'] = 'true'
+                        json_return['decstr'] = ''
+                        json_return['error'] = 'fail'
+                    else:
+                        seqky = decdata[0]    # usekey
+                        seqid = decdata[1]    # emp_no
+                        seqid = seqid.replace('\x00', '')
+
+                        json_return['status'] = 'true'
+                        json_return['decstr'] = seqid
+                        json_return['error'] = 'success'
+                else:
+	            json_return['status'] = 'false'
+                    json_return['decstr'] = ''
+                    json_return['error'] = 'length error'
+            else:
+                json_return['status'] = 'false'
+                json_return['decstr'] = 'parameter'
+                json_return['error'] = 'fail'
+
+        logging.info('finish %s', 'views.py getSeed128 method')
+        return JsonResponse(json_return)
+
+    except:
+        json_return['status'] = 'false'
+        json_return['decstr'] = 'internal error'
+        json_return['error'] = 'fail'
+        return JsonResponse(json_return)
+    # -----------------------------------------------------------------------
+
+def getLoginAPI(request):
+    json_return = {}
+    json_return['memid'] = ''
+    json_return['email'] = ''
+    json_return['is_staff'] = '0'
+    json_return['status'] = 'fail'
+    try:
+        logging.info('Step %s', 'views.py getLoginAPI method')
+        #usekey = request.session['usekey'] 
+        #1945081504
+        usekey = 'MTk0NTA4MTUxNTA0AAAAAA=='
+        #memid = request.POST.get('memid')
+        memid = request.GET.get('memid')
+    except:
+        logging.info('Error %s', 'views.py getLoginAPI method')
+        return JsonResponse(json_return)
+    #decrypto
+    try:
+        usernm = getSeedDecData(usekey, memid)
+        json_return['memid'] = usernm
+        json_return['email'] = usernm + '@mobis.co.kr'
+    except:
+        logging.info('getSeedDecData Call Error %s', 'views.py getLoginAPI method')
+        return JsonResponse(json_return)
+     #mysql get data
+    try:
+        teacher = getLoginAPIdecrypto(usernm)
+        json_return['is_staff'] = teacher
+        json_return['status'] = 'success'
+    except:
+        logging.info('getLoginAPIdecrypto Call Error %s', 'views.py getLoginAPI method')
+        return JsonResponse(json_return)
+    return JsonResponse(json_return)
+
+def getLoginAPIdecrypto(usernm):
+    import MySQLdb as mdb
+    con = None
+    # MySQL Connection 연결
+    con = mdb.connect(host='localhost', user='root', passwd='', db='edxapp', charset='utf8')
+    try:
+        # Connection 으로부터 Cursor 생성
+        cur = con.cursor()
+        # SQL문 실행
+        sql = """
+            select
+                    case when is_staff = '1' then '1'
+                        else 
+                            case when is_staff = '0' and cnt1 = '1' then '1'
+                                else
+                                    case when is_staff = '0' and cnt2 = '1' then '2'
+                                            else
+                                                '0'
+                                    end
+                            end
+                       end is_staff
+            from (
+                        select 
+                                b.is_staff is_staff
+                                ,case when role = 'staff' and count(*) > 0 then '1' else '0' end  cnt1
+                                ,case when role = 'instructor' and count(*) > 0 then '1' else '0' end cnt2
+                        from student_courseaccessrole a 
+                                   left outer join (
+                                       select id, is_staff from auth_user
+                                       where username = \'{username}\'
+                                       ) b on a.user_id = b.id
+                        where a.user_id = b.id
+            ) tb
+        """.format(username=usernm)
+        cur.execute(sql)
+        # 데이타 Fetch
+        rows = cur.fetchall()
+        exists_flag = False
+        for row in rows:
+            teacher_count = row[0]
+            exists_flag = True
+            break
+        if exists_flag:
+            logging.info("Teacher count %d record(s) affected", teacher_count)
+        else:
+            logging.info("Teacher count %d record(s) affected", 0)
+        return teacher_count
+    except mdb.Error, e:
+        logging.info('getLoginAPIdecrypto method MySQL: %s', e)
+        return '0'
+    finally:
+        # Connection 닫기
+        if cur is not None:
+            cur.close()
+        if con is not None:
+            con.close()
+
+def getSeedDecData(usekey, memid):
+    try:
+        if usekey == None or memid == None:
+            logging.info('usekey None error %s', 'views.py getSeed128 method')
+        else:
+            usekey = usekey.replace(' ', '+')
+            memid = memid.replace(' ', '+')
+            if usekey != None and memid != None:
+                if len(usekey) == 24 and len(memid) == 24:
+                    try:
+                        seed128 = kotechseed128.SEED()
+                        decdata = seed128.make_usekey_decryption(1, usekey, memid)
+                    except:
+                        logging.info('kotechseed128 and seed128.make_usekey_decryption error %s', 'getSeedDecData method')
+                        return ''
+                    if decdata == None:
+                        return ''
+                    else:
+                        seqky = decdata[0]    # usekey
+                        seqid = decdata[1]    # emp_no
+                        seqid = seqid.replace('\x00', '')
+                        return seqid
+                else:
+                    return ''
+            else:
+                return ''
+        logging.info('finish %s', 'getSeedDecData method')
+        return JsonResponse(json_return)
+    except:
+        return ''
 
 @ensure_csrf_cookie
 @cache_if_anonymous()

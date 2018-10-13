@@ -65,6 +65,12 @@ if settings.DEBUG or settings.FEATURES.get('ENABLE_DJANGO_ADMIN_SITE'):
 
 urlpatterns = [
     url(r'^$', branding_views.index, name='root'),   # Main marketing page, or redirect to courseware
+    url(r'^getsession/$', branding_views.getSession, name='sess_check'),   # Main marketing page, or redirect to courseware
+    url(r'^getauthcheck/?$', branding_views.getAuthCheck, name='auth_check'),   # Main marketing page, or redirect to courseware
+    url(r'^getauthusercheck/?$', branding_views.getAuthUserCheck, name='authuser_check'),   # Main marketing page, or redirect to courseware
+    url(r'^getauthemailcheck/?$', branding_views.getAuthEmailCheck, name='authemail_check'),   # Main marketing page, or redirect to courseware
+    url(r'^getseed128/?$', branding_views.getSeed128, name='email_check'),   # Main marketing page, or redirect to courseware
+    url(r'^getloginapi', branding_views.getLoginAPI, name='decrypto'),
 
     url(r'', include('student.urls')),
     # TODO: Move lms specific student views out of common code

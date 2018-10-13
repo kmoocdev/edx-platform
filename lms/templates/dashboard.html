@@ -85,7 +85,16 @@ from student.models import CourseEnrollment
     </%static:require_module>
   % endif
 </%block>
-
+<script>
+ function goPost_CMS(path, id) {
+     document.cookie = "memid="+id;
+     alert(document.cookie);
+     var form = document.createElement("form");
+     form.setAttribute("method", "post");
+     form.setAttribute("action", path);
+     form.submit();
+ }
+</script>
 <div class="dashboard-notifications" tabindex="-1">
 
     %if banner_account_activation_message:
@@ -346,4 +355,8 @@ from student.models import CourseEnrollment
   </div>
 </div>
 
+            <!-- maeng -->
+            <ul>
+                <button onclick="goPost_CMS('http://13.125.208.102/dashboard', '${request.session["cms_user_val"]}')">CMS Page Call</button>
+            </ul>
 <%include file="dashboard/_dashboard_entitlement_unenrollment_modal.html"/>

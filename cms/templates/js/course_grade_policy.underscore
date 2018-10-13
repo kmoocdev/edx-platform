@@ -1,8 +1,8 @@
 <li class="field-group course-grading-assignment-list-item">
   <div class="field text" id="field-course-grading-assignment-name">
-  	<label for="course-grading-assignment-name"><%= gettext("Assignment Type Name") %></label>
+  	<label for="course-grading-assignment-name">[*<%= gettext("Assignment Type Name") %>*]</label>
   	<input type="text" class="long" id="course-grading-assignment-name" value="<%= model.get('type') %>" />
-  	<span class="tip tip-stacked"><%= gettext("The general category for this type of assignment, for example, Homework or Midterm Exam. This name is visible to learners.") %></span>
+  	<span class="tip tip-stacked"><%- gettext("The general category for this type of assignment, for example, Homework or Midterm Exam. This name is visible to learners.") %></span>
   </div>
 
   <div class="field text" id="field-course-grading-assignment-shortname">
